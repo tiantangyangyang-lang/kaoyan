@@ -140,6 +140,9 @@ npm run sync:content
 
 完整环境变量、Cloudflare DNS 和部署步骤见 [DEPLOYMENT.md](DEPLOYMENT.md)。
 
+正式 Web 地址使用 `https://gongren.xyz`，API 使用
+`https://api.gongren.xyz`。
+
 ## 当前边界
 
 - 数学二题库尚未导入。

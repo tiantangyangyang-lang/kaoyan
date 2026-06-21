@@ -4,7 +4,7 @@
 
 | 部分 | 提供商 | 免费层用途 |
 | --- | --- | --- |
-| Web | Cloudflare Pages | 部署 `apps/web/dist`，绑定 `study.gongren.xyz` |
+| Web | Cloudflare Pages | 部署 `apps/web/dist`，绑定 `gongren.xyz` |
 | API | Render Free Web Service | 部署 `apps/api`；闲置后会休眠 |
 | MySQL | Aiven Free MySQL | 用户、会话和学习记录；只适合 MVP |
 | 验证邮件 | Resend Free | 使用 HTTP API 发送，避免免费 Render 的 SMTP 限制 |
@@ -30,11 +30,12 @@
 
 | 类型 | 名称 | 目标 | 初始代理状态 |
 | --- | --- | --- | --- |
-| CNAME | `study` | Cloudflare Pages 项目域名 | 由 Pages 自定义域流程创建 |
+| Pages custom domain | `gongren.xyz` | Cloudflare Pages 项目 | 由 Pages 自定义域流程管理 |
 | CNAME | `api` | Render 提供的 `*.onrender.com` | DNS only，证书签发后再决定是否代理 |
 | Resend records | `mail` 子域 | 以 Resend 控制台显示为准 | DNS only |
 
-本方案不修改根域网站，因此不会影响当前 `gongren.xyz` 和 `www`。
+当前正式 Web 地址使用 `https://gongren.xyz`。`www` 是否重定向到根域可在
+Cloudflare Pages 的自定义域设置中单独处理。
 
 ## Aiven MySQL
 
