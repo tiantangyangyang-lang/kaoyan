@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": "report-2025-math1",
+      "type": "file",
+      "file": "Reports/2026-06-14-2025年数学一分析.md",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "kp-limit",
+      "type": "file",
+      "file": "Knowledge/极限.md",
+      "x": 480,
+      "y": -120,
+      "width": 320,
+      "height": 180
+    },
+    {
+      "id": "kp-multi",
+      "type": "file",
+      "file": "Knowledge/多元函数微分.md",
+      "x": 480,
+      "y": 160,
+      "width": 320,
+      "height": 180
+    },
+    {
+      "id": "mistake-q17",
+      "type": "file",
+      "file": "Mistakes/2025-数学一-Q17.md",
+      "x": 920,
+      "y": -120,
+      "width": 320,
+      "height": 180
+    },
+    {
+      "id": "plan-14d",
+      "type": "file",
+      "file": "Plans/未来14天复习计划.md",
+      "x": 920,
+      "y": 160,
+      "width": 320,
+      "height": 180
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-report-limit",
+      "fromNode": "report-2025-math1",
+      "toNode": "kp-limit",
+      "label": "identifies"
+    },
+    {
+      "id": "e-report-multi",
+      "fromNode": "report-2025-math1",
+      "toNode": "kp-multi",
+      "label": "flags"
+    },
+    {
+      "id": "e-limit-q17",
+      "fromNode": "kp-limit",
+      "toNode": "mistake-q17",
+      "label": "evidenced by"
+    },
+    {
+      "id": "e-limit-plan",
+      "fromNode": "kp-limit",
+      "toNode": "plan-14d",
+      "label": "prioritized in"
+    }
+  ]
+}

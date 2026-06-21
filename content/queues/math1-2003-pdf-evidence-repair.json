@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2003-pdf-evidence-repair",
+  "description": "Use the supplied 2003 PDF and paper image assets to resolve remaining evidence-backed staging defects.",
+  "tasks": [
+    {
+      "label": "Math1 2003 PDF and image evidence repair",
+      "task": "cc-math1-pdf-evidence-repair",
+      "year": 2003,
+      "maxTurns": 80
+    }
+  ]
+}

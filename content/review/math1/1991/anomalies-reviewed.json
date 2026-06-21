@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "math1-md-finalize-anomalies-v1",
+  "batchId": "cc-math1-1991-md-finalize-20260620-133405",
+  "finalizationRunId": "20260620-140517-cc-math1-md-finalize-year-1991",
+  "sourceYear": 1991,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T05:34:10.000Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [],
+  "resolvedAnomalies": [
+    {
+      "stableId": "math1-1991-q09",
+      "type": "ocr_latex_split",
+      "severity": "warning",
+      "resolution": "OCR split LaTeX block: \\cos x$ sin y fixed to \\cos x \\sin y. Solution confirms."
+    },
+    {
+      "stableId": "math1-1991-q14",
+      "type": "missing_answer_extractable",
+      "severity": "info",
+      "resolution": "Extracted answer y = sin x from solution conclusion."
+    },
+    {
+      "stableId": "math1-1991-q15",
+      "type": "missing_answer_extractable",
+      "severity": "info",
+      "resolution": "Extracted answer π²/6 from solution conclusion."
+    },
+    {
+      "stableId": "math1-1991-q17",
+      "type": "missing_answer_extractable",
+      "severity": "info",
+      "resolution": "Extracted parametric answer from solution section 七."
+    },
+    {
+      "stableId": "math1-1991-q19",
+      "type": "missing_answer_extractable",
+      "severity": "info",
+      "resolution": "Extracted answer y = (e^(x-1)+e^(1-x))/2 from solution conclusion."
+    },
+    {
+      "stableId": "math1-1991-q22",
+      "type": "missing_answer_extractable",
+      "severity": "info",
+      "resolution": "Extracted piecewise distribution function from solution conclusion."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 0,
+    "resolvedInFinalization": 6,
+    "bySeverity": { "error": 0, "warning": 0, "info": 0 },
+    "blockingIssues": [],
+    "pdfVerification": "not_required_for_md_finalization"
+  }
+}

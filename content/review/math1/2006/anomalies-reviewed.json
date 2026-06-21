@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "math1-review-v1",
+  "runId": "20260620-164031-cc-math1-md-finalize-year-2006",
+  "task": "cc-math1-md-finalize-year",
+  "subjectCode": "math1",
+  "sourceYear": 2006,
+  "totalAnomalies": 3,
+  "bySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 3
+  },
+  "anomalies": [
+    {
+      "anomalyId": "anom-2006-001",
+      "questionNumber": 8,
+      "type": "option_labels_repaired_from_markdown",
+      "severity": "info",
+      "field": "options",
+      "description": "Options (A) and (D) lacked labels in source Markdown (paper lines 26/32). Labels assigned by sequence from 4-option layout. Option C/D conflation resolved by source line correspondence.",
+      "sourceEvidence": {
+        "paperLine26": "$\\int_{0}^{\\frac{\\sqrt{2}}{2}} \\mathrm{d}x \\int_{x}^{\\sqrt{1 - x^2}} f(x, y) \\, \\mathrm{d}y.$",
+        "paperLine32": "$\\int_0^{\\frac{\\sqrt{2}}{2}}\\mathrm{d}y\\int_0^{\\sqrt{1 - y^2}}f(x,y)\\mathrm{d}x.$"
+      },
+      "reviewAction": "Deterministic fix applied: (A) and (D) labels restored from source Markdown line sequence.",
+      "fixedByMdFinalization": true
+    },
+    {
+      "anomalyId": "anom-2006-002",
+      "questionNumber": 13,
+      "type": "option_label_in_math_mode",
+      "severity": "info",
+      "field": "options",
+      "description": "Option (A) label was inside LaTeX math mode '$ (A)P(A∪B) > P(A)$ .' in source paper line 72. Parser could not extract. Content extracted by inspection.",
+      "sourceEvidence": {
+        "paperLine72": "$(A)P(A \\cup B) > P(A)$ ."
+      },
+      "reviewAction": "Deterministic fix applied: option (A) extracted from source Markdown.",
+      "fixedByMdFinalization": true
+    },
+    {
+      "anomalyId": "anom-2006-003",
+      "questionNumber": 14,
+      "type": "option_labels_in_math_mode",
+      "severity": "info",
+      "field": "options",
+      "description": "Options (C) and (D) labels were inside LaTeX math mode in source paper lines 92/94. Section header '# 三、解答题' bled into option B value. All fixed by content inspection.",
+      "sourceEvidence": {
+        "paperLine92": "$(\\mathrm{C})\\mu_{1} < \\mu_{2}$",
+        "paperLine94": "$(\\mathrm{D})\\mu_{1} > \\mu_{2}$"
+      },
+      "reviewAction": "Deterministic fix applied: options (C) and (D) extracted; section header removed.",
+      "fixedByMdFinalization": true
+    }
+  ],
+  "mdFinalizationNote": "All previously identified ERROR/WARNING anomalies have been resolved via deterministic Markdown-first fixes. All remaining anomalies are info-level documentation of source Markdown quirks.",
+  "pdfVerificationStatus": "not_run",
+  "pdfVerificationNote": "Not required per MD-first finalization task scope. All fixes derived from source Markdown evidence only."
+}

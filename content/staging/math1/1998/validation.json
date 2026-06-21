@@ -1,0 +1,35 @@
+{
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "fill_in_blank": 5,
+    "multiple_choice": 5,
+    "solution": 13
+  },
+  "expectedCounts": {
+    "fill_in_blank": 5,
+    "multiple_choice": 5,
+    "solution": 13
+  },
+  "countsMatch": true,
+  "totalAnomalies": 2,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 1,
+    "info": 1
+  },
+  "allQuestionsNeedsReview": true,
+  "allStableIdsUnique": true,
+  "allMultipleChoiceHaveFourOptions": true,
+  "allQuestionsHaveAnswerCandidate": true,
+  "checks": {
+    "jsonParsePython": "passed",
+    "jsonParseNode": "passed",
+    "jsonParsePowerShell": "passed",
+    "countsMatch": true,
+    "stableIdsUnique": true,
+    "allNeedsReview": true,
+    "activeErrors": 0,
+    "activeWarnings": 1,
+    "activeInfos": 1
+  }
+}

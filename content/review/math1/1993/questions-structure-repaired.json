@@ -1,0 +1,750 @@
+{
+  "schemaVersion": "legacy-structure-repair-v1",
+  "reviewedOn": "2026-06-16",
+  "sourceYear": 1993,
+  "reviewStatus": "needs_human_review",
+  "sourceStagingSha256": "a4258dc44fa180db1ffcb73cea0f4075cf6d415cc82d0e86d85f56ee50fbb80f",
+  "statusReason": "Deterministic option and solution boundaries were repaired; mathematical correctness is not approved.",
+  "repairDecisions": [
+    {
+      "issue": "merged_solution_section_three",
+      "action": "Split the Q11 container into the sequential Q11-Q13 solution blocks.",
+      "questionNumbers": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "issue": "merged_proof_section_six",
+      "action": "Split the Q16 container into the Q16 and Q17 proof blocks.",
+      "questionNumbers": [
+        16,
+        17
+      ]
+    },
+    {
+      "issue": "embedded_choice_options",
+      "action": "Restore the embedded D option for Q9 and the embedded B/D options for Q10.",
+      "questionNumbers": [
+        9,
+        10
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "stableId": "math1-1993-q01",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 1,
+      "questionType": "fill_in_blank",
+      "stem": "（1）函数 $F(x) = \\int_{1}^{x}(2 - \\frac{1}{\\sqrt{t}})\\mathrm{d}t(x > 0)$ 的单调减区间为",
+      "options": [],
+      "answerCandidate": "$\\left(0, \\frac{1}{4}\\right)$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 $\\left(0, \\frac{1}{4}\\right)$ .\n\n【解】由 $F^{\\prime}(x) = 2 - \\frac{1}{\\sqrt{x}} = 0$ 得 $x = \\frac{1}{4}$ ，当 $0 < x < \\frac{1}{4}$ 时 $F^{\\prime}(x) < 0$\n\n故 $F(x)$ 的单调减区间为 $\\left(0, \\frac{1}{4}\\right)$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q02",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 2,
+      "questionType": "fill_in_blank",
+      "stem": "(2）由曲线 $\\left\\{ \\begin{array}{l}3x^2 + 2y^2 = 12, \\\\ z = 0 \\end{array} \\right.$ 绕 $y$ 轴旋转一周而得到的旋转曲面在点 $(0, \\sqrt{3}, \\sqrt{2})$ 处的指向外侧的单位法向量为",
+      "options": [],
+      "answerCandidate": "$\\left\\{0, \\frac{\\sqrt{10}}{5}, \\frac{\\sqrt{15}}{5}\\right\\}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】 $\\left\\{0, \\frac{\\sqrt{10}}{5}, \\frac{\\sqrt{15}}{5}\\right\\}$ .\n\n【解】 旋转曲面方程为 $\\Sigma:3x^{2} + 2y^{2} + 3z^{2} = 12$\n\n法向量为 $n = \\{6x,4y,6z\\}_{(0,\\sqrt{3},\\sqrt{2})} = \\{0,4\\sqrt{3},6\\sqrt{2}\\}$\n\n所求的单位法向量为 $n^0 = \\left\\{0, \\frac{\\sqrt{10}}{5}, \\frac{\\sqrt{15}}{5}\\right\\}$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q03",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 3,
+      "questionType": "fill_in_blank",
+      "stem": "(3) 设函数 $f(x) = \\pi x + x^2 (-\\pi < x < \\pi)$ 的傅里叶级数展开式为 $\\frac{a_0}{2} + \\sum_{n=1}^{\\infty} (a_n \\cos nx + b_n \\sin nx)$ ，则其中系数 $b_3$ 的值为 ______.",
+      "options": [],
+      "answerCandidate": "$\\frac{2\\pi}{3}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(3)【答案】 $\\frac{2\\pi}{3}$ .\n\n【解】 $b_{3} = \\frac{1}{\\pi}\\int_{-\\pi}^{\\pi}f(x)\\sin 3x\\mathrm{d}x = 2\\int_{0}^{\\pi}x\\sin 3x\\mathrm{d}x$\n\n$$\n= - \\frac {2}{3} \\int_ {0} ^ {\\pi} x \\mathrm {d} (\\cos 3 x) = - \\frac {2}{3} x \\cos 3 x \\left| _ {0} ^ {\\pi} + \\frac {2}{3} \\int_ {0} ^ {\\pi} \\cos 3 x \\mathrm {d} x = \\frac {2 \\pi}{3}. \\right.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q04",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 4,
+      "questionType": "fill_in_blank",
+      "stem": "（4）设数量场 $u = \\ln \\sqrt{x^2 + y^2 + z^2}$ ，则 $\\operatorname {div}(\\operatorname {grad}u) =$",
+      "options": [],
+      "answerCandidate": "$\\frac{1}{x^2 + y^2 + z^2}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(4)【答案】 $\\frac{1}{x^2 + y^2 + z^2}$ .\n\n【解】 $\\operatorname{grad} u = \\left\\{\\frac{\\partial u}{\\partial x}, \\frac{\\partial u}{\\partial y}, \\frac{\\partial u}{\\partial z}\\right\\} = \\left\\{\\frac{x}{x^2 + y^2 + z^2}, \\frac{y}{x^2 + y^2 + z^2}, \\frac{z}{x^2 + y^2 + z^2}\\right\\},$\n\n则 $\\operatorname{div}(\\mathbf{grad} u) = \\frac{\\partial}{\\partial x}\\left(\\frac{x}{x^2 + y^2 + z^2}\\right) + \\frac{\\partial}{\\partial y}\\left(\\frac{y}{x^2 + y^2 + z^2}\\right) + \\frac{\\partial}{\\partial z}\\left(\\frac{z}{x^2 + y^2 + z^2}\\right)$\n\n$$\n\\begin{array}{l} = \\frac {y ^ {2} + z ^ {2} - x ^ {2}}{\\left(x ^ {2} + y ^ {2} + z ^ {2}\\right) ^ {2}} + \\frac {x ^ {2} + z ^ {2} - y ^ {2}}{\\left(x ^ {2} + y ^ {2} + z ^ {2}\\right) ^ {2}} + \\frac {x ^ {2} + y ^ {2} - z ^ {2}}{\\left(x ^ {2} + y ^ {2} + z ^ {2}\\right) ^ {2}} \\\\ = \\frac {1}{x ^ {2} + y ^ {2} + z ^ {2}}. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q05",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 5,
+      "questionType": "fill_in_blank",
+      "stem": "（5）设 $n$ 阶矩阵 $\\mathbf{A}$ 的各行元素之和均为零，且 $\\mathbf{A}$ 的秩为 $n - 1$ ，则线性方程组 $\\mathbf{AX} = \\mathbf{0}$ 的通解为",
+      "options": [],
+      "answerCandidate": "$X = k(1,1,\\dots ,1)^{\\mathrm{T}}(k$ 为任意常数).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(5)【答案】 $X = k(1,1,\\dots ,1)^{\\mathrm{T}}(k$ 为任意常数).\n\n【解】因为 $r(\\mathbf{A}) = n - 1$ ，所以 $\\mathbf{AX} = \\mathbf{0}$ 的基础解系含一个线性无关的解向量，又因为 $\\mathbf{A}\\left[ \\begin{array}{l}1\\\\ 1\\\\ \\vdots \\\\ 1 \\end{array} \\right] = \\mathbf{0}$ ，所以 $\\mathbf{AX} = \\mathbf{0}$ 的通解为 $\\mathbf{X} = k(1,1,\\dots ,1)^{\\mathrm{T}}(k$ 为任意常数）.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q06",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 6,
+      "questionType": "multiple_choice",
+      "stem": "（1）设 $f(x) = \\int_{0}^{\\sin x}\\sin t^{2}\\mathrm{d}t,g(x) = x^{3} + x^{4}$ ，则当 $x\\to 0$ 时， $f(x)$ 是 $g(x)$ 的( ).\n\n（A）等价无穷小\n\n（B）同阶但非等价的无穷小\n\n（C）高阶无穷小\n\n（D）低阶无穷小",
+      "options": [
+        {
+          "label": "A",
+          "value": "等价无穷小"
+        },
+        {
+          "label": "B",
+          "value": "同阶但非等价的无穷小"
+        },
+        {
+          "label": "C",
+          "value": "高阶无穷小"
+        },
+        {
+          "label": "D",
+          "value": "低阶无穷小"
+        }
+      ],
+      "answerCandidate": "(B).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 (B).\n\n【解】 由 $\\lim_{x\\to 0}\\frac{f(x)}{x^3} = \\lim_{x\\to 0}\\frac{\\cos x\\cdot\\sin(\\sin^2x)}{3x^2} = \\frac{1}{3}$ 得 $f(x)\\sim \\frac{1}{3} x^{3}$\n\n又 $g(x)\\sim x^3$ ，故 $f(x)$ 是 $g(x)$ 的同阶但非等价的无穷小，应选(B).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q07",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 7,
+      "questionType": "multiple_choice",
+      "stem": "（2）双纽线 $(x^{2} + y^{2})^{2} = x^{2} - y^{2}$ 所围成的区域面积可用定积分表示为（ ）.\n\n(A) $2\\int_{0}^{\\frac{\\pi}{4}}\\cos 2\\theta \\mathrm{d}\\theta$\n\n（B）4 $\\int_0^{\\frac{\\pi}{4}}\\cos 2\\theta \\mathrm{d}\\theta$\n\n（C）2√cos20dθ\n\n(D) $\\frac{1}{2} \\int_{0}^{\\frac{\\pi}{4}} \\cos^{2} 2\\theta \\, \\mathrm{d}\\theta$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$2\\int_{0}^{\\frac{\\pi}{4}}\\cos 2\\theta \\mathrm{d}\\theta$"
+        },
+        {
+          "label": "B",
+          "value": "4 $\\int_0^{\\frac{\\pi}{4}}\\cos 2\\theta \\mathrm{d}\\theta$"
+        },
+        {
+          "label": "C",
+          "value": "2√cos20dθ"
+        },
+        {
+          "label": "D",
+          "value": "$\\frac{1}{2} \\int_{0}^{\\frac{\\pi}{4}} \\cos^{2} 2\\theta \\, \\mathrm{d}\\theta$"
+        }
+      ],
+      "answerCandidate": "（A）.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（2）【答案】 （A）.\n\n【解】 双纽线 $(x^{2} + y^{2})^{2} = x^{2} - y^{2}$ 的极坐标方程为 $r^2 = \\cos 2\\theta$\n\n由对称性得双纽线所围成的面积为\n\n$$\nA = 4 \\times \\frac {1}{2} \\int_ {0} ^ {\\frac {\\pi}{4}} \\cos 2 \\theta d \\theta = 2 \\int_ {0} ^ {\\frac {\\pi}{4}} \\cos 2 \\theta d \\theta ,\n$$\n\n应选(A).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q08",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 8,
+      "questionType": "multiple_choice",
+      "stem": "(3) 设有直线 $L_{1}$ : $\\frac{x - 1}{1} = \\frac{y - 5}{-2} = \\frac{z + 8}{1}$ 与 $L_{2}$ : $\\left\\{ \\begin{array}{l} x - y = 6, \\\\ 2y + z = 3, \\end{array} \\right.$ 则 $L_{1}$ 与 $L_{2}$ 的夹角为（ ）.\n\n(A) $\\frac{\\pi}{6}$\n\n(B) $\\frac{\\pi}{4}$\n\n(C) $\\frac{\\pi}{3}$\n\n(D) $\\frac{\\pi}{2}$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\frac{\\pi}{6}$"
+        },
+        {
+          "label": "B",
+          "value": "$\\frac{\\pi}{4}$"
+        },
+        {
+          "label": "C",
+          "value": "$\\frac{\\pi}{3}$"
+        },
+        {
+          "label": "D",
+          "value": "$\\frac{\\pi}{2}$"
+        }
+      ],
+      "answerCandidate": "(C).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（3）【答案】 (C).\n\n【解】 直线 $L_{1}$ 的方向向量为 $s_1 = \\{1, - 2,1\\}$\n\n直线 $L_{2}$ 的方向向量为 $\\pmb{s}_2 = \\{1, - 1,0\\} \\times \\{0,2,1\\} = \\{-1, - 1,2\\}$\n\n设两直线的夹角为 $\\theta$ ，由 $\\cos \\theta = \\frac{|s_1 \\cdot s_2|}{|s_1| \\cdot |s_2|} = \\frac{1}{2}$ 得 $\\theta = \\frac{\\pi}{3}$ ，应选(C).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q09",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 9,
+      "questionType": "multiple_choice",
+      "stem": "（4）设曲线积分 $\\int_{L}[f(x) - \\mathrm{e}^{x}]\\sin y\\mathrm{d}x - f(x)\\cos y\\mathrm{d}y$ 与路径无关，其中 $f(x)$ 具有一阶连续导数，且 $f(0) = 0$ ，则 $f(x)$ 等于（ ）.\n\n(A) $\\frac{\\mathrm{e}^{-x} - \\mathrm{e}^{x}}{2}$\n\n(B) $\\frac{\\mathrm{e}^x - \\mathrm{e}^{-x}}{2}$\n\n(C) $\\frac{\\mathrm{e}^x + \\mathrm{e}^{-x}}{2} - 1$\n\n$\\mathrm{(D)}1 - \\frac{\\mathrm{e}^{x} + \\mathrm{e}^{-x}}{2}$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\frac{\\mathrm{e}^{-x} - \\mathrm{e}^{x}}{2}$"
+        },
+        {
+          "label": "B",
+          "value": "$\\frac{\\mathrm{e}^x - \\mathrm{e}^{-x}}{2}$"
+        },
+        {
+          "label": "C",
+          "value": "$\\frac{\\mathrm{e}^x + \\mathrm{e}^{-x}}{2} - 1$"
+        },
+        {
+          "label": "D",
+          "value": "1 - \\frac{\\mathrm{e}^{x} + \\mathrm{e}^{-x}}{2}"
+        }
+      ],
+      "answerCandidate": "（B）.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（4）【答案】 （B）.\n\n【解】令 $P(x,y) = [f(x) - \\mathrm{e}^x ]\\sin y$ ， $Q(x,y) = -f(x)\\cos y,$\n\n由 $\\frac{\\partial Q}{\\partial x} = \\frac{\\partial P}{\\partial y}$ 得 $f^{\\prime}(x) + f(x) - \\mathrm{e}^{x} = 0$ ，即 $f^{\\prime}(x) + f(x) = \\mathrm{e}^{x}$\n\n解得 $f(x) = \\left[\\int \\mathrm{e}^{x}\\cdot \\mathrm{e}^{\\int \\mathrm{d}x}\\mathrm{d}x + C\\right]\\mathrm{e}^{-\\int \\mathrm{d}x} = \\left(\\frac{1}{2}\\mathrm{e}^{2x} + C\\right)\\mathrm{e}^{-x},$\n\n再由 $f(0) = 0$ 得 $C = -\\frac{1}{2}$ ，故 $f(x) = \\frac{\\mathrm{e}^x - \\mathrm{e}^{-x}}{2}$ ，应选(B).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q10",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 10,
+      "questionType": "multiple_choice",
+      "stem": "（5）已知 $Q = \\begin{pmatrix} 1 & 2 & 3\\\\ 2 & 4 & t\\\\ 3 & 6 & 9 \\end{pmatrix} ,P$ 为3阶非零矩阵，且满足 $PQ = O$ ，则（ ）.\n\n(A) $t = 6$ 时， $\\pmb{P}$ 的秩必为1\n\n$(\\mathrm{B})t = 6$ 时， $\\pmb{P}$ 的秩必为2\n\n(C) $t \\neq 6$ 时, $\\pmb{P}$ 的秩必为1\n\n$(\\mathrm{D})t\\neq 6$ 时， $\\pmb{P}$ 的秩必为2",
+      "options": [
+        {
+          "label": "A",
+          "value": "$t = 6$ 时， $\\pmb{P}$ 的秩必为1"
+        },
+        {
+          "label": "B",
+          "value": "t = 6$ 时， $\\pmb{P}$ 的秩必为2"
+        },
+        {
+          "label": "C",
+          "value": "$t \\neq 6$ 时, $\\pmb{P}$ 的秩必为1"
+        },
+        {
+          "label": "D",
+          "value": "t\\neq 6$ 时， $\\pmb{P}$ 的秩必为2"
+        }
+      ],
+      "answerCandidate": "(C).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（5）【答案】 (C).\n\n【解】由 $PQ = O$ 得 $r(P) + r(Q) \\leqslant 3$ ，当 $t \\neq 6$ 时 $r(Q) = 2$ ，则 $r(P) \\leqslant 1$\n\n再由 $\\pmb{P}$ 为非零矩阵得 $r(P)\\geqslant 1$ ，故 $r(P) = 1$ ，应选(C).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q11",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 11,
+      "questionType": "solution",
+      "stem": "（1）求 $\\lim_{x\\to \\infty}\\left(\\sin {\\frac{2}{x}} + \\cos {\\frac{1}{x}}\\right)^x.$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n= \\mathrm {e} ^ {\\lim  _ {x \\rightarrow \\infty} \\frac {\\sin \\frac {2}{x} + \\cos \\frac {1}{x} - 1}{\\frac {1}{x}}} = \\mathrm {e} ^ {\\lim  _ {t \\rightarrow 0} \\frac {\\sin 2 t + \\cos t - 1}{t}} = \\mathrm {e} ^ {2}.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q12",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 12,
+      "questionType": "solution",
+      "stem": "（2）求 $\\int \\frac{x\\mathrm{e}^x}{\\sqrt{\\mathrm{e}^x - 1}}\\mathrm{d}x.$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "（2）【解】 方法一\n\n$$\n\\int \\frac {x \\mathrm {e} ^ {x}}{\\sqrt {\\mathrm {e} ^ {x} - 1}} \\mathrm {d} x = \\int \\frac {x \\mathrm {d} (\\mathrm {e} ^ {x} - 1)}{\\sqrt {\\mathrm {e} ^ {x} - 1}} = 2 \\int x \\mathrm {d} (\\sqrt {\\mathrm {e} ^ {x} - 1}) = 2 x \\sqrt {\\mathrm {e} ^ {x} - 1} - 2 \\int \\sqrt {\\mathrm {e} ^ {x} - 1} \\mathrm {d} x,\n$$\n\n令 $\\sqrt{\\mathrm{e}^x - 1} = t$ ，即 $x = \\ln (1 + t^{2})$ ，则\n\n$$\n\\begin{array}{l} \\int \\sqrt {e ^ {x} - 1} d x = \\int t \\cdot \\frac {2 t}{1 + t ^ {2}} d t = 2 \\int \\left(1 - \\frac {1}{1 + t ^ {2}}\\right) d t = 2 t - 2 \\arctan t + C \\\\ = 2 \\sqrt {\\mathrm {e} ^ {x} - 1} - 2 \\arctan \\sqrt {\\mathrm {e} ^ {x} - 1} + C, \\\\ \\end{array}\n$$\n\n故 $\\int \\frac{x\\mathrm{e}^x}{\\sqrt{\\mathrm{e}^x - 1}}\\mathrm{d}x = (2x - 4)\\sqrt{\\mathrm{e}^x - 1} +4\\arctan \\sqrt{\\mathrm{e}^x - 1} +C.$\n\n方法二 令 $\\sqrt{\\mathrm{e}^x - 1} = t$ ，则 $x = \\ln (1 + t^{2}),\\mathrm{d}x = \\frac{2t}{1 + t^{2}}\\mathrm{d}t,$\n\n$$\n\\begin{array}{l} \\int \\frac {x e ^ {x}}{\\sqrt {e ^ {x} - 1}} d x = \\int \\frac {\\ln (1 + t ^ {2}) \\cdot (1 + t ^ {2})}{t} \\cdot \\frac {2 t}{1 + t ^ {2}} d t \\\\ = 2 \\int \\ln (1 + t ^ {2}) d t = 2 t \\ln (1 + t ^ {2}) - 2 \\int \\frac {t \\cdot 2 t}{1 + t ^ {2}} d t \\\\ \\end{array}\n$$\n\n$$\n\\begin{array}{l} = 2 t \\ln \\left(1 + t ^ {2}\\right) - 4 t + 4 \\arctan t + C \\\\ = (2 x - 4) \\sqrt {\\mathrm {e} ^ {x} - 1} + 4 \\arctan \\sqrt {\\mathrm {e} ^ {x} - 1} + C. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q13",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 13,
+      "questionType": "solution",
+      "stem": "(3) 求微分方程 $x^{2}y^{\\prime} + xy = y^{2}$ 满足初始条件 $y|_{x=1} = 1$ 的特解.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "(3)【解】 将方程 $x^{2}y^{\\prime} + xy = y^{2}$ 化为 $y^\\prime +\\frac{1}{x} y = \\frac{1}{x^2} y^2$\n\n令 $u = y^{-1}$ ，则 $\\frac{\\mathrm{d}u}{\\mathrm{d}x} -\\frac{1}{x} u = -\\frac{1}{x^2},$\n\n解得 $u = \\left[\\int \\left(-\\frac{1}{x^2}\\right)\\mathrm{e}^{\\int -\\frac{1}{x}\\mathrm{d}x}\\mathrm{d}x + C\\right]\\mathrm{e}^{-\\int -\\frac{1}{x}\\mathrm{d}x} = \\left(\\frac{1}{2x^2} +C\\right)x$ ，即 $\\frac{1}{y} = \\left(\\frac{1}{2x^2} +C\\right)x$\n\n由 $y(1) = 1$ 得 $C = \\frac{1}{2}$ ，故满足条件的特解为 $y = \\frac{2x}{1 + x^2}$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q14",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 14,
+      "questionType": "solution",
+      "stem": "计算曲面积分 $\\iint_{\\Sigma} 2xz \\, \\mathrm{d}y \\, \\mathrm{d}z + yz \\, \\mathrm{d}z \\, \\mathrm{d}x - z^2 \\, \\mathrm{d}x \\, \\mathrm{d}y$ ，其中 $\\Sigma$ 是由曲面 $z = \\sqrt{x^2 + y^2}$ 与 $z = \\sqrt{2 - x^2 - y^2}$ 所围立体表面的外侧.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "曲面 $\\Sigma$ 所围成的几何体 $\\Omega = \\{(x, y, z) \\mid x^2 + y^2 \\leqslant 1, \\sqrt{x^2 + y^2} \\leqslant z \\leqslant \\sqrt{2 - x^2 - y^2}\\}$ , 由高斯公式得\n\n$$\n\\begin{array}{l} \\iint_ {z} 2 x z \\mathrm {d} y \\mathrm {d} z + y z \\mathrm {d} z \\mathrm {d} x - z ^ {2} \\mathrm {d} x \\mathrm {d} y = \\iiint_ {\\Omega} (2 z + z - 2 z) \\mathrm {d} v = \\iiint_ {\\Omega} z \\mathrm {d} v \\\\ = \\iint_ {x ^ {2} + y ^ {2} \\leqslant 1} d x d y \\int_ {\\sqrt {x ^ {2} + y ^ {2}}} ^ {\\sqrt {2 - x ^ {2} - y ^ {2}}} z d z = \\iint_ {x ^ {2} + y ^ {2} \\leqslant 1} (1 - x ^ {2} - y ^ {2}) d x d y \\\\ = \\int_ {0} ^ {2 \\pi} d \\theta \\int_ {0} ^ {1} (r - r ^ {3}) d r = \\frac {\\pi}{2}. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q15",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 15,
+      "questionType": "solution",
+      "stem": "求级数 $\\sum_{n = 0}^{\\infty}\\frac{(-1)^n(n^2 - n + 1)}{2^n}$ 的和.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "由 $\\lim_{n\\to \\infty}\\left|\\frac{a_{n + 1}}{a_n}\\right| = 1$ 得级数 $\\sum_{n = 0}^{\\infty}(n^{2} - n + 1)x^{n}$ 的收敛半径为 $R = 1$\n\n当 $x = \\pm 1$ 时级数发散，故级数的收敛域为 $(-1,1)$\n\n由 $S(x) = \\sum_{n=0}^{\\infty}(n^{2} - n + 1)x^{n} = x^{2}\\sum_{n=2}^{\\infty}n(n - 1)x^{n - 2} + \\sum_{n=0}^{\\infty}x^{n}$\n\n$$\n= x ^ {2} \\left(\\sum_ {n = 2} ^ {\\infty} x ^ {n}\\right) ^ {\\prime \\prime} + \\frac {1}{1 - x} = x ^ {2} \\left(\\frac {x ^ {2}}{1 - x}\\right) ^ {\\prime \\prime} + \\frac {1}{1 - x} = \\frac {1 - 2 x + 3 x ^ {2}}{(1 - x) ^ {3}},\n$$\n\n故 $\\sum_{n = 0}^{\\infty}\\frac{(-1)^n(n^2 - n + 1)}{2^n} = S\\left(-\\frac{1}{2}\\right) = \\frac{22}{27}.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q16",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 16,
+      "questionType": "solution",
+      "stem": "（1）设在 $[0, +\\infty)$ 上函数 $f(x)$ 有连续导数，且 $f'(x) \\geq k > 0, f(0) < 0$ 。证明： $f(x)$ 在 $(0, +\\infty)$ 内有且仅有一个零点。",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "由 $f^{\\prime}(x)\\geqslant k > 0$ 得 $f(x) > f(0) + kx$ ，于是 $\\lim_{x\\to x_0}f(x) = +\\infty .$\n\n再由 $f(0) < 0$ 得 $f(x)$ 在 $(0, +\\infty)$ 内至少有一个零点，\n\n因为 $f^{\\prime}(x)\\geqslant k > 0$ ，所以 $f(x)$ 在 $[0, + \\infty)$ 上严格递增，故零点是唯一的.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q17",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 17,
+      "questionType": "solution",
+      "stem": "（2）设 $b > a > \\mathrm{e}$ ，证明： $a^b > b^a$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "(2) $a^b > b^a$ 等价于 $b \\ln a - a \\ln b > 0$ .\n\n令 $f(x) = x\\ln a - a\\ln x$ ， $f(a) = 0$\n\n$$\nf ^ {\\prime} (x) = \\ln a - \\frac {a}{x} > 0 (x > a),\n$$\n\n由 $\\left\\{ \\begin{array}{l} f(a) = 0, \\\\ f'(x) > 0 (x > a), \\end{array} \\right.$ 得 $f(x) > 0 (x > a)$ ，\n\n由 $b > a$ 得 $f(b) > 0$ ，故 $a^b > b^a$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q18",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 18,
+      "questionType": "solution",
+      "stem": "已知二次型 $f(x_{1},x_{2},x_{3}) = 2x_{1}^{2} + 3x_{2}^{2} + 3x_{3}^{2} + 2ax_{2}x_{3}(a > 0)$ ，通过正交变换化为标准形 $f = y_1^2 +2y_2^2 +5y_3^2$ ，求参数 $a$ 及所用的正交变换矩阵.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "显然矩阵 $\\mathbf{A}$ 的特征值为 $\\lambda_1 = 1, \\lambda_2 = 2, \\lambda_3 = 5$\n\n由 $|\\mathbf{A}| = 10$ 得 $9 - a^{2} = 5$ ，解得 $a = 2$ ，即 $\\mathbf{A} = \\begin{pmatrix} 2 & 0 & 0 \\\\ 0 & 3 & 2 \\\\ 0 & 2 & 3 \\end{pmatrix}$\n\n由 $\\pmb {E} - \\pmb {A} = \\left( \\begin{array}{rrr} - 1 & 0 & 0\\\\ 0 & -2 & -2\\\\ 0 & -2 & -2 \\end{array} \\right)\\sim \\left( \\begin{array}{rrr}1 & 0 & 0\\\\ 0 & 1 & 1\\\\ 0 & 0 & 0 \\end{array} \\right)$ 得 $\\lambda_{1} = 1$ 对应的特征向量为 $\\pmb{\\alpha}_{1} = \\left( \\begin{array}{l}0\\\\ -1\\\\ 1 \\end{array} \\right)$\n\n由 $2E - A = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & -1 & -2 \\\\ 0 & -2 & -1 \\end{pmatrix} \\sim \\begin{pmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 0 & 0 & 0 \\end{pmatrix}$ 得 $\\lambda_{2} = 2$ 对应的特征向量为 $\\pmb{\\alpha}_{2} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix}$ ;\n\n由 $5\\pmb {E} - \\pmb {A} = \\left( \\begin{array}{rrr}3 & 0 & 0\\\\ 0 & 2 & -2\\\\ 0 & -2 & 2 \\end{array} \\right)\\sim \\left( \\begin{array}{rrr}1 & 0 & 0\\\\ 0 & 1 & -1\\\\ 0 & 0 & 0 \\end{array} \\right)$ 得 $\\lambda_3 = 5$ 对应的特征向量为 $\\alpha_{3} = \\left( \\begin{array}{l}0\\\\ 1\\\\ 1 \\end{array} \\right),$\n\n规范化得 $\\pmb{\\gamma}_{1} = \\frac{1}{\\sqrt{2}}\\binom{0}{-1}$ ， $\\pmb{\\gamma}_{2} = \\binom{1}{0},\\quad \\pmb{\\gamma}_{3} = \\frac{1}{\\sqrt{2}}\\binom{0}{1},$\n\n故正交矩阵为 $Q = \\left[ \\begin{array}{ccc}0 & 1 & 0\\\\ -\\frac{1}{\\sqrt{2}} & 0 & \\frac{1}{\\sqrt{2}}\\\\ \\frac{1}{\\sqrt{2}} & 0 & \\frac{1}{\\sqrt{2}} \\end{array} \\right].$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q19",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 19,
+      "questionType": "solution",
+      "stem": "设 $\\mathbf{A}$ 是 $n\\times m$ 矩阵， $\\pmb{B}$ 是 $m\\times n$ 矩阵，其中 $n <   m,E$ 是 $n$ 阶单位矩阵，若 $\\mathbf{AB} = \\mathbf{E}$ ，证明 $\\pmb{B}$ 的列向量组线性无关.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "由 $r(\\mathbf{AB}) \\leqslant r(\\mathbf{A}), r(\\mathbf{AB}) \\leqslant r(\\mathbf{B})$ 得 $r(\\mathbf{A}) \\geqslant n, r(\\mathbf{B}) \\geqslant n$ .\n\n因为矩阵的秩不超过其行数及列数，所以 $r(\\mathbf{A}) \\leqslant n, r(\\mathbf{B}) \\leqslant n$ ，于是 $r(\\mathbf{B}) = n$\n\n因为矩阵的秩与矩阵的行向量组的秩、列向量组的秩都相等，所以矩阵 $\\pmb{B}$ 的列向量组的秩为 $n$ ，故矩阵 $\\pmb{B}$ 的列向量组线性无关.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q20",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 20,
+      "questionType": "solution",
+      "stem": "设物体 $A$ 从点 $(0,1)$ 出发，以速度大小为常数 $v$ 沿 $y$ 轴正向运动，物体 $B$ 从点 $(-1,0)$ 与 $A$ 同时出发，其速度大小为 $2v$ ，方向始终指向 $A$ ，试建立物体 $B$ 的运动轨迹所满足的微分方程，并写出初始条件.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n\\frac {\\mathrm {d} y}{\\mathrm {d} x} = \\frac {(1 + v t) - y}{- x}.\n$$\n\n上式两边对 $x$ 求导，得\n\n$$\nx \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} = - v \\frac {\\mathrm {d} t}{\\mathrm {d} x}.\n$$\n\n由于\n\n（\\*）\n\n![](images/870089ab4858899c01599f7459e6d66e41281e7d312e9a3fa455be6746dbe2b8.jpg)  \n九题图\n\n$$\n\\begin{array}{l} 2 v = \\frac {\\mathrm {d} s}{\\mathrm {d} t} = \\sqrt {1 + \\left(\\frac {\\mathrm {d} y}{\\mathrm {d} x}\\right) ^ {2}} \\cdot \\frac {\\mathrm {d} x}{\\mathrm {d} t}, \\\\ \\frac {\\mathrm {d} t}{\\mathrm {d} x} = \\frac {1}{2 v} \\sqrt {1 + \\left(\\frac {\\mathrm {d} y}{\\mathrm {d} x}\\right) ^ {2}}, \\\\ \\end{array}\n$$\n\n将上式代入 $(\\ast)$ 式，得到所求的微分方程为\n\n$$\nx \\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} + \\frac {1}{2} \\sqrt {1 + \\left(\\frac {\\mathrm {d} y}{\\mathrm {d} x}\\right) ^ {2}} = 0,\n$$\n\n其初值条件为 $y|_{x = -1} = 0, y'|_{x = -1} = 1.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q21",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 21,
+      "questionType": "fill_in_blank",
+      "stem": "（1）一批产品共有10个正品和2个次品，任意抽取两次，每次抽一个，抽出后不再放回，则第二次抽出的产品是次品的概率为",
+      "options": [],
+      "answerCandidate": "$\\frac{1}{6}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 $\\frac{1}{6}$ .\n\n【解】设 $A_{1} = \\{$ 第一次取到正品 $\\}$ , $A_{2} = \\{$ 第一次取到次品 $\\}$ , $B = \\{$ 第二次取到次品 $\\}$ ,\n\n$P(A_{1}) = \\frac{10}{12},\\quad P(A_{2}) = \\frac{2}{12},\\quad P(B\\mid A_{1}) = \\frac{2}{11},\\quad P(B\\mid A_{2}) = \\frac{1}{11}$ ，则\n\n$$\n\\begin{array}{l} P (B) = P \\left(A _ {1}\\right) P \\left(B \\mid A _ {1}\\right) + P \\left(A _ {2}\\right) P \\left(B \\mid A _ {2}\\right) \\\\ = \\frac {1 0}{1 2} \\times \\frac {2}{1 1} + \\frac {2}{1 2} \\times \\frac {1}{1 1} = \\frac {2}{1 2} = \\frac {1}{6}. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q22",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 22,
+      "questionType": "fill_in_blank",
+      "stem": "（2）设随机变量 $X$ 服从(0，2）上的均匀分布，则随机变量 $Y = X^2$ 在(0，4）内的概率密度 $f_{Y}(y) = \\_ .$",
+      "options": [],
+      "answerCandidate": "$\\left\\{ \\begin{array}{ll} \\frac{1}{4\\sqrt{y}}, & 0 < y < 4, \\\\ 0, & \\text{其他}. \\end{array} \\right.$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】 $\\left\\{ \\begin{array}{ll} \\frac{1}{4\\sqrt{y}}, & 0 < y < 4, \\\\ 0, & \\text{其他}. \\end{array} \\right.$\n\n【解】 $F_{Y}(y) = P\\{Y \\leqslant y\\} = P\\{X^{2} \\leqslant y\\}$ ，\n\n当 $y < 0$ 时， $F_{Y}(y) = 0$\n\n当 $y \\geqslant 4$ 时， $F_{Y}(y) = 1$\n\n当 $0 \\leqslant y < 4$ 时， $F_{Y}(y) = P\\{0 \\leqslant X \\leqslant \\sqrt{y}\\} = \\int_{0}^{\\sqrt{y}} \\frac{1}{2} \\mathrm{d}y = \\frac{\\sqrt{y}}{2}$ ，\n\n即 $F_{Y}(y) = \\left\\{ \\begin{array}{ll}0, & y <   0,\\\\ \\frac{\\sqrt{y}}{2}, & 0\\leqslant y <   4,\\\\ 1, & y\\geqslant 4, \\end{array} \\right.$ 故 $f_{Y}(y) = \\left\\{ \\begin{array}{ll}\\frac{1}{4\\sqrt{y}}, & 0 <   y <   4,\\\\ 0, & \\text{其他}. \\end{array} \\right.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1993-q23",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1993年考研数学(一)真题.md",
+        "solutions/1993年解析/1993年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1993,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "B979563FE9C1ACCF5D6FA0BB04A17615A8BB168D3843E9763F0B2C5E4AE776EA",
+        "solutions": "2B193A7012F4950E925892ECD8AD61D60E24B68FDC3FE42905045D0D06EFBCD7"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 23,
+      "questionType": "solution",
+      "stem": "设随机变量 $X$ 的概率密度为 $f(x) = \\frac{1}{2}\\mathrm{e}^{-|x|}, - \\infty <  x <   + \\infty .$\n\n（1）求 $X$ 的数学期望 $E(X)$ 和方差 $D(X)$   \n(2) 求 $X$ 与 $|X|$ 的协方差，并问 $X$ 与 $|X|$ 是否不相关？  \n（3）问 $X$ 与 $|X|$ 是否相互独立？为什么？",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "由 $E(X^2) = \\int_{-\\infty}^{+\\infty}x^2 f(x)\\mathrm{d}x = \\int_0^{+\\infty}x^2\\mathrm{e}^{-x}\\mathrm{d}x = \\Gamma (3) = 2$ ，得\n\n$$\nD (X) = E \\left(X ^ {2}\\right) - [ E (X) ] ^ {2} = 2.\n$$\n\n(2) $\\operatorname{Cov}(X, |X|) = E(X|X) - E(X) \\cdot E(|X|)$ ,\n\n由 $E(X|X|) = \\int_{-\\infty}^{+\\infty}x|x|f(x)\\mathrm{d}x = 0$ ，得 $\\operatorname {Cov}(X,|X|) = 0$ ，即 $X$ 与 $|X|$ 不相关.\n\n（3）设 $F(x,y)$ 为 $(X,|X|)$ 的联合分布函数，\n\n$$\nF (1, 1) = P \\{X \\leqslant 1, | X | \\leqslant 1 \\} = P \\{- 1 \\leqslant X \\leqslant 1 \\} = \\int_ {0} ^ {1} e ^ {- x} d x = 1 - \\frac {1}{e},\n$$\n\n$$\nF _ {X} (1) = P \\{X \\leqslant 1 \\} = \\frac {1}{2} \\int_ {- \\infty} ^ {1} e ^ {- | x |} d x = \\frac {1}{2} + \\frac {1}{2} \\int_ {0} ^ {1} e ^ {- x} d x = 1 - \\frac {1}{2 e},\n$$\n\n$$\nF _ {| X |} (1) = P \\{| X | \\leqslant 1 \\} = \\int_ {0} ^ {1} \\mathrm {e} ^ {- | x |} \\mathrm {d} x = 1 - \\frac {1}{\\mathrm {e}},\n$$\n\n因为 $F(1,1)\\neq F_{X}(1)\\cdot F_{|X|}(1)$ ，所以 $X$ 与 $\\mid X\\mid$ 不相互独立.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    }
+  ],
+  "validation": {
+    "questionsGenerated": 23,
+    "questionsWithExplanations": 23,
+    "multipleChoiceWithFourOptions": 5,
+    "allNeedsHumanReview": true,
+    "remainingAutomaticAnomalies": 0
+  }
+}

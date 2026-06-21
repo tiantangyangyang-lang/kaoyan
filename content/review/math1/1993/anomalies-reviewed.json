@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "md-finalization-v1",
+  "batchId": "20260620-154345-cc-math1-md-finalize-year-1993",
+  "sourceYear": 1993,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": false,
+  "reviewTimestamp": "2026-06-20T15:48:29.420790+08:00",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "ocr_noise_repaired",
+      "questionNumber": 7,
+      "severity": "info",
+      "message": "Option C original OCR noise '2√cos20dθ' repaired to LaTeX based on mathematical context; needs human PDF confirmation"
+    }
+  ],
+  "resolvedFromPrevious": [
+    {
+      "type": "section_split_mismatch",
+      "action": "Split merged section 三",
+      "status": "resolved"
+    },
+    {
+      "type": "section_split_mismatch",
+      "action": "Split merged section 六",
+      "status": "resolved"
+    },
+    {
+      "type": "incomplete_options",
+      "questionNumber": 9,
+      "action": "Restored option D",
+      "status": "resolved"
+    },
+    {
+      "type": "incomplete_options",
+      "questionNumber": 10,
+      "action": "Restored options B and D",
+      "status": "resolved"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 12,
+      "action": "Assigned Q12 explanation from split",
+      "status": "resolved"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 13,
+      "action": "Assigned Q13 explanation from split",
+      "status": "resolved"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 17,
+      "action": "Assigned Q17 explanation from split",
+      "status": "resolved"
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 1,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 1
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_required_for_md_finalization"
+  }
+}

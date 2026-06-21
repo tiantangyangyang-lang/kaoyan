@@ -1,0 +1,33 @@
+{
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "expectedCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "countsMatch": true,
+  "totalAnomalies": 1,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 1
+  },
+  "allQuestionsNeedsReview": true,
+  "checksPassed": [
+    "year_present",
+    "subject_present",
+    "stable_ids_unique",
+    "question_types_valid",
+    "options_count_valid",
+    "answer_in_options_for_choice",
+    "json_schema_valid",
+    "source_paths_present",
+    "all_needs_human_review"
+  ],
+  "lastModified": "2026-06-20T17:29:41+08:00"
+}

@@ -1,0 +1,586 @@
+{
+  "schemaVersion": "review-v1",
+  "task": "cc-math1-md-finalize-year-2015",
+  "runId": "20260620-172102-cc-math1-md-finalize-year-2015",
+  "generatedAt": "2026-06-20T17:21:02.000000+08:00",
+  "sourceInfo": {
+    "sourceRepo": "Kaoyan-Math1-Papers",
+    "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+    "paperRelativePath": "papers/2015年考研数学(一)真题.md",
+    "paperSha256": "95E22B2F1BFAFE78700D09C7DA43A3F6C3BE3ED35B9EAFD3D3ABFCF1BCFB381F",
+    "solutionsRelativePath": "solutions/2015年解析/2015年解析.md",
+    "solutionsSha256": "370B84E7FC98AFE6E2DCAABB6A2BF8561CEC9B12B8D76EF81FA6926529148A9C",
+    "stagingGeneratedAt": "2026-06-20T17:21:02.000000+08:00"
+  },
+  "summary": {
+    "totalQuestions": 23,
+    "multipleChoice": 8,
+    "fillInBlank": 6,
+    "solution": 9,
+    "anomaliesConfirmed": 0,
+    "anomaliesDowngraded": 2,
+    "newAnomaliesDetected": 4,
+    "fixesApplied": 4,
+    "allNeedsHumanReview": true,
+    "activeErrors": 0,
+    "activeWarnings": 0,
+    "infoAnomalies": 6
+  },
+  "reviews": [
+    {
+      "stableId": "math1-2015-q01",
+      "candidateResult": {
+        "questionNumber": 1,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "设函数 $f(x)$ 在 $(- \\infty, + \\infty)$ 上连续，其 2 阶导函数 $f''(x)$ 的图形如右图所示，则曲线 $y = f(x)$ 的拐点个数为（）\n\n(A)0.\n\n(B)1.\n\n(C)2.\n\n(D)3.",
+        "options": [
+          {"label": "A", "value": "0."},
+          {"label": "B", "value": "1."},
+          {"label": "C", "value": "2."},
+          {"label": "D", "value": "3."}
+        ],
+        "answerCandidate": "(C).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(1)【答案】 (C).\n\n【解】设 $f^{\\prime \\prime}(x) = 0$ 左边的零点为 $x = a$ ，右边的零点为 $x = b$\n\n又在 $x = 0$ 处 $f''(x)$ 不存在.\n\n因为 $x = a$ 的左、右两侧 $f''(x)$ 都大于零，所以 $(a, f(a))$ 不是拐点；\n\n因为 $x = 0$ 左、右两侧 $f''(x)$ 异号，所以 $(0, f(0))$ 为拐点；\n\n因为 $x = b$ 左、右两侧 $f''(x)$ 异号，所以 $(b, f(b))$ 为拐点，\n\n故 $y = f(x)$ 有两个拐点，应选(C).\n\n方法点评：本题考查拐点的判别法. 判断曲线的拐点时，首先找出二阶导数为零的点及二阶不可导的点，其次判断该点两侧二阶导数的符号情况，若该点两侧二阶导数异号，则曲线上对应的点为拐点.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "missing_figure_reference",
+            "questionNumber": 1,
+            "severity": "info",
+            "message": "Stem references '如右图所示' (graph of f''(x)) but no image is captured in paper Markdown. The graph is present in the original PDF only."
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "missing_figure_reference",
+            "detail": "Graph of f''(x) not in Markdown; must verify answer against original PDF graph.",
+            "severity": "info"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {"topic": "拐点判别法", "confidence": "high", "evidence": "Solution explanation explicitly uses sign-change test at f''=0 and f'' undefined points."}
+        ],
+        "confidence": "high",
+        "humanReviewFocus": ["Verify graph of f''(x) against original PDF to confirm f'' sign changes at a, 0, b match the solution reasoning."]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q02",
+      "candidateResult": {
+        "questionNumber": 2, "questionType": "multiple_choice", "reviewStatus": "needs_human_review",
+        "stem": "设 $y = \\frac{1}{2}\\mathrm{e}^{2x} + \\left(x - \\frac{1}{3}\\right)\\mathrm{e}^x$ 是二阶常系数非齐次线性微分方程 $y'' + ay' + by = ce^x$ 的一个特解，则（ ）\n\n![](images/c6f9e3106314deb729f84ebf17c829522532fccf52a6901247924bbc5c8e8f43.jpg)\n\n(A) $a = -3, b = 2, c = -1$ .\n\n(B) $a = 3, b = 2, c = -1$ .\n\n(C) $a = -3, b = 2, c = 1$ .\n\n(D) $a = 3, b = 2, c = 1$ .",
+        "options": [
+          {"label": "A", "value": "$a = -3, b = 2, c = -1$ ."},
+          {"label": "B", "value": "$a = 3, b = 2, c = -1$ ."},
+          {"label": "C", "value": "$a = -3, b = 2, c = 1$ ."},
+          {"label": "D", "value": "$a = 3, b = 2, c = 1$ ."}
+        ],
+        "answerCandidate": "(A).", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(2)【答案】 (A).\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "常系数非齐次线性微分方程", "confidence": "high", "evidence": "Solution uses characteristic equation and particular solution method."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q03",
+      "candidateResult": {
+        "questionNumber": 3, "questionType": "multiple_choice", "reviewStatus": "needs_human_review",
+        "stem": "若级数 $\\sum_{n=1}^{\\infty} a_n$ 条件收敛, 则 $x = \\sqrt{3}$ 与 $x = 3$ 依次为幂级数 $\\sum_{n=1}^{\\infty} n a_n (x - 1)^n$ 的( )\n\n(A)收敛点, 收敛点.\n\n(B)收敛点，发散点\n\n(C) 发散点, 收敛点.\n\n(D) 发散点, 发散点.",
+        "options": [
+          {"label": "A", "value": "收敛点, 收敛点."},
+          {"label": "B", "value": "收敛点，发散点"},
+          {"label": "C", "value": "发散点, 收敛点."},
+          {"label": "D", "value": "发散点, 发散点."}
+        ],
+        "answerCandidate": "（B）.", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（3）【答案】 （B）.\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "幂级数收敛域", "confidence": "high", "evidence": "Solution derives convergence radius from conditional convergence."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q04",
+      "candidateResult": {
+        "questionNumber": 4, "questionType": "multiple_choice", "reviewStatus": "needs_human_review",
+        "stem": "设 $D$ 是第一象限中的曲线 $2xy = 1, 4xy = 1$ 与直线 $y = x, y = \\sqrt{3}x$ 围成的平面区域, 函数 $f(x, y)$ 在 $D$ 上连续, 则 $\\iint_{D} f(x, y) \\mathrm{d}x \\mathrm{d}y = (\\quad)$\n\n(A) $\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{3}}\\mathrm{d}\\theta \\int_{\\frac{1}{2\\sin 2\\theta}}^{\\frac{1}{\\sin 2\\theta}}f(r\\cos \\theta ,r\\sin \\theta)r\\mathrm{d}r.$\n\n(B) $\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{3}} \\mathrm{d}\\theta \\int_{\\frac{1}{\\sqrt{2\\sin 2\\theta}}}^{\\frac{1}{\\sqrt{\\sin 2\\theta}}} f(r \\cos \\theta, r \\sin \\theta) r \\mathrm{d}r.$\n\n( C) $\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{3}}\\mathrm{d}\\theta \\int_{\\frac{1}{2\\sin 2\\theta}}^{\\frac{1}{\\sin 2\\theta}}f(r\\cos \\theta ,r\\sin \\theta)\\mathrm{d}r.$\n\n$\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{3}} \\mathrm{d}\\theta \\int_{\\frac{1}{\\sqrt{2\\sin 2\\theta}}}^{\\frac{1}{\\sqrt{\\sin 2\\theta}}} f(r \\cos \\theta, r \\sin \\theta) \\mathrm{d}r.$",
+        "options": [
+          {"label": "A", "value": "$\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{3}}\\mathrm{d}\\theta \\int_{\\frac{1}{2\\sin 2\\theta}}^{\\frac{1}{\\sin 2\\theta}}f(r\\cos \\theta ,r\\sin \\theta)r\\mathrm{d}r.$"},
+          {"label": "B", "value": "$\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{3}} \\mathrm{d}\\theta \\int_{\\frac{1}{\\sqrt{2\\sin 2\\theta}}}^{\\frac{1}{\\sqrt{\\sin 2\\theta}}} f(r \\cos \\theta, r \\sin \\theta) r \\mathrm{d}r.$"},
+          {"label": "C", "value": "$\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{3}}\\mathrm{d}\\theta \\int_{\\frac{1}{2\\sin 2\\theta}}^{\\frac{1}{\\sin 2\\theta}}f(r\\cos \\theta ,r\\sin \\theta)\\mathrm{d}r.$"},
+          {"label": "D", "value": "$\\int_{\\frac{\\pi}{4}}^{\\frac{\\pi}{3}} \\mathrm{d}\\theta \\int_{\\frac{1}{\\sqrt{2\\sin 2\\theta}}}^{\\frac{1}{\\sqrt{\\sin 2\\theta}}} f(r \\cos \\theta, r \\sin \\theta) \\mathrm{d}r.$"}
+        ],
+        "answerCandidate": "（B）.", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（4）【答案】 （B）.\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "options_recovered_from_markdown",
+            "questionNumber": 4,
+            "severity": "info",
+            "message": "Options C and D recovered from paper Markdown. Original parser only extracted ['A', 'B'] because '( C)' used space-padded label and D lacked explicit label. All 4 options now present."
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "options",
+            "before": "2 options ['A','B'] with C and D merged into B's value",
+            "after": "4 separate options A, B, C, D recovered from paper Markdown",
+            "reason": "Paper Markdown has clear (A), (B), (C) (with space), and unlabeled D lines. Deterministic recovery."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "二重积分极坐标变换", "confidence": "high", "evidence": "Solution shows polar coordinate transformation with correct r bounds from 2xy and 4xy curves."}],
+        "confidence": "high",
+        "humanReviewFocus": ["Verify that option D (labeled without explicit parenthesized prefix in paper Markdown) is correctly assigned."]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q05",
+      "candidateResult": {
+        "questionNumber": 5, "questionType": "multiple_choice", "reviewStatus": "needs_human_review",
+        "stem": "设矩阵 $\\mathbf{A} = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & a \\\\ 1 & 4 & a^2 \\end{pmatrix}, \\mathbf{b} = \\begin{pmatrix} 1 \\\\ d \\\\ d^2 \\end{pmatrix}$ . 若集合 $\\Omega = \\{1, 2\\}$ ，则线性方程组 $\\mathbf{Ax} = \\mathbf{b}$ 有无穷多解的充分必要条件为（ ）\n\n(A) $a \\notin \\Omega, d \\notin \\Omega$ .\n\n(B) $a \\notin \\Omega, d \\in \\Omega$ .\n\n(C) $a\\in \\Omega ,d\\notin \\Omega$\n\n(D) $a\\in \\Omega ,d\\in \\Omega$",
+        "options": [
+          {"label": "A", "value": "$a \\notin \\Omega, d \\notin \\Omega$ ."},
+          {"label": "B", "value": "$a \\notin \\Omega, d \\in \\Omega$ ."},
+          {"label": "C", "value": "$a\\in \\Omega ,d\\notin \\Omega$"},
+          {"label": "D", "value": "$a\\in \\Omega ,d\\in \\Omega$"}
+        ],
+        "answerCandidate": "(D).", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(5)【答案】 (D).\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "非齐次线性方程组解的结构", "confidence": "high", "evidence": "Solution verifies both a∈Ω and d∈Ω needed for rank-deficient augmented matrix."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q06",
+      "candidateResult": {
+        "questionNumber": 6, "questionType": "multiple_choice", "reviewStatus": "needs_human_review",
+        "stem": "设二次型 $f(x_{1}, x_{2}, x_{3})$ 在正交变换 $\\mathbf{x} = \\mathbf{P}\\mathbf{y}$ 下的标准形为 $2y_{1}^{2} + y_{2}^{2} - y_{3}^{2}$ ，其中 $\\mathbf{P} = (\\mathbf{e}_{1}, \\mathbf{e}_{2}, \\mathbf{e}_{3})$ 。若 $Q = (e_{1}, -e_{3}, e_{2})$ ，则 $f(x_{1}, x_{2}, x_{3})$ 在正交变换 $\\mathbf{x} = Q\\mathbf{y}$ 下的标准形为（ ）\n\n(A) $2y_{1}^{2} - y_{2}^{2} + y_{3}^{2}$ .\n\n(B) $2y_{1}^{2} + y_{2}^{2} - y_{3}^{2}$ .\n\n(C) $2y_{1}^{2} - y_{2}^{2} - y_{3}^{2}$ .\n\n(D) $2y_{1}^{2} + y_{2}^{2} + y_{3}^{2}$ .",
+        "options": [
+          {"label": "A", "value": "$2y_{1}^{2} - y_{2}^{2} + y_{3}^{2}$ ."},
+          {"label": "B", "value": "$2y_{1}^{2} + y_{2}^{2} - y_{3}^{2}$ ."},
+          {"label": "C", "value": "$2y_{1}^{2} - y_{2}^{2} - y_{3}^{2}$ ."},
+          {"label": "D", "value": "$2y_{1}^{2} + y_{2}^{2} + y_{3}^{2}$ ."}
+        ],
+        "answerCandidate": "（A）.", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（6）【答案】 （A）.\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "二次型正交变换", "confidence": "high", "evidence": "Solution matches eigenvectors e1,e2,e3 to eigenvalues 2,1,-1 and permutes for Q."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q07",
+      "candidateResult": {
+        "questionNumber": 7, "questionType": "multiple_choice", "reviewStatus": "needs_human_review",
+        "stem": "若 $A, B$ 为任意两个随机事件，则( )\n\n$(\\mathrm{A})P(AB)\\leqslant P(A)P(B).$\n\n(B) $P(AB) \\geqslant P(A)P(B)$ .\n\n(C) $P(AB) \\leqslant \\frac{P(A) + P(B)}{2}$ .\n\n(D) $P(AB) \\geqslant \\frac{P(A) + P(B)}{2}$ .",
+        "options": [
+          {"label": "A", "value": "$P(AB)\\leqslant P(A)P(B).$"},
+          {"label": "B", "value": "$P(AB) \\geqslant P(A)P(B)$ ."},
+          {"label": "C", "value": "$P(AB) \\leqslant \\frac{P(A) + P(B)}{2}$ ."},
+          {"label": "D", "value": "$P(AB) \\geqslant \\frac{P(A) + P(B)}{2}$ ."}
+        ],
+        "answerCandidate": "(C).", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（7）【答案】 (C).\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "option_a_recovered_from_markdown",
+            "questionNumber": 7,
+            "severity": "info",
+            "message": "Option A recovered from paper Markdown. Original parser only extracted ['B', 'C', 'D'] because option A used $(\\mathrm{A})$ inside math mode. All 4 options now present."
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "options",
+            "before": "3 options ['B','C','D'], A missing",
+            "after": "4 options A,B,C,D with A recovered from paper Markdown",
+            "reason": "Paper Markdown line 69 shows $(\\mathrm{A})P(AB)\\leqslant P(A)P(B).$ which the parser missed because \\mathrm{A} is inside math mode. Deterministic recovery."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "概率不等式", "confidence": "high", "evidence": "Solution uses P(A+B) >= P(AB) to derive P(AB) <= (P(A)+P(B))/2."}],
+        "confidence": "high",
+        "humanReviewFocus": ["Confirm option A value: $P(AB)\\leqslant P(A)P(B).$ — the P(A)P(B) part was inside \\mathrm{} in source; may have original formatting purpose."]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q08",
+      "candidateResult": {
+        "questionNumber": 8, "questionType": "multiple_choice", "reviewStatus": "needs_human_review",
+        "stem": "设随机变量 $X, Y$ 不相关，且 $E(X) = 2, E(Y) = 1, D(X) = 3$ ，则 $E[X(X + Y - 2)] = (\\quad)$\n\n(A) -3.\n\n(B)3.\n\n(C)-5.\n\n(D)5.",
+        "options": [
+          {"label": "A", "value": "-3."},
+          {"label": "B", "value": "3."},
+          {"label": "C", "value": "-5."},
+          {"label": "D", "value": "5."}
+        ],
+        "answerCandidate": "(D).", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(8)【答案】 (D).\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "options[3].value",
+            "before": "5.\n\n# 二、填空题(本题共6小题，每小题4分，共24分，把答案填在题中横线上.)",
+            "after": "5.",
+            "reason": "Section header was erroneously appended to option D value during parsing. Cleaned by trimming at the section boundary identified in paper Markdown."
+          }
+        ],
+        "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "期望与方差", "confidence": "high", "evidence": "Solution uses E(X^2)=D(X)+[E(X)]^2 and uncorrelated implies E(XY)=E(X)E(Y)."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q09",
+      "candidateResult": {
+        "questionNumber": 9, "questionType": "fill_in_blank", "reviewStatus": "needs_human_review",
+        "stem": "$\\lim_{x \\to 0} \\frac{\\ln(\\cos x)}{x^2} = \\underline{\\quad}$ .",
+        "options": [],
+        "answerCandidate": "$-\\frac{1}{2}$ .", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(9)【答案】 $-\\frac{1}{2}$ .\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "极限计算", "confidence": "high", "evidence": "Two methods shown: Taylor expansion and L'Hôpital's rule."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q10",
+      "candidateResult": {
+        "questionNumber": 10, "questionType": "fill_in_blank", "reviewStatus": "needs_human_review",
+        "stem": "$\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(\\frac{\\sin x}{1 + \\cos x} + |x|\\right)\\mathrm{d}x = \\underline{\\quad}$ .",
+        "options": [],
+        "answerCandidate": "$\\frac{\\pi^2}{4}$", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（10）【答案】 $\\frac{\\pi^2}{4}$\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "定积分奇偶性", "confidence": "high", "evidence": "Solution uses odd/even symmetry: sin/(1+cos) is odd, |x| is even."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q11",
+      "candidateResult": {
+        "questionNumber": 11, "questionType": "fill_in_blank", "reviewStatus": "needs_human_review",
+        "stem": "若函数 $z = z(x, y)$ 由方程 $\\mathrm{e}^z + xyz + x + \\cos x = 2$ 确定，则 $\\left. \\mathrm{d}z \\right|_{(0,1)} =$ ________.",
+        "options": [],
+        "answerCandidate": "$-\\mathrm{d}x$", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(11)【答案】 $-\\mathrm{d}x$\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "隐函数全微分", "confidence": "high", "evidence": "Two methods: partial derivatives and total differential, both yield dz=-dx at (0,1)."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q12",
+      "candidateResult": {
+        "questionNumber": 12, "questionType": "fill_in_blank", "reviewStatus": "needs_human_review",
+        "stem": "设 $\\Omega$ 是由平面 $x + y + z = 1$ 与三个坐标平面所围成的空间区域, 则 $\\iiint_{\\Omega} (x + 2y + 3z) \\, \\mathrm{d}x \\, \\mathrm{d}y \\, \\mathrm{d}z =$",
+        "options": [],
+        "answerCandidate": "$\\frac{1}{4}$ .", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(12)【答案】 $\\frac{1}{4}$ .\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "三重积分对称性", "confidence": "high", "evidence": "Solution uses symmetry: x,y,z symmetric in domain, reduces to 6∭z dv."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q13",
+      "candidateResult": {
+        "questionNumber": 13, "questionType": "fill_in_blank", "reviewStatus": "needs_human_review",
+        "stem": "$n$ 阶行列式 $\\left| \\begin{array}{ccccc}2 & 0 & \\dots & 0 & 2\\\\ -1 & 2 & \\dots & 0 & 2\\\\ \\vdots & \\vdots & & \\vdots & \\vdots \\\\ 0 & 0 & \\dots & 2 & 2\\\\ 0 & 0 & \\dots & -1 & 2 \\end{array} \\right| = \\underline{\\quad}$",
+        "options": [],
+        "answerCandidate": "$2^{n + 1} - 2$", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(13)【答案】 $2^{n + 1} - 2$\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "n阶行列式递推", "confidence": "high", "evidence": "Solution derives recurrence Dn = 2D(n-1) + 2, solves to 2^(n+1)-2."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q14",
+      "candidateResult": {
+        "questionNumber": 14, "questionType": "fill_in_blank", "reviewStatus": "needs_human_review",
+        "stem": "设二维随机变量 $(X, Y)$ 服从正态分布 $N(1, 0; 1, 1; 0)$ , 则 $P\\{XY - Y < 0\\} =$ ______.",
+        "options": [],
+        "answerCandidate": "$\\frac{1}{2}$ .", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(14)【答案】 $\\frac{1}{2}$ .\n\n...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "stem",
+            "before": "... = ______.\n\n# 三、解答题（本题共9小题，共94分，解答应写出文字说明、证明过程或演算步骤）",
+            "after": "... = ______.",
+            "reason": "Section header was erroneously appended to stem during parsing. Paper Markdown shows # 三、解答题 starts a new section after Q14. Cleaned by trimming."
+          }
+        ],
+        "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [{"topic": "二维正态分布", "confidence": "high", "evidence": "ρ=0 implies independence; uses symmetry of normal distribution to get P=1/2."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q15",
+      "candidateResult": {
+        "questionNumber": 15, "questionType": "solution", "reviewStatus": "needs_human_review",
+        "stem": "(本题满分10分)\n\n设函数 $f(x) = x + a\\ln (1 + x) + bx\\sin x, g(x) = kx^3.$ 若 $f(x)$ 与 $g(x)$ 在 $x \\to 0$ 时是等价无穷小，求 $a, b, k$ 值.",
+        "options": [],
+        "answerCandidate": null, "answerStatus": "missing",
+        "explanationCandidate": "(15)【解】方法一 ...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [
+          {"item": "missing_answer_for_solution_type", "detail": "解答题 answerCandidate 为空属于结构性预期。解析中得 a=-1, b=-1/2, k=-1/3。", "severity": "info"}
+        ],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "等价无穷小与Taylor展开", "confidence": "high", "evidence": "Two methods: Taylor expansion and repeated L'Hôpital, both yield a=-1,b=-1/2,k=-1/3."}],
+        "confidence": "high",
+        "humanReviewFocus": ["决定是否从解析中提取简短 answerCandidate: a=-1, b=-1/2, k=-1/3."]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q16",
+      "candidateResult": {
+        "questionNumber": 16, "questionType": "solution", "reviewStatus": "needs_human_review",
+        "stem": "(本题满分 10 分)\n\n设函数 $f(x)$ 在定义域 $I$ 上的导数大于零. 若对任意的 $x_0 \\in I$ , 曲线 $y = f(x)$ 在点 $(x_0, f(x_0))$ 处的切线与直线 $x = x_0$ 及 $x$ 轴所围成区域的面积恒为 4 , 且 $f(0) = 2$ , 求 $f(x)$ 的表达式.",
+        "options": [],
+        "answerCandidate": null, "answerStatus": "missing",
+        "explanationCandidate": "（16）【解】 ...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [
+          {"item": "missing_answer_for_solution_type", "detail": "解答题 answerCandidate 为空属于结构性预期。解析给出 y=8/(4-x)。", "severity": "info"}
+        ],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "微分方程应用", "confidence": "high", "evidence": "Sets up geometric ODE from tangent area, solves to y=8/(4-x)."}],
+        "confidence": "high",
+        "humanReviewFocus": ["决定是否从解析中提取简短 answerCandidate: y=8/(4-x)."]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q17",
+      "candidateResult": {
+        "questionNumber": 17, "questionType": "solution", "reviewStatus": "needs_human_review",
+        "stem": "(本题满分 10 分)\n\n已知函数 $f(x, y) = x + y + xy$ ，曲线 $C: x^2 + y^2 + xy = 3$ ，求 $f(x, y)$ 在曲线 $C$ 上的最大方向导数.",
+        "options": [],
+        "answerCandidate": null, "answerStatus": "missing",
+        "explanationCandidate": "(17)【解】 $f_{x}^{\\prime}(x,y) = 1 + y$ ...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "ocr_garbled_latex",
+            "questionNumber": 17,
+            "severity": "info",
+            "message": "The system-of-equations solution LaTeX for stationary points is garbled by OCR. The evaluated points g(1,1), g(2,-1), g(-1,2), g(-1,-1) in the subsequent text indicate the correct stationary points. Garbled LaTeX preserved as-is from source."
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {"item": "missing_answer_for_solution_type", "detail": "解答题 answerCandidate 为空属于结构性预期。解析给出最大值为3。", "severity": "info"},
+          {"item": "ocr_garbled_latex", "detail": "Stationary points LaTeX from Lagrange multiplier system is garbled. Correct points (1,1),(2,-1),(-1,2),(-1,-1) recoverable from g(x,y) evaluations.", "severity": "info"}
+        ],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "方向导数与梯度", "confidence": "high", "evidence": "Solution finds max directional derivative = max |grad f| subject to constraint, uses Lagrange multipliers."}],
+        "confidence": "high",
+        "humanReviewFocus": ["Verify stationary points from original PDF (the garbled LaTeX needs correction).", "决定是否从解析中提取简短 answerCandidate: 3."]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q18",
+      "candidateResult": {
+        "questionNumber": 18, "questionType": "solution", "reviewStatus": "needs_human_review",
+        "stem": "(本题满分10分)\n\n(I) 设函数 $u(x), v(x)$ 可导, 利用导数定义证明 $[u(x)v(x)]' = u'(x)v(x) + u(x)v'(x)$ ; (II) 设函数 $u_1(x), u_2(x), \\dots, u_n(x)$ 可导, $f(x) = u_1(x)u_2(x)\\dots u_n(x)$ , 写出 $f(x)$ 的求导公式.",
+        "options": [],
+        "answerCandidate": null, "answerStatus": "missing",
+        "explanationCandidate": "（18）【证明】（I）令 $f(x) = u(x)v(x)$ ...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [
+          {"item": "missing_answer_for_solution_type", "detail": "Proof question — answerCandidate structurally expected to be null.", "severity": "info"}
+        ],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "导数定义与乘积法则", "confidence": "high", "evidence": "Rigorous limit-definition proof for product rule, then generalization to n functions."}],
+        "confidence": "high", "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q19",
+      "candidateResult": {
+        "questionNumber": 19, "questionType": "solution", "reviewStatus": "needs_human_review",
+        "stem": "(本题满分10分)\n\n已知曲线 $L$ 的方程为 ... 起点为 $A(0, \\sqrt{2}, 0)$ , 终点为 $B(0, -\\sqrt{2}, 0)$ , 计算曲线积分 ...",
+        "options": [],
+        "answerCandidate": null, "answerStatus": "missing",
+        "explanationCandidate": "（19）【解】 $L$ 的参数方程为 ...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [
+          {"item": "missing_answer_for_solution_type", "detail": "解答题 answerCandidate 为空属于结构性预期。解析给出 I = (√2/2)π。", "severity": "info"}
+        ],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "曲线积分", "confidence": "high", "evidence": "Parameterizes curve L as x=cos t, y=√2 sin t, z=cos t, computes line integral."}],
+        "confidence": "high",
+        "humanReviewFocus": ["决定是否从解析中提取简短 answerCandidate: (√2/2)π."]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q20",
+      "candidateResult": {
+        "questionNumber": 20, "questionType": "solution", "reviewStatus": "needs_human_review",
+        "stem": "(本题满分11分)\n\n设向量组 ... (I) 证明 β1,β2,β3 为基；(II) 当k为何值时存在非零向量ξ在两组基下坐标相同，并求所有ξ",
+        "options": [],
+        "answerCandidate": null, "answerStatus": "missing",
+        "explanationCandidate": "(20)【解】 ...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [
+          {"item": "missing_answer_for_solution_type", "detail": "解答题 answerCandidate 为空属于结构性预期。解析给出 k=0, ξ坐标为 C(-1,0,1)^T。", "severity": "info"}
+        ],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "向量空间与基", "confidence": "high", "evidence": "Part I: transition matrix determinant ≠ 0; Part II: solves for k=0 from coordinate equality condition."}],
+        "confidence": "high",
+        "humanReviewFocus": ["决定是否从解析中提取简短 answerCandidate."]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q21",
+      "candidateResult": {
+        "questionNumber": 21, "questionType": "solution", "reviewStatus": "needs_human_review",
+        "stem": "(本题满分 11 分)\n\n设矩阵 A 相似于矩阵 B. (I)求 a,b；(II)求可逆矩阵 P 使 P^{-1}AP 为对角矩阵",
+        "options": [],
+        "answerCandidate": null, "answerStatus": "missing",
+        "explanationCandidate": "（21）【解】（I）因为 A~B ...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [
+          {"item": "missing_answer_for_solution_type", "detail": "解答题 answerCandidate 为空属于结构性预期。解析给出 a=4,b=5, P = [[2,-3,-1],[1,0,-1],[0,1,1]]。", "severity": "info"}
+        ],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "矩阵相似对角化", "confidence": "high", "evidence": "Uses tr(A)=tr(B) and |A|=|B| to find a,b; then diagonalizes via eigenvectors."}],
+        "confidence": "high",
+        "humanReviewFocus": ["决定是否从解析中提取简短 answerCandidate."]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q22",
+      "candidateResult": {
+        "questionNumber": 22, "questionType": "solution", "reviewStatus": "needs_human_review",
+        "stem": "(本题满分11分)\n\n设随机变量 X 的概率密度为 f(x)=2^{-x}ln2 (x>0) ... (I)求 Y 的概率分布；(II)求 E(Y).",
+        "options": [],
+        "answerCandidate": null, "answerStatus": "missing",
+        "explanationCandidate": "(22)【解】（I）令 p = P{X>3} = 1/8 ...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "ocr_number_split",
+            "questionNumber": 22,
+            "severity": "info",
+            "message": "Final answer in explanation appears as '1 6' (OCR artifact for 16). E(Y)=16 confirmed by the derivation: 2p²/(1-(1-p))³ |_{x=7/8} = 2·(1/64)/(1/8)³ = 16."
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [
+          {"item": "missing_answer_for_solution_type", "detail": "解答题 answerCandidate 为空属于结构性预期。解析给出 E(Y)=16。", "severity": "info"},
+          {"item": "ocr_number_split", "detail": "'1 6' in final line of explanation is OCR artifact for 16.", "severity": "info"}
+        ],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "负二项分布/几何分布", "confidence": "high", "evidence": "Y follows negative binomial (r=2, p=1/8). E(Y)=r/p=16 confirms the result."}],
+        "confidence": "high",
+        "humanReviewFocus": ["决定是否从解析中提取简短 answerCandidate: E(Y)=16."]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2015-q23",
+      "candidateResult": {
+        "questionNumber": 23, "questionType": "solution", "reviewStatus": "needs_human_review",
+        "stem": "(本题满分 11 分)\n\n设总体 X 的概率密度为 f(x;θ)=1/(1-θ), θ≤x≤1 ... (I)求θ的矩估计量；(II)求θ的最大似然估计量.",
+        "options": [],
+        "answerCandidate": null, "answerStatus": "missing",
+        "explanationCandidate": "(23)【解】 (I)E(X) = (1+θ)/2 ...", "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [
+          {"item": "missing_answer_for_solution_type", "detail": "解答题 answerCandidate 为空属于结构性预期。解析给出矩估计 2X̄-1, MLE min{X_i}。", "severity": "info"}
+        ],
+        "conflicts": [],
+        "suggestedTopics": [{"topic": "参数估计", "confidence": "high", "evidence": "Method of moments and maximum likelihood for uniform-like distribution."}],
+        "confidence": "high",
+        "humanReviewFocus": ["决定是否从解析中提取简短 answerCandidate."]
+      },
+      "reviewStatus": "needs_human_review"
+    }
+  ]
+}

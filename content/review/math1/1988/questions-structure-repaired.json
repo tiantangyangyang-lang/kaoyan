@@ -1,0 +1,707 @@
+{
+  "schemaVersion": "legacy-structure-repair-v1",
+  "reviewedOn": "2026-06-16",
+  "sourceYear": 1988,
+  "reviewStatus": "needs_human_review",
+  "sourceStagingSha256": "e84334c9681b3d36afbdcbc060d90b7e81649746622adbcc02afbab730ac860f",
+  "statusReason": "Deterministic solution boundaries were repaired; mathematical correctness is not approved.",
+  "repairDecisions": [
+    {
+      "issue": "merged_solution_section_one",
+      "action": "Split the Q1 container into sequential Q1-Q3 solution blocks.",
+      "questionNumbers": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "stableId": "math1-1988-q01",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 1,
+      "questionType": "solution",
+      "stem": "（1）求幂级数 $\\sum_{n = 1}^{\\infty}\\frac{(x - 3)^n}{n\\cdot 3^n}$ 的收敛域.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "当 $x - 3 = -3$ ，即 $x = 0$ 时， $\\sum_{n = 1}^{\\infty}\\frac{(-1)^n}{n}$ 收敛；\n\n当 $x - 3 = 3$ ，即 $x = 6$ 时， $\\sum_{n = 1}^{\\infty}\\frac{1}{n}$ 发散，\n\n故级数 $\\sum_{n=1}^{\\infty} \\frac{(x-3)^n}{n \\cdot 3^n}$ 的收敛域为 $[0,6)$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q02",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 2,
+      "questionType": "solution",
+      "stem": "(2) 已知 $f(x) = \\mathrm{e}^{x^2}, f[\\varphi(x)] = 1 - x$ ，且 $\\varphi(x) \\geqslant 0$ ，求 $\\varphi(x)$ ，并写出其定义域.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "(2)【解】 由 $\\mathrm{e}^{\\varphi^2 (x)} = 1 - x$ ，得 $\\varphi (x) = \\sqrt{\\ln(1 - x)}$\n\n由 $1 - x \\geqslant 1$ 得 $\\varphi(x)$ 的定义域为 $(- \\infty, 0]$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q03",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 3,
+      "questionType": "solution",
+      "stem": "（3）设 $S$ 为曲面 $x^{2} + y^{2} + z^{2} = 1$ 的外侧，计算曲面积分 $I = \\iint_{S} x^{3} \\, \\mathrm{d}y \\, \\mathrm{d}z + y^{3} \\, \\mathrm{d}z \\, \\mathrm{d}x + z^{3} \\, \\mathrm{d}x \\, \\mathrm{d}y.$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "（3）【解】 由高斯公式得\n\n$$\n\\begin{array}{l} I = \\oiint_ {S} x ^ {3} d y d z + y ^ {3} d z d x + z ^ {3} d x d y = 3 \\iiint_ {a} (x ^ {2} + y ^ {2} + z ^ {2}) d v \\\\ = 3 \\int_ {0} ^ {2 \\pi} d \\theta \\int_ {0} ^ {\\pi} d \\varphi \\int_ {0} ^ {1} r ^ {4} \\sin \\varphi d r = \\frac {6 \\pi}{5} \\int_ {0} ^ {\\pi} \\sin \\varphi d \\varphi = \\frac {1 2 \\pi}{5}. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q04",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 4,
+      "questionType": "fill_in_blank",
+      "stem": "（1）设 $f(t) = \\lim_{x\\to \\infty}t\\left(1 + \\frac{1}{x}\\right)^{2tx}$ ，则 $f^{\\prime}(t) = \\_$",
+      "options": [],
+      "answerCandidate": "$(1 + 2t)\\mathrm{e}^{2t}$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 $(1 + 2t)\\mathrm{e}^{2t}$\n\n【解】 $f(t) = \\lim_{x\\to \\infty}t\\left(1 + \\frac{1}{x}\\right)^{2tx} = t\\lim_{x\\to \\infty}\\left[\\left(1 + \\frac{1}{x}\\right)^x\\right]^{2t} = te^{2t},$\n\n则 $f^{\\prime}(t) = \\mathrm{e}^{2t} + 2t\\mathrm{e}^{2t} = (1 + 2t)\\mathrm{e}^{2t}$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q05",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 5,
+      "questionType": "fill_in_blank",
+      "stem": "（2）设 $f(x)$ 是周期为2的周期函数，它在区间 $(-1,1]$ 上的表达式为 $f(x) = \\left\\{ \\begin{array}{ll}2, & -1\\leqslant x\\leqslant 0,\\\\ x^3, & 0 <   x <   1, \\end{array} \\right.$ 则 $f(x)$ 的傅里叶级数在 $x = 1$ 处收敛于",
+      "options": [],
+      "answerCandidate": "$\\frac{3}{2}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】 $\\frac{3}{2}$ .\n\n【解】 $f(x)$ 的傅里叶级数在 $x = 1$ 处收敛于\n\n$$\n\\frac {f (1 - 0) + f (1 + 0)}{2} = \\frac {f (1 - 0) + f (- 1 + 0)}{2} = \\frac {1 + 2}{2} = \\frac {3}{2}.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q06",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 6,
+      "questionType": "fill_in_blank",
+      "stem": "（3）设 $f(x)$ 是连续函数，且 $\\int_0^{x^3 -1}f(t)\\mathrm{d}t = x$ ，则 $f(7) = \\underline{\\quad}$",
+      "options": [],
+      "answerCandidate": "$\\frac{1}{12}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(3)【答案】 $\\frac{1}{12}$ .\n\n【解】 $\\int_0^{x^3 -1}f(t)\\mathrm{d}t = x$ 两边对 $x$ 求导得 $3x^{2}f(x^{3} - 1) = 1$\n\n取 $x = 2$ 得 $f(7) = \\frac{1}{12}$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q07",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 7,
+      "questionType": "fill_in_blank",
+      "stem": "（4）设4阶矩阵 $A = (\\alpha, \\gamma_2, \\gamma_3, \\gamma_4), B = (\\beta, \\gamma_2, \\gamma_3, \\gamma_4)$ ，其中 $\\alpha, \\beta, \\gamma_2, \\gamma_3, \\gamma_4$ 都是4维列向量，且 $|\\mathbf{A}| = 4, |\\mathbf{B}| = 1$ ，则 $|\\mathbf{A} + \\mathbf{B}| =$ ______.",
+      "options": [],
+      "answerCandidate": "40.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（4）【答案】 40.\n\n【解】 由 $\\mathbf{A} + \\mathbf{B} = (\\pmb {\\alpha} + \\pmb {\\beta},2\\pmb{\\gamma}_2,2\\pmb{\\gamma}_3,2\\pmb{\\gamma}_4)$ 得\n\n$$\n\\begin{array}{l} \\left| \\boldsymbol {A} + \\boldsymbol {B} \\right| = \\left| \\boldsymbol {\\alpha} + \\boldsymbol {\\beta}, 2 \\gamma_ {2}, 2 \\gamma_ {3}, 2 \\gamma_ {4} \\right| = 8 \\left| \\boldsymbol {\\alpha} + \\boldsymbol {\\beta}, \\gamma_ {2}, \\gamma_ {3}, \\gamma_ {4} \\right| \\\\ = 8 \\left(\\left| \\boldsymbol {\\alpha}, \\boldsymbol {\\gamma} _ {2}, \\boldsymbol {\\gamma} _ {3}, \\boldsymbol {\\gamma} _ {4} \\right| + \\left| \\boldsymbol {\\beta}, \\boldsymbol {\\gamma} _ {2}, \\boldsymbol {\\gamma} _ {3}, \\boldsymbol {\\gamma} _ {4} \\right|\\right) = 8 \\left(\\left| \\boldsymbol {A} \\right| + \\left| \\boldsymbol {B} \\right|\\right) = 4 0. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q08",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 8,
+      "questionType": "multiple_choice",
+      "stem": "（1）若函数 $y = f(x)$ 可导，且 $f^{\\prime}(x_0) = \\frac{1}{2}$ ，则当 $\\Delta x \\to 0$ 时，函数 $f(x)$ 在 $x = x_0$ 处的微分 $\\mathrm{dy}$ 是（ ）.\n\n（A）与 $\\Delta x$ 等价的无穷小\n\n（B）与 $\\Delta x$ 同阶的无穷小\n\n（C）比 $\\Delta x$ 低阶的无穷小\n\n（D）比 $\\Delta x$ 高阶的无穷小",
+      "options": [
+        {
+          "label": "A",
+          "value": "与 $\\Delta x$ 等价的无穷小"
+        },
+        {
+          "label": "B",
+          "value": "与 $\\Delta x$ 同阶的无穷小"
+        },
+        {
+          "label": "C",
+          "value": "比 $\\Delta x$ 低阶的无穷小"
+        },
+        {
+          "label": "D",
+          "value": "比 $\\Delta x$ 高阶的无穷小"
+        }
+      ],
+      "answerCandidate": "(B).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 (B).\n\n【解】因为 $f(x)$ 在 $x = x_0$ 处可导，所以 $f(x)$ 在 $x = x_0$ 处可微，\n\n于是 $\\mathrm{dy} = f^{\\prime}(x_0)\\Delta x = \\frac{1}{2}\\Delta x$ ，故函数在 $x = x_0$ 处的微分 $\\mathrm{dy}$ 是与 $\\Delta x$ 同阶而非等价的无穷小，应选(B).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q09",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 9,
+      "questionType": "multiple_choice",
+      "stem": "(2) 设 $y = f(x)$ 是微分方程 $y'' - 2y' + 4y = 0$ 的一个解，若 $f(x_0) > 0$ 且 $f'(x_0) = 0$ ，则函数 $f(x)$ 在 $x = x_0$ 处（ ）.\n\n（A）取得极大值\n\n（B）取得极小值\n\n（C）某邻域内单调增加\n\n(D) 某邻域内单调减少",
+      "options": [
+        {
+          "label": "A",
+          "value": "取得极大值"
+        },
+        {
+          "label": "B",
+          "value": "取得极小值"
+        },
+        {
+          "label": "C",
+          "value": "某邻域内单调增加"
+        },
+        {
+          "label": "D",
+          "value": "某邻域内单调减少"
+        }
+      ],
+      "answerCandidate": "（A）.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（2）【答案】（A）.\n\n【解】将 $x = x_0$ 代入 $y'' - 2y' + 4y = 0$ ，得 $f''(x_0) - 2f'(x_0) + 4f(x_0) = 0$\n\n从而 $f^{\\prime \\prime}(x_0) = -4f(x_0) < 0$ ，由极值判别法得 $x = x_{0}$ 为 $f(x)$ 的极大值点，应选(A).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q10",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 10,
+      "questionType": "multiple_choice",
+      "stem": "(3) 设空间区域 $\\Omega_{1}: x^{2} + y^{2} + z^{2} \\leqslant R^{2} (z \\geqslant 0)$ ; $\\Omega_{2}: x^{2} + y^{2} + z^{2} \\leqslant R^{2} (x \\geqslant 0, y \\geqslant 0, z \\geqslant 0)$ , 则（ ）.\n\n(A) $\\iiint_{\\Omega_1} x \\, \\mathrm{d}v = 4 \\iiint_{\\Omega_2} x \\, \\mathrm{d}v$\n\n(B) $\\iiint_{\\Omega_1} y \\, \\mathrm{d}v = 4 \\iiint_{\\Omega_2} y \\, \\mathrm{d}v$\n\n(C) $\\iiint_{\\Omega_1} z \\, \\mathrm{d}v = 4 \\iiint_{\\Omega_2} z \\, \\mathrm{d}v$\n\n(D) $\\iiint_{\\Omega_1} xyz \\, \\mathrm{d}v = 4 \\iiint_{\\Omega_2} xyz \\, \\mathrm{d}v$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\iiint_{\\Omega_1} x \\, \\mathrm{d}v = 4 \\iiint_{\\Omega_2} x \\, \\mathrm{d}v$"
+        },
+        {
+          "label": "B",
+          "value": "$\\iiint_{\\Omega_1} y \\, \\mathrm{d}v = 4 \\iiint_{\\Omega_2} y \\, \\mathrm{d}v$"
+        },
+        {
+          "label": "C",
+          "value": "$\\iiint_{\\Omega_1} z \\, \\mathrm{d}v = 4 \\iiint_{\\Omega_2} z \\, \\mathrm{d}v$"
+        },
+        {
+          "label": "D",
+          "value": "$\\iiint_{\\Omega_1} xyz \\, \\mathrm{d}v = 4 \\iiint_{\\Omega_2} xyz \\, \\mathrm{d}v$"
+        }
+      ],
+      "answerCandidate": "(C).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(3)【答案】 (C).\n\n【解】 由奇偶性得\n\n$\\iiint_{\\Omega_1}x\\mathrm{d}v = \\iiint_{\\Omega_1}y\\mathrm{d}v = 0,\\quad \\iiint_{\\Omega_1}z\\mathrm{d}v = 4\\iiint_{\\Omega_2}z\\mathrm{d}v,\\quad \\iiint_{\\Omega_1}xyz\\mathrm{d}v = 0$ 显然选(C).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q11",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 11,
+      "questionType": "multiple_choice",
+      "stem": "(4) 若级数 $\\sum_{n=0}^{\\infty} a_n (x - 1)^n$ 在 $x = -1$ 处收敛, 则该级数在 $x = 2$ 处（ ）.\n\n（A）条件收敛\n\n（B）绝对收敛\n\n（C）发散\n\n（D）收敛性不确定",
+      "options": [
+        {
+          "label": "A",
+          "value": "条件收敛"
+        },
+        {
+          "label": "B",
+          "value": "绝对收敛"
+        },
+        {
+          "label": "C",
+          "value": "发散"
+        },
+        {
+          "label": "D",
+          "value": "收敛性不确定"
+        }
+      ],
+      "answerCandidate": "（B）.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（4）【答案】 （B）.\n\n【解】 因为级数 $\\sum_{n = 0}^{\\infty}a_n(x - 1)^n$ 在 $x = -1$ 处收敛，\n\n所以其收敛半径 $R \\geqslant |-1 - 1| = 2$ .\n\n当 $x = 2$ 时，因为 $|2 - 1| = 1 < R$ ，所以该级数在 $x = 2$ 处绝对收敛，应选(B).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q12",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 12,
+      "questionType": "multiple_choice",
+      "stem": "(5) $n$ 维向量组 $\\alpha_{1},\\alpha_{2},\\dots ,\\alpha_{s}(3\\leqslant s\\leqslant n)$ 线性无关的充分必要条件是（ ）.\n\n（A）有一组不全为零的数 $k_{1}, k_{2}, \\dots, k_{s}$ ，使得 $k_{1} \\alpha_{1} + k_{2} \\alpha_{2} + \\dots + k_{s} \\alpha_{s} \\neq 0$   \n(B) $\\alpha_{1}, \\alpha_{2}, \\dots, \\alpha_{s}$ 中任意两个向量都线性无关  \n(C) $\\pmb{\\alpha}_{1}, \\pmb{\\alpha}_{2}, \\dots, \\pmb{\\alpha}_{s}$ 中存在一个向量，它不可由其余向量线性表示  \n(D) $\\pmb{\\alpha}_{1}, \\pmb{\\alpha}_{2}, \\dots, \\pmb{\\alpha}_{s}$ 中任意一个向量都不可由其余向量线性表示",
+      "options": [
+        {
+          "label": "A",
+          "value": "有一组不全为零的数 $k_{1}, k_{2}, \\dots, k_{s}$ ，使得 $k_{1} \\alpha_{1} + k_{2} \\alpha_{2} + \\dots + k_{s} \\alpha_{s} \\neq 0$"
+        },
+        {
+          "label": "B",
+          "value": "$\\alpha_{1}, \\alpha_{2}, \\dots, \\alpha_{s}$ 中任意两个向量都线性无关"
+        },
+        {
+          "label": "C",
+          "value": "$\\pmb{\\alpha}_{1}, \\pmb{\\alpha}_{2}, \\dots, \\pmb{\\alpha}_{s}$ 中存在一个向量，它不可由其余向量线性表示"
+        },
+        {
+          "label": "D",
+          "value": "$\\pmb{\\alpha}_{1}, \\pmb{\\alpha}_{2}, \\dots, \\pmb{\\alpha}_{s}$ 中任意一个向量都不可由其余向量线性表示"
+        }
+      ],
+      "answerCandidate": "(D).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（5）【答案】 (D).\n\n【解】 方法一\n\n若 $\\alpha_{1},\\alpha_{2},\\dots ,\\alpha_{s}$ 线性相关，则存在不全为零的数 $k_{1},k_{2},\\dots ,k_{s}$\n\n使得 $k_{1}\\pmb{\\alpha}_{1} + k_{2}\\pmb{\\alpha}_{2} + \\dots +k_{s}\\pmb{\\alpha}_{s} = \\mathbf{0},$\n\n不妨设 $k_{1} \\neq 0$ ，则 $\\pmb{\\alpha}_{1} = -\\frac{k_{2}}{k_{1}}\\pmb{\\alpha}_{2} - \\dots - \\frac{k_{s}}{k_{1}}\\pmb{\\alpha}_{s}$ ，即至少有一个向量可由其余向量线性表示，\n\n故 $\\alpha_{1},\\alpha_{2},\\dots ,\\alpha_{s}$ 线性无关的充分必要条件是 $\\alpha_{1},\\alpha_{2},\\dots ,\\alpha_{s}$ 中任意一个向量都不可由其余向量线性表示，应选(D).\n\n方法二\n\n$\\pmb{\\alpha}_{1} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix}, \\pmb{\\alpha}_{2} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix}, \\pmb{\\alpha}_{3} = \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}$ , 显然 $2\\pmb{\\alpha}_{1} + \\pmb{\\alpha}_{2} - \\pmb{\\alpha}_{3} \\neq \\mathbf{0}$ 且其中任两个向量线性无关, 但向量组 $\\pmb{\\alpha}_{1}, \\pmb{\\alpha}_{2}, \\pmb{\\alpha}_{3}$ 线性相关, 排除(A), (B);\n\n$\\pmb{\\alpha}_{1} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix}, \\pmb{\\alpha}_{2} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix}, \\pmb{\\alpha}_{3} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\end{pmatrix}$ , 显然 $\\pmb{\\alpha}_{1}$ 不可由 $\\pmb{\\alpha}_{2}, \\pmb{\\alpha}_{3}$ 线性表示, 但 $\\pmb{\\alpha}_{1}, \\pmb{\\alpha}_{2}, \\pmb{\\alpha}_{3}$ 线性相关, 排除(C), 应选(D).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q13",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 13,
+      "questionType": "solution",
+      "stem": "设 $u = yf\\left(\\frac{x}{y}\\right) + xg\\left(\\frac{y}{x}\\right)$ ，其中 $f, g$ 具有二阶连续导数，求 $x \\frac{\\partial^2 u}{\\partial x^2} + y \\frac{\\partial^2 u}{\\partial x \\partial y}$ .",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n\\frac {\\partial^ {2} u}{\\partial x ^ {2}} = \\frac {1}{y} f ^ {\\prime \\prime} \\left(\\frac {x}{y}\\right) - \\frac {y}{x ^ {2}} g ^ {\\prime} \\left(\\frac {y}{x}\\right) + \\frac {y}{x ^ {2}} g ^ {\\prime} \\left(\\frac {y}{x}\\right) + \\frac {y ^ {2}}{x ^ {3}} g ^ {\\prime \\prime} \\left(\\frac {y}{x}\\right) = \\frac {1}{y} f ^ {\\prime \\prime} \\left(\\frac {x}{y}\\right) + \\frac {y ^ {2}}{x ^ {3}} g ^ {\\prime \\prime} \\left(\\frac {y}{x}\\right),\n$$\n\n$$\n\\frac {\\partial^ {2} u}{\\partial x \\partial y} = - \\frac {x}{y ^ {2}} f ^ {\\prime \\prime} \\left(\\frac {x}{y}\\right) + \\frac {1}{x} g ^ {\\prime} \\left(\\frac {y}{x}\\right) - \\frac {1}{x} g ^ {\\prime} \\left(\\frac {y}{x}\\right) - \\frac {y}{x ^ {2}} g ^ {\\prime \\prime} \\left(\\frac {y}{x}\\right) = - \\frac {x}{y ^ {2}} f ^ {\\prime \\prime} \\left(\\frac {x}{y}\\right) - \\frac {y}{x ^ {2}} g ^ {\\prime \\prime} \\left(\\frac {y}{x}\\right),\n$$\n\n则 $x\\frac{\\partial^2u}{\\partial x^2} +y\\frac{\\partial^2u}{\\partial x\\partial y} = \\frac{x}{y} f''\\left(\\frac{x}{y}\\right) + \\frac{y^2}{x^2} g''\\left(\\frac{y}{x}\\right) - \\frac{x}{y} f''\\left(\\frac{x}{y}\\right) - \\frac{y^2}{x^2} g''\\left(\\frac{y}{x}\\right) = 0.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q14",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 14,
+      "questionType": "solution",
+      "stem": "设函数 $y = y(x)$ 满足微分方程 $y^{\\prime \\prime} - 3y^{\\prime} + 2y = 2\\mathrm{e}^{x}$ ，且其图形在点(0，1）处的切线与曲线 $y = x^{2} - x + 1$ 在该点的切线重合，求函数 $y = y(x)$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$y^{\\prime \\prime} - 3y^{\\prime} + 2y = 0$ 的通解为 $y = C_{1}\\mathrm{e}^{x} + C_{2}\\mathrm{e}^{2x}$\n\n设原方程的特解为 $y_0(x) = ax\\mathrm{e}^x$ ，代入得 $a = -2$\n\n故原方程的通解为 $y = C_{1} \\mathrm{e}^{x} + C_{2} \\mathrm{e}^{2x} - 2x \\mathrm{e}^{x}$ ( $C_{1}, C_{2}$ 为任意常数).\n\n因为曲线 $y = y(x)$ 经过点(0,1)，所以 $C_1 + C_2 = 1$\n\n$y = y(x)$ 在 $x = 0$ 处切线的斜率为 $k = (2x - 1)\\mid_{x = 0} = -1$\n\n又由 $y' = C_1 e^x + 2C_2 e^{2x} - 2(x + 1) e^x$ ，得 $C_1 + 2C_2 - 2 = -1$ ，即 $C_1 + 2C_2 = 1$\n\n从而 $C_1 = 1, C_2 = 0$ ，故所求函数为 $y = (1 - 2x)\\mathrm{e}^x$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q15",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 15,
+      "questionType": "solution",
+      "stem": "设位于点(0,1)的质点 $A$ 对质点 $M$ 的引力大小为 $\\frac{k}{r^2} (k > 0$ 为常数， $r$ 为质点 $A$ 与质点 $M$ 之间的距离），质点 $M$ 沿曲线 $y = \\sqrt{2x - x^2}$ 从点 $B(2,0)$ 运动到点 $O(0,0)$ ，求此运动过程中质点 $A$ 对质点 $M$ 的引力所做的功.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n\\overrightarrow {M A} ^ {0} = \\boldsymbol {F} ^ {0} = \\frac {1}{\\sqrt {x ^ {2} + (1 - y) ^ {2}}} \\{- x, 1 - y \\},\n$$\n\n则 $F(x,y) = |F|\\cdot F^0 = \\frac{k}{[x^2 + (1 - y)^2]^{\\frac{3}{2}}}\\{-x,1 - y\\} ,$\n\n设 $M$ 沿 $y = \\sqrt{2x - x^2}$ 从点 $B(2,0)$ 到点 $O(0,0)$ 的有向曲线段为 $L$\n\n则 $W = k\\int_{L}\\frac{-x\\mathrm{d}x + (1 - y)\\mathrm{d}y}{[x^2 + (1 - y)^2]^{\\frac{3}{2}}},$\n\n令 $P(x,y) = -\\frac{x}{[x^2 + (1 - y)^2]^{\\frac{3}{2}}},$ $Q(x,y) = \\frac{1 - y}{[x^2 + (1 - y)^2]^{\\frac{3}{2}}},$\n\n因为 $\\frac{\\partial Q}{\\partial x} = \\frac{\\partial P}{\\partial y}$ 所以曲线积分与路径无关，\n\n故 $W = k\\int_{\\overline{BO}}\\frac{-x\\mathrm{d}x + (1 - y)\\mathrm{d}y}{[x^2 + (1 - y)^2]^{\\frac{3}{2}}} = k\\int_{2}^{0}\\frac{-x\\mathrm{d}x}{(x^2 + 1)^{\\frac{3}{2}}} = k\\left(1 - \\frac{1}{\\sqrt{5}}\\right).$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q16",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 16,
+      "questionType": "solution",
+      "stem": "已知 $\\mathbf{A}\\mathbf{P} = \\mathbf{P}\\mathbf{B}$ ，其中 $\\pmb {B} = \\left( \\begin{array}{lll}1 & 0 & 0\\\\ 0 & 0 & 0\\\\ 0 & 0 & -1 \\end{array} \\right),\\pmb {P} = \\left( \\begin{array}{lll}1 & 0 & 0\\\\ 2 & -1 & 0\\\\ 2 & 1 & 1 \\end{array} \\right)$ ，求 $\\mathbf{A}$ 及 $\\pmb{A}^{5}$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n\\mathbf {A} ^ {5} = \\mathbf {P B} ^ {5} \\mathbf {P} ^ {- 1} = \\mathbf {P B P} ^ {- 1} = \\mathbf {A}.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q17",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 17,
+      "questionType": "solution",
+      "stem": "已知矩阵 $\\mathbf{A} = \\begin{pmatrix} 2 & 0 & 0\\\\ 0 & 0 & 1\\\\ 0 & 1 & x \\end{pmatrix}$ 与 $\\pmb {B} = \\left( \\begin{array}{lll}2 & 0 & 0\\\\ 0 & y & 0\\\\ 0 & 0 & -1 \\end{array} \\right)$ 相似.\n\n(1) 求 $x, y$   \n(2) 求一个满足 $P^{-1}AP = B$ 的可逆矩阵 $P$ .",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "再由矩阵 $\\mathbf{A}$ 与 $\\pmb{B}$ 相似得 $|\\mathbf{A}| = |\\mathbf{B}|$ ，即 $-2 = -2y$ ，解得 $y = 1$ 故 $x = 0, y = 1$ .\n\n（2）显然矩阵 $\\mathbf{A}$ 及 $\\pmb{B}$ 的特征值为 $\\lambda_1 = 2, \\lambda_2 = 1, \\lambda_3 = -1$\n\n由 $2E - A = \\begin{pmatrix} 0 & 0 & 0\\\\ 0 & 2 & -1\\\\ 0 & -1 & 2 \\end{pmatrix} \\to \\begin{pmatrix} 0 & 1 & 0\\\\ 0 & 0 & 1\\\\ 0 & 0 & 0 \\end{pmatrix}$ 得\n\n矩阵 $\\mathbf{A}$ 的相应于 $\\lambda_{1} = 2$ 的特征向量为 $\\pmb{\\alpha}_{1} = (1,0,0)^{\\mathrm{T}}$\n\n由 $\\pmb {E} - \\pmb {A} = \\left( \\begin{array}{rrr} - 1 & 0 & 0\\\\ 0 & 1 & -1\\\\ 0 & -1 & 1 \\end{array} \\right)\\rightarrow \\left( \\begin{array}{rrr}1 & 0 & 0\\\\ 0 & 1 & -1\\\\ 0 & 0 & 0 \\end{array} \\right)$ 得\n\n矩阵 $\\mathbf{A}$ 的相应于 $\\lambda_{2} = 1$ 的特征向量为 $\\pmb{\\alpha}_{2}=(0,1,1)^{\\mathrm{T}}$ ;\n\n由 $-\\mathbf{E} - \\mathbf{A} = \\left( \\begin{array}{rrr} - 3 & 0 & 0\\\\ 0 & -1 & -1\\\\ 0 & -1 & -1 \\end{array} \\right)\\rightarrow \\left( \\begin{array}{rrr}1 & 0 & 0\\\\ 0 & 1 & 1\\\\ 0 & 0 & 0 \\end{array} \\right)$ 得\n\n矩阵 $\\mathbf{A}$ 的相应于 $\\lambda_{3} = -1$ 的特征向量为 $\\pmb{\\alpha}_{3} = (0, - 1,1)^{\\mathrm{T}}$\n\n令 $\\pmb{P} = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & -1 \\\\ 0 & 1 & 1 \\end{pmatrix}$ , 则 $\\pmb{P}^{-1}\\pmb{A}\\pmb{P} = \\pmb{B}$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q18",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 18,
+      "questionType": "solution",
+      "stem": "设函数 $f(x)$ 在区间 $[a,b]$ 上连续，且在 $(a,b)$ 内有 $f^{\\prime}(x) > 0$ 。证明：在 $(a,b)$ 内存在唯一的 $\\xi$ ，使曲线 $y = f(x)$ 与两直线 $y = f(\\xi), x = a$ 所围成的平面图形的面积 $S_{1}$ 是曲线 $y = f(x)$ 与两直线 $y = f(\\xi), x = b$ 所围成平面图形面积 $S_{2}$ 的3倍。",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "再令 $\\varphi (x) = S_{1}(x) - 3S_{2}(x) = \\int_{a}^{x}[f(x) - f(t)]\\mathrm{d}t - 3\\int_{x}^{b}[f(t) - f(x)]\\mathrm{d}t,$\n\n则 $\\varphi (x) = (x - a)f(x) - \\int_{a}^{x}f(t)\\mathrm{d}t + 3\\int_{b}^{x}f(t)\\mathrm{d}t - 3(x - b)f(x),$\n\n因为 $f^{\\prime}(x) > 0$ ，所以 $f(x)$ 在 $[a,b]$ 上严格递增，\n\n从而 $\\varphi (a) = -3\\int_{a}^{b}[f(t) - f(a)]\\mathrm{d}t < 0,\\quad \\varphi (b) = \\int_{a}^{b}[f(b) - f(t)]\\mathrm{d}t > 0,$\n\n即存在 $\\xi \\in (a,b)$ ，使得 $\\varphi (\\xi) = 0$ ，即 $S_{1}(\\xi) = 3S_{2}(\\xi)$\n\n因为 $\\varphi^{\\prime}(x) = (x - a)f^{\\prime}(x) - 3(x - b)f^{\\prime}(x)$\n\n$$\n= f ^ {\\prime} (x) \\lceil (x - a) + 3 (b - x) \\rceil > 0 \\quad (a <   x <   b),\n$$\n\n所以 $\\varphi (x)$ 在 $[a,b]$ 上严格递增，故 $\\xi$ 是唯一的.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q19",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 19,
+      "questionType": "fill_in_blank",
+      "stem": "（1）设三次独立重复试验中，事件 $A$ 出现的概率相等，若已知 $A$ 至少出现一次的概率为 $\\frac{19}{27}$ ，则事件 $A$ 在一次试验中出现的概率为 ______.",
+      "options": [],
+      "answerCandidate": "$\\frac{1}{3}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 $\\frac{1}{3}$ .\n\n【解】令 $P(A) = p$ ，设三次试验中 $A$ 出现的次数为 $X$ ，则 $X \\sim B(3, p)$\n\n由 $P\\{X \\geqslant 1\\} = \\frac{19}{27}$ , 得 $P\\{X = 0\\} = C_3^0 p^0 (1 - p)^3 = (1 - p)^3 = \\frac{8}{27}$ , 解得 $p = \\frac{1}{3}$ , 故事件 $A$ 在一次试验中出现的概率为 $\\frac{1}{3}$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q20",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 20,
+      "questionType": "fill_in_blank",
+      "stem": "（2）在区间(0，1）中随机地取两个数，则事件“两数之和小于 $\\frac{6}{5}$ ”的概率为",
+      "options": [],
+      "answerCandidate": "$\\frac{17}{25}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】 $\\frac{17}{25}$ .\n\n【解】设(0,1)中任取的两个数为 $X,Y$ ，令 $D = \\{(x,y)\\mid 0 <   x <   1,0 <   y <   1\\}$ 则 $(X,Y)$ 在 $D$ 上服从均匀分布，即 $(X,Y)$ 的联合概率密度为\n\n$$\nf (x, y) = \\left\\{ \\begin{array}{l l} 1, & (x, y) \\in D, \\\\ 0, & (x, y) \\notin D, \\end{array} \\right.\n$$\n\n则 $P\\left\\{X + Y < \\frac{6}{5}\\right\\} = \\iint_{x + y \\leqslant \\frac{6}{5}} f(x, y) \\mathrm{d}x \\mathrm{~d}y = 1 - \\iint_{x + y > \\frac{6}{5}} f(x, y) \\mathrm{d}x \\mathrm{~d}y$\n\n$$\n= 1 - \\frac {1}{2} \\times \\left(\\frac {4}{5}\\right) ^ {2} = \\frac {1 7}{2 5}.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q21",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 21,
+      "questionType": "fill_in_blank",
+      "stem": "（3）设随机变量 $X$ 服从均值为10，均方差为0.02的正态分布，已知 $\\Phi (x) = \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{x}\\mathrm{e}^{-\\frac{u^2}{2}}\\mathrm{d}u,$ $\\Phi (2.5) = 0.9938$ ，则 $X$ 落在区间(9.95，10.05）内的概率为",
+      "options": [],
+      "answerCandidate": "0.9876.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(3)【答案】 0.9876.\n\n【解】 由 $X \\sim N(10, 0.02^2)$ 得 $\\frac{X - 10}{0.02} \\sim N(0, 1)$ ,\n\n则 $P\\{9.95 < X < 10.05\\} = P\\left\\{-2.5 < \\frac{X - 10}{0.02} < 2.5\\right\\}$\n\n$$\n= \\Phi (2. 5) - \\Phi (- 2. 5) = 2 \\Phi (2. 5) - 1 = 0. 9 8 7 6.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1988-q22",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1988年考研数学(一)真题.md",
+        "solutions/1988年解析/1988年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1988,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "E048B20FDBAE4C13D68B2B4285EC9E615E4B11290142C54A7093C91A90B0F531",
+        "solutions": "41B269702D52F13149284620F38809774660B42428CAB2FBDC727AD728F64B86"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 22,
+      "questionType": "solution",
+      "stem": "设随机变量 $X$ 的概率密度函数为 $f_{X}(x) = \\frac{1}{\\pi(1 + x^{2})}$ ，求随机变量 $Y = 1 - \\sqrt[3]{X}$ 的概率密度函数 $f_{Y}(y)$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n= 1 - P \\{X \\leqslant (1 - y) ^ {3} \\} = 1 - \\int_ {- \\infty} ^ {(1 - y) ^ {3}} \\frac {1}{\\pi (1 + x ^ {2})} d x,\n$$\n\n则 $f_{Y}(y) = \\frac{3(1 - y)^{2}}{\\pi[1 + (1 - y)^{6}]}.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    }
+  ],
+  "validation": {
+    "questionsGenerated": 22,
+    "questionsWithExplanations": 22,
+    "multipleChoiceWithFourOptions": 5,
+    "allNeedsHumanReview": true,
+    "remainingAutomaticAnomalies": 0
+  }
+}

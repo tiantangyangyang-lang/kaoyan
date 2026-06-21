@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "math1-sequential-transform-v1",
+  "updatedAt": "2026-06-20T08:57:00Z",
+  "updateTask": "cc-math1-md-finalize-year-2008",
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "expectedCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "countsMatch": true,
+  "totalAnomalies": 12,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 12
+  },
+  "allQuestionsNeedsReview": true,
+  "checks": {
+    "stableIdsUnique": true,
+    "allQuestionTypesValid": true,
+    "allQuestionNumbersUnique": true,
+    "allQuestionsHaveSourcePaths": true,
+    "allQuestionsHaveSourceHashes": true,
+    "allMultipleChoiceHave4Options": true,
+    "allAnswerCandidatesMatchOptionLabels": true,
+    "stemContaminationCleaned": true
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "review-v1",
+  "runId": "20260620-185410-cc-math1-md-finalize-year-2002",
+  "task": "cc-math1-md-finalize-year",
+  "subjectCode": "math1",
+  "sourceYear": 2002,
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewedAt": "2026-06-20T18:54:10+08:00",
+  "reviewStatus": "needs_human_review",
+  "totalAnomalies": 1,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 1
+  },
+  "anomalies": [
+    {
+      "anomalyId": "anom-2002-md-001",
+      "severity": "info",
+      "type": "image_dependent_question",
+      "message": "Q9 全部四个选项均为图片（三平面空间位置关系示意图）。选项图片标签A/B/C/D已从paper Markdown行47-57正确映射（A→5a83..., B→8127..., C→6a75..., D→9e0f...）。答案(B)对应三平面交于一直线的图像(8127aa31...)，solution解析逻辑与答案标签一致。图片内容的精确视觉确认仍需PDF对照。",
+      "questionNumbers": [
+        9
+      ],
+      "sourceEvidence": "papers/2002年考研数学(一)真题.md 行47-57; solutions/2002年解析.md 行109-113",
+      "humanAction": "对照 PDF 确认四个选项图片内容与标签对应关系。确认答案(B)的图像8127aa31...确实展示三平面交于一直线。"
+    }
+  ],
+  "resolvedAnomalies": [
+    {
+      "anomalyId": "anom-2002-001",
+      "originalSeverity": "error",
+      "resolution": "md-finalization从solution证据恢复性质①②。solution行68:'若f(x,y)两个偏导数连续，则f(x,y)一定可微'→②=一阶偏导数连续；solution行70:'若f(x,y)可微，则f(x,y)连续且可偏导'→①=连续。数学关系链②⇒③⇒①唯一确定。精确措辞需PDF确认，降级为info。"
+    },
+    {
+      "anomalyId": "anom-2002-002",
+      "originalSeverity": "error",
+      "resolution": "staging 2026-06-17 fix已修正选项图片映射。md-finalization确认Q9 options中A→5a83..., B→8127..., C→6a75..., D→9e0f...与paper Markdown行47-57标注一致。"
+    },
+    {
+      "anomalyId": "anom-2002-003",
+      "originalSeverity": "error",
+      "resolution": "staging 2026-06-17 fix已从paper Markdown行61-64正确恢复Q10的四个独立选项。md-finalization确认A/B/C/D选项均正确。"
+    },
+    {
+      "anomalyId": "anom-2002-004",
+      "originalSeverity": "error",
+      "resolution": "staging 2026-06-17 fix已将Q1 explanationCandidate中嵌入式Q2-Q5答案拆分到各题。md-finalization确认Q1-Q5均有独立answerCandidate。"
+    },
+    {
+      "anomalyId": "anom-2002-005",
+      "originalSeverity": "error",
+      "resolution": "staging 2026-06-17 fix已将Q6 explanationCandidate中嵌入式Q7-Q10答案拆分到各题。md-finalization确认Q6-Q10均有独立answerCandidate。"
+    },
+    {
+      "anomalyId": "anom-2002-009",
+      "originalSeverity": "warning",
+      "resolution": "md-finalization已从explanationCandidate提取Q11-Q20全部10道解答题的answerCandidate。所有20题answerCandidate均非null。"
+    },
+    {
+      "anomalyId": "anom-2002-017",
+      "originalSeverity": "info",
+      "resolution": "md-finalization已将Q16 stem中断裂的LaTeX '$x^2 +y^2 -xy$ $\\leqslant 75$' 合并为单个'$x^2 + y^2 - xy \\leqslant 75$'。"
+    }
+  ],
+  "summary": "原20条异常全部处理完毕：5条error级全部解决（staging fix + md-finalization），12条warning级处理完毕（其中4条为嵌入式答案已拆分，1条为缺失答案已提取），3条info级处理完毕。当前仅剩1条info级异常（Q9图片依赖，需PDF视觉确认）。active error=0, active warning=0。"
+}

@@ -1,0 +1,982 @@
+{
+  "schemaVersion": "math1-sequential-transform-v1",
+  "task": "cc-math1-2005",
+  "subjectCode": "math1",
+  "sourceYear": 2005,
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "sourceInfo": {
+    "paperRelativePath": "papers/2005年考研数学(一)真题.md",
+    "paperSha256": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+    "solutionsRelativePath": "solutions/2005年解析/2005年解析.md",
+    "solutionsSha256": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+  },
+  "questions": [
+    {
+      "stableId": "math1-2005-q01",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 1,
+      "questionType": "fill_in_blank",
+      "stem": "曲线 $y = \\frac{x^2}{2x + 1}$ 的斜渐近线方程为",
+      "options": [],
+      "answerCandidate": "$y = \\frac{1}{2} x - \\frac{1}{4}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 $y = \\frac{1}{2} x - \\frac{1}{4}$ .\n\n【解】 由 $\\lim_{x\\to \\infty}\\frac{y}{x} = \\lim_{x\\to \\infty}\\frac{x^2}{x(2x + 1)} = \\frac{1}{2},$\n\n$$\n\\lim  _ {x \\rightarrow \\infty} \\left(y - \\frac {1}{2} x\\right) = \\lim  _ {x \\rightarrow \\infty} \\left(\\frac {x ^ {2}}{2 x + 1} - \\frac {x}{2}\\right) = \\lim  _ {x \\rightarrow \\infty} \\frac {- x}{2 (2 x + 1)} = - \\frac {1}{4},\n$$\n\n得曲线 $y = \\frac{x^2}{2x + 1}$ 的斜渐近线方程为 $y = \\frac{1}{2} x - \\frac{1}{4}$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-2005-q02",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 2,
+      "questionType": "fill_in_blank",
+      "stem": "微分方程 $xy' + 2y = x \\ln x$ 满足 $y(1) = -\\frac{1}{9}$ 的解为",
+      "options": [],
+      "answerCandidate": "$y = \\frac{x\\ln x}{3} - \\frac{x}{9}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】 $y = \\frac{x\\ln x}{3} - \\frac{x}{9}$ .\n\n【解】方法一 将 $xy' + 2y = x\\ln x$ 化为 $y' + \\frac{2}{x} y = \\ln x$ ，解得\n\n$$\ny = \\left[ \\int \\ln x \\cdot \\mathrm {e} ^ {\\int \\frac {2}{x} \\mathrm {d} x} \\mathrm {d} x + C \\right] \\mathrm {e} ^ {- \\int \\frac {2}{x} \\mathrm {d} x} = \\frac {1}{x ^ {2}} \\left(\\int x ^ {2} \\ln x \\mathrm {d} x + C\\right) = \\frac {1}{x ^ {2}} \\left(\\frac {x ^ {3}}{3} \\ln x - \\frac {1}{9} x ^ {3} + C\\right),\n$$\n\n由 $y(1) = -\\frac{1}{9}$ ，得 $C = 0$ ，故 $y = \\frac{x \\ln x}{3} - \\frac{x}{9}$ .\n\n方法二 由 $xy' + 2y = x \\ln x$ ，得 $x^2 y' + 2xy = x^2 \\ln x$ ，即 $(x^2 y)' = x^2 \\ln x$ ，解得\n\n$$\nx ^ {2} y = \\int x ^ {2} \\ln x \\mathrm {d} x + C = \\frac {x ^ {3}}{3} \\ln x - \\frac {1}{9} x ^ {3} + C,\n$$\n\n于是 $y = \\frac{1}{x^2}\\left(\\frac{x^3}{3}\\ln x - \\frac{1}{9} x^3 + C\\right)$ , 由 $y(1) = -\\frac{1}{9}$ 得 $C = 0$ , 故 $y = \\frac{x\\ln x}{3} - \\frac{x}{9}$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-2005-q03",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 3,
+      "questionType": "fill_in_blank",
+      "stem": "设函数 $u(x, y, z) = 1 + \\frac{x^2}{6} + \\frac{y^2}{12} + \\frac{z^2}{18}$ , 单位向量 $\\boldsymbol{n} = \\frac{1}{\\sqrt{3}} (1, 1, 1)$ , 则 $\\left.\\frac{\\partial u}{\\partial \\boldsymbol{n}}\\right|_{(1, 2, 3)} =$ ______.",
+      "options": [],
+      "answerCandidate": "$\\frac{\\sqrt{3}}{3}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(3)【答案】 $\\frac{\\sqrt{3}}{3}$ .\n\n【解】 $\\frac{\\partial u}{\\partial x} = \\frac{x}{3}, \\frac{\\partial u}{\\partial y} = \\frac{y}{6}, \\frac{\\partial u}{\\partial z} = \\frac{z}{9},$\n\n由 $\\frac{\\partial u}{\\partial x}\\bigg|_{(1,2,3)} = \\frac{1}{3},\\quad \\frac{\\partial u}{\\partial y}\\bigg|_{(1,2,3)} = \\frac{1}{3},\\quad \\frac{\\partial u}{\\partial z}\\bigg|_{(1,2,3)} = \\frac{1}{3}$ 得\n\n$$\n\\left. \\frac {\\partial u}{\\partial n} \\right| _ {(1, 2, 3)} = \\frac {1}{3} \\times \\frac {1}{\\sqrt {3}} + \\frac {1}{3} \\times \\frac {1}{\\sqrt {3}} + \\frac {1}{3} \\times \\frac {1}{\\sqrt {3}} = \\frac {\\sqrt {3}}{3}.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-2005-q04",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 4,
+      "questionType": "fill_in_blank",
+      "stem": "设 $\\Omega$ 是由锥面 $z = \\sqrt{x^2 + y^2}$ 与半球面 $z = \\sqrt{R^2 - x^2 - y^2}$ 围成的空间区域, $\\Sigma$ 是 $\\Omega$ 的整个边界的外侧, 则 $\\iint_{\\Sigma} x \\mathrm{~d}y \\mathrm{~d}z + y \\mathrm{~d}z \\mathrm{~d}x + z \\mathrm{~d}x \\mathrm{~d}y = \\underline{\\quad}$ .",
+      "options": [],
+      "answerCandidate": "$(2 - \\sqrt{2})\\pi R^3$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（4）【答案】 $(2 - \\sqrt{2})\\pi R^3$\n\n【解】 方法一 由 $\\left\\{ \\begin{array}{l} z = \\sqrt{x^2 + y^2}, \\\\ z = \\sqrt{R^2 - x^2 - y^2}, \\end{array} \\right.$ 得 $x^2 + y^2 = \\frac{R^2}{2}$ .\n\n令 $D: x^2 + y^2 \\leqslant \\frac{R^2}{2}$ , 由高斯公式得\n\n$$\n\\iint_ {\\Sigma} x \\mathrm {d} y \\mathrm {d} z + y \\mathrm {d} z \\mathrm {d} x + z \\mathrm {d} x \\mathrm {d} y = 3 \\iiint_ {\\Omega} \\mathrm {d} v = 3 \\iint_ {D} \\mathrm {d} x \\mathrm {d} y \\int_ {\\sqrt {x ^ {2} + y ^ {2}}} ^ {\\sqrt {R ^ {2} - x ^ {2} - y ^ {2}}} \\mathrm {d} z\n$$\n\n$$\n\\begin{array}{l} = 3 \\iint_ {D} \\left(\\sqrt {R ^ {2} - x ^ {2} - y ^ {2}} - \\sqrt {x ^ {2} + y ^ {2}}\\right) d x d y \\\\ = 3 \\int_ {0} ^ {2 \\pi} \\mathrm {d} \\theta \\int_ {0} ^ {\\frac {R}{\\sqrt {2}}} r \\left(\\sqrt {R ^ {2} - r ^ {2}} - r\\right) \\mathrm {d} r = 6 \\pi \\int_ {0} ^ {\\frac {R}{\\sqrt {2}}} r \\sqrt {R ^ {2} - r ^ {2}} \\mathrm {d} r - \\frac {\\pi R ^ {3}}{\\sqrt {2}} \\\\ = - 3 \\pi \\int_ {0} ^ {\\frac {R}{\\sqrt {2}}} \\sqrt {R ^ {2} - r ^ {2}} d \\left(R ^ {2} - r ^ {2}\\right) - \\frac {\\pi R ^ {3}}{\\sqrt {2}} = (2 - \\sqrt {2}) \\pi R ^ {3}. \\\\ \\end{array}\n$$\n\n方法二 由高斯公式得\n\n$$\n\\begin{array}{l} \\iint_ {\\Sigma} x \\mathrm {d} y \\mathrm {d} z + y \\mathrm {d} z \\mathrm {d} x + z \\mathrm {d} x \\mathrm {d} y = 3 \\iiint_ {\\Omega} \\mathrm {d} v = 3 \\int_ {0} ^ {2 \\pi} \\mathrm {d} \\theta \\int_ {0} ^ {\\frac {\\pi}{4}} \\mathrm {d} \\varphi \\int_ {0} ^ {R} r ^ {2} \\sin \\varphi \\mathrm {d} r = 6 \\pi \\int_ {0} ^ {\\frac {\\pi}{4}} \\sin \\varphi \\mathrm {d} \\varphi \\int_ {0} ^ {R} r ^ {2} \\mathrm {d} r \\\\ = 2 \\pi R ^ {3} \\left(1 - \\frac {\\sqrt {2}}{2}\\right) = (2 - \\sqrt {2}) \\pi R ^ {3}. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-2005-q05",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 5,
+      "questionType": "fill_in_blank",
+      "stem": "设 $\\alpha_{1}, \\alpha_{2}, \\alpha_{3}$ 均为 3 维列向量, 记矩阵\n\n$$\n\\boldsymbol {A} = \\left(\\boldsymbol {\\alpha} _ {1}, \\boldsymbol {\\alpha} _ {2}, \\boldsymbol {\\alpha} _ {3}\\right), \\boldsymbol {B} = \\left(\\boldsymbol {\\alpha} _ {1} + \\boldsymbol {\\alpha} _ {2} + \\boldsymbol {\\alpha} _ {3}, \\boldsymbol {\\alpha} _ {1} + 2 \\boldsymbol {\\alpha} _ {2} + 4 \\boldsymbol {\\alpha} _ {3}, \\boldsymbol {\\alpha} _ {1} + 3 \\boldsymbol {\\alpha} _ {2} + 9 \\boldsymbol {\\alpha} _ {3}\\right).\n$$\n\n如果 $|\\mathbf{A}| = 1$ ，那么 $|\\mathbf{B}| =$",
+      "options": [],
+      "answerCandidate": "2.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（5）【答案】2.\n\n【解】方法一 因为 $B = (\\alpha_{1} + \\alpha_{2} + \\alpha_{3},\\alpha_{1} + 2\\alpha_{2} + 4\\alpha_{3},\\alpha_{1} + 3\\alpha_{2} + 9\\alpha_{3})$\n\n$$\n= \\mathbf {A} \\left( \\begin{array}{c c c} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 4 & 9 \\end{array} \\right),\n$$\n\n所以 $|\\pmb {B}| = |\\pmb {A}|\\cdot \\left| \\begin{array}{lll}1 & 1 & 1\\\\ 1 & 2 & 3\\\\ 1 & 4 & 9 \\end{array} \\right| = (3 - 1)(3 - 2)(2 - 1) = 2.$\n\n方法二 $|\\pmb {B}| = |\\pmb {\\alpha}_1 + \\pmb {\\alpha}_2 + \\pmb {\\alpha}_3,\\pmb {\\alpha}_1 + 2\\pmb {\\alpha}_2 + 4\\pmb {\\alpha}_3,\\pmb {\\alpha}_1 + 3\\pmb {\\alpha}_2 + 9\\pmb {\\alpha}_3|$\n\n$$\n\\begin{array}{l} = \\left| \\boldsymbol {\\alpha} _ {1} + \\boldsymbol {\\alpha} _ {2} + \\boldsymbol {\\alpha} _ {3}, \\boldsymbol {\\alpha} _ {2} + 3 \\boldsymbol {\\alpha} _ {3}, \\boldsymbol {\\alpha} _ {2} + 5 \\boldsymbol {\\alpha} _ {3} \\right| \\\\ = \\left| \\boldsymbol {\\alpha} _ {1} + \\boldsymbol {\\alpha} _ {2} + \\boldsymbol {\\alpha} _ {3}, \\boldsymbol {\\alpha} _ {2} + 3 \\boldsymbol {\\alpha} _ {3}, 2 \\boldsymbol {\\alpha} _ {3} \\right| = 2 \\left| \\boldsymbol {\\alpha} _ {1} + \\boldsymbol {\\alpha} _ {2} + \\boldsymbol {\\alpha} _ {3}, \\boldsymbol {\\alpha} _ {2} + 3 \\boldsymbol {\\alpha} _ {3}, \\boldsymbol {\\alpha} _ {3} \\right| \\\\ = 2 \\left| \\boldsymbol {\\alpha} _ {1} + \\boldsymbol {\\alpha} _ {2}, \\boldsymbol {\\alpha} _ {2}, \\boldsymbol {\\alpha} _ {3} \\right| = 2 \\left| \\boldsymbol {\\alpha} _ {1}, \\boldsymbol {\\alpha} _ {2}, \\boldsymbol {\\alpha} _ {3} \\right| = 2. \\\\ \\end{array}\n$$\n\n方法点评：本题注意范德蒙德行列式的使用.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-2005-q06",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 6,
+      "questionType": "fill_in_blank",
+      "stem": "从数 $1,2,3,4$ 中任取一个数，记为 $X$ ，再从 $1,\\dots ,X$ 中任取一个数，记为 $Y$ ，则 $P\\{Y = 2\\} =$",
+      "options": [],
+      "answerCandidate": "$\\frac{13}{48}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(6)【答案】 $\\frac{13}{48}$ .\n\n【解】令 $A_{i} = \\{X = i\\} (i = 1,2,3,4),B = \\{Y = 2\\}$ ，则 $P(A_{i}) = \\frac{1}{4} (i = 1,2,3,4)$\n\n$$\nP (B \\mid A _ {1}) = 0, \\quad P (B \\mid A _ {2}) = \\frac {1}{2}, \\quad P (B \\mid A _ {3}) = \\frac {1}{3}, \\quad P (B \\mid A _ {4}) = \\frac {1}{4},\n$$\n\n由全概率公式得 $P\\{Y = 2\\} = P(B) = \\sum_{i = 1}^{4}P(A_i)P(B\\mid A_i) = \\frac{1}{4}\\left(\\frac{1}{2} +\\frac{1}{3} +\\frac{1}{4}\\right) = \\frac{13}{48}.$\n\n# 二、选择题",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "stem",
+          "before": "header contamination",
+          "after": "cleaned",
+          "reason": "Remove # 二、选择题 from stem tail per paper markdown line 17",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q07",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 7,
+      "questionType": "multiple_choice",
+      "stem": "设函数 $f(x) = \\lim_{n \\to \\infty} \\sqrt[n]{1 + |x|^{3n}}$ ，则 $f(x)$ 在 $(- \\infty, + \\infty)$ 内（ ）\n\n(A) 处处可导.\n\n(B) 恰有一个不可导点.\n\n(C) 恰有两个不可导点.\n\n(D) 至少有三个不可导点.",
+      "options": [
+        {
+          "label": "A",
+          "value": "处处可导."
+        },
+        {
+          "label": "B",
+          "value": "恰有一个不可导点."
+        },
+        {
+          "label": "C",
+          "value": "恰有两个不可导点."
+        },
+        {
+          "label": "D",
+          "value": "至少有三个不可导点."
+        }
+      ],
+      "answerCandidate": "(C).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（7）【答案】 (C).\n\n【解】当 $|x|\\leqslant 1$ 时， $1\\leqslant \\sqrt[n]{1 + |x|^{3n}}\\leqslant \\sqrt[n]{2}$ ，由夹逼定理得 $\\lim_{n\\to \\infty}\\sqrt[n]{1 + |x|^{3n}} = 1;$\n\n当 $|x| > 1$ 时， $|x|^3 = \\sqrt[n]{|x|^{3n}} \\leqslant \\sqrt[n]{1 + |x|^{3n}} \\leqslant \\sqrt[n]{|x|^{3n} + |x|^{3n}} = \\sqrt[n]{2}|x|^3,$\n\n由夹逼定理得 $\\lim_{n\\to \\infty}\\sqrt[n]{1 + |x|^{3n}} = |x|^3$\n\n即 $f(x) = \\left\\{ \\begin{array}{ll}1, & |x|\\leqslant 1,\\\\ |x|^3, & |x| > 1. \\end{array} \\right.$\n\n$$\nf _ {-} ^ {\\prime} (- 1) = \\lim  _ {x \\rightarrow - 1 ^ {-}} \\frac {f (x) - f (- 1)}{x + 1} = \\lim  _ {x \\rightarrow - 1 ^ {-}} \\frac {- x ^ {3} - 1}{x + 1} = - 3,\n$$\n\n$$\nf _ {+} ^ {\\prime} (- 1) = \\lim  _ {x \\rightarrow - 1 ^ {+}} \\frac {f (x) - f (- 1)}{x + 1} = \\lim  _ {x \\rightarrow - 1 ^ {+}} \\frac {1 - 1}{x + 1} = 0,\n$$\n\n因为 $f_{-}^{\\prime}(-1) \\neq f_{+}^{\\prime}(-1)$ ，所以 $f(x)$ 在 $x = -1$ 处不可导；\n\n$$\nf _ {-} ^ {\\prime} (1) = \\lim  _ {x \\rightarrow 1 ^ {-}} \\frac {f (x) - f (1)}{x - 1} = \\lim  _ {x \\rightarrow 1 ^ {-}} \\frac {1 - 1}{x - 1} = 0,\n$$\n\n$$\nf _ {+} ^ {\\prime} (1) = \\lim  _ {x \\rightarrow 1 ^ {+}} \\frac {f (x) - f (1)}{x - 1} = \\lim  _ {x \\rightarrow 1 ^ {+}} \\frac {x ^ {3} - 1}{x - 1} = 3,\n$$\n\n因为 $f_{-}^{\\prime}(1)\\neq f_{+}^{\\prime}(1)$ ，所以 $f(x)$ 在 $x = 1$ 处不可导，\n\n即 $f(x)$ 在 $(-\\infty , + \\infty)$ 内连续，但有两个不可导点，应选(C).\n\n方法点评：讨论由极限形式表示的函数的连续性与可导性时，先计算极限，求出函数的表达式，再讨论函数的有关特性.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "explanationCandidate",
+          "before": "3 OCR errors",
+          "after": "Fixed braces, exponent, limit",
+          "reason": "Paper markdown + math logic",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q08",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 8,
+      "questionType": "multiple_choice",
+      "stem": "设 $F(x)$ 是连续函数 $f(x)$ 的一个原函数, “ $M \\Leftrightarrow N$ ” 表示“ $M$ 的充分必要条件是 $N$ ”, 则必有 ( )\n\n(A) $F(x)$ 是偶函数 $\\Leftrightarrow f(x)$ 是奇函数  \n(B) $F(x)$ 是奇函数 $\\Leftrightarrow f(x)$ 是偶函数  \n(C) $F(x)$ 是周期函数 $\\Leftrightarrow f(x)$ 是周期函数  \n(D) $F(x)$ 是单调函数 $\\Leftrightarrow f(x)$ 是单调函数",
+      "options": [
+        {
+          "label": "A",
+          "value": "$F(x)$ 是偶函数 $\\Leftrightarrow f(x)$ 是奇函数"
+        },
+        {
+          "label": "B",
+          "value": "$F(x)$ 是奇函数 $\\Leftrightarrow f(x)$ 是偶函数"
+        },
+        {
+          "label": "C",
+          "value": "$F(x)$ 是周期函数 $\\Leftrightarrow f(x)$ 是周期函数"
+        },
+        {
+          "label": "D",
+          "value": "$F(x)$ 是单调函数 $\\Leftrightarrow f(x)$ 是单调函数"
+        }
+      ],
+      "answerCandidate": "（A）.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（8）【答案】 （A）.\n\n【解】方法一 $f(x) = 3x^{2}$ 为偶函数，但 $F(x) = x^{3} + C$ 不一定是奇函数，(B)不对； $f(x) = \\cos x - 1$ 为周期函数， $F(x) = \\sin x - x + C$ 不是周期函数，(C)不对； $f(x) = 2x$ 为单调增函数， $F(x) = x^{2} + C$ 不是单调函数，(D)不对，应选(A).\n\n方法二 设 $f(-x) = -f(x)$ ，令 $F(x) = \\int_{a}^{x} f(t) \\, \\mathrm{d}t$ ，\n\n则 $F(-x) = \\int_{a}^{-x}f(t)\\mathrm{d}t\\stackrel {t = -u}{=}\\int_{-a}^{x}f(-u)(-\\mathrm{d}u) = \\int_{-a}^{x}f(u)\\mathrm{d}u$\n\n$$\n= \\int_ {- a} ^ {a} f (u) d u + \\int_ {a} ^ {x} f (u) d u = \\int_ {a} ^ {x} f (u) d u = F (x),\n$$\n\n于是 $F(x)$ 为偶函数；\n\n反之，设 $F(-x) = F(x)$ ，两边求导得 $-F'(-x) = F'(x)$ ，或 $f(-x) = -f(x)$ ，即 $f(x)$ 为奇函数，应选(A).\n\n方法点评：设 $F(x)$ 为 $f(x)$ 的原函数，则 $f(x)$ 与 $F(x)$ 的奇偶性、周期性如下：\n\n(1) $f(x)$ 是奇函数的充要条件是 $F(x)$ 为偶函数；  \n(2) $f(x)$ 是偶函数时， $F(x)$ 不一定是奇函数， $f(x)$ 的所有原函数中只有\n\n$F(x) = \\int_{0}^{x}f(t)\\mathrm{d}t$ 为奇函数，但当 $F(x)$ 是奇函数时， $f(x)$ 一定是偶函数；\n\n（3）若 $f(x)$ 为周期函数， $F(x)$ 不一定是周期函数，但当 $F(x)$ 为周期函数时， $f(x)$ 一定为周期函数.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-2005-q09",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 9,
+      "questionType": "multiple_choice",
+      "stem": "设函数 $u(x, y) = \\varphi(x + y) + \\varphi(x - y) + \\int_{x - y}^{x + y} \\psi(t) \\, \\mathrm{d}t$ , 其中函数 $\\varphi$ 具有二阶导数, $\\psi$ 具有一阶导数, 则必有 ( )\n\n(A) $\\frac{\\partial^2 u}{\\partial x^2} = -\\frac{\\partial^2 u}{\\partial y^2}$ .\n\n(B) $\\frac{\\partial^2 u}{\\partial x^2} = \\frac{\\partial^2 u}{\\partial y^2}$ .\n\n(C) $\\frac{\\partial^2 u}{\\partial x \\partial y} = \\frac{\\partial^2 u}{\\partial y^2}$ .\n\n(D) $\\frac{\\partial^2 u}{\\partial x \\partial y} = \\frac{\\partial^2 u}{\\partial x^2}$ .",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\frac{\\partial^2 u}{\\partial x^2} = -\\frac{\\partial^2 u}{\\partial y^2}$ ."
+        },
+        {
+          "label": "B",
+          "value": "$\\frac{\\partial^2 u}{\\partial x^2} = \\frac{\\partial^2 u}{\\partial y^2}$ ."
+        },
+        {
+          "label": "C",
+          "value": "$\\frac{\\partial^2 u}{\\partial x \\partial y} = \\frac{\\partial^2 u}{\\partial y^2}$ ."
+        },
+        {
+          "label": "D",
+          "value": "$\\frac{\\partial^2 u}{\\partial x \\partial y} = \\frac{\\partial^2 u}{\\partial x^2}$ ."
+        }
+      ],
+      "answerCandidate": "（B）.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（9）【答案】 （B）.\n\n【解】 由 $\\frac{\\partial u}{\\partial x} = \\varphi'(x + y) + \\varphi'(x - y) + \\psi(x + y) - \\psi(x - y)$ ，\n\n$$\n\\frac {\\partial u}{\\partial y} = \\varphi^ {\\prime} (x + y) - \\varphi^ {\\prime} (x - y) + \\psi (x + y) + \\psi (x - y),\n$$\n\n得 $\\frac{\\partial^2 u}{\\partial x^2} = \\varphi''(x + y) + \\varphi''(x - y) + \\psi'(x + y) - \\psi'(x - y)$ ,\n\n$$\n\\frac {\\partial^ {2} u}{\\partial y ^ {2}} = \\varphi^ {\\prime \\prime} (x + y) + \\varphi^ {\\prime \\prime} (x - y) + \\psi^ {\\prime} (x + y) - \\psi^ {\\prime} (x - y),\n$$\n\n显然 $\\frac{\\partial^2u}{\\partial x^2} = \\frac{\\partial^2u}{\\partial y^2}$ ，应选（B）.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-2005-q10",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 10,
+      "questionType": "multiple_choice",
+      "stem": "设有三元方程 $xy - z\\ln y + \\mathrm{e}^{xz} = 1$ ，根据隐函数存在定理，存在点 $(0,1,1)$ 的一个邻域，在此邻域内该方程（ ）\n\n(A) 只能确定一个具有连续偏导数的隐函数 $z = z(x, y)$ .  \n（B）可确定两个具有连续偏导数的隐函数 $y = y(x,z)$ 和 $z = z(x,y)$ .  \n(C) 可确定两个具有连续偏导数的隐函数 $x = x(y, z)$ 和 $z = z(x, y)$ .  \n(D) 可确定两个具有连续偏导数的隐函数 $x = x(y, z)$ 和 $y = y(x, z)$ .",
+      "options": [
+        {
+          "label": "A",
+          "value": "只能确定一个具有连续偏导数的隐函数 $z = z(x, y)$ ."
+        },
+        {
+          "label": "B",
+          "value": "可确定两个具有连续偏导数的隐函数 $y = y(x,z)$ 和 $z = z(x,y)$ ."
+        },
+        {
+          "label": "C",
+          "value": "可确定两个具有连续偏导数的隐函数 $x = x(y, z)$ 和 $z = z(x, y)$ ."
+        },
+        {
+          "label": "D",
+          "value": "可确定两个具有连续偏导数的隐函数 $x = x(y, z)$ 和 $y = y(x, z)$ ."
+        }
+      ],
+      "answerCandidate": "(D).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（10）【答案】 (D).\n\n【解】 令 $F(x,y,z) = xy - z\\ln y + \\mathrm{e}^{xz} - 1$\n\n$$\nF _ {x} ^ {\\prime} (x, y, z) = y + z \\mathrm {e} ^ {x z}, \\quad F _ {y} ^ {\\prime} (x, y, z) = x - \\frac {z}{y}, \\quad F _ {z} ^ {\\prime} (x, y, z) = - \\ln y + x \\mathrm {e} ^ {x z},\n$$\n\n因为 $F_{x}^{\\prime}(0,1,1) = 2\\neq 0,F_{y}^{\\prime}(0,1,1) = -1\\neq 0,F_{z}^{\\prime}(0,1,1) = 0$ ，所以 $xy - z\\ln y + \\mathrm{e}^{xz} = 1$ 在点(0，1，1）确定两个具有连续偏导数的函数 $x = x(y,z)$ 及 $y = y(x,z)$ ，应选(D).\n\n方法点评：本题需要掌握多元隐函数的存在定理，\n\n设 $F(x,y,z)$ 连续可偏导， $F(x_0,y_0,z_0) = 0$ ，若 $F_x'(x_0,y_0,z_0) \\neq 0$ ，则在点 $(x_0,y_0,z_0)$ 的邻域内确定二元函数 $x = x(y,z)$ ，其他情况类似.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-2005-q11",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 11,
+      "questionType": "multiple_choice",
+      "stem": "设 $\\lambda_{1}, \\lambda_{2}$ 是矩阵 $\\mathbf{A}$ 的两个不同的特征值, 对应的特征向量分别为 $\\alpha_{1}, \\alpha_{2}$ , 则 $\\alpha_{1}, A\\left(\\alpha_{1} + \\alpha_{2}\\right)$ 线性无关的充分必要条件是 ( )\n\n$(\\mathrm{A})\\lambda_{1}\\neq 0.$\n\n(B) $\\lambda_{2} \\neq 0$ .\n\n$\\left(\\mathrm{C}\\right)\\lambda_{1} = 0.$\n\n$\\left(\\mathrm{D}\\right)\\lambda_{2} = 0.$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\lambda_{1} \\neq 0$ ."
+        },
+        {
+          "label": "B",
+          "value": "$\\lambda_{2} \\neq 0$ ."
+        },
+        {
+          "label": "C",
+          "value": "$\\lambda_{1} = 0$ ."
+        },
+        {
+          "label": "D",
+          "value": "$\\lambda_{2} = 0$ ."
+        }
+      ],
+      "answerCandidate": "(B).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（11）【答案】 (B).\n\n【解】方法一 因为矩阵的不同特征值对应的特征向量线性无关，所以 $\\alpha_{1},\\alpha_{2}$ 线性无关由 $A\\pmb{\\alpha}_{1} = \\lambda_{1}\\pmb{\\alpha}_{1},A\\pmb{\\alpha}_{2} = \\lambda_{2}\\pmb{\\alpha}_{2}$ ，得 $A(\\pmb {\\alpha}_1 + \\pmb {\\alpha}_2) = \\lambda_1\\pmb {\\alpha}_1 + \\lambda_2\\pmb {\\alpha}_2$\n\n$(\\pmb{\\alpha}_{1}, \\pmb{A}(\\pmb{\\alpha}_{1} + \\pmb{\\alpha}_{2})) = (\\pmb{\\alpha}_{1}, \\pmb{\\alpha}_{2})\\left( \\begin{array}{cc} 1 & \\lambda_{1} \\\\ 0 & \\lambda_{2} \\end{array} \\right), \\pmb{\\alpha}_{1}, \\pmb{A}(\\pmb{\\alpha}_{1} + \\pmb{\\alpha}_{2})$ 线性无关的充分必要条件是矩阵 $\\left( \\begin{array}{cc} 1 & \\lambda_{1} \\\\ 0 & \\lambda_{2} \\end{array} \\right)$ 可逆，即 $\\left| \\begin{array}{cc} 1 & \\lambda_{1} \\\\ 0 & \\lambda_{2} \\end{array} \\right| \\neq 0$ 故 $\\lambda_{2} \\neq 0$ ，应选(B).\n\n方法二 令 $k_{1}\\pmb{\\alpha}_{1} + k_{2}\\pmb{A}(\\pmb{\\alpha}_{1} + \\pmb{\\alpha}_{2}) = \\mathbf{0}$ , 由 $\\mathbf{A}(\\pmb{\\alpha}_{1} + \\pmb{\\alpha}_{2}) = \\lambda_{1}\\pmb{\\alpha}_{1} + \\lambda_{2}\\pmb{\\alpha}_{2}$ , 得 $k_{1}\\pmb{\\alpha}_{1} + k_{2}(\\lambda_{1}\\pmb{\\alpha}_{1} + \\lambda_{2}\\pmb{\\alpha}_{2}) = \\mathbf{0}$ , 整理得 $(k_{1} + \\lambda_{1}k_{2})\\pmb{\\alpha}_{1} + \\lambda_{2}k_{2}\\pmb{\\alpha}_{2} = \\mathbf{0}$ .\n\n因为 $\\alpha_{1},\\alpha_{2}$ 线性无关，所以 $\\begin{cases} k_1 + \\lambda_1k_2 = 0,\\\\ \\lambda_2k_2 = 0, \\end{cases}$ 于是 $\\pmb{\\alpha}_{1},\\pmb {A}(\\pmb{\\alpha}_{1} + \\pmb{\\alpha}_{2})$ 线性无关的充分必要条件是 $k_{1}\\pmb{\\alpha}_{1} + k_{2}\\pmb {A}(\\pmb{\\alpha}_{1} + \\pmb{\\alpha}_{2}) = \\mathbf{0}$ 当且仅当 $k_{1} = k_{2} = 0$ ，即方程组 $\\left\\{ \\begin{array}{l}k_{1} + \\lambda_{1}k_{2} = 0,\\\\ \\lambda_{2}k_{2} = 0 \\end{array} \\right.$ 只有零解，于是 $\\left| \\begin{array}{ll}1 & \\lambda_1\\\\ 0 & \\lambda_2 \\end{array} \\right|\\neq 0$ ，故 $\\lambda_{2}\\neq 0$ ，应选(B).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "options",
+          "before": "Only B extracted",
+          "after": "All 4 rebuilt",
+          "reason": "Paper markdown lines 57-63",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q12",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 12,
+      "questionType": "multiple_choice",
+      "stem": "设 $\\mathbf{A}$ 为 $n (n \\geqslant 2)$ 阶可逆矩阵, 交换 $\\mathbf{A}$ 的第 1 行与第 2 行得矩阵 $\\mathbf{B}, \\mathbf{A}^{*}, \\mathbf{B}^{*}$ 分别为 $\\mathbf{A}, \\mathbf{B}$ 的伴随矩阵, 则( )\n\n(A) 交换 $A^{*}$ 的第1列与第2列得 $\\pmb{B}^{*}$   \n(B) 交换 $A^{*}$ 的第1行与第2行得 $\\pmb{B}^{*}$   \n(C) 交换 $A^{*}$ 的第1列与第2列得 $-B^{*}$ .  \n(D) 交换 $A^{*}$ 的第1行与第2行得 $-B^{*}$ .",
+      "options": [
+        {
+          "label": "A",
+          "value": "交换 $A^{*}$ 的第1列与第2列得 $\\pmb{B}^{*}$"
+        },
+        {
+          "label": "B",
+          "value": "交换 $A^{*}$ 的第1行与第2行得 $\\pmb{B}^{*}$"
+        },
+        {
+          "label": "C",
+          "value": "交换 $A^{*}$ 的第1列与第2列得 $-B^{*}$ ."
+        },
+        {
+          "label": "D",
+          "value": "交换 $A^{*}$ 的第1行与第2行得 $-B^{*}$ ."
+        }
+      ],
+      "answerCandidate": "(C).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（12）【答案】 (C).\n\n【解】 令 $E_{12} = \\begin{pmatrix} 0 & 1 & 0\\\\ 1 & 0 & 0\\\\ 0 & 0 & 1 \\end{pmatrix}$ ，由题意得 $\\pmb {B} = \\pmb{E}_{12}\\pmb{A}$\n\n由 $|\\pmb {B}| = |\\pmb{E}_{12}|\\cdot |\\pmb {A}| = -|\\pmb {A}|,\\quad \\pmb{B}^{-1} = \\pmb{A}^{-1}\\pmb{E}_{12}^{-1} = \\pmb{A}^{-1}\\pmb{E}_{12},$\n\n得 $\\pmb{B}^{*} = |\\pmb{B}| \\pmb{B}^{-1} = -|\\pmb{A}| \\cdot \\pmb{A}^{-1} \\pmb{E}_{12} = -\\pmb{A}^{*} \\pmb{E}_{12}$ 或 $-\\pmb{B}^{*} = \\pmb{A}^{*} \\pmb{E}_{12}$ ,\n\n即交换 $\\mathbf{A}^{*}$ 的第1、2两列得 $-\\mathbf{B}^{*}$ ，应选(C).\n\n方法点评：本题考查初等变换与伴随矩阵.\n\n设 $\\mathbf{A}$ 为可逆矩阵，当研究 $A^{*}$ 时，一般需要使用公式 $A^{*} = |A|A^{-1}$ ，即将伴随矩阵问题转化为逆矩阵问题，注意使用如下结论：\n\n（1）设 $\\mathbf{A},\\mathbf{B}$ 为可逆的 $n$ 阶矩阵，则 $(\\mathbf{AB})^{*} = \\mathbf{B}^{*}\\mathbf{A}^{*}$   \n（2）设 $\\mathbf{A},\\mathbf{B}$ 分别为可逆的 $m$ 阶及 $n$ 阶矩阵，则\n\n$$\n\\begin{array}{l} \\left( \\begin{array}{c c} \\mathbf {A} & \\mathbf {O} \\\\ \\mathbf {O} & \\mathbf {B} \\end{array} \\right) ^ {*} = \\left| \\begin{array}{c c} \\mathbf {A} & \\mathbf {O} \\\\ \\mathbf {O} & \\mathbf {B} \\end{array} \\right| \\cdot \\left( \\begin{array}{c c} \\mathbf {A} & \\mathbf {O} \\\\ \\mathbf {O} & \\mathbf {B} \\end{array} \\right) ^ {- 1} = \\left( \\begin{array}{c c} | \\mathbf {B} | \\mathbf {A} ^ {*} & \\mathbf {O} \\\\ \\mathbf {O} & | \\mathbf {A} | \\mathbf {B} ^ {*} \\end{array} \\right); \\\\ \\left( \\begin{array}{l l} \\mathbf {O} & \\mathbf {A} \\\\ \\mathbf {B} & \\mathbf {O} \\end{array} \\right) ^ {*} = \\left| \\begin{array}{l l} \\mathbf {O} & \\mathbf {A} \\\\ \\mathbf {B} & \\mathbf {O} \\end{array} \\right| \\cdot \\left( \\begin{array}{l l} \\mathbf {O} & \\mathbf {A} \\\\ \\mathbf {B} & \\mathbf {O} \\end{array} \\right) ^ {- 1} = (- 1) ^ {m n} \\binom {\\mathbf {O}} {| \\mathbf {B} | \\mathbf {A} ^ {*}} \\begin{array}{c c} | \\mathbf {A} | \\mathbf {B} ^ {*} \\\\ \\mathbf {O} \\end{array} . \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-2005-q13",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 13,
+      "questionType": "multiple_choice",
+      "stem": "设二维随机变量 $(X, Y)$ 的概率分布为\n\n<table><tr><td>X Y</td><td>0</td><td>1</td></tr><tr><td>0</td><td>0.4</td><td>a</td></tr><tr><td>1</td><td>b</td><td>0.1</td></tr></table>\n\n已知随机事件 $\\{X = 0\\}$ 与 $\\{X + Y = 1\\}$ 相互独立, 则( )\n\n(A) $a = 0.2, b = 0.3$ .\n\n(B) $a = 0.4, b = 0.1$ .\n\n(C) $a = 0.3, b = 0.2$ .\n\n(D) $a = 0.1, b = 0.4$ .",
+      "options": [
+        {
+          "label": "A",
+          "value": "$a = 0.2, b = 0.3$ ."
+        },
+        {
+          "label": "B",
+          "value": "$a = 0.4, b = 0.1$ ."
+        },
+        {
+          "label": "C",
+          "value": "$a = 0.3, b = 0.2$ ."
+        },
+        {
+          "label": "D",
+          "value": "$a = 0.1, b = 0.4$ ."
+        }
+      ],
+      "answerCandidate": "（B）.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（13）【答案】（B）.\n\n【解】 $P\\{X = 0\\} = 0.4 + a$\n\n$$\n\\begin{array}{l} P \\{X + Y = 1 \\} = P \\{X = 0, Y = 1 \\} + P \\{X = 1, Y = 0 \\} = a + b, \\\\ P \\{X = 0, X + Y = 1 \\} = P \\{X = 0, Y = 1 \\} = a, \\\\ \\end{array}\n$$\n\n因为 $\\{X = 0\\}$ 与 $\\{X + Y = 1\\}$ 相互独立，所以 $(a + b)(0.4 + a) = a$ ，又因为 $a + b = 0.5$ 所以 $a = 0.4, b = 0.1$ ，应选(B).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-2005-q14",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 14,
+      "questionType": "multiple_choice",
+      "stem": "设 $X_{1}, X_{2}, \\dots, X_{n} (n \\geqslant 2)$ 为来自总体 $N(0,1)$ 的简单随机样本, $\\overline{X}$ 为样本均值, $S^{2}$ 为样本方差, 则( )\n\n(A) $n\\overline{X} \\sim N(0,1)$ .\n\n(B) $nS^2 \\sim \\chi^2(n)$ .\n\n(C) $\\frac{(n - 1)\\overline{X}}{S} \\sim t(n - 1)$ .\n\n(D) $\\frac{(n - 1)X_1^2}{\\sum_{i = 2}^{n}X_i^2}\\sim F(1,n - 1).$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$n\\overline{X} \\sim N(0,1)$ ."
+        },
+        {
+          "label": "B",
+          "value": "$nS^2 \\sim \\chi^2(n)$ ."
+        },
+        {
+          "label": "C",
+          "value": "$\\frac{(n - 1)\\overline{X}}{S} \\sim t(n - 1)$ ."
+        },
+        {
+          "label": "D",
+          "value": "$\\frac{(n - 1)X_1^2}{\\sum_{i = 2}^{n}X_i^2}\\sim F(1,n - 1).$"
+        }
+      ],
+      "answerCandidate": "(D).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（14）【答案】 (D).\n\n【解】 由 $X_{1} \\sim N(0,1)$ ，得 $X_{1}^{2} \\sim X^{2}(1)$\n\n由 $X_{i}\\sim N(0,1)(i = 2,3,\\dots ,n)$ ，得 $\\sum_{i = 2}^{n}X_{i}^{2}\\sim \\chi^{2}(n - 1)$ 且 $X_{1}^{2}$ 与 $\\sum_{i = 2}^{n}X_{i}^{2}$ 独立，\n\n由 $F$ 分布的定义得 $\\frac{X_1^2 / 1}{\\sum_{i = 2}^{n}X_i^2 / (n - 1)}\\sim F(1,n - 1)$ ，即 $\\frac{(n - 1)X_1^2}{\\sum_{i = 2}^{n}X_i^2}\\sim F(1,n - 1)$ ，应选(D).\n\n方法点评：设总体 $X \\sim N(\\mu, \\sigma^2), X_1, X_2, \\dots, X_n$ 为来自总体 $X$ 的简单随机样本，熟练掌握如下结论：\n\n(1) $\\frac{\\overline{X} - \\mu}{\\frac{\\sigma}{\\sqrt{n}}} \\sim N(0, 1)$ ;\n\n(2) $\\frac{\\overline{X} - \\mu}{\\frac{S}{\\sqrt{n}}} \\sim t(n - 1)$ ;\n\n(3) $\\frac{(n - 1)S^2}{\\sigma^2} \\sim \\chi^2(n - 1)$ ;\n\n(4) $\\frac{1}{\\sigma^2} \\sum_{i=1}^{n} (X_i - \\mu)^2 \\sim \\chi^2(n)$ .\n\n# 三、解答题",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "stem",
+          "before": "header contamination",
+          "after": "cleaned",
+          "reason": "Paper markdown evidence",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        },
+        {
+          "field": "options",
+          "before": "Only A,B,C; D merged",
+          "after": "All 4 rebuilt",
+          "reason": "Paper markdown lines 88-94",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q15",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 15,
+      "questionType": "solution",
+      "stem": "(本题满分 11 分)\n\n设 $D = \\{(x,y) \\mid x^2 + y^2 \\leqslant \\sqrt{2}, x \\geqslant 0, y \\geqslant 0\\}$ , $[1 + x^2 + y^2]$ 表示不超过 $1 + x^2 + y^2$ 的最大整数，计算二重积分 $\\iint_{D} xy[1 + x^2 + y^2] \\, \\mathrm{d}x \\, \\mathrm{d}y$ .",
+      "options": [],
+      "answerCandidate": "$\\frac{3}{8}$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（15）【解】如图所示，令 $D_{1} = \\{(x,y)\\mid x^{2} + y^{2} < 1,x\\geqslant 0,y\\geqslant 0\\}$\n\n则 $\\iint_{D} xy[1 + x^2 + y^2] \\, \\mathrm{d}x \\, \\mathrm{d}y = \\iint_{D_1} xy \\, \\mathrm{d}x \\, \\mathrm{d}y + 2\\iint_{D_2} xy \\, \\mathrm{d}x \\, \\mathrm{d}y$\n\n$$\n\\begin{array}{l} D _ {2} = \\{(x, y) \\mid 1 \\leqslant x ^ {2} + y ^ {2} \\leqslant \\sqrt {2}, x \\geqslant 0, y \\geqslant 0 \\}, \\\\ = \\int_ {0} ^ {\\frac {\\pi}{2}} d \\theta \\int_ {0} ^ {1} r ^ {3} \\sin \\theta \\cos \\theta d r + 2 \\int_ {0} ^ {\\frac {\\pi}{2}} d \\theta \\int_ {1} ^ {\\sqrt[4]{2}} r ^ {3} \\sin \\theta \\cos \\theta d r \\\\ = \\frac {1}{4} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin \\theta \\cos \\theta d \\theta + \\frac {1}{2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin \\theta \\cos \\theta d \\theta \\\\ = \\frac {3}{4} \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin \\theta d (\\sin \\theta) = \\frac {3}{8}. \\\\ \\end{array}\n$$\n\n![](images/d8aecfe5b28d96abe7d0059ec3171ef0f04e6b5159c0998885398e4fcd9cc947.jpg)  \n三（15）题图\n\n方法点评：本题考查分段函数二重积分的计算. 若积分区域的边界曲线中含 $x^{2} + y^{2}$ 或被积函数 $f(x, y)$ 中含 $x^{2} + y^{2}$ ，一般使用极坐标变换法计算二重积分.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "explanationCandidate",
+          "before": "4 sqrt(2)",
+          "after": "sqrt[4]{2}",
+          "reason": "Math logic: polar r<=(sqrt(2))^(1/2)=2^(1/4)",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        },
+        {
+          "field": "answerCandidate",
+          "before": "None",
+          "after": "3/8",
+          "reason": "Extracted from solution",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q16",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 16,
+      "questionType": "solution",
+      "stem": "(本题满分 12 分)\n\n求幂级数 $\\sum_{n=1}^{\\infty} (-1)^{n-1} \\left[1 + \\frac{1}{n(2n-1)}\\right] x^{2n}$ 的收敛区间与和函数 $f(x)$ .",
+      "options": [],
+      "answerCandidate": "收敛区间 $(-1,1)$，和函数 $f(x) = \\frac{x^2}{1 + x^2} + 2x\\arctan x - \\ln(1 + x^2)$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（16）【解】方法一 由 $\\lim_{n\\to \\infty}\\left|\\frac{a_{n + 1}}{a_n}\\right| = 1$ ，得级数的收敛半径为 $R = 1$ ，收敛区间为 $(-1,1)$\n\n令 $f(x) = \\sum_{n=1}^{\\infty}(-1)^{n-1}\\left[1 + \\frac{1}{n(2n-1)}\\right]x^{2n}$ ,\n\n则 $f(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n} + \\sum_{n = 1}^{\\infty}(-1)^{n - 1}\\frac{x^{2n}}{n(2n - 1)}$\n\n$$\n\\begin{array}{l} = - \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)} \\\\ = \\frac {x ^ {2}}{1 + x ^ {2}} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)}, \\\\ \\end{array}\n$$\n\n令 $S_{1}(x) = \\sum_{n = 1}^{\\infty}(-1)^{n - 1}\\frac{x^{2n}}{2n(2n - 1)}$ ， $S_{1}(0) = 0$\n\n$$\nS _ {1} ^ {\\prime} (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n - 1}}{2 n - 1}, \\quad S _ {1} ^ {\\prime} (0) = 0,\n$$\n\n$$\nS _ {1} ^ {\\prime \\prime} (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 2} = \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n - 1} = \\frac {1}{1 + x ^ {2}},\n$$\n\n于是 $S_1'(x) = S_1'(x) - S_1'(0) = \\int_{0}^{x} \\frac{1}{1 + x^2} \\, \\mathrm{d}x = \\arctan x$\n\n$$\n\\begin{array}{l} S _ {1} (x) = S _ {1} (x) - S _ {1} (0) = \\int_ {0} ^ {x} \\arctan x \\mathrm {d} x = x \\arctan x - \\int_ {0} ^ {x} \\frac {x}{1 + x ^ {2}} \\mathrm {d} x \\\\ = x \\arctan x - \\frac {1}{2} \\ln \\left(1 + x ^ {2}\\right), \\\\ \\end{array}\n$$\n\n故 $f(x) = \\frac{x^2}{1 + x^2} + 2x\\arctan x - \\ln (1 + x^2)$ .\n\n方法二 由 $\\lim_{n\\to \\infty}\\left|\\frac{a_{n + 1}}{a_n}\\right| = 1$ 得级数的收敛半径为 $R = 1$ ，级数的收敛区间为 $(-1,1)$\n\n$$\n\\begin{array}{l} S (x) = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\left[ 1 + \\frac {1}{n (2 n - 1)} \\right] x ^ {2 n} \\\\ = \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n} + 2 \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n (2 n - 1)} \\\\ \\end{array}\n$$\n\n而 $\\sum_{n = 1}^{\\infty}(-1)^{n - 1}x^{2n} = \\frac{x^2}{1 - (-x^2)} = \\frac{x^2}{1 + x^2},$\n\n又 $\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n(2n-1)}=\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n-1}-\\sum_{n=1}^{\\infty}(-1)^{n-1}\\frac{x^{2n}}{2n},$\n\n$$\n\\begin{array}{l} \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n - 1} = x \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n - 1}}{2 n - 1} = x \\sum_ {n = 1} ^ {\\infty} \\int_ {0} ^ {x} (- 1) ^ {n - 1} x ^ {2 n - 2} d x \\\\ = x \\int_ {0} ^ {x} \\left[ \\sum_ {n = 1} ^ {\\infty} (- x ^ {2}) ^ {n - 1} \\right] d x = x \\int_ {0} ^ {x} \\frac {1}{1 + x ^ {2}} d x = x \\arctan x, \\\\ \\end{array}\n$$\n\n$$\n\\begin{array}{l} \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} \\frac {x ^ {2 n}}{2 n} = \\sum_ {n = 1} ^ {\\infty} \\int_ {0} ^ {x} (- 1) ^ {n - 1} x ^ {2 n - 1} d x = \\int_ {0} ^ {x} \\left[ \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 1} \\right] d x \\\\ = \\int_ {0} ^ {x} x \\left[ \\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n - 1} x ^ {2 n - 2} \\right] d x = \\int_ {0} ^ {x} \\frac {x}{1 + x ^ {2}} d x = \\frac {1}{2} \\ln (1 + x ^ {2}), \\\\ \\end{array}\n$$\n\n故 $f(x) = \\frac{x^2}{1 + x^2} + 2x\\arctan x - \\ln (1 + x^2)$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "explanationCandidate",
+          "before": "arctan (7 occurrences)",
+          "after": "arctan",
+          "reason": "OCR dropped letter c",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        },
+        {
+          "field": "answerCandidate",
+          "before": "None",
+          "after": "convergence + sum",
+          "reason": "Extracted from solution",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q17",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 17,
+      "questionType": "solution",
+      "stem": "(本题满分 11 分)\n\n如图，曲线 $C$ 的方程为 $y = f(x)$ ，点(3,2)是它的一个拐点，直线 $l_{1}$ 与 $l_{2}$ 分别是曲线 $C$ 在点(0,0）与(3,2）处的切线，其交点为(2,4).设函数 $f(x)$ 具有三阶连续导数，计算定积分\n\n$$\n\\int_ {0} ^ {3} \\left(x ^ {2} + x\\right) f ^ {\\prime \\prime \\prime} (x) d x.\n$$\n\n![](images/7c2bcc0e2dcb5f03746b2233cfda8d0ac73ff90c63028e1a77482f6bc5a6d378.jpg)",
+      "options": [],
+      "answerCandidate": "20",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(17)【解】由已知条件得 $f(0) = 0, f(3) = 2, f'(0) = 2, f'(3) = -2, f''(3) = 0.$\n\n由分部积分得\n\n$$\n\\begin{array}{l} \\int_ {0} ^ {3} \\left(x ^ {2} + x\\right) f ^ {\\prime \\prime \\prime} (x) d x = \\int_ {0} ^ {3} \\left(x ^ {2} + x\\right) d f ^ {\\prime \\prime} (x) \\\\ = (x ^ {2} + x) f ^ {\\prime \\prime} (x) \\left| _ {0} ^ {3} - \\int_ {0} ^ {3} (2 x + 1) f ^ {\\prime \\prime} (x) d x \\right. \\\\ = - \\int_ {0} ^ {3} (2 x + 1) d f ^ {\\prime} (x) = - (2 x + 1) f ^ {\\prime} (x) \\left| _ {0} ^ {3} + 2 \\int_ {0} ^ {3} f ^ {\\prime} (x) d x \\right. \\\\ = - 7 f ^ {\\prime} (3) + f ^ {\\prime} (0) + 2 \\int_ {0} ^ {3} f ^ {\\prime} (x) d x = 16 + 2 f (x) \\Bigg | _ {0} ^ {3} = 20. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "explanationCandidate",
+          "before": "f''(x), number spacing",
+          "after": "f'''(x), 16, 20",
+          "reason": "Paper: f'''(x); OCR artifact",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        },
+        {
+          "field": "answerCandidate",
+          "before": "None",
+          "after": "20",
+          "reason": "Extracted from solution",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q18",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 18,
+      "questionType": "solution",
+      "stem": "(本题满分 12 分)\n\n已知函数 $f(x)$ 在 $[0,1]$ 上连续，在 $(0,1)$ 内可导，且 $f(0) = 0$ ， $f(1) = 1$ 。证明：\n\n（I）存在 $\\xi \\in (0,1)$ ，使得 $f(\\xi) = 1 - \\xi$   \n（Ⅱ）存在两个不同的点 $\\eta, \\zeta \\in (0,1)$ ，使得 $f'(\\eta)f'(\\zeta) = 1$",
+      "options": [],
+      "answerCandidate": "（I）存在 ξ∈(0,1) 使 f(ξ)=1-ξ（零点定理）；（II）存在 η,ζ∈(0,1) 使 f′(η)f′(ζ)=1（两次 Lagrange 中值定理）",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（18）【证明】（I）令 $\\varphi (x) = f(x) - 1 + x,\\varphi (0) = -1,\\varphi (1) = 1.$\n\n因为 $\\varphi (0)\\varphi (1) < 0$ ，所以由零点定理，存在 $\\xi \\in (0,1)$ ，使得 $\\varphi (\\xi) = 0$ ，即 $f(\\xi) = 1 - \\xi$\n\n（Ⅱ）由微分中值定理，存在 $\\eta \\in (0,\\xi),\\zeta \\in (\\xi,1)$ ，使得\n\n$$\nf ^ {\\prime} (\\eta) = \\frac {f (\\xi) - f (0)}{\\xi} = \\frac {1 - \\xi}{\\xi}, \\quad f ^ {\\prime} (\\zeta) = \\frac {f (1) - f (\\xi)}{1 - \\xi} = \\frac {\\xi}{1 - \\xi},\n$$\n\n故 $f^{\\prime}(\\eta)f^{\\prime}(\\zeta) = 1$\n\n方法点评：本题考查零点定理与拉格朗日中值定理\n\n设 $f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导，若题中只出现 $f^{\\prime}(\\xi),f^{\\prime}(\\eta)$ ，则一般需要找出三个点，两次使用拉格朗日中值定理.本题已知条件出现 $f(0) = 0,f(1) = 1$ 连同 $f(\\xi) = 1 - \\xi$ 故三个点为 $0,\\xi ,1$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "explanationCandidate",
+          "before": "c",
+          "after": "xi",
+          "reason": "Unify with part (I) result xi",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        },
+        {
+          "field": "answerCandidate",
+          "before": null,
+          "after": "proof structure description",
+          "reason": "Proof question with no numeric answer - extracted proof structure",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q19",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 19,
+      "questionType": "solution",
+      "stem": "(本题满分 12 分)\n\n设函数 $\\varphi(y)$ 具有连续导数，在围绕原点的任意分段光滑简单闭曲线 $L$ 上，曲线积分 $\\oint_{L} \\frac{\\varphi(y) \\, \\mathrm{d}x + 2xy \\, \\mathrm{d}y}{2x^2 + y^4}$ 的值恒为同一常数。\n\n（I）证明：对右半平面 $x > 0$ 内的任意分段光滑简单闭曲线 $C$ ，有\n\n$$\n\\oint_ {C} \\frac {\\varphi (y) \\mathrm {d} x + 2 x y \\mathrm {d} y}{2 x ^ {2} + y ^ {4}} = 0;\n$$\n\n（Ⅱ）求函数 $\\varphi (y)$ 的表达式",
+      "options": [],
+      "answerCandidate": "（I）∮_C = 0（利用曲线分解和已知条件）；（II）φ(y) = -y²",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(19)【解】（I） $P(x, y) = \\frac{\\varphi(y)}{2x^2 + y^4}, Q(x, y) = \\frac{2xy}{2x^2 + y^4}$ ,\n\n$$\n\\frac {\\partial Q}{\\partial x} = \\frac {2 y (2 x ^ {2} + y ^ {4}) - 8 x ^ {2} y}{(2 x ^ {2} + y ^ {4}) ^ {2}}, \\quad \\frac {\\partial P}{\\partial y} = \\frac {(2 x ^ {2} + y ^ {4}) \\varphi^ {\\prime} (y) - 4 y ^ {3} \\varphi (y)}{(2 x ^ {2} + y ^ {4}) ^ {2}},\n$$\n\n设 $C$ 是任意一条右半平面 $x > 0$ 内正向闭曲线，如图所示，在 $C$ 上取两点 $A,B$ 将 $C$ 分为 $L_{1},L_{2}$ ，再取从点 $A$ 至点 $B$ 的有向曲线 $L_{3}$ 使得 $L_1^-$ + $L_{3}$ 与 $L_{2} + L_{3}$ 都是绕原点的正向闭曲线，由已知条件得 $\\oint_{L_1^- +L_3}\\frac{\\varphi(y)\\mathrm{d}x + 2xy\\mathrm{d}y}{2x^2 + y^4} = A,\\oint_{L_2 + L_3}\\frac{\\varphi(y)\\mathrm{d}x + 2xy\\mathrm{d}y}{2x^2 + y^4} = A,$\n\n两式相减得\n\n$$\n\\oint_ {c} \\frac {\\varphi (y) d x + 2 x y d y}{2 x ^ {2} + y ^ {4}} = 0.\n$$\n\n![](images/edec8ffa75bfcd733339dba1dec13f8a98d4740e3991aa56fb5f01845d494e5d.jpg)  \n三(19)题图\n\n（Ⅱ）因为对任意右半平面的闭曲线 $C$ 都有 $\\oint_{C} \\frac{\\varphi(y) \\mathrm{d}x + 2xy \\mathrm{d}y}{2x^2 + y^4} = 0$ ，所以曲线积分与路径无关，于是 $\\frac{\\partial Q}{\\partial x} = \\frac{\\partial P}{\\partial y}$ ，即 $2y^5 - 4x^2 y = 2x^2 \\varphi'(y) + \\varphi'(y)y^4 - 4y^3 \\varphi(y)$ ，\n\n比较 $x$ 相同次数的系数得 $\\left\\{ \\begin{array}{l}\\varphi^{\\prime}(y) = -2y,\\\\ \\varphi^{\\prime}(y)y - 4\\varphi (y) = 2y^{2}. \\end{array} \\right.$\n\n由 $\\varphi'(y) = -2y$ ，得 $\\varphi(y) = -y^2 + C$ ，代入 $y\\varphi'(y) - 4\\varphi(y) = 2y^2$ 中得 $C = 0$ 故 $\\varphi(y) = -y^2$\n\n方法点评：本题考查对坐标的曲线积分、格林公式、曲线积分与路径无关的条件及积分学与微分方程相结合的应用. 曲线积分与路径无关的等价命题有：\n\n（1）曲线积分 $\\int_{L} P \\mathrm{d}x + Q \\mathrm{d}y$ 与路径无关；  \n(2) 对区域 $D$ 内任意的闭曲线 $C$ 有 $\\oint_{C} P \\mathrm{~d} x + Q \\mathrm{~d} y = 0$ ;  \n(3) 在区域 $D$ 内 $\\frac{\\partial Q}{\\partial x} = \\frac{\\partial P}{\\partial y}$ ;  \n（4）存在二元函数 $u(x,y)$ ，使得 $\\mathrm{d}u = P\\mathrm{d}x + Q\\mathrm{d}y$\n\n本题对任意一条不绕原点的闭曲线的曲线积分为零，则有 $\\frac{\\partial Q}{\\partial x} = \\frac{\\partial P}{\\partial y}$ ，从而可得一微分方程，解出未知函数.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "answerCandidate",
+          "before": null,
+          "after": "phi(y) = -y^2",
+          "reason": "Extracted from solution: phi(y) = -y^2",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q20",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 20,
+      "questionType": "solution",
+      "stem": "(本题满分 9 分)\n\n已知二次型 $f(x_{1},x_{2},x_{3}) = (1 - a)x_{1}^{2} + (1 - a)x_{2}^{2} + 2x_{3}^{2} + 2(1 + a)x_{1}x_{2}$ 的秩为2.\n\n（I）求 $a$ 的值；  \n（Ⅱ）求正交变换 $x = Qy$ ，把 $f(x_{1},x_{2},x_{3})$ 化成标准形；  \n（Ⅲ）求方程 $f(x_{1},x_{2},x_{3}) = 0$ 的解",
+      "options": [],
+      "answerCandidate": "（I）$a = 0$；（Ⅱ）标准形 $2y_{2}^{2} + 2y_{3}^{2}$，正交矩阵 $Q = \\begin{pmatrix} -\\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} & 0 \\\\ \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$；（Ⅲ）$f(x_1,x_2,x_3) = 0$ 的解为 $C\\begin{pmatrix}-1\\\\1\\\\0\\end{pmatrix}$（$C$ 为任意常数）",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(20)【解】 令 $\\mathbf{A} = \\begin{pmatrix} 1 - a & 1 + a & 0 \\\\ 1 + a & 1 - a & 0 \\\\ 0 & 0 & 2 \\end{pmatrix}, \\mathbf{X} = \\begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{pmatrix}$ , 则二次型可表示为 $f = \\mathbf{X}^{\\mathrm{T}}\\mathbf{A}\\mathbf{X}$ .\n\n（I）因为 $r(\\mathbf{A}) = 2$ ，所以 $\\left|\\mathbf{A}\\right| = 0$ ，于是 $a = 0$\n\n（Ⅱ） $\\mathbf{A} = \\left( \\begin{array}{lll}1 & 1 & 0\\\\ 1 & 1 & 0\\\\ 0 & 0 & 2 \\end{array} \\right)$ ，由 $|\\lambda E - A| = \\left| \\begin{array}{ccc}\\lambda -1 & -1 & 0\\\\ -1 & \\lambda -1 & 0\\\\ 0 & 0 & \\lambda -2 \\end{array} \\right| = \\lambda (\\lambda -2)^2 = 0$ ，得 $\\mathbf{A}$ 的特征值为 $\\lambda_1 = 0,\\lambda_2 = \\lambda_3 = 2.$\n\n当 $\\lambda_{1} = 0$ 时，由 $(0E - A)X = 0$ ，即 $AX = 0$ ，得 $\\xi_{1} = (-1,1,0)^{\\mathrm{T}}$\n\n当 $\\lambda_{2} = \\lambda_{3} = 2$ 时，由 $(2\\pmb {E} - \\pmb {A})\\pmb {X} = \\pmb{0}$ ，得 $\\pmb {\\xi}_2 = (1,1,0)^{\\mathrm{T}},\\pmb {\\xi}_3 = (0,0,1)^{\\mathrm{T}}$\n\n单位化得 $\\gamma_{1} = \\frac{1}{\\sqrt{2}}\\begin{pmatrix}-1\\\\1\\\\0\\end{pmatrix},\\quad \\gamma_{2} = \\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix},\\quad \\gamma_{3} = \\begin{pmatrix}0\\\\0\\\\1\\end{pmatrix},$\n\n令 $Q = \\left[ \\begin{array}{ccc} - \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} & 0\\\\ \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} & 0\\\\ 0 & 0 & 1 \\end{array} \\right]$ 则 $\\pmb {Q}^{\\mathrm{T}}\\pmb {A}\\pmb {Q} = \\left( \\begin{array}{lll}0 & 0 & 0\\\\ 0 & 2 & 0\\\\ 0 & 0 & 2 \\end{array} \\right),$\n\n于是 $f(x_{1},x_{2},x_{3}) = \\mathbf{X}^{\\mathrm{T}}\\mathbf{A}\\mathbf{X} \\xrightarrow{\\mathbf{X} = \\mathbf{Q}\\mathbf{Y}} 2y_{2}^{2} + 2y_{3}^{2},$\n\n（Ⅲ）由 $f(x_{1},x_{2},x_{3}) = x_{1}^{2} + x_{2}^{2} + 2x_{3}^{2} + 2x_{1}x_{2} = (x_{1} + x_{2})^{2} + 2x_{3}^{2} = 0$ ，得 $\\left\\{ \\begin{array}{l}x_{1} + x_{2} = 0,\\\\ x_{3} = 0, \\end{array} \\right.$ 则 $f(x_{1},x_{2},x_{3}) = 0$ 的解为 $C\\begin{pmatrix}-1\\\\1\\\\0\\end{pmatrix}$ （C为任意常数）.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "explanationCandidate",
+          "before": "incomplete vectors + fracture",
+          "after": "Full 3D vectors + fixed",
+          "reason": "Context: xi1=(-1,1,0)^T etc",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        },
+        {
+          "field": "answerCandidate",
+          "before": "None",
+          "after": "3-part answer",
+          "reason": "Extracted from solution",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q21",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 21,
+      "questionType": "solution",
+      "stem": "(本题满分 9 分)\n\n已知3阶矩阵 $\\mathbf{A}$ 的第一行是 $(a,b,c),a,b,c$ 不全为零，矩阵 $\\pmb {B} = \\begin{pmatrix} 1 & 2 & 3\\\\ 2 & 4 & 6\\\\ 3 & 6 & k \\end{pmatrix} (k$ 为常数），且 $\\mathbf{AB} = \\mathbf{O}$ ，求线性方程组 $Ax = 0$ 的通解.",
+      "options": [],
+      "answerCandidate": "当 $k \\neq 9$ 时，通解 $X = C_1\\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix} + C_2\\begin{pmatrix}2\\\\4\\\\6\\end{pmatrix}$；当 $k = 9$ 且 $r(A) = 2$ 时，通解 $X = C\\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix}$；当 $k = 9$ 且 $r(A) = 1$ 时，通解 $X = C_1\\begin{pmatrix}-b/a\\\\1\\\\0\\end{pmatrix} + C_2\\begin{pmatrix}-c/a\\\\0\\\\1\\end{pmatrix}$（$C_1,C_2$ 为任意常数）",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（21）【解】由 $\\mathbf{AB} = \\mathbf{0}$ ，得 $r(\\mathbf{A}) + r(\\mathbf{B})\\leqslant 3$\n\n因为 $\\mathbf{A}$ 为非零矩阵，所以 $r(\\mathbf{A})\\geqslant 1$\n\n当 $k \\neq 9$ 时，由 $r(\\mathbf{B}) = 2$ 得 $r(\\mathbf{A}) = 1$\n\n因为 $AB = 0$ ，所以 $\\pmb{B}$ 的列向量为方程组 $AX = 0$ 的解，于是方程组 $AX = 0$ 的通解为\n\n$$\n\\pmb {X} = C _ {1} \\binom {1} {2} + C _ {2} \\binom {3} {6} (C _ {1}, C _ {2} \\text {为 任 意 常 数}).\n$$\n\n当 $k = 9$ 时， $r(\\mathbf{B}) = 1$ ，则 $1 \\leqslant r(\\mathbf{A}) \\leqslant 2$ .\n\n当 $r(\\mathbf{A}) = 2$ 时，因为 $\\mathbf{AB} = \\mathbf{0}$ ，所以 $\\mathbf{B}$ 的列向量为 $\\mathbf{AX} = \\mathbf{0}$ 的解，于是方程组 $\\mathbf{AX} = \\mathbf{0}$ 的通解为 $\\mathbf{X} = C\\left( \\begin{array}{l}1\\\\ 2\\\\ 3 \\end{array} \\right)$ （ $C$ 为任意常数）.\n\n当 $r(\\mathbf{A}) = 1$ 时，不妨设 $a \\neq 0$ ，由 $\\mathbf{A} \\rightarrow \\left( \\begin{array}{ccc} a & b^* & c \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array} \\right) \\rightarrow \\left( \\begin{array}{ccc} 1 & \\frac{b}{a} & \\frac{c}{a} \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{array} \\right)$ ，得方程组 $\\mathbf{AX} = \\mathbf{0}$ 的通\n\n解为 $\\mathbf{X} = C_{1}\\left[ \\begin{array}{c} - \\frac{b}{a}\\\\ 1\\\\ 0 \\end{array} \\right] + C_{2}\\left[ \\begin{array}{c} - \\frac{c}{a}\\\\ 0\\\\ 1 \\end{array} \\right](C_{1},C_{2}$ 为任意常数）.\n\n方法点评：设 $\\mathbf{A},\\mathbf{B}$ 分别为 $m\\times n$ 与 $n\\times s$ 两个矩阵，对 $\\mathbf{AB} = \\mathbf{O}$ 有两种解读：\n\n(1) $r(\\mathbf{A}) + r(\\mathbf{B}) \\leqslant n$ ;   \n(2) 矩阵 $\\pmb{B}$ 的列向量为齐次线性方程组 $\\mathbf{A}\\mathbf{X} = \\mathbf{0}$ 的一组解.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "explanationCandidate",
+          "before": "b^* noise",
+          "after": "b clean",
+          "reason": "OCR star superscript noise",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        },
+        {
+          "field": "answerCandidate",
+          "before": "None",
+          "after": "case analysis",
+          "reason": "Extracted from solution",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q22",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 22,
+      "questionType": "solution",
+      "stem": "(本题满分 9 分)\n\n设二维随机变量 $(X,Y)$ 的概率密度为 $f(x,y) = \\left\\{ \\begin{array}{ll}1, & 0 < x < 1, 0 < y < 2x, \\\\ 0, & \\text{其他.} \\end{array} \\right.$\n\n求：（I） $(X,Y)$ 的边缘概率密度 $f_{X}(x),f_{Y}(y)$\n\n(II) $Z = 2X - Y$ 的概率密度 $f_{Z}(z)$ .",
+      "options": [],
+      "answerCandidate": "（I）$f_X(x) = \\begin{cases}2x, & 0 < x < 1\\\\0, & \\text{其他}\\end{cases}$，$f_Y(y) = \\begin{cases}1 - \\frac{y}{2}, & 0 < y < 2\\\\0, & \\text{其他}\\end{cases}$；（II）$f_Z(z) = \\begin{cases}1 - \\frac{z}{2}, & 0 < z < 2\\\\0, & \\text{其他}\\end{cases}$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(22)【解】 $(\\mathrm{I})f_{X}(x) = \\int_{-\\infty}^{+\\infty}f(x,y)\\mathrm{d}y,$\n\n当 $x \\leqslant 0$ 或 $x \\geqslant 1$ 时， $f_{X}(x) = 0$ ；当 $0 < x < 1$ 时， $f_{X}(x) = \\int_{0}^{2x} \\mathrm{d}y = 2x$\n\n则 $X$ 的边缘密度为 $f_{X}(x) = \\left\\{ \\begin{array}{ll}2x, & 0 <   x <   1,\\\\ 0, & \\text{其他}, \\end{array} \\right.$\n\n$$\nf _ {Y} (y) = \\int_ {- \\infty} ^ {+ \\infty} f (x, y) \\mathrm {d} x,\n$$\n\n当 $y \\leqslant 0$ 或 $y \\geqslant 2$ 时， $f_{Y}(y) = 0$ ；当 $0 < y < 2$ 时， $f_{Y}(y) = \\int_{\\frac{y}{2}}^{1} \\mathrm{d}x = 1 - \\frac{y}{2}$ ，\n\n则 $Y$ 的边缘密度为 $f_{Y}(y) = \\left\\{ \\begin{array}{ll}1 - \\frac{y}{2}, & 0 < y < 2,\\\\ 0, & \\text{其他}. \\end{array} \\right.$\n\n$$\n\\begin{array}{l} (\\mathrm {I I}) F _ {Z} (z) = P \\{Z \\leqslant z \\} = P \\{2 X - Y \\leqslant z \\} \\\\ = \\iint_ {2 x - y \\leqslant z} f (x, y) \\mathrm {d} x \\mathrm {d} y, \\\\ \\end{array}\n$$\n\n当 $z < 0$ 时， $F_{Z}(z) = 0$\n\n当 $0 \\leqslant z < 2$ 时（如图所示），\n\n$$\nF _ {Z} (z) = 1 - \\int_ {\\frac {z}{2}} ^ {1} \\mathrm {d} x \\int_ {0} ^ {2 x - z} \\mathrm {d} y = 1 - \\int_ {\\frac {z}{2}} ^ {1} (2 x - z) \\mathrm {d} x = z - \\frac {z ^ {2}}{4};\n$$\n\n当 $z \\geqslant 2$ 时， $F_{Z}(z) = 1$\n\n![](images/eb3af40c996ce16e200a4065d27d37ba680b2c5917d6ddba7547ce4a26690c3d.jpg)  \n三（22）题图\n\n即 $F_{Z}(z) = \\left\\{ \\begin{array}{ll}0, & z < 0,\\\\ z - \\frac{z^{2}}{4}, & 0\\leqslant z < 2,\\\\ 1, & z\\geqslant 2. \\end{array} \\right.$ 于是 $Z$ 的密度函数为 $f_{Z}(z) = \\left\\{ \\begin{array}{ll}1 - \\frac{z}{2}, & 0 <   z <   2,\\\\ 0, & \\text{其他}. \\end{array} \\right.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "answerCandidate",
+          "before": "None",
+          "after": "marginal + Z",
+          "reason": "Extracted from solution",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    },
+    {
+      "stableId": "math1-2005-q23",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/2005年考研数学(一)真题.md",
+        "solutions/2005年解析/2005年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 2005,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "ACC8311CFE1C5EA903C81EAF22228CF69C0B719516EB1EA11DAF75122F89834D",
+        "solutions": "9A771B895E5AF642A92635DDA08789E19916EEE98066875A239F0B3E5C8D9F4C"
+      },
+      "transformVersion": "math1-sequential-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 23,
+      "questionType": "solution",
+      "stem": "(本题满分9分)\n\n设 $X_{1}, X_{2}, \\dots, X_{n} (n > 2)$ 为来自总体 $N(0,1)$ 的简单随机样本， $\\overline{X}$ 为样本均值，记 $Y_{i} = X_{i} - \\overline{X}$ ， $i = 1,2,\\dots,n$ 。\n\n求：(I) $Y_{i}$ 的方差 $D(Y_{i}), i = 1,2,\\dots,n$\n\n（Ⅱ） $Y_{1}$ 与 $Y_{n}$ 的协方差 $\\operatorname {Cov}(Y_1,Y_n)$",
+      "options": [],
+      "answerCandidate": "（I）$D(Y_i) = \\frac{n-1}{n}$（$i = 1,2,\\dots,n$）；（Ⅱ）$\\operatorname{Cov}(Y_1, Y_n) = -\\frac{1}{n}$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(23)【解】（I）方法一 $Y_{1} = X_{1} - \\overline{X} = X_{1} - \\frac{1}{n}\\sum_{i = 1}^{n}X_{i} = \\left(1 - \\frac{1}{n}\\right)X_{1} - \\frac{1}{n} X_{2} - \\dots -\\frac{1}{n} X_{n},$\n\n因为 $X_{i}\\sim N(0,1)(1\\leqslant i\\leqslant n)$ 且 $X_{1},X_{2},\\dots ,X_{n}$ 相互独立，所以 $Y_{1}$ 服从正态分布.\n\n又因为 $E(Y_{1}) = 0, D(Y_{1}) = \\left(1 - \\frac{1}{n}\\right)^{2}D(X_{1}) + \\frac{1}{n^{2}}D(X_{2}) + \\dots +\\frac{1}{n^{2}}D(X_{n}) = \\frac{n - 1}{n},$\n\n所以 $Y_{1}\\sim N\\left(0,\\frac{n - 1}{n}\\right)$ ，同理 $Y_{i}\\sim N\\left(0,\\frac{n - 1}{n}\\right)(1\\leqslant i\\leqslant n)$\n\n于是 $D(Y_{i}) = \\frac{n - 1}{n} (1\\leqslant i\\leqslant n)$\n\n方法二 因为 $X_{i}\\sim N(0,1)$ ，所以 $E(X_{i}) = 0,D(X_{i}) = 1(i = 1,2,\\dots ,n)$\n\n$$\nE (\\bar {X}) = \\frac {1}{n} \\sum_ {i = 1} ^ {n} E (X _ {i}) = 0, \\quad D (\\bar {X}) = \\frac {1}{n ^ {2}} \\sum_ {i = 1} ^ {n} D (X _ {i}) = \\frac {1}{n}, \\quad E (\\bar {X} ^ {2}) = D (\\bar {X}) + (E \\bar {X}) ^ {2} = \\frac {1}{n}.\n$$\n\n$$\n\\begin{array}{l} E \\left(Y _ {i}\\right) = E \\left(X _ {i} - \\bar {X}\\right) = E \\left(X _ {i}\\right) - E (\\bar {X}) = 0, \\\\ D \\left(Y _ {i}\\right) = E \\left(Y _ {i} ^ {2}\\right) - \\left(E Y _ {i}\\right) ^ {2} = E \\left(Y _ {i} ^ {2}\\right) = E \\left(X _ {i} ^ {2} - 2 X _ {i} \\bar {X} + \\bar {X} ^ {2}\\right) \\\\ = E \\left(X _ {i} ^ {2}\\right) - \\frac {2}{n} E \\left[ X _ {i} \\left(X _ {1} + \\dots + X _ {n}\\right) \\right] + E \\left(\\overline {{X}} ^ {2}\\right) \\\\ = 1 - \\frac {2}{n} E \\left(X _ {i} ^ {2}\\right) + \\frac {1}{n} = 1 - \\frac {1}{n}. \\\\ \\end{array}\n$$\n\n$$\n\\begin{array}{l} (\\mathrm {I I}) \\operatorname {C o v} \\left(Y _ {1}, Y _ {n}\\right) = \\operatorname {C o v} \\left(X _ {1} - \\bar {X}, X _ {n} - \\bar {X}\\right) \\\\ = \\operatorname {C o v} \\left(X _ {1}, X _ {n}\\right) - \\operatorname {C o v} \\left(X _ {1}, \\bar {X}\\right) - \\operatorname {C o v} \\left(X _ {n}, \\bar {X}\\right) + \\operatorname {C o v} (\\bar {X}, \\bar {X}) \\\\ = - \\frac {1}{n} \\operatorname {C o v} \\left(X _ {1}, X _ {1} + X _ {2} + \\dots + X _ {n}\\right) - \\frac {1}{n} \\operatorname {C o v} \\left(X _ {n}, X _ {1} + X _ {2} + \\dots + X _ {n}\\right) + D (\\bar {X}) \\\\ = - \\frac {1}{n} \\operatorname {C o v} \\left(X _ {1}, X _ {1}\\right) - \\frac {1}{n} \\operatorname {C o v} \\left(X _ {n}, X _ {n}\\right) + \\frac {1}{n} = \\frac {1}{n} - \\frac {2}{n} = - \\frac {1}{n}. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": [],
+      "_fixRecords": [
+        {
+          "field": "answerCandidate",
+          "before": "None",
+          "after": "D(Y_i)+Cov",
+          "reason": "Extracted from solution",
+          "fixSource": "markdown-evidence",
+          "fixedAt": "2026-06-20T16:33:19+08:00"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "questionsGenerated": 23,
+    "questionCounts": {
+      "fill_in_blank": 6,
+      "multiple_choice": 8,
+      "solution": 9
+    },
+    "expectedCounts": {
+      "fill_in_blank": 6,
+      "multiple_choice": 8,
+      "solution": 9
+    },
+    "countsMatch": true,
+    "totalAnomalies": 0,
+    "anomaliesBySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "allQuestionsNeedsReview": true
+  },
+  "transformVersion": "math1-md-final-v1"
+}

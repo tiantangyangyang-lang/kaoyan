@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "20260620-152910-cc-math1-md-finalize-year-1990",
+  "sourceYear": 1990,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T07:29:10.000Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [],
+  "resolvedAnomalies": [
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Expected local markers 1..5, found [1, 2, 3, 4, 5, 1, 2, 3]",
+      "sectionLabel": "二",
+      "resolution": "Resolved: the extra [1,2,3] were Section 三 sub-questions merged into Section 二's solution block by OCR. Structure repair deterministically split them."
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 7,
+      "severity": "warning",
+      "originalMessage": "Solution block for question 7 was not found",
+      "resolution": "Resolved: solution recovered from merged block. Answer (A), explanation from marker '(2)【答案】 (A).'"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 8,
+      "severity": "warning",
+      "originalMessage": "Solution block for question 8 was not found",
+      "resolution": "Resolved: solution recovered from merged block. Answer (C), explanation from marker '（3）【答案】 (C).'"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 9,
+      "severity": "warning",
+      "originalMessage": "Solution block for question 9 was not found",
+      "resolution": "Resolved: solution recovered from merged block. Answer (D), explanation from marker '（4）【答案】 (D).'"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 10,
+      "severity": "warning",
+      "originalMessage": "Solution block for question 10 was not found",
+      "resolution": "Resolved: solution recovered from merged block. Answer (B), explanation from marker '（5）【答案】 （B）.'"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 11,
+      "severity": "warning",
+      "originalMessage": "Solution block for question 11 was not found",
+      "resolution": "Resolved: solution recovered from merged block via marker '(1)【解】'"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 12,
+      "severity": "warning",
+      "originalMessage": "Solution block for question 12 was not found",
+      "resolution": "Resolved: solution recovered from merged block via marker '(2)【解】'"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 13,
+      "severity": "warning",
+      "originalMessage": "Solution block for question 13 was not found",
+      "resolution": "Resolved: solution recovered from merged block via marker '（3）【解】'"
+    }
+  ],
+  "summary": {
+    "totalActiveAnomalies": 0,
+    "totalResolvedAnomalies": 8,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "blockingIssues": []
+  }
+}

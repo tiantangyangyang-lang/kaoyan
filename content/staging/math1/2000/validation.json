@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "runId": "20260620-150305-cc-math1-md-finalize-year-2000",
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "fill_in_blank": 5,
+    "multiple_choice": 5,
+    "solution": 13
+  },
+  "expectedCounts": {
+    "fill_in_blank": 5,
+    "multiple_choice": 5,
+    "solution": 13,
+    "total": 23
+  },
+  "countsMatch": true,
+  "idsUnique": true,
+  "allQuestionsNeedsReview": true,
+  "totalAnomalies": 10,
+  "activeWarnings": 1,
+  "activeErrors": 0,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 1,
+    "info": 9
+  },
+  "missingAnswersRemaining": [
+    "math1-2000-s09"
+  ],
+  "allAnswersPopulated": false,
+  "resolvedAnswers": [
+    "math1-2000-s04",
+    "math1-2000-s07",
+    "math1-2000-s11-q01",
+    "math1-2000-s11-q02"
+  ],
+  "proofQuestionWithoutAnswer": [
+    "math1-2000-s09"
+  ],
+  "formulaFixesApplied": [
+    "math1-2000-s01-q03 (unbalanced parens)"
+  ]
+}

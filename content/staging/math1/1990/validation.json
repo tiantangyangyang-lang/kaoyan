@@ -1,0 +1,39 @@
+{
+  "runId": "20260620-152910-cc-math1-md-finalize-year-1990",
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "fill_in_blank": 8,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "expectedCounts": {
+    "fill_in_blank": 8,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "countsMatch": true,
+  "totalAnomalies": 0,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "allQuestionsNeedsReview": true,
+  "allQuestionsHaveExplanation": true,
+  "multipleChoiceHaveAnswers": true,
+  "stableIdUnique": true,
+  "mdFinalizeClassification": {
+    "ready_for_approval": 13,
+    "ready_with_info": 10,
+    "blocked": 0
+  },
+  "checks": {
+    "stemPresent": "23/23",
+    "questionTypePresent": "23/23",
+    "yearSubjectPresent": "23/23",
+    "sourcePathPresent": "23/23",
+    "explanationPresent": "23/23",
+    "answerForMultipleChoice": "5/5",
+    "imageRefsExist": true
+  }
+}

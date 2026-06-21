@@ -1,0 +1,20 @@
+{
+  "name": "kaoyan-study-system",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @kaoyan/web",
+    "dev:api": "npm run dev --workspace @kaoyan/api",
+    "build": "npm run build:web && npm run build:api",
+    "build:web": "npm run build --workspace @kaoyan/web",
+    "build:api": "npm run build --workspace @kaoyan/api",
+    "typecheck": "npm run typecheck:web && npm run typecheck:api",
+    "typecheck:web": "npm run typecheck --workspace @kaoyan/web",
+    "typecheck:api": "npm run typecheck --workspace @kaoyan/api",
+    "test:api": "npm run test --workspace @kaoyan/api",
+    "sync:content": "npm run sync:content --workspace @kaoyan/web"
+  }
+}

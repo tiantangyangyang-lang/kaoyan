@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "20260620-151606-cc-math1-md-finalize-year-1988",
+  "sourceYear": 1988,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T07:16:06.000Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [],
+  "resolvedAnomalies": [
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Expected local markers 1..3, found [2, 3]",
+      "sectionLabel": "一",
+      "resolution": "Fixed by splitting merged Q1-Q3 solution block per solution MD structure."
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 2,
+      "severity": "warning",
+      "message": "Solution block for question 2 was not found",
+      "resolution": "Q2 solution extracted from solution MD section 一, marker (2)【解】."
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 3,
+      "severity": "warning",
+      "message": "Solution block for question 3 was not found",
+      "resolution": "Q3 solution extracted from solution MD section 一, marker （3）【解】."
+    }
+  ],
+  "summary": {
+    "totalActiveAnomalies": 0,
+    "totalResolvedAnomalies": 3,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_required_for_md_first_finalization"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "fill_in_blank": 6,
+    "multiple_choice": 8,
+    "solution": 9
+  },
+  "expectedCounts": {
+    "fill_in_blank": 6,
+    "multiple_choice": 8,
+    "solution": 9
+  },
+  "countsMatch": true,
+  "totalAnomalies": 3,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 3
+  },
+  "allQuestionsNeedsReview": true,
+  "mdFinalized": true,
+  "mdFinalizedAt": "2026-06-20T16:40:31+08:00",
+  "mdFinalizationFixes": 10
+}

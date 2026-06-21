@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "math1-legacy-transform-v1",
+  "task": "cc-math1-md-finalize-year-1989",
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "fill_in_blank": 8,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "expectedCounts": {
+    "fill_in_blank": 8,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "countsMatch": true,
+  "totalAnomalies": 7,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 7
+  },
+  "allQuestionsNeedsReview": true,
+  "allQuestionsHaveExplanations": true,
+  "allSolutionsHaveExplanation": true,
+  "multipleChoiceAllHaveOptions": true,
+  "stableIdsUnique": true
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2003-pdf-repair-and-review",
+  "description": "Repair remaining Math1 2003 PDF/image evidence defects, then regenerate semantic review artifacts.",
+  "defaultContinueOnError": false,
+  "tasks": [
+    {
+      "label": "Math1 2003 PDF and image evidence repair",
+      "task": "cc-math1-pdf-evidence-repair",
+      "year": 2003,
+      "maxTurns": 80
+    },
+    {
+      "label": "Math1 2003 semantic review after PDF repair",
+      "task": "ds-math1-year",
+      "year": 2003,
+      "maxTurns": 60
+    }
+  ]
+}

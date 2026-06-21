@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "batchId": "20260620-174613-cc-math1-md-finalize-year-2019",
+  "sourceYear": 2019,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T09:46:13.000000Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "stem_ocr_fixed",
+      "questionNumber": 2,
+      "severity": "info",
+      "message": "Piecewise function definition repaired: x & |x| → x|x| with domain split x≤0 / x>0, confirmed by solution left/right derivative calculations.",
+      "resolution": "fixed_by_markdown_evidence"
+    },
+    {
+      "type": "options_split_fixed",
+      "questionNumber": 6,
+      "severity": "info",
+      "message": "Option D extracted from merged C+D line in paper markdown. 4 options now present.",
+      "resolution": "fixed_by_markdown_evidence"
+    },
+    {
+      "type": "image_placement_note",
+      "questionNumber": 6,
+      "severity": "info",
+      "message": "Image bc18cfda appears after Q08 in paper md but logically belongs to Q06 (\"如图所示\"). Added to Q06 stem. PDF confirmation advised.",
+      "resolution": "needs_pdf_confirmation"
+    },
+    {
+      "type": "stem_trail_cleaned",
+      "questionNumber": 8,
+      "severity": "info",
+      "message": "Removed trailing image ref and section header from Q08 stem and option D.",
+      "resolution": "fixed_by_markdown_evidence"
+    },
+    {
+      "type": "stem_trail_cleaned",
+      "questionNumber": 14,
+      "severity": "info",
+      "message": "Removed trailing section header from Q14 stem.",
+      "resolution": "fixed_by_markdown_evidence"
+    },
+    {
+      "type": "explanation_split_fixed",
+      "questionNumber": 17,
+      "severity": "info",
+      "message": "Q18 explanation was merged into Q17; split at (18) marker.",
+      "resolution": "fixed_by_markdown_evidence"
+    },
+    {
+      "type": "explanation_recovered",
+      "questionNumber": 18,
+      "severity": "info",
+      "message": "Q18 explanation recovered from Q17 trailing content.",
+      "resolution": "fixed_by_markdown_evidence"
+    },
+    {
+      "type": "explanation_split_fixed",
+      "questionNumber": 19,
+      "severity": "info",
+      "message": "Q20 explanation was merged into Q19; split at (20) marker.",
+      "resolution": "fixed_by_markdown_evidence"
+    },
+    {
+      "type": "explanation_recovered",
+      "questionNumber": 20,
+      "severity": "info",
+      "message": "Q20 explanation recovered from Q19 trailing content.",
+      "resolution": "fixed_by_markdown_evidence"
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 9,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 9
+    },
+    "resolvedPermanently": 8,
+    "needsPdfConfirmation": 1,
+    "blockingIssues": []
+  }
+}

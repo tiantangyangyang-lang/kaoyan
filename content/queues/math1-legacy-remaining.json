@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-legacy-remaining",
+  "description": "Remaining legacy Math1 yearly structural repair tasks that should be executed by Claude Code, not by Codex.",
+  "tasks": [
+    {
+      "label": "Math1 2000 legacy structure repair",
+      "task": "cc-math1-year",
+      "year": 2000,
+      "maxTurns": 40
+    },
+    {
+      "label": "Math1 2001 legacy structure repair",
+      "task": "cc-math1-year",
+      "year": 2001,
+      "maxTurns": 40
+    }
+  ]
+}

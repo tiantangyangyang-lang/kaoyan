@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "local-fallback-2015",
+  "sourceYear": 2015,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T09:21:02.000000+00:00",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "missing_figure_reference",
+      "questionNumber": 1,
+      "severity": "info",
+      "message": "Stem references '如右图所示' (graph of f''(x)) but no image is captured in paper Markdown. Answer from solution Markdown assumes a specific graph shape."
+    },
+    {
+      "type": "options_recovered_from_markdown",
+      "questionNumber": 4,
+      "severity": "info",
+      "message": "Options C and D recovered from paper Markdown. Original parser only extracted ['A', 'B']. All 4 options now present."
+    },
+    {
+      "type": "option_a_recovered_from_markdown",
+      "questionNumber": 7,
+      "severity": "info",
+      "message": "Option A recovered from paper Markdown. Original parser only extracted ['B', 'C', 'D']. All 4 options now present."
+    },
+    {
+      "type": "ocr_garbled_latex",
+      "questionNumber": 17,
+      "severity": "info",
+      "message": "System-of-equations solution LaTeX for stationary points is garbled by OCR. Garbled LaTeX preserved as-is; human should verify against original PDF."
+    },
+    {
+      "type": "ocr_number_split",
+      "questionNumber": 22,
+      "severity": "info",
+      "message": "Final answer in explanation appears as '1 6' (OCR artifact for 16). E(Y)=16 confirmed by derivation."
+    },
+    {
+      "type": "source_repo_dirty",
+      "questionNumber": null,
+      "severity": "info",
+      "message": "Source repo Kaoyan-Math1-Papers at commit 3151b4a is dirty; 2015 paper/solution files are tracked and clean."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 6,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 6
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_run",
+    "fixesApplied": [
+      "Q04: Recovered options C and D from paper Markdown",
+      "Q07: Recovered option A from paper Markdown",
+      "Q08: Cleaned trailing section header from option D value",
+      "Q14: Cleaned trailing section header from stem",
+      "Q01: Added info anomaly for missing figure reference",
+      "Q17: Added info anomaly for garbled OCR LaTeX in system-of-equations solution",
+      "Q22: Added info anomaly for OCR number split (1 6 -> 16)"
+    ]
+  }
+}

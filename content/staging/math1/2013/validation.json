@@ -1,0 +1,30 @@
+{
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "expectedCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "countsMatch": true,
+  "totalAnomalies": 0,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "allQuestionsNeedsReview": true,
+  "checksPassed": [
+    "counts_match",
+    "all_stable_ids_unique",
+    "all_have_question_type",
+    "all_have_source_tracking",
+    "all_multiple_choice_have_complete_options",
+    "all_solutions_have_explanation",
+    "no_trailing_section_headers"
+  ]
+}

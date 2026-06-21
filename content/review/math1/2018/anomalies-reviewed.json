@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "local-fallback-2018",
+  "sourceYear": 2018,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-15T06:57:13.129729+00:00",
+  "lastUpdateTimestamp": "2026-06-20T00:00:00.000000+00:00",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "incomplete_options",
+      "questionNumber": 6,
+      "severity": "info",
+      "message": "Option D was merged into option C in raw extraction due to LaTeX-wrapped label $(\\mathrm{D})$. Fixed — split into separate option D. Evidence: paper Markdown line 63."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 1,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 1
+    },
+    "blockingIssues": [],
+    "mdFinalizationNotes": "Q6 option D split resolved. Section headers removed from Q8 and Q14 stems/options/explanations. All 23 questions verified against source marks."
+  }
+}

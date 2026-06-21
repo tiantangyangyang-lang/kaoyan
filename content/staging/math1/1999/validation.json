@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "runId": "20260620-161006-cc-math1-md-finalize-year-1999",
+  "questionsGenerated": 21,
+  "questionCounts": {
+    "fill_in_blank": 5,
+    "multiple_choice": 5,
+    "solution": 11
+  },
+  "expectedCounts": {
+    "fill_in_blank": 5,
+    "multiple_choice": 5,
+    "solution": 11
+  },
+  "countsMatch": true,
+  "allStableIdsUnique": true,
+  "stableIds": [
+    "math1-1999-q01", "math1-1999-q02", "math1-1999-q03", "math1-1999-q04", "math1-1999-q05",
+    "math1-1999-q06", "math1-1999-q07", "math1-1999-q08", "math1-1999-q09", "math1-1999-q10",
+    "math1-1999-q11", "math1-1999-q12", "math1-1999-q13", "math1-1999-q14", "math1-1999-q15",
+    "math1-1999-q16", "math1-1999-q17", "math1-1999-q18", "math1-1999-q19", "math1-1999-q20",
+    "math1-1999-q21"
+  ],
+  "totalAnomalies": 2,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 2
+  },
+  "allQuestionsNeedsReview": true,
+  "multipleChoiceOptionsComplete": true,
+  "questionsWithExplanations": 21,
+  "questionsWithAnswerCandidates": 19,
+  "questionsWithoutAnswerCandidates": 2,
+  "checks": {
+    "stableIdsUnique": true,
+    "countsMatchPaper": true,
+    "allNeedsReview": true,
+    "jsonSchemaValid": true,
+    "sourcePathsPresent": true
+  }
+}

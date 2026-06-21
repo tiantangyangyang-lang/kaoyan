@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "math1-sequential-transform-v1",
+  "anomalies": [
+    {
+      "type": "explanation_typo_fixed",
+      "questionNumber": 16,
+      "severity": "info",
+      "message": "Solution had C₁/λ₁ repeated (should be C₂/λ₂); fixed by mathematical context (sum of Cᵢ/λᵢ for each term)",
+      "evidence": "The integral ∫₀^∞ y(x)dx = -(C₁/λ₁ + C₂/λ₂) follows from ∫ e^{λx}dx = -e^{λx}/λ. The result 3/k confirms the correction."
+    }
+  ],
+  "resolvedAnomalies": [
+    {
+      "type": "incomplete_options",
+      "questionNumber": 2,
+      "severity": "warning",
+      "message": "Extracted option labels: []",
+      "resolution": "Options (A)(B)(C)(D) extracted from paper Markdown stem via deterministic parsing."
+    },
+    {
+      "type": "incomplete_options",
+      "questionNumber": 5,
+      "severity": "warning",
+      "message": "Extracted option labels: ['A', 'B', 'C']",
+      "resolution": "Option (D) text was merged with option (C) in the stem; separated by deterministic boundary match against paper Markdown."
+    }
+  ]
+}

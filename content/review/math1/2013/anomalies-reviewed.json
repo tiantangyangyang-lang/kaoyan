@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "20260620-171151-cc-math1-md-finalize-year-2013",
+  "sourceYear": 2013,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": false,
+  "reviewTimestamp": "2026-06-20T09:14:31.011Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [],
+  "summary": {
+    "totalAnomalies": 0,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "blockingIssues": [],
+    "resolvedInThisRun": [
+      "math1-2013-q04: options split A/B/C/D (was A,B only)",
+      "math1-2013-q06: options split A/B/C/D (was A,B,C only)",
+      "math1-2013-q07: options split A/B/C/D (was B only)",
+      "Q8/Q14: trailing section header text cleaned"
+    ],
+    "pdfVerification": "not_required_per_md_finalization"
+  }
+}

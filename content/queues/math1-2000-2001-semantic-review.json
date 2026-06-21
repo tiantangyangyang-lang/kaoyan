@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2000-2001-semantic-review",
+  "description": "Semantic review queue for Math1 2000 and 2001 after Claude staging repair. This should refresh canonical review artifacts and human-review reports to match the new staging outputs.",
+  "tasks": [
+    {
+      "label": "Math1 2000 semantic review sync",
+      "task": "ds-math1-year",
+      "year": 2000,
+      "maxTurns": 60
+    },
+    {
+      "label": "Math1 2001 semantic review sync",
+      "task": "ds-math1-year",
+      "year": 2001,
+      "maxTurns": 60
+    }
+  ]
+}

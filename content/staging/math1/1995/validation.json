@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "math1-legacy-transform-v1+md-finalize",
+  "timestamp": "2026-06-20T15:50:19+08:00",
+  "questionsGenerated": 22,
+  "questionCounts": {
+    "fill_in_blank": 7,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "expectedCounts": {
+    "fill_in_blank": 7,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "countsMatch": true,
+  "totalAnomalies": 0,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "allQuestionsNeedsReview": true,
+  "allExplanationsPresent": true,
+  "allAnswersPresent": true,
+  "mdFinalizationChecksPassed": true,
+  "checks": [
+    {
+      "name": "question_count",
+      "status": "passed",
+      "detail": "22 questions, all types match expected"
+    },
+    {
+      "name": "stable_id_uniqueness",
+      "status": "passed",
+      "detail": "All 22 stableIds unique"
+    },
+    {
+      "name": "stem_present",
+      "status": "passed",
+      "detail": "All stems present"
+    },
+    {
+      "name": "explanation_present",
+      "status": "passed",
+      "detail": "22/22 explanations present"
+    },
+    {
+      "name": "answer_present",
+      "status": "passed",
+      "detail": "22/22 questions have answerCandidate or marked as proof"
+    },
+    {
+      "name": "multiple_choice_options",
+      "status": "passed",
+      "detail": "5 MC questions, all have 4 options A-D"
+    },
+    {
+      "name": "review_status",
+      "status": "passed",
+      "detail": "All questions: needs_human_review"
+    },
+    {
+      "name": "source_tracking",
+      "status": "passed",
+      "detail": "All questions have sourceRepo, sourceRelativePaths, sourceCommit"
+    },
+    {
+      "name": "kaTeX_parse",
+      "status": "passed",
+      "detail": "No known unparseable KaTeX patterns found"
+    },
+    {
+      "name": "ocr_noise_check",
+      "status": "passed",
+      "detail": "No remaining OCR noise fragments detected"
+    }
+  ]
+}

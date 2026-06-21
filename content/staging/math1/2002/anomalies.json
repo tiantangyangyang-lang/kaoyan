@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "math1-legacy-transform-v1",
+  "mdFinalizationRunId": "20260620-185410-cc-math1-md-finalize-year-2002",
+  "anomalies": [
+    {
+      "type": "ocr_noise_recovered",
+      "questionNumber": 6,
+      "severity": "info",
+      "message": "Q6 stem: 原 paper Markdown 第15行 OCR 损毁了性质①②的中文描述（仅余'$f(x,y)$ $f(x,y)$ $f(x,y)$ $x_0,y_0$ $x_0,y_0$ $x_0,y_0$'碎片）。md-finalization 从 solution（line 66-70）解析证据恢复：①='f(x,y)在点(x₀,y₀)处连续'，②='f(x,y)在点(x₀,y₀)处的两个一阶偏导数连续'（solution: '若f(x,y)两个偏导数连续，则f(x,y)一定可微'对应②⇒③；'若f(x,y)可微，则f(x,y)连续且可偏导'对应③⇒①）。精确原文措辞需PDF确认。",
+      "resolution": "recovered_from_solution_evidence"
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "info",
+      "message": "Section「一」本地标记期望1..5，检测到[1,2,3,4,5,1,2,3,4]。此为staging切分器在legacy_section_based格式下的已知行为——因solution文件中填空题连续编号(1)-(5)被正确映射为Q1-Q5，多出的[1,2,3,4]来自解析内部子步骤编号的误检测。不影响题目正确性。",
+      "resolution": "false_positive_closed"
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "info",
+      "message": "Section「二」本地标记期望1..5，检测到[6,7,8,9,10]。此为正常行为——2002年solution文件使用绝对编号(6)-(10)标记选择题，而非section内相对编号(1)-(5)。与paper中section内题号(1)-(5)的映射经staging切分器正确处理为Q6-Q10。",
+      "resolution": "expected_behavior_closed"
+    },
+    {
+      "type": "ocr_noise_in_options",
+      "questionNumber": 10,
+      "severity": "info",
+      "message": "Q10 options: 原 paper Markdown 中选项标签混合使用 \\(\\mathrm{A}\\)/B/\\(\\mathrm{C}\\)/\\(\\mathrm{D}\\) 格式。staging（2026-06-17 fix run）已正确从 paper Markdown 行61-64恢复四个独立选项。md-finalization确认：A: f₁+f₂必为概率密度, B: f₁f₂必为概率密度, C: F₁+F₂必为分布函数, D: F₁F₂必为分布函数，均正确。",
+      "resolution": "fixed_in_prior_run"
+    }
+  ],
+  "closedAnomalies": [
+    "Q2-Q5/Q7-Q10 embedded sibling answers: resolved in 2026-06-17 staging fix run; answerCandidates and explanationCandidates have been split to individual questions.",
+    "Q11-Q20 answerCandidate null: resolved in 2026-06-20 md-finalization; all 10 answers extracted from explanationCandidates.",
+    "Q6 OCR text loss (properties ①②): recovered from solution evidence.",
+    "Q16 stem line break: merged into single LaTeX environment.",
+    "section_split_mismatch ×2: determined to be false positives / expected behavior."
+  ],
+  "activeAnomalies": [
+    {
+      "type": "image_dependent_question",
+      "questionNumber": 9,
+      "severity": "info",
+      "message": "Q9全部四个选项均为图片（三平面空间位置关系示意图）。纸面选项标签A/B/C/D对应的图片哈希已从paper Markdown行47-57正确映射到staging options中。答案(B)对应图像8127aa31...（三平面交于一直线）。但精确图片内容确认仍需PDF。",
+      "resolution": "needs_pdf_visual_confirmation"
+    }
+  ],
+  "summary": {
+    "totalOriginalAnomalies": 4,
+    "totalResolved": 3,
+    "totalActive": 1,
+    "activeSeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 1
+    }
+  }
+}

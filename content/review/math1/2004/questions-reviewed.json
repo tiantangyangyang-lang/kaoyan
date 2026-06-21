@@ -1,0 +1,177 @@
+{
+  "schemaVersion": "review-v1",
+  "task": "ds-math1-2004-recovery-fixed-20260620-md-finalize",
+  "runId": "20260620-162448-cc-math1-md-finalize-year-2004",
+  "generatedAt": "2026-06-20T16:24:48+08:00",
+  "sourceInfo": {
+    "sourceRepo": "Kaoyan-Math1-Papers",
+    "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+    "paperRelativePath": "papers/2004年考研数学(一)真题.md",
+    "paperSha256": "EEAA0521C3BD9DFD14457270D8EFF2D3D40658DF4236D8B0F0D95FC5C0A90B48",
+    "solutionsRelativePath": "solutions/2004年解析/2004年解析.md",
+    "solutionsSha256": "FFAD5DB5C8B9C815317A6C554168C832F1271DBB0CCE4578CFD7DDCFD4659AB4"
+  },
+  "summary": {
+    "totalQuestions": 23,
+    "multipleChoice": 8,
+    "fillInBlank": 6,
+    "solution": 9,
+    "anomaliesResolvedByMdFinalize": 12,
+    "activeAnomaliesRemaining": 4,
+    "allNeedsHumanReview": true,
+    "mdFinalizationStatus": {
+      "ready_for_approval": 19,
+      "ready_with_info": 3,
+      "blocked": 1
+    }
+  },
+  "reviews": [
+    {
+      "stableId": "math1-2004-q01",
+      "candidateResult": {
+        "questionNumber": 1, "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "曲线 $y = \\ln x$ 上与直线 $x + y = 1$ 垂直的切线方程为",
+        "options": [],
+        "answerCandidate": "$y = x - 1$", "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（1）【答案】 $y = x - 1$\n\n【解】设曲线 $y = \\ln x$ 上切点坐标为 $(a, \\ln a)$\n\n因为 $x + y = 1$ 的斜率为 -1 ，所以切线的斜率为1.\n\n令 $\\frac{1}{a} = 1$ 得 $a = 1$ ，切点为(1，0)，切线为 $y - 0 = x - 1$ ，即 $y = x - 1$",
+        "explanationStatus": "candidate_from_solutions", "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [], "uncertainties": [], "conflicts": [],
+        "suggestedTopics": [
+          {"topic": "导数与切线方程", "confidence": "high"},
+          {"topic": "对数函数求导", "confidence": "high"}
+        ],
+        "confidence": "high",
+        "humanReviewFocus": ["确认答案 y = x - 1 是否正确（解析推导清晰，风险低）"]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalizeStatus": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-2004-q02",
+      "mdFinalizeStatus": "ready_for_approval",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q03",
+      "mdFinalizeStatus": "ready_for_approval",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q04",
+      "mdFinalizeStatus": "ready_for_approval",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q05",
+      "mdFinalizeStatus": "ready_with_info",
+      "mdFinalizeNote": "Solution has \\dot{\\mathbf{BA}}^{*} (dot accent) vs paper \\mathbf{B}\\mathbf{A}^{*}. Likely OCR artifact — info only.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q06",
+      "mdFinalizeStatus": "ready_for_approval",
+      "mdFinalizeNote": "Section header pollution stripped from stem and explanation.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q07",
+      "mdFinalizeStatus": "ready_for_approval",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q08",
+      "mdFinalizeStatus": "ready_for_approval",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q09",
+      "mdFinalizeStatus": "ready_for_approval",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q10",
+      "mdFinalizeStatus": "ready_for_approval",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q11",
+      "mdFinalizeStatus": "ready_for_approval",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q12",
+      "mdFinalizeStatus": "ready_with_info",
+      "mdFinalizeNote": "Fullwidth parentheses in source — info only.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q13",
+      "mdFinalizeStatus": "ready_for_approval",
+      "mdFinalizeNote": "Missing closing parenthesis fixed.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q14",
+      "mdFinalizeStatus": "ready_for_approval",
+      "mdFinalizeNote": "Options rebuilt from paper Markdown (4 complete options). Section header pollution cleaned.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q15",
+      "mdFinalizeStatus": "ready_for_approval",
+      "mdFinalizeNote": "Proof question — answerCandidate null (proof is answer). answerStatus updated to candidate_from_solutions.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q16",
+      "mdFinalizeStatus": "ready_with_info",
+      "mdFinalizeNote": "Answer extracted from explanation. OCR spacing artifact '7 0 0' in solution method 2 — info only.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q17",
+      "mdFinalizeStatus": "ready_for_approval",
+      "mdFinalizeNote": "Answer extracted: -π.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q18",
+      "mdFinalizeStatus": "ready_for_approval",
+      "mdFinalizeNote": "Proof question — answerCandidate null. answerStatus updated to candidate_from_solutions.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q19",
+      "mdFinalizeStatus": "blocked",
+      "mdFinalizeNote": "Explanation run-on: min value 3 may be missing from solution Markdown. Requires PDF verification. Answer extracted from context (min at (9,3)=3, max at (-9,-3)=-3) is still correct.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q20",
+      "mdFinalizeStatus": "ready_for_approval",
+      "mdFinalizeNote": "Answer extracted: a=0 or a=-n(n+1)/2 with corresponding general solutions.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q21",
+      "mdFinalizeStatus": "ready_for_approval",
+      "mdFinalizeNote": "Answer extracted: a=-2 (diagonalizable), a=-2/3 (not).",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q22",
+      "mdFinalizeStatus": "ready_for_approval",
+      "mdFinalizeNote": "Answer extracted: joint distribution and ρ=√15/15.",
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2004-q23",
+      "mdFinalizeStatus": "ready_for_approval",
+      "mdFinalizeNote": "Answer extracted: moment estimator and MLE.",
+      "reviewStatus": "needs_human_review"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "math1-legacy-transform-v1",
+  "mdFinalizedAt": "2026-06-20T15:55:13+08:00",
+  "mdFinalizedBy": "cc-math1-md-finalize-year",
+  "anomalies": [],
+  "resolvedAnomalies": [
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Expected local markers 1..2, found [2]",
+      "sectionLabel": "三",
+      "resolution": "Q11 and Q12 explanations were split from a merged container. Q11 now contains only 三(1) with full opening line prepended; Q12 contains 三(2)."
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Expected local markers 1..2, found [2]",
+      "sectionLabel": "四",
+      "resolution": "Q13 and Q14 explanations were split from a merged container. Q13 now contains only 四(1) with full opening line prepended; Q14 contains 四(2)."
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 12,
+      "severity": "warning",
+      "message": "Solution block for question 12 was not found",
+      "resolution": "Q12 explanationCandidate populated from solutions.md 三(2). Content was previously merged into Q11 container."
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 14,
+      "severity": "warning",
+      "message": "Solution block for question 14 was not found",
+      "resolution": "Q14 explanationCandidate populated from solutions.md 四(2). Content was previously merged into Q13 container."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 0,
+    "totalResolved": 4,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "blockingIssues": []
+  }
+}

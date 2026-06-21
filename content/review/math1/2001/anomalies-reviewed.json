@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "semantic-review-v1",
+  "runId": "20260616-220001-ds-math1-year-2001",
+  "mdFinalizationRunId": "20260620-150843-cc-math1-md-finalize-year-2001",
+  "task": "ds-math1-year",
+  "subjectCode": "math1",
+  "sourceYear": 2001,
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewedAt": "2026-06-16T22:00:00+08:00",
+  "mdFinalizedAt": "2026-06-20T15:08:43+08:00",
+  "reviewStatus": "needs_human_review",
+  "totalAnomalies": 4,
+  "mdFinalizationResolved": 8,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 2,
+    "info": 2
+  },
+  "anomalies": [
+    {
+      "anomalyId": "A01",
+      "severity": "warning",
+      "type": "source_repo_dirty",
+      "message": "Source repo Kaoyan-Math1-Papers is dirty at commit 3151b4ac. 7 modified tracked files, 2 untracked directories. None of the dirtied files overlap with 2001 year content.",
+      "questionNumbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "resolutionMdFinalization": "Confirmed: dirty files are 1987, 1988, 2003, 2020, 2024 papers + 2003/2020 solutions — none overlap with 2001. Source mirror contains correct 2001 files.",
+      "humanAction": "Acknowledge dirty repo state does not affect 2001 content."
+    },
+    {
+      "anomalyId": "A02",
+      "severity": "warning",
+      "type": "image_only_options",
+      "message": "Question 6 all four options (A)(B)(C)(D) are image references only. The stem f(x) graph is also an image. Answer correctness cannot be verified from text alone.",
+      "questionNumbers": [6],
+      "resolutionMdFinalization": "Cannot resolve from Markdown — images are essential. Solution text reasoning (monotonicity analysis) identifies (D) as answer. Human visual verification required.",
+      "humanAction": "Open the original PDF or image files. Visually confirm f(x) graph and 4 f'(x) candidate graphs."
+    },
+    {
+      "anomalyId": "A03",
+      "severity": "warning",
+      "type": "missing_answer_marker",
+      "message": "Questions 11-20 had no explicit 【答案】 markers in source solution file. Answers were embedded in explanation text.",
+      "questionNumbers": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "resolutionMdFinalization": "RESOLVED in md-finalization. All 10 answers extracted from solution explanation text with answerExtractionNote documenting source location. q15 set to not_applicable (proof).",
+      "humanAction": "Verify extracted answers against solution derivation and PDF."
+    },
+    {
+      "anomalyId": "A04",
+      "severity": "warning",
+      "type": "garbled_determinant_in_source",
+      "message": "Question 17 solution in source file line 254 has garbled determinant formula using \\begin{array}{r} without vertical bars.",
+      "questionNumbers": [17],
+      "resolutionMdFinalization": "Staging corrected to \\begin{vmatrix}. Mathematical context (cyclic matrix determinant = t₁ˢ + (-1)ˢ⁺¹t₂ˢ) supports the correction. Human should verify against PDF.",
+      "humanAction": "Compare source PDF page for question (17) against corrected vmatrix formula."
+    },
+    {
+      "anomalyId": "A05",
+      "severity": "info",
+      "type": "ocr_spacing_artifacts",
+      "message": "OCR letter/digit spacing artifacts in explanations: \\operatorname {d i v} (q02), \\frac {1 3} (q16).",
+      "questionNumbers": [2, 16],
+      "resolutionMdFinalization": "RESOLVED in md-finalization. q02: \\operatorname {d i v} → \\operatorname{div}, \\mathbf {g r a d} → \\mathbf{grad}. q16: \\frac {1 3} → \\frac{13}, {1 2} → {12}.",
+      "humanAction": "No action needed — cosmetic fixes applied, renders correctly."
+    },
+    {
+      "anomalyId": "A06",
+      "severity": "info",
+      "type": "multi_part_question",
+      "message": "Questions 15, 18, 19 have sub-parts (1)(2) in their stem. Kept as single questions per solution numbering.",
+      "questionNumbers": [15, 18, 19],
+      "resolutionMdFinalization": "Granularity confirmed correct per solution file structure. No change needed.",
+      "humanAction": "Confirm whether to keep as single questions or split into sub-questions."
+    },
+    {
+      "anomalyId": "A07",
+      "severity": "info",
+      "type": "inline_option_in_stem",
+      "message": "Question 7 option A was inline in paper stem text. Staging correctly extracted.",
+      "questionNumbers": [7],
+      "resolutionMdFinalization": "Confirmed correct extraction. No content missing.",
+      "humanAction": "No action needed."
+    },
+    {
+      "anomalyId": "A08",
+      "severity": "info",
+      "type": "mixed_punctuation_ocr",
+      "message": "Question 7 has mixed Chinese/English punctuation from OCR.",
+      "questionNumbers": [7],
+      "resolutionMdFinalization": "Cosmetic — does not affect mathematical correctness. Low priority.",
+      "humanAction": "Normalize punctuation if desired."
+    }
+  ],
+  "mdFinalizationSummary": "12 original anomalies reduced to 4 active (2 warning, 2 info) after md-finalization. 8 anomalies resolved: answer extraction for q11-20, OCR spacing fixes for q02/q16, multi-part question confirmation, inline option confirmation, punctuation documentation. Remaining: source repo dirty (acknowledged), q06 image-only options (requires visual inspection), q17 determinant source garbled (corrected but needs PDF verification). No blocked questions."
+}

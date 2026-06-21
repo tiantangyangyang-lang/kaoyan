@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "finalizationRunId": "20260620-140517-cc-math1-md-finalize-year-1991",
+  "priorCorrectionRunId": "20260616-135214-cc-math1-year-1991",
+  "anomalies": [],
+  "resolvedInFinalization": [
+    {
+      "stableId": "math1-1991-q09",
+      "type": "ocr_latex_split",
+      "severity": "warning",
+      "resolution": "Solution Markdown consistently writes \\cos x\\sin y as a single LaTeX term. The OCR split the LaTeX block by inserting a premature $. Fixed to \\cos x \\sin y within a single LaTeX block."
+    },
+    {
+      "stableId": "math1-1991-q14",
+      "type": "missing_answer_extractable",
+      "severity": "info",
+      "resolution": "Solution concludes: 故所求曲线为 y = sin x"
+    },
+    {
+      "stableId": "math1-1991-q15",
+      "type": "missing_answer_extractable",
+      "severity": "info",
+      "resolution": "Solution concludes: ∑(1/n²) = π²/6"
+    },
+    {
+      "stableId": "math1-1991-q17",
+      "type": "missing_answer_extractable",
+      "severity": "info",
+      "resolution": "Solution provides explicit conditions and expression in section 七"
+    },
+    {
+      "stableId": "math1-1991-q19",
+      "type": "missing_answer_extractable",
+      "severity": "info",
+      "resolution": "Solution concludes: 故所求的曲线为 y = (e^(x-1) + e^(1-x))/2"
+    },
+    {
+      "stableId": "math1-1991-q22",
+      "type": "missing_answer_extractable",
+      "severity": "info",
+      "resolution": "Solution concludes with the piecewise distribution function in section 十一"
+    }
+  ]
+}

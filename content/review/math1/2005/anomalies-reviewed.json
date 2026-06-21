@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "math1-review-anomalies-v2",
+  "runId": "20260620-163319-cc-math1-md-finalize-year-2005",
+  "sourceYear": 2005,
+  "subjectCode": "math1",
+  "reviewedAt": "2026-06-20T16:33:19+08:00",
+  "totalAnomalies": 2,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 2
+  },
+  "anomalies": [
+    {
+      "anomalyId": "anom-2005-018",
+      "type": "source_repo_dirty",
+      "questionNumber": null,
+      "severity": "info",
+      "location": "global",
+      "description": "来源仓库 Kaoyan-Math1-Papers 在 commit 3151b4a 处有未提交修改。2005 年相关文件本身未被修改，不影响内容正确性。",
+      "resolution": "retained_as_info"
+    },
+    {
+      "anomalyId": "anom-2005-019",
+      "type": "nonstandard_latex_macro",
+      "questionNumber": null,
+      "severity": "info",
+      "location": "global, Q5, Q11, Q12, Q20, Q21 解析中",
+      "description": "解析大量使用 \\pmb（poor man's bold）命令。KaTeX 支持此命令，但建议最终入库前替换为 \\mathbf 或 \\boldsymbol。",
+      "resolution": "retained_as_info"
+    }
+  ],
+  "resolvedAnomalies": [
+    {"anomalyId": "anom-2005-001", "questionNumber": 7, "resolution": "Fixed |x|^3n → |x|^{3n}", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-002", "questionNumber": 7, "resolution": "Fixed |x|^{3n/2} → |x|^{3n}", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-003", "questionNumber": 7, "resolution": "Fixed x→-1^+ → x→1^+", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-004", "questionNumber": 11, "resolution": "Rebuilt all 4 options from paper Markdown", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-005", "questionNumber": 14, "resolution": "Rebuilt all 4 options from paper Markdown", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-006", "questionNumber": 6, "resolution": "Deleted section header from stem", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-007", "questionNumber": 14, "resolution": "Deleted section header from stem", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-008", "questionNumber": 15, "resolution": "Fixed 4√2 → √[4]{2} (math logic)", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-009", "questionNumber": 16, "resolution": "Fixed arctan → arctan", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-010", "questionNumber": 17, "resolution": "Fixed f'' → f''' to match paper", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-011", "questionNumber": 17, "resolution": "Fixed 1 6 → 16, 2 0 → 20", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-012", "questionNumber": 18, "resolution": "Fixed c → ξ (notation unification)", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-013", "questionNumber": 20, "resolution": "Fixed γ₁ incomplete vector", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-014", "questionNumber": 20, "resolution": "Fixed γ₂ incomplete vector", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-015", "questionNumber": 20, "resolution": "Fixed γ₃ incomplete vector", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-016", "questionNumber": 20, "resolution": "Fixed LaTeX fracture in standard form", "fixedAt": "2026-06-20T16:33:19+08:00"},
+    {"anomalyId": "anom-2005-017", "questionNumber": 21, "resolution": "Fixed b^* → b (star noise)", "fixedAt": "2026-06-20T16:33:19+08:00"}
+  ],
+  "anomaliesByQuestion": {},
+  "summary": {
+    "totalOriginalAnomalies": 19,
+    "resolvedAnomalies": 17,
+    "remainingAnomalies": 2,
+    "remainingSeverity": "info only",
+    "allQuestionsReadyForApproval": true,
+    "allQuestionsNeedsHumanReview": true
+  }
+}

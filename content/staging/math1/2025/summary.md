@@ -1,0 +1,30 @@
+# Math1 2025 Markdown-First Finalization Summary
+
+- Run ID: 20260620-144432-cc-math1-md-finalize-year-2025
+- Questions: 22
+- Counts match: true
+- Multiple choice: 10
+- Fill-in-blank: 6
+- Solution: 6
+- Total anomalies: 12 (error: 0, warning: 4, info: 8)
+- Review status: all `needs_human_review`
+- Base input: questions-auto-repaired.json
+- Fixes applied: 18
+  - Q1 option D: cleaned trailing markers
+  - Q2 option D: cleaned trailing markers
+  - Q3 option D: cleaned trailing markers
+  - Q5 option D: cleaned trailing markers
+  - Q6 option D: cleaned trailing markers
+  - Q7 option D: cleaned trailing markers
+  - Q8 option D: cleaned trailing markers
+  - Q4: added reconstructed A/B options from source, C/D marked as source_damaged_ocr_unrecoverable
+  - Q9: reconstructed B/C/D options from OCR-damaged source
+  - Q10: marked A/B/C as missing from source, reconstructed D from stem
+  - Q11: fixed garbled answer character 1 → $-1$
+  - Q15: fixed garbled answer character 4 → $-4$
+  - Q17: separated stem from solution, extracted answer, corrected OCR errors in partial fractions
+  - Q18: separated stem from solution, extracted answer
+  - Q19: separated stem from solution (proof question)
+  - Q20: separated stem from solution, extracted answer
+  - Q21: separated stem from solution, extracted answer
+  - Q22: separated stem from solution, extracted answer

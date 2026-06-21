@@ -1,0 +1,93 @@
+# 研数部署说明
+
+## 推荐免费组合
+
+| 部分 | 提供商 | 免费层用途 |
+| --- | --- | --- |
+| Web | Cloudflare Pages | 部署 `apps/web/dist`，绑定 `study.gongren.xyz` |
+| API | Render Free Web Service | 部署 `apps/api`；闲置后会休眠 |
+| MySQL | Aiven Free MySQL | 用户、会话和学习记录；只适合 MVP |
+| 验证邮件 | Resend Free | 使用 HTTP API 发送，避免免费 Render 的 SMTP 限制 |
+
+## 当前 DNS 审计
+
+输入文件：`C:\Users\60549\Downloads\gongren.xyz (1).txt`
+
+以下现有记录保持不变：
+
+- 根域名 `gongren.xyz` 的两个 A 记录
+- `www.gongren.xyz -> gongren.xyz`
+- SpaceMail 的两个 MX 记录
+- `_autodiscover._tcp` SRV
+- 根域名 SPF：`v=spf1 include:spf.spacemail.com ~all`
+
+不要在根域名再添加第二条 SPF。Resend 建议使用独立发送子域
+`mail.gongren.xyz`，按 Resend 控制台给出的 DKIM/SPF 记录添加。
+
+## 建议新增的 DNS
+
+在外部服务创建完成、拿到真实主机名后再添加：
+
+| 类型 | 名称 | 目标 | 初始代理状态 |
+| --- | --- | --- | --- |
+| CNAME | `study` | Cloudflare Pages 项目域名 | 由 Pages 自定义域流程创建 |
+| CNAME | `api` | Render 提供的 `*.onrender.com` | DNS only，证书签发后再决定是否代理 |
+| Resend records | `mail` 子域 | 以 Resend 控制台显示为准 | DNS only |
+
+本方案不修改根域网站，因此不会影响当前 `gongren.xyz` 和 `www`。
+
+## Aiven MySQL
+
+1. 创建免费 MySQL 服务。
+2. 在 Aiven 控制台运行 `apps/api/schema.sql`。
+3. 将 Service URI 写入 Render 的 `DATABASE_URL`。
+4. 将 CA 证书做 Base64 后写入 `DATABASE_CA_BASE64`。
+
+PowerShell 转换 CA：
+
+```powershell
+[Convert]::ToBase64String([IO.File]::ReadAllBytes("ca.pem"))
+```
+
+## Resend
+
+1. 在 Resend 添加 `mail.gongren.xyz`。
+2. 将其要求的 DNS 记录添加到 Cloudflare。
+3. 验证成功后创建 API Key。
+4. 在 Render 设置 `RESEND_API_KEY`。
+
+## Cloudflare Pages
+
+- Root directory: 仓库根目录
+- Build command: `npm ci && npm run build:web`
+- Output directory: `apps/web/dist`
+- Environment variable:
+
+```text
+VITE_API_BASE_URL=https://api.gongren.xyz/api
+```
+
+## 本地启动
+
+复制两个环境模板并填写 MySQL：
+
+```text
+apps/api/.env.example -> apps/api/.env
+apps/web/.env.example -> apps/web/.env
+```
+
+分别运行：
+
+```cmd
+npm run dev:api
+npm run dev
+```
+
+## 上线检查
+
+```cmd
+npm run typecheck
+npm run build
+npm run test:api
+npm run test:smoke --workspace @kaoyan/web
+```

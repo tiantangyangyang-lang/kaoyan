@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "batchId": "20260620-161506-cc-math1-md-finalize-year-1987",
+  "sourceYear": 1987,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T16:15:06+08:00",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "id": "anom-1987-q02-sol-transcription",
+      "stableId": "math1-1987-q02",
+      "severity": "info",
+      "description": "解析源写 $x^{2^x}$ 但推导对应 $x \\cdot 2^x$，解释已修正。",
+      "requiresHumanReview": true
+    },
+    {
+      "id": "anom-1987-q08-ocr-y-triple-prime",
+      "stableId": "math1-1987-q08",
+      "severity": "info",
+      "description": "题干 $y''$ 应为 $y'''$（三阶ODE），OCR三撇→两撇。",
+      "requiresHumanReview": true
+    },
+    {
+      "id": "anom-1987-q10-ocr-lianxushu",
+      "stableId": "math1-1987-q10",
+      "severity": "info",
+      "description": "\"连续数\"疑为\"连续函数\"OCR错误。",
+      "requiresHumanReview": true
+    },
+    {
+      "id": "anom-1987-q15-proof-no-answer",
+      "stableId": "math1-1987-q15",
+      "severity": "info",
+      "description": "证明题无独立 answerCandidate，答案在解释中。类型已修正为 proof。",
+      "requiresHumanReview": true
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 4,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 4
+    },
+    "blockingIssues": [],
+    "mdFinalStatus": {
+      "ready_for_approval": 15,
+      "ready_with_info": 5,
+      "blocked": 0
+    }
+  }
+}

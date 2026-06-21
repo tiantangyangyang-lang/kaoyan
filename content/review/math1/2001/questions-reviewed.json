@@ -1,0 +1,906 @@
+{
+  "schemaVersion": "semantic-review-v1",
+  "runId": "20260616-220001-ds-math1-year-2001",
+  "task": "ds-math1-year",
+  "subjectCode": "math1",
+  "sourceYear": 2001,
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewedAt": "2026-06-16T22:00:00+08:00",
+  "reviewStatus": "needs_human_review",
+  "totalQuestions": 20,
+  "reviewSummary": {
+    "questionsWithIssues": 1,
+    "questionsClean": 19,
+    "pdfEvidenceStatus": "not_run",
+    "overallConfidence": "medium",
+    "keyRisks": [
+      "Source repo is dirty (5 modified tracked files, 2 untracked dirs)",
+      "Question 6 options are images only — cannot verify from text alone",
+      "Questions 11-20 lack explicit answer markers in source (answers embedded in explanations)",
+      "Question 17 source file has garbled determinant formula (staging corrected to vmatrix)",
+      "Questions 3 and 6 depend on images for full content verification"
+    ],
+    "mdFinalizationNotes": {
+      "answersExtracted": [
+        "math1-2001-q11",
+        "math1-2001-q12",
+        "math1-2001-q13",
+        "math1-2001-q14",
+        "math1-2001-q15",
+        "math1-2001-q16",
+        "math1-2001-q17",
+        "math1-2001-q18",
+        "math1-2001-q19",
+        "math1-2001-q20"
+      ],
+      "ocrNormalized": [
+        "math1-2001-q02",
+        "math1-2001-q16"
+      ],
+      "questionsReadyForApproval": [
+        "math1-2001-q01",
+        "math1-2001-q02",
+        "math1-2001-q03",
+        "math1-2001-q04",
+        "math1-2001-q05",
+        "math1-2001-q07",
+        "math1-2001-q08",
+        "math1-2001-q09",
+        "math1-2001-q10",
+        "math1-2001-q11",
+        "math1-2001-q12",
+        "math1-2001-q13",
+        "math1-2001-q14",
+        "math1-2001-q15",
+        "math1-2001-q16",
+        "math1-2001-q17",
+        "math1-2001-q18",
+        "math1-2001-q19",
+        "math1-2001-q20"
+      ],
+      "questionsReadyWithInfo": [
+        "math1-2001-q06"
+      ],
+      "questionsBlocked": []
+    }
+  },
+  "questions": [
+    {
+      "stableId": "math1-2001-q01",
+      "questionNumber": 1,
+      "questionType": "fill_in_blank",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设 $y = \\mathrm{e}^{x}\\left(C_{1} \\sin x + C_{2} \\cos x\\right)\\left(C_{1}, C_{2}\\right.$ 为任意常数）为某二阶常系数齐次线性微分方程的通解，则该方程为",
+        "options": [],
+        "answerCandidate": "$y^{\\prime \\prime} - 2y^{\\prime} + 2y = 0.$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "由通解形式得二阶常系数齐次线性微分方程的特征值为 $\\lambda_{1,2} = 1\\pm \\mathrm{i}$ 特征方程为 $(\\lambda -1 - \\mathrm{i})(\\lambda -1 + \\mathrm{i}) = 0$ ，即 $\\lambda^2 -2\\lambda +2 = 0.$ 故微分方程为 $y^{\\prime \\prime} - 2y^{\\prime} + 2y = 0.$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "二阶常系数齐次线性微分方程",
+          "特征方程与特征值",
+          "通解结构与微分方程的反求"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [],
+        "humanReviewFocus": "Verify answer y'' - 2y' + 2y = 0 against given general solution. Characteristic equation λ² - 2λ + 2 = 0 yields eigenvalues λ = 1 ± i.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q02",
+      "questionNumber": 2,
+      "questionType": "fill_in_blank",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设 $r = \\sqrt{x^2 + y^2 + z^2}$ , 则 $\\operatorname{div}(\\mathbf{grad} r)\\mid_{(1, -2, 2)} = \\underline{\\quad}$ .",
+        "options": [],
+        "answerCandidate": "$\\frac{2}{3}$ .",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$\\operatorname{grad} r = \\left\\{\\frac{\\partial r}{\\partial x}, \\frac{\\partial r}{\\partial y}, \\frac{\\partial r}{\\partial z}\\right\\} = \\left\\{\\frac{x}{r}, \\frac{y}{r}, \\frac{z}{r}\\right\\},$\n\n$$\n\\operatorname{div}(\\mathbf{grad} r) = \\frac {r - \\frac {x ^ {2}}{r}}{r ^ {2}} + \\frac {r - \\frac {y ^ {2}}{r}}{r ^ {2}} + \\frac {r - \\frac {z ^ {2}}{r}}{r ^ {2}} = \\frac {2}{r},\n$$\n\n于是 $\\operatorname{div}(\\mathbf{grad}r)\\mid_{(1, - 2,2)} = \\frac{2}{3}.$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "repairs": [
+          {
+            "field": "explanationCandidate",
+            "original": "\\operatorname {d i v} (\\mathbf {g r a d} r)",
+            "repaired": "\\operatorname{div}(\\mathbf{grad} r)",
+            "reason": "OCR spacing artifact — letters/numbers separated by spaces causing incorrect rendering"
+          }
+        ]
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "梯度 (gradient)",
+          "散度 (divergence)",
+          "向量场微分运算"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [
+          {
+            "location": "explanationCandidate",
+            "detail": "Extra spaces in LaTeX from OCR source: `\\operatorname {d i v}` and `\\mathbf {g r a d}`. Renders correctly but indicates OCR pipeline output.",
+            "severity": "info"
+          }
+        ],
+        "formulaIssues": [],
+        "structuralIssues": [],
+        "humanReviewFocus": "Verify div(grad r) = 2/r. At point (1,-2,2): r = √(1+4+4) = 3, so answer = 2/3.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q03",
+      "questionNumber": 3,
+      "questionType": "fill_in_blank",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "交换二次积分的积分次序: $\\int_{-1}^{0} \\mathrm{d}y \\int_{2}^{1 - y} f(x, y) \\mathrm{d}x =$ ______.",
+        "options": [],
+        "answerCandidate": "$-\\int_{1}^{2}\\mathrm{d}x\\int_{1 - x}^{0}f(x,y)\\mathrm{d}y.$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$\\int_{-1}^{0}\\mathrm{d}y\\int_{2}^{1 - y}f(x,y)\\mathrm{d}x = -\\int_{-1}^{0}\\mathrm{d}y\\int_{1 - y}^{2}f(x,y)\\mathrm{d}x,$\n\n如图所示，将 $D = \\{(x,y)\\mid 1 - y\\leqslant x\\leqslant 2, - 1\\leqslant y\\leqslant 0\\}$ 表示成 $X$ 型区域为\n\n$$\nD = \\{(x, y) \\mid 1 \\leqslant x \\leqslant 2, 1 - x \\leqslant y \\leqslant 0 \\},\n$$\n\n故 $\\int_{-1}^{0}\\mathrm{d}y\\int_{2}^{1 - y}f(x,y)\\mathrm{d}x$ 改变积分次序为\n\n$$\n\\int_ {- 1} ^ {0} \\mathrm {d} y \\int_ {2} ^ {1 - y} f (x, y) \\mathrm {d} x = - \\int_ {1} ^ {2} \\mathrm {d} x \\int_ {1 - x} ^ {0} f (x, y) \\mathrm {d} y.\n$$\n\n![](images/22a2c66539239087125cb70b2970d94125442d640c9673f83a009307e54c5fed.jpg)",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "二次积分",
+          "交换积分次序",
+          "积分区域的X型与Y型表示"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [
+          {
+            "location": "explanationCandidate",
+            "detail": "Extra spaces in LaTeX: `\\int_ {- 1} ^ {0} \\mathrm {d} y` etc. from OCR pipeline. Renders correctly.",
+            "severity": "info"
+          }
+        ],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "image_dependency",
+            "detail": "Explanation references integration region diagram: images/22a2c665....jpg. Text says '如图所示' (as shown in figure). Image needed for full understanding.",
+            "severity": "info"
+          }
+        ],
+        "humanReviewFocus": "Verify integration bounds: original inner integral from 2 to 1-y (descending) correctly reversed with negative sign. X-type region: 1 ≤ x ≤ 2, 1-x ≤ y ≤ 0.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q04",
+      "questionNumber": 4,
+      "questionType": "fill_in_blank",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设矩阵 $A$ 满足 $A^2 + A - 4E = O$ , 其中 $E$ 为单位矩阵, 则 $(A - E)^{-1} = \\underline{\\quad}$ .",
+        "options": [],
+        "answerCandidate": "$\\frac{1}{2} (A + 2E)$ .",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "由 $A^2 + A - 4E = O$ ，得 $(A - E)(A + 2E) = 2E$\n\n于是 $(\\mathbf{A} - \\mathbf{E})\\cdot \\frac{1}{2} (\\mathbf{A} + 2\\mathbf{E}) = \\mathbf{E}$ ，由逆矩阵的定义得 $(\\mathbf{A} - \\mathbf{E})^{-1} = \\frac{1}{2} (\\mathbf{A} + 2\\mathbf{E})$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "矩阵运算",
+          "逆矩阵的计算",
+          "矩阵多项式因式分解"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [],
+        "humanReviewFocus": "Verify factorization: A² + A - 4E = O → (A-E)(A+2E) = 2E → (A-E)⁻¹ = ½(A+2E).",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q05",
+      "questionNumber": 5,
+      "questionType": "fill_in_blank",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设随机变量 $X$ 的方差为 2, 则根据切比雪夫不等式有估计 $P\\{|X - E(X)| \\geqslant 2\\} \\leqslant \\underline{\\quad}$ .",
+        "options": [],
+        "answerCandidate": "$\\frac{1}{2}$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "由切比雪夫不等式得\n\n$$\nP \\{| X - E (X) | \\geqslant 2 \\} \\leqslant \\frac {D (X)}{2 ^ {2}} = \\frac {1}{2}.\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "切比雪夫不等式",
+          "方差",
+          "概率估计"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [],
+        "humanReviewFocus": "Verify Chebyshev: P{|X-E(X)| ≥ ε} ≤ D(X)/ε². With ε=2, D(X)=2: answer = 2/4 = 1/2.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q06",
+      "questionNumber": 6,
+      "questionType": "multiple_choice",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设函数 $f(x)$ 在定义域内可导， $y = f(x)$ 的图形如右图所示，则导函数 $y = f'(x)$ 的图形为（ ）\n\n![](images/d204f4c9b94d3f324ee2c005bdd513e59c0816c5c59d5b7dd1b731021727da3f.jpg)\n\n![](images/ea979b497525aeee952ac442eec861aa25a2b459fabd289a37ba456482f69683.jpg)  \n(A)\n\n![](images/ada79bd15b5a570bc5fbeb73119cc67dd7251c4a4cef2c0c8a61858222f6bf3b.jpg)  \n(B)\n\n![](images/be0c86536ba8da8e684128af4a548c6f804336be1177d970457a229a173c2951.jpg)  \n(C)\n\n![](images/9fe86278a50353a837be2e178e22870d161775391196b2248c4d9bbe1472f96e.jpg)  \n(D)",
+        "options": [
+          {
+            "label": "A",
+            "value": "![](images/ea979b497525aeee952ac442eec861aa25a2b459fabd289a37ba456482f69683.jpg)"
+          },
+          {
+            "label": "B",
+            "value": "![](images/ada79bd15b5a570bc5fbeb73119cc67dd7251c4a4cef2c0c8a61858222f6bf3b.jpg)"
+          },
+          {
+            "label": "C",
+            "value": "![](images/be0c86536ba8da8e684128af4a548c6f804336be1177d970457a229a173c2951.jpg)"
+          },
+          {
+            "label": "D",
+            "value": "![](images/9fe86278a50353a837be2e178e22870d161775391196b2248c4d9bbe1472f96e.jpg)"
+          }
+        ],
+        "answerCandidate": "(D).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "当 $x < 0$ 时，由 $f(x)$ 单调增加，得 $f^{\\prime}(x) \\geqslant 0$ ，则(A)，(C）不对；\n\n在 $x = 0$ 的右邻域内，由 $f(x)$ 单调增加，得 $f^{\\prime}(x)\\geqslant 0$ ，则(B)不对，应选(D).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "confidence": "medium",
+        "suggestedKnowledgePoints": [
+          "导数与函数图像的关系",
+          "函数单调性与导数符号",
+          "导函数图像识别"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "image_only_options",
+            "detail": "All four options (A)(B)(C)(D) are image references only. The stem also contains an image of f(x). Cannot verify answer correctness from text alone. Requires visual comparison of f(x) graph with each f'(x) candidate.",
+            "severity": "warning"
+          }
+        ],
+        "humanReviewFocus": "OPTIONS ARE IMAGES ONLY. Human MUST visually compare the f(x) graph against four f'(x) candidates. Solution claims (D): x<0 → f increasing → f'≥0 eliminates A,C. Near x=0 from right → f increasing → f'≥0 eliminates B. Verify this reasoning against the actual images.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q07",
+      "questionNumber": 7,
+      "questionType": "multiple_choice",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设函数 $f(x, y)$ 在点 $(0, 0)$ 附近有定义，且 $f_{x}^{\\prime}(0, 0) = 3$ ， $f_{y}^{\\prime}(0, 0) = 1$ ，则（）\n\n$\\left(\\mathrm{A}\\right)\\mathrm{d}z\\bigg|_{(0,0)} = 3\\mathrm{d}x + \\mathrm{d}y.$   \n(B) 曲面 $z = f(x, y)$ 在点 $(0, 0, f(0, 0))$ 的法向量为 $(3, 1, 1)$ .  \n（C）曲线 $\\left\\{ \\begin{array}{l}z = f(x,y),\\\\ y = 0 \\end{array} \\right.$ 在点(0,0， $f(0,0)$ ）的切向量为(1,0,3).  \n(D) 曲线 $\\left\\{ \\begin{array}{l} z = f(x, y), \\\\ y = 0 \\end{array} \\right.$ ，在点 $(0, 0, f(0, 0))$ 的切向量为 $(3, 0, 1)$ .",
+        "options": [
+          {
+            "label": "A",
+            "value": "$\\mathrm{d}z\\bigg|_{(0,0)} = 3\\mathrm{d}x + \\mathrm{d}y.$"
+          },
+          {
+            "label": "B",
+            "value": "曲面 $z = f(x, y)$ 在点 $(0, 0, f(0, 0))$ 的法向量为 $(3, 1, 1)$ ."
+          },
+          {
+            "label": "C",
+            "value": "曲线 $\\left\\{ \\begin{array}{l}z = f(x,y),\\\\ y = 0 \\end{array} \\right.$ 在点(0,0， $f(0,0)$ ）的切向量为(1,0,3)."
+          },
+          {
+            "label": "D",
+            "value": "曲线 $\\left\\{ \\begin{array}{l} z = f(x, y), \\\\ y = 0 \\end{array} \\right.$ ，在点 $(0, 0, f(0, 0))$ 的切向量为 $(3, 0, 1)$ ."
+          }
+        ],
+        "answerCandidate": "(C).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "因为函数可偏导不一定可微，所以（A）不对；\n\n曲线 $\\left\\{ \\begin{array}{l} z = f(x, y), \\\\ y = 0 \\end{array} \\right.$ 在 $(0, 0, f(0, 0))$ 处的切向量为\n\n$$\n\\boldsymbol {T} = \\left\\{\\left| \\begin{array}{c c} - f _ {y} ^ {\\prime} & 1 \\\\ 1 & 0 \\end{array} \\right|, \\left| \\begin{array}{c c} 1 & - f _ {x} ^ {\\prime} \\\\ 0 & 0 \\end{array} \\right|, \\left| \\begin{array}{c c} - f _ {x} ^ {\\prime} & - f _ {y} ^ {\\prime} \\\\ 0 & 1 \\end{array} \\right| \\right\\} _ {(0, 0)} = \\{- 1, 0, - f _ {x} ^ {\\prime} \\} _ {(0, 0)} = \\{- 1, 0, - 3 \\},\n$$\n\n于是曲线 $\\left\\{ \\begin{array}{l} z = f(x, y), \\\\ y = 0 \\end{array} \\right.$ 在 $(0, 0, f(0, 0))$ 处的切向量为 $\\{1, 0, 3\\}$ ，应选(C).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "偏导数与可微性",
+          "曲面的法向量",
+          "空间曲线的切向量"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [
+          {
+            "location": "stem — option C text",
+            "detail": "Mixed Chinese/English punctuation: '(0,0， $f(0,0)$ ）' uses Chinese comma '，' and Chinese right bracket '）'. OCR artifact.",
+            "severity": "info"
+          }
+        ],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "inline_option_A",
+            "detail": "In original paper, option A is inline in stem text after question mark. Options B,C,D are separate lines. Staging correctly extracted all four options. No content lost.",
+            "severity": "info"
+          }
+        ],
+        "humanReviewFocus": "Verify: (A) partial derivatives exist but f may not be differentiable. (B) normal vector should be (f_x, f_y, -1) not (3,1,1). (C) tangent of {z=f,y=0} is proportional to (1,0,f_x)=(1,0,3) — correct. (D) (3,0,1) is wrong.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q08",
+      "questionNumber": 8,
+      "questionType": "multiple_choice",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设 $f(0) = 0$ , 则 $f(x)$ 在点 $x = 0$ 可导的充要条件为( )\n\n(A) $\\lim_{h\\to 0}\\frac{1}{h^2} f(1 - \\cos h)$ 存在.\n\n(B) $\\lim_{h\\to 0}\\frac{1}{h} f(1 - \\mathrm{e}^h)$ 存在.\n\n(C) $\\lim_{h\\to 0}\\frac{1}{h^2} f(h - \\sin h)$ 存在.\n\n(D) $\\lim_{h\\to 0}\\frac{1}{h} [f(2h) - f(h)]$ 存在.",
+        "options": [
+          {
+            "label": "A",
+            "value": "$\\lim_{h\\to 0}\\frac{1}{h^2} f(1 - \\cos h)$ 存在."
+          },
+          {
+            "label": "B",
+            "value": "$\\lim_{h\\to 0}\\frac{1}{h} f(1 - \\mathrm{e}^h)$ 存在."
+          },
+          {
+            "label": "C",
+            "value": "$\\lim_{h\\to 0}\\frac{1}{h^2} f(h - \\sin h)$ 存在."
+          },
+          {
+            "label": "D",
+            "value": "$\\lim_{h\\to 0}\\frac{1}{h} [f(2h) - f(h)]$ 存在."
+          }
+        ],
+        "answerCandidate": "（B）.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "因为当 $h\\to 0$ 时， $1 - \\cos h\\rightarrow 0^{+}$\n\n所以 $\\lim_{h\\to 0}\\frac{f(1 - \\cos h)}{h^2} = \\lim_{h\\to 0}\\frac{f(1 - \\cos h) - f(0)}{1 - \\cos h}\\cdot \\frac{1 - \\cos h}{h^2} = \\frac{1}{2} f_+^\\prime (0),$\n\n即 $\\lim_{h\\to 0}\\frac{f(1 - \\cos h)}{h^2}$ 存在只能使右导数存在，故（A）不对；\n\n$$\n\\lim  _ {h \\rightarrow 0} \\frac {f (h - \\sin h)}{h ^ {2}} = \\lim  _ {h \\rightarrow 0} \\frac {f (h - \\sin h) - f (0)}{h - \\sin h} \\cdot \\frac {h - \\sin h}{h ^ {2}},\n$$\n\n因为 $\\lim_{h\\to 0}\\frac{h - \\sin h}{h^2} = 0$ ，所以 $\\lim_{h\\to 0}\\frac{f(h - \\sin h)}{h^2}$ 存在不一定使 $\\lim_{h\\to 0}\\frac{f(h - \\sin h) - f(0)}{h - \\sin h}$ 存在，即 $f(x)$ 在 $x = 0$ 处不一定可导，（C）不对；\n\n取 $f(x) = \\begin{cases} x, & x \\neq 0, \\\\ 2, & x = 0, \\end{cases}$ 显然 $\\lim_{h \\to 0} \\frac{f(2h) - f(h)}{h} = 1$ ，因为 $\\lim_{x \\to 0} f(x) = 0 \\neq f(0)$ ，所以 $f(x)$ 在 $x = 0$ 处不连续，故在 $x = 0$ 处不可导，（D）不对，应选（B）.\n\n方法点评：导数定义为 $\\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x} = f'(x_0)$ ，等价定义为 $\\lim_{x \\to x_0} \\frac{f(x) - f(x_0)}{x - x_0} = f'(x_0)$ ，\n\n考查导数定义时一定要准确理解导数定义的本质，注意如下三个方面：\n\n（1）导数定义中 $\\Delta x\\to 0$ 要同时保证 $\\Delta x\\to 0^{+}$ 和 $\\Delta x\\rightarrow 0^{-}$   \n（2）定义中函数增量后一项必须为 $f(x_0)$ ，即 $\\lim_{h\\to 0}\\frac{f(x_0 + ah) - f(x_0 + bh)}{h} (ab\\neq 0)$ 存在不能保证 $f^{\\prime}(x_0)$ 存在；  \n（3）分子分母自变量改变量的阶相同，即 $\\lim_{\\substack{\\alpha \\to 0\\\\ \\beta \\to 0}}\\frac{f(x_0 + \\beta) - f(x_0)}{\\alpha}$ 中 $\\alpha ,\\beta$ 是同阶无穷小.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "导数的定义",
+          "可导的充要条件",
+          "单侧导数与双侧导数"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [],
+        "humanReviewFocus": "Verify: (A) 1-cos h → 0⁺, only tests right derivative. (B) 1-e^h ~ -h tests both sides, and lim h⁻¹f(1-e^h) = -f'(0). (C) h-sin h ~ h³/6 → 0 too fast (zero limit factor). (D) counterexample with discontinuous f. Answer (B).",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q09",
+      "questionNumber": 9,
+      "questionType": "multiple_choice",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设 $\\mathbf{A} = \\begin{pmatrix} 1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 1 \\end{pmatrix}, \\mathbf{B} = \\begin{pmatrix} 4 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{pmatrix}$ , 则 $\\mathbf{A}$ 与 $\\mathbf{B}(\\quad)$\n\n(A) 合同且相似.\n\n（B）合同但不相似\n\n(C) 不合同但相似.\n\n(D) 不合同且不相似.",
+        "options": [
+          {
+            "label": "A",
+            "value": "合同且相似."
+          },
+          {
+            "label": "B",
+            "value": "合同但不相似"
+          },
+          {
+            "label": "C",
+            "value": "不合同但相似."
+          },
+          {
+            "label": "D",
+            "value": "不合同且不相似."
+          }
+        ],
+        "answerCandidate": "（A）.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "令 $|\\lambda E - A| = 0$ ，得 $\\mathbf{A}$ 的特征值为 $\\lambda_1 = 4, \\lambda_2 = \\lambda_3 = \\lambda_4 = 0$\n\n显然 $\\pmb{B}$ 与 $\\pmb{A}$ 特征值相同，且 $A,B$ 都是实对称矩阵，故 $A,B$ 相似且合同，应选(A).\n\n方法点评：设 $A, B$ 是两个实对称矩阵，则 $A$ 与 $B$ 相似的充分必要条件是 $|\\lambda E - A| = |\\lambda E - B|$ ，即两个矩阵的特征值相同；\n\n设 $A, B$ 是两个实对称矩阵，则 $A$ 与 $B$ 合同的充分必要条件是 $A, B$ 正、负特征值的个数相同.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "矩阵相似",
+          "矩阵合同",
+          "实对称矩阵的特征值"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [],
+        "humanReviewFocus": "Verify: A (all-ones 4×4) eigenvalues: 4,0,0,0. B eigenvalues: same. Both real symmetric. Same eigenvalues → similar. Same inertia (1 pos, 3 zero) → congruent. Answer (A).",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q10",
+      "questionNumber": 10,
+      "questionType": "multiple_choice",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "将一枚硬币重复掷 $n$ 次, 以 $X$ 和 $Y$ 分别表示正面向上和反面向上的次数, 则 $X$ 和 $Y$ 的相关系数等于( )\n\n(A) - 1.\n\n(B)0.\n\n(C) $\\frac{1}{2}$ .\n\n(D)1.",
+        "options": [
+          {
+            "label": "A",
+            "value": "- 1."
+          },
+          {
+            "label": "B",
+            "value": "0."
+          },
+          {
+            "label": "C",
+            "value": "$\\frac{1}{2}$ ."
+          },
+          {
+            "label": "D",
+            "value": "1."
+          }
+        ],
+        "answerCandidate": "（A）.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "方法一 由 $X + Y = n$ ，得 $Y = -X + n$ ，于是\n\n$$\nD (X) = D (Y), \\quad \\operatorname {C o v} (X, Y) = \\operatorname {C o v} (X, - X + n) = - D (X).\n$$\n\n故 $\\rho_{XY} = \\frac{\\operatorname{Cov}(X,Y)}{\\sqrt{D(X)}\\cdot\\sqrt{D(Y)}} = -\\frac{D(X)}{D(X)} = -1$ ，应选（A）.\n\n方法二 因为 $P\\{Y = -X + n\\} = 1$ 且 $-1 < 0$ ，所以 $\\rho_{XY} = -1$ ，应选(A).\n\n方法点评：设 $X, Y$ 为两个随机变量，若 $\\rho_{XY} = 1$ ，称随机变量 $X, Y$ 正相关，其充分必要条件为 $P\\{Y = aX + b\\} = 1 (a > 0)$\n\n设 $X, Y$ 为两个随机变量，若 $\\rho_{XY} = -1$ ，称随机变量 $X, Y$ 负相关，其充分必要条件为 $P\\{Y = aX + b\\} = 1 (a < 0)$ 。",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "相关系数",
+          "协方差",
+          "随机变量的线性关系"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [],
+        "humanReviewFocus": "Verify: X+Y=n is deterministic negative linear relationship (Y = -X + n). Therefore ρ_XY = -1. Answer (A).",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q11",
+      "questionNumber": 11,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "求 $\\int \\frac{\\arctan\\mathrm{e}^x}{\\mathrm{e}^{2x}}\\mathrm{d}x.$",
+        "options": [],
+        "answerCandidate": "$-\\frac{1}{2\\mathrm{e}^{2x}}\\arctan\\mathrm{e}^x - \\frac{1}{2\\mathrm{e}^x} - \\frac{1}{2}\\arctan\\mathrm{e}^x + C$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "方法一 令 $\\mathrm{e}^x = t$ ，则\n\n$$\n\\begin{array}{l} \\int \\frac {\\arctan e ^ {x}}{e ^ {2 x}} d x = \\int \\frac {\\arctan t}{t ^ {3}} d t = - \\frac {1}{2} \\int \\arctan t d (t ^ {- 2}) \\\\ = - \\frac {1}{2 t ^ {2}} \\arctan t + \\frac {1}{2} \\int \\frac {t ^ {- 2}}{1 + t ^ {2}} d t = - \\frac {1}{2 t ^ {2}} \\arctan t + \\frac {1}{2} \\int \\frac {1}{t ^ {2} (1 + t ^ {2})} d t \\\\ = - \\frac {1}{2 t ^ {2}} \\arctan t + \\frac {1}{2} \\int \\left(\\frac {1}{t ^ {2}} - \\frac {1}{1 + t ^ {2}}\\right) d t \\\\ = - \\frac {1}{2 t ^ {2}} \\arctan t - \\frac {1}{2 t} - \\frac {1}{2} \\arctan t + C \\\\ = - \\frac {1}{2 \\mathrm {e} ^ {2 x}} \\arctan \\mathrm {e} ^ {x} - \\frac {1}{2 \\mathrm {e} ^ {x}} - \\frac {1}{2} \\arctan \\mathrm {e} ^ {x} + C. \\\\ \\end{array}\n$$\n\n方法二\n\n$$\n\\begin{array}{l} \\int \\frac {\\arctan e ^ {x}}{e ^ {2 x}} d x = - \\frac {1}{2} \\int \\arctan e ^ {x} d \\left(e ^ {- 2 x}\\right) = - \\frac {\\arctan e ^ {x}}{2 e ^ {2 x}} + \\frac {1}{2} \\int \\frac {e ^ {- 2 x}}{1 + e ^ {2 x}} \\cdot e ^ {x} d x \\\\ = - \\frac {\\arctan e ^ {x}}{2 e ^ {2 x}} + \\frac {1}{2} \\int \\frac {d (e ^ {x})}{e ^ {2 x} (1 + e ^ {2 x})} = - \\frac {\\arctan e ^ {x}}{2 e ^ {2 x}} + \\frac {1}{2} \\int \\left(\\frac {1}{e ^ {2 x}} - \\frac {1}{1 + e ^ {2 x}}\\right) d (e ^ {x}) \\\\ = - \\frac {\\arctan e ^ {x}}{2 e ^ {2 x}} - \\frac {1}{2 e ^ {x}} - \\frac {1}{2} \\arctan e ^ {x} + C. \\\\ \\end{array}\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "answerExtractionNote": "Extracted from solution (11) final line of both methods"
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "不定积分的换元法",
+          "分部积分法",
+          "有理函数积分"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "answer_embedded_in_explanation",
+            "detail": "Solution file has no explicit 【答案】 marker for (11). Answer embedded in solution steps: $-\\frac{1}{2\\mathrm{e}^{2x}}\\arctan\\mathrm{e}^x - \\frac{1}{2\\mathrm{e}^x} - \\frac{1}{2}\\arctan\\mathrm{e}^x + C$. answerStatus is 'missing' per source convention.",
+            "severity": "warning"
+          }
+        ],
+        "humanReviewFocus": "Extract answer from solution and verify both methods give same result. Answer: -1/(2e²ˣ)·arctan(eˣ) - 1/(2eˣ) - ½·arctan(eˣ) + C.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q12",
+      "questionNumber": 12,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设函数 $z = f(x,y)$ 在点(1,1)处可微，且 $f(1,1) = 1, \\left.\\frac{\\partial f}{\\partial x}\\right|_{(1,1)} = 2, \\left.\\frac{\\partial f}{\\partial y}\\right|_{(1,1)} = 3, \\varphi(x) = f(x,f(x,x))$ 求 $\\frac{\\mathrm{d}}{\\mathrm{d}x}\\varphi^3 (x)\\Bigg|_{x = 1}.$",
+        "options": [],
+        "answerCandidate": "$51$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$\\frac{\\mathrm{d}}{\\mathrm{d}x}\\varphi^3 (x) = 3\\varphi^2 (x)\\varphi '(x),$\n\n而 $\\varphi^{\\prime}(x) = f_{1}^{\\prime}(x,f(x,x)) + f_{2}^{\\prime}(x,f(x,x))\\bullet [f_{1}^{\\prime}(x,x) + f_{2}^{\\prime}(x,x)]$\n\n$$\n\\varphi (1) = f (1, f (1, 1)) = f (1, 1) = 1,\n$$\n\n由 $f_{1}^{\\prime}(1,1) = \\frac{\\partial f}{\\partial x}\\bigg|_{(1,1)} = 2,f_{2}^{\\prime}(1,1) = \\frac{\\partial f}{\\partial y}\\bigg|_{(1,1)} = 3,$\n\n得 $\\varphi^{\\prime}(1) = f_{1}^{\\prime}(1,f(1,1)) + f_{2}^{\\prime}(1,f(1,1))\\cdot [f_{1}^{\\prime}(1,1) + f_{2}^{\\prime}(1,1)]$\n\n$$\n= f _ {1} ^ {\\prime} (1, 1) + f _ {2} ^ {\\prime} (1, 1) \\cdot \\left[ f _ {1} ^ {\\prime} (1, 1) + f _ {2} ^ {\\prime} (1, 1) \\right] = 2 + 3 (2 + 3) = 1 7,\n$$\n\n故 $\\frac{\\mathrm{d}}{\\mathrm{d}x}\\varphi^3 (x)\\Big|_{x = 1} = 51.$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "answerExtractionNote": "Extracted from solution (12) last line: d/dx[φ³(x)]|x=1 = 51"
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "多元复合函数求导",
+          "链式法则",
+          "全导数"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "answer_embedded_in_explanation",
+            "detail": "No explicit 【答案】 marker. Answer on last line: d/dx[φ³(x)]|_{x=1} = 51.",
+            "severity": "warning"
+          }
+        ],
+        "humanReviewFocus": "Verify: φ'(1) = f₁(1,f(1,1)) + f₂(1,f(1,1))·[f₁+f₂] = 2 + 3·5 = 17. Then d/dx[φ³]|₁ = 3·φ²(1)·φ'(1) = 3·1·17 = 51.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q13",
+      "questionNumber": 13,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设 $f(x) = \\left\\{ \\begin{array}{ll} \\frac{1 + x^2}{x}\\arctan x, & x \\neq 0, \\\\ 1, & x = 0, \\end{array} \\right.$ 试将 $f(x)$ 展开成 $x$ 的幂级数，并求级数 $\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{1 - 4n^2}$ 的和.",
+        "options": [],
+        "answerCandidate": "幂级数展开：$f(x) = 1 + 2\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{1-4n^2}x^{2n}$（$-1\\leqslant x\\leqslant 1$）；\\n级数和：$\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{1-4n^2} = \\frac{\\pi}{4} - \\frac{1}{2}$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "由 $(\\arctan x)' = \\frac{1}{1 + x^2} = \\sum_{n=0}^{\\infty} (-1)^n x^{2n} (-1 < x < 1)$ ,\n\n所以 $\\arctan x = \\arctan 0 + \\int_{0}^{x}\\frac{1}{1 + x^2}\\mathrm{d}x = \\sum_{n = 0}^{\\infty}\\frac{(-1)^n}{2n + 1} x^{2n + 1}(-1\\leqslant x\\leqslant 1),$\n\n于是 $f(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2n+1} x^{2n} + \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2n+1} x^{2n+2}$\n\n$$\n\\begin{array}{l} = 1 + \\sum_ {n = 1} ^ {\\infty} \\frac {(- 1) ^ {n}}{2 n + 1} x ^ {2 n} + \\sum_ {n = 1} ^ {\\infty} \\frac {(- 1) ^ {n - 1}}{2 n - 1} x ^ {2 n} \\\\ = 1 + 2 \\sum_ {n = 1} ^ {\\infty} \\frac {(- 1) ^ {n}}{1 - 4 n ^ {2}} x ^ {2 n} (- 1 \\leqslant x \\leqslant 1), \\\\ \\end{array}\n$$\n\n故 $\\sum_{n = 1}^{\\infty}\\frac{(-1)^n}{1 - 4n^2} = \\frac{1}{2} [f(1) - 1] = \\frac{\\pi}{4} -\\frac{1}{2}.$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "answerExtractionNote": "Extracted from solution (13) last line: power series + sum"
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "幂级数展开",
+          "函数的幂级数表示",
+          "级数求和"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "answer_embedded_in_explanation",
+            "detail": "No explicit 【答案】 marker. Answer: $\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{1-4n^2} = \\frac{\\pi}{4} - \\frac{1}{2}$. Also, the power series expansion of f(x) is $1 + 2\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{1-4n^2}x^{2n}$ for |x|≤1.",
+            "severity": "warning"
+          }
+        ],
+        "humanReviewFocus": "Verify: (1) Power series expansion of arctan x yields f(x) = 1 + 2Σ(-1)ⁿ/(1-4n²)·x²ⁿ. (2) At x=1, f(1) = (1+1)/1 · π/4 = π/2. Then Σ = ½(f(1)-1) = ½(π/2 - 1) = π/4 - ½. Check convergence at x=1.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q14",
+      "questionNumber": 14,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "计算 $I = \\oint_{L}(y^{2} - z^{2})\\mathrm{d}x + (2z^{2} - x^{2})\\mathrm{d}y + (3x^{2} - y^{2})\\mathrm{d}z,$ 其中 $L$ 是平面 $x + y + z = 2$ 与柱面 $|x| + |y| = 1$ 的交线，从 $z$ 轴正向看去， $L$ 为逆时针方向.",
+        "options": [],
+        "answerCandidate": "$-24$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "设截口平面为 $\\Sigma$ ，按右手准则 $\\Sigma$ 取上侧， $\\Sigma$ 的方向向量为 $n = \\{1,1,1\\}$\n\n方向余弦为 $\\cos \\alpha = \\frac{1}{\\sqrt{3}}$ ， $\\cos \\beta = \\frac{1}{\\sqrt{3}}$ ， $\\cos \\gamma = \\frac{1}{\\sqrt{3}}$\n\n由斯托克斯公式得\n\n$$\n\\begin{array}{l} I = \\frac {1}{\\sqrt {3}} \\iint_ {\\Sigma} \\left| \\begin{array}{c c c} 1 & 1 & 1 \\\\ \\frac {\\partial}{\\partial x} & \\frac {\\partial}{\\partial y} & \\frac {\\partial}{\\partial z} \\\\ y ^ {2} - z ^ {2} & 2 z ^ {2} - x ^ {2} & 3 x ^ {2} - y ^ {2} \\end{array} \\right| d S = - \\frac {2}{\\sqrt {3}} \\iint_ {\\Sigma} (4 x + 2 y + 3 z) d S \\\\ = - \\frac {2}{\\sqrt {3}} \\iint_ {\\Sigma} (x - y + 6) d S = - \\frac {1 2}{\\sqrt {3}} \\iint_ {\\Sigma} d S = - \\frac {1 2}{\\sqrt {3}} \\iint_ {D} \\sqrt {3} d \\sigma = - 2 4. \\\\ \\end{array}\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "answerExtractionNote": "Extracted from solution (14) last line: I = -24"
+      },
+      "semanticReview": {
+        "confidence": "medium",
+        "suggestedKnowledgePoints": [
+          "斯托克斯公式 (Stokes' theorem)",
+          "空间第二类曲线积分",
+          "方向余弦与曲面积分"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [
+          {
+            "location": "explanationCandidate",
+            "detail": "Extra spaces in LaTeX: `\\frac {\\partial}{\\partial x}` and `\\iint_ {\\Sigma}`. OCR pipeline artifact, renders correctly.",
+            "severity": "info"
+          }
+        ],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "answer_embedded_in_explanation",
+            "detail": "No explicit 【答案】 marker. Answer: I = -24.",
+            "severity": "warning"
+          }
+        ],
+        "humanReviewFocus": "CRITICAL multi-step verification: (1) Curl determinant → -2(4x+2y+3z)/√3. (2) On plane x+y+z=2: 4x+2y+3z = x-y+6. (3) ∬(x-y)dS=0 by symmetry over diamond |x|+|y|≤1. (4) ∬6dS = 6·(area of Σ) = 6·(area of diamond)·√3 = 6·2·√3 = 12√3. (5) I = -2/√3 · 12√3 = -24.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q15",
+      "questionNumber": 15,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设 $y = f(x)$ 在 $(-1, 1)$ 内具有二阶连续导数且 $f''(x) \\neq 0$ ，试证：\n\n(1) 对于 $(-1, 1)$ 内的任一 $x \\neq 0$ , 存在唯一的 $\\theta(x) \\in (0, 1)$ , 使 $f(x) = f(0) + xf'(\\theta(x)x)$ 成立;  \n(2) $\\lim_{x \\to 0} \\theta(x) = \\frac{1}{2}$ .",
+        "options": [],
+        "answerCandidate": null,
+        "answerStatus": "not_applicable",
+        "explanationCandidate": "（I）由微分中值定理得 $f(x) - f(0) = f^{\\prime}[0 + \\theta (x)x]x$\n\n即 $f(x) = f(0) + f^{\\prime}[\\theta (x)x]x$ ，其中 $\\theta (x)\\in (0,1)$\n\n不妨设 $f(x) = f(0) + f^{\\prime}[\\theta_{1}(x)x]x$ ， $f(x) = f(0) + f^{\\prime}[\\theta_{2}(x)x]x$\n\n两式相减得 $f^{\\prime}[\\theta_{1}(x)x]x = f^{\\prime}[\\theta_{2}(x)x]x$\n\n注意到 $x \\neq 0$ ，则有 $f^{\\prime}[\\theta_{1}(x)x] = f^{\\prime}[\\theta_{2}(x)x]$\n\n因为 $f''(x)$ 连续且 $f''(x) \\neq 0$ ，所以 $f''(x) > 0$ 或 $f''(x) < 0$ ，即 $f'(x)$ 单调增加或单调减少，于是 $\\theta_1(x) = \\theta_2(x)$ ，即存在唯一的 $\\theta(x) \\in (0,1)$ ，使得\n\n$$\nf (x) = f (0) + f ^ {\\prime} [ \\theta (x) x ] x.\n$$\n\n（Ⅱ）由泰勒公式得\n\n$f(x) = f(0) + f'(0)x + \\frac{f''(\\xi)}{2!} x^2$ ，其中 $\\xi$ 介于0与 $x$ 之间，\n\n于是 $f(0) + f'(0)x + \\frac{f''(\\xi)}{2!} x^2 = f(0) + f'[\\theta(x)x]x$\n\n或 $\\theta (x)\\frac{f^{\\prime}[\\theta(x)x] - f^{\\prime}(0)}{\\theta(x)x} = \\frac{f^{\\prime\\prime}(\\xi)}{2!},$\n\n由 $f^{\\prime \\prime}(x)$ 连续及 $f^{\\prime \\prime}(x)\\neq 0$ ，两边取极限得 $f^{\\prime \\prime}(0)\\lim_{x\\to 0}\\theta (x) = \\frac{f^{\\prime\\prime}(0)}{2!}$ 故 $\\lim_{x\\to 0}\\theta (x) = \\frac{1}{2}$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "answerExtractionNote": "Proof question — no numeric or formula answer. Verification complete."
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "微分中值定理 (Lagrange)",
+          "泰勒公式 (Taylor expansion)",
+          "唯一性与极限证明"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "multi_part_question",
+            "detail": "Question has sub-parts (1) and (2). Kept as single question per source. answerStatus 'missing' (proof question, no explicit answer line).",
+            "severity": "info"
+          }
+        ],
+        "humanReviewFocus": "Part (1): Verify uniqueness via strict monotonicity of f' from f''≠0. Part (2): Verify lim θ(x)=1/2 via Taylor: f(x)=f(0)+f'(0)x+f''(ξ)x²/2. Equate with f(0)+f'(θx)x, divide by x, let x→0.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q16",
+      "questionNumber": 16,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设有一高度为 $h(t)$ （ $t$ 为时间）的雪堆在融化过程中，其侧面满足方程 $z = h(t) - \\frac{2(x^2 + y^2)}{h(t)}$ （设长度单位为厘米，时间单位为小时），已知体积减少的速率与侧面积成正比（比例系数0.9），问高度为\n\n130（厘米）的雪堆全部融化需多少小时？",
+        "options": [],
+        "answerCandidate": "$100$ 小时",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$t$ 时刻雪堆的体积为\n\n$$\nV (t) = \\int_ {0} ^ {h (t)} \\mathrm {d} z \\iint_ {x ^ {2} + y ^ {2} \\leqslant \\frac {h ^ {2} (t) - h (t) z}{2}} \\mathrm {d} x \\mathrm {d} y = \\frac {\\pi}{2} \\int_ {0} ^ {h (t)} \\left[ h ^ {2} (t) - h (t) z \\right] \\mathrm {d} z = \\frac {\\pi h ^ {3} (t)}{4},\n$$\n\n侧面积为 $S(t) = \\iint_{x^2 + y^2 \\leqslant \\frac{h^2(t)}{2}} \\sqrt{1 + \\left(\\frac{\\partial z}{\\partial x}\\right)^2 + \\left(\\frac{\\partial z}{\\partial y}\\right)^2} \\, \\mathrm{d}x \\, \\mathrm{d}y = \\iint_{x^2 + y^2 \\leqslant \\frac{h^2(t)}{2}} \\sqrt{1 + \\frac{16(x^2 + y^2)}{h^2(t)}} \\, \\mathrm{d}x \\, \\mathrm{d}y$\n\n$$\n= \\int_ {0} ^ {2 \\pi} \\mathrm {d} \\theta \\int_ {0} ^ {\\frac {h (t)}{\\sqrt {2}}} r \\sqrt {1 + \\frac {1 6 r ^ {2}}{h ^ {2} (t)}} \\mathrm {d} r = \\frac{13\\pi h^{2}(t)}{12},\n$$\n\n由题意得 $\\frac{\\mathrm{d}V(t)}{\\mathrm{d}t} = -0.9S(t)$ ，整理得 $h^{\\prime}(t) = -\\frac{13}{10}$ ，解得 $h(t) = -\\frac{13}{10} t + C$ ，由 $h(0) = 130$ 得 $C = 130$ ，于是 $h(t) = -\\frac{13}{10} t + 130$ ，令 $h(t) = 0$ 得 $t = 100$ （小时），即高度为130厘米的雪堆经过100小时可以全部融化。",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "answerExtractionNote": "Extracted from solution (16) last line: t=100 hours",
+        "repairs": [
+          {
+            "field": "explanationCandidate",
+            "original": "\\frac {1 3 \\pi h ^ {2} (t)}{1 2}",
+            "repaired": "\\frac{13\\pi h^{2}(t)}{12}",
+            "reason": "OCR spacing artifact — letters/numbers separated by spaces causing incorrect rendering"
+          }
+        ]
+      },
+      "semanticReview": {
+        "confidence": "medium",
+        "suggestedKnowledgePoints": [
+          "定积分的几何应用",
+          "旋转体体积与侧面积",
+          "微分方程建模"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [
+          {
+            "location": "explanationCandidate",
+            "detail": "Extra spaces in LaTeX: `\\int_ {0} ^ {2 \\pi}`, `\\frac {1 3 \\pi h ^ {2} (t)}{1 2}`. Also `1 3` and `1 2` written with spaces. OCR artifact.",
+            "severity": "info"
+          }
+        ],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "answer_embedded_in_explanation",
+            "detail": "Answer: t = 100 hours. Embedded in explanation. No separate 【答案】.",
+            "severity": "warning"
+          }
+        ],
+        "humanReviewFocus": "KEY COMPUTATION: (1) V = πh³/4. (2) z_x = -4x/h, z_y = -4y/h → √(1+z_x²+z_y²) = √(1+16r²/h²). (3) S = ∫₀²π∫₀^(h/√2) r√(1+16r²/h²)drdθ = 13πh²/12. (4) dV/dt = -0.9S → 3πh²/4 · h' = -0.9·13πh²/12 → h' = -13/10. (5) h(t) = 130 - 13t/10 → t=100 hours.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q17",
+      "questionNumber": 17,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设 $\\alpha_{1},\\alpha_{2},\\dots ,\\alpha_{s}$ 为线性方程组 $Ax = 0$ 的一个基础解系， $\\pmb {\\beta}_1 = t_1\\pmb {\\alpha}_1 + t_2\\pmb {\\alpha}_2,\\pmb {\\beta}_2 = t_1\\pmb {\\alpha}_2 + t_2\\pmb {\\alpha}_3,\\dots ,$ $\\pmb {\\beta}_s = t_1\\pmb {\\alpha}_s + t_2\\pmb {\\alpha}_1$ ，其中 $t_1,t_2$ 为实常数．试问 $t_1,t_2$ 满足什么关系时， $\\pmb {\\beta}_1,\\pmb {\\beta}_2,\\dots ,\\pmb {\\beta}_s$ 也为 $Ax = 0$ 的一个基础解系.",
+        "options": [],
+        "answerCandidate": "当 $s$ 为偶数时 $t_1 \\neq \\pm t_2$；当 $s$ 为奇数时 $t_1 \\neq -t_2$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "因为 $\\alpha_{1},\\alpha_{2},\\dots ,\\alpha_{s}$ 为 $AX = 0$ 的基础解系，所以 $\\alpha_{1},\\alpha_{2},\\dots ,\\alpha_{s}$ 线性无关.\n\n由齐次线性方程组解的结构性质得 $\\beta_{1},\\beta_{2},\\dots ,\\beta_{s}$ 仍为方程组 $AX = 0$ 的解，\n\n则 $\\pmb{\\beta}_{1},\\pmb{\\beta}_{2},\\dots ,\\pmb{\\beta}_{s}$ 为方程组 $AX = 0$ 的基础解系的充分必要条件是 $\\pmb{\\beta}_{1},\\pmb{\\beta}_{2},\\dots ,\\pmb{\\beta}_{s}$ 线性无关，\n\n而 $(\\pmb{\\beta}_1, \\pmb{\\beta}_2, \\dots, \\pmb{\\beta}_s) = (\\pmb{\\alpha}_1, \\pmb{\\alpha}_2, \\dots, \\pmb{\\alpha}_s)\\left[ \\begin{array}{cccccc}t_1 & 0 & 0 & \\dots & t_2\\\\ t_2 & t_1 & 0 & \\dots & 0\\\\ 0 & t_2 & t_1 & \\dots & 0\\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\dots & t_1 \\end{array} \\right],$\n\n则 $\\pmb{\\beta}_{1},\\pmb{\\beta}_{2},\\dots ,\\pmb{\\beta}_{s}$ 线性无关的充分必要条件是 $\\begin{vmatrix} t_1 & 0 & 0 & \\dots & t_2\\\\ t_2 & t_1 & 0 & \\dots & 0\\\\ 0 & t_2 & t_1 & \\dots & 0\\\\ \\vdots & \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & 0 & \\dots & t_1 \\end{vmatrix} = t_1^s +(-1)^{s + 1}t_2^s\\neq 0,$\n\n当 $t_1^s + (-1)^{s+1} t_2^s \\neq 0$ 时，即当 $s$ 为偶数时， $t_1 \\neq \\pm t_2$ ；当 $s$ 为奇数时， $t_1 \\neq -t_2$ ，向量组 $\\pmb{\\beta}_1, \\pmb{\\beta}_2, \\dots, \\pmb{\\beta}_s$ 为方程组 $\\mathbf{AX} = \\mathbf{0}$ 的基础解系.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "answerExtractionNote": "Extracted from solution (17) last line: condition on t₁,t₂"
+      },
+      "semanticReview": {
+        "confidence": "medium",
+        "suggestedKnowledgePoints": [
+          "基础解系",
+          "线性无关性",
+          "循环矩阵的行列式"
+        ],
+        "paperSolutionConflicts": [
+          {
+            "type": "formula_rendering_in_source",
+            "detail": "In source solution file line 254, the determinant is rendered as `\\begin{array}{r}...\\end{array}` without vertical bars — a garbled OCR formula. Staging corrected to `\\begin{vmatrix}...\\end{vmatrix}`. Human MUST verify the determinant formula against the PDF.",
+            "severity": "warning"
+          }
+        ],
+        "ocrNoise": [
+          {
+            "location": "source solution file line 254",
+            "detail": "Garbled determinant in source: uses `\\begin{array}{r}t_1\\quad 0\\quad ...` without determinant bars. Corrected in staging to `\\begin{vmatrix}` with bars.",
+            "severity": "warning"
+          }
+        ],
+        "formulaIssues": [
+          {
+            "location": "source solution file (corrected in staging)",
+            "detail": "Determinant: det = t₁ˢ + (-1)ˢ⁺¹t₂ˢ. Source had `\\begin{array}{r}` instead of `\\begin{vmatrix}`. Staging corrected. Must verify against PDF.",
+            "severity": "warning"
+          }
+        ],
+        "structuralIssues": [
+          {
+            "type": "answer_embedded_in_explanation",
+            "detail": "Answer: s even → t₁ ≠ ±t₂; s odd → t₁ ≠ -t₂. Embedded in last line.",
+            "severity": "warning"
+          }
+        ],
+        "humanReviewFocus": "CRITICAL: Source has garbled determinant. Verify: (1) Transition matrix is correct (cyclic). (2) det = t₁ˢ + (-1)ˢ⁺¹t₂ˢ. (3) Condition: s even → t₁ ≠ ±t₂; s odd → t₁ ≠ -t₂. Must check against PDF.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q18",
+      "questionNumber": 18,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "已知3阶矩阵 $A$ 与3维向量 $\\pmb{x}$ ，使得向量组 $x,Ax,A^2 x$ 线性无关，且满足\n\n$$\n\\boldsymbol {A} ^ {3} \\boldsymbol {x} = 3 \\boldsymbol {A} \\boldsymbol {x} - 2 \\boldsymbol {A} ^ {2} \\boldsymbol {x}.\n$$\n\n(1) 记 $P = (x, Ax, A^2 x)$ , 求 3 阶矩阵 $\\pmb{B}$ , 使 $A = PBP^{-1}$ ;  \n(2) 计算行列式 $|A + E|$ .",
+        "options": [],
+        "answerCandidate": "$\\mathbf{B} = \\begin{pmatrix} 0 & 0 & 0 \\\\ 1 & 0 & 3 \\\\ 0 & 1 & -2 \\end{pmatrix}$；$|\\mathbf{A} + \\mathbf{E}| = -4$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（I）由 $\\mathbf{A}\\mathbf{P} = (\\mathbf{A}\\mathbf{x},\\mathbf{A}^2\\mathbf{x},\\mathbf{A}^3\\mathbf{x}) = (\\mathbf{A}\\mathbf{x},\\mathbf{A}^2\\mathbf{x},3\\mathbf{A}\\mathbf{x} - 2\\mathbf{A}^2\\mathbf{x}) = \\mathbf{P}\\left( \\begin{array}{ccc}0 & 0 & 0\\\\ 1 & 0 & 3\\\\ 0 & 1 & -2 \\end{array} \\right) = \\mathbf{PB}$ ，\n\n得 $\\mathbf{A} = \\mathbf{P}\\mathbf{B}\\mathbf{P}^{-1}$ ，其中 $\\pmb {B} = \\left( \\begin{array}{lll}0 & 0 & 0\\\\ 1 & 0 & 3\\\\ 0 & 1 & -2 \\end{array} \\right).$\n\n（Ⅱ）由 $|\\lambda \\pmb {E} - \\pmb {B}| = \\left| \\begin{array}{ccc}\\lambda & 0 & 0\\\\ -1 & \\lambda & -3\\\\ 0 & -1 & \\lambda +2 \\end{array} \\right| = (\\lambda +3)\\lambda (\\lambda -1) = 0,$\n\n得 $\\pmb{B}$ 的特征值为 $\\lambda_{1} = -3, \\lambda_{2} = 0, \\lambda_{3} = 1$\n\n因为 $\\mathbf{A} \\sim \\mathbf{B}$ , 所以 $\\mathbf{A}$ 的特征值为 $\\lambda_{1} = -3, \\lambda_{2} = 0, \\lambda_{3} = 1$ , 于是 $\\mathbf{A} + \\mathbf{E}$ 的特征值为 $\\mu_{1} = -2$ , $\\mu_{2} = 1, \\mu_{3} = 2$ , 故 $|\\mathbf{A} + \\mathbf{E}| = -4$ .",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "answerExtractionNote": "Extracted from solution (18): B matrix and |A+E|=-4"
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "矩阵相似对角化",
+          "特征值与特征向量",
+          "矩阵行列式计算"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "multi_part_question",
+            "detail": "Question has sub-parts (1) and (2). Kept as single question. answerStatus 'missing'.",
+            "severity": "info"
+          },
+          {
+            "type": "answer_embedded_in_explanation",
+            "detail": "(1) B = [[0,0,0],[1,0,3],[0,1,-2]]. (2) |A+E| = -4. Both embedded.",
+            "severity": "warning"
+          }
+        ],
+        "humanReviewFocus": "Verify: (1) AP = (Ax, A²x, A³x) = (Ax, A²x, 3Ax-2A²x) = P·B where B is the companion-like matrix. (2) |λI-B| = λ(λ+3)(λ-1). So A eigenvalues: -3,0,1. A+E eigenvalues: -2,1,2. |A+E| = (-2)(1)(2) = -4.",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q19",
+      "questionNumber": 19,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设某班车起点站上客人数 $X$ 服从参数为 $\\lambda (\\lambda >0)$ 的泊松分布，每位乘客在中途下车的概率为 $p(0 <   p <   1)$ ，且中途下车与否相互独立．以 $Y$ 表示在中途下车的人数，求：\n\n(1) 在发车时有 $n$ 个乘客的条件下, 中途有 $m$ 人下车的概率;  \n(2) 二维随机变量 $(X, Y)$ 的概率分布.",
+        "options": [],
+        "answerCandidate": "(1) $P\\{Y=m \\mid X=n\\} = C_n^m p^m (1-p)^{n-m}$（$0\\leqslant m\\leqslant n$）；\\n(2) $P\\{X=n, Y=m\\} = C_n^m p^m (1-p)^{n-m} \\cdot \\frac{\\lambda^n}{n!}\\mathrm{e}^{-\\lambda}$（$0\\leqslant m\\leqslant n, n=0,1,2,\\dots$）",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（I） $X$ 的分布律为 $P\\{X = k\\} = \\frac{\\lambda^k}{k!}\\mathrm{e}^{-\\lambda}(k = 0,1,2,\\dots)$ .\n\n$$\nP \\left\\{Y = m \\mid X = n \\right\\} = C _ {n} ^ {m} p ^ {m} (1 - p) ^ {n - m} (0 \\leqslant m \\leqslant n, n = 0, 1, 2, \\dots).\n$$\n\n（II）\n$$\n\\begin{array}{l} P \\{X = n, Y = m \\} = P \\{X = n \\} P \\{Y = m \\mid X = n \\} \\\\ = C _ {n} ^ {m} p ^ {m} (1 - p) ^ {n - m} \\cdot \\frac {\\lambda^ {n}}{n !} e ^ {- \\lambda} (0 \\leqslant m \\leqslant n, n = 0, 1, 2, \\dots). \\\\ \\end{array}\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "answerExtractionNote": "Extracted from solution (19): conditional + joint distribution"
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "条件概率",
+          "二维离散概率分布",
+          "泊松分布与二项分布"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [
+          {
+            "location": "source solution file line 286",
+            "detail": "Source uses `(\\mathrm {I I})` with spaces between I's for Roman numeral II. Minor formatting artifact.",
+            "severity": "info"
+          }
+        ],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "multi_part_question",
+            "detail": "Question has sub-parts (1) and (2). Kept as single question.",
+            "severity": "info"
+          },
+          {
+            "type": "answer_embedded_in_explanation",
+            "detail": "(1) P{Y=m|X=n} = C(n,m)·pᵐ·(1-p)ⁿ⁻ᵐ. (2) P{X=n,Y=m} = C(n,m)·pᵐ·(1-p)ⁿ⁻ᵐ·λⁿ/n!·e⁻λ.",
+            "severity": "warning"
+          }
+        ],
+        "humanReviewFocus": "Verify: (1) Conditional distribution Y|X=n ~ B(n,p). (2) Joint = marginal Poisson(λ) × conditional B(n,p).",
+        "pdfEvidence": "not_run"
+      }
+    },
+    {
+      "stableId": "math1-2001-q20",
+      "questionNumber": 20,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "candidateResult": {
+        "stem": "设总体 $X$ 服从正态分布 $N(\\mu, \\sigma^2) (\\sigma > 0)$ , 从该总体中抽取简单随机样本 $X_1, X_2, \\dots, X_{2n} (n \\geqslant 2)$ , 其样本均值为 $\\overline{X} = \\frac{1}{2n} \\sum_{i=1}^{2n} X_i$ , 求统计量 $Y = \\sum_{i=1}^{n} (X_i + X_{n+i} - 2\\overline{X})^2$ 的数学期望 $E(Y)$ .",
+        "options": [],
+        "answerCandidate": "$2(n-1)\\sigma^2$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "令 $Y_{i} = X_{i} + X_{n + i}(1\\leqslant i\\leqslant n)$ ，因为 $X_{1},X_{2},\\dots ,X_{2n}$ 相互独立且服从正态分布，所以 $Y_{i}\\sim N(2\\mu ,2\\sigma^{2})(1\\leqslant i\\leqslant n)$\n\n不妨设 $Y_{1}, Y_{2}, \\dots, Y_{n}$ 为来自总体 $N(2\\mu, 2\\sigma^{2})$ 的简单随机样本， $\\overline{Y} = \\frac{1}{n} \\sum_{i=1}^{n} Y_{i} = 2\\overline{X}$ ，\n\n于是统计量 $Y = \\sum_{i=1}^{n}(X_i + X_{n+i} - 2\\overline{X})^2 = \\sum_{i=1}^{n}(Y_i - \\overline{Y})^2$\n\n由 $\\frac{\\sum_{i=1}^{n}(Y_i - \\overline{Y})^2}{2\\sigma^2} \\sim \\chi^2(n-1)$ ，得 $E\\left(\\frac{\\sum_{i=1}^{n}(Y_i - \\overline{Y})^2}{2\\sigma^2}\\right) = n-1$ ，故 $E(Y) = 2(n-1)\\sigma^2$ .",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [],
+        "answerExtractionNote": "Extracted from solution (20) last line: E(Y)=2(n-1)σ²"
+      },
+      "semanticReview": {
+        "confidence": "high",
+        "suggestedKnowledgePoints": [
+          "正态分布的性质",
+          "卡方分布",
+          "统计量的数学期望"
+        ],
+        "paperSolutionConflicts": [],
+        "ocrNoise": [],
+        "formulaIssues": [],
+        "structuralIssues": [
+          {
+            "type": "answer_embedded_in_explanation",
+            "detail": "Answer: E(Y) = 2(n-1)σ². Embedded in last line. No separate 【答案】.",
+            "severity": "warning"
+          }
+        ],
+        "humanReviewFocus": "Verify: Y_i = X_i + X_{n+i} ~ N(2μ, 2σ²). Then Y = Σ(Y_i - Ȳ)² is sample variance of Y_i. Σ(Y_i-Ȳ)²/(2σ²) ~ χ²(n-1). E[Σ(Y_i-Ȳ)²] = 2σ²·(n-1) = 2(n-1)σ².",
+        "pdfEvidence": "not_run"
+      }
+    }
+  ],
+  "mdFinalizationRunId": "20260620-150843-cc-math1-md-finalize-year-2001",
+  "mdFinalizedAt": "2026-06-20T15:08:43+08:00"
+}

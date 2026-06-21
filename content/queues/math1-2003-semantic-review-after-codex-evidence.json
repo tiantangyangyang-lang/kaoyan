@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2003-semantic-review-after-codex-evidence",
+  "description": "Regenerate Math1 2003 semantic review while treating applied Codex visual evidence as authoritative.",
+  "tasks": [
+    {
+      "label": "Math1 2003 semantic review after Codex visual evidence",
+      "task": "ds-math1-year",
+      "year": 2003,
+      "maxTurns": 60
+    }
+  ]
+}

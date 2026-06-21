@@ -1,0 +1,2873 @@
+{
+  "schemaVersion": "math1-batch-manifest-v1",
+  "sourceRoot": "D:\\work\\Kaoyan-Math1-Papers",
+  "yearRange": {
+    "start": 1987,
+    "end": 2025
+  },
+  "summary": {
+    "calendarYears": 39,
+    "paperYears": 38,
+    "solutionYears": 38,
+    "dispositions": {
+      "needs_legacy_parser": 16,
+      "blocked_missing_paper": 1,
+      "ready_for_yearly_conversion": 17,
+      "needs_manual_or_special_parser": 4,
+      "blocked_version_selection": 1
+    }
+  },
+  "years": [
+    {
+      "year": 1987,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1987年考研数学(一)真题.md",
+          "length": 4925,
+          "sha256": "aedceddde097b7a3cbd3393aa4680ee621e85bf37802af814e97c0b285c9a81b",
+          "romanSectionCount": 11,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1987年解析\\1987年解析.md",
+          "length": 14217,
+          "sha256": "1b7e6f4033db92fbd761dc2bd1375b261028d2edf39ab5aad112171093407727",
+          "romanSectionCount": 6,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 12,
+          "explanationMarkerCount": 21,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1987年解析\\697c23e7-c33a-4654-918e-cc15905449fa_origin.pdf",
+          "length": 1659515,
+          "sha256": "dcb5b55ef34f6dc6e34515cc83408af5fafa7b57cb9be557c5a897eddb1474d1"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1988,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1988年考研数学(一)真题.md",
+          "length": 6076,
+          "sha256": "e048b20fdbae4c13d68b2b4285ec9e615e4b11290142c54a7093c91a90b0f531",
+          "romanSectionCount": 11,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1988年解析\\1988年解析.md",
+          "length": 12448,
+          "sha256": "41b269702d52f13149284620f38809774660b42428cab2fbdc727ad728f64b86",
+          "romanSectionCount": 4,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 12,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1988年解析\\9c040b07-132f-4872-93a6-ae11cbeef549_origin.pdf",
+          "length": 1469279,
+          "sha256": "a01ee432a8899f5a855258b2a57e1829136742f1c047516654f4f222b6f22fad"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1989,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1989年考研数学(一)真题.md",
+          "length": 5093,
+          "sha256": "dec7487ec83d7215e362eadc4381d188397398d84d111aae36ac1ca31b028105",
+          "romanSectionCount": 11,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1989年解析\\1989年解析.md",
+          "length": 14582,
+          "sha256": "c2041af651b83904e5d90fb0c5e955d24012521a663b032e4dd9db74bff785aa",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 13,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1989年解析\\b244a8fd-7b79-4223-beb0-cc03b1c26631_origin.pdf",
+          "length": 1699939,
+          "sha256": "6bc8649f6afc56fef51e9ff6ea31709533c378b7bd25401d78dc5afe6ffa91f0"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1990,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1990年考研数学(一)真题.md",
+          "length": 5933,
+          "sha256": "15e1b077b00318d6505be290b042792184dc5faf98954f7e40460d65fe827015",
+          "romanSectionCount": 11,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1990年解析\\1990年解析.md",
+          "length": 14168,
+          "sha256": "dc871d3dafd108717d39e2f0502ab703bfd0b9cdfa548da61b09290ca48fca21",
+          "romanSectionCount": 4,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 13,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1990年解析\\888cfc3b-9ca0-48f9-92b5-84aa9b829819_origin.pdf",
+          "length": 1601410,
+          "sha256": "9d541127e81005237a666ffcd92149d0b838ec376911bc26c441ee95f049275e"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1991,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1991年考研数学(一)真题.md",
+          "length": 5396,
+          "sha256": "c6b168dfbc4301b2bd3c95567d668ea15df5b675aec3dc67e1dcc8e156023051",
+          "romanSectionCount": 11,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1991年解析\\1991年解析.md",
+          "length": 17515,
+          "sha256": "7e8c4d3534cd8f4603646dc21cf36d36a5c5018a7281fff1b0615dfc3d3148dc",
+          "romanSectionCount": 5,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 13,
+          "explanationMarkerCount": 21,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1991年解析\\30332b8c-277c-45ae-85f9-ea095121d27f_origin.pdf",
+          "length": 1844120,
+          "sha256": "4dc3cded2a679a8db2eb2205961d40e992c4fe794d25cba9e61e4b8738c393a7"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1992,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1992年考研数学(一)真题.md",
+          "length": 5192,
+          "sha256": "70a4fd3963ab58c19cbd7a4b8fb59e741cfe096d7aeddca274a21f8fa74732e4",
+          "romanSectionCount": 11,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1992年解析\\1992年解析.md",
+          "length": 15170,
+          "sha256": "ceaf76419c1d3a881e05224c13fff3ce8afb8c2008dee6218c78dd59404f23fb",
+          "romanSectionCount": 4,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 12,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1992年解析\\be4472ee-e181-40de-b853-ef638d928b26_origin.pdf",
+          "length": 1625731,
+          "sha256": "586626b8733128c76253f481c67e0a2663981ddf329b93d426544611d8efda18"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1993,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1993年考研数学(一)真题.md",
+          "length": 5277,
+          "sha256": "b979563fe9c1accf5d6fa0bb04a17615a8bb168d3843e9763f0b2c5e4ae776ea",
+          "romanSectionCount": 11,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1993年解析\\1993年解析.md",
+          "length": 14631,
+          "sha256": "2b193a7012f4950e925892ecd8ad61d60e24b68fdc3fe42905045d0d06efbcd7",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 12,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1993年解析\\afae7b72-ef3d-4a0e-af26-b624c108dbfb_origin.pdf",
+          "length": 1651518,
+          "sha256": "e4e68a1cfc5da3636fa0cefc5287eb5a1632f5b7dfb7cb3eb26d2893b8071792"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1994,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 0,
+      "paperCandidates": [],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1994年解析\\1994年解析.md",
+          "length": 16505,
+          "sha256": "6eef3707e70adc434e5c88a2c78c3f65610dc970cfe8916ece67d10ced91e445",
+          "romanSectionCount": 5,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 12,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1994年解析\\880b8800-434c-4d90-9ed3-c35e4e2566b4_origin.pdf",
+          "length": 1920027,
+          "sha256": "48b61987b864764faf559be59d5d10d94cf504d8b1845557914aa5a2557d871f"
+        }
+      ],
+      "risks": [
+        "missing_paper"
+      ],
+      "disposition": "blocked_missing_paper"
+    },
+    {
+      "year": 1995,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1995年考研数学(一)真题.md",
+          "length": 5661,
+          "sha256": "e4276aa33b63e41fbb91cc7a8e10e8085da6444ec5a1f2738cd6e4dbb2c89a1a",
+          "romanSectionCount": 11,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1995年解析\\1995年解析.md",
+          "length": 14082,
+          "sha256": "b1511444a4a60b868b22cd04905e94a901cb73980828cbe455478aeba35f02e2",
+          "romanSectionCount": 5,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 12,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1995年解析\\d0ce65a2-fa10-4903-81a5-ae0b76b6df3e_origin.pdf",
+          "length": 1609808,
+          "sha256": "c17a152b0706e4051ab452918d257bd7fd3bb139148e47c297169013ec5c8e3a"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1996,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1996年考研数学(一)真题.md",
+          "length": 5897,
+          "sha256": "6fc6265e934b977740bd4b73f77e2c2a35b22a50ff732e967a7c1a141929e115",
+          "romanSectionCount": 11,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1996年解析\\1996年解析.md",
+          "length": 16783,
+          "sha256": "bcd10802ca8285b490e05a5f5f0504b235002ced17779a09474a4656ac92cc09",
+          "romanSectionCount": 5,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 12,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1996年解析\\1705b76c-9408-4915-8a43-9c6b9553af74_origin.pdf",
+          "length": 1851640,
+          "sha256": "d46ec11de3447af234ba3c0c38226fdd428a740bc83cc84a41af1b068dae2563"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1997,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1997年考研数学(一)真题.md",
+          "length": 6373,
+          "sha256": "de64858dfa6f5d43ba0a4d77ca272c200897628a284dc4743bf4030fbc132e42",
+          "romanSectionCount": 10,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1997年解析\\1997年解析.md",
+          "length": 15197,
+          "sha256": "778a0e0e60db7cdb869e7fab86f9806436cb07dc02cd1b46c026560f6db25557",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 10,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1997年解析\\27d94017-91f0-443e-8755-7cde432c2402_origin.pdf",
+          "length": 1787673,
+          "sha256": "c936a70fa20c4379622bf683affe91fe8b510e470635f6bd40ce5e3136906542"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1998,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1998年考研数学(一)真题.md",
+          "length": 7436,
+          "sha256": "d9ca97d4c5fd1cb8c9e3611f9531422527adb88cd5dc3878e1ea128588f47176",
+          "romanSectionCount": 15,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1998年解析\\1998年解析.md",
+          "length": 20281,
+          "sha256": "1a83f3a9b896ed662c22a75bb9e117d48444e8533eb48a2ad1397bf31cf4171a",
+          "romanSectionCount": 2,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 10,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1998年解析\\3a7840c3-ed01-4918-843c-73db6d854f4e_origin.pdf",
+          "length": 2220123,
+          "sha256": "149b782f79f5c6f4c8e711dad23651c874ee8d271b83a22a627c28209633c8ce"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 1999,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\1999年考研数学(一)真题.md",
+          "length": 6517,
+          "sha256": "f749b4e2fe6e61c76e5ba23bb7f0d6545f9dc3521a71be3e5ba7d5b9f18b5b5e",
+          "romanSectionCount": 13,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\1999年解析\\1999年解析.md",
+          "length": 14912,
+          "sha256": "827078a59ba4ffd42ca33489f29252f6cf2b0d7ff90bde4897a805ad3097b798",
+          "romanSectionCount": 5,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "answerMarkerCount": 10,
+          "explanationMarkerCount": 21,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\1999年解析\\93a12fab-520c-45ce-96ab-af247cb5b406_origin.pdf",
+          "length": 1675654,
+          "sha256": "ca8a30d36b7d082b6c9597167cafd943f2b3060553c607272544452f305c2cd4"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 2000,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2000年考研数学(一)真题.md",
+          "length": 6403,
+          "sha256": "f68b1fd5efe6fb14688b7d17d1b128e73554242cb68f9efde5138611e4509754",
+          "romanSectionCount": 13,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2000年解析\\2000年解析.md",
+          "length": 21228,
+          "sha256": "e43ce996a3014e76b3e9227e480b0ac7c9d855632bd9914af9b0432f95295ade",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "answerMarkerCount": 10,
+          "explanationMarkerCount": 21,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2000年解析\\a2fe840b-572d-41b4-bb28-db4747a419bf_origin.pdf",
+          "length": 2982470,
+          "sha256": "75f27505a6261fba778f05b5029fdfc9b838d71a4fdbe728d2e230e77094b7dc"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 2001,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2001年考研数学(一)真题.md",
+          "length": 6170,
+          "sha256": "e5aebc5513e3091cb6b3b0c60d9efc1fc31ede9324d7cc8da17e5411f10979c1",
+          "romanSectionCount": 12,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2001年解析\\2001年解析.md",
+          "length": 18972,
+          "sha256": "7e535dc8662309b973031d60e34800d7f11bc46001db975ca7a5a261d9a2db77",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "answerMarkerCount": 10,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2001年解析\\56daf349-890a-4596-95fb-587acf8080ac_origin.pdf",
+          "length": 2806006,
+          "sha256": "aaead3e026f4ff0f49830547561eee993022fe0548dd7b5313d3d11b3910c01c"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 2002,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 5,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2002年考研数学(一)真题.md",
+          "length": 6961,
+          "sha256": "829546b0fdd112c348f31241d5dd3a50636404053477a5a7566b1feb7c6d7c09",
+          "romanSectionCount": 12,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2002年解析\\2002年解析.md",
+          "length": 21202,
+          "sha256": "26ea4f5981cdb23981de34b5593e700eaf228095f6924835407f094ebe90fc28",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "answerMarkerCount": 10,
+          "explanationMarkerCount": 20,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2002年解析\\8c3a8ef3-d3d1-4c30-9316-808caa360be3_origin.pdf",
+          "length": 2776384,
+          "sha256": "42bff39319a2d39a9f518160bc5795cabfc3764866e7e97414a9e2b0fce1be7c"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 2003,
+      "structureFamily": "legacy_section_based",
+      "expectedQuestionCount": null,
+      "maxDetectedQuestionMarkers": 6,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2003年考研数学(一)真题.md",
+          "length": 7761,
+          "sha256": "5284a1f1c4f1c96197402ebddfd18a86b779e65bad02a6aade351248e3e2a970",
+          "romanSectionCount": 12,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2003年解析\\2003年解析.md",
+          "length": 32391,
+          "sha256": "9591e29a780f311e34eda394e7ad92399cf5b40a15749d7fa1597d976e837494",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            21,
+            22
+          ],
+          "answerMarkerCount": 12,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2003年解析\\07f6f558-2511-4f2c-b63c-0f52ae1a0d51_origin.pdf",
+          "length": 4172654,
+          "sha256": "9be0eb434a1d110f92f59d653e1cdbe72c66bfa024aba115f9929a13264c71ea"
+        }
+      ],
+      "risks": [],
+      "disposition": "needs_legacy_parser"
+    },
+    {
+      "year": 2004,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2004年考研数学(一)真题.md",
+          "length": 7158,
+          "sha256": "eeaa0521c3bd9dfd14457270d8eff2d3d40658df4236d8b0f0d95fc5c0a90b48",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2004年解析\\2004年解析.md",
+          "length": 31363,
+          "sha256": "ffad5db5c8b9c815317a6c554168c832f1271dbb0cce4578cfd7ddcfd4659ab4",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2004年解析\\2f4ebac7-a51a-4e7e-a856-b959728f741e_origin.pdf",
+          "length": 4091296,
+          "sha256": "8803a5fc041d17d73510220384d1677413a0c35aee529f3f0761eb24a93e40a7"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2005,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2005年考研数学(一)真题.md",
+          "length": 7926,
+          "sha256": "acc8311cfe1c5ea903c81eaf22228cf69c0b719516eb1ea11daf75122f89834d",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2005年解析\\2005年解析.md",
+          "length": 31537,
+          "sha256": "9a771b895e5af642a92635dda08789e19916eee98066875a239f0b3e5c8d9f4c",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2005年解析\\a395885c-b558-48d2-9dc8-f53762339068_origin.pdf",
+          "length": 4203097,
+          "sha256": "fe06b47f3eebc0c12166b6bcb4717d0e84bce2e997696bea0812f4f19e523141"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2006,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2006年考研数学(一)真题.md",
+          "length": 7441,
+          "sha256": "07c7ea59404cc4b4c1f1306dbd4eae97c11fda51dbb6ae71e96b453ae7e7d909",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2006年解析\\2006年解析.md",
+          "length": 26081,
+          "sha256": "8639815d9ecd639332f3646426fb1fcadfa6d41d8fa88d7ea8422c188ccea569",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2006年解析\\a5305275-bf9c-42f0-8853-bff34ff0304b_origin.pdf",
+          "length": 3880272,
+          "sha256": "4db8c15b0790846597e30359db7c620703fbf39fb75ba4756f2931ae498122a2"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2007,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 24,
+      "maxDetectedQuestionMarkers": 24,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2007年考研数学(一)真题.md",
+          "length": 7392,
+          "sha256": "81bff1ecd9c78feba0b3f14923117a6008cc0152d16a10e400746e536c7fd496",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2007年解析\\2007年解析.md",
+          "length": 30840,
+          "sha256": "d88c008cba4b64b3af779ea9bbd3dd671e12aa792acd795feb6fd1039f901eb6",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "answerMarkerCount": 16,
+          "explanationMarkerCount": 25,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2007年解析\\e7717387-e580-4cfa-9f5d-812c969ebfb5_origin.pdf",
+          "length": 4688400,
+          "sha256": "338f018fa021c0637f9b4cb28867fcb1b2456346d77e3bdde689914005510aae"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2008,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2008年考研数学(一)真题.md",
+          "length": 6224,
+          "sha256": "da923c20cd987458abdc08a52e0d5871c1e787d78cd649e1d1275d77cd2d622b",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2008年解析\\2008年解析.md",
+          "length": 26274,
+          "sha256": "49c20d92706083361f9e4b5d6bb8071e6801cd14e7823a62f7830e9c67f3d774",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 24,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2008年解析\\d4f80246-eae1-4785-8c63-3c9d3e6886b2_origin.pdf",
+          "length": 4004433,
+          "sha256": "265c38c273e4861d40662f3aaf1fd6d5cc922d761267b8f2d97d7680f39c99f8"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2009,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2009年考研数学(一)真题.md",
+          "length": 8015,
+          "sha256": "bed44333ee304e0c7460a3a90b21f919788130508cb7be4afe28ada741b03eea",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2009年解析\\2009年解析.md",
+          "length": 33293,
+          "sha256": "71bea61c85031376de5bfeb3710eee7a0e25adad1183a99dca64bde3ef9c063d",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2009年解析\\d3d1e555-8a40-46fa-b790-a7e9e5aa8bd0_origin.pdf",
+          "length": 5170516,
+          "sha256": "27c3b768a89805962ed1864430ea85a4459253fde0376b5e3acde842987cecac"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2010,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2010年考研数学(一)真题.md",
+          "length": 6607,
+          "sha256": "e5999f16c5f00206635c3a67f74edaeb457365c427580f036ad1bae21c30bed3",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2010年解析\\2010年解析.md",
+          "length": 32374,
+          "sha256": "59dc5534b7a9fc4f1f7032eff3ed0006be882a028306a3677b7b2d61ffa188c5",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 24,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2010年解析\\be1a01f8-8834-40df-98df-fdb7e2286790_origin.pdf",
+          "length": 5262363,
+          "sha256": "c6e33607b04601f4c39d37926a212311712a803b5c176582f06364875920e2a3"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2011,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2011年考研数学(一)真题.md",
+          "length": 6633,
+          "sha256": "c462e0c23ee9ce41bb1c38f179db4c212f1617d8ef0c0e05e060443162b22b52",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2011年解析\\2011年解析.md",
+          "length": 33806,
+          "sha256": "4c674885ddc55e75493c50a95a4eebb2088d7ca887890300c4f1292b4ccade6f",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 24,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2011年解析\\2bfd012b-ee32-4c1b-ae78-6e35348e7c1d_origin.pdf",
+          "length": 5254947,
+          "sha256": "e234ed322950d9c860c6f02f4ed666cf4d44f2532818b8b4e7c52448dd8042fa"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2012,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2012年考研数学(一)真题.md",
+          "length": 6655,
+          "sha256": "89dd16cad2bbccfd468d289a2ba0624e6a91cce93aecc149ed63d0e1e3ed1db5",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2012年解析\\2012年解析.md",
+          "length": 25216,
+          "sha256": "a60a7254ee38fc5a3aa8caa5f9330eabf603dfc6d362560ddfdb958ea773fbd6",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2012年解析\\8a6f02ce-d04b-4824-976e-7d78ec25671f_origin.pdf",
+          "length": 4229317,
+          "sha256": "15d0877b64269e2bd4db191594d2b885d5b91f4054cc6894d8909a0c05700bd9"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2013,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2013年考研数学(一)真题.md",
+          "length": 6597,
+          "sha256": "099d6a583798a25f828475947bc8d25674b28094cefc616f0781433b3d0fd8bb",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2013年解析\\2013年解析.md",
+          "length": 24613,
+          "sha256": "093ee6b9c41bc1632b2101054404c1de5347d4c4db4c48211ecd92e274a90550",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2013年解析\\3e431f72-851e-4d5e-8e72-50b69ef11de7_origin.pdf",
+          "length": 3232806,
+          "sha256": "e76ce8cf37e816e32458e6c36177b382881c0d4516eaf8d7a1fe0d392351ad68"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2014,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2014年考研数学(一)真题.md",
+          "length": 7145,
+          "sha256": "55377109dfce8ee5b61cb9c764937032a8938b36b92cd03e1ae52fa5621eae54",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2014年解析\\2014年解析.md",
+          "length": 29734,
+          "sha256": "ea37a42a798559484c59e915cf140ab37fa8a6463e2b4404d974efcf9bf7a453",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2014年解析\\17ef1e1f-1a29-4472-a43d-053ba9d28536_origin.pdf",
+          "length": 3812717,
+          "sha256": "3d62e1aec8a085e0e27533bd33884d955000957e50ccb35612905ab25063f1d7"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2015,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2015年考研数学(一)真题.md",
+          "length": 7317,
+          "sha256": "95e22b2f1bfafe78700d09c7da43a3f6c3be3ed35b9eafd3d3abfcf1bcfb381f",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2015年解析\\2015年解析.md",
+          "length": 20826,
+          "sha256": "370b84e7fc98afe6e2dcaabb6a2bf8561cec9b12b8d76ef81fa6926529148a9c",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2015年解析\\77200c0a-9abf-4b8c-824e-4573a8b1076b_origin.pdf",
+          "length": 2993600,
+          "sha256": "0fe0a28f007c7b9fde2320c39581afd3e268b4d81b6c04348f2a75130c746f0b"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2016,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2016年考研数学(一)真题.md",
+          "length": 7369,
+          "sha256": "dbade5dc1a56080c8ad1896e9ce480a20c38a05c7539c080b8cc4a17fd2914e8",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2016年解析\\2016年解析.md",
+          "length": 26130,
+          "sha256": "8a61cd8d2f33c241bf0462c1475ea305c245012d5b4f5141cb3ab16f8a029673",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2016年解析\\4b733686-8be7-42f4-8aa4-4901f77a1c04_origin.pdf",
+          "length": 2975727,
+          "sha256": "2ceefb69542960b6cc188abfc613cea0de77c77ea5e3cb3c36a01d56f69c4af1"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2017,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2017年考研数学(一)真题.md",
+          "length": 6774,
+          "sha256": "8513653ee4eac7a09bc28d99d44f496da74fb9ee9daceb715ab6131a4c62dc1b",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2017年解析\\2017年解析.md",
+          "length": 20975,
+          "sha256": "910205dc2607c1cc27039734c6b06fbcb594428f0e89c0bd3d8ec62bb37351d5",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2017年解析\\fc2a27bd-c688-49d4-8f79-e0c5c8d3c9d2_origin.pdf",
+          "length": 2811322,
+          "sha256": "781673a2371829b4586595ad232a4274a509b1b6088368efa7214703f486f56f"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2018,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2018年考研数学(一)真题.md",
+          "length": 6482,
+          "sha256": "6d612bd9a99b4e197e4a8a862421d078b8e6be4eccee0e7b35d4039efba339a7",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2018年解析\\2018年解析.md",
+          "length": 21380,
+          "sha256": "6df8a9e122c5eca4130b9d4961b7cf69709db4511e2da56fbe8933147667789d",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 23,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2018年解析\\9341c488-5778-4b27-85f6-45cfc3bc4318_origin.pdf",
+          "length": 2438747,
+          "sha256": "eb9e8aa7afaf10cf8b6c4d1e2748ce5607f116e6dfd2df45f9c792033e1d5ca6"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2019,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2019年考研数学(一)真题.md",
+          "length": 6778,
+          "sha256": "5807efd026940512ded43fe693ac4113615129edbc34124a4faa8fb4fbbe18b9",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2019年解析\\2019年解析.md",
+          "length": 22919,
+          "sha256": "e211c3fb431e121295f1c4b2129c848c060ab64ab2e7b06d4543b69e7ef4db01",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 25,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2019年解析\\4165f06d-fcf8-4675-bb6c-0a6448849a5c_origin.pdf",
+          "length": 2730058,
+          "sha256": "7a0df8a9272bc8b3b97cb9a2e379a31081903a9e007e8033326ed8efe5d95d64"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2020,
+      "structureFamily": "sequential_23",
+      "expectedQuestionCount": 23,
+      "maxDetectedQuestionMarkers": 23,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2020年考研数学(一)真题.md",
+          "length": 7382,
+          "sha256": "6006ca7a0654b38d0213677480baab0818d17e7b92cd4d859d8ec3e28910d5c3",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2020年解析\\2020年解析.md",
+          "length": 23257,
+          "sha256": "4f1b304e15887986d671799c5e1ffb9eaad9564f0954e13de4c6ee5842513edc",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "answerMarkerCount": 14,
+          "explanationMarkerCount": 24,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2020年解析\\6ecde139-2c14-450f-bb3f-d95ade24a36a_origin.pdf",
+          "length": 3092533,
+          "sha256": "5a9e7380a7cb52ce75969a90a2a2821f1873e267a96fc3b54eaa575a98a9e99e"
+        }
+      ],
+      "risks": [],
+      "disposition": "ready_for_yearly_conversion"
+    },
+    {
+      "year": 2021,
+      "structureFamily": "sequential_22_mixed_markers",
+      "expectedQuestionCount": 22,
+      "maxDetectedQuestionMarkers": 18,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2021年考研数学(一)真题.md",
+          "length": 7694,
+          "sha256": "dd7116fda2a60648e582f5f98b226c68568860dfc718962cbb36b8fb80eb8024",
+          "romanSectionCount": 2,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2021年解析\\2021年解析.md",
+          "length": 23223,
+          "sha256": "06fa89c4599a3062aae90ecaf3a1e72ae501ab32faf8753277ca1e511d9ad75d",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "answerMarkerCount": 16,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2021年解析\\b8289846-47a9-4dba-bcd8-9016eb1f32de_origin.pdf",
+          "length": 2750043,
+          "sha256": "08efb63dd278d6d2bb9cc7fba91c8dce0902d5bc41bb284583631d996e60bc61"
+        }
+      ],
+      "risks": [
+        "question_marker_count_mismatch"
+      ],
+      "disposition": "needs_manual_or_special_parser"
+    },
+    {
+      "year": 2022,
+      "structureFamily": "sequential_22_mixed_markers",
+      "expectedQuestionCount": 22,
+      "maxDetectedQuestionMarkers": 17,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2022年考研数学(一)真题.md",
+          "length": 9355,
+          "sha256": "299b4cf6d75a873e166a962085e35895d33c37ff0a10ee38b01e54cdc019e3e7",
+          "romanSectionCount": 0,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            14,
+            15,
+            16,
+            18,
+            20,
+            21,
+            22
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 150
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2022年解析\\2022年解析.md",
+          "length": 77806,
+          "sha256": "36f6ba58529a5496a0db2f82c31fc9e8d5e5085c164887ffe83f780dfdaffc81",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2022年解析\\db938df1-9376-4a28-b484-c7514390ead3_origin.pdf",
+          "length": 27778990,
+          "sha256": "cf2a83f02d9514c679e8d58d389db6f8f3e820b20fcd18197a2610d7b75f2d8f"
+        }
+      ],
+      "risks": [
+        "question_marker_count_mismatch",
+        "ocr_risk_detected"
+      ],
+      "disposition": "needs_manual_or_special_parser"
+    },
+    {
+      "year": 2023,
+      "structureFamily": "modern_plain_numbered_or_embedded",
+      "expectedQuestionCount": 22,
+      "maxDetectedQuestionMarkers": 20,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2023年考研数学(一)真题.md",
+          "length": 8800,
+          "sha256": "77d9ca3b1496fe192246a76387f5c30ed6e82ccb91a42214f0c35294d5c881e1",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3
+          ],
+          "plainQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22
+          ],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2023年解析\\2023年解析.md",
+          "length": 27516,
+          "sha256": "d2b7297b5d3b962ef6a8d8766a2b344e9e6932193d5262e1711bde4b2abaaa7d",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "answerMarkerCount": 16,
+          "explanationMarkerCount": 22,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2023年解析\\f8c2cec0-7a68-4f5d-b618-e87aae9d86a7_origin.pdf",
+          "length": 2633261,
+          "sha256": "13f1c9509171c3c73d3a7c781976c89c9dad6d9727dc6c17154a29173b28a424"
+        }
+      ],
+      "risks": [
+        "question_marker_count_mismatch"
+      ],
+      "disposition": "needs_manual_or_special_parser"
+    },
+    {
+      "year": 2024,
+      "structureFamily": "modern_plain_numbered_or_embedded",
+      "expectedQuestionCount": 22,
+      "maxDetectedQuestionMarkers": 18,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2024年数学(一)真题及参考答案.md",
+          "length": 10109,
+          "sha256": "a2f6847c5547843a994c534a4eac96a841d08ee8213abb0fb5264951b0dbd244",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2
+          ],
+          "plainQuestionNumbers": [],
+          "answerMarkerCount": 22,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 8
+        },
+        {
+          "relativePath": "papers\\2024考研数学一真题+答案.md",
+          "length": 8087,
+          "sha256": "c745985c9eb82f3e15b9c20450ce7bf9248a2bc99bccc744caee12b70620e226",
+          "romanSectionCount": 0,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2
+          ],
+          "plainQuestionNumbers": [
+            3,
+            6,
+            7,
+            8,
+            10,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "answerMarkerCount": 22,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        },
+        {
+          "relativePath": "papers\\2024考研数学一真题.md",
+          "length": 6927,
+          "sha256": "b4bbb7f5ae6f41a9a7119176e29509ada964e2209f6400ec99cc573e4e9319ef",
+          "romanSectionCount": 0,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2
+          ],
+          "plainQuestionNumbers": [
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "answerMarkerCount": 0,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 0
+        }
+      ],
+      "solutionMarkdownCandidates": [
+        {
+          "relativePath": "solutions\\2024年解析\\2024.md",
+          "length": 10109,
+          "sha256": "a2f6847c5547843a994c534a4eac96a841d08ee8213abb0fb5264951b0dbd244",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2
+          ],
+          "answerMarkerCount": 22,
+          "explanationMarkerCount": 0,
+          "ocrRiskCount": 8
+        }
+      ],
+      "solutionPdfs": [
+        {
+          "relativePath": "solutions\\2024年解析\\b1205d3f-0e4d-42a6-88bd-0868455fd13e_origin.pdf",
+          "length": 823239,
+          "sha256": "6804fbdeaebcf54d2e0a71b98c801e625e855bf75c540b12232c6104eb07ae01"
+        }
+      ],
+      "risks": [
+        "multiple_paper_versions",
+        "question_marker_count_mismatch",
+        "ocr_risk_detected",
+        "paper_contains_answers"
+      ],
+      "disposition": "blocked_version_selection"
+    },
+    {
+      "year": 2025,
+      "structureFamily": "modern_plain_numbered_or_embedded",
+      "expectedQuestionCount": 22,
+      "maxDetectedQuestionMarkers": 21,
+      "paperCandidates": [
+        {
+          "relativePath": "papers\\2025年数学一真题.md",
+          "length": 37658,
+          "sha256": "e0ef1990220462c71a896764f2672ac5396e4438cd81565561ea1c5f4db4e0ae",
+          "romanSectionCount": 3,
+          "parenthesizedQuestionNumbers": [
+            1,
+            2
+          ],
+          "plainQuestionNumbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            20,
+            21,
+            22
+          ],
+          "answerMarkerCount": 16,
+          "explanationMarkerCount": 16,
+          "ocrRiskCount": 56
+        }
+      ],
+      "solutionMarkdownCandidates": [],
+      "solutionPdfs": [],
+      "risks": [
+        "missing_solution_markdown",
+        "missing_solution_pdf",
+        "question_marker_count_mismatch",
+        "ocr_risk_detected",
+        "paper_contains_answers"
+      ],
+      "disposition": "needs_manual_or_special_parser"
+    }
+  ]
+}

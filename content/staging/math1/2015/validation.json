@@ -1,0 +1,63 @@
+{
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "expectedCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "countsMatch": true,
+  "totalAnomalies": 6,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 6
+  },
+  "allQuestionsNeedsReview": true,
+  "checks": [
+    {
+      "name": "question_count",
+      "status": "passed",
+      "details": "23 questions: 8 mc + 6 fib + 9 sol, matches expected"
+    },
+    {
+      "name": "stableId_uniqueness",
+      "status": "passed",
+      "details": "All 23 stableIds unique: math1-2015-q01 through math1-2015-q23"
+    },
+    {
+      "name": "options_completeness",
+      "status": "passed",
+      "details": "All 8 mc questions have exactly 4 options (A,B,C,D). Q04 and Q07 options recovered from paper Markdown."
+    },
+    {
+      "name": "stem_cleanliness",
+      "status": "passed",
+      "details": "Section headers (# 二、填空题, # 三、解答题) cleaned from Q08 option D and Q14 stem."
+    },
+    {
+      "name": "answer_presence",
+      "status": "passed",
+      "details": "8 mc + 6 fib have answerCandidate from solutions; 9 sol have answerStatus=missing (structural expectation for proof/derivation questions)."
+    },
+    {
+      "name": "all_needs_human_review",
+      "status": "passed",
+      "details": "All 23 questions have reviewStatus=needs_human_review. None marked approved or published."
+    },
+    {
+      "name": "active_errors",
+      "status": "passed",
+      "details": "0 active errors, 0 active warnings, 6 info-level anomalies."
+    },
+    {
+      "name": "source_tracking",
+      "status": "passed",
+      "details": "All questions have sourceRepo, sourceRelativePaths, sourceCommit, sourceFileHashes."
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "math1-semantic-review-v1",
+  "batchId": "20260615-130210-ds-math1-year-2004-fixed-20260620-md-finalize",
+  "sourceYear": 2004,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T16:24:48+08:00",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "id": "math1-2004-anom-001",
+      "type": "stem_pollution",
+      "questionNumber": 6,
+      "stableId": "math1-2004-q06",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Stem had trailing section header. Stripped.",
+      "resolution": "cc-math1-md-finalize-year stripped '# 二、选择题...' from stem and explanation."
+    },
+    {
+      "id": "math1-2004-anom-002",
+      "type": "stem_truncation",
+      "questionNumber": 13,
+      "stableId": "math1-2004-q13",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Missing closing parenthesis. Fixed.",
+      "resolution": "cc-math1-md-finalize-year corrected '等于（' to '等于( )'."
+    },
+    {
+      "id": "math1-2004-anom-003",
+      "type": "incomplete_options",
+      "questionNumber": 14,
+      "stableId": "math1-2004-q14",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Only 2 of 4 options extracted. Rebuilt from paper Markdown.",
+      "resolution": "cc-math1-md-finalize-year rebuilt 4 complete options from paper lines 77-83."
+    },
+    {
+      "id": "math1-2004-anom-004",
+      "type": "stem_pollution",
+      "questionNumber": 14,
+      "stableId": "math1-2004-q14",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Option C value/explanation had section header pollution. Cleaned.",
+      "resolution": "cc-math1-md-finalize-year cleaned all pollution."
+    },
+    {
+      "id": "math1-2004-anom-005",
+      "type": "missing_answer",
+      "questionNumber": 15,
+      "stableId": "math1-2004-q15",
+      "severity": "info",
+      "status": "accepted",
+      "message": "Proof question — answerCandidate null remains acceptable. answerStatus updated."
+    },
+    {
+      "id": "math1-2004-anom-006",
+      "type": "missing_answer",
+      "questionNumber": 16,
+      "stableId": "math1-2004-q16",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Answer extracted: $1.05\\ \\mathrm{km}$."
+    },
+    {
+      "id": "math1-2004-anom-007",
+      "type": "missing_answer",
+      "questionNumber": 17,
+      "stableId": "math1-2004-q17",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Answer extracted: $-\\pi$."
+    },
+    {
+      "id": "math1-2004-anom-008",
+      "type": "missing_answer",
+      "questionNumber": 18,
+      "stableId": "math1-2004-q18",
+      "severity": "info",
+      "status": "accepted",
+      "message": "Proof question — answerCandidate null remains acceptable. answerStatus updated."
+    },
+    {
+      "id": "math1-2004-anom-009",
+      "type": "missing_answer",
+      "questionNumber": 19,
+      "stableId": "math1-2004-q19",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Answer extracted: min at (9,3)=3, max at (-9,-3)=-3."
+    },
+    {
+      "id": "math1-2004-anom-010",
+      "type": "explanation_format_issue",
+      "questionNumber": 19,
+      "stableId": "math1-2004-q19",
+      "severity": "warning",
+      "status": "active_blocking",
+      "message": "Explanation run-on: min value 3 not explicitly stated before max case. Requires PDF verification.",
+      "suggestedAction": "Human must verify against solution PDF."
+    },
+    {
+      "id": "math1-2004-anom-011",
+      "type": "missing_answer",
+      "questionNumber": 20,
+      "stableId": "math1-2004-q20",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Answer extracted: a values and general solutions."
+    },
+    {
+      "id": "math1-2004-anom-012",
+      "type": "missing_answer",
+      "questionNumber": 21,
+      "stableId": "math1-2004-q21",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Answer extracted: a=-2 (diagonalizable), a=-2/3 (not)."
+    },
+    {
+      "id": "math1-2004-anom-013",
+      "type": "missing_answer",
+      "questionNumber": 22,
+      "stableId": "math1-2004-q22",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Answer extracted: joint distribution and ρ=√15/15."
+    },
+    {
+      "id": "math1-2004-anom-014",
+      "type": "missing_answer",
+      "questionNumber": 23,
+      "stableId": "math1-2004-q23",
+      "severity": "info",
+      "status": "resolved_by_md_finalize",
+      "message": "Answer extracted: moment estimator and MLE."
+    },
+    {
+      "id": "math1-2004-anom-015",
+      "type": "formatting_inconsistency",
+      "questionNumber": 12,
+      "stableId": "math1-2004-q12",
+      "severity": "info",
+      "status": "active_info",
+      "message": "Fullwidth parentheses in source for Q12. No action needed."
+    },
+    {
+      "id": "math1-2004-anom-016",
+      "type": "latex_style_variation",
+      "questionNumber": 5,
+      "stableId": "math1-2004-q05",
+      "severity": "info",
+      "status": "active_info",
+      "message": "Solution uses \\dot{\\mathbf{BA}}^{*} where paper has \\mathbf{B}\\mathbf{A}^{*}. OCR artifact — info only."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 16,
+    "resolvedByMdFinalize": 12,
+    "activeRemaining": 4,
+    "bySeverity": { "error": 0, "warning": 1, "info": 3 },
+    "blockingIssues": [
+      "math1-2004-anom-010: Q19 explanation run-on needs PDF verification"
+    ]
+  }
+}

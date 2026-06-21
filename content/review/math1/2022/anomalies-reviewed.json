@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "cc-math1-2022-md-finalize",
+  "sourceYear": 2022,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T14:10:19.000000+08:00",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 1,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 2,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 3,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 4,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md. Option D $ sign fixed (was missing)."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 5,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 6,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 7,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 8,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 9,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md. Option C $ sign fixed (was missing)."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 10,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 11,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 12,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 13,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 14,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md. Answer spacing fixed ('- 1.' → '-1.' per source)."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 15,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 16,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 17,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 18,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 19,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 20,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 21,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    },
+    {
+      "type": "md_finalization_source",
+      "questionNumber": 22,
+      "severity": "info",
+      "message": "Stem/options from solution Markdown (paper MD had severe OCR corruption). Answer/explanation cross-verified against solutions/2022年解析.md."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 22,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 22
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_run",
+    "fixesApplied": [
+      "Q4 Option D: added missing opening $",
+      "Q9 Option C: added missing opening $",
+      "Q14 answerCandidate: removed extra space in '-1.'",
+      "Q6 explanation: corrected ABx=0 versus BAx=0 from solution layout nodes and direct matrix multiplication."
+    ]
+  }
+}

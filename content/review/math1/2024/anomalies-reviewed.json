@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "review-md-finalization-v1",
+  "batchId": "20260620-143824-cc-math1-md-finalize-year-2024",
+  "sourceYear": 2024,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T06:42:53.202Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "multiple_paper_versions",
+      "stableId": "math1-2024-source-set",
+      "severity": "warning",
+      "message": "Three 2024 paper candidates exist. The longest complete combined paper is primary; all alternatives remain provenance and require human comparison."
+    },
+    {
+      "type": "solution_file_duplicates_primary_paper",
+      "stableId": "math1-2024-source-set",
+      "severity": "info",
+      "message": "The independent solution Markdown is byte-identical to the primary combined paper."
+    },
+    {
+      "type": "stem_ocr_damage_version_conflict",
+      "questionNumber": 6,
+      "severity": "warning",
+      "message": "Primary paper stem is OCR-damaged. Alternative paper (2024考研数学一真题+答案.md) has clean 4-dim vectors α₁=(a,1,-1,1)ᵀ, α₂=(1,1,b,a)ᵀ, α₃=(1,a,-1,1)ᵀ but vector definitions differ between versions. Requires human review to resolve.",
+      "alternativeStem": "设向量 $\\alpha_{1} = \\begin{pmatrix} a \\\\ 1 \\\\ -1 \\\\ 1 \\end{pmatrix}$, $\\alpha_{2} = \\begin{pmatrix} 1 \\\\ 1 \\\\ b \\\\ a \\end{pmatrix}$, $\\alpha_{3} = \\begin{pmatrix} 1 \\\\ a \\\\ -1 \\\\ 1 \\end{pmatrix}$, 若 $\\alpha_{1}, \\alpha_{2}, \\alpha_{3}$ 线性相关, 且其中任意两个向量均线性无关, 则"
+    },
+    {
+      "type": "ocr_reconstructed",
+      "questionNumber": 12,
+      "severity": "info",
+      "message": "Stem reconstructed from deterministic OCR pattern. Math verification: f_u(1,1)=3, f_v(1,1)=4, d²y/dx²|₀ = -f_u+2f_v = -3+8 = 5, matches answer. Human should verify.",
+      "originalStem": "2d y 【12】设 $z = f ( u , \\nu )$ 有二阶连续导数，且df 1,1 （ ） 3d 4d u v= + ，若 $y = f ( \\cos x , 1 + x ^ { 2 } )$ ，则2d x 0x=",
+      "reconstructedStem": "【12】设 $z=f(u,v)$ 有二阶连续偏导数，且 $\\mathrm{d}f(1,1)=3\\mathrm{d}u+4\\mathrm{d}v$，若 $y=f(\\cos x,1+x^{2})$，则 $\\left.\\frac{\\mathrm{d}^{2}y}{\\mathrm{d}x^{2}}\\right|_{x=0}=$"
+    },
+    {
+      "type": "possible_source_pdf_typo",
+      "questionNumber": 19,
+      "severity": "info",
+      "message": "Source PDF itself visibly writes f'(0)=f'(0) (tautology). Likely intended f(0)=f(1) or f'(0)=f'(1). Retained verbatim; requires mathematical review."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 5,
+    "bySeverity": {
+      "error": 0,
+      "warning": 2,
+      "info": 3
+    },
+    "blockingIssues": [],
+    "pdfVerification": "partially_run",
+    "humanReviewEvidence": "Prior human review covered 14 of 22 questions with PDF evidence. MD-finalization absorbed those corrections and applied additional deterministic OCR fixes."
+  }
+}

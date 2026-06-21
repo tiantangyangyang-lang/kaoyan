@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "math1-sequential-transform-v1",
+  "anomalies": [
+    {
+      "type": "stem_pollution",
+      "questionNumber": 6,
+      "stableId": "math1-2004-q06",
+      "severity": "info",
+      "message": "RESOLVED: Stripped trailing section header from Q06 stem and explanation. Pollution was '# 二、选择题(本题共8小题，每小题4分，满分32分)' from paper line 12.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20",
+      "evidence": "Paper Markdown Q6 is fill-in-blank. Section header clearly belongs to 第二大题, not Q6."
+    },
+    {
+      "type": "missing_parenthesis",
+      "questionNumber": 13,
+      "stableId": "math1-2004-q13",
+      "severity": "info",
+      "message": "RESOLVED: Added missing closing parenthesis. Paper source had '则 $x$ 等于（' — corrected to '则 $x$ 等于( )'.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20",
+      "evidence": "All other multiple-choice questions in paper use '( )' to indicate answer slot. Truncation is clearly an OCR/typo."
+    },
+    {
+      "type": "incomplete_options",
+      "questionNumber": 14,
+      "stableId": "math1-2004-q14",
+      "severity": "info",
+      "message": "RESOLVED: Rebuilt all 4 options from paper Markdown lines 77-83. Only B/C were extracted previously. Options A and D used \\mathrm{} formatting for labels.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20",
+      "evidence": "Paper Markdown explicitly provides all 4 options with labels (A)(B)(C)(D). Solutions confirm answer is (A)."
+    },
+    {
+      "type": "stem_pollution",
+      "questionNumber": 14,
+      "stableId": "math1-2004-q14",
+      "severity": "info",
+      "message": "RESOLVED: Cleaned section header pollution. Q14 stem/options previously contained '# 三、解答题(本题共9小题，满分94分．解答应写出文字说明、证明过程或演算步骤)' from next section.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20",
+      "evidence": "Section header belongs to section 三 (解答题), not to Q14 (multiple choice in section 二)."
+    },
+    {
+      "type": "answer_extraction",
+      "questionNumber": 16,
+      "stableId": "math1-2004-q16",
+      "severity": "info",
+      "message": "RESOLVED: Extracted answerCandidate '$1.05\\ \\mathrm{km}$' from explanation text. Answer was present in explanation but not extracted as standalone field.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20"
+    },
+    {
+      "type": "answer_extraction",
+      "questionNumber": 17,
+      "stableId": "math1-2004-q17",
+      "severity": "info",
+      "message": "RESOLVED: Extracted answerCandidate '$-\\pi$' from explanation text.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20"
+    },
+    {
+      "type": "answer_extraction",
+      "questionNumber": 19,
+      "stableId": "math1-2004-q19",
+      "severity": "info",
+      "message": "RESOLVED: Extracted answerCandidate with both extreme points and values from explanation.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20"
+    },
+    {
+      "type": "answer_extraction",
+      "questionNumber": 20,
+      "stableId": "math1-2004-q20",
+      "severity": "info",
+      "message": "RESOLVED: Extracted answerCandidate summarizing a values and general solutions from explanation.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20"
+    },
+    {
+      "type": "answer_extraction",
+      "questionNumber": 21,
+      "stableId": "math1-2004-q21",
+      "severity": "info",
+      "message": "RESOLVED: Extracted answerCandidate with a values and diagonalization results.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20"
+    },
+    {
+      "type": "answer_extraction",
+      "questionNumber": 22,
+      "stableId": "math1-2004-q22",
+      "severity": "info",
+      "message": "RESOLVED: Extracted answerCandidate with joint distribution and correlation coefficient.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20"
+    },
+    {
+      "type": "answer_extraction",
+      "questionNumber": 23,
+      "stableId": "math1-2004-q23",
+      "severity": "info",
+      "message": "RESOLVED: Extracted answerCandidate with moment estimator and MLE.",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20"
+    },
+    {
+      "type": "proof_answer_status",
+      "questionNumber": 15,
+      "stableId": "math1-2004-q15",
+      "severity": "info",
+      "message": "Proof question — answerStatus updated from 'missing' to 'candidate_from_solutions'. answerCandidate remains null (proof is the answer).",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20"
+    },
+    {
+      "type": "proof_answer_status",
+      "questionNumber": 18,
+      "stableId": "math1-2004-q18",
+      "severity": "info",
+      "message": "Proof question — answerStatus updated from 'missing' to 'candidate_from_solutions'. answerCandidate remains null (proof is the answer).",
+      "resolvedBy": "cc-math1-md-finalize-year",
+      "resolvedAt": "2026-06-20"
+    }
+  ],
+  "activeIssues": [
+    {
+      "id": "math1-2004-anom-active-001",
+      "type": "explanation_format_issue",
+      "questionNumber": 19,
+      "stableId": "math1-2004-q19",
+      "severity": "warning",
+      "message": "Explanation text has run-on sentence: '极小值为当 (-9,-3) 时' — the min value 3 for (9,3) is not explicitly stated before jumping to the max case. Solution Markdown may have OCR omission.",
+      "evidence": "Solution line 334. Not uniquely recoverable from Markdown alone.",
+      "suggestedAction": "Human should verify against PDF source (solutions/2004年解析/2f4ebac7-...origin.pdf) whether this is an OCR transcription error or present in the original text."
+    },
+    {
+      "id": "math1-2004-anom-active-002",
+      "type": "latex_style_variation",
+      "questionNumber": 5,
+      "stableId": "math1-2004-q05",
+      "severity": "info",
+      "message": "Solution uses '\\dot{\\mathbf{BA}}^{*}' (dot accent over BA) while paper uses '\\mathbf{B}\\mathbf{A}^{*}'. OCR artifact — dot accent over multi-letter bold is very unlikely to be intentional.",
+      "evidence": "Paper Markdown: $\\mathbf{A}\\mathbf{B}\\mathbf{A}^{*} = 2\\mathbf{B}\\mathbf{A}^{*} + \\mathbf{E}$; Solution Markdown: $\\mathbf{ABA}^{*} = 2\\dot{\\mathbf{BA}}^{*} + \\mathbf{E}$.",
+      "suggestedAction": "Human should verify against PDF. The intended formula is almost certainly Paper version without dot accent."
+    },
+    {
+      "id": "math1-2004-anom-active-003",
+      "type": "ocr_spacing_artifact",
+      "questionNumber": 16,
+      "stableId": "math1-2004-q16",
+      "severity": "info",
+      "message": "OCR digit spacing artifact: '7 0 0' in solution method 2 (e.g., 'v(0) = 7 0 0'). Method 1 keeps '700' correctly. Not content-breaking.",
+      "suggestedAction": "Human may fix spacing if desired; does not affect correctness."
+    },
+    {
+      "id": "math1-2004-anom-active-004",
+      "type": "formatting_inconsistency",
+      "questionNumber": 12,
+      "stableId": "math1-2004-q12",
+      "severity": "info",
+      "message": "Paper uses fullwidth parentheses '（12）' for Q12 while other questions use halfwidth. Source formatting variation, not a data error.",
+      "suggestedAction": "No action needed."
+    }
+  ]
+}

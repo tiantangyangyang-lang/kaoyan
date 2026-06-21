@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "review-v1+md-finalize",
+  "batchId": "20260620-155019-cc-math1-md-finalize-year-1995",
+  "sourceYear": 1995,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T15:50:19+08:00",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [],
+  "previousAnomaliesResolved": [
+    {
+      "type": "section_split_mismatch",
+      "sourceSeverity": "warning",
+      "sourceSectionLabel": "三",
+      "resolution": "Section 三 contains 2 sub-problems numbered (1) and (2). The legacy parser expected local markers 1..2 but only found marker [2] because (1) was scanned first. Both sub-questions correctly extracted."
+    },
+    {
+      "type": "section_split_mismatch",
+      "sourceSeverity": "warning",
+      "sourceSectionLabel": "四",
+      "resolution": "Section 四 contains 2 sub-problems numbered (1) and (2). Same pattern as section 三. Both sub-questions correctly extracted."
+    },
+    {
+      "type": "missing_solution",
+      "sourceQuestionNumber": 12,
+      "sourceSeverity": "warning",
+      "resolution": "Q12 solution existed in the source Markdown under 三、(2) but was merged into Q11 container. Split by structure repair (v1)."
+    },
+    {
+      "type": "missing_solution",
+      "sourceQuestionNumber": 14,
+      "sourceSeverity": "warning",
+      "resolution": "Q14 solution existed in the source Markdown under 四、(2) but was merged into Q13 container. Split by structure repair (v1)."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 0,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "blockedQuestions": [],
+    "activeErrorCount": 0,
+    "activeWarningCount": 0,
+    "pdfVerification": "not_required_by_md_finalize"
+  }
+}

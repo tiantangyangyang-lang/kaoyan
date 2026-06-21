@@ -1,0 +1,24 @@
+{
+  "questionsGenerated": 20,
+  "questionCounts": {
+    "fill_in_blank": 5,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "expectedCounts": {
+    "fill_in_blank": 5,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "countsMatch": true,
+  "totalAnomalies": 1,
+  "activeErrors": 0,
+  "activeWarnings": 0,
+  "activeInfos": 1,
+  "allQuestionsNeedsReview": true,
+  "allQuestionsHaveAnswer": true,
+  "stableIdUnique": true,
+  "mdFinalizationStatus": "ready_with_info",
+  "mdFinalizationRunId": "20260620-185410-cc-math1-md-finalize-year-2002",
+  "fixApplied": "2026-06-17 (staging fix): extracted answers for Q2-Q5 and Q7-Q10; split per-question explanations; fixed Q9 option image mapping; fixed Q10 options. 2026-06-20 (md-finalization): recovered Q6 ①② OCR loss from solution evidence; extracted Q11-Q20 answerCandidates; fixed Q16 stem line break; downgraded resolved anomalies to info. 2026-06-20 (md-finalization): fixed Q6 stem curly quotes in JSON delimiters."
+}

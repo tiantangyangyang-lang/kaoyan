@@ -1,0 +1,248 @@
+{
+  "pages": [
+    {
+      "pageNumber": 1,
+      "characterCount": 1780,
+      "questionStarts": [
+        1,
+        2
+      ],
+      "answerMarkerCount": 2,
+      "analysisMarkerCount": 1,
+      "textPreview": "2022年全国硕士研究生招生考试 数学（一）试题解析  一、选择题 1 设   $\\lim_{x\\to 1}\\frac{f(x)}{\\ln x} = 1$  ，则（ (A)   $f(1) = 0$ .  (B)   $\\lim_{x\\to 1}f(x) = 0.$ $\\mathrm{(C)}f^{\\prime}(1) = 1.$ (D)   $\\lim_{x\\to 1}f'(x) = 1.$ 答案 B. 分析 本题主要考查极限与导数的概念 本题中关于   $f(x)$  的条件相当有限，仅有   $\\lim_{x\\to 1}\\frac{f(x)}{\\ln x} = 1$  这一个条件，而由这"
+    },
+    {
+      "pageNumber": 2,
+      "characterCount": 2735,
+      "questionStarts": [],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 2,
+      "textPreview": "分析 本题主要考查偏导数的计算 本题中的   $f(x)$  表达式未知，  $z(x, y)$  是与   $f(u)$  有关的复合函数，故可以先通过计算   $\\frac{\\partial z}{\\partial x}$  和   $\\frac{\\partial z}{\\partial y}$  并代入已知等式得到   $f(u)$  的表达式，再计算   $f(1), f'(1)$ . 解 分别求   $\\frac{\\partial z}{\\partial x}$  和   $\\frac{\\partial z}{\\partial y}$ . 利用链式法则， $$ \\frac {\\par"
+    },
+    {
+      "pageNumber": 3,
+      "characterCount": 1800,
+      "questionStarts": [],
+      "answerMarkerCount": 3,
+      "analysisMarkerCount": 1,
+      "textPreview": "注 ① 考虑到   $\\cos x$  是偶函数, 形如   $x_{n} = (-1)^{n}a, a \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$  的数列均可作为选项 A、B、C 的反例. ② 这道题的出题思路在2017年的一道数二真题当中也出现过 【例】设数列   $\\{x_{n}\\}$  收敛，则（ ）(2017年数学二试题） (A) 当   $\\lim_{n\\to \\infty}\\sin x_n = 0$  时,   $\\lim_{n\\to \\infty}x_n = 0.$ (B) 当   $\\lim_{n\\to \\infty}\\l"
+    },
+    {
+      "pageNumber": 4,
+      "characterCount": 1452,
+      "questionStarts": [],
+      "answerMarkerCount": 0,
+      "analysisMarkerCount": 2,
+      "textPreview": "分析 本题主要考查矩阵可相似对角化的条件 要找的充分非必要条件应满足由该条件可推出3阶矩阵   $\\mathbf{A}$  可相似对角化，但由3阶矩阵   $\\mathbf{A}$  可相似对角化却推不出该条件. $n$  阶矩阵   $\\mathbf{A}$  与对角矩阵相似的判定条件 请注意, 条件“A有   $n$  个不同的特征值”与“A为实对称矩阵”均能推出“A有   $n$  个线性无关的特征向量”和“A的每个特征值对应的线性无关的特征向量的个数等于该特征值的重数”, 但它们之间并没有相互蕴含的关系. 这四个条件之间的关系如下.  解 依次分析四个选项 选项A是充分非必要条件.若矩"
+    },
+    {
+      "pageNumber": 5,
+      "characterCount": 2371,
+      "questionStarts": [
+        6,
+        9
+      ],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 0,
+      "textPreview": "$\\left( \\begin{array}{rrr}1 & 0 & 0\\\\ 0 & -1 & 0\\\\ 0 & 0 & 0 \\end{array} \\right)$  则  $$ A = P A P ^ {- 1} = \\left( \\begin{array}{l l l} 1 & 1 & 1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{array} \\right) \\left( \\begin{array}{c c c} 1 & 0 & 0 \\\\ 0 & - 1 & 0 \\\\ 0 & 0 & 0 \\end{array} \\right) \\left( \\begin{array}{"
+    },
+    {
+      "pageNumber": 6,
+      "characterCount": 3415,
+      "questionStarts": [
+        7
+      ],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 2,
+      "textPreview": "分析 本题主要考查方程组的同解问题 $Ax = 0$  与   $Bx = 0$  同解，说明   $Ax = 0$  的解都是   $Bx = 0$  的解，且   $Bx = 0$  的解也都是   $Ax = 0$  的解. 两方程组同解能反映这两个方程组的系数矩阵的秩的大小关系，但并不能反映系数矩阵的秩的大小. 解 设   $y_{1}, y_{2}$  均为   $n$  维列向量，  $y = \\begin{pmatrix} y_{1} \\\\ y_{2} \\end{pmatrix}$ . 对   $\\begin{pmatrix} A & B \\\\ O & B \\end{pmatri"
+    },
+    {
+      "pageNumber": 7,
+      "characterCount": 4268,
+      "questionStarts": [],
+      "answerMarkerCount": 0,
+      "analysisMarkerCount": 1,
+      "textPreview": "分析 本题主要考查向量组等价 向量组   $\\alpha_{1},\\alpha_{2},\\alpha_{3}$  与   $\\alpha_{1},\\alpha_{2},\\alpha_{4}$  等价的充分必要条件是   $r(\\pmb{\\alpha}_{1},\\pmb{\\alpha}_{2},\\pmb{\\alpha}_{3}) = r(\\pmb{\\alpha}_{1},\\pmb{\\alpha}_{2},\\pmb{\\alpha}_{4}) = r(\\pmb{\\alpha}_{1},\\pmb{\\alpha}_{2},\\pmb{\\alpha}_{3},\\pmb{\\alpha}_{4})$ 。由这一条"
+    },
+    {
+      "pageNumber": 8,
+      "characterCount": 1469,
+      "questionStarts": [
+        8
+      ],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 1,
+      "textPreview": "当   $\\lambda = -2$  或   $\\lambda = -1$  时，  $|\\alpha_1, \\alpha_2, \\alpha_3| \\neq |\\alpha_1, \\alpha_2, \\alpha_4|$ ，且其中一个为0，另一个不为0，说明两向量组的秩不相等，从而不等价. 综上所述，   $\\alpha_{1},\\alpha_{2},\\alpha_{3}$  与   $\\alpha_{1},\\alpha_{2},\\alpha_{4}$  等价当且仅当   $\\lambda \\neq -2$  且   $\\lambda \\neq -1.$  应选C. 8 设随机变量   $"
+    },
+    {
+      "pageNumber": 9,
+      "characterCount": 1514,
+      "questionStarts": [
+        9
+      ],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 1,
+      "textPreview": "（续表）  9 设随机变量   $X_{1}, X_{2}, \\dots, X_{n}$  独立同分布，且   $X_{1}$  的4阶矩存在，  $E(X_{1}^{k}) = \\mu_{k}(k = 1,2,3,4)$ ，则根据切比雪夫不等式，对任意   $\\varepsilon > 0$ ，都有   $P\\left\\{\\left|\\frac{1}{n}\\sum_{i=1}^{n}X_{i}^{2} - \\mu_{2}\\right| \\geqslant \\varepsilon\\right\\} \\leqslant (\\quad)$ (A)   $\\frac{\\mu_4 - \\mu_2^2}{"
+    },
+    {
+      "pageNumber": 10,
+      "characterCount": 1926,
+      "questionStarts": [
+        10
+      ],
+      "answerMarkerCount": 4,
+      "analysisMarkerCount": 1,
+      "textPreview": "由于随机变量   $X_{1}, X_{2}, \\dots, X_{n}$  独立同分布，故   $X_{1}^{2}, X_{2}^{2}, \\dots, X_{n}^{2}$  相互独立. $$ \\begin{array}{l} D \\left(\\frac {1}{n} \\sum_ {i = 1} ^ {n} X _ {i} ^ {2}\\right) = \\frac {1}{n ^ {2}} D \\left(\\sum_ {i = 1} ^ {n} X _ {i} ^ {2}\\right) = \\frac {1}{n ^ {2}} \\sum_ {i = 1} ^ {n} D \\left(X "
+    },
+    {
+      "pageNumber": 11,
+      "characterCount": 2892,
+      "questionStarts": [],
+      "answerMarkerCount": 0,
+      "analysisMarkerCount": 0,
+      "textPreview": "其中   $\\mu, \\sigma (\\sigma > 0)$  为常数，则称   $X$  服从参数为   $\\mu, \\sigma$  的正态分布，记为   $X \\sim N(\\mu, \\sigma^2)$ 。 二维正态分布 设二维随机变量   $(X,Y)$  的概率密度为 $$ f (x, y) = \\frac {1}{2 \\pi \\sigma_ {1} \\sigma_ {2} \\sqrt {1 - \\rho^ {2}}} e ^ {\\frac {- 1}{2 (1 - \\rho^ {2})} \\left[ \\frac {(x - \\mu_ {1}) ^ {2}}{\\sigma_ {"
+    },
+    {
+      "pageNumber": 12,
+      "characterCount": 2793,
+      "questionStarts": [
+        11
+      ],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 1,
+      "textPreview": "$$ \\begin{array}{l} E (X Y) = \\int_ {- \\infty} ^ {+ \\infty} \\int_ {- \\infty} ^ {+ \\infty} x y f (x, y) d x d y = \\int_ {- \\infty} ^ {+ \\infty} x \\frac {1}{\\sqrt {2 \\pi}} e ^ {- \\frac {x ^ {2}}{2}} d x \\int_ {- \\infty} ^ {+ \\infty} y \\frac {1}{\\sqrt {2 \\pi}} e ^ {- \\frac {(y - x) ^ {2}}{2}} d y \\\\ = "
+    },
+    {
+      "pageNumber": 13,
+      "characterCount": 2314,
+      "questionStarts": [
+        12,
+        13
+      ],
+      "answerMarkerCount": 2,
+      "analysisMarkerCount": 2,
+      "textPreview": "- 当   $\\theta = 0$  时, 即   $e_l$  与梯度   $\\mathbf{grad}f(x_0,y_0,z_0)$  方向相同时, 函数   $f(x,y,z)$  沿这个方向增加最快, 且在这个方向的方向导数达到最大, 此时   $\\left.\\frac{\\partial f}{\\partial l}\\right|_{(x_0,y_0,z_0)} = \\left|\\mathbf{grad}f(x_0,y_0,z_0)\\right|$ . - 当   $\\theta = \\pi$  时, 即   $e_l$  与梯度   $\\operatorname{grad} f(x"
+    },
+    {
+      "pageNumber": 14,
+      "characterCount": 3246,
+      "questionStarts": [
+        14
+      ],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 1,
+      "textPreview": "在实际问题中, 根据问题的性质, 如果知道函数的最值一定在区域内部取得, 而函数在该区域内只有一个驻点, 那么函数在该驻点处的值即为函数在该区域上的最值. 不等式   $x^{2} + y^{2}\\leqslant k\\mathrm{e}^{x + y}$  等价于   $(x^{2} + y^{2})\\mathrm{e}^{-(x + y)}\\leqslant k.$  该不等式当   $x\\geqslant 0,y\\geqslant 0$  时恒成立意味着  $(x^{2} + y^{2})\\mathrm{e}^{-(x + y)}$  在区域   $D = \\{(x,y)\\mid x\\g"
+    },
+    {
+      "pageNumber": 15,
+      "characterCount": 2270,
+      "questionStarts": [
+        15
+      ],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 1,
+      "textPreview": "当   $x < -1$  时，函数项级数   $\\sum_{n=1}^{\\infty} \\frac{n!}{n^n} \\mathrm{e}^{-nx}$  发散. 当   $x = -1$  时,   $\\mathrm{e}^{-1 - x} = 1$ . 此时利用比值审敛法无法判定   $\\sum_{n=1}^{\\infty} u_n$  的收敛性. 但是, 将   $x = -1$  代回原级数可得原级数为   $\\sum_{n=1}^{\\infty} \\frac{n!}{n^n} \\mathrm{e}^n$ . 该级数的一般项极限不为 0 , 从而发散 (见注). 因此，函数项级数  "
+    },
+    {
+      "pageNumber": 16,
+      "characterCount": 2104,
+      "questionStarts": [
+        16,
+        17
+      ],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 2,
+      "textPreview": "（法二）注意到   $[E - (E - A)^{-1}](E - A) = E - A - E = -A$  ，故由   $A$  可逆可得， $\\left[\\boldsymbol{E} - \\left(\\boldsymbol{E} - \\boldsymbol{A}\\right)^{-1}\\right]\\left(\\boldsymbol{E} - \\boldsymbol{A}\\right)\\left(-\\boldsymbol{A}^{-1}\\right) = \\boldsymbol{E},$  即   $\\left[\\boldsymbol{E} - \\left(\\boldsymbol{E} "
+    },
+    {
+      "pageNumber": 17,
+      "characterCount": 2232,
+      "questionStarts": [
+        18
+      ],
+      "answerMarkerCount": 0,
+      "analysisMarkerCount": 1,
+      "textPreview": "$$ \\begin{array}{l} \\int (2 + \\sqrt {x}) e ^ {\\sqrt {x}} d x \\stackrel {u = \\sqrt {x}} {=} 2 \\int (2 + u) u e ^ {u} d u = 2 \\left(\\int u ^ {2} e ^ {u} d u + \\int 2 u e ^ {u} d u\\right) \\\\ = 2 \\left[ \\int u ^ {2} \\mathrm {d} \\left(\\mathrm {e} ^ {u}\\right) + \\int 2 u \\mathrm {e} ^ {u} \\mathrm {d} u \\r"
+    },
+    {
+      "pageNumber": 18,
+      "characterCount": 2323,
+      "questionStarts": [
+        19
+      ],
+      "answerMarkerCount": 0,
+      "analysisMarkerCount": 1,
+      "textPreview": "$$ \\begin{array}{l} \\iint_ {D} \\frac {(x - y) ^ {2}}{x ^ {2} + y ^ {2}} \\mathrm {d} x \\mathrm {d} y \\xlongequal {\\text {极 坐 标}} \\iint_ {D} \\frac {r ^ {2} (\\cos \\theta - \\sin \\theta) ^ {2}}{r ^ {2}} \\cdot r \\mathrm {d} r \\mathrm {d} \\theta = \\iint_ {D} (\\cos \\theta - \\sin \\theta) ^ {2} \\cdot r \\mathr"
+    },
+    {
+      "pageNumber": 19,
+      "characterCount": 2449,
+      "questionStarts": [
+        20
+      ],
+      "answerMarkerCount": 0,
+      "analysisMarkerCount": 1,
+      "textPreview": "（法二）利用斯托克斯公式 由于曲线   $L$  的方向和曲面   $\\Sigma$  的方向符合右手法则，故根据斯托克斯公式， $$ \\begin{array}{l} I = \\iint_ {\\Sigma} \\left| \\begin{array}{c c c} \\mathrm {d} y \\mathrm {d} z & \\mathrm {d} z \\mathrm {d} x & \\mathrm {d} x \\mathrm {d} y \\\\ \\frac {\\partial}{\\partial x} & \\frac {\\partial}{\\partial y} & \\frac {\\partia"
+    },
+    {
+      "pageNumber": 20,
+      "characterCount": 2860,
+      "questionStarts": [],
+      "answerMarkerCount": 0,
+      "analysisMarkerCount": 0,
+      "textPreview": "$f^{\\prime \\prime}(x) < 0$ . 这样一来, 类似必要性的证明, 可得对任意   $[a,b] \\subseteq [a_0,b_0]$  内, 均有   $f\\left(\\frac{a + b}{2}\\right) > \\frac{1}{b - a}\\int_{a}^{b}f(x)\\mathrm{d}x$ , 从而导出矛盾. 证 先证明必要性, 即证明, 若   $f''(x) \\geqslant 0$ , 则对任意不同的实数   $a, b$ , 都有   $f\\left(\\frac{a + b}{2}\\right) \\leqslant \\frac{1}{b - a"
+    },
+    {
+      "pageNumber": 21,
+      "characterCount": 2492,
+      "questionStarts": [],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 0,
+      "textPreview": "又因为   $F(a) = 0$  ，所以   $F(b)\\geqslant F(a) = 0$  ，即   $\\int_{a}^{b}f(x)\\mathrm{d}x\\geqslant f\\left(\\frac{a + b}{2}\\right)(b - a).$ 下面证明充分性，即证明，若对任意不同的实数   $a, b$ ，都有   $f\\left(\\frac{a + b}{2}\\right) \\leqslant \\frac{1}{b - a} \\int_{a}^{b} f(x) \\mathrm{d}x$  成立，则   $f''(x) \\geqslant 0$ 假设存在   $x_0$  "
+    },
+    {
+      "pageNumber": 22,
+      "characterCount": 1747,
+      "questionStarts": [
+        21
+      ],
+      "answerMarkerCount": 0,
+      "analysisMarkerCount": 1,
+      "textPreview": "21 设二次型   $f(x_{1}, x_{2}, x_{3}) = \\sum_{i=1}^{3} \\sum_{j=1}^{3} ijx_{i}x_{j}.$ （I）写出   $f(x_{1},x_{2},x_{3})$  对应的矩阵； （Ⅱ）求正交变换   $x = Qy$  将   $f(x_{1},x_{2},x_{3})$  化为标准形； （Ⅲ）求   $f(x_{1},x_{2},x_{3}) = 0$  的解 分析 本题主要考查二次型的标准形及其应用 写出二次型对应的矩阵   $A$  后，可以通过计算特征值与特征向量，并将特征向量单位正交化得到正交变换对应的正交矩阵   $Q$"
+    },
+    {
+      "pageNumber": 23,
+      "characterCount": 3476,
+      "questionStarts": [],
+      "answerMarkerCount": 0,
+      "analysisMarkerCount": 0,
+      "textPreview": "$$ \\boldsymbol {\\beta} _ {1} = \\boldsymbol {\\xi} _ {1}, $$ $$ \\boldsymbol {\\beta} _ {2} = \\boldsymbol {\\xi} _ {2}, $$ $$ \\boldsymbol {\\beta} _ {3} = \\boldsymbol {\\xi} _ {3} - \\frac {(\\boldsymbol {\\beta} _ {2} , \\boldsymbol {\\xi} _ {3})}{\\| \\boldsymbol {\\beta} _ {2} \\| ^ {2}} \\boldsymbol {\\beta} _ {2"
+    },
+    {
+      "pageNumber": 24,
+      "characterCount": 2120,
+      "questionStarts": [
+        22
+      ],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 1,
+      "textPreview": "注 本题考查的问题是二次型中的经典问题, 利用正交变换求标准形和利用标准形求方程组的解. 这种考法在 2005 年的数一真题中也出现过. 【例】已知二次型   $f(x_{1},x_{2},x_{3}) = (1 - a)x_{1}^{2} + (1 - a)x_{2}^{2} + 2x_{3}^{2} + 2(1 + a)x_{1}x_{2}$  的秩为2. （I）求   $a$  的值； （Ⅱ）求正交变换   $x = Qy$  ，把   $f(x_{1},x_{2},x_{3})$  化成标准形； （Ⅲ）求方程   $f(x_{1},x_{2},x_{3}) = 0$  的解.（2005"
+    },
+    {
+      "pageNumber": 25,
+      "characterCount": 2318,
+      "questionStarts": [],
+      "answerMarkerCount": 0,
+      "analysisMarkerCount": 0,
+      "textPreview": "设   $x_{1}, x_{2}, \\dots, x_{n}, y_{1}, y_{2}, \\dots, y_{m}$  是相应于样本   $X_{1}, X_{2}, \\dots, X_{n}, Y_{1}, Y_{2}, \\dots, Y_{m}$  的一组样本值，则似然函数 $$ L (\\theta) = \\left\\{ \\begin{array}{l l} { \\frac {1}{2 ^ {m} \\theta^ {m + n}} \\mathrm {e} ^ {- \\frac {\\sum_ {i = 1} ^ {n} x _ {i}}{\\theta} - \\frac {\\sum_ {j"
+    },
+    {
+      "pageNumber": 26,
+      "characterCount": 1264,
+      "questionStarts": [],
+      "answerMarkerCount": 1,
+      "analysisMarkerCount": 0,
+      "textPreview": "2022年全国硕士研究生招生考试数学（一）答案速查 一、选择题 (1)B.  (2)B.  (3)D.  (4) A.  (5)A.  (6)C.  (7)C.  (8)C.  (9) A.  (10)D.  二、填空题 (11)4.  (12)4.  (13)   $\\left[4\\mathrm{e}^{-2}, + \\infty\\right)$ .  (14) - 1.  (15)   $-E$ .  (16)   $\\frac{5}{8}$ .  三、解答题 (17)   $y = 2x$  为曲线   $y = 2x + \\mathrm{e}^{1 - \\sqrt{x}}$  的斜渐近"
+    }
+  ]
+}

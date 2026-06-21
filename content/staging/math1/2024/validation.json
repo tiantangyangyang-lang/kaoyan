@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "math1-2024-md-finalization-v1",
+  "runId": "20260620-143824-cc-math1-md-finalize-year-2024",
+  "questionsGenerated": 22,
+  "questionCounts": {
+    "multiple_choice": 10,
+    "fill_in_blank": 6,
+    "solution": 6
+  },
+  "expectedCounts": {
+    "multiple_choice": 10,
+    "fill_in_blank": 6,
+    "solution": 6
+  },
+  "countsMatch": true,
+  "primarySectionCounts": {
+    "一": 10,
+    "二": 6,
+    "三": 6
+  },
+  "totalActiveAnomalies": 5,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 2,
+    "info": 3
+  },
+  "allQuestionsNeedsReview": true,
+  "mdFinalizationClassification": {
+    "math1-2024-q01": "ready_for_approval",
+    "math1-2024-q02": "ready_for_approval",
+    "math1-2024-q03": "ready_for_approval",
+    "math1-2024-q04": "ready_for_approval",
+    "math1-2024-q05": "ready_for_approval",
+    "math1-2024-q06": "blocked",
+    "math1-2024-q07": "ready_for_approval",
+    "math1-2024-q08": "ready_for_approval",
+    "math1-2024-q09": "ready_for_approval",
+    "math1-2024-q10": "ready_for_approval",
+    "math1-2024-q11": "ready_for_approval",
+    "math1-2024-q12": "ready_with_info",
+    "math1-2024-q13": "ready_for_approval",
+    "math1-2024-q14": "ready_for_approval",
+    "math1-2024-q15": "ready_for_approval",
+    "math1-2024-q16": "ready_for_approval",
+    "math1-2024-q17": "ready_for_approval",
+    "math1-2024-q18": "ready_for_approval",
+    "math1-2024-q19": "ready_with_info",
+    "math1-2024-q20": "ready_for_approval",
+    "math1-2024-q21": "ready_for_approval",
+    "math1-2024-q22": "ready_for_approval"
+  },
+  "repairsApplied": 18,
+  "checks": [
+    {
+      "name": "question_count",
+      "status": "passed",
+      "details": "22 questions: 10 MC + 6 FB + 6 SA"
+    },
+    {
+      "name": "stable_id_uniqueness",
+      "status": "passed",
+      "details": "All 22 stableIds unique"
+    },
+    {
+      "name": "all_needs_human_review",
+      "status": "passed",
+      "details": "All 22 questions set to needs_human_review"
+    },
+    {
+      "name": "option_completeness",
+      "status": "passed",
+      "details": "All MC questions have 4 options (A/B/C/D)"
+    },
+    {
+      "name": "answer_label_validity",
+      "status": "passed",
+      "details": "All MC answers are A/B/C/D"
+    }
+  ]
+}

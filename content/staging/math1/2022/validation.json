@@ -1,0 +1,33 @@
+{
+  "questionsGenerated": 22,
+  "questionCounts": {
+    "multiple_choice": 10,
+    "fill_in_blank": 6,
+    "solution": 6
+  },
+  "expectedCounts": {
+    "multiple_choice": 10,
+    "fill_in_blank": 6,
+    "solution": 6
+  },
+  "countsMatch": true,
+  "totalAnomalies": 22,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 22
+  },
+  "allQuestionsNeedsReview": true,
+  "fixesApplied": [
+    "Q4 Option D: added missing opening $ for LaTeX",
+    "Q9 Option C: added missing opening $ for LaTeX",
+    "Q14 answerCandidate: removed extra space in '-1.'",
+    "Q6 explanation: corrected ABx=0 versus BAx=0 using solution layout.json evidence and direct matrix multiplication."
+  ],
+  "sourceContentIssues": [],
+  "parserChecks": {
+    "node": "passed",
+    "python": "passed",
+    "powershell": "passed"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "20260620-173408-cc-math1-md-finalize-year-2017",
+  "sourceYear": 2017,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T09:34:08.000000+00:00",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "section_header_artifact_removed",
+      "questionNumber": 8,
+      "severity": "info",
+      "message": "Removed trailing section header (二、填空题) from q08 stem/option/explanation. Not part of question content."
+    },
+    {
+      "type": "section_header_artifact_removed",
+      "questionNumber": 14,
+      "severity": "info",
+      "message": "Removed trailing section header (三、解答题) from q14 stem/explanation. Not part of question content."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 2,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 2
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_run",
+    "mdFinalizationNotes": "Original incomplete_options on q04 resolved by splitting OCR-merged option D. Section-header artifacts on q08/q14 cleaned from stems, options, and explanations. All fixes uniquely determined by source Markdown."
+  }
+}

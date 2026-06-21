@@ -1,0 +1,739 @@
+{
+  "schemaVersion": "legacy-structure-repair-v1",
+  "reviewedOn": "2026-06-16",
+  "sourceYear": 1990,
+  "reviewStatus": "needs_human_review",
+  "sourceStagingSha256": "248a1d8ed4a5065ebb272460d140740686ba06cc9f98bab122da37b3c169360d",
+  "statusReason": "Deterministic solution boundaries were repaired; mathematical correctness is not approved.",
+  "repairDecisions": [
+    {
+      "issue": "merged_solution_sections_two_and_three",
+      "action": "Split the Q6 container into sequential Q6-Q13 solution blocks.",
+      "questionNumbers": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "stableId": "math1-1990-q01",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 1,
+      "questionType": "fill_in_blank",
+      "stem": "（1）过点 $M(1,2, - 1)$ 且与直线 $\\left\\{ \\begin{array}{l}x = -t + 2,\\\\ y = 3t - 4,\\\\ z = t - 1 \\end{array} \\right.$ 垂直的平面方程为",
+      "options": [],
+      "answerCandidate": "$x - 3y - z + 4 = 0.$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 $x - 3y - z + 4 = 0.$\n\n【解】 显然所求平面的法向量为 $n = \\{-1,3,1\\}$\n\n所求平面为 $-(x - 1) + 3(y - 2) + (z + 1) = 0$ ，即 $x - 3y - z + 4 = 0$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q02",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 2,
+      "questionType": "fill_in_blank",
+      "stem": "（2）设 $a$ 为非零常数，则 $\\lim_{x\\to \\infty}\\left(\\frac{x + a}{x - a}\\right)^x = \\underline{\\quad}.$",
+      "options": [],
+      "answerCandidate": "$\\mathrm{e}^{2a}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】 $\\mathrm{e}^{2a}$ .\n\n【解】 $\\lim_{x\\to \\infty}\\left(\\frac{x + a}{x - a}\\right)^x = \\lim_{x\\to \\infty}\\left[\\left(1 + \\frac{2a}{x - a}\\right)^{\\frac{x - a}{2a}}\\right]^x\\cdot \\frac{2a}{x - a} = \\mathrm{e}^{2a}.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q03",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 3,
+      "questionType": "fill_in_blank",
+      "stem": "（3）设函数 $f(x) = \\left\\{ \\begin{array}{ll}1, & |x|\\leqslant 1,\\\\ 0, & |x| > 1, \\end{array} \\right.$ 则函数 $f[f(x)] =$",
+      "options": [],
+      "answerCandidate": "1.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（3）【答案】1.\n\n【解】 $f[f(x)] = \\left\\{ \\begin{array}{ll}1, & |f(x)|\\leqslant 1,\\\\ 0, & |f(x)| > 1. \\end{array} \\right.$\n\n因为 $|f(x)| \\leqslant 1$ ，所以 $f[f(x)] = 1$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q04",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 4,
+      "questionType": "fill_in_blank",
+      "stem": "（4）积分 $\\int_0^2\\mathrm{d}x\\int_x^2\\mathrm{e}^{-y^2}\\mathrm{d}y = \\underline{\\quad}$",
+      "options": [],
+      "answerCandidate": "$\\frac{1}{2}\\left(1 - \\frac{1}{\\mathrm{e}^4}\\right)$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(4)【答案】 $\\frac{1}{2}\\left(1 - \\frac{1}{\\mathrm{e}^4}\\right)$ .\n\n【解】 改变积分次序得\n\n$$\n\\int_ {0} ^ {2} \\mathrm {d} x \\int_ {x} ^ {2} \\mathrm {e} ^ {- y ^ {2}} \\mathrm {d} y = \\int_ {0} ^ {2} \\mathrm {e} ^ {- y ^ {2}} \\mathrm {d} y \\int_ {0} ^ {y} \\mathrm {d} x = \\int_ {0} ^ {2} y \\mathrm {e} ^ {- y ^ {2}} \\mathrm {d} y = - \\frac {1}{2} \\mathrm {e} ^ {- y ^ {2}} \\left| _ {0} ^ {2} = \\frac {1}{2} \\left(1 - \\frac {1}{\\mathrm {e} ^ {4}}\\right). \\right.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q05",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 5,
+      "questionType": "fill_in_blank",
+      "stem": "（5）已知向量组 $\\pmb{\\alpha}_{1} = (1,2,3,4),\\pmb{\\alpha}_{2} = (2,3,4,5),\\pmb{\\alpha}_{3} = (3,4,5,6),\\pmb{\\alpha}_{4} = (4,5,6,7)$ ，则该向量组的秩为",
+      "options": [],
+      "answerCandidate": "2.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（5）【答案】2.\n\n【解】 $\\mathbf{A} = (\\pmb{\\alpha}_{1}^{\\mathrm{T}},\\pmb{\\alpha}_{2}^{\\mathrm{T}},\\pmb{\\alpha}_{3}^{\\mathrm{T}},\\pmb{\\alpha}_{4}^{\\mathrm{T}}) = \\begin{bmatrix} 1 & 2 & 3 & 4\\\\ 2 & 3 & 4 & 5\\\\ 3 & 4 & 5 & 6\\\\ 4 & 5 & 6 & 7 \\end{bmatrix} \\rightarrow \\begin{bmatrix} 1 & 2 & 3 & 4\\\\ 0 & -1 & -2 & -3\\\\ 0 & -2 & -4 & -6\\\\ 0 & -3 & -6 & -9 \\end{bmatrix} \\rightarrow \\begin{bmatrix} 1 & 2 & 3 & 4\\\\ 0 & 1 & 2 & 3\\\\ 0 & 0 & 0 & 0\\\\ 0 & 0 & 0 & 0 \\end{bmatrix},$\n\n因为 $r(\\mathbf{A}) = 2$ ，所以该向量组的秩为2.",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q06",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 6,
+      "questionType": "multiple_choice",
+      "stem": "（1）设 $f(x)$ 为连续函数， $F(x) = \\int_{x}^{\\mathrm{e}^{-x}} f(t) \\, \\mathrm{d}t$ ，则 $F'(x) = (\\quad)$ .\n\n(A) $-\\mathrm{e}^{-x}f(\\mathrm{e}^{-x}) - f(x)$\n\n(B) $-\\mathrm{e}^{-x}f(\\mathrm{e}^{-x}) + f(x)$\n\n(C) $\\mathrm{e}^{-x}f(\\mathrm{e}^{-x}) - f(x)$\n\n(D) $\\mathrm{e}^{-x}f(\\mathrm{e}^{-x}) + f(x)$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$-\\mathrm{e}^{-x}f(\\mathrm{e}^{-x}) - f(x)$"
+        },
+        {
+          "label": "B",
+          "value": "$-\\mathrm{e}^{-x}f(\\mathrm{e}^{-x}) + f(x)$"
+        },
+        {
+          "label": "C",
+          "value": "$\\mathrm{e}^{-x}f(\\mathrm{e}^{-x}) - f(x)$"
+        },
+        {
+          "label": "D",
+          "value": "$\\mathrm{e}^{-x}f(\\mathrm{e}^{-x}) + f(x)$"
+        }
+      ],
+      "answerCandidate": "(A).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 (A).\n\n【解】 $F^{\\prime}(x) = f(\\mathrm{e}^{-x})(\\mathrm{e}^{-x})^{\\prime} - f(x) = -\\mathrm{e}^{-x}f(\\mathrm{e}^{-x}) - f(x)$ ，应选(A).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q07",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 7,
+      "questionType": "multiple_choice",
+      "stem": "(2) 已知 $f(x)$ 具有任意阶连续导数，且 $f^{\\prime}(x) = [f(x)]^{2}$ ，则当 $n$ 为大于2的正整数时， $f(x)$ 的 $n$ 阶导数 $f^{(n)}(x) = (\\quad)$ .\n\n(A) $n! [f(x)]^{n+1}$\n\n(B) $n[f(x)]^{n + 1}$\n\n(C) $[f(x)]^{2n}$\n\n(D) $n! [f(x)]^{2n}$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$n! [f(x)]^{n+1}$"
+        },
+        {
+          "label": "B",
+          "value": "$n[f(x)]^{n + 1}$"
+        },
+        {
+          "label": "C",
+          "value": "$[f(x)]^{2n}$"
+        },
+        {
+          "label": "D",
+          "value": "$n! [f(x)]^{2n}$"
+        }
+      ],
+      "answerCandidate": "(A).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】 (A).\n\n【解】 由 $f^{\\prime}(x) = [f(x)]^{2}$ 得\n\n$$\n\\begin{array}{l} f ^ {\\prime \\prime} (x) = 2 f (x) f ^ {\\prime} (x) = 2 [ f (x) ] ^ {3}, \\\\ f ^ {\\prime \\prime} (x) = 2 \\times 3 [ f (x) ] ^ {2} f ^ {\\prime} (x) = 3! [ f (x) ] ^ {4}, \\\\ \\end{array}\n$$\n\n由归纳法得 $f^{(n)}(x) = n!\\left[f(x)\\right]^{n + 1}$ ，应选(A).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q08",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 8,
+      "questionType": "multiple_choice",
+      "stem": "（3）设 $\\alpha$ 为常数，则级数 $\\sum_{n=1}^{\\infty}\\left(\\frac{\\sin n\\alpha}{n^{2}} - \\frac{1}{\\sqrt{n}}\\right)$\n\n（A）绝对收敛\n\n（B）条件收敛\n\n（C）发散\n\n（D）收敛性与 $\\alpha$ 的取值有关",
+      "options": [
+        {
+          "label": "A",
+          "value": "绝对收敛"
+        },
+        {
+          "label": "B",
+          "value": "条件收敛"
+        },
+        {
+          "label": "C",
+          "value": "发散"
+        },
+        {
+          "label": "D",
+          "value": "收敛性与 $\\alpha$ 的取值有关"
+        }
+      ],
+      "answerCandidate": "(C).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（3）【答案】 (C).\n\n【解】因为 $\\left|\\frac{\\sin n\\alpha}{n^2}\\right| \\leqslant \\frac{1}{n^2}$ 且 $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ 收敛，所以 $\\sum_{n=1}^{\\infty} \\frac{\\sin n\\alpha}{n^2}$ 绝对收敛；\n\n因为 $\\sum_{n = 1}^{\\infty}\\frac{1}{\\sqrt{n}}$ 发散，所以 $\\sum_{n = 1}^{\\infty}\\left(\\frac{\\sin n\\alpha}{n^2} -\\frac{1}{\\sqrt{n}}\\right)$ 发散，应选(C).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q09",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 9,
+      "questionType": "multiple_choice",
+      "stem": "（4）已知 $f(x)$ 在 $x = 0$ 的某邻域内连续，且 $f(0) = 0, \\lim_{x \\to 0} \\frac{f(x)}{1 - \\cos x} = 2$ ，则在点 $x = 0$ 处 $f(x)$ （ ）.\n\n（A）不可导\n\n(B) 可导，且 $f^{\\prime}(0) \\neq 0$\n\n（C）取得极大值\n\n（D）取得极小值",
+      "options": [
+        {
+          "label": "A",
+          "value": "不可导"
+        },
+        {
+          "label": "B",
+          "value": "可导，且 $f^{\\prime}(0) \\neq 0$"
+        },
+        {
+          "label": "C",
+          "value": "取得极大值"
+        },
+        {
+          "label": "D",
+          "value": "取得极小值"
+        }
+      ],
+      "answerCandidate": "(D).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（4）【答案】 (D).\n\n【解】因为 $\\lim_{x\\to 0}\\frac{f(x)}{1 - \\cos{x}} = 2$ ，所以由极限保号性，存在 $\\delta >0$ ，当 $0 < |x| < \\delta$ 时， $\\frac{f(x)}{1 - \\cos{x}} >0.$\n\n因为 $1 - \\cos x > 0$ ，所以 $f(x) > 0 = f(0)$ ，故 $x = 0$ 为极小值点，应选(D).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q10",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 10,
+      "questionType": "multiple_choice",
+      "stem": "（5）已知 $\\beta_{1},\\beta_{2}$ 是非齐次线性方程组 $AX = b$ 的两个不同解， $\\alpha_{1},\\alpha_{2}$ 是对应的齐次线性方程组 $AX = 0$ 的基础解系， $k_{1},k_{2}$ 为任意常数，则方程组 $AX = b$ 的通解为（ ）.\n\n(A) $k_{1}\\pmb{\\alpha}_{1} + k_{2}(\\pmb{\\alpha}_{1} + \\pmb{\\alpha}_{2}) + \\frac{\\pmb{\\beta}_{1} - \\pmb{\\beta}_{2}}{2}$   \n(B) $k_{1}\\pmb{\\alpha}_{1} + k_{2}(\\pmb{\\alpha}_{1} - \\pmb{\\alpha}_{2}) + \\frac{\\pmb{\\beta}_{1} + \\pmb{\\beta}_{2}}{2}$   \n(C) $k_{1}\\pmb{\\alpha}_{1} + k_{2}(\\pmb{\\beta}_{1} + \\pmb{\\beta}_{2}) + \\frac{\\pmb{\\beta}_{1} - \\pmb{\\beta}_{2}}{2}$   \n(D) $k_{1}\\pmb{\\alpha}_{1} + k_{2}(\\pmb{\\beta}_{1} - \\pmb{\\beta}_{2}) + \\frac{\\pmb{\\beta}_{1} + \\pmb{\\beta}_{2}}{2}$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$k_{1}\\pmb{\\alpha}_{1} + k_{2}(\\pmb{\\alpha}_{1} + \\pmb{\\alpha}_{2}) + \\frac{\\pmb{\\beta}_{1} - \\pmb{\\beta}_{2}}{2}$"
+        },
+        {
+          "label": "B",
+          "value": "$k_{1}\\pmb{\\alpha}_{1} + k_{2}(\\pmb{\\alpha}_{1} - \\pmb{\\alpha}_{2}) + \\frac{\\pmb{\\beta}_{1} + \\pmb{\\beta}_{2}}{2}$"
+        },
+        {
+          "label": "C",
+          "value": "$k_{1}\\pmb{\\alpha}_{1} + k_{2}(\\pmb{\\beta}_{1} + \\pmb{\\beta}_{2}) + \\frac{\\pmb{\\beta}_{1} - \\pmb{\\beta}_{2}}{2}$"
+        },
+        {
+          "label": "D",
+          "value": "$k_{1}\\pmb{\\alpha}_{1} + k_{2}(\\pmb{\\beta}_{1} - \\pmb{\\beta}_{2}) + \\frac{\\pmb{\\beta}_{1} + \\pmb{\\beta}_{2}}{2}$"
+        }
+      ],
+      "answerCandidate": "（B）.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（5）【答案】 （B）.\n\n【解】令 $k_{1}\\pmb{\\alpha}_{1} + k_{2}(\\pmb{\\alpha}_{1} - \\pmb{\\alpha}_{2}) = \\mathbf{0}$ ，即 $(k_{1} + k_{2})\\pmb{\\alpha}_{1} - k_{2}\\pmb{\\alpha}_{2} = \\mathbf{0}$\n\n因为 $\\alpha_{1},\\alpha_{2}$ 线性无关，所以 $k_{1} + k_{2} = 0, - k_{2} = 0$ ，或 $k_{1} = 0,k_{2} = 0$ ，即 $\\alpha_{1},\\alpha_{1} - \\alpha_{2}$ 线性无关，\n\n又因为 $\\alpha_{1},\\alpha_{1} - \\alpha_{2}$ 为齐次线性方程组 $AX = 0$ 的解，所以 $\\alpha_{1},\\alpha_{1} - \\alpha_{2}$ 为齐次线性方程组 $AX = 0$ 的基础解系；\n\n而 $\\frac{\\pmb{\\beta}_1 + \\pmb{\\beta}_2}{2}$ 为非齐次线性方程组 $AX = b$ 的解，故 $k_{1}\\alpha_{1} + k_{2}(\\alpha_{1} - \\alpha_{2}) + \\frac{\\pmb{\\beta}_{1} + \\pmb{\\beta}_{2}}{2}$ 为 $AX = b$ 的通解，应选(B).三、",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q11",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 11,
+      "questionType": "solution",
+      "stem": "(1) 求 $\\int_{0}^{1} \\frac{\\ln(1 + x)}{(2 - x)^{2}} \\mathrm{d}x$ .",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "(1)【解】 $\\int_0^1\\frac{\\ln(1 + x)}{(2 - x)^2}\\mathrm{d}x = \\int_0^1\\ln (1 + x)\\mathrm{d}\\left(\\frac{1}{2 - x}\\right)$\n\n$$\n\\begin{array}{l} = \\left. \\frac {\\ln (1 + x)}{2 - x} \\right| _ {0} ^ {1} + \\int_ {0} ^ {1} \\frac {1}{(x - 2) (x + 1)} d x \\\\ = \\ln 2 + \\frac {1}{3} \\ln \\left| \\frac {x - 2}{x + 1} \\right| _ {0} ^ {1} = \\ln 2 - \\frac {2}{3} \\ln 2 = \\frac {1}{3} \\ln 2. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q12",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 12,
+      "questionType": "solution",
+      "stem": "（2）设 $z = f(2x - y, y \\sin x)$ ，其中 $f(u, v)$ 具有二阶连续偏导数，求 $\\frac{\\partial^2 z}{\\partial x \\partial y}$ .",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "(2)【解】 $\\frac{\\partial z}{\\partial x} = 2f_1' + y\\cos x \\cdot f_2'$ ,\n\n$$\n\\begin{array}{l} \\frac {\\partial^ {2} z}{\\partial x \\partial y} = 2 \\left(- f _ {1 1} ^ {\\prime \\prime} + \\sin x \\cdot f _ {1 2} ^ {\\prime \\prime}\\right) + \\cos x \\cdot f _ {2} ^ {\\prime} + y \\cos x \\left(- f _ {2 1} ^ {\\prime \\prime} + \\sin x \\cdot f _ {2 2} ^ {\\prime \\prime}\\right) \\\\ = - 2 f _ {1 1} ^ {\\prime \\prime} + (2 \\sin x - y \\cos x) \\cdot f _ {1 2} ^ {\\prime \\prime} + \\cos x \\cdot f _ {2} ^ {\\prime} + y \\sin x \\cos x \\cdot f _ {2 2} ^ {\\prime \\prime}. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q13",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 13,
+      "questionType": "solution",
+      "stem": "（3）求微分方程 $y^{\\prime \\prime} + 4y^{\\prime} + 4y = \\mathrm{e}^{-2x}$ 的通解",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "（3）【解】 特征方程为 $\\lambda^2 + 4\\lambda + 4 = 0$ ，特征根为 $\\lambda_1 = \\lambda_2 = -2$\n\n$y^{\\prime \\prime} + 4y^{\\prime} + 4y = 0$ 的通解为 $y = (C_1 + C_2x)\\mathrm{e}^{-2x}$\n\n令 $y^{\\prime \\prime} + 4y^{\\prime} + 4y = \\mathrm{e}^{-2x}$ 的特解为 $y_0(x) = ax^2\\mathrm{e}^{-2x}$ ，代入得 $a = \\frac{1}{2}$\n\n故 $y^{\\prime \\prime} + 4y^{\\prime} + 4y = \\mathrm{e}^{-2x}$ 的通解为\n\n$$\ny = (C _ {1} + C _ {2} x) \\mathrm {e} ^ {- 2 x} + \\frac {1}{2} x ^ {2} \\mathrm {e} ^ {- 2 x} (C _ {1}, C _ {2} \\text {为 任 意 常 数}).\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q14",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 14,
+      "questionType": "solution",
+      "stem": "求幂级数 $\\sum_{n=0}^{\\infty}(2n+1)x^{n}$ 的收敛域，并求其和函数.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "当 $x = \\pm 1$ 时， $(2n + 1)(\\pm 1)^n \\to \\infty (n \\to \\infty)$ ，即 $x = \\pm 1$ 时，幂级数发散，\n\n故幂级数的收敛域为 $(-1, 1)$ .\n\n令 $S(x) = \\sum_{n=0}^{\\infty}(2n+1)x^{n}$ ,\n\n则 $S(x) = 2x\\sum_{n = 1}^{\\infty}nx^{n - 1} + \\sum_{n = 0}^{\\infty}x^{n} = 2x(\\sum_{n = 1}^{\\infty}x^{n})^{\\prime} + \\frac{1}{1 - x}$\n\n$$\n= 2 x \\left(\\frac {x}{1 - x}\\right) ^ {\\prime} + \\frac {1}{1 - x} = \\frac {1 + x}{(1 - x) ^ {2}}.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q15",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 15,
+      "questionType": "solution",
+      "stem": "求曲面积分 $I = \\iint_{\\Sigma} yz \\, \\mathrm{d}z \\, \\mathrm{d}x + 2 \\, \\mathrm{d}x \\, \\mathrm{d}y$ ，其中 $\\Sigma$ 是球面 $x^2 + y^2 + z^2 = 4 (z \\geqslant 0)$ 的外侧.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "令 $\\Sigma_0: z = 0 (x^2 + y^2 \\leqslant 4)$ ，取下侧，\n\n$$\nI = \\iint_ {\\Sigma + \\Sigma_ {0}} y z \\mathrm {d} z \\mathrm {d} x + 2 \\mathrm {d} x \\mathrm {d} y - \\iint_ {\\Sigma_ {0}} y z \\mathrm {d} z \\mathrm {d} x + 2 \\mathrm {d} x \\mathrm {d} y,\n$$\n\n而 $\\iint_{\\Sigma + \\Sigma_0} yz \\, \\mathrm{d}z \\, \\mathrm{d}x + 2 \\, \\mathrm{d}x \\, \\mathrm{d}y = \\iiint_{\\Omega} z \\, \\mathrm{d}v = \\int_0^{2\\pi} \\, \\mathrm{d}\\theta \\int_0^{\\frac{\\pi}{2}} \\, \\mathrm{d}\\varphi \\int_0^2 r^3 \\sin \\varphi \\cos \\varphi \\, \\mathrm{d}r$\n\n$$\n= 2 \\pi \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin \\varphi \\cos \\varphi d \\varphi \\int_ {0} ^ {2} r ^ {3} d r = 4 \\pi ;\n$$\n\n$$\n\\iint_ {\\Sigma_ {0}} y z \\mathrm {d} z \\mathrm {d} x + 2 \\mathrm {d} x \\mathrm {d} y = \\iint_ {\\Sigma_ {0}} 2 \\mathrm {d} x \\mathrm {d} y = - 2 \\iint_ {x ^ {2} + y ^ {2} \\leqslant 4} \\mathrm {d} x \\mathrm {d} y = - 8 \\pi ,\n$$\n\n故 $I = 12\\pi$\n\n方法二\n\n$$\nI = \\iint_ {\\Sigma} y z \\mathrm {d} z \\mathrm {d} x + 2 \\mathrm {d} x \\mathrm {d} y = \\iint_ {\\Sigma} y z \\mathrm {d} z \\mathrm {d} x + 2 \\iint_ {\\Sigma} \\mathrm {d} x \\mathrm {d} y,\n$$\n\n令曲面 $\\Sigma$ 位于 $xOz$ 平面右侧的部分为 $\\Sigma_{1}$ ，由对称性得\n\n$$\n\\begin{array}{l} \\iint_ {\\Sigma} y z \\mathrm {d} z \\mathrm {d} x = 2 \\iint_ {\\Sigma_ {1}} y z \\mathrm {d} z \\mathrm {d} x = 2 \\iint_ {D _ {x z}} z \\sqrt {4 - x ^ {2} - z ^ {2}} \\mathrm {d} z \\mathrm {d} x \\\\ = 2 \\int_ {0} ^ {\\pi} \\mathrm {d} \\theta \\int_ {0} ^ {2} r ^ {2} \\sin \\theta \\cdot \\sqrt {4 - r ^ {2}} \\mathrm {d} r = 4 \\int_ {0} ^ {2} r ^ {2} \\sqrt {4 - r ^ {2}} \\mathrm {d} r \\\\ \\frac {r = 2 \\sin t}{4} \\int_ {0} ^ {\\frac {\\pi}{2}} 4 \\sin^ {2} t \\cdot 4 \\cos^ {2} t d t = 6 4 \\int_ {0} ^ {\\frac {\\pi}{2}} (\\sin^ {2} t - \\sin^ {4} t) d t \\\\ = 6 4 \\left(\\frac {1}{2} \\cdot \\frac {\\pi}{2} - \\frac {3}{4} \\cdot \\frac {1}{2} \\cdot \\frac {\\pi}{2}\\right) = 4 \\pi ; \\\\ \\end{array}\n$$\n\n$$\n2 \\iint_ {\\Sigma} \\mathrm {d} x \\mathrm {d} y = 2 \\iint_ {D _ {x y}} \\mathrm {d} x \\mathrm {d} y = 2 \\times 4 \\pi = 8 \\pi ,\n$$\n\n故 $I = \\iint_{\\Sigma} yz \\, \\mathrm{d}z \\, \\mathrm{d}x + 2 \\, \\mathrm{d}x \\, \\mathrm{d}y = 12\\pi.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q16",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 16,
+      "questionType": "solution",
+      "stem": "设不恒为常数的函数 $f(x)$ 在闭区间 $[a,b]$ 上连续，在开区间 $(a,b)$ 内可导，且 $f(a) = f(b)$ ，证明：在 $(a,b)$ 内至少存在一点 $\\xi$ ，使得 $f^{\\prime}(\\xi) > 0$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\nf ^ {\\prime} (\\xi) = \\frac {f (c) - f (a)}{c - a} > 0.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q17",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 17,
+      "questionType": "solution",
+      "stem": "设4阶矩阵 $\\pmb{B} = \\begin{bmatrix} 1 & -1 & 0 & 0\\\\ 0 & 1 & -1 & 0\\\\ 0 & 0 & 1 & -1\\\\ 0 & 0 & 0 & 1 \\end{bmatrix},\\pmb {C} = \\begin{bmatrix} 2 & 1 & 3 & 4\\\\ 0 & 2 & 1 & 3\\\\ 0 & 0 & 2 & 1\\\\ 0 & 0 & 0 & 2 \\end{bmatrix}$ ，且矩阵 $\\mathbf{A}$ 满足关系式\n\n$\\mathbf{A}(\\mathbf{E} - \\mathbf{C}^{-1}\\mathbf{B})^{\\mathrm{T}}\\mathbf{C}^{\\mathrm{T}} = \\mathbf{E}$ ，其中 $\\pmb{E}$ 为4阶单位矩阵， $C^{-1}$ 表示 $\\pmb{c}$ 的逆矩阵， $C^{\\mathrm{T}}$ 表示 $\\pmb{c}$ 的转置矩阵，将上述关系式化简并求矩阵 $\\mathbf{A}$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n\\mathbf {A} = \\left[ (\\mathbf {C} - \\mathbf {B}) ^ {\\mathrm {T}} \\right] ^ {- 1},\n$$\n\n$$\n\\text {而} \\pmb {C} - \\pmb {B} = \\left[ \\begin{array}{c c c c} {1} & {2} & {3} & {4} \\\\ {0} & {1} & {2} & {3} \\\\ {0} & {0} & {1} & {2} \\\\ {0} & {0} & {0} & {1} \\end{array} \\right], \\quad (\\pmb {C} - \\pmb {B}) ^ {\\mathrm {T}} = \\left[ \\begin{array}{c c c c} {1} & {0} & {0} & {0} \\\\ {2} & {1} & {0} & {0} \\\\ {3} & {2} & {1} & {0} \\\\ {4} & {3} & {2} & {1} \\end{array} \\right],\n$$\n\n$$\n\\text {由} \\left[\\begin{array}{c c c c c c c c}1&0&0&0&1&0&0&0\\\\2&1&0&0&0&1&0&0\\\\3&2&1&0&0&0&1&0\\\\4&3&2&1&0&0&0&1\\end{array}\\right]\\rightarrow \\left[\\begin{array}{c c c c c c c c}1&0&0&0&1&0&0&0\\\\0&1&0&0&- 2&1&0&0\\\\0&0&1&0&1&- 2&1&0\\\\0&0&0&1&0&1&- 2&1\\end{array}\\right], \\text {得}\n$$\n\n$$\n\\mathbf {A} = \\left( \\begin{array}{c c c c} 1 & 0 & 0 & 0 \\\\ - 2 & 1 & 0 & 0 \\\\ 1 & - 2 & 1 & 0 \\\\ 0 & 1 & - 2 & 1 \\end{array} \\right).\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q18",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 18,
+      "questionType": "solution",
+      "stem": "求一个正交变换，化二次型 $f(x_{1},x_{2},x_{3}) = x_{1}^{2} + 4x_{2}^{2} + 4x_{3}^{2} - 4x_{1}x_{2} + 4x_{1}x_{3} - 8x_{2}x_{3}$ 为标准形.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "由 $|\\lambda \\pmb {E} - \\pmb {A}| = \\left| \\begin{array}{ccc}\\lambda -1 & 2 & -2\\\\ 2 & \\lambda -4 & 4\\\\ -2 & 4 & \\lambda -4 \\end{array} \\right| = \\lambda^2 (\\lambda -9) = 0$ ，得 $\\lambda_1 = \\lambda_2 = 0,\\lambda_3 = 9$\n\n由 $0E - A\\to \\left( \\begin{array}{ccc}1 & -2 & 2\\\\ 0 & 0 & 0\\\\ 0 & 0 & 0 \\end{array} \\right)$ 得 $\\lambda_{1} = \\lambda_{2} = 0$ 对应的线性无关的特征向量为\n\n$$\n\\pmb {\\alpha} _ {1} = \\binom {2} {1}, \\quad \\pmb {\\alpha} _ {2} = \\binom {- 2} {0};\n$$\n\n由 $9E - A \\rightarrow \\left( \\begin{array}{ccc}1 & 0 & -\\frac{1}{2}\\\\ 0 & 1 & 1\\\\ 0 & 0 & 0 \\end{array} \\right)$ 得 $\\lambda_{3} = 9$ 对应的特征向量为 $\\pmb{\\alpha}_{3} = \\binom{1}{-2}$\n\n令 $\\pmb{\\beta}_{1} = \\pmb{\\alpha}_{1} = \\binom{2}{1}$ ， $\\pmb{\\beta}_{2} = \\pmb{\\alpha}_{2} - \\frac{(\\pmb{\\alpha}_{2},\\pmb{\\beta}_{1})}{(\\pmb{\\beta}_{1},\\pmb{\\beta}_{1})}\\pmb{\\beta}_{1} = \\binom{-2}{0} + \\frac{4}{5}\\binom{2}{1} = \\frac{1}{5}\\binom{-2}{4}$ ， $\\pmb{\\beta}_{3} = \\binom{1}{-2}$ ，\n\n规范化得 $\\pmb{\\gamma}_{1} = \\frac{1}{\\sqrt{5}}\\binom{2}{0},\\quad \\pmb{\\gamma}_{2} = \\frac{1}{3\\sqrt{5}}\\binom{-2}{4},\\quad \\pmb{\\gamma}_{3} = \\frac{1}{3}\\binom{1}{2},$\n\n令 $Q = \\left[ \\begin{array}{ccc} \\frac{2}{\\sqrt{5}} & -\\frac{2}{3\\sqrt{5}} & \\frac{1}{3}\\\\ \\frac{1}{\\sqrt{5}} & \\frac{4}{3\\sqrt{5}} & -\\frac{2}{3}\\\\ 0 & \\frac{5}{3\\sqrt{5}} & \\frac{2}{3} \\end{array} \\right]$ ，所求的正交变换为 $X = QY$\n\n则 $f = \\mathbf{X}^{\\mathrm{T}}\\mathbf{A}\\mathbf{X}\\frac{\\mathbf{X} = \\mathbf{Q}\\mathbf{Y}}{}9y_{3}^{2}.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q19",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 19,
+      "questionType": "solution",
+      "stem": "质点 $P$ 沿着以 $AB$ 为直径的半圆周，从点 $A(1,2)$ 运动到点 $B(3,4)$ 的过程中受到力 $\\pmb{F}$ 的作用（如图）， $\\pmb{F}$ 的大小等于点 $P$ 到原点 $O$ 之间的距离，其方向垂直于线段 $OP$ ，且与 $y$ 轴正向的夹角小于 $\\frac{\\pi}{2}$ ，求变力 $\\pmb{F}$ 对质点 $P$ 所做的功.\n\n![](images/b38959760655b669fe62a3d460dbac87eae7f3847de9d767f162ae52b05630d2.jpg)  \n九题图",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "因为 $\\pmb{F}$ 的方向垂直于 $OP$ 且与 $y$ 轴正向的夹角小于 $\\frac{\\pi}{2}$\n\n所以 $\\pmb{F}^{0} = \\frac{1}{\\sqrt{x^{2} + y^{2}}}\\{-y,x\\}$ ，则 $\\pmb {F} = |\\pmb {F}|\\cdot \\pmb{F}^{0} = \\{-y,x\\}$\n\n$$\nW = \\int_ {L} (- y) d x + x d y = \\oint_ {L + B A} (- y) d x + x d y + \\int_ {\\overline {{A B}}} (- y) d x + x d y,\n$$\n\n而 $\\oint_{L + BA}(-y)\\mathrm{d}x + x\\mathrm{d}y = 2\\iint_{D}\\mathrm{d}x\\mathrm{d}y = 2\\times \\frac{1}{2}\\pi (\\sqrt{2})^{2} = 2\\pi ,$\n\n$\\overline{AB}$ ： $y = x + 1$ （起点 $x = 1$ ，终点 $x = 3$ )，则\n\n$$\n\\int_ {\\overline {{A B}}} (- y) \\mathrm {d} x + x \\mathrm {d} y = \\int_ {1} ^ {3} - (x + 1) \\mathrm {d} x + x \\mathrm {d} x = - 2,\n$$\n\n故 $W = 2(\\pi -1)$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q20",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 20,
+      "questionType": "fill_in_blank",
+      "stem": "（1）已知随机变量 $X$ 的概率密度函数为 $f(x) = \\frac{1}{2}\\mathrm{e}^{-|x|}, - \\infty <  x <   + \\infty$ ，则随机变量 $X$ 的概率分布函数为 $F(x) =$",
+      "options": [],
+      "answerCandidate": "$\\left\\{ \\begin{array}{ll} \\frac{1}{2}\\mathrm{e}^{x}, & x < 0, \\\\ 1 - \\frac{1}{2}\\mathrm{e}^{-x}, & x \\geqslant 0. \\end{array} \\right.$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 $\\left\\{ \\begin{array}{ll} \\frac{1}{2}\\mathrm{e}^{x}, & x < 0, \\\\ 1 - \\frac{1}{2}\\mathrm{e}^{-x}, & x \\geqslant 0. \\end{array} \\right.$\n\n【解】 $F(x) = P\\{X \\leqslant x\\} = \\int_{-\\infty}^{x} f(x) \\, \\mathrm{d}x,$\n\n当 $x < 0$ 时， $F(x) = \\frac{1}{2}\\int_{-\\infty}^{x}\\mathrm{e}^{x}\\mathrm{d}x = \\frac{1}{2}\\mathrm{e}^{x}$\n\n当 $x \\geqslant 0$ 时， $F(x) = \\int_{-\\infty}^{0} f(x) \\, \\mathrm{d}x + \\int_{0}^{x} f(x) \\, \\mathrm{d}x = \\frac{1}{2} + \\frac{1}{2} \\int_{0}^{x} \\mathrm{e}^{-x} \\, \\mathrm{d}x = 1 - \\frac{1}{2} \\mathrm{e}^{-x}$ ，\n\n故 $F(x) = \\left\\{ \\begin{array}{ll} \\frac{1}{2}\\mathrm{e}^{x}, & x < 0,\\\\ 1 - \\frac{1}{2}\\mathrm{e}^{-x}, & x\\geqslant 0. \\end{array} \\right.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q21",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 21,
+      "questionType": "fill_in_blank",
+      "stem": "（2）设随机事件 $A, B$ 及其和事件 $A \\cup B$ 的概率分别为0.4，0.3和0.6，设 $\\overline{B}$ 为事件 $B$ 的对立事件，则 $P(A\\overline{B}) = \\_$",
+      "options": [],
+      "answerCandidate": "0.3.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】0.3.\n\n【解】由 $P(A) = 0.4, P(B) = 0.3, P(A + B) = 0.6$ 得\n\n$$\nP (A B) = P (A) + P (B) - P (A + B) = 0. 1,\n$$\n\n故 $P(A\\overline{B}) = P(A) - P(AB) = 0.4 - 0.1 = 0.3.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q22",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 22,
+      "questionType": "fill_in_blank",
+      "stem": "(3) 已知离散型随机变量 $X$ 服从参数为 2 的泊松分布, 即 $P\\{X = k\\} = \\frac{2^k}{k!}\\mathrm{e}^{-2}(k = 0,1,2,\\dots)$ , 则随机变量 $Z = 3X - 2$ 的数学期望 $E(Z) = \\_$ .",
+      "options": [],
+      "answerCandidate": "4.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(3)【答案】4.\n\n【解】因为 $X$ 服从参数为2的泊松分布，所以 $E(X) = 2$\n\n于是 $E(Z) = 3E(X) - 2 = 6 - 2 = 4.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1990-q23",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1990年考研数学(一)真题.md",
+        "solutions/1990年解析/1990年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1990,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "15E1B077B00318D6505BE290B042792184DC5FAF98954F7E40460D65FE827015",
+        "solutions": "DC871D3DAFD108717D39E2F0502AB703BFD0B9CDFA548DA61B09290CA48FCA21"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 23,
+      "questionType": "solution",
+      "stem": "设二维随机变量 $(X,Y)$ 在区域 $D = \\{(x,y) \\mid 0 < x < 1, |y| < x\\}$ 内服从均匀分布，求关于 $X$ 的边缘概率密度及随机变量 $Z = 2X + 1$ 的方差 $D(Z)$ .\n\n![](images/ae201c81b0550aa09dcb5ed7516c92a49ce98ec220e8ef483d6cd295a3f473b5.jpg)  \n十二题图",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\nf (x, y) = \\left\\{ \\begin{array}{l l} 1, & (x, y) \\in D, \\\\ 0, & (x, y) \\notin D. \\end{array} \\right.\n$$\n\n$$\nf _ {X} (x) = \\int_ {- \\infty} ^ {+ \\infty} f (x, y) d y,\n$$\n\n当 $x \\leqslant 0$ 或 $x \\geqslant 1$ 时， $f_{X}(x) = 0$\n\n当 $0 < x < 1$ 时， $f_{X}(x) = \\int_{-x}^{x} 1 \\, \\mathrm{d}y = 2x$\n\n则随机变量 $X$ 的边缘概率密度为 $f_{X}(x) = \\left\\{ \\begin{array}{ll}2x, & 0 < x < 1,\\\\ 0, & \\text{其他}. \\end{array} \\right.$\n\n由 $E(X) = \\int_0^1 xf_X(x)\\mathrm{d}x = \\int_0^1 2x^2\\mathrm{d}x = \\frac{2}{3}$\n\n$$\nE (X ^ {2}) = \\int_ {0} ^ {1} x ^ {2} f _ {X} (x) \\mathrm {d} x = \\int_ {0} ^ {1} 2 x ^ {3} \\mathrm {d} x = \\frac {1}{2}, \\text {得} D (X) = \\frac {1}{2} - \\frac {4}{9} = \\frac {1}{1 8},\n$$\n\n故 $D(Z) = D(2X + 1) = 4D(X) = \\frac{2}{9}.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    }
+  ],
+  "validation": {
+    "questionsGenerated": 23,
+    "questionsWithExplanations": 23,
+    "multipleChoiceWithFourOptions": 5,
+    "allNeedsHumanReview": true,
+    "remainingAutomaticAnomalies": 0
+  }
+}

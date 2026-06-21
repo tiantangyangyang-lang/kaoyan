@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "cc-math1-md-finalize-2007",
+  "sourceYear": 2007,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T16:48:47.582493+08:00",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [],
+  "summary": {
+    "totalAnomalies": 0,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_run"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "exportSchema": "kaoyan-obsidian-v1",
+  "generatedAt": "2026-06-14T20:00:00+08:00",
+  "reportId": "example-report-2025-math1",
+  "includesAttachments": false,
+  "includesFullQuestionText": false,
+  "files": [
+    "00-开始这里.md",
+    "Reports/2026-06-14-2025年数学一分析.md",
+    "Knowledge/极限.md",
+    "Knowledge/多元函数微分.md",
+    "Mistakes/2025-数学一-Q17.md",
+    "Plans/未来14天复习计划.md",
+    "Maps/薄弱知识点.canvas"
+  ]
+}

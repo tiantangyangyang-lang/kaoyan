@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "math1-final-validation-v1",
+  "generatedAt": "2026-06-20T22:57:45.880Z",
+  "runId": "20260621-062733-cc-finalize-summary",
+  "checks": [
+    {
+      "name": "year_count",
+      "status": "passed",
+      "details": "38 expected, got 38"
+    },
+    {
+      "name": "year_1994_blocked",
+      "status": "passed",
+      "details": "1994 excluded (source_blocked)"
+    },
+    {
+      "name": "total_question_count",
+      "status": "passed",
+      "details": "852 vs staging 852"
+    },
+    {
+      "name": "stableid_uniqueness",
+      "status": "passed",
+      "details": "852 unique / 852"
+    },
+    {
+      "name": "review_status_all_nhr",
+      "status": "passed",
+      "details": "0 non-NHR"
+    },
+    {
+      "name": "global_rfa_rwi_blk_sum",
+      "status": "passed",
+      "details": "671+175+6=852 vs 852"
+    },
+    {
+      "name": "per_year_rfa_rwi_blk_sum",
+      "status": "passed",
+      "details": "All years pass"
+    },
+    {
+      "name": "regression_checks",
+      "status": "passed",
+      "details": "0 failures"
+    },
+    {
+      "name": "no_default_status_source",
+      "status": "passed",
+      "details": "All classifications from explicit evidence"
+    },
+    {
+      "name": "no_2002_2010_retry",
+      "status": "passed",
+      "details": "No retry recommended for 2002/2010"
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "warning": 0
+  }
+}

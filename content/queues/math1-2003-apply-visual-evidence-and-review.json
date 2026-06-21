@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2003-apply-visual-evidence-and-review",
+  "description": "Apply Codex-provided text evidence for Math1 2003, then regenerate semantic review artifacts.",
+  "defaultContinueOnError": false,
+  "tasks": [
+    {
+      "label": "Apply Math1 2003 Codex visual evidence",
+      "task": "cc-math1-apply-visual-evidence",
+      "year": 2003,
+      "maxTurns": 60
+    },
+    {
+      "label": "Math1 2003 semantic review after evidence application",
+      "task": "ds-math1-year",
+      "year": 2003,
+      "maxTurns": 60
+    }
+  ]
+}

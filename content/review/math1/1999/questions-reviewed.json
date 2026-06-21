@@ -1,0 +1,809 @@
+{
+  "schemaVersion": "review-v1",
+  "task": "cc-math1-md-finalize-year",
+  "runId": "20260620-161006-cc-math1-md-finalize-year-1999",
+  "generatedAt": "2026-06-20T08:13:33.869Z",
+  "sourceInfo": {
+    "sourceRepo": "Kaoyan-Math1-Papers",
+    "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+    "paperRelativePath": "papers/1999年考研数学(一)真题.md",
+    "paperSha256": "F749B4E2FE6E61C76E5BA23BB7F0D6545F9DC3521A71BE3E5BA7D5B9F18B5B5E",
+    "solutionsRelativePath": "solutions/1999年解析/1999年解析.md",
+    "solutionsSha256": "827078A59BA4FFD42CA33489F29252F6CF2B0D7FF90BDE4897A805AD3097B798"
+  },
+  "summary": {
+    "totalQuestions": 21,
+    "multipleChoice": 5,
+    "fillInBlank": 5,
+    "solution": 11,
+    "anomaliesConfirmed": 0,
+    "anomaliesResolved": 1,
+    "newAnomaliesDetected": 2,
+    "allNeedsHumanReview": true
+  },
+  "reviews": [
+    {
+      "stableId": "math1-1999-q01",
+      "candidateResult": {
+        "questionNumber": 1,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "(1) $\\lim_{x\\to 0}\\left(\\frac{1}{x^2} -\\frac{1}{x\\tan x}\\right) = \\underline{\\quad}$",
+        "options": [],
+        "answerCandidate": "$\\frac{1}{3}$ .",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(1)【答案】 $\\frac{1}{3}$ .\n\n【解】 $\\lim_{x\\to 0}\\left(\\frac{1}{x^2} -\\frac{1}{x\\tan x}\\right) = \\lim_{x\\to 0}\\frac{\\tan x - x}{x^2\\tan x} = \\lim_{x\\to 0}\\frac{\\tan x - x}{x^3}$\n\n$$\n= \\lim  _ {x \\rightarrow 0} \\frac {\\sec^ {2} x - 1}{3 x ^ {2}} = \\frac {1}{3}.\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q02",
+      "candidateResult": {
+        "questionNumber": 2,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "(2) $\\frac{\\mathrm{d}}{\\mathrm{d}x}\\int_{0}^{x}\\sin (x - t)^{2}\\mathrm{d}t = \\underline{\\quad}$",
+        "options": [],
+        "answerCandidate": "$\\sin x^2$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(2)【答案】 $\\sin x^2$\n\n【解】由 $\\int_0^x\\sin (x - t)^2\\mathrm{d}t\\xlongequal{x - t = u}\\int_x^0\\sin u^2 (-\\mathrm{d}u) = \\int_0^x\\sin u^2\\mathrm{d}u$ 得\n\n$$\n\\frac {\\mathrm {d}}{\\mathrm {d} x} \\int_ {0} ^ {x} \\sin (x - t) ^ {2} \\mathrm {d} t = \\frac {\\mathrm {d}}{\\mathrm {d} x} \\int_ {0} ^ {x} \\sin u ^ {2} \\mathrm {d} u = \\sin x ^ {2}.\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q03",
+      "candidateResult": {
+        "questionNumber": 3,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "(3) $y^{\\prime \\prime} - 4y = \\mathrm{e}^{2x}$ 的通解为 $y =$",
+        "options": [],
+        "answerCandidate": "$C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{2x} + \\frac{1}{4} x\\mathrm{e}^{2x}(C_1,C_2$ 为任意常数）.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(3)【答案】 $C_1\\mathrm{e}^{-2x} + C_2\\mathrm{e}^{2x} + \\frac{1}{4} x\\mathrm{e}^{2x}(C_1,C_2$ 为任意常数）.\n\n【解】 特征方程为 $\\lambda^2 - 4 = 0$ ，特征根为 $\\lambda_1 = -2, \\lambda_2 = 2$\n\n则 $y^{\\prime \\prime} - 4y = 0$ 的通解为 $y = C_{1}\\mathrm{e}^{-2x} + C_{2}\\mathrm{e}^{2x}$\n\n令 $y^{\\prime \\prime} - 4y = \\mathrm{e}^{2x}$ 的特解为 $y_0(x) = ax\\mathrm{e}^{2x}$ ，代入得 $a = \\frac{1}{4}$\n\n故 $y^{\\prime \\prime} - 4y = \\mathrm{e}^{2x}$ 的通解为 $y = C_{1}\\mathrm{e}^{-2x} + C_{2}\\mathrm{e}^{2x} + \\frac{1}{4} x\\mathrm{e}^{2x}(C_{1},C_{2}$ 为任意常数).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q04",
+      "candidateResult": {
+        "questionNumber": 4,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "(4) 设 $n$ 阶矩阵 $\\mathbf{A}$ 的元素全为 1 , 则 $\\mathbf{A}$ 的 $n$ 个特征值是",
+        "options": [],
+        "answerCandidate": "$\\lambda_{1} = \\lambda_{2} = \\dots = \\lambda_{n - 1} = 0, \\lambda_{n} = n$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（4）【答案】 $\\lambda_{1} = \\lambda_{2} = \\dots = \\lambda_{n - 1} = 0, \\lambda_{n} = n$\n\n【解】方法一 由 $|\\lambda E - A| = \\left| \\begin{array}{cccc}\\lambda -1 & -1 & \\dots & -1\\\\ -1 & \\lambda -1 & \\dots & -1\\\\ \\vdots & \\vdots & & \\vdots \\\\ -1 & -1 & \\dots & \\lambda -1 \\end{array} \\right| = \\lambda^{n - 1}(\\lambda -n) = 0$ 得\n\n$\\mathbf{A}$ 的特征值为 $\\lambda_{1} = \\lambda_{2} = \\dots = \\lambda_{n - 1} = 0, \\lambda_{n} = n$\n\n方法二 因为 $\\mathbf{A}^{\\mathrm{T}} = \\mathbf{A}$ ，所以 $\\mathbf{A}$ 可对角化，从而 $\\mathbf{A}$ 的非零特征值的个数与 $r(\\mathbf{A})$ 相同，\n\n由 $r(\\mathbf{A}) = 1$ 得 $A$ 只有一个非零特征值，\n\n又因为 $\\operatorname{tr} A = n = \\lambda_1 + \\lambda_2 + \\dots + \\lambda_n$ ，所以 $A$ 的特征值为 $\\lambda_1 = \\lambda_2 = \\dots = \\lambda_{n-1} = 0, \\lambda_n = n$ .",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q05",
+      "candidateResult": {
+        "questionNumber": 5,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "(5) 设两两相互独立的三事件 $A, B$ 和 $C$ 满足条件: $ABC = \\emptyset$ , $P(A) = P(B) = P(C) < \\frac{1}{2}$ , 且已知 $P(A \\cup B \\cup C) = \\frac{9}{16}$ , 则 $P(A) = \\_$ .",
+        "options": [],
+        "answerCandidate": "$\\frac{1}{4}$ .",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(5)【答案】 $\\frac{1}{4}$ .\n\n【解】 令 $P(A) = p$\n\n而 $P(A \\cup B \\cup C) = P(A) + P(B) + P(C) - P(AB) - P(AC) - P(BC) + P(ABC)$\n\n$$\n= 3 p - 3 p ^ {2},\n$$\n\n则 $3p - 3p^2 = \\frac{9}{16}$ ，解得 $p = \\frac{1}{4}$ 或 $p = \\frac{3}{4}$\n\n由 $P(A) < \\frac{1}{2}$ 得 $P(A) = \\frac{1}{4}$ .",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q06",
+      "candidateResult": {
+        "questionNumber": 6,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "（1）设 $f(x)$ 是连续函数， $F(x)$ 是 $f(x)$ 的原函数，则( )\n\n(A) 当 $f(x)$ 是奇函数时, $F(x)$ 必是偶函数.  \n(B) 当 $f(x)$ 是偶函数时, $F(x)$ 必是奇函数.  \n（C）当 $f(x)$ 是周期函数时， $F(x)$ 必是周期函数  \n（D）当 $f(x)$ 是单调增函数时， $F(x)$ 必是单调增函数",
+        "options": [
+          {
+            "label": "A",
+            "value": "当 $f(x)$ 是奇函数时, $F(x)$ 必是偶函数."
+          },
+          {
+            "label": "B",
+            "value": "当 $f(x)$ 是偶函数时, $F(x)$ 必是奇函数."
+          },
+          {
+            "label": "C",
+            "value": "当 $f(x)$ 是周期函数时， $F(x)$ 必是周期函数"
+          },
+          {
+            "label": "D",
+            "value": "当 $f(x)$ 是单调增函数时， $F(x)$ 必是单调增函数"
+          }
+        ],
+        "answerCandidate": "（A).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（1）【答案】 （A).\n\n【解】 若 $f(x)$ 是奇函数， $F(x) = \\int_{a}^{x} f(t) \\, \\mathrm{d}t$\n\n则 $F(-x) = \\int_{a}^{-x}f(t)\\mathrm{d}t\\frac{t = -u}{-a}\\int_{-a}^{x}f(-u)(-\\mathrm{d}u) = \\int_{-a}^{x}f(u)\\mathrm{d}u$\n\n$$\n= \\int_ {- a} ^ {a} f (u) \\mathrm {d} u + \\int_ {a} ^ {x} f (u) \\mathrm {d} u = \\int_ {a} ^ {x} f (u) \\mathrm {d} u = F (x),\n$$\n\n即 $F(x)$ 为偶函数，应选(A).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "ocr_artifact_in_explanation",
+            "questionNumber": 6,
+            "severity": "info",
+            "message": "Explanation contains OCR artifact: variable substitution notation rendered as \\frac{t = -u}{-a} instead of \\xlongequal{t = -u}. Mathematical meaning is still discernible."
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "ocr_artifact_in_explanation",
+            "detail": "Explanation contains OCR artifact: variable substitution notation rendered as \\frac{t = -u}{-a} instead of \\xlongequal{t = -u}. Mathematical meaning is still discernible.",
+            "severity": "info"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "Explanation contains OCR artifact: variable substitution notation rendered as \\frac{t = -u}{-a} instead of \\xlongequal{t = -u}. Mathematical meaning is still discernible."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q07",
+      "candidateResult": {
+        "questionNumber": 7,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "(2) 设 $f(x) = \\begin{cases} \\frac{1 - \\cos x}{\\sqrt{x}}, & x > 0, \\\\ x^2 g(x), & x \\leqslant 0, \\end{cases}$ 其中 $g(x)$ 是有界函数, 则 $f(x)$ 在 $x = 0$ 处 ( )\n\n(A) 极限不存在.\n\n（B）极限存在，但不连续\n\n(C) 连续, 但不可导.\n\n(D) 可导.",
+        "options": [
+          {
+            "label": "A",
+            "value": "极限不存在."
+          },
+          {
+            "label": "B",
+            "value": "极限存在，但不连续"
+          },
+          {
+            "label": "C",
+            "value": "连续, 但不可导."
+          },
+          {
+            "label": "D",
+            "value": "可导."
+          }
+        ],
+        "answerCandidate": "(D).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(2)【答案】 (D).\n\n【解】 $f_{+}^{\\prime}(0) = \\lim_{x\\to 0^{+}}\\frac{f(x) - f(0)}{x - 0} = \\lim_{x\\to 0^{+}}\\frac{1 - \\cos x}{x\\sqrt{x}} = 0;$\n\n$$\nf _ {-} ^ {\\prime} (0) = \\lim  _ {x \\rightarrow 0 ^ {-}} \\frac {f (x) - f (0)}{x - 0} = \\lim  _ {x \\rightarrow 0 ^ {-}} x g (x) = 0,\n$$\n\n因为 $f_{+}^{\\prime}(0) = f_{-}^{\\prime}(0)$ ，所以 $f(x)$ 在 $x = 0$ 处可导，应选(D).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q08",
+      "candidateResult": {
+        "questionNumber": 8,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "(3) 设 $f(x) = \\begin{cases} x, & 0 \\leqslant x \\leqslant \\frac{1}{2}, \\\\ 2 - 2x, & \\frac{1}{2} < x < 1, \\end{cases} \\quad S(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} a_n \\cos n\\pi x, -\\infty < x < +\\infty$ , 其中 $a_n = 2\\int_0^1 f(x) \\cos n\\pi x \\, \\mathrm{d}x, (n = 0,1,2,\\dots)$ , 则 $S\\left(-\\frac{5}{2}\\right)$ 等于（ ）\n\n(A) $\\frac{1}{2}$ .\n\n(B) $-\\frac{1}{2}$ .\n\n(C) $\\frac{3}{4}$ .\n\n(D) $-\\frac{3}{4}$ .",
+        "options": [
+          {
+            "label": "A",
+            "value": "$\\frac{1}{2}$ ."
+          },
+          {
+            "label": "B",
+            "value": "$-\\frac{1}{2}$ ."
+          },
+          {
+            "label": "C",
+            "value": "$\\frac{3}{4}$ ."
+          },
+          {
+            "label": "D",
+            "value": "$-\\frac{3}{4}$ ."
+          }
+        ],
+        "answerCandidate": "(C).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(3)【答案】 (C).\n\n【解】显然 $S(x)$ 是以2为周期的偶函数，则 $S\\left(-\\frac{5}{2}\\right) = S\\left(-\\frac{1}{2}\\right) = S\\left(\\frac{1}{2}\\right)$\n\n而 $S\\left(\\frac{1}{2}\\right) = \\frac{f\\left(\\frac{1}{2} - 0\\right) + f\\left(\\frac{1}{2} + 0\\right)}{2} = \\frac{3}{4}$ , 应选(C).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q09",
+      "candidateResult": {
+        "questionNumber": 9,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "(4) 设 $\\mathbf{A}$ 是 $m \\times n$ 矩阵, $\\mathbf{B}$ 是 $n \\times m$ 矩阵, 则( )\n\n(A) 当 $m > n$ 时, 必有行列式 $|\\mathbf{A}\\mathbf{B}| \\neq 0$ .  \n(B) 当 $m > n$ 时, 必有行列式 $|\\mathbf{A}\\mathbf{B}| = 0$ .  \n(C) 当 $n > m$ 时, 必有行列式 $|\\mathbf{A}\\mathbf{B}| \\neq 0$ .  \n(D) 当 $n > m$ 时, 必有行列式 $|\\mathbf{A}\\mathbf{B}| = 0$ .",
+        "options": [
+          {
+            "label": "A",
+            "value": "当 $m > n$ 时, 必有行列式 $|\\mathbf{A}\\mathbf{B}| \\neq 0$ ."
+          },
+          {
+            "label": "B",
+            "value": "当 $m > n$ 时, 必有行列式 $|\\mathbf{A}\\mathbf{B}| = 0$ ."
+          },
+          {
+            "label": "C",
+            "value": "当 $n > m$ 时, 必有行列式 $|\\mathbf{A}\\mathbf{B}| \\neq 0$ ."
+          },
+          {
+            "label": "D",
+            "value": "当 $n > m$ 时, 必有行列式 $|\\mathbf{A}\\mathbf{B}| = 0$ ."
+          }
+        ],
+        "answerCandidate": "(B).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(4)【答案】 (B).\n\n【解】 当 $m > n$ 时， $r(\\mathbf{A}) \\leqslant n, r(\\mathbf{B}) \\leqslant n$\n\n因为 $r(\\mathbf{AB}) \\leqslant \\min \\{r(\\mathbf{A}), r(\\mathbf{B})\\}$ , 所以 $r(\\mathbf{AB}) \\leqslant n$\n\n于是 $r(\\mathbf{AB}) < m$ ，即 $\\mathbf{AB}$ 为降秩矩阵，故 $|\\mathbf{AB}| = 0$ ，应选(B).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q10",
+      "candidateResult": {
+        "questionNumber": 10,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "(5) 设两个相互独立的随机变量 $X$ 和 $Y$ 分别服从正态分布 $N(0,1)$ 和 $N(1,1)$ , 则( )\n\n$\\left(\\mathrm{A}\\right)P\\{X + Y\\leqslant 0\\} = \\frac{1}{2}.$\n\n(B) $P\\{X + Y \\leqslant 1\\} = \\frac{1}{2}$ .\n\n(C) $P\\{X - Y \\leqslant 0\\} = \\frac{1}{2}$ .\n\n(D) $P\\{X - Y \\leqslant 1\\} = \\frac{1}{2}$ .",
+        "options": [
+          {
+            "label": "A",
+            "value": "P\\{X + Y\\leqslant 0\\} = \\frac{1}{2}."
+          },
+          {
+            "label": "B",
+            "value": "$P\\{X + Y \\leqslant 1\\} = \\frac{1}{2}$ ."
+          },
+          {
+            "label": "C",
+            "value": "$P\\{X - Y \\leqslant 0\\} = \\frac{1}{2}$ ."
+          },
+          {
+            "label": "D",
+            "value": "$P\\{X - Y \\leqslant 1\\} = \\frac{1}{2}$ ."
+          }
+        ],
+        "answerCandidate": "(B).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（5）【答案】 (B).\n\n【解】因为 $X, Y$ 相互独立且 $X \\sim N(0,1), Y \\sim N(1,1)$\n\n所以 $X + Y\\sim N(1,2)$ ，故 $P\\{X + Y\\leqslant 1\\} = \\frac{1}{2}$ ，应选(B).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q11",
+      "candidateResult": {
+        "questionNumber": 11,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设 $y = y(x), z = z(x)$ 是由方程 $z = xf(x + y)$ 和 $F(x, y, z) = 0$ 所确定的函数，其中 $f$ 和 $F$ 分别具有一阶连续导数和一阶连续偏导数，求 $\\frac{\\mathrm{d}z}{\\mathrm{d}x}$ .",
+        "options": [],
+        "answerCandidate": "$\\frac{\\mathrm{d}z}{\\mathrm{d}x} = \\frac{(f + xf')F_y' - xf'F_x'}{F_y' + xf'F_z'}$ ( $F_y' + xf'F_z' \\neq 0$ )",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$$\n\\left\\{ \\begin{array}{l l} { \\frac {\\mathrm {d} z}{\\mathrm {d} x} = f + x \\left(1 + \\frac {\\mathrm {d} y}{\\mathrm {d} x}\\right) f ^ {\\prime},} \\\\ { F _ {x} ^ {\\prime} + F _ {y} ^ {\\prime} \\frac {\\mathrm {d} y}{\\mathrm {d} x} + F _ {z} ^ {\\prime} \\frac {\\mathrm {d} z}{\\mathrm {d} x} = 0,} \\end{array} \\right. \\text {即} \\left\\{ \\begin{array}{l l} {- x f ^ {\\prime} \\frac {\\mathrm {d} y}{\\mathrm {d} x} + \\frac {\\mathrm {d} z}{\\mathrm {d} x} = f + x f ^ {\\prime},} \\\\ { F _ {y} ^ {\\prime} \\frac {\\mathrm {d} y}{\\mathrm {d} x} + F _ {z} ^ {\\prime} \\frac {\\mathrm {d} z}{\\mathrm {d} x} = - F _ {x} ^ {\\prime},} \\end{array} \\right.\n$$\n\n解得 $\\frac{\\mathrm{d}z}{\\mathrm{d}x} = \\frac{(f + xf')F_y' - xf'F_x'}{F_y' + xf'F_z'}$ （ $F_{y}^{\\prime} + xf^{\\prime}F_{z}^{\\prime}\\neq 0)$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q12",
+      "candidateResult": {
+        "questionNumber": 12,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "求 $I = \\int_{L}[\\mathrm{e}^{x}\\sin y - b(x + y)]\\mathrm{d}x + (\\mathrm{e}^{x}\\cos y - ax)\\mathrm{d}y,$ 其中 $a,b$ 为正的常数， $L$ 为从点 $A(2a,0)$ 沿曲线 $y = \\sqrt{2ax - x^2}$ 到点 $O(0,0)$ 的弧.",
+        "options": [],
+        "answerCandidate": "$\\left(\\frac{\\pi}{2} + 2\\right)a^2 b - \\frac{\\pi}{2} a^3$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$$\n\\frac {\\partial Q}{\\partial x} = \\mathrm {e} ^ {x} \\cos y - a, \\quad \\frac {\\partial P}{\\partial y} = \\mathrm {e} ^ {x} \\cos y - b,\n$$\n\n$$\nI = \\left(\\oint_ {L + \\overline {{O A}}} - \\int_ {\\overline {{O A}}}\\right) [ e ^ {x} \\sin y - b (x + y) ] d x + (e ^ {x} \\cos y - a x) d y,\n$$\n\n而 $\\oint_{L + \\overline{OA}}\\left[\\mathrm{e}^{x}\\sin y - b(x + y)\\right]\\mathrm{d}x + (\\mathrm{e}^{x}\\cos y - ax)\\mathrm{d}y = \\iint_{D}(b - a)\\mathrm{d}x\\mathrm{d}y = \\frac{\\pi}{2} (b - a)a^{2},$\n\n$$\n\\int_ {\\overline {{O A}}} \\left[ e ^ {x} \\sin y - b (x + y) \\right] d x + \\left(e ^ {x} \\cos y - a x\\right) d y = - \\int_ {0} ^ {2 a} b x d x = - 2 a ^ {2} b,\n$$\n\n故 $I = \\frac{\\pi}{2} (b - a)a^2 + 2a^2 b = \\left(\\frac{\\pi}{2} + 2\\right)a^2 b - \\frac{\\pi}{2} a^3.$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q13",
+      "candidateResult": {
+        "questionNumber": 13,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设函数 $y(x)(x \\geqslant 0)$ 二阶可导且 $y'(x) > 0, y(0) = 1$ . 过曲线 $y = y(x)$ 上任意一点 $P(x,y)$ 作该曲线的切线及 $x$ 轴的垂线, 上述两直线与 $x$ 轴所围成的三角形的面积记为 $S_{1}$ , 区间 $[0,x]$ 上以 $y = y(x)$ 为曲边的曲边梯形面积记为 $S_{2}$ , 并设 $2S_{1} - S_{2}$ 恒为 1 , 求此曲线 $y = y(x)$ 的方程.",
+        "options": [],
+        "answerCandidate": "$y = \\mathrm{e}^{x}$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$$\nY - y = y ^ {\\prime} (X - x),\n$$\n\n![](images/1aa3b742c339223ec61e681acd2c86cf7224fbdb69f33ac6c06f5c657f19505c.jpg)  \n五题图\n\n令 $Y = 0$ 得 $X = x - \\frac{y}{y'}$ ，切线与 $x$ 轴的交点为 $Q\\left(x - \\frac{y}{y'}, 0\\right)$ ，垂足为 $T(x, 0)$\n\n则 $S_{1} = \\frac{1}{2}\\cdot \\frac{y}{y^{\\prime}}\\cdot y = \\frac{y^{2}}{2y^{\\prime}}, S_{2} = \\int_{0}^{x}y(t)\\mathrm{d}t,$\n\n由 $2S_{1} - S_{2} = 1$ 得 $\\frac{y^2}{y'} -\\int_0^x y(t)\\mathrm{d}t = 1,$\n\n两边对 $x$ 求导并整理得 $yy^{\\prime \\prime} = y^{\\prime 2}$\n\n令 $y^\\prime = p$ ，则 $y^{\\prime \\prime} = p\\frac{\\mathrm{d}p}{\\mathrm{d}y}$ 代入得 $y p\\frac{\\mathrm{d}p}{\\mathrm{d}y} = p^{2}$\n\n因为 $p \\neq 0$ ，所以 $\\frac{\\mathrm{d}p}{\\mathrm{d}y} - \\frac{1}{y} p = 0$ ，解得 $p = C_1 \\mathrm{e}^{-\\int -\\frac{1}{y} \\mathrm{d}y} = C_1 y$\n\n由 $y(0) = 1, y'(0) = 1$ 得 $C_1 = 1$ ，即 $\\frac{\\mathrm{dy}}{\\mathrm{dx}} - y = 0$\n\n解得 $y = C_2\\mathrm{e}^{-\\int -\\mathrm{d}x} = C_2\\mathrm{e}^x$ ，再由 $y(0) = 1$ 得 $C_2 = 1$ ，故 $y = \\mathrm{e}^{x}$\n\n方法二 曲线 $y = y(x)$ 上任一点 $P(x, y)$ 处的切线为 $Y - y = y'(X - x)$ ，\n\n令 $Y = 0$ 得 $X = x - \\frac{y}{y'}$ ，切线与 $x$ 轴的交点为 $Q\\left(x - \\frac{y}{y'}, 0\\right)$ ，垂足为 $T(x, 0)$\n\n则 $S_{1} = \\frac{1}{2}\\cdot \\frac{y}{y^{\\prime}}\\cdot y = \\frac{y^{2}}{2y^{\\prime}}, S_{2} = \\int_{0}^{x}y(t)\\mathrm{d}t,$\n\n由 $2S_{1} - S_{2} = 1$ 得 $\\frac{y^2}{y'} -\\int_0^x y(t)\\mathrm{d}t = 1,$\n\n两边对 $x$ 求导并整理得 $yy'' = y'^2$ ，从而 $\\frac{yy'' - y'^2}{y^2} = 0$ ，即 $\\left(\\frac{y'}{y}\\right)' = 0$ ，于是 $\\frac{y'}{y} = C_1$\n\n由 $y(0) = 1, y'(0) = 1$ 得 $C_1 = 1$ ，即 $y' - y = 0$\n\n解得 $y = C_2\\mathrm{e}^{-\\int -\\mathrm{d}x} = C_2\\mathrm{e}^x$\n\n再由 $y(0) = 1$ 得 $C_2 = 1$ ，故 $y = \\mathrm{e}^x$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q14",
+      "candidateResult": {
+        "questionNumber": 14,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "试证：当 $x > 0$ 时， $(x^{2} - 1)\\ln x\\geqslant (x - 1)^{2}$",
+        "options": [],
+        "answerCandidate": "证明题，见解析",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$$\n\\begin{array}{l} f ^ {\\prime} (x) = 2 x \\ln x + x - \\frac {1}{x} - 2 (x - 1) = 2 x \\ln x - x - \\frac {1}{x} + 2, f ^ {\\prime} (1) = 0, \\\\ f ^ {\\prime \\prime} (x) = 2 \\ln x + 2 - 1 + \\frac {1}{x ^ {2}} = 2 \\ln x + 1 + \\frac {1}{x ^ {2}}, f ^ {\\prime \\prime} (1) = 2 > 0, \\\\ f ^ {\\prime \\prime} (x) = \\frac {2}{x} - \\frac {2}{x ^ {3}} = \\frac {2 (x ^ {2} - 1)}{x ^ {3}}, \\\\ \\end{array}\n$$\n\n当 $0 < x < 1$ 时 $f^{\\prime \\prime}(x) < 0$ ; 当 $x > 1$ 时 $f^{\\prime \\prime}(x) > 0$ , 则 $x = 1$ 为 $f^{\\prime \\prime}(x)$ 的最小值点, 由 $f^{\\prime \\prime}(1) = 2 > 0$ 得 $f^{\\prime \\prime}(x) \\geqslant 2 > 0$ ,\n\n由 $\\left\\{ \\begin{array}{l} f^{\\prime}(1) = 0, \\\\ f^{\\prime \\prime}(x) > 0 (x > 0) \\end{array} \\right.$ 得 $\\left\\{ \\begin{array}{ll} f^{\\prime}(x) < 0, & 0 < x < 1, \\\\ f^{\\prime}(x) > 0, & x > 1, \\end{array} \\right.$ 从而 $x = 1$ 为 $f(x)$ 的最小值点，于是当 $x > 0$ 时 $f(x) \\geqslant f(1) = 0$ ，故当 $x > 0$ 时 $(x^{2} - 1)\\ln x \\geqslant (x - 1)^{2}$ .",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "ocr_artifact_in_explanation",
+            "questionNumber": 14,
+            "severity": "info",
+            "message": "Explanation uses f^{\\prime \\prime}(x) for both second and third derivatives. The flattening of f^{\\prime \\prime \\prime} to f^{\\prime \\prime} does not affect the logical flow of the proof."
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "ocr_artifact_in_explanation",
+            "detail": "Explanation uses f^{\\prime \\prime}(x) for both second and third derivatives. The flattening of f^{\\prime \\prime \\prime} to f^{\\prime \\prime} does not affect the logical flow of the proof.",
+            "severity": "info"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "Explanation uses f^{\\prime \\prime}(x) for both second and third derivatives. The flattening of f^{\\prime \\prime \\prime} to f^{\\prime \\prime} does not affect the logical flow of the proof."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q15",
+      "candidateResult": {
+        "questionNumber": 15,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "为清除井底的污泥, 用缆绳将抓斗放入井底, 抓起污泥后提出井口. 已知井深 $30 \\mathrm{~m}$ , 抓斗自重 $400 \\mathrm{~N}$ , 缆绳每米重 $50 \\mathrm{~N}$ , 抓斗抓起的污泥重 $2000 \\mathrm{~N}$ , 提升速度为 $3 \\mathrm{~m} / \\mathrm{s}$ , 在提升过程中, 污泥以 $20 \\mathrm{~N} / \\mathrm{s}$ 的速率从抓斗缝隙中漏掉. 现将抓起污泥的抓斗提升至井口, 问克服重力需作多少焦耳的功?\n\n（说明：① $1\\mathrm{N} \\times 1\\mathrm{m} = 1\\mathrm{J}; \\mathrm{m}, \\mathrm{N}, \\mathrm{s}, \\mathrm{J}$ 分别表示米，牛顿，秒，焦耳。② 抓斗的高度及位于井口上方的缆绳长度忽略不计。）",
+        "options": [],
+        "answerCandidate": "$W = 91500\\mathrm{J}$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$$\nW _ {1} = 4 0 0 \\times 3 0 = 1 2 0 0 0 (\\mathrm {J});\n$$\n\n设拉力对绳做功为 $W_{2}$ ，取井底起点为原点， $\\mathcal{X}$ 轴垂直向上，\n\n取 $[x, x + \\mathrm{d}x] \\subset [0, 30]$ , $\\mathrm{d}W_{2} = 50(30 - x)\\mathrm{d}x$ ，则\n\n$$\nW _ {2} = 5 0 \\int_ {0} ^ {3 0} (3 0 - x) \\mathrm {d} x = 5 0 \\times 4 5 0 = 2 2 5 0 0 (\\mathrm {J});\n$$\n\n设拉力对污泥做功为 $W_{3}$ ，取 $[t,t + \\mathrm{d}t]\\subset [0,10],\\mathrm{d}W_{3} = (2000 - 20t)\\cdot 3\\mathrm{d}t$ ，则\n\n$$\nW _ {3} = 3 \\int_ {0} ^ {1 0} (2 0 0 0 - 2 0 t) \\mathrm {d} t = 5 7 0 0 0 (\\mathrm {J}),\n$$\n\n故拉力所做的功为 $W = 12000 + 22500 + 57000 = 91500(\\mathrm{J})$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q16",
+      "candidateResult": {
+        "questionNumber": 16,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设 $S$ 为椭球面 $\\frac{x^2}{2} +\\frac{y^2}{2} +z^2 = 1$ 的上半部分，点 $P(x,y,z)\\in S,\\pi$ 为 $S$ 在点 $P$ 处的切平面， $\\rho (x,y,z)$ 为点 $O(0,0,0)$ 到平面 $\\pi$ 的距离，求 $\\iint \\limits_{S}\\frac{z}{\\rho(x,y,z)}\\mathrm{d}S.$",
+        "options": [],
+        "answerCandidate": "$\\frac{3\\pi}{2}$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$$\n\\pi : x (X - x) + y (Y - y) + 2 z (Z - z) = 0,\n$$\n\n整理得 $\\pi : \\frac{x}{2} X + \\frac{y}{2} Y + zZ - 1 = 0$\n\n$$\n\\rho (x, y, z) = \\frac {1}{\\sqrt {\\frac {x ^ {2}}{4} + \\frac {y ^ {2}}{4} + z ^ {2}}},\n$$\n\n$$\nS: z = \\sqrt {1 - \\frac {x ^ {2}}{2} - \\frac {y ^ {2}}{2}}, D _ {x y} = \\{(x, y) | x ^ {2} + y ^ {2} \\leqslant 2 \\},\n$$\n\n由 $\\frac{\\partial z}{\\partial x} = \\frac{-x}{2z}, \\frac{\\partial z}{\\partial y} = \\frac{-y}{2z}$ 得 $\\mathrm{d}S = \\sqrt{1 + \\left(\\frac{\\partial z}{\\partial x}\\right)^2 + \\left(\\frac{\\partial z}{\\partial y}\\right)^2} \\, \\mathrm{d}x \\, \\mathrm{d}y = \\frac{\\sqrt{4 - x^2 - y^2}}{2z} \\, \\mathrm{d}x \\, \\mathrm{d}y,$\n\n则 $\\iint_{S} \\frac{z}{\\rho(x, y, z)} \\mathrm{d}S = \\iint_{S} z \\sqrt{\\frac{x^2}{4} + \\frac{y^2}{4} + z^2} \\mathrm{d}S$\n\n$$\n= \\frac {1}{4} \\iint_ {D _ {x y}} (4 - x ^ {2} - y ^ {2}) \\mathrm {d} x \\mathrm {d} y = \\frac {1}{4} \\int_ {0} ^ {2 \\pi} \\mathrm {d} \\theta \\int_ {0} ^ {\\sqrt {2}} (4 r - r ^ {3}) \\mathrm {d} r = \\frac {3 \\pi}{2}.\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q17",
+      "candidateResult": {
+        "questionNumber": 17,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设 $a_{n} = \\int_{0}^{\\frac{\\pi}{4}}\\tan^{n}x\\mathrm{d}x$\n\n![](images/555bba7a0052324fef18a51fa14df2f7f279be57eef2b451e5c2aa44d6a36dff.jpg)\n\n(1) 求 $\\sum_{n=1}^{\\infty} \\frac{1}{n} (a_n + a_{n+2})$ 的值；  \n(2) 试证: 对任意的常数 $\\lambda > 0$ , 级数 $\\sum_{n=1}^{\\infty} \\frac{a_n}{n^\\lambda}$ 收敛.",
+        "options": [],
+        "answerCandidate": "(1) $1$; (2) 收敛",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$$\n= \\frac {1}{n + 1} \\tan^ {n + 1} x \\left| _ {0} ^ {\\frac {\\pi}{4}} \\right. = \\frac {1}{n + 1},\n$$\n\n则 $\\sum_{n = 1}^{\\infty}\\frac{1}{n} (a_n + a_{n + 2}) = \\sum_{n = 1}^{\\infty}\\frac{1}{n(n + 1)}$\n\n$$\nS _ {n} = \\frac {1}{1 \\times 2} + \\frac {1}{2 \\times 3} + \\dots + \\frac {1}{n (n + 1)} = 1 - \\frac {1}{n + 1},\n$$\n\n由 $\\lim_{n\\to \\infty}S_n = 1$ 得 $\\sum_{n = 1}^{\\infty}\\frac{1}{n} (a_n + a_{n + 2}) = 1.$\n\n(2) $a_{n} = \\int_{0}^{\\frac{\\pi}{4}}\\tan^{n}x\\mathrm{d}x\\stackrel {\\tan x = t}{=}\\int_{0}^{1}\\frac{t^{n}}{1 + t^{2}}\\mathrm{d}t\\leqslant \\int_{0}^{1}t^{n}\\mathrm{d}t = \\frac{1}{n + 1}\\leqslant \\frac{1}{n},$\n\n于是 $0 \\leqslant \\frac{a_n}{n^\\lambda} \\leqslant \\frac{1}{n^{\\lambda + 1}}$ ，由 $\\sum_{n = 1}^{\\infty} \\frac{1}{n^{\\lambda + 1}}$ 收敛得出 $\\sum_{n = 1}^{\\infty} \\frac{a_n}{n^\\lambda}$ 收敛.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q18",
+      "candidateResult": {
+        "questionNumber": 18,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设矩阵 $A = \\left( \\begin{array}{ccc}a & -1 & c\\\\ 5 & b & 3\\\\ 1 - c & 0 & -a \\end{array} \\right)$ 其行列式 $|\\mathbf{A}| = -1$ ，又 $\\pmb{A}$ 的伴随矩阵 $A^{*}$ 有一个特征值 $\\lambda_0$ ，属于 $\\lambda_0$ 的一个特征向量为 $\\alpha = (-1, - 1,1)^{\\mathrm{T}}$ ，求 $a,b,c$ 和 $\\lambda_0$ 的值.",
+        "options": [],
+        "answerCandidate": "$a = 2, b = -3, c = 2, \\lambda_0 = 1$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "解得 $a = c, \\mu = -1, b = -3$\n\n再由 $|\\mathbf{A}| = \\left| \\begin{array}{ccc}a & -1 & a\\\\ 5 & -3 & 3\\\\ 1 - a & 0 & -a \\end{array} \\right| = -1$ 得 $a = 2,c = 2$\n\n$\\lambda_0 = \\frac{|A|}{\\mu} = 1$ ，故 $a = 2,b = -3,c = 2,\\lambda_0 = 1.$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q19",
+      "candidateResult": {
+        "questionNumber": 19,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设 $\\mathbf{A}$ 为 $m$ 阶实对称矩阵且正定， $\\mathbf{B}$ 为 $m \\times n$ 实矩阵， $\\mathbf{B}^{\\mathrm{T}}$ 为 $\\mathbf{B}$ 的转置矩阵，试证： $\\mathbf{B}^{\\mathrm{T}}\\mathbf{A}\\mathbf{B}$ 为正定矩阵的充分必要条件是 $\\mathbf{B}$ 的秩 $r(\\mathbf{B}) = n$ 。",
+        "options": [],
+        "answerCandidate": "证明题，见解析",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "$$\n\\mathbf {X} ^ {\\mathrm {T}} \\mathbf {B} ^ {\\mathrm {T}} \\mathbf {A} \\mathbf {B} \\mathbf {X} = (\\mathbf {B} \\mathbf {X}) ^ {\\mathrm {T}} \\mathbf {A} (\\mathbf {B} \\mathbf {X}) > 0,\n$$\n\n再由 $\\mathbf{A}$ 为正定矩阵得 $BX\\neq 0$ ，即 $BX = 0$ 只有零解，故 $r(B) = n$\n\n（充分性）设 $r(\\pmb {B}) = n$ ，对任意的 $\\pmb {X}\\neq \\pmb {0},\\pmb{X}^{\\mathrm{T}}\\pmb{B}^{\\mathrm{T}}\\pmb {A}\\pmb {B}\\pmb {X} = (\\pmb {B}\\pmb {X})^{\\mathrm{T}}\\pmb {A}(\\pmb {B}\\pmb {X})$\n\n令 $\\pmb {B}\\pmb {X} = \\pmb{Y}$ ，显然 $\\mathbf{Y}\\neq \\mathbf{0}$\n\n若 $\\mathbf{Y} = \\mathbf{0}$ ，即 $BX = 0$ ，由 $r(B) = n$ 得 $X = 0$ ，矛盾.\n\n因为 $\\mathbf{Y} \\neq \\mathbf{0}$ 且 $\\mathbf{A}$ 为正定矩阵，所以 $\\mathbf{X}^{\\mathrm{T}}\\mathbf{B}^{\\mathrm{T}}\\mathbf{A}\\mathbf{B}\\mathbf{X} = \\mathbf{Y}^{\\mathrm{T}}\\mathbf{A}\\mathbf{Y} > 0$ ，即 $\\mathbf{B}^{\\mathrm{T}}\\mathbf{A}\\mathbf{B}$ 为正定矩阵.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q20",
+      "candidateResult": {
+        "questionNumber": 20,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设随机变量 $X$ 与 $Y$ 相互独立, 下表列出了二维随机变量 $(X, Y)$ 的联合分布律及关于 $X$ 和关于 $Y$ 的边缘分布律中的部分数值, 试将其余数值填入表中的空白处.\n\n<table><tr><td>X Y</td><td>y1</td><td>y2</td><td>y3</td><td>P{X=x_i} = pi.</td></tr><tr><td>x1</td><td></td><td>1/8</td><td></td><td></td></tr><tr><td>x2</td><td>1/8</td><td></td><td></td><td></td></tr><tr><td>P{Y=yj} = pj</td><td>1/6</td><td></td><td></td><td>1</td></tr></table>",
+        "options": [],
+        "answerCandidate": "填表题，见解析",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "因为 $X, Y$ 相互独立，所以 $p_{1} \\times \\frac{1}{6} = \\frac{1}{24}$ ，解得 $p_{1} = \\frac{1}{4}$\n\n由 $\\frac{1}{24} +\\frac{1}{8} +p_{13} = \\frac{1}{4}$ 得 $p_{13} = \\frac{1}{12}$\n\n由 $p_{.2} \\times \\frac{1}{4} = \\frac{1}{8}$ 得 $p_{.2} = \\frac{1}{2}$ ,\n\n由 $\\frac{1}{8} + p_{22} = \\frac{1}{2}$ 得 $p_{22} = \\frac{3}{8}$\n\n由 $\\frac{1}{6} +\\frac{1}{2} +p_{.3} = 1$ 得 $p_{\\cdot 3} = \\frac{1}{3}$\n\n由 $\\frac{1}{12} + p_{23} = \\frac{1}{3}$ 得 $p_{23} = \\frac{1}{4}$\n\n再由 $\\frac{1}{4} + p_{2} = 1$ 得 $p_{2} = \\frac{3}{4}$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-1999-q21",
+      "candidateResult": {
+        "questionNumber": 21,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设总体 $X$ 的概率密度为\n\n$$\nf (x) = \\left\\{ \\begin{array}{l l} \\frac {6 x}{\\theta^ {3}} (\\theta - x), & 0 <   x <   \\theta , \\\\ 0, & \\text {其 他}, \\end{array} \\right.\n$$\n\n$X_{1}, X_{2}, \\dots, X_{n}$ 是取自总体 $X$ 的简单随机样本\n\n(1) 求 $\\theta$ 的矩估计量 $\\hat{\\theta}$ ;  \n(2) 求 $\\hat{\\theta}$ 的方差 $D(\\hat{\\theta})$ .",
+        "options": [],
+        "answerCandidate": "(1) $\\hat{\\theta} = 2\\overline{X}$; (2) $D(\\hat{\\theta}) = \\frac{\\theta^2}{5n}$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "由 $E(X) = \\overline{X}$ 得 $\\theta$ 的矩估计量为 $\\hat{\\theta} = 2\\overline{X}$\n\n(2) $E(X^{2}) = \\int_{0}^{\\theta}x^{2}\\cdot \\frac{6x}{\\theta^{3}} (\\theta -x)\\mathrm{d}x = \\frac{6}{\\theta^{3}}\\int_{0}^{\\theta}(\\theta x^{3} - x^{4})\\mathrm{d}x = \\frac{3\\theta^{2}}{10},$\n\n$$\nD (X) = E \\left(X ^ {2}\\right) - \\left[ E (X) \\right] ^ {2} = \\frac {3 \\theta^ {2}}{1 0} - \\frac {\\theta^ {2}}{4} = \\frac {\\theta^ {2}}{2 0},\n$$\n\n故 $D(\\hat{\\theta}) = D(2\\overline{X}) = \\frac{4}{n} D(X) = \\frac{\\theta^2}{5n}$ .",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "medium",
+            "evidence": "Markdown-first finalization: answer and explanation cross-verified between paper and solution Markdown."
+          }
+        ],
+        "confidence": "medium",
+        "humanReviewFocus": [
+          "逐题确认题干、答案与解析的数学正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    }
+  ]
+}

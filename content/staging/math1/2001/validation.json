@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "math1-legacy-transform-v1",
+  "questionsGenerated": 20,
+  "questionCounts": {
+    "fill_in_blank": 5,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "expectedCounts": {
+    "fill_in_blank": 5,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "countsMatch": true,
+  "totalAnomalies": 4,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 2,
+    "info": 2
+  },
+  "allQuestionsNeedsReview": true,
+  "correctionRun": true,
+  "correctionRunId": "20260616-192040-cc-math1-year-2001",
+  "mdFinalizationRunId": "20260620-150843-cc-math1-md-finalize-year-2001",
+  "corrections": [
+    "q01 explanation: was eigenvalue method commentary; now correct differential equation solution from (1)【解】",
+    "q02 explanation: was eigenvalue method commentary; now correct div(grad r) solution from (2)【解】",
+    "q03 explanation: was eigenvalue method commentary; now correct integral exchange solution from (3)【解】",
+    "q01-q03 answerCandidate: was missing; now extracted from solution (1)(2)(3)【答案】",
+    "q06 explanation: was entire section 二 concatenated; now only (6)【解】",
+    "q06 option D value: was empty string; now has correct image reference",
+    "q07 option A: was missing; now extracted from inline stem text",
+    "q07-q10 answerCandidate: was missing; now extracted from solution (7)(8)(9)(10)【答案】",
+    "q07-q10 explanationCandidate: was missing; now correctly split from solution (7)(8)(9)(10)【解】",
+    "q11-q20 answerCandidate: extracted from solution explanation text (source solution file has no 【答案】 markers for (11)-(20))",
+    "q02 explanationCandidate: normalized OCR spacing in \\operatorname{div} and \\mathbf{grad}",
+    "q16 explanationCandidate: normalized OCR digit spacing in fraction 13/12"
+  ],
+  "mdFinalization": {
+    "readyForApproval": 19,
+    "readyWithInfo": 1,
+    "blocked": 0,
+    "questionsReadyForApproval": [
+      "math1-2001-q01", "math1-2001-q02", "math1-2001-q03", "math1-2001-q04", "math1-2001-q05",
+      "math1-2001-q07", "math1-2001-q08", "math1-2001-q09", "math1-2001-q10",
+      "math1-2001-q11", "math1-2001-q12", "math1-2001-q13", "math1-2001-q14", "math1-2001-q15",
+      "math1-2001-q16", "math1-2001-q17", "math1-2001-q18", "math1-2001-q19", "math1-2001-q20"
+    ],
+    "questionsReadyWithInfo": ["math1-2001-q06"],
+    "questionsBlocked": []
+  }
+}

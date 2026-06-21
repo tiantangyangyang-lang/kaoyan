@@ -1,0 +1,31 @@
+{
+  "questionsGenerated": 22,
+  "questionCounts": {
+    "fill_in_blank": 7,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "expectedCounts": {
+    "fill_in_blank": 7,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "countsMatch": true,
+  "totalAnomalies": 0,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "allQuestionsNeedsReview": true,
+  "finalizationRunId": "20260620-140517-cc-math1-md-finalize-year-1991",
+  "finalizationFixesCount": 6,
+  "finalizationFixes": [
+    "math1-1991-q09:ocr_latex_split",
+    "math1-1991-q14:missing_answer_extractable",
+    "math1-1991-q15:missing_answer_extractable",
+    "math1-1991-q17:missing_answer_extractable",
+    "math1-1991-q19:missing_answer_extractable",
+    "math1-1991-q22:missing_answer_extractable"
+  ]
+}

@@ -1,0 +1,1063 @@
+{
+  "schemaVersion": "review-v1",
+  "task": "cc-math1-2025-md-finalize",
+  "runId": "20260620-144432-cc-math1-md-finalize-year-2025",
+  "generatedAt": "2026-06-20T06:48:23.415Z",
+  "sourceInfo": {
+    "sourceRepo": "Kaoyan-Math1-Papers",
+    "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+    "paperRelativePath": "papers/2025年数学一真题.md",
+    "paperSha256": "E0EF1990220462C71A896764F2672AC5396E4438CD81565561EA1C5F4DB4E0AE",
+    "solutionsRelativePath": null,
+    "solutionsSha256": null,
+    "note": "2025 source combines paper and solutions in a single markdown file"
+  },
+  "summary": {
+    "totalQuestions": 22,
+    "multipleChoice": 10,
+    "fillInBlank": 6,
+    "solution": 6,
+    "anomaliesConfirmed": 12,
+    "newAnomaliesDetected": 0,
+    "allNeedsHumanReview": true
+  },
+  "reviews": [
+    {
+      "stableId": "math1-2025-q01",
+      "candidateResult": {
+        "questionNumber": 1,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "1．已知函数 $f { \\big ( } x { \\big ) } = \\int _ { 0 } ^ { x } \\mathbf e ^ { t ^ { 2 } } \\sin t \\mathrm d t$ ， $g \\left( x \\right) = \\int _ { 0 } ^ { x } \\mathrm { e } ^ { t ^ { 2 } } \\mathrm { d } t \\bullet \\sin ^ { 2 } x$ ，则\n\nA． $x = 0$ 是 $f ( x )$ 的极值点，也是 $g \\left( x \\right)$ 的极值点  \nB． $x = 0$ 是 $f ( x )$ 的极值点， $\\left( 0 , 0 \\right)$ 是曲线 $y = g \\left( x \\right)$ 的拐点  \nC． $x = 0$ 是 $f ( x )$ 的极值点， $\\left( 0 , 0 \\right)$ 是曲线 $y = f ( x )$ 的拐点．  \nD． $\\left( 0 , 0 \\right)$ 是曲线 $y = f ( x )$ 的拐点， $\\left( 0 , 0 \\right)$ 也是曲线 $y = g \\left( x \\right)$ 的拐点\n\n【答案】B",
+        "options": [
+          {
+            "label": "A",
+            "value": "$x = 0$ 是 $f ( x )$ 的极值点，也是 $g \\left( x \\right)$ 的极值点"
+          },
+          {
+            "label": "B",
+            "value": "$x = 0$ 是 $f ( x )$ 的极值点， $\\left( 0 , 0 \\right)$ 是曲线 $y = g \\left( x \\right)$ 的拐点"
+          },
+          {
+            "label": "C",
+            "value": "$x = 0$ 是 $f ( x )$ 的极值点， $\\left( 0 , 0 \\right)$ 是曲线 $y = f ( x )$ 的拐点．"
+          },
+          {
+            "label": "D",
+            "value": "$\\left( 0 , 0 \\right)$ 是曲线 $y = f ( x )$ 的拐点， $\\left( 0 , 0 \\right)$ 也是曲线 $y = g \\left( x \\right)$ 的拐点"
+          }
+        ],
+        "answerCandidate": "B",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】\n\n$$\nf ^ {\\prime} (x) = e ^ {x ^ {2}} \\sin x, f ^ {\\prime \\prime} (x) = 2 x e ^ {x ^ {2}} \\sin x + e ^ {x ^ {2}} \\cos x\n$$\n\n$$\nf ^ {\\prime} (0) = 0, f ^ {\\prime \\prime} (0) = 1 > 0.\n$$\n\n$x = 0$ 是 $f ( x )$ 的极值点.\n\n$$\ng ^ {\\prime} (x) = e ^ {x ^ {2}} \\sin^ {2} x + \\sin 2 x \\int_ {0} ^ {x} e ^ {t ^ {2}} d t,\n$$\n\n$$\ng ^ {\\prime \\prime} (x) = e ^ {x ^ {2}} \\sin 2 x + 2 x e ^ {x ^ {2}} \\sin^ {2} x + \\sin 2 x e ^ {x ^ {2}} + 2 \\cos 2 x \\int_ {0} ^ {x} e ^ {t ^ {2}} d t\n$$\n\n$$\ng ^ {\\prime} (0) = 0, \\quad g ^ {\\prime \\prime} (0) = 0, \\quad g ^ {\\prime \\prime \\prime} (0) > 0.\n$$\n\n$( 0 , 0 )$ 是 $y = g ( x )$ 的拐点.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q02",
+      "candidateResult": {
+        "questionNumber": 2,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "2．已知级数： $\\textcircled { 1 } \\sum _ { n = 1 } ^ { \\infty } \\sin \\frac { n ^ { 3 } \\pi } { n ^ { 2 } + 1 }$ ； $\\textcircled { 2 } \\sum _ { n = 1 } ^ { \\infty } ( - 1 ) ^ { n } \\left( \\frac { 1 } { \\sqrt [ 3 ] { n ^ { 2 } } } - \\tan \\frac { 1 } { \\sqrt [ 3 ] { n ^ { 2 } } } \\right) ;$ $\\frac { 1 } { \\sqrt [ 3 ] { n ^ { 2 } } }$ ，则 ，\n\nA． $\\textcircled{1}$ 与 $\\textcircled{2}$ 均条件收敛\n\nB． $\\textcircled{1}$ 条件收敛， $\\textcircled{2}$ 绝对收敛\n\nC． $\\textcircled{1}$ 绝对收敛， $\\textcircled{2}$ 条件收敛\n\nD． $\\textcircled{1}$ 与 $\\textcircled{2}$ 均绝对收敛\n\n【答案】B",
+        "options": [
+          {
+            "label": "A",
+            "value": "$\\textcircled{1}$ 与 $\\textcircled{2}$ 均条件收敛"
+          },
+          {
+            "label": "B",
+            "value": "$\\textcircled{1}$ 条件收敛， $\\textcircled{2}$ 绝对收敛"
+          },
+          {
+            "label": "C",
+            "value": "$\\textcircled{1}$ 绝对收敛， $\\textcircled{2}$ 条件收敛"
+          },
+          {
+            "label": "D",
+            "value": "$\\textcircled{1}$ 与 $\\textcircled{2}$ 均绝对收敛"
+          }
+        ],
+        "answerCandidate": "B",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】\n\n$$\n\\left| \\sin \\frac {n ^ {3} \\pi}{n ^ {2} + 1} \\right| = \\left| \\sin \\left(\\frac {n ^ {3} \\pi}{n ^ {2} + 1} - n \\pi\\right) \\right| = \\left| \\sin \\frac {n}{n ^ {2} + 1} \\pi \\right| \\sim \\frac {n}{n ^ {2} + 1} \\pi \\sim \\frac {1}{n}.\n$$\n\n$\\sum _ { n = 1 } ^ { \\infty } { \\frac { 1 } { n } }$ ： $\\sum _ { n = 1 } ^ { \\infty } \\sin \\frac { n ^ { 3 } \\pi } { n ^ { 2 } + 1 }$\n\nsin $\\begin{array} { r } { { \\frac { ( n ^ { 3 } \\pi ) } { n + 1 } } = ( - 1 ) ^ { n } \\sin \\left( { \\frac { n ^ { 3 } \\pi } { n ^ { 2 } + 1 } } - n \\pi \\right) = ( - 1 ) ^ { n } \\sin { \\frac { n } { n ^ { 2 } + 1 } } \\pi } \\end{array}$ (²-nπ）=（-1）sin ，为交错级数\n\n$\\sum _ { n = 1 } ^ { \\infty } \\sin \\frac { n ^ { 3 } \\pi } { n ^ { 2 } + 1 }$ 8 $s i n { \\frac { n } { n ^ { 2 } + 1 } } \\pi$\n\n$$\n\\sum_ {n = 1} ^ {\\infty} (- 1) ^ {n} \\left(\\frac {1}{\\sqrt [ 2 ]{n ^ {3}}} - \\tan \\frac {1}{\\sqrt [ 3 ]{n ^ {2}}}\\right).\n$$\n\n$$\n\\left| (- 1) ^ {n} \\right| \\frac {1}{\\sqrt [ 2 ]{n ^ {3}}} - \\tan \\left. \\frac {1}{\\sqrt [ 3 ]{n ^ {2}}}\\right) \\Bigg | = \\left| - \\frac {1}{3} \\frac {1}{n ^ {2}} + o \\left(\\frac {1}{n ^ {2}}\\right) \\right|.\n$$\n\n$\\sum _ { n = 1 } ^ { \\infty } { \\frac { 1 } { n ^ { 2 } } }$ $\\cdot \\sum _ { n = 1 } ^ { \\infty } { \\bigl ( } - 1 { \\bigr ) } ^ { n } { \\biggl ( } { \\frac { 1 } { \\sqrt [ 2 ] { n ^ { 3 } } } } - \\tan { \\frac { 1 } { \\sqrt [ 3 ] { n ^ { 2 } } } } { \\biggr ) }$ （-1）n $\\scriptstyle { \\frac { 1 } { \\sqrt [ 3 ] { n ^ { 2 } } } } )$ 绝对收敛Vn Vn",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q03",
+      "candidateResult": {
+        "questionNumber": 3,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "3．设函数 $f ( x )$ 在区间 $\\left( 0 , + \\infty \\right)$ 上可导，则\n\nA．当 $\\lim _ { x \\to + \\infty } f ( x )$ 存在时， $\\lim _ { x \\to + \\infty } f ^ { \\prime } ( x )$ 存在．\n\nB．当 $\\lim _ { x \\to + \\infty } f ^ { \\prime } ( x )$ 存在时， $\\lim _ { x \\to + \\infty } f ( x )$ 存在．\n\nC．当 lim $\\lim _ { x \\to + \\infty } { \\frac { \\int _ { 0 } ^ { x } f { \\bigl ( } t { \\bigr ) } \\mathrm { d } t } { x } }$  0 dx f t t  存在时， lim  f x 存在． $\\lim _ { x \\to + \\infty } f ( x )$\n\nD．当 $\\lim _ { x \\to + \\infty } f ( x )$ 存在时， $\\lim _ { x \\to + \\infty } { \\frac { \\int _ { 0 } ^ { x } f ( t ) \\mathrm { d } t } { x } }$ 存在．\n\n【答案】D",
+        "options": [
+          {
+            "label": "A",
+            "value": "当 $\\operatorname* { l i m } _ { x \\to + \\infty } f ( x )$ 存在时， $\\operatorname* { l i m } _ { x \\to + \\infty } f ^ { \\prime } ( x )$ 存在．"
+          },
+          {
+            "label": "B",
+            "value": "当 $\\operatorname* { l i m } _ { x \\to + \\infty } f ^ { \\prime } ( x )$ 存在时， $\\operatorname* { l i m } _ { x \\to + \\infty } f ( x )$ 存在．"
+          },
+          {
+            "label": "C",
+            "value": "当 lim $\\operatorname* { l i m } _ { x \\to + \\infty } { \\frac { \\int _ { 0 } ^ { x } f { \\bigl ( } t { \\bigr ) } \\mathrm { d } t } { x } }$  0 dx f t t  存在时， lim  f x 存在． $\\operatorname* { l i m } _ { x \\to + \\infty } f ( x )$"
+          },
+          {
+            "label": "D",
+            "value": "当 $\\operatorname* { l i m } _ { x \\to + \\infty } f ( x )$ 存在时， $\\operatorname* { l i m } _ { x \\to + \\infty } { \\frac { \\int _ { 0 } ^ { x } f ( t ) \\mathrm { d } t } { x } }$ 存在．"
+          }
+        ],
+        "answerCandidate": "D",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】A错误，反例：\n\n$f ( x ) = { \\frac { \\sin x ^ { 2 } } { x } } , \\operatorname* { l i m } _ { x \\to + \\infty } f ( x ) = 0 , { \\mathrm { ~ } } { \\mathrm { / } } \\operatorname* { l i m } _ { x \\to + \\infty } f ^ { \\prime } ( x ) = \\operatorname* { l i m } _ { x \\to + \\infty } { \\frac { 2 x ^ { 2 } \\cos x ^ { 2 } - \\sin x ^ { 2 } } { x ^ { 2 } } } ,$ $f ( x ) = { \\frac { \\sin x ^ { 2 } } { x } } , \\operatorname* { l i m } _ { x  + \\infty } f ( x ) = 0$ $\\operatorname* { l i m } _ { x \\to + \\infty } f ^ { \\prime } ( x ) = \\operatorname* { l i m } _ { x \\to + \\infty } { \\frac { 2 x ^ { 2 } \\cos x ^ { 2 } - \\sin x ^ { 2 } } { x ^ { 2 } } }$ 极限不存在.\n\nB错误，反例： $f ( x ) = { \\sqrt { x } } , f ^ { \\prime } ( x ) = { \\frac { 1 } { 2 { \\sqrt { x } } } } , \\operatorname* { l i m } _ { x  + \\infty } f ^ { \\prime } ( x ) = 0 ,$ ,  极限 存在 ，但 $\\operatorname* { l i m } _ { x \\to + \\infty } f ( x )$ 极限不存在.\n\nC错误，反例:\n\n$f ( x ) = \\cos x .$ 则 $\\operatorname* { l i m } _ { x \\to + \\infty } { \\frac { \\int _ { 0 } ^ { x } f ( t ) \\mathrm { d } t } { x } } = \\operatorname* { l i m } _ { x \\to + \\infty } { \\frac { \\sin x } { x } }$ 存在，但 $\\operatorname* { l i m } _ { x \\to + \\infty } f ( x ) = \\operatorname* { l i m } _ { x \\to + \\infty } \\cos x$ 不存在.\n\nD正确，用 $\\operatorname* { l i m } _ { x \\to + \\infty } { \\frac { \\int _ { 0 } ^ { x } f ( t ) \\mathrm { d } t } { x } } { = } \\operatorname* { l i m } _ { x \\to + \\infty } { \\frac { f ( x ) } { 1 } } { = } \\mathrm { A }$ ，故 选 $\\mathrm { D }$ .",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q04",
+      "candidateResult": {
+        "questionNumber": 4,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "4．设函数 $f ( x , y )$ 连续，则 $\\int _ { - 2 } ^ { 2 } \\mathrm { d } x \\int _ { 4 - x ^ { 2 } } ^ { 4 } f \\big ( x , y \\big ) \\mathrm { d } y =$\n\n$\\int _ { 0 } ^ { 4 } \\biggl [ \\int _ { - 2 } ^ { - \\sqrt { 4 - y } } f \\left( x , y \\right) \\mathrm { d } x + \\int _ { \\sqrt { 4 - y } } ^ { 2 } f \\left( x , y \\right) \\mathrm { d } x \\biggr ] \\mathrm { d } y \\ .$   \n$\\int _ { 0 } ^ { 4 } \\biggl [ \\int _ { - 2 } ^ { \\sqrt { 4 - y } } f \\left( x , y \\right) \\mathrm { d } x + \\int _ { \\sqrt { 4 - y } } ^ { 2 } f \\left( x , y \\right) \\mathrm { d } x \\biggr ] \\mathrm { d } y \\ .$   \nC．    4 4 40 2 2, d , d dy yf x y x f x y x y         ．   \nD．  4 20 42 d , dyy f x y x   ．\n\n【答案】A",
+        "options": [
+          {
+            "label": "A",
+            "value": "$\\int _ { 0 } ^ { 4 } \\biggl [ \\int _ { - 2 } ^ { - \\sqrt { 4 - y } } f \\left( x , y \\right) \\mathrm { d } x + \\int _ { \\sqrt { 4 - y } } ^ { 2 } f \\left( x , y \\right) \\mathrm { d } x \\biggr ] \\mathrm { d } y$",
+            "sourceStatus": "from_source_markdown"
+          },
+          {
+            "label": "B",
+            "value": "$\\int _ { 0 } ^ { 4 } \\biggl [ \\int _ { - 2 } ^ { \\sqrt { 4 - y } } f \\left( x , y \\right) \\mathrm { d } x + \\int _ { \\sqrt { 4 - y } } ^ { 2 } f \\left( x , y \\right) \\mathrm { d } x \\biggr ] \\mathrm { d } y$",
+            "sourceStatus": "from_source_markdown"
+          },
+          {
+            "label": "C",
+            "value": "[OCR-damaged in source:    4 4 40 2 2, d , d dy yf x y x f x y x y        ]",
+            "sourceStatus": "source_damaged_ocr_unrecoverable"
+          },
+          {
+            "label": "D",
+            "value": "[OCR-damaged in source:  4 20 42 d , dyy f x y x  ]",
+            "sourceStatus": "source_damaged_ocr_unrecoverable"
+          }
+        ],
+        "answerCandidate": "A",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】由题易知，此二重积分积分区域为\n\n![](images/d1aac1acec58059a3d6cf16b6341ff359ed2871f9b14a50a3c79e1389f2d802b.jpg)\n\n$\\mathrm { D } = \\left\\{ ( x , y ) { \\big | } 4 - x ^ { 2 } \\leq y \\leq 4 , - 2 \\leq x \\leq 2 \\right\\}$ ，对应图像为上图所示。\n\n记 $\\mathrm D _ { 1 } = \\Big \\{ ( x , y ) \\Big | 4 - x ^ { 2 } \\leq y \\leq 4 , - 2 \\leq x \\leq 0 \\Big \\} , \\mathrm D _ { 2 } = \\Big \\{ ( x , y ) \\Big | 4 - x ^ { 2 } \\leq y \\leq 4 , 0 \\leq x \\leq 2 \\Big \\} \\ \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\ \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\ \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\ \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\ \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\qquad \\mathrm { ~ f ~ o ~ r ~ o ~ r ~ } \\qquad \\qquad \\mathrm { ~ f ~ o ~ r ~ }$ ${ \\mathrm { D } } _ { 2 } = \\left\\{ ( x , y ) { \\left| 4 - x ^ { 2 } \\leq y \\leq 4 , 0 \\leq x \\leq 2 \\right. } \\right\\}$ ， 且\n\n${ \\mathrm { I } } { = } \\int _ { - 2 } ^ { 2 } \\mathrm { d } x \\int _ { 4 - x ^ { 2 } } ^ { 4 } f \\left( x , y \\right) \\mathrm { d } y \\ , \\mathbb { M } { \\mathrm { I } } = \\int _ { D _ { 1 } } ^ { } f \\left( x , y \\right) \\mathrm { d } \\sigma + \\int _ { D _ { 2 } } ^ { } f \\left( x , y \\right) \\mathrm { d } \\sigma$ $\\mathbf { \\Pi } [ = \\int \\intop _ { D _ { 1 } } f { \\big ( } x , y { \\big ) } \\mathrm { d } \\sigma + \\intop _ { D _ { 2 } } f \\left( x , y \\right) \\mathrm { d } \\sigma$ ，交换积分次序得\n\n$$\n\\begin{array}{l} \\mathrm {I} = \\int_ {0} ^ {4} \\mathrm {d} y \\int_ {- 2} ^ {- \\sqrt {4 - y}} f (x, y) \\mathrm {d} x + \\int_ {0} ^ {4} \\mathrm {d} y \\int_ {\\sqrt {4 - y}} ^ {2} f (x, y) \\mathrm {d} x \\\\ = \\int_ {0} ^ {4} \\left[ \\int_ {- 2} ^ {- \\sqrt {4 - y}} f (x, y) d x + \\int_ {\\sqrt {4 - y}} ^ {2} f (x, y) d x \\right] d y \\\\ \\end{array}\n$$\n\n故 A 正确。",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "partial_options_ocr_damaged",
+            "questionNumber": 4,
+            "severity": "warning",
+            "message": "Options C and D are OCR-damaged in source; labels A/B reconstructed from source formulas. Answer A confirmed by solution.",
+            "repairAction": "reconstructed_labels_AB_from_source_formulas"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "partial_options_ocr_damaged",
+            "detail": "Options C and D are OCR-damaged in source; labels A/B reconstructed from source formulas. Answer A confirmed by solution.",
+            "severity": "warning"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 partial_options_ocr_damaged: Options C and D are OCR-damaged in source; labels A/B reconstructed from source formulas. Answer A confirmed by solution."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q05",
+      "candidateResult": {
+        "questionNumber": 5,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "5．二次型 $f { \\left( x _ { _ { 1 } } , x _ { _ { 2 } } , x _ { _ { 3 } } \\right) } = x _ { _ { 1 } } ^ { 2 } + 2 x _ { _ { 1 } } x _ { _ { 2 } } + 2 x _ { _ { 1 } } x _ { _ { 3 } }$ 的正 惯性 指数\n\nA．0．\n\nB．1\n\nC．2\n\nD．3．\n\n【答案】B",
+        "options": [
+          {
+            "label": "A",
+            "value": "0．"
+          },
+          {
+            "label": "B",
+            "value": "1"
+          },
+          {
+            "label": "C",
+            "value": "2"
+          },
+          {
+            "label": "D",
+            "value": "3．"
+          }
+        ],
+        "answerCandidate": "B",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】\n\n$$\nA = \\left( \\begin{array}{c c c} 1 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 0 \\end{array} \\right)\n$$\n\n$$\n\\left(\\lambda E - A\\right) = \\left(\\begin{array}{c c c}\\lambda - 1&- 1&- 1\\\\- 1&\\lambda&0\\\\- 1&0&\\lambda\\end{array}\\right)\\rightarrow \\left(\\begin{array}{c c c}\\lambda - 1&- 1&- 1\\\\0&\\lambda&- \\lambda\\\\- 1&0&\\lambda\\end{array}\\right)\\rightarrow \\lambda \\left(\\begin{array}{c c c}\\lambda - 1&- 1&- 1\\\\0&1&- 1\\\\- 1&0&\\lambda\\end{array}\\right)\n$$\n\n$$\n\\begin{array}{l} = \\lambda [ \\lambda (\\lambda - 1) - 1 - 1 ] \\\\ = \\lambda (\\lambda^ {2} - \\lambda - 2) \\\\ = \\lambda (\\lambda - 2) (\\lambda + 1) \\\\ \\end{array}\n$$\n\n解得\n\n$$\n\\lambda_ {1} = 0, \\lambda_ {2} = 2, \\lambda_ {3} = - 1\n$$\n\n故正惯性指数为 1，选 B.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q06",
+      "candidateResult": {
+        "questionNumber": 6,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "6．设 $\\pmb { \\alpha } _ { 1 } , \\pmb { \\alpha } _ { 2 } , \\pmb { \\alpha } _ { 3 } , \\pmb { \\alpha } _ { 4 }$ 是 $n$ 维列向量， ${ \\pmb { \\alpha } } _ { 1 } , { \\pmb { \\alpha } } _ { 2 }$ 线性无关， ${ \\pmb { \\alpha } } _ { 1 } , { \\pmb { \\alpha } } _ { 2 } , { \\pmb { \\alpha } } _ { 3 }$ 线性相关，且 $\\pmb { \\alpha } _ { 1 } + \\pmb { \\alpha } _ { 2 } + \\pmb { \\alpha } _ { 4 } = \\pmb { 0 }$ .在空间直角坐标系 $O - x y z$ 中，关于 $x , y , z$ 的方程组 $x { \\pmb { \\alpha } } _ { 1 } + y { \\pmb { \\alpha } } _ { 2 } + z { \\pmb { \\alpha } } _ { 3 } = { \\pmb { \\alpha } } _ { 4 }$ 的几何图形是\n\nA．过原点的一个平面\n\nB．过原点的一条直线\n\nC．不过原点的一个平面\n\nD．不过原点的一条直线\n\n【答案】D",
+        "options": [
+          {
+            "label": "A",
+            "value": "过原点的一个平面"
+          },
+          {
+            "label": "B",
+            "value": "过原点的一条直线"
+          },
+          {
+            "label": "C",
+            "value": "不过原点的一个平面"
+          },
+          {
+            "label": "D",
+            "value": "不过原点的一条直线"
+          }
+        ],
+        "answerCandidate": "D",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】记 $A = \\left( \\alpha _ { 1 } , \\alpha _ { 2 } , \\alpha _ { 3 } \\right)$ ，由 $\\alpha _ { 1 } , \\alpha _ { 2 }$ 线性无关， $\\mathcal { \\alpha } _ { 1 } , \\mathcal { \\alpha } _ { 2 } , \\mathcal { \\alpha } _ { 3 }$ 线性相关，可得 $r \\left( A \\right) = 2$ 。记$\\overline { { A } } = \\left( A \\left| \\alpha _ { 4 } \\right. \\right) = \\left( \\alpha _ { 1 } , \\alpha _ { 2 } , \\alpha _ { 3 } , \\alpha _ { 4 } \\right)$ ，再由 $\\alpha _ { 1 } + \\alpha _ { 2 } + \\alpha _ { 4 } = 0$ ，则 $r \\left( { \\overline { { A } } } \\right) = 2$ 。于是 $A x = \\alpha _ { 4 }$ 有无穷多解。则 $x \\alpha _ { 1 } + y \\alpha _ { 2 } + z \\alpha _ { 3 } = \\alpha _ { 4 }$ 等价于 $\\left( \\alpha _ { 1 } , \\alpha _ { 2 } , \\alpha _ { 3 } \\right) \\cdot \\left( x , y , z \\right) ^ { \\mathrm { T } } = \\alpha _ { 4 }$ ，即 $A \\cdot \\left( x , y , z \\right) ^ { \\mathrm { T } } = \\alpha _ { 4 }$ 。若过原点，则 $\\alpha _ { 4 } = 0$ 与 $\\alpha _ { 1 } , \\alpha _ { 2 }$ 线性无关矛盾，故不过原点。\n\n$x \\alpha _ { 1 } + y \\alpha _ { 2 } + z \\alpha _ { 3 } = \\alpha _ { 4 } \\Leftrightarrow \\left\\{ \\begin{array} { c } { { a _ { 1 1 } x + a _ { 1 2 } y + a _ { 1 3 } z = a _ { 1 4 } } } \\\\ { { a _ { 2 1 } x + a _ { 2 2 } y + a _ { 2 3 } z = a _ { 2 4 } } } \\\\ { { \\ldots } } \\\\ { { a _ { n 1 } x + a _ { n 2 } y + a _ { n 3 } z = a _ { n 4 } } } \\end{array} \\right.$ 21 22 23 24 a x a y a z a           ，由上述分析可知 r  A  r  A   2 ，故 $r \\left( A \\right) = r \\left( { \\overline { { A } } } \\right) = 2$ 两平面交于一条直线，且不过原点。故选 $\\mathrm { D }$ 。",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q07",
+      "candidateResult": {
+        "questionNumber": 7,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "7．设 $n$ 阶矩阵 $A , B , C$ 满足 $r \\left( A \\right) + r \\left( B \\right) + r \\left( C \\right) = r \\left( A B C \\right) + 2 n$ ，给出下列四个结论：\n\n$$\n\\begin{array}{l} ① r (A B C) + n = r (A B) + r (C); \\\\ ② r (A B) + n = r (A) + r (B); \\\\ ③ r (\\boldsymbol {A}) = r (\\boldsymbol {B}) = r (\\boldsymbol {C}) = n; \\\\ \\end{array}\n$$\n\n$$\n④ r (A B) = r (B C) = n.\n$$\n\n其中正确结论的序号是\n\nA． $\\textcircled{1} \\textcircled{2}$\n\nB． $\\textcircled{1} \\textcircled{3}$\n\nC． $\\textcircled{2} \\textcircled{4}$\n\nD． $\\textcircled{3} \\textcircled{4}$\n\n【答案】A",
+        "options": [
+          {
+            "label": "A",
+            "value": "$\\textcircled{1} \\textcircled{2}$"
+          },
+          {
+            "label": "B",
+            "value": "$\\textcircled{1} \\textcircled{3}$"
+          },
+          {
+            "label": "C",
+            "value": "$\\textcircled{2} \\textcircled{4}$"
+          },
+          {
+            "label": "D",
+            "value": "$\\textcircled{3} \\textcircled{4}$"
+          }
+        ],
+        "answerCandidate": "A",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】 1 0 ,0 0   A $\\scriptstyle A = { \\left( { \\begin{array} { l l } { 1 } & { 0 } \\\\ { 0 } & { 0 } \\end{array} } \\right) } , B = { \\left( { \\begin{array} { l l } { 0 } & { 0 } \\\\ { 0 } & { 1 } \\end{array} } \\right) } , C = E$ ，满足 $r ( A ) + r ( B ) + r ( C ) = r ( A B C ) + 2 n$ ，则$r ( A ) = 1 , r ( B ) = 1 , r ( C ) = 2$ ，排除结论 $\\textcircled{3} \\textcircled{4}$ ，故选 A.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q08",
+      "candidateResult": {
+        "questionNumber": 8,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "8．设二维随机变量 $( X , Y )$ 服从正态分布 $N \\big ( 0 , 0 ; 1 , 1 ; \\rho \\big )$ ，其中 $\\rho \\in \\left( { - 1 , 1 } \\right)$ .若 $^ { a , b }$ 为满足$a ^ { 2 } + b ^ { 2 } = 1$ 的任意实数，则 $D \\big ( a X + b Y \\big )$ 的最大值为\n\nA．1．\n\nB．2\n\nC． $1 + | \\rho |$\n\nD． $1 + \\rho ^ { 2 }$\n\n【答案】",
+        "options": [
+          {
+            "label": "A",
+            "value": "1．"
+          },
+          {
+            "label": "B",
+            "value": "2"
+          },
+          {
+            "label": "C",
+            "value": "$1 + | \\rho |$"
+          },
+          {
+            "label": "D",
+            "value": "$1 + \\rho ^ { 2 }$"
+          }
+        ],
+        "answerCandidate": "C",
+        "answerStatus": "candidate_from_combined_source_explanation",
+        "explanationCandidate": "【解析】\n\n$$\n\\begin{array}{l} D (a X + b Y) = a ^ {2} D X + b ^ {2} D Y + 2 a b \\rho \\cdot 1 \\cdot 1 \\\\ = a ^ {2} + b ^ {2} + 2 a b \\rho = 1 + 2 a b \\rho = 1 + 2 a \\sqrt {1 - a ^ {2}} \\rho = f (a) \\\\ \\end{array}\n$$\n\n$$\nf ^ {\\prime} (a) = \\rho \\left(2 \\sqrt {1 - a ^ {2}} + 2 a \\cdot \\frac {- a}{\\sqrt {1 - a ^ {2}}}\\right) = 2 \\rho \\left(\\sqrt {1 - a ^ {2}} - \\frac {a ^ {2}}{\\sqrt {1 - a ^ {2}}}\\right) = 0\n$$\n\n即 $2 \\rho \\cdot \\frac { 1 - a ^ { 2 } - a ^ { 2 } } { \\sqrt { 1 - a ^ { 2 } } } = 0$ ， $2 a ^ { 2 } = 1 \\Rightarrow a ^ { 2 } = \\frac { 1 } { 2 } , b ^ { 2 } = \\frac { 1 } { 2 }$ 2, b  ， 于 是 $a = \\pm { \\frac { 1 } { \\sqrt { 2 } } } , b = \\pm { \\frac { 1 } { \\sqrt { 2 } } }$ , b   所 以 最 大值为 $1 + | \\rho |$ ，故选 C。",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q09",
+      "candidateResult": {
+        "questionNumber": 9,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "9．设 $X _ { 1 } , X _ { 2 } , \\cdots , X _ { 2 0 }$ 是来自总体 $B { \\left( 1 , 0 . 1 \\right) }$ 的简单随机样本.令 $T = \\sum _ { i = 1 } ^ { 2 0 } X _ { i }$ ，利用泊松分布近似表示二项分布的方法可得 $P \\{ T \\leq 1 \\} \\approx$\n\nA． $\\frac { 1 } { \\mathrm { e } ^ { 2 } }$\n\nB． 2 e\n\n3 C． 2\n\n4 D． 2e\n\n【答案】C",
+        "options": [
+          {
+            "label": "A",
+            "value": "$\\frac { 1 } { \\mathrm { e } ^ { 2 } }$",
+            "sourceStatus": "from_source_markdown"
+          },
+          {
+            "label": "B",
+            "value": "$\\frac{2}{e^2}$",
+            "sourceStatus": "reconstructed_from_context",
+            "reconstructionNote": "Source OCR shows '2 e' — reconstructed as $\\frac{2}{e^2}$ based on pattern A=1/e², B=2/e², C=3/e², D=4/e²"
+          },
+          {
+            "label": "C",
+            "value": "$\\frac{3}{e^2}$",
+            "sourceStatus": "reconstructed_from_context",
+            "reconstructionNote": "Source OCR shows '3 C． 2' — reconstructed as $\\frac{3}{e^2}$ based on answer confirmed by solution"
+          },
+          {
+            "label": "D",
+            "value": "$\\frac{4}{e^2}$",
+            "sourceStatus": "reconstructed_from_context",
+            "reconstructionNote": "Source OCR shows '4 D． 2e' — reconstructed as $\\frac{4}{e^2}$ based on pattern"
+          }
+        ],
+        "answerCandidate": "C",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】由题意可知 $T \\sim B ( 2 0 , 0 . 1 ) . n p = 2 0 \\times 0 . 1 = 2$\n\n$$\nP \\{T \\leqslant 1 \\} = P \\{T = 0 \\} + P \\{T = 1 \\} = \\frac {2 ^ {0}}{0 !} e ^ {- 2} + \\frac {2 ^ {1}}{1 !} e ^ {- 2} = e ^ {- 2} + 2 e ^ {- 2} = \\frac {3}{e ^ {2}}\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "reconstructed_options_from_damaged_ocr",
+            "questionNumber": 9,
+            "severity": "warning",
+            "message": "Options B, C, D reconstructed from OCR-damaged source text. Answer C confirmed by solution. Human must verify against PDF.",
+            "repairAction": "reconstructed_BCD_from_context_and_pattern"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "reconstructed_options_from_damaged_ocr",
+            "detail": "Options B, C, D reconstructed from OCR-damaged source text. Answer C confirmed by solution. Human must verify against PDF.",
+            "severity": "warning"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 reconstructed_options_from_damaged_ocr: Options B, C, D reconstructed from OCR-damaged source text. Answer C confirmed by solution. Human must verify against PDF."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q10",
+      "candidateResult": {
+        "questionNumber": 10,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "10．设 $X _ { 1 } , X _ { 2 } , \\cdots , X _ { n }$ 为来自正态总体 $N \\left( \\mu , 2 \\right)$ 的简单随机样本.记 ${ \\overline { { X } } } = { \\frac { 1 } { n } } \\sum _ { i = 1 } ^ { n } X _ { i }$ ， $Z _ { \\alpha }$ 表示标1in 准正态分布的上侧 $\\alpha$ 分位数.假设检验问题： $H _ { 0 }$ ： $\\mu { \\leqslant } 1$ ， $H _ { 1 }$ ： $\\mu > 1$ 的显著性水平为 $\\alpha$ 的检验的拒绝域为\n\n$\\left\\{ \\left( X _ { 1 } , \\ X _ { 2 } , \\cdots , \\ X _ { n } \\right) \\middle | \\overline { { { X } } } > 1 + \\frac { 2 } { n } Z _ { \\alpha } \\right\\} .$\n\n【答案】D",
+        "options": [
+          {
+            "label": "A",
+            "value": "[source_insufficient: option not present in source markdown]",
+            "sourceStatus": "missing_from_source"
+          },
+          {
+            "label": "B",
+            "value": "[source_insufficient: option not present in source markdown]",
+            "sourceStatus": "missing_from_source"
+          },
+          {
+            "label": "C",
+            "value": "[source_insufficient: option not present in source markdown]",
+            "sourceStatus": "missing_from_source"
+          },
+          {
+            "label": "D",
+            "value": "$\\left\\{ \\left( X _ { 1 } , X _ { 2 } , \\cdots , X _ { n } \\right) \\middle | \\overline { X } > 1 + \\sqrt { \\frac { 2 } { n } } Z _ { \\alpha } \\right\\}$",
+            "sourceStatus": "reconstructed_from_source_stem",
+            "reconstructionNote": "Source gives the rejection region formula inline without option labels; answer D confirmed by solution. The stem's rejection region formula (with \\frac{2}{n} instead of \\sqrt{\\frac{2}{n}}) is source text; the solution says correct formula uses \\sqrt{\\frac{2}{n}}."
+          }
+        ],
+        "answerCandidate": "D",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】 $\\frac { \\overline { { X } } - \\mu } { \\sigma / \\sqrt { n } } > z _ { \\alpha } \\Rightarrow \\overline { { X } } > \\sqrt { \\frac { 2 } { n } } z _ { \\alpha } + 1$ 12z  ，故选 D\n\n# 二、填空题： $1 1 { \\sim } 1 6$ 小题，每小题 5 分，共 30分",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "options_missing_from_source",
+            "questionNumber": 10,
+            "severity": "warning",
+            "message": "Source markdown lacks A/B/C/D option labels and content. Only the correct rejection region formula is present in the stem. Answer D confirmed by solution. Human must verify all options against PDF.",
+            "repairAction": "marked_ABC_missing_D_reconstructed_from_stem"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "options_missing_from_source",
+            "detail": "Source markdown lacks A/B/C/D option labels and content. Only the correct rejection region formula is present in the stem. Answer D confirmed by solution. Human must verify all options against PDF.",
+            "severity": "warning"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "选择题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 options_missing_from_source: Source markdown lacks A/B/C/D option labels and content. Only the correct rejection region formula is present in the stem. Answer D confirmed by solution. Human must verify all options against PDF."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q11",
+      "candidateResult": {
+        "questionNumber": 11,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "11． $\\lim _ { x \\to 0 ^ { + } } { \\frac { x ^ { x } - 1 } { \\ln x \\cdot \\ln ( 1 - x ) } } = \\qquad \\cdot$\n\n【答案】1",
+        "options": [],
+        "answerCandidate": "$-1$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】\n\n$$\n\\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {e ^ {x \\ln x} - 1}{- x \\ln x} = \\lim  _ {x \\rightarrow 0 ^ {+}} \\frac {x \\ln x}{- x \\ln x} = - 1\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "garbled_answer_character_repaired",
+            "questionNumber": 11,
+            "severity": "info",
+            "message": "Answer '1' repaired to '$-1$' — the garbled '' is the Unicode private-use character for minus sign. Solution confirms answer is -1.",
+            "repairAction": "replaced_garbled_minus_with_ascii_minus",
+            "originalValue": "1"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "garbled_answer_character_repaired",
+            "detail": "Answer '1' repaired to '$-1$' — the garbled '' is the Unicode private-use character for minus sign. Solution confirms answer is -1.",
+            "severity": "info"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 garbled_answer_character_repaired: Answer '1' repaired to '$-1$' — the garbled '' is the Unicode private-use character for minus sign. Solution confirms answer is -1."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q12",
+      "candidateResult": {
+        "questionNumber": 12,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "12.已知函数 $f ( x ) = \\left\\{ { \\begin{array} { l l } { 0 , } & { 0 \\leq x < { \\frac { 1 } { 2 } } , } \\\\ { } & { } \\\\ { x ^ { 2 } , } & { { \\frac { 1 } { 2 } } \\leq x \\leq 1 } \\end{array} } \\right.$ , 的傅里叶级数为 $\\sum _ { n = 1 } ^ { \\infty } b _ { n }$ sin π ,n x S (x) 为 $\\sum _ { n = 1 } ^ { \\infty } b _ { n }$ sin πn x的和函数，则 $S \\left( - { \\frac { 7 } { 2 } } \\right) = - \\qquad $\n\n【答案】 $\\frac { 1 } { 8 }$",
+        "options": [],
+        "answerCandidate": "$\\frac { 1 } { 8 }$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】\n\n$$\ns \\left(- \\frac {7}{2}\\right) = s \\left(- \\frac {7}{2} + 4\\right) = s \\left(\\frac {1}{2}\\right) = \\frac {1}{8}.\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q13",
+      "candidateResult": {
+        "questionNumber": 13,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "13.已知函数 $u ( x , y , z ) = x y ^ { 2 } z ^ { 3 }$ ,向量 $\\pmb { n = ( 2 , 2 , - 1 ) }$ , 则 (1,1,1)n $\\left. \\frac { \\hat { \\alpha } u } { \\hat { \\sigma } \\pmb { n } } \\right| _ { ( 1 , 1 , 1 ) } = \\_ \\qquad .$\n\n【答案】 1",
+        "options": [],
+        "answerCandidate": "1",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】由题易知， ${ \\frac { \\partial u } { \\partial x } } = y ^ { 2 } z ^ { 3 } , { \\frac { \\partial u } { \\partial y } } = 2 x y z ^ { 3 } , { \\frac { \\partial u } { \\partial z } } = 3 x y ^ { 2 } z ^ { 2 }$ =1,²7\n\n则在 $x = 1 , y = 1$ , $z = 1$ 处有 $\\left( \\frac { \\partial u } { \\partial x } , \\frac { \\partial u } { \\partial y } , \\frac { \\partial u } { \\partial z } \\right) = ( 1 , 2 , 3 )$\n\n对于向量 $\\vec { n } = ( 2 , 2 , - 1 )$ ，归一化可得 ${ \\vec { n } } _ { 0 } = \\left( { \\frac { 2 } { 3 } } , { \\frac { 2 } { 3 } } , - { \\frac { 1 } { 3 } } \\right)$\n\n故 $ \\stackrel { \\cdot } { \\underset {  \\{ \\frac { \\partial u } { \\partial \\tilde { n } } | _ { ( 1 , 1 , 1 ) } }  } { \\chi }  = ( \\frac { \\hat { \\alpha } u } { \\hat { \\alpha } x } , \\frac { \\hat { \\alpha } u } { \\hat { \\alpha } y } , \\frac { \\hat { \\alpha } u } { \\hat { \\alpha } z } ) \\cdot \\vec { n } _ { 0 } = ( 1 , 2 , 3 ) \\cdot ( \\frac { 2 } { 3 } , \\frac { 2 } { 3 } , - \\frac { 1 } { 3 } ) = 1 \\cdot \\frac { 2 } { 3 } + 2 \\cdot \\frac { 2 } { 3 } + 3 \\cdot ( - \\frac { 1 } { 3 } ) = 1$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q14",
+      "candidateResult": {
+        "questionNumber": 14,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "14. 已知有向曲线 $L$ 是沿抛物线 $y = 1 - x ^ { 2 }$ 从点 $( 1 , 0 )$ 到点 $( - 1 , 0 )$ 的一段，则曲线积分\n\n$$\n\\int_ {L} (y + \\cos x) d x + (2 x + \\cos y) d y = \\underline {{}}.\n$$\n\n【答案】 $\\frac { 4 } { 3 } - 2 \\sin 1$",
+        "options": [],
+        "answerCandidate": "$\\frac { 4 } { 3 } - 2 \\sin 1$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】由题易知可作曲线如右图所示.\n\n记 $L _ { 0 }$ 是从 $x = - 1$ 到 $x = 1$ 的直线,\n\n并记曲线积 $I = \\int _ { L } ( y + \\cos x ) d x + ( 2 x + \\cos y ) d y$\n\n则在 $L _ { 0 }$ 与 $L$ 所围的封闭区域可用格林公式\n\n即 $I _ { 1 } = \\oint _ { L _ { 0 } + L } ( y + \\cos x ) d x + ( 2 x + \\cos y ) d y$\n\n$$\n= \\iint_ {D} 2 - 1 d \\sigma = \\int_ {- 1} ^ {1} d x \\int_ {0} ^ {1 - x ^ {2}} d y = \\int_ {- 1} ^ {1} (1 - x ^ {2}) d x = \\frac {4}{3}\n$$\n\n又 $I _ { 2 } = \\int _ { L _ { 0 } } ^ { 1 } ( y + \\cos x ) d x + ( 2 x + \\cos y ) d y = \\int _ { - 1 } ^ { 1 } \\cos x d x = 2 \\sin 1$ ,故 $I = \\frac { 4 } { 3 } - 2 \\sin 1$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q15",
+      "candidateResult": {
+        "questionNumber": 15,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "15. 设矩阵 $A = { \\left( \\begin{array} { l l l } { 4 } & { 2 } & { - 3 } \\\\ { a } & { 3 } & { - 4 } \\\\ { b } & { 5 } & { - 7 } \\end{array} \\right) } ,$ 若方程组 $A ^ { 2 } x = \\mathbf { 0 }$ 与 $\\pmb { A } \\pmb { x } = \\pmb { 0 }$ 不同 解， 则 $a - b =$\n\n【答案】4",
+        "options": [],
+        "answerCandidate": "$-4$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】由题知， $\\begin{array} { r } { A = \\left( \\begin{array} { c c c } { 4 } & { 2 } & { - 3 } \\\\ { a } & { 3 } & { - 4 } \\\\ { b } & { 5 } & { - 7 } \\end{array} \\right) , } \\end{array}$ ，若 $A ^ { 2 } x = 0$ 与 $A x = 0$ 同解 ，则 三秩 相同 ，即\n\n$r \\left( A \\right) = r \\left( A ^ { 2 } \\right) = r \\left( \\begin{array} { c } { { A } } \\\\ { { A ^ { 2 } } } \\end{array} \\right)$ 。如果 $A$ 可逆，三秩显然相同，则 $A ^ { 2 } x = 0$ 与 $A x = 0$ 同解，于是要想 $A ^ { 2 } x = 0$ 与 $A x = 0$ 不同解，即 $A$ 不可逆，于是 $\\left| { \\cal A } \\right| = 0$ 。根据行列式的倍加性质易得\n\n![](images/ec1f33b0c14c291197576c603a4fcdc0f2e5a3a4f9932bebe1801c67273482c9.jpg)\n\n$$\n\\left| A \\right| = \\left| \\left( \\begin{array}{l l l} {4} & {2} & {- 3} \\\\ {a} & {3} & {- 4} \\\\ {b} & {5} & {- 7} \\end{array} \\right) \\right| = \\left| \\left( \\begin{array}{l l l} {4} & {2} & {- 1} \\\\ {a} & {3} & {- 1} \\\\ {b} & {5} & {- 2} \\end{array} \\right) \\right| = \\left| \\left( \\begin{array}{l l l} {4} & {0} & {- 1} \\\\ {a} & {1} & {- 1} \\\\ {b} & {1} & {- 2} \\end{array} \\right) \\right| = 4 \\left(- 2 + 1\\right) - \\left(a - b\\right), \\text {令} \\left| A \\right| = 0,\n$$\n\n有 $a - b = - 4$ 。",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": [
+          {
+            "type": "garbled_answer_character_repaired",
+            "questionNumber": 15,
+            "severity": "info",
+            "message": "Answer '4' repaired to '$-4$' — the garbled '' is the Unicode private-use character for minus sign. Solution confirms answer is -4.",
+            "repairAction": "replaced_garbled_minus_with_ascii_minus",
+            "originalValue": "4"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "garbled_answer_character_repaired",
+            "detail": "Answer '4' repaired to '$-4$' — the garbled '' is the Unicode private-use character for minus sign. Solution confirms answer is -4.",
+            "severity": "info"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 garbled_answer_character_repaired: Answer '4' repaired to '$-4$' — the garbled '' is the Unicode private-use character for minus sign. Solution confirms answer is -4."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q16",
+      "candidateResult": {
+        "questionNumber": 16,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "16. 设 $A , B$ 为两个随机事件，且 $A$ 与 $B$ 相互独立，已知 $P ( A ) = 2 P ( B ) , P ( A \\cup B ) = { \\frac { 5 } { 8 } } .$ , 则在事件 $A , B$ 至少有一个发生的条件下， $A , B$ 中恰有一个发生的概率为\n\n【答案】 $\\frac { 4 } { 5 }$",
+        "options": [],
+        "answerCandidate": "$\\frac { 4 } { 5 }$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解析】 $P ( A { \\bar { B } } ) + P ( { \\overline { { A } } } B ) = P ( A ) - P ( A B ) + P ( B ) - P ( A B )$\n\n$$\n= P (A) + P (B) - 2 P (A) P (B)\n$$\n\n$$\nP (A \\cup B) = P (A) + P (B) - P (A B) = \\frac {5}{8}, \\Rightarrow 3 P (B) - 2 P ^ {2} (B) = \\frac {5}{8}\n$$\n\n$$\n2 4 P (B) - 1 6 P ^ {2} (B) = 5, 1 6 P ^ {2} (B) - 2 4 P (B) + 5 = 0\n$$\n\n$$\n\\Rightarrow (4 P (B) - 1) (4 P (B) - 5) = 0\n$$\n\n$$\nP (B) = \\frac {1}{4}, P (A) = \\frac {1}{2}\n$$\n\n$$\n\\begin{array}{l} P (A \\bar {B}) + P (\\bar {A} B) = P (A) - P (A B) + P (B) - P (A B) = P (A) + P (B) - 2 P (A) P (B) \\\\ = \\frac {1}{2} + \\frac {1}{4} - 2 \\times \\frac {1}{4} \\times \\frac {1}{2} = \\frac {1}{2} \\\\ \\end{array}\n$$\n\n$$\nP = \\frac {\\frac {1}{2}}{\\frac {5}{8}} = \\frac {1}{2} \\times \\frac {8}{5} = \\frac {4}{5}\n$$\n\n# 三、解答题： $1 7 { \\sim } 2 2$ 小题，共 70分．解答应写出文字说明、证明过程或演算步骤",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "填空题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": []
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q17",
+      "candidateResult": {
+        "questionNumber": 17,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "17．（本题满分 10分）\n\n计算 $\\int _ { 0 } ^ { 1 } \\frac { 1 } { \\left( x + 1 \\right) \\left( x ^ { 2 } - 2 x + 2 \\right) } \\mathrm { d } x$.",
+        "options": [],
+        "answerCandidate": "$\\frac{3}{10}\\ln 2 + \\frac{1}{10}\\pi$",
+        "answerStatus": "candidate_extracted_from_embedded_solution",
+        "explanationCandidate": "【解析】\n\n$$\n\\begin{array}{l} \\int_ {0} ^ {1} \\frac {1}{(x + 1) (x ^ {2} - 2 x + 2)} d x = \\int_ {0} ^ {1} \\left(\\frac {A}{x + 1} + \\frac {B x + C}{x ^ {2} - 2 x + 2}\\right) d x \\\\ = \\int_ {0} ^ {1} \\left(\\frac {\\frac {1}{5}}{x + 1} + \\frac {- \\frac {1}{5} x + \\frac {3}{5}}{x ^ {2} - 2 x + 2}\\right) d x \\\\ = \\frac {1}{5} \\ln | 1 + x | \\bigg | _ {0} ^ {1} - \\frac {1}{10} \\ln | x ^ {2} - 2 x + 2 | \\bigg | _ {0} ^ {1} + \\frac {2}{5} \\arctan (x - 1) \\bigg | _ {0} ^ {1} = \\frac {3}{10} \\ln 2 + \\frac {1}{10} \\pi . \\\\ \\end{array}\n$$",
+        "explanationStatus": "candidate_extracted_from_embedded_solution",
+        "anomalies": [
+          {
+            "type": "stem_solution_separated",
+            "questionNumber": 17,
+            "severity": "info",
+            "message": "Stem and solution were combined in source; separated in finalization. Source has OCR error: \\frac{3}{0} in final result, corrected to \\frac{3}{10} based on partial fraction coefficients (A=1/5, B=-1/5, C=3/5).",
+            "repairAction": "separated_stem_from_solution_extracted_answer"
+          },
+          {
+            "type": "ocr_risk_solution_coefficient",
+            "questionNumber": 17,
+            "severity": "warning",
+            "message": "Source solution has B=-1/3 x+3/5 (OCR suspect) and final result \\frac{3}{0}\\ln 2. Correct partial fractions: A=1/5, B=-1/5, C=3/5. Final result should be \\frac{3}{10}\\ln 2 + \\frac{1}{10}\\pi. Human must verify.",
+            "repairAction": "corrected_partial_fractions_and_final_result_based_on_math"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "stem_solution_separated",
+            "detail": "Stem and solution were combined in source; separated in finalization. Source has OCR error: \\frac{3}{0} in final result, corrected to \\frac{3}{10} based on partial fraction coefficients (A=1/5, B=-1/5, C=3/5).",
+            "severity": "info"
+          },
+          {
+            "item": "ocr_risk_solution_coefficient",
+            "detail": "Source solution has B=-1/3 x+3/5 (OCR suspect) and final result \\frac{3}{0}\\ln 2. Correct partial fractions: A=1/5, B=-1/5, C=3/5. Final result should be \\frac{3}{10}\\ln 2 + \\frac{1}{10}\\pi. Human must verify.",
+            "severity": "warning"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 stem_solution_separated: Stem and solution were combined in source; separated in finalization. Source has OCR error: \\frac{3}{0} in final result, corrected to \\frac{3}{10} based on partial fraction coefficients (A=1/5, B=-1/5, C=3/5).",
+          "确认 ocr_risk_solution_coefficient: Source solution has B=-1/3 x+3/5 (OCR suspect) and final result \\frac{3}{0}\\ln 2. Correct partial fractions: A=1/5, B=-1/5, C=3/5. Final result should be \\frac{3}{10}\\ln 2 + \\frac{1}{10}\\pi. Human must verify."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q18",
+      "candidateResult": {
+        "questionNumber": 18,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "18．（本题满分 10分）\n\n已知函数 $f ( u )$ 在区间 $\\left( 0 , + \\infty \\right)$ 内具有 2 阶导数，记 $g ( x , y ) = f { \\Bigg ( } { \\frac { x } { y } } { \\Bigg ) }$，若 $g ( x , y )$ 满足\n\n$$\nx ^ {2} {\\frac {\\partial^ {2} g}{\\partial x ^ {2}}} + x y {\\frac {\\partial^ {2} g}{\\partial x \\partial y}} + y ^ {2} {\\frac {\\partial^ {2} g}{\\partial y ^ {2}}} = 1, \\text {且} g (x, x) = 1, {\\frac {\\partial g}{\\partial x}} \\big | _ {(x, x)} = {\\frac {2}{x}}, \\text {求} f (u).\n$$",
+        "options": [],
+        "answerCandidate": "$f(u) = \\frac{1}{2}\\ln^2 u + 2\\ln u + 1$",
+        "answerStatus": "candidate_extracted_from_embedded_solution",
+        "explanationCandidate": "【解析】令 $u = \\frac { x } { y }$，则 $\\frac { \\partial g } { \\partial x } = f ^ { \\prime } ( u ) \\frac { 1 } { y } , \\frac { \\partial g } { \\partial y } = f ^ { \\prime } ( u ) ( - \\frac { x } { y ^ { 2 } } )$\n\n又 $g ( x , x ) = f ( 1 ) = 1 , \\frac { \\partial g } { \\partial x } | _ { ( x , x ) } = f ^ { \\prime } ( 1 ) \\frac { 1 } { x } = \\frac { 2 } { x }$，得 $f ^ { \\prime } ( 1 ) = 2$\n\n计算二阶偏导并代入方程化简得 $u ^ { 2 } f ^ { \\prime \\prime } ( u ) + u f ^ { \\prime } ( u ) = 1$，即 $f ^ { \\prime \\prime } ( u ) + \\frac { 1 } { u } f ^ { \\prime } ( u ) = \\frac { 1 } { u ^ { 2 } }$\n\n令 $p = f ^ { \\prime } ( u )$，解一阶线性方程得 $p = \\frac { \\ln u } { u } + \\frac { C } { u }$\n\n由 $p(1) = C = 2$ 得 $p = \\frac { \\ln u } { u } + \\frac { 2 } { u }$\n\n积分得 $f ( u ) = \\frac { 1 } { 2 } \\ln ^ { 2 } u + 2 \\ln u + C$\n\n由 $f ( 1 ) = C = 1$ 得 $f ( u ) = \\frac { 1 } { 2 } \\ln ^ { 2 } u + 2 \\ln u + 1$",
+        "explanationStatus": "candidate_extracted_from_embedded_solution",
+        "anomalies": [
+          {
+            "type": "stem_solution_separated",
+            "questionNumber": 18,
+            "severity": "info",
+            "message": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+            "repairAction": "separated_stem_from_solution_extracted_answer"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "stem_solution_separated",
+            "detail": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+            "severity": "info"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 stem_solution_separated: Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q19",
+      "candidateResult": {
+        "questionNumber": 19,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "19．（本题满分 10分）\n\n设函数 $f ( x )$ 在区间 $\\left( a , b \\right)$ 内可导.证明导函数 $f ^ { \\prime } ( x )$ 在 $\\left( a , b \\right)$ 内严格单调增加的充分必要条件是:对 $( a , b )$ 内任意的 $x _ { 1 } , x _ { 2 } , x _ { 3 }$，当 $x _ { 1 } < x _ { 2 } < x _ { 3 }$ 时 $\\frac { f \\left( x _ { 2 } \\right) - f \\left( x _ { 1 } \\right) } { x _ { 2 } - x _ { 1 } } < \\frac { f \\left( x _ { 3 } \\right) - f \\left( x _ { 2 } \\right) } { x _ { 3 } - x _ { 2 } }$.",
+        "options": [],
+        "answerCandidate": null,
+        "answerStatus": "not_applicable_proof_question",
+        "explanationCandidate": "【解析】充分性：若对 $( a , b )$ 内任意的 $x_1, x_2, x_3$，当 $x_1 < x_2 < x_3$ 时，都有 $\\frac{f(x_2)-f(x_1)}{x_2-x_1} < \\frac{f(x_3)-f(x_2)}{x_3-x_2}$，则可证 $f'(x)$ 在 $(a,b)$ 内严格单调递增。\n\n必要性：已知 $f'(x)$ 单调递增，在 $[x_1, x_2], [x_2, x_3]$ 上分别使用拉格朗日中值定理，存在 $\\xi_1 \\in (x_1, x_2), \\xi_2 \\in (x_2, x_3)$，使得 $f'(\\xi_1) = \\frac{f(x_2)-f(x_1)}{x_2-x_1}, f'(\\xi_2) = \\frac{f(x_3)-f(x_2)}{x_3-x_2}$，由 $f'$ 单调递增及 $\\xi_1 < \\xi_2$ 得 $f'(\\xi_1) < f'(\\xi_2)$，即所求证。\n\n综上所述，充要条件得证。",
+        "explanationStatus": "candidate_extracted_from_embedded_solution",
+        "anomalies": [
+          {
+            "type": "stem_solution_separated",
+            "questionNumber": 19,
+            "severity": "info",
+            "message": "Stem and solution were combined in source; separated in finalization. Proof question — no explicit answer field.",
+            "repairAction": "separated_stem_from_solution"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "stem_solution_separated",
+            "detail": "Stem and solution were combined in source; separated in finalization. Proof question — no explicit answer field.",
+            "severity": "info"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 stem_solution_separated: Stem and solution were combined in source; separated in finalization. Proof question — no explicit answer field."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q20",
+      "candidateResult": {
+        "questionNumber": 20,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "20．（本题满分 10分）\n\n设 $\\varSigma$ 是由直线 $\\left\\{ \\begin{array} { l } { x = 0 , } \\\\ { y = 0 } \\end{array} \\right.$ 绕直线 $\\left\\{ \\begin{array} { l } { x = t } \\\\ { y = t } \\\\ { z = t } \\end{array} \\right.$（$t$ 为参数）旋转一周得到的曲面，$\\Sigma _ { 1 }$ 是 $\\varSigma$ 介于平面 $x + y + z = 0$ 与平面 $x + y + z = 1$ 之间部分的外侧，计算曲面积分\n\n$$\nI = \\iint_ {\\Sigma_ {1}} x \\mathrm {d} y \\mathrm {d} z + (y + 1) \\mathrm {d} z \\mathrm {d} x + (z + 2) \\mathrm {d} x \\mathrm {d} y.\n$$",
+        "options": [],
+        "answerCandidate": "$\\frac { \\sqrt { 2 } } { 4 } \\pi - 1$",
+        "answerStatus": "candidate_extracted_from_embedded_solution",
+        "explanationCandidate": "【解析】由题意可知直线 $l_1: \\{x=0, y=0\\}$ 绕 $l_2: \\{x=t, y=t, z=t\\}$ 旋转所得曲面 $\\Sigma$ 为 $(x-t)^2 + (y-t)^2 + (z-t)^2 = 3t^2$。$\\Sigma_1$ 是 $\\Sigma$ 介于 $x+y+z=0$ 和 $x+y+z=1$ 之间的外侧，补面 $\\Sigma_0: x+y+z=1$ 方向指向外侧。则由高斯公式，$I_1 = \\oiint_{\\Sigma_0+\\Sigma_1} = \\iiint_\\Omega 3 \\mathrm{d}\\nu = \\frac{\\sqrt{2}}{4}\\pi$。又 $I_2 = \\iint_{\\Sigma_0} = 1$。故 $I = I_1 - I_2 = \\frac{\\sqrt{2}}{4}\\pi - 1$。",
+        "explanationStatus": "candidate_extracted_from_embedded_solution",
+        "anomalies": [
+          {
+            "type": "stem_solution_separated",
+            "questionNumber": 20,
+            "severity": "info",
+            "message": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+            "repairAction": "separated_stem_from_solution_extracted_answer"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "stem_solution_separated",
+            "detail": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+            "severity": "info"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 stem_solution_separated: Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q21",
+      "candidateResult": {
+        "questionNumber": 21,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "21．（本题满分 10分）\n\n设矩阵 $A = { \\left( \\begin{array} { l l l } { 0 } & { - 1 } & { 2 } \\\\ { - 1 } & { 0 } & { 2 } \\\\ { - 1 } & { - 1 } & { a } \\end{array} \\right) }$，已知 1 是 $A$ 的特征多项式的重根.\n\n(1) 求 $a$ 的值；\n(2) 求所有满足 $A \\alpha = \\alpha + \\beta , A ^ { 2 } \\alpha = \\alpha + 2 \\beta$ 的非零列向量 $\\alpha$，$\\beta$.",
+        "options": [],
+        "answerCandidate": "(1) $a = 3$; (2) $\\alpha = (a_1, a_2, a_3)^T$（$a_1 a_2 a_3 \\neq 0$，$a_1 + a_2 \\neq 2 a_3$），$\\beta = (2a_3 - a_1 - a_2, 2a_3 - a_1 - a_2, 2a_3 - a_1 - a_2)^T$",
+        "answerStatus": "candidate_extracted_from_embedded_solution",
+        "explanationCandidate": "【解析】(1) $f(\\lambda) = |A - \\lambda E| = (1-\\lambda)[(\\lambda-a)(\\lambda+1)+4]$，令 $(1-a)(1+1)+4=0$，得 $a=3$。\n\n(2) $A = \\begin{pmatrix} 0 & -1 & 2 \\\\ -1 & 0 & 2 \\\\ -1 & -1 & 3 \\end{pmatrix}$，特征值 $\\lambda_1=\\lambda_2=\\lambda_3=1$。由 $A\\alpha = \\alpha + \\beta, A^2\\alpha = \\alpha + 2\\beta$ 得 $(A-E)\\alpha = \\beta, (A^2-E)\\alpha = 2\\beta = 2(A-E)\\alpha$，即 $(A-E)^2\\alpha = 0$。故 $\\alpha$ 为任意非零向量，$\\beta = (A-E)\\alpha$。",
+        "explanationStatus": "candidate_extracted_from_embedded_solution",
+        "anomalies": [
+          {
+            "type": "stem_solution_separated",
+            "questionNumber": 21,
+            "severity": "info",
+            "message": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+            "repairAction": "separated_stem_from_solution_extracted_answer"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "stem_solution_separated",
+            "detail": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+            "severity": "info"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 stem_solution_separated: Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    },
+    {
+      "stableId": "math1-2025-q22",
+      "candidateResult": {
+        "questionNumber": 22,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "22．（本题满分 12分）\n\n投保人的损失事件发生时，保险公司的赔付额 $Y$ 与投保人的损失额 $X$ 的关系为 $Y = { \\left\\{ \\begin{array} { l l } { 0 , } & { X \\leq 100 , } \\\\ { X - 100 , } & { X > 100 . } \\end{array} \\right. }$ 设定损事件发生时，投保人的损失额 $X$ 的概率密度为\n\n$$\nf (x) = \\left\\{ \\begin{array}{l} \\frac {2 \\times 100 ^ {2}}{(100 + x) ^ {3}}, \\quad x > 0, \\\\ 0, \\quad x \\leq 0. \\end{array} \\right.\n$$\n\n(1) 求 $P \\{ Y > 0 \\}$ 及 $E Y$.\n(2) 这种损失事件在一年内发生的次数记为 $N$，保险公司在一年内就这种损失事件产生的理赔次数记为 $M$，假设 $N$ 服从参数为 8 的泊松分布，在 $N = n (n \\geq 1)$ 的条件下，$M$ 服从二项分布 $B ( n , p )$，其中 $p = P \\{ Y > 0 \\}$，求 $M$ 的概率分布.",
+        "options": [],
+        "answerCandidate": "(1) $P\\{Y>0\\} = \\frac{1}{4}$, $EY = 50$; (2) $P\\{M=m\\} = \\frac{2^m}{m!}e^{-2}$, $m = 0, 1, 2, \\dots$",
+        "answerStatus": "candidate_extracted_from_embedded_solution",
+        "explanationCandidate": "【解析】(1) $P\\{Y>0\\} = P\\{X>100\\} = \\int_{100}^{+\\infty} \\frac{2\\times100^2}{(100+x)^3}dx = \\frac{1}{4}$\n\n$EY = \\int_{100}^{+\\infty} (x-100) \\frac{2\\times100^2}{(100+x)^3}dx = 50$\n\n(2) $N \\sim P(8)$, $\\{M|N=n\\} \\sim B(n, \\frac{1}{4})$\n\n$P\\{M=m\\} = \\sum_{n=m}^{\\infty} \\frac{8^n}{n!}e^{-8} \\cdot C_n^m \\cdot (\\frac{1}{4})^m \\cdot (\\frac{3}{4})^{n-m} = \\frac{2^m}{m!}e^{-2}$",
+        "explanationStatus": "candidate_extracted_from_embedded_solution",
+        "anomalies": [
+          {
+            "type": "stem_solution_separated",
+            "questionNumber": 22,
+            "severity": "info",
+            "message": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+            "repairAction": "separated_stem_from_solution_extracted_answer"
+          }
+        ]
+      },
+      "semanticReview": {
+        "modifications": [],
+        "uncertainties": [
+          {
+            "item": "stem_solution_separated",
+            "detail": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+            "severity": "info"
+          }
+        ],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "解答题待人工标注",
+            "confidence": "low",
+            "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
+          }
+        ],
+        "confidence": "low",
+        "humanReviewFocus": [
+          "确认 stem_solution_separated: Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution."
+        ]
+      },
+      "reviewStatus": "needs_human_review"
+    }
+  ]
+}

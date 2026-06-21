@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "math1-legacy-transform-v1",
+  "runId": "20260620-152910-cc-math1-md-finalize-year-1990",
+  "anomalies": [],
+  "summary": {
+    "totalAnomalies": 0,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "previouslyResolved": [
+      {
+        "type": "section_split_mismatch",
+        "severity": "warning",
+        "message": "Expected local markers 1..5, found [1, 2, 3, 4, 5, 1, 2, 3]",
+        "sectionLabel": "二",
+        "resolution": "Resolved by structure-repair deterministic split of merged OCR solution blocks for Sections 二 and 三. Solutions for Q6-Q13 now correctly attributed per question."
+      },
+      {
+        "type": "missing_solution",
+        "questionNumber": 7,
+        "severity": "warning",
+        "resolution": "Resolved: solution (A) recovered from merged block via marker '(2)【答案】 (A).'"
+      },
+      {
+        "type": "missing_solution",
+        "questionNumber": 8,
+        "severity": "warning",
+        "resolution": "Resolved: solution (C) recovered from merged block via marker '（3）【答案】 (C).'"
+      },
+      {
+        "type": "missing_solution",
+        "questionNumber": 9,
+        "severity": "warning",
+        "resolution": "Resolved: solution (D) recovered from merged block via marker '（4）【答案】 (D).'"
+      },
+      {
+        "type": "missing_solution",
+        "questionNumber": 10,
+        "severity": "warning",
+        "resolution": "Resolved: solution (B) recovered from merged block via marker '（5）【答案】 （B）.'"
+      },
+      {
+        "type": "missing_solution",
+        "questionNumber": 11,
+        "severity": "warning",
+        "resolution": "Resolved: solution recovered from merged block via marker '(1)【解】'"
+      },
+      {
+        "type": "missing_solution",
+        "questionNumber": 12,
+        "severity": "warning",
+        "resolution": "Resolved: solution recovered from merged block via marker '(2)【解】'"
+      },
+      {
+        "type": "missing_solution",
+        "questionNumber": 13,
+        "severity": "warning",
+        "resolution": "Resolved: solution recovered from merged block via marker '（3）【解】'"
+      }
+    ]
+  }
+}

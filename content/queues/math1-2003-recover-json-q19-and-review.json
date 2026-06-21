@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2003-recover-json-q19-and-review",
+  "description": "Repair invalid Q17 JSON escaping, apply the Q19 continuation, then regenerate semantic review.",
+  "defaultContinueOnError": false,
+  "tasks": [
+    {
+      "label": "Recover Math1 2003 staging JSON and apply all Codex evidence",
+      "task": "cc-math1-recover-evidence-json",
+      "year": 2003,
+      "maxTurns": 80
+    },
+    {
+      "label": "Math1 2003 final semantic review after JSON recovery",
+      "task": "ds-math1-year",
+      "year": 2003,
+      "maxTurns": 60
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "math1-legacy-transform-v1",
+  "anomalies": [
+    {
+      "type": "section_split_mismatch",
+      "severity": "info",
+      "message": "Solutions Markdown section '二' contains both choice questions (1-5) and solution section '三' content (1-3) without a separate heading. Handled by structure repair — content was deterministically split to Q6-Q10 and Q11-Q13.",
+      "sectionLabel": "二"
+    },
+    {
+      "type": "ocr_artifact_stem",
+      "questionNumber": 19,
+      "severity": "info",
+      "message": "Paper Markdown stem for Q19 contains OCR noise: '\\pmb {\\text {又 向 量}}' where '\\pmb{\\beta}' would be cleaner. Cosmetic only, no mathematical impact. Source: papers/1992年考研数学(一)真题.md line 111."
+    }
+  ],
+  "resolvedAnomalies": [
+    {
+      "originalType": "missing_solution",
+      "questionNumber": 7,
+      "resolution": "Solution extracted from merged Q6 explanation block; answer (C) recovered from solutions Markdown line 57."
+    },
+    {
+      "originalType": "missing_solution",
+      "questionNumber": 8,
+      "resolution": "Solution extracted from merged Q6 explanation block; answer (B) recovered from solutions Markdown line 63."
+    },
+    {
+      "originalType": "missing_solution",
+      "questionNumber": 9,
+      "resolution": "Solution extracted from merged Q6 explanation block; answer (C) recovered from solutions Markdown line 69."
+    },
+    {
+      "originalType": "missing_solution",
+      "questionNumber": 10,
+      "resolution": "Solution extracted from merged Q6 explanation block; answer (A) recovered from solutions Markdown line 81."
+    },
+    {
+      "originalType": "missing_solution",
+      "questionNumber": 11,
+      "resolution": "Solution extracted from merged Q6 explanation block; explanation from solutions Markdown lines 85-89."
+    },
+    {
+      "originalType": "missing_solution",
+      "questionNumber": 12,
+      "resolution": "Solution extracted from merged Q6 explanation block; explanation from solutions Markdown lines 91-95."
+    },
+    {
+      "originalType": "missing_solution",
+      "questionNumber": 13,
+      "resolution": "Solution extracted from merged Q6 explanation block; explanation from solutions Markdown lines 97-101."
+    },
+    {
+      "originalType": "missing_solution",
+      "questionNumber": 19,
+      "resolution": "Solution extracted from merged Q18 explanation block at '九、【解】' marker; explanation from solutions Markdown lines 169-187."
+    }
+  ]
+}

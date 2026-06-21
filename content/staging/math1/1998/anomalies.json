@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "batchId": "cc-math1-1998-md-finalize",
+  "sourceYear": 1998,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T08:07:01.947224Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "garbled_math_notation",
+      "questionNumber": 6,
+      "severity": "info",
+      "message": "Explanation contains garbled substitution notation: '\\frac{x^2 - t^2 = u}{2}\\frac{1}{2}'. Mathematical meaning preserved but notation is malformed.",
+      "evidence": "Source solution Markdown matches this garbled text; OCR artifact from original PDF."
+    },
+    {
+      "type": "likely_ocr_error",
+      "questionNumber": 17,
+      "severity": "warning",
+      "message": "Explanation has 'F(x) = x\\int_{x}^{x}f(t)dt' — both integration limits are x, which is nonsensical. Likely OCR error in source.",
+      "evidence": "Source solution Markdown matches this; original PDF verification needed to determine correct limits."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 2,
+    "bySeverity": {
+      "error": 0,
+      "warning": 1,
+      "info": 1
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_run",
+    "fixedFromPriorRun": [
+      "Q10 incomplete_options — restored option A from source paper stem",
+      "Q7 stem missing closing \\mid — restored from solution usage",
+      "Q7 explanation \\lim_{[-]} — fixed to \\lim_{x\\to -1} from context",
+      "Q11-Q23 answerCandidate extracted from solution explanations"
+    ]
+  }
+}

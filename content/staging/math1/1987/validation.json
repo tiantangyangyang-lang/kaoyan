@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "questionsGenerated": 20,
+  "questionCounts": {
+    "fill_in_blank": 8,
+    "multiple_choice": 4,
+    "proof": 1,
+    "solution": 7
+  },
+  "expectedCounts": {
+    "fill_in_blank": 8,
+    "multiple_choice": 4,
+    "proof": 1,
+    "solution": 7
+  },
+  "countsMatch": true,
+  "totalAnomalies": 4,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 4
+  },
+  "allQuestionsNeedsReview": true,
+  "answerCoverage": {
+    "withAnswer": 19,
+    "missingAnswer": 1
+  },
+  "checks": {
+    "stableIdUnique": true,
+    "allQuestionsHaveYear": true,
+    "allQuestionsHaveType": true,
+    "allQuestionsHaveNumber": true,
+    "allQuestionsNeedsReview": true,
+    "choiceOptionsComplete": true,
+    "sourcePathsPresent": true,
+    "sourceCommitPresent": true,
+    "noActiveErrors": true,
+    "noActiveWarnings": true,
+    "activeInfoOnly": true
+  }
+}

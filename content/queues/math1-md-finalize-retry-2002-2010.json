@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-md-finalize-retry-2002-2010",
+  "description": "Retry only the two genuinely incomplete Markdown-first finalization tasks from the 20260620 full queue audit.",
+  "defaultContinueOnError": true,
+  "tasks": [
+    {
+      "label": "Math1 2002 Markdown finalization retry",
+      "task": "cc-math1-md-finalize-year",
+      "year": 2002,
+      "maxTurns": 120
+    },
+    {
+      "label": "Math1 2010 Markdown finalization retry",
+      "task": "cc-math1-md-finalize-year",
+      "year": 2010,
+      "maxTurns": 100
+    }
+  ]
+}

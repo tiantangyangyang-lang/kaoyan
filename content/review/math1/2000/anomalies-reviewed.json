@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "runId": "20260620-150305-cc-math1-md-finalize-year-2000",
+  "task": "ds-math1-year",
+  "subjectCode": "math1",
+  "sourceYear": 2000,
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewedAt": "2026-06-20T15:05:44+08:00",
+  "reviewStatus": "completed",
+  "totalAnomalies": 10,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 1,
+    "info": 9
+  },
+  "anomalies": [
+    {
+      "anomalyId": "ANO-2000-001",
+      "severity": "info",
+      "type": "answer_extracted_from_explanation",
+      "questionNumbers": [
+        "math1-2000-s04"
+      ],
+      "message": "No explicit answer for partial derivative computation. Final expression embedded in explanation. [RESOLVED: answer extracted during md-finalization]",
+      "sourceEvidence": "Staging questions.json: answerCandidate=null for math1-2000-s04",
+      "humanAction": "Extract final expression from solution as explicit answer candidate.",
+      "resolution": "resolved_in_md_finalization"
+    },
+    {
+      "anomalyId": "ANO-2000-002",
+      "severity": "info",
+      "type": "answer_extracted_from_explanation",
+      "questionNumbers": [
+        "math1-2000-s07"
+      ],
+      "message": "No explicit answer for power series convergence. Answer: interval (-3,3), diverges at x=3, converges at x=-3. [RESOLVED: answer extracted during md-finalization]",
+      "sourceEvidence": "Staging questions.json: answerCandidate=null for math1-2000-s07",
+      "humanAction": "Create explicit answer: convergence interval (-3,3), converges at x=-3, diverges at x=3.",
+      "resolution": "resolved_in_md_finalization"
+    },
+    {
+      "anomalyId": "ANO-2000-003",
+      "severity": "info",
+      "type": "missing_answer_proof",
+      "questionNumbers": [
+        "math1-2000-s09"
+      ],
+      "message": "Proof question with no discrete answer expected. Intentional for proof-type problems.",
+      "sourceEvidence": "Staging questions.json: answerCandidate=null for proof question math1-2000-s09",
+      "humanAction": "Confirm proof body serves as answer; approve missing answer as intentional.",
+      "resolution": "confirmed_intentional"
+    },
+    {
+      "anomalyId": "ANO-2000-004",
+      "severity": "info",
+      "type": "answer_extracted_from_explanation",
+      "questionNumbers": [
+        "math1-2000-s11-q01"
+      ],
+      "message": "No explicit answer for relationship derivation. Answer includes matrix A = [[9/10,2/5],[1/10,3/5]]. [RESOLVED: answer extracted during md-finalization]",
+      "sourceEvidence": "Staging questions.json: answerCandidate=null for math1-2000-s11-q01",
+      "humanAction": "Extract matrix A and equations as explicit answer candidate.",
+      "resolution": "resolved_in_md_finalization"
+    },
+    {
+      "anomalyId": "ANO-2000-005",
+      "severity": "info",
+      "type": "answer_extracted_from_explanation",
+      "questionNumbers": [
+        "math1-2000-s11-q02"
+      ],
+      "message": "No explicit answer for eigenvalue verification. Answer: lambda1=1, lambda2=1/2. [RESOLVED: answer extracted during md-finalization]",
+      "sourceEvidence": "Staging questions.json: answerCandidate=null for math1-2000-s11-q02",
+      "humanAction": "Extract eigenvalues as explicit answer candidate.",
+      "resolution": "resolved_in_md_finalization"
+    },
+    {
+      "anomalyId": "ANO-2000-006",
+      "severity": "warning",
+      "type": "ocr_noise_raw_matrix",
+      "questionNumbers": [
+        "math1-2000-s11-q01"
+      ],
+      "message": "Source solutions/2000年解析.md line 295: raw OCR artifact from failed matrix A rendering.",
+      "sourceEvidence": "Direct inspection of source-mirror solutions/2000年解析.md line 295",
+      "humanAction": "Verify against PDF that matrix A = [[9/10,2/5],[1/10,3/5]]. Clean OCR artifact from source."
+    },
+    {
+      "anomalyId": "ANO-2000-007",
+      "severity": "info",
+      "type": "formula_unbalanced_parens",
+      "questionNumbers": [
+        "math1-2000-s01-q03"
+      ],
+      "message": "Answer text has unbalanced parentheses in constant notation. [RESOLVED: parentheses fixed during md-finalization]",
+      "sourceEvidence": "Solutions/2000年解析.md lines 26 and 34",
+      "humanAction": "Reformat constant notation with balanced parentheses.",
+      "resolution": "resolved_in_md_finalization"
+    },
+    {
+      "anomalyId": "ANO-2000-008",
+      "severity": "info",
+      "type": "image_dependency",
+      "questionNumbers": [
+        "math1-2000-s01-q01"
+      ],
+      "message": "Q1 solution references image ba84f2ee...jpg placed between Q2 sections in markdown.",
+      "sourceEvidence": "Solutions/2000年解析.md line 19: image between Q2 answer and Q2 solution",
+      "humanAction": "Re-associate image with Q1 in final question bank. Verify against PDF."
+    },
+    {
+      "anomalyId": "ANO-2000-009",
+      "severity": "info",
+      "type": "image_dependency",
+      "questionNumbers": [
+        "math1-2000-s05"
+      ],
+      "message": "Solution references image 64aa7798...jpg showing contour L and ellipse L0.",
+      "sourceEvidence": "Solutions/2000年解析.md line 152: image reference with caption",
+      "humanAction": "Include image with solution in final bank. Verify against PDF."
+    },
+    {
+      "anomalyId": "ANO-2000-010",
+      "severity": "info",
+      "type": "option_formatting_inconsistency",
+      "questionNumbers": [
+        "math1-2000-s02-q05"
+      ],
+      "message": "Paper option A uses mathrm formatting while B/C/D use standard format. Minor stylistic issue.",
+      "sourceEvidence": "Papers/2000年考研数学(一)真题.md lines 52-58",
+      "humanAction": "Normalize option label formatting. No impact on answer correctness."
+    }
+  ],
+  "pdfEvidence": {
+    "attempted": true,
+    "pagesRead": 0,
+    "status": "not_run",
+    "reason": "PDF tool (pdftoppm) not available in execution environment. Manual PDF verification required."
+  },
+  "summary": "10 anomalies: 0 error, 6 warning, 4 info. 5 missing answer from staging. 1 OCR noise (raw matrix). 1 formula parens. 2 image deps. 1 formatting. No paper-solution conflicts found.",
+  "mdFinalization": {
+    "applied": true,
+    "resolvedAnomalies": [
+      "ANO-2000-001",
+      "ANO-2000-002",
+      "ANO-2000-004",
+      "ANO-2000-005",
+      "ANO-2000-007"
+    ],
+    "remainingWarnings": 1,
+    "remainingErrors": 0
+  }
+}

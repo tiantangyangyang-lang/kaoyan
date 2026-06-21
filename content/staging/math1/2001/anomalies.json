@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "math1-legacy-transform-v1",
+  "transformVersionCorrection": "math1-legacy-transform-v1",
+  "correctionRunId": "20260616-192040-cc-math1-year-2001",
+  "mdFinalizationRunId": "20260620-150843-cc-math1-md-finalize-year-2001",
+  "correctedAnomalies": {
+    "resolved": [
+      {
+        "originalType": "section_split_mismatch",
+        "originalMessage": "Expected local markers 1..5, found [6, 7, 8, 1, 2, 3, 9, 10]",
+        "resolution": "Section 二 split mismatch was a symptom of the parenthesized numbering in (6),(7),(8),(9),(10) being incorrectly parsed. Corrected by extracting solution blocks directly by their (6)-(10) markers, following the solution file's own sequential numbering.",
+        "sectionLabel": "二"
+      },
+      {
+        "originalType": "incomplete_options",
+        "questionNumber": 7,
+        "originalMessage": "Extracted option labels: ['B', 'C', 'D']",
+        "resolution": "Option A text was inline in the stem as $\\left(\\mathrm{A}\\right)\\mathrm{d}z\\bigg|_{(0,0)} = 3\\mathrm{d}x + \\mathrm{d}y.$ extracted manually."
+      },
+      {
+        "originalType": "missing_solution",
+        "questionNumbers": [7, 8, 9, 10],
+        "resolution": "Solutions (7)-(10) exist in the source file. Earlier parser failed to split section 二 solutions. Corrected by extracting each (N)【答案】and (N)【解】 block individually."
+      }
+    ],
+    "newlyFound": [
+      {
+        "type": "wrong_explanation_assignment",
+        "questionNumbers": [1, 2, 3],
+        "severity": "error",
+        "message": "Previous run assigned eigenvalue method commentary (from solution (18) '方法点评' sub-items (1)(2)(3)) to questions 1-3 instead of their actual differential equation/calculus/algebra solutions. Root cause: parenthesized sub-numbering in method点评 was confused with question numbering.",
+        "resolvedInThisRun": true
+      },
+      {
+        "type": "concatenated_explanation",
+        "questionNumbers": [6],
+        "severity": "error",
+        "message": "Previous run concatenated all of section 二 solutions (6)-(10) into q06's explanation instead of splitting per question.",
+        "resolvedInThisRun": true
+      }
+    ],
+    "mdFinalizationResolved": [
+      {
+        "type": "missing_answer_marker",
+        "questionNumbers": [11, 12, 13, 14, 16, 17, 18, 19, 20],
+        "severity": "warning",
+        "message": "Questions 11-20 had no explicit 【答案】 markers in source solution file. Answers were embedded in explanation text. In md-finalization, answers were extracted from the solution explanation text where uniquely identifiable.",
+        "resolvedInThisRun": true
+      },
+      {
+        "type": "ocr_letter_spacing",
+        "questionNumbers": [2],
+        "severity": "info",
+        "message": "q02 explanation had OCR spacing artifacts: \\operatorname {d i v} rendered as 'd i v' instead of 'div', \\mathbf {g r a d} r rendered as 'g r a d r' instead of 'grad r'. Normalized to \\operatorname{div} and \\mathbf{grad}.",
+        "resolvedInThisRun": true
+      },
+      {
+        "type": "ocr_digit_spacing",
+        "questionNumbers": [16],
+        "severity": "info",
+        "message": "q16 explanation had OCR digit spacing: \\frac {1 3 \\pi h ^ {2} (t)}{1 2} rendered as '1 3' and '1 2' instead of '13' and '12'. Normalized.",
+        "resolvedInThisRun": true
+      }
+    ]
+  },
+  "remainingWarnings": [
+    {
+      "type": "image_only_options",
+      "questionNumber": 6,
+      "severity": "warning",
+      "message": "Question 6 options are images only. Option values are image markdown references. Human must visually verify the f(x) graph and 4 f'(x) candidate graphs."
+    },
+    {
+      "type": "garbled_determinant_source",
+      "questionNumber": 17,
+      "severity": "warning",
+      "message": "Source solution file line 254 uses \\begin{array}{r} without determinant bars (OCR artifact). Staging corrected to \\begin{vmatrix}. The mathematical context (determinant of a cyclic matrix) supports the correction, but human should verify against PDF."
+    },
+    {
+      "type": "inline_options_in_stem",
+      "questionNumber": 7,
+      "severity": "info",
+      "message": "Question 7 options are inline LaTeX in the stem rather than separate list items. Option labels extracted from stem text."
+    },
+    {
+      "type": "multi_part_stem",
+      "questionNumbers": [15, 18, 19],
+      "severity": "info",
+      "message": "Questions 15, 18, 19 have sub-parts (1)(2) in their stem. These are kept as single questions per the solution's sequential numbering (15, 18, 19). Human reviewer should verify this granularity choice."
+    }
+  ]
+}

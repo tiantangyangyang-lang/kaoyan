@@ -1,0 +1,29 @@
+{
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "expectedCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "countsMatch": true,
+  "totalAnomalies": 0,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "allQuestionsNeedsReview": true,
+  "lastUpdated": "2026-06-20T16:56:21+08:00",
+  "fixesApplied": [
+    "q05: Added missing options C and D from paper Markdown display-math blocks",
+    "q08: Removed section header artifact from option D value and explanation",
+    "q14: Removed section header artifact from stem and explanation",
+    "q19: Trimmed q20 solution content erroneously appended to q19 explanation",
+    "q20: Added explanation extracted from solution Markdown (OCR fix: truncated header restored)"
+  ]
+}

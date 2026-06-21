@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "math1-sequential-transform-v1",
+  "anomalies": [
+    {
+      "type": "incomplete_options",
+      "questionNumber": 6,
+      "severity": "info",
+      "message": "Option D was merged into option C in raw extraction due to LaTeX-wrapped label $(\\mathrm{D})$. Fixed — split into separate option D. Evidence: paper Markdown line 63."
+    }
+  ]
+}

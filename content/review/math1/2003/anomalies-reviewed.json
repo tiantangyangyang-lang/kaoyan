@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "deepseek-semantic-review-v1",
+  "runId": "20260620-084202-ds-math1-year-2003",
+  "task": "ds-math1-year",
+  "subjectCode": "math1",
+  "sourceYear": 2003,
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewedAt": "2026-06-20",
+  "reviewStatus": "completed_with_warnings",
+  "totalAnomalies": 0,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "anomalies": [],
+  "pdfEvidence": {
+    "status": "not_run_by_agent_codex_visual_applied",
+    "codexEvidenceFile": "content/reports/math1-2003/codex-visual-evidence.json",
+    "codexReviewDate": "2026-06-18",
+    "codexCorrectionsApplied": 6,
+    "note": "Codex 视觉复核证据已应用于 Q10/Q17/Q18/Q19/Q22。Q8 的真题 Markdown 选项 OCR 冲突已由解析证明与数学逻辑修正。共 13 项历史异常已解决，当前无活跃异常。"
+  },
+  "summary": "Zero active anomalies. Thirteen historical anomalies are resolved, including the Q8 paper-option OCR conflict identified by the final source-Markdown audit."
+}

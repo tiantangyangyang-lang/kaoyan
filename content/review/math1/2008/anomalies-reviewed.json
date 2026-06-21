@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "local-fallback-2008",
+  "sourceYear": 2008,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T08:57:00Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "stableId": "math1-2008-q03",
+      "severity": "info",
+      "item": "ocr_triple_prime_fixed_in_explanation",
+      "detail": "解析中特征方程 λ³-λ²+4λ-4=0 对应 y‴-y″+4y′-4y=0，原文OCR丢失一个prime符号，已依数学推导唯一修复。",
+      "repairType": "deterministic_ocr",
+      "evidence": "推导 (λ-1)(λ²+4)=0 → λ³-λ²+4λ-4=0，唯一对应 y‴-y″+4y′-4y=0"
+    },
+    {
+      "stableId": "math1-2008-q03",
+      "severity": "info",
+      "item": "ocr_triple_prime_fixed_in_option_b",
+      "detail": "选项B中第一个y″应为y‴（三阶方程需三次导数），OCR丢失一个prime符号，已依三阶微分方程唯一修复。",
+      "repairType": "deterministic_ocr",
+      "evidence": "通解含3个任意常数→三阶方程；解析确认三阶特征方程"
+    },
+    {
+      "stableId": "math1-2008-q08",
+      "severity": "info",
+      "item": "stem_contamination_removed",
+      "detail": "Stem/选项D末尾含下一节标题，已按Markdown结构移除。",
+      "repairType": "deterministic_segmentation"
+    },
+    {
+      "stableId": "math1-2008-q14",
+      "severity": "info",
+      "item": "stem_contamination_removed",
+      "detail": "Stem末尾含下一节标题，已按Markdown结构移除。",
+      "repairType": "deterministic_segmentation"
+    },
+    {
+      "stableId": "math1-2008-q17",
+      "severity": "info",
+      "item": "ocr_garbled_text_in_explanation",
+      "detail": "Lagrange乘子法求导过程OCR混杂，最终结果坐标(1,1,1)和(-5,-5,5)清晰，保留原文。",
+      "repairType": "none_retained"
+    },
+    {
+      "stableId": "math1-2008-q15",
+      "severity": "info",
+      "item": "answer_candidate_extracted_from_solution",
+      "detail": "从解析提取答案候选: 1/6",
+      "repairType": "deterministic_extraction"
+    },
+    {
+      "stableId": "math1-2008-q16",
+      "severity": "info",
+      "item": "answer_candidate_extracted_from_solution",
+      "detail": "从解析提取答案候选: -π²/2",
+      "repairType": "deterministic_extraction"
+    },
+    {
+      "stableId": "math1-2008-q17",
+      "severity": "info",
+      "item": "answer_candidate_extracted_from_solution",
+      "detail": "从解析提取答案候选: (1,1,1) 和 (-5,-5,5)",
+      "repairType": "deterministic_extraction"
+    },
+    {
+      "stableId": "math1-2008-q19",
+      "severity": "info",
+      "item": "answer_candidate_extracted_from_solution",
+      "detail": "从解析提取答案候选: π²/12",
+      "repairType": "deterministic_extraction"
+    },
+    {
+      "stableId": "math1-2008-q21",
+      "severity": "info",
+      "item": "answer_candidate_extracted_from_solution",
+      "detail": "从解析提取答案候选: a≠0有唯一解; a=0无穷多解",
+      "repairType": "deterministic_extraction"
+    },
+    {
+      "stableId": "math1-2008-q22",
+      "severity": "info",
+      "item": "answer_candidate_extracted_from_solution",
+      "detail": "从解析提取答案候选: (I)1/2, (II)f_Z(z)=1/3",
+      "repairType": "deterministic_extraction"
+    },
+    {
+      "stableId": "math1-2008-q23",
+      "severity": "info",
+      "item": "answer_candidate_extracted_from_solution",
+      "detail": "从解析提取答案候选: D(T)=2/(n(n-1))",
+      "repairType": "deterministic_extraction"
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 12,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 12
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_applicable_md_first_pass"
+  }
+}

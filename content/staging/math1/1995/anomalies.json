@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "math1-legacy-transform-v1+md-finalize",
+  "anomalies": [],
+  "previousAnomaliesResolved": [
+    {
+      "type": "section_split_mismatch",
+      "sectionLabel": "三",
+      "resolution": "False positive: section 三 has 2 sub-parts (1) and (2), correctly split"
+    },
+    {
+      "type": "section_split_mismatch",
+      "sectionLabel": "四",
+      "resolution": "False positive: section 四 has 2 sub-parts (1) and (2), correctly split"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 12,
+      "resolution": "False positive: Q12 solution was merged into Q11 container; split by structure repair"
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 14,
+      "resolution": "False positive: Q14 solution was merged into Q13 container; split by structure repair"
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 0,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "batchId": "20260620-174613-cc-math1-md-finalize-year-2019",
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "expectedCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "countsMatch": true,
+  "totalAnomalies": 9,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 9
+  },
+  "allQuestionsNeedsReview": true,
+  "fixesApplied": [
+    "Q02: stem piecewise function OCR repair (solution derivative evidence)",
+    "Q06: option D split from merged C+D line",
+    "Q06: image bc18cfda added to stem",
+    "Q08: trailing image + section header removed from stem & option D",
+    "Q14: trailing section header removed from stem",
+    "Q17/Q18: explanation split at (18) marker",
+    "Q19/Q20: explanation split at (20) marker"
+  ],
+  "checksPassed": [
+    "questionCountMatches",
+    "allStableIdsUnique",
+    "allReviewStatusNeedsHumanReview",
+    "noActiveErrors",
+    "noActiveWarnings"
+  ]
+}

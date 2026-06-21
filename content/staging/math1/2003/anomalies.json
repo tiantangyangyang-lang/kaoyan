@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "pdf-evidence-repair-v3",
+  "runId": "20260620-serializer-recovery-2003-v3",
+  "previousRunId": "20260619-serializer-recovery-2003-v2",
+  "subjectCode": "math1",
+  "sourceYear": 2003,
+  "generatedAt": "2026-06-19 23:27:25",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "solutionsPdfSha256": "9BE0EB434A1D110F92F59D653E1CDBE72C66BFA024ABA115F9929A13264C71EA",
+  "pdfRendered": false,
+  "pdfRenderReason": "pdftoppm not available — Codex human visual review used PDF directly",
+  "totalAnomalies": 0,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "anomalies": [],
+  "resolvedAnomalies": [
+    {
+      "anomalyId": "anom-2003-r01",
+      "type": "missing_image",
+      "questionNumbers": [
+        7
+      ],
+      "resolution": "FALSE POSITIVE: Image 341a324b...jpg exists in source mirror.",
+      "resolvedBy": "pdf-evidence-repair-v1, re-verified v3"
+    },
+    {
+      "anomalyId": "anom-2003-r02",
+      "type": "nonstandard_matrix_notation",
+      "questionNumbers": [
+        4
+      ],
+      "resolution": "Fixed: answerCandidate normalized to pmatrix form.",
+      "resolvedBy": "pdf-evidence-repair-v1, re-verified v3"
+    },
+    {
+      "anomalyId": "anom-2003-r03",
+      "type": "ocr_noise_sample_mean",
+      "questionNumbers": [
+        6
+      ],
+      "resolution": "Fixed: \\frac{-}{x} → \\overline{X} in explanationCandidate.",
+      "resolvedBy": "pdf-evidence-repair-v1, re-verified v3"
+    },
+    {
+      "anomalyId": "anom-2003-r07",
+      "type": "spacing_artifact",
+      "questionNumbers": [
+        5
+      ],
+      "resolution": "Fixed: 其 他 → 其他 in stem.",
+      "resolvedBy": "pdf-evidence-repair-v1, re-verified v3"
+    },
+    {
+      "anomalyId": "anom-2003-r08",
+      "type": "formatting_inconsistency",
+      "questionNumbers": [
+        9
+      ],
+      "resolution": "Fixed: fullwidth （B） → halfwidth (B) in stem.",
+      "resolvedBy": "pdf-evidence-repair-v1, re-verified v3"
+    },
+    {
+      "anomalyId": "anom-2003-r09",
+      "type": "missing_closing_paren",
+      "questionNumbers": [
+        12
+      ],
+      "resolution": "Fixed: 则（ → 则( ) in stem.",
+      "resolvedBy": "pdf-evidence-repair-v1, re-verified v3"
+    },
+    {
+      "anomalyId": "anom-2003-r04-v3",
+      "type": "near_duplicate_options_paper_ocr",
+      "questionNumbers": [
+        10
+      ],
+      "resolution": "Fixed by Codex visual evidence correction #1: Q10 options replaced.",
+      "resolvedBy": "codex-visual-evidence, re-verified in v3"
+    },
+    {
+      "anomalyId": "anom-2003-r05-v3",
+      "type": "paper_formula_notation_discrepancy",
+      "questionNumbers": [
+        18
+      ],
+      "resolution": "Fixed by Codex visual evidence correction #3: Q18 F(t) numerator \\iiint.",
+      "resolvedBy": "codex-visual-evidence, re-verified in v3"
+    },
+    {
+      "anomalyId": "anom-2003-r10-v3",
+      "type": "solution_vector_dimension_ocr",
+      "questionNumbers": [
+        19
+      ],
+      "resolution": "Fixed by Codex visual evidence correction #4: Q19 α₃ 3-entry vector.",
+      "resolvedBy": "codex-visual-evidence, re-verified in v3"
+    },
+    {
+      "anomalyId": "anom-2003-r14-v3",
+      "type": "solution_ocr_formatting",
+      "questionNumbers": [
+        22
+      ],
+      "resolution": "Fixed by Codex visual evidence correction #5: Q22 proper substitution.",
+      "resolvedBy": "codex-visual-evidence, re-verified in v3"
+    },
+    {
+      "anomalyId": "anom-2003-r15-v3",
+      "type": "truncated_explanation",
+      "questionNumbers": [
+        17
+      ],
+      "resolution": "Fixed by Codex visual evidence correction #2: Q17 inverse-function derivative identities.",
+      "resolvedBy": "codex-visual-evidence, re-verified in v3"
+    },
+    {
+      "anomalyId": "anom-2003-r16-v3",
+      "type": "truncated_explanation",
+      "questionNumbers": [
+        19
+      ],
+      "resolution": "Fixed by Codex visual evidence correction #6: Q19 eigenvalue/eigenvector method-review.",
+      "resolvedBy": "codex-visual-evidence, applied in v3"
+    },
+    {
+      "anomalyId": "anom-2003-r17-source-md",
+      "type": "paper_option_ocr_semantic_conflict",
+      "questionNumbers": [
+        8
+      ],
+      "resolution": "Fixed option D from 'limit does not exist' to lim(b_n c_n)=+infinity. The solution Markdown proves this result, and it follows directly from b_n→1 and c_n→+infinity.",
+      "resolvedBy": "codex-source-md-final-audit-2026-06-20"
+    }
+  ]
+}

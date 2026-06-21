@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: kaoyan-api
+    runtime: node
+    plan: free
+    rootDir: .
+    buildCommand: npm ci && npm run build:api
+    startCommand: npm run start --workspace @kaoyan/api
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_SSL
+        value: "true"
+      - key: DATABASE_CA_BASE64
+        sync: false
+      - key: WEB_ORIGIN
+        value: https://study.gongren.xyz
+      - key: COOKIE_DOMAIN
+        value: .gongren.xyz
+      - key: RESEND_API_KEY
+        sync: false
+      - key: MAIL_FROM
+        value: 研数 <verify@mail.gongren.xyz>
+      - key: VERIFICATION_URL_BASE
+        value: https://study.gongren.xyz/?verify=
+      - key: VERIFICATION_TTL_MINUTES
+        value: "60"
+      - key: SESSION_DAYS
+        value: "30"

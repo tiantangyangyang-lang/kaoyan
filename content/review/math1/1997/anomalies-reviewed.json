@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "cc-math1-md-finalize-1997",
+  "sourceYear": 1997,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T14:53:32.273526",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [],
+  "resolvedAnomalies": [
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "sectionLabel": "二",
+      "resolution": "Concatenated solution blocks in section 二 were split: (2)-(5) answers and 三 solutions extracted from q06 explanation"
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "sectionLabel": "四",
+      "resolution": "Concatenated solution block (2) was extracted from q14 explanation to q15"
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "sectionLabel": "七",
+      "resolution": "Concatenated solution block (2) was extracted from q18 explanation to q19"
+    },
+    {
+      "type": "incomplete_options",
+      "severity": "warning",
+      "questionNumber": 7,
+      "resolution": "Option D split from option C text per paper Markdown lines 30-31"
+    },
+    {
+      "type": "incomplete_options",
+      "severity": "warning",
+      "questionNumber": 9,
+      "resolution": "Option D split from option C text per paper Markdown lines 47-48"
+    },
+    {
+      "type": "missing_solution",
+      "severity": "warning",
+      "questionNumber": 7,
+      "resolution": "Solution (2) extracted from concatenated q06 explanation block (solutions line 63-71)"
+    },
+    {
+      "type": "missing_solution",
+      "severity": "warning",
+      "questionNumber": 8,
+      "resolution": "Solution (3) extracted from concatenated q06 explanation block (solutions line 73-83)"
+    },
+    {
+      "type": "missing_solution",
+      "severity": "warning",
+      "questionNumber": 9,
+      "resolution": "Solution (4) extracted from concatenated q06 explanation block (solutions line 85-91)"
+    },
+    {
+      "type": "missing_solution",
+      "severity": "warning",
+      "questionNumber": 10,
+      "resolution": "Solution (5) extracted from concatenated q06 explanation block (solutions line 93-97)"
+    },
+    {
+      "type": "missing_solution",
+      "severity": "warning",
+      "questionNumber": 11,
+      "resolution": "Solution 三(1) extracted from concatenated q06 explanation block (solutions line 97-107)"
+    },
+    {
+      "type": "missing_solution",
+      "severity": "warning",
+      "questionNumber": 12,
+      "resolution": "Solution 三(2) extracted from concatenated q06 explanation block (solutions line 109-125)"
+    },
+    {
+      "type": "missing_solution",
+      "severity": "warning",
+      "questionNumber": 13,
+      "resolution": "Solution 三(3) extracted from concatenated q06 explanation block (solutions line 127-135)"
+    },
+    {
+      "type": "missing_solution",
+      "severity": "warning",
+      "questionNumber": 15,
+      "resolution": "Solution 四(2) extracted from concatenated q14 explanation block (solutions line 157-169)"
+    },
+    {
+      "type": "missing_solution",
+      "severity": "warning",
+      "questionNumber": 19,
+      "resolution": "Solution 七(2) extracted from concatenated q18 explanation block (solutions line 211-221)"
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 0,
+    "resolvedCount": 14,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_run"
+  }
+}

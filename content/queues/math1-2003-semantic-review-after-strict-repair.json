@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2003-semantic-review-after-strict-repair",
+  "description": "Run DeepSeek semantic review for Math1 2003 after strict legacy staging repair.",
+  "tasks": [
+    {
+      "label": "Math1 2003 semantic review after strict repair",
+      "task": "ds-math1-year",
+      "year": 2003,
+      "maxTurns": 60
+    }
+  ]
+}

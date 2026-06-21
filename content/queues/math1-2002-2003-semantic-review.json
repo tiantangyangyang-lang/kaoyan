@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2002-2003-semantic-review",
+  "description": "Run DeepSeek semantic review for Math1 2002 and 2003 to replace stale local-fallback review artifacts under the tightened ds-math1-year contract.",
+  "tasks": [
+    {
+      "label": "Math1 2002 semantic review",
+      "task": "ds-math1-year",
+      "year": 2002,
+      "maxTurns": 60
+    },
+    {
+      "label": "Math1 2003 semantic review",
+      "task": "ds-math1-year",
+      "year": 2003,
+      "maxTurns": 60
+    }
+  ]
+}

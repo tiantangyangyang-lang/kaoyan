@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2000-2001-semantic-review-rerun",
+  "description": "Rerun DeepSeek semantic review for Math1 2000 and 2001 after tightening the ds-math1-year output contract.",
+  "tasks": [
+    {
+      "label": "Math1 2000 semantic review rerun",
+      "task": "ds-math1-year",
+      "year": 2000,
+      "maxTurns": 60
+    },
+    {
+      "label": "Math1 2001 semantic review rerun",
+      "task": "ds-math1-year",
+      "year": 2001,
+      "maxTurns": 60
+    }
+  ]
+}

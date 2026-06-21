@@ -1,0 +1,26 @@
+{
+  "questionsGenerated": 22,
+  "questionCounts": {
+    "multiple_choice": 10,
+    "fill_in_blank": 6,
+    "solution": 6
+  },
+  "expectedCounts": {
+    "multiple_choice": 10,
+    "fill_in_blank": 6,
+    "solution": 6
+  },
+  "countsMatch": true,
+  "totalAnomalies": 12,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 4,
+    "info": 8
+  },
+  "allQuestionsNeedsReview": true,
+  "optionCoverage": {
+    "withCompleteOptions": 8,
+    "withPartialOptions": 2,
+    "withAnswers": 21
+  }
+}

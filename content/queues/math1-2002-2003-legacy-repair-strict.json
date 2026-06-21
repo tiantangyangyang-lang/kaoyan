@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2003-legacy-repair-strict",
+  "description": "Strictly repair Math1 2003 staging using known deterministic legacy structure fixes. Math1 2002 is already repaired in current staging, so it is intentionally skipped.",
+  "tasks": [
+    {
+      "label": "Math1 2003 strict legacy staging repair",
+      "task": "cc-math1-legacy-repair-strict",
+      "year": 2003,
+      "maxTurns": 80
+    }
+  ]
+}

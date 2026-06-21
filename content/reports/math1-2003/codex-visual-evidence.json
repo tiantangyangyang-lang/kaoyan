@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "codex-visual-evidence-v1",
+  "subjectCode": "math1",
+  "sourceYear": 2003,
+  "reviewedAt": "2026-06-18",
+  "reviewer": "Codex visual review",
+  "sourcePdf": "solutions/2003年解析/07f6f558-2511-4f2c-b63c-0f52ae1a0d51_origin.pdf",
+  "sourcePdfSha256": "9BE0EB434A1D110F92F59D653E1CDBE72C66BFA024ABA115F9929A13264C71EA",
+  "corrections": [
+    {
+      "stableId": "math1-2003-q10",
+      "field": "stem/options",
+      "evidencePages": [3],
+      "evidenceType": "visual_solution_page_plus_deterministic_label_elimination",
+      "decision": "replace_options",
+      "options": [
+        {
+          "label": "A",
+          "value": "当 $r < s$ 时，向量组 $\\mathrm{II}$ 必线性相关."
+        },
+        {
+          "label": "B",
+          "value": "当 $r > s$ 时，向量组 $\\mathrm{II}$ 必线性相关."
+        },
+        {
+          "label": "C",
+          "value": "当 $r < s$ 时，向量组 $\\mathrm{I}$ 必线性相关."
+        },
+        {
+          "label": "D",
+          "value": "当 $r > s$ 时，向量组 $\\mathrm{I}$ 必线性相关."
+        }
+      ],
+      "reason": "PDF page 3 visually states that the r<s counterexample makes group II linearly independent and eliminates A/C; the r>s counterexample makes group II linearly independent and eliminates B; D is selected. Paper OCR distinguishes group II in A/B from group I in C/D. Together these facts uniquely determine the four options."
+    },
+    {
+      "stableId": "math1-2003-q18",
+      "field": "stem",
+      "evidencePages": [6],
+      "evidenceType": "visual_solution_formula",
+      "decision": "replace_formula",
+      "oldText": "\\iint_{D(t)} f\\left(x^2+y^2+z^2\\right)\\,\\mathrm{d}v",
+      "newText": "\\iiint_{\\Omega(t)} f\\left(x^2+y^2+z^2\\right)\\,\\mathrm{d}v",
+      "reason": "The visual solution formula uses the triple integral over the ball Omega(t); the current stem combines a double integral over D(t) with dv and is inconsistent with both the defined region and the derivation."
+    },
+    {
+      "stableId": "math1-2003-q19",
+      "field": "explanationCandidate",
+      "evidencePages": [9],
+      "evidenceType": "visual_embedded_formula_image",
+      "decision": "replace_formula",
+      "oldText": "\\pmb{\\alpha}_{3} = \\binom{1}{1}",
+      "newText": "\\pmb{\\alpha}_{3} = \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix}",
+      "reason": "The PDF embedded formula image visibly contains the three-entry column vector (1,1,1)^T."
+    },
+    {
+      "stableId": "math1-2003-q22",
+      "field": "explanationCandidate",
+      "evidencePages": [11],
+      "evidenceType": "visual_solution_page",
+      "decision": "replace_malformed_substitution_block",
+      "oldText": "\\frac {2 n (x - \\theta) = t}{\\theta} \\int_ {0} ^ {+ \\infty}",
+      "newText": "令 $2n(x-\\theta)=t$，则\n\n$$\n\\int_{0}^{+\\infty}\\left(\\theta+\\frac{t}{2n}\\right)\\mathrm{e}^{-t}\\,\\mathrm{d}t",
+      "reason": "PDF page 11 visually shows the substitution 2n(x-theta)=t followed by the integral from zero to infinity. OCR incorrectly merged the substitution annotation and lower bound into a fraction."
+    },
+    {
+      "stableId": "math1-2003-q17",
+      "field": "explanationCandidate",
+      "evidencePages": [6],
+      "evidenceType": "visual_solution_page_and_source_markdown",
+      "decision": "append_truncated_method_review",
+      "appendText": "\n\n（1）设 $y=f(x)$ 可导且 $f'(x)\\neq 0$，则 $y=f(x)$ 存在反函数 $x=g(y)$，$x=g(y)$ 可导且\n\n$$\ng'(y)=\\frac{1}{f'(x)}.\n$$\n\n（2）设 $y=f(x)$ 二阶可导且 $f'(x)\\neq 0$，则 $y=f(x)$ 存在反函数 $x=g(y)$，$x=g(y)$ 二阶可导且\n\n$$\ng''(y)=\\frac{\\mathrm{d}[g'(y)]}{\\mathrm{d}y}=\\frac{\\frac{\\mathrm{d}}{\\mathrm{d}x}\\left[\\frac{1}{f'(x)}\\right]}{\\frac{\\mathrm{d}y}{\\mathrm{d}x}}=\\frac{\\left[\\frac{1}{f'(x)}\\right]'}{f'(x)}=-\\frac{f''(x)}{[f'(x)]^3}.\n$$",
+      "reason": "The staging explanation stops immediately after '有如下两点：'. PDF page 6 visibly contains both numbered inverse-function derivative identities before Q18 starts. Source markdown lines 284-285 preserve the same prose but corrupt the second formula; the visual formula confirms the negative sign and denominator [f'(x)]^3."
+    },
+    {
+      "stableId": "math1-2003-q19",
+      "field": "explanationCandidate",
+      "evidencePages": [9],
+      "evidenceType": "visual_solution_page_embedded_formulas_and_source_markdown",
+      "decision": "append_truncated_method_review",
+      "appendText": "\n\n（1）设 $A\\pmb{\\alpha}=\\lambda_0\\pmb{\\alpha}$，则\n\n$$\nf(A)\\pmb{\\alpha}=f(\\lambda_0)\\pmb{\\alpha}.\n$$\n\n特别地，若 $A$ 可逆，则\n\n$$\nA^{-1}\\pmb{\\alpha}=\\frac{1}{\\lambda_0}\\pmb{\\alpha},\\qquad A^*\\pmb{\\alpha}=\\frac{|A|}{\\lambda_0}\\pmb{\\alpha},\n$$\n\n即 $A$ 与 $A^{-1},A^*$ 的特征向量相同。\n\n（2）设 $A\\pmb{\\alpha}=\\lambda_0\\pmb{\\alpha}$ 且 $P^{-1}AP=B$，则\n\n$$\nB\\cdot P^{-1}\\pmb{\\alpha}=\\lambda_0P^{-1}\\pmb{\\alpha},\n$$\n\n即 $A$ 与 $B$ 的特征值相同，$B$ 的属于特征值 $\\lambda_0$ 的特征向量为 $P^{-1}\\pmb{\\alpha}$。",
+      "reason": "The staging explanation stops at '主要有如下结论：'. Source markdown lines 379-383 contain two complete conclusions. PDF page 9 and its embedded formula images visually confirm the formulas; Q20 starts after them."
+    }
+  ],
+  "boundaries": [
+    "Do not modify the read-only source repository.",
+    "Keep every question at needs_human_review.",
+    "Do not infer additional visual corrections beyond this evidence file.",
+    "Q22's printed F(x) derivation reuses x as the dummy variable; this evidence pass does not require normalizing that stylistic issue."
+  ]
+}

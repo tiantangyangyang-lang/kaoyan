@@ -1,0 +1,23 @@
+{
+  "questionsGenerated": 22,
+  "questionCounts": {
+    "multiple_choice": 10,
+    "fill_in_blank": 6,
+    "solution": 6
+  },
+  "expectedCounts": {
+    "multiple_choice": 10,
+    "fill_in_blank": 6,
+    "solution": 6
+  },
+  "countsMatch": true,
+  "totalAnomalies": 15,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 1,
+    "info": 14
+  },
+  "allQuestionsNeedsReview": true,
+  "stableIdsUnique": true,
+  "mdFinalizationTimestamp": "2026-06-20T06:36:58.144Z"
+}

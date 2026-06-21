@@ -1,0 +1,722 @@
+{
+  "schemaVersion": "legacy-structure-repair-v1",
+  "reviewedOn": "2026-06-16",
+  "sourceYear": 1991,
+  "reviewStatus": "needs_human_review",
+  "sourceStagingSha256": "d2a716c793f1a9e8945f7024b4e1281b36ca2c2ecdb825d45b1f56e62b591505",
+  "statusReason": "Deterministic option and solution boundaries were repaired; mathematical correctness is not approved.",
+  "repairDecisions": [
+    {
+      "issue": "merged_solution_section_three",
+      "action": "Split the Q11 container into the sequential Q11-Q13 solution blocks.",
+      "questionNumbers": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "issue": "merged_solution_sections_four_and_five",
+      "action": "Split the Q14 container into the Q14 and Q15 solution blocks.",
+      "questionNumbers": [
+        14,
+        15
+      ]
+    },
+    {
+      "issue": "embedded_choice_options",
+      "action": "Restore the embedded C and D options for Q7.",
+      "questionNumbers": [
+        7
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "stableId": "math1-1991-q01",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 1,
+      "questionType": "fill_in_blank",
+      "stem": "（1）设 $\\left\\{ \\begin{array}{l}x = 1 + t^2,\\\\ y = \\cos t, \\end{array} \\right.$ 则 $\\frac{\\mathrm{d}^2y}{\\mathrm{d}x^2} = \\_$",
+      "options": [],
+      "answerCandidate": "$\\frac{\\sin t - t\\cos t}{4t^3}$ .",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 $\\frac{\\sin t - t\\cos t}{4t^3}$ .\n\n【解】 $\\frac{\\mathrm{dy}}{\\mathrm{dx}} = \\frac{\\mathrm{dy} / \\mathrm{dt}}{\\mathrm{dx} / \\mathrm{dt}} = \\frac{-\\sin t}{2t}$\n\n$$\n\\frac {\\mathrm {d} ^ {2} y}{\\mathrm {d} x ^ {2}} = \\frac {\\mathrm {d} \\left(\\frac {\\mathrm {d} y}{\\mathrm {d} x}\\right)}{\\mathrm {d} x} = \\frac {\\mathrm {d} \\left(\\frac {\\mathrm {d} y}{\\mathrm {d} x}\\right) / \\mathrm {d} t}{\\mathrm {d} x / \\mathrm {d} t} = - \\frac {\\frac {2 t \\cos t - 2 \\sin t}{4 t ^ {2}}}{2 t} = \\frac {\\sin t - t \\cos t}{4 t ^ {3}}.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q02",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 2,
+      "questionType": "fill_in_blank",
+      "stem": "(2) 由方程 $xyz + \\sqrt{x^2 + y^2 + z^2} = \\sqrt{2}$ 所确定的函数 $z = z(x, y)$ 在点 $(1, 0, -1)$ 处的全微分 $\\mathrm{d}z = \\_$",
+      "options": [],
+      "answerCandidate": "$\\mathrm{d}x - \\sqrt{2}\\mathrm{d}y$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】 $\\mathrm{d}x - \\sqrt{2}\\mathrm{d}y$\n\n【解】 方法一\n\n$xyz + \\sqrt{x^2 + y^2 + z^2} = \\sqrt{2}$ 两边对 $x$ 求偏导得\n\n$$\ny z + x y \\frac {\\partial z}{\\partial x} + \\frac {x + z \\frac {\\partial z}{\\partial x}}{\\sqrt {x ^ {2} + y ^ {2} + z ^ {2}}} = 0, \\text {解 得} \\frac {\\partial z}{\\partial x} \\Big | _ {(1, 0, - 1)} = 1;\n$$\n\n$xyz + \\sqrt{x^2 + y^2 + z^2} = \\sqrt{2}$ 两边对 $y$ 求偏导得\n\n$$\nx z + x y   {\\frac {\\partial z}{\\partial y}} + {\\frac {y + z   {\\frac {\\partial z}{\\partial y}}}{\\sqrt {x ^ {2} + y ^ {2} + z ^ {2}}}} = 0  , \\text {解 得} {\\frac {\\partial z}{\\partial y}}   \\Big | _ {(1, 0, - 1)} = - {\\sqrt {2}}  ,\n$$\n\n故 $\\mathrm{d}z|_{(1,0,-1)} = \\mathrm{d}x - \\sqrt{2}\\mathrm{d}y.$\n\n方法二\n\n$x y z + \\sqrt{x^{2} + y^{2} + z^{2}} = \\sqrt{2}$ 两边求微分得\n\n$$\n\\mathrm {d} (x y z) + \\mathrm {d} (\\sqrt {x ^ {2} + y ^ {2} + z ^ {2}}) = 0,\n$$\n\n即 $yz \\, \\mathrm{d}x + xz \\, \\mathrm{d}y + xy \\, \\mathrm{d}z + \\frac{x \\, \\mathrm{d}x + y \\, \\mathrm{d}y + z \\, \\mathrm{d}z}{\\sqrt{x^2 + y^2 + z^2}} = 0,$\n\n将 $(x,y,z) = (1,0, - 1)$ 代入得\n\n$$\n\\mathrm {d} z \\mid_ {(1, 0, - 1)} = \\mathrm {d} x - \\sqrt {2} \\mathrm {d} y.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q03",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 3,
+      "questionType": "fill_in_blank",
+      "stem": "(3) 已知两条直线方程为 $L_{1}: \\frac{x - 1}{1} = \\frac{y - 2}{0} = \\frac{z - 3}{-1}, L_{2}: \\frac{x + 2}{2} = \\frac{y - 1}{1} = \\frac{z}{1}$ ，则过 $L_{1}$ 且平行于 $L_{2}$ 的平面方程是",
+      "options": [],
+      "answerCandidate": "$x - 3y + z + 2 = 0.$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(3)【答案】 $x - 3y + z + 2 = 0.$\n\n【答案】 显然 $M_0(1,2,3)$ 为所求平面上的点，\n\n所求平面的法向量为 $\\pmb{n} = \\{1,0, - 1\\} \\times \\{2,1,1\\} = \\{1, - 3,1\\}$\n\n所求平面为 $\\pi : (x - 1) - 3(y - 2) + (z - 3) = 0$ ，即 $\\pi : x - 3y + z + 2 = 0$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q04",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 4,
+      "questionType": "fill_in_blank",
+      "stem": "(4) 已知当 $x \\to 0$ 时, $(1 + ax^2)^{\\frac{1}{3}} - 1$ 与 $\\cos x - 1$ 是等价无穷小, 则常数 $a = \\_$ .",
+      "options": [],
+      "answerCandidate": "$-\\frac{3}{2}$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（4）【答案】 $-\\frac{3}{2}$\n\n【解】由 $(1 + ax^2)^{\\frac{1}{3}} - 1\\sim \\frac{a}{3} x^2,\\cos x - 1\\sim -\\frac{1}{2} x^2$ ，得 $\\frac{a}{3} = -\\frac{1}{2}$ 故 $a = -\\frac{3}{2}$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q05",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 5,
+      "questionType": "fill_in_blank",
+      "stem": "（5）设4阶矩阵 $\\mathbf{A} = \\begin{bmatrix} 5 & 2 & 0 & 0\\\\ 2 & 1 & 0 & 0\\\\ 0 & 0 & 1 & -2\\\\ 0 & 0 & 1 & 1 \\end{bmatrix}$ ，则 $\\mathbf{A}$ 的逆矩阵 $A^{-1} =$",
+      "options": [],
+      "answerCandidate": "$\\left[ \\begin{array}{cccc}1 & -2 & 0 & 0\\\\ -2 & 5 & 0 & 0\\\\ 0 & 0 & \\frac{1}{3} & \\frac{2}{3}\\\\ 0 & 0 & -\\frac{1}{3} & \\frac{1}{3} \\end{array} \\right].$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(5)【答案】 $\\left[ \\begin{array}{cccc}1 & -2 & 0 & 0\\\\ -2 & 5 & 0 & 0\\\\ 0 & 0 & \\frac{1}{3} & \\frac{2}{3}\\\\ 0 & 0 & -\\frac{1}{3} & \\frac{1}{3} \\end{array} \\right].$\n\n【解】 令 $\\pmb {B} = \\left( \\begin{array}{ll}5 & 2\\\\ 2 & 1 \\end{array} \\right),\\pmb {C} = \\left( \\begin{array}{ll}1 & -2\\\\ 1 & 1 \\end{array} \\right)$ 则 $A^{-1} = \\left( \\begin{array}{cc}B^{-1} & O\\\\ O & C^{-1} \\end{array} \\right)$\n\n由 $\\left( \\begin{array}{lll}5 & 2 & 1 & 0\\\\ 2 & 1 & 0 & 1 \\end{array} \\right)\\to \\left( \\begin{array}{lll}1 & 0 & 1 & -2\\\\ 2 & 1 & 0 & 1 \\end{array} \\right)\\to \\left( \\begin{array}{lll}1 & 0 & 1 & -2\\\\ 0 & 1 & -2 & 5 \\end{array} \\right),$ 得 $B^{-1} = \\left( \\begin{array}{cc}1 & -2\\\\ -2 & 5 \\end{array} \\right)$\n\n由 $\\left( \\begin{array}{ccc}1 & -2 & 1 & 0\\\\ 1 & 1 & 0 & 1 \\end{array} \\right)\\to \\left( \\begin{array}{ccc}1 & -2 & 1 & 0\\\\ 0 & 1 & -\\frac{1}{3} & \\frac{1}{3} \\end{array} \\right)\\to \\left( \\begin{array}{ccccc}1 & 0 & \\frac{1}{3} & \\frac{2}{3}\\\\ 0 & 1 & -\\frac{1}{3} & \\frac{1}{3} \\end{array} \\right),$ 得 $C^{-1} = \\left( \\begin{array}{cc}\\frac{1}{3} & \\frac{2}{3}\\\\ -\\frac{1}{3} & \\frac{1}{3} \\end{array} \\right),$\n\n故 $\\mathbf{A}^{-1} = \\left[ \\begin{array}{rrr}1 & -2 & 0 & 0\\\\ -2 & 5 & 0 & 0\\\\ 0 & 0 & \\frac{1}{3} & \\frac{2}{3}\\\\ 0 & 0 & -\\frac{1}{3} & \\frac{1}{3} \\end{array} \\right].$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q06",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 6,
+      "questionType": "multiple_choice",
+      "stem": "(1) 曲线 $y = \\frac{1 + \\mathrm{e}^{-x^2}}{1 - \\mathrm{e}^{-x^2}}$\n\n（A）没有渐近线\n\n（B）仅有水平渐近线\n\n（C）仅有铅直渐近线\n\n（D）既有水平渐近线又有铅直渐近线",
+      "options": [
+        {
+          "label": "A",
+          "value": "没有渐近线"
+        },
+        {
+          "label": "B",
+          "value": "仅有水平渐近线"
+        },
+        {
+          "label": "C",
+          "value": "仅有铅直渐近线"
+        },
+        {
+          "label": "D",
+          "value": "既有水平渐近线又有铅直渐近线"
+        }
+      ],
+      "answerCandidate": "(D).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(1)【答案】 (D).\n\n【解】由 $\\lim_{x\\to \\infty}y = 1$ ，得 $y = 1$ 为曲线 $y = \\frac{1 + \\mathrm{e}^{-x^2}}{1 - \\mathrm{e}^{-x^2}}$ 的水平渐近线；\n\n由 $\\lim_{x\\to 0}y = \\infty$ ，得 $x = 0$ 为曲线 $y = \\frac{1 + \\mathrm{e}^{-x^2}}{1 - \\mathrm{e}^{-x^2}}$ 的铅直渐近线，应选(D).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q07",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 7,
+      "questionType": "multiple_choice",
+      "stem": "（2）若连续函数 $f(x)$ 满足关系式 $f(x) = \\int_{0}^{2x} f\\left(\\frac{t}{2}\\right) \\mathrm{d}t + \\ln 2$ ，则 $f(x)$ 等于（ ）.\n\n(A) $\\mathrm{e}^x\\ln 2$\n\n(B) $\\mathrm{e}^{2x}\\ln 2$\n\n$\\mathrm{(C)}\\mathrm{e}^{x} + \\ln 2$\n\n$\\mathrm{(D)}\\mathrm{e}^{2x} + \\ln 2$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\mathrm{e}^x\\ln 2$"
+        },
+        {
+          "label": "B",
+          "value": "$\\mathrm{e}^{2x}\\ln 2$"
+        },
+        {
+          "label": "C",
+          "value": "\\mathrm{e}^{x} + \\ln 2"
+        },
+        {
+          "label": "D",
+          "value": "\\mathrm{e}^{2x} + \\ln 2"
+        }
+      ],
+      "answerCandidate": "(B).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】 (B).\n\n【解】 $f(0) = \\ln 2, f(x) = \\int_{0}^{2x} f\\left(\\frac{t}{2}\\right) \\mathrm{d}t + \\ln 2$ 两边对 $x$ 求导得 $f'(x) = 2f(x)$ ，\n\n解得 $f(x) = C\\mathrm{e}^{-\\int -2\\mathrm{d}x} = C\\mathrm{e}^{2x}$\n\n由 $f(0) = \\ln 2$ 得 $C = \\ln 2$ ，故 $f(x) = \\mathrm{e}^{2x}\\ln 2$ ，应选(B).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q08",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 8,
+      "questionType": "multiple_choice",
+      "stem": "（3）已知级数 $\\sum_{n = 1}^{\\infty}(-1)^{n - 1}a_n = 2,\\sum_{n = 1}^{\\infty}a_{2n - 1} = 5$ ，则级数 $\\sum_{n = 1}^{\\infty}a_{n}$ 等于（ ）.\n\n(A)3\n\n(B)7\n\n(C)8\n\n(D)9",
+      "options": [
+        {
+          "label": "A",
+          "value": "3"
+        },
+        {
+          "label": "B",
+          "value": "7"
+        },
+        {
+          "label": "C",
+          "value": "8"
+        },
+        {
+          "label": "D",
+          "value": "9"
+        }
+      ],
+      "answerCandidate": "(C).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（3）【答案】 (C).\n\n【解】 令 $S_{n}^{(1)} = a_{1} + a_{3} + \\dots +a_{2n - 1}$ ， $S_{n}^{(2)} = a_{2} + a_{4} + \\dots +a_{2n}$\n\n$$\nS _ {2 n} ^ {(3)} = a _ {1} - a _ {2} + \\dots + a _ {2 n - 1} - a _ {2 n} = S _ {n} ^ {(1)} - S _ {n} ^ {(2)}, \\quad S _ {n} = a _ {1} + a _ {2} + \\dots + a _ {n},\n$$\n\n由题意得 $\\lim_{n\\to \\infty}S_n^{(1)} = 5,\\lim_{n\\to \\infty}S_{2n}^{(3)} = 2,$\n\n于是 $\\lim_{n\\to \\infty}S_{n}^{(2)} = \\lim_{n\\to \\infty}S_{n}^{(1)} - \\lim_{n\\to \\infty}S_{2n}^{(3)} = 3,$\n\n因为 $\\lim_{n\\to \\infty}S_{2n} = \\lim_{n\\to \\infty}S_n^{(1)} + \\lim_{n\\to \\infty}S_n^{(2)} = 8$ ，所以级数 $\\sum_{n = 1}^{\\infty}a_{n}$ 等于8，应选(C).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q09",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 9,
+      "questionType": "multiple_choice",
+      "stem": "（4）设 $D$ 是平面 $xOy$ 上以 $(1,1),(-1,1),(-1, - 1)$ 为顶点的三角形区域， $D_{1}$ 是 $D$ 在第一象限的部分，则 $\\iint \\limits_{D}(xy + \\cos x$ sin y)dxdy等于( ).\n\n![](images/634fe177cf1f729f9d114f24f3d04fb677271ea74378b103b6b4de2f4ca2cac9.jpg)  \n二（4）题图\n\n(A) $2\\iint_{D_1}\\cos x\\sin y\\mathrm{d}x\\mathrm{d}y$\n\n(B) $2\\iint_{D_1}xy\\mathrm{d}x\\mathrm{d}y$\n\n(C) $4\\iint \\limits_{D_1}(xy + \\cos x\\sin y)\\mathrm{d}x\\mathrm{d}y$\n\n(D)0",
+      "options": [
+        {
+          "label": "A",
+          "value": "$2\\iint_{D_1}\\cos x\\sin y\\mathrm{d}x\\mathrm{d}y$"
+        },
+        {
+          "label": "B",
+          "value": "$2\\iint_{D_1}xy\\mathrm{d}x\\mathrm{d}y$"
+        },
+        {
+          "label": "C",
+          "value": "$4\\iint \\limits_{D_1}(xy + \\cos x\\sin y)\\mathrm{d}x\\mathrm{d}y$"
+        },
+        {
+          "label": "D",
+          "value": "0"
+        }
+      ],
+      "answerCandidate": "（A).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（4）【答案】 （A).\n\n【解】 令 $D_{2} = \\{(x,y) | -1 \\leqslant x \\leqslant 0, x \\leqslant y \\leqslant -x\\}$ ,\n\n$$\nD _ {3} = \\{(x, y) | - y \\leqslant x \\leqslant y, 0 \\leqslant y \\leqslant 1 \\},\n$$\n\n由对称性得\n\n$$\n\\iint_ {D _ {2}} (x y + \\cos x \\sin y) \\mathrm {d} x \\mathrm {d} y = 0,\n$$\n\n$\\iint_{D_3}(xy + \\cos x\\sin y)\\mathrm{d}x\\mathrm{d}y = \\iint_{D_3}\\cos x\\sin y\\mathrm{d}x\\mathrm{d}y = 2\\iint_{D_1}\\cos x\\sin y\\mathrm{d}x\\mathrm{d}y$ ，应选(A).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q10",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 10,
+      "questionType": "multiple_choice",
+      "stem": "（5）设 $n$ 阶矩阵 $\\mathbf{A},\\mathbf{B},\\mathbf{C}$ 满足关系式 $\\mathbf{ABC} = \\mathbf{E}$ ，其中 $\\pmb{E}$ 为 $n$ 阶单位矩阵，则必有（ ）.\n\n(A) $\\mathbf{ACB} = \\mathbf{E}$\n\n(B) $\\mathbf{CBA} = \\mathbf{E}$\n\n(C) $\\mathbf{BAC} = \\mathbf{E}$\n\n(D) $\\mathbf{B}\\mathbf{C}\\mathbf{A} = \\mathbf{E}$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\mathbf{ACB} = \\mathbf{E}$"
+        },
+        {
+          "label": "B",
+          "value": "$\\mathbf{CBA} = \\mathbf{E}$"
+        },
+        {
+          "label": "C",
+          "value": "$\\mathbf{BAC} = \\mathbf{E}$"
+        },
+        {
+          "label": "D",
+          "value": "$\\mathbf{B}\\mathbf{C}\\mathbf{A} = \\mathbf{E}$"
+        }
+      ],
+      "answerCandidate": "(D).",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（5）【答案】 (D).\n\n【解】由 $ABC = E$ 得 $BC = A^{-1}$ ，则 $BCA = A^{-1}A = E$ ，应选(D).",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q11",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 11,
+      "questionType": "solution",
+      "stem": "（1）求 $\\lim_{x\\to 0^{+}}(\\cos {\\sqrt{x}})^{\\frac{\\pi}{x}}.$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n= \\mathrm {e} ^ {\\lim  _ {x \\to 0} \\frac {\\pi}{x} \\cdot (\\cos \\sqrt {x} - 1)} = \\mathrm {e} ^ {\\pi \\lim  _ {x \\to 0} \\frac {\\cos \\sqrt {x} - 1}{x}} = \\mathrm {e} ^ {\\pi \\lim  _ {x \\to 0} \\frac {- \\frac {1}{2} x}{x}} = \\mathrm {e} ^ {- \\frac {\\pi}{2}}.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q12",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 12,
+      "questionType": "solution",
+      "stem": "(2) 设 $n$ 是曲面 $2x^{2} + 3y^{2} + z^{2} = 6$ 在点 $P(1,1,1)$ 处的指向外侧的法向量，求函数 $u = \\frac{\\sqrt{6x^2 + 8y^2}}{z}$ 在点 $P$ 处沿方向 $n$ 的方向导数.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "(2)【解】 法向量 $n = \\{4x,6y,2z\\}_{(1,1,1)} = \\{4,6,2\\}$\n\n方向余弦为 $\\cos \\alpha = \\frac{2}{\\sqrt{14}}$ ， $\\cos \\beta = \\frac{3}{\\sqrt{14}}$ ， $\\cos \\gamma = \\frac{1}{\\sqrt{14}}$\n\n$$\n\\frac {\\partial u}{\\partial x} = \\frac {6 x}{z \\sqrt {6 x ^ {2} + 8 y ^ {2}}}, \\quad \\frac {\\partial u}{\\partial y} = \\frac {8 y}{z \\sqrt {6 x ^ {2} + 8 y ^ {2}}}, \\quad \\frac {\\partial u}{\\partial z} = - \\frac {\\sqrt {6 x ^ {2} + 8 y ^ {2}}}{z ^ {2}},\n$$\n\n$$\n\\left. \\frac {\\partial u}{\\partial x} \\right| _ {(1, 1, 1)} = \\frac {6}{\\sqrt {1 4}}, \\quad \\left. \\frac {\\partial u}{\\partial y} \\right| _ {(1, 1, 1)} = \\frac {8}{\\sqrt {1 4}}, \\quad \\left. \\frac {\\partial u}{\\partial z} \\right| _ {(1, 1, 1)} = - \\sqrt {1 4},\n$$\n\n则 $\\left.\\frac{\\partial u}{\\partial \\boldsymbol{n}}\\right|_{P} = \\frac{2}{\\sqrt{14}} \\cdot \\frac{6}{\\sqrt{14}} + \\frac{3}{\\sqrt{14}} \\cdot \\frac{8}{\\sqrt{14}} - \\frac{1}{\\sqrt{14}} \\cdot \\sqrt{14} = \\frac{11}{7}$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q13",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 13,
+      "questionType": "solution",
+      "stem": "(3) 求 $\\iiint_{\\Omega} (x^2 + y^2 + z) \\, \\mathrm{d}v$ ，其中 $\\Omega$ 是由曲线 $\\left\\{ \\begin{array}{l} y^2 = 2z, \\\\ x = 0 \\end{array} \\right.$ 绕 $z$ 轴旋转一周而成的曲面与平面 $z = 4$ 所围成的立体.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "(3)【解】 $\\left\\{ \\begin{array}{l} y^{2} = 2z, \\\\ x = 0 \\end{array} \\right.$ 绕 $z$ 轴旋转而成的曲面为 $\\Sigma: x^{2} + y^{2} = 2z$\n\n则 $\\Omega = \\{(x,y,z) \\mid (x,y) \\in D_z, 0 \\leqslant z \\leqslant 4\\}$ ，其中 $D_z = \\{(x,y) \\mid x^2 + y^2 \\leqslant 2z\\}$ ，\n\n$$\n\\begin{array}{l} \\iiint_ {\\Omega} \\left(x ^ {2} + y ^ {2} + z\\right) d v = \\int_ {0} ^ {4} d z \\iint_ {D _ {z}} \\left(x ^ {2} + y ^ {2} + z\\right) d x d y \\\\ = \\int_ {0} ^ {4} d z \\int_ {0} ^ {2 \\pi} d \\theta \\int_ {0} ^ {\\sqrt {2 z}} r (r ^ {2} + z) d r = 2 \\pi \\int_ {0} ^ {4} d z \\int_ {0} ^ {\\sqrt {2 z}} (r ^ {3} + r z) d r \\\\ = 4 \\pi \\int_ {0} ^ {4} z ^ {2} \\mathrm {d} z = 4 \\pi \\cdot \\frac {6 4}{3} = \\frac {2 5 6 \\pi}{3}. \\\\ \\end{array}\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q14",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 14,
+      "questionType": "solution",
+      "stem": "在过点 $O(0,0)$ 和点 $A(\\pi,0)$ 的曲线族 $y = a\\sin x (a > 0)$ 中，求一条曲线 $L$ ，使沿该曲线从 $O$ 到 $A$ 的曲线积分 $\\int_{L} (1 + y^{3}) \\mathrm{d}x + (2x + y) \\mathrm{d}y$ 的值最小.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n\\begin{array}{l} I (a) = \\int_ {L} (1 + y ^ {3}) d x + (2 x + y) d y = \\int_ {0} ^ {\\pi} (1 + a ^ {3} \\sin^ {3} x) d x + (2 x + a \\sin x) \\cdot a \\cos x d x \\\\ = \\pi + a ^ {3} \\int_ {0} ^ {\\pi} \\sin^ {3} x d x + 2 a \\int_ {0} ^ {\\pi} x d (\\sin x) + a ^ {2} \\int_ {0} ^ {\\pi} \\sin x d (\\sin x) \\\\ = \\pi + 2 a ^ {3} \\cdot \\frac {2}{3} + 2 a \\left(x \\sin x \\left| _ {0} ^ {\\pi} - \\int_ {0} ^ {\\pi} \\sin x d x\\right) = \\pi + \\frac {4}{3} a ^ {3} - 4 a, \\right. \\\\ \\end{array}\n$$\n\n令 $I^{\\prime}(a) = 4a^{2} - 4 = 0$ 得 $a = 1$\n\n因为 $I''(1) = 8 > 0$ ，所以 $a = 1$ 时 $\\int_{L}(1 + y^{3})\\mathrm{d}x + (2x + y)\\mathrm{d}y$ 最小，故所求曲线为 $y = \\sin x$\n\n方法二\n\n$$\nI = \\int_ {L} (1 + y ^ {3}) d x + (2 x + y) d y = \\left(\\oint_ {L + \\overline {{A O}}} + \\int_ {\\overline {{O A}}}\\right) (1 + y ^ {3}) d x + (2 x + y) d y,\n$$\n\n而 $\\oint_{L + \\overline{AO}}(1 + y^3)\\mathrm{d}x + (2x + y)\\mathrm{d}y = -\\iint \\limits_{D}(2 - 3y^2)\\mathrm{d}x\\mathrm{d}y = \\iint \\limits_{D}(3y^2 -2)\\mathrm{d}x\\mathrm{d}y$\n\n$$\n\\begin{array}{l} = \\int_ {0} ^ {\\pi} d x \\int_ {0} ^ {a \\sin x} (3 y ^ {2} - 2) d y = \\int_ {0} ^ {\\pi} \\left(a ^ {3} \\sin^ {3} x - 2 a \\sin x\\right) d x \\\\ = \\frac {4}{3} a ^ {3} - 4 a, \\\\ \\end{array}\n$$\n\n$$\n\\int_ {\\overline {{O A}}} (1 + y ^ {3}) \\mathrm {d} x + (2 x + y) \\mathrm {d} y = \\int_ {0} ^ {\\pi} \\mathrm {d} x = \\pi ,\n$$\n\n则 $I = \\frac{4}{3} a^3 - 4a + \\pi$ .\n\n令 $I^{\\prime}(a) = 4a^{2} - 4 = 0$ ，得 $a = 1$\n\n因为 $I''(1) = 8 > 0$ ，所以 $a = 1$ 时 $\\int_{L}(1 + y^{3})\\mathrm{d}x + (2x + y)\\mathrm{d}y$ 最小，故所求曲线为 $y = \\sin x$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q15",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 15,
+      "questionType": "solution",
+      "stem": "将函数 $f(x) = 2 + |x| (-1 \\leqslant x \\leqslant 1)$ 展开成以2为周期的傅里叶级数，并由此求级数 $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ 的和.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "五、【解】 显然 $f(x)$ 满足狄利克雷充分条件，\n\n$$\na _ {0} = 2 \\int_ {0} ^ {1} (2 + x) d x = 2 \\times \\left(2 + \\frac {1}{2}\\right) = 5,\n$$\n\n$$\n\\begin{array}{l} a _ {n} = 2 \\int_ {0} ^ {1} (2 + x) \\cos n \\pi x d x = 2 \\left(2 \\int_ {0} ^ {1} \\cos n \\pi x d x + \\int_ {0} ^ {1} x \\cos n \\pi x d x\\right) \\\\ = 2 \\int_ {0} ^ {1} x \\cos n \\pi x d x = \\frac {2}{n \\pi} \\int_ {0} ^ {1} x d (\\sin n \\pi x) \\\\ = \\frac {2}{n \\pi} x \\sin n \\pi x \\left| _ {0} ^ {1} - \\frac {2}{n \\pi} \\int_ {0} ^ {1} \\sin n \\pi x d x = - \\frac {2}{n \\pi} \\int_ {0} ^ {1} \\sin n \\pi x d x \\right. \\\\ = \\frac {2}{n ^ {2} \\pi^ {2}} \\cos n \\pi x \\Big | _ {0} ^ {1} = \\frac {2 [ (- 1) ^ {n} - 1 ]}{n ^ {2} \\pi^ {2}} = \\left\\{ \\begin{array}{l l} - \\frac {4}{n ^ {2} \\pi^ {2}}, & n = 1, 3, 5, \\dots , \\\\ 0, & n = 2, 4, 6, \\dots , \\end{array} \\right. \\\\ \\end{array}\n$$\n\n$b_{n} = 0$\n\n故 $2 + |x| = \\frac{5}{2} -\\frac{4}{\\pi^2}\\left(\\frac{1}{1^2}\\cos \\pi x + \\frac{1}{3^2}\\cos 3\\pi x + \\dots\\right)\\quad (-\\infty <  x <   + \\infty),$\n\n取 $x = 0$ ，得 $\\frac{1}{1^2} +\\frac{1}{3^2} +\\dots = \\sum_{n = 0}^{\\infty}\\frac{1}{(2n + 1)^2} = \\frac{\\pi^2}{8}.$\n\n令 $S = \\sum_{n=1}^{\\infty} \\frac{1}{n^{2}}$ , 则\n\n$$\nS = \\left(\\frac {1}{1 ^ {2}} + \\frac {1}{3 ^ {2}} + \\frac {1}{5 ^ {2}} + \\dots\\right) + \\left(\\frac {1}{2 ^ {2}} + \\frac {1}{4 ^ {2}} + \\frac {1}{6 ^ {2}} + \\dots\\right) = \\frac {\\pi^ {2}}{8} + \\frac {1}{4} S,\n$$\n\n解得 $S = \\frac{\\pi^2}{6}$ 即 $\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$ .",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q16",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 16,
+      "questionType": "solution",
+      "stem": "设函数 $f(x)$ 在 $[0,1]$ 上连续，在(0，1）内可导，且 $3\\int_{\\frac{2}{3}}^{1}f(x)\\mathrm{d}x = f(0)$ ，证明：在（0，1）内存在一点 $c$ ，使得 $f^{\\prime}(c) = 0$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n3 \\int_ {\\frac {2}{3}} ^ {1} f (x) \\mathrm {d} x = 3 \\cdot f \\left(x _ {0}\\right) \\cdot \\left(1 - \\frac {2}{3}\\right) = f \\left(x _ {0}\\right),\n$$\n\n从而有 $f(0) = f(x_0)$ .\n\n由罗尔定理可知，存在 $c \\in (0, x_0) \\subset (0, 1)$ ，使得 $f'(c) = 0$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q17",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 17,
+      "questionType": "solution",
+      "stem": "设 $\\alpha_{1} = (1,0,2,3),\\alpha_{2} = (1,1,3,5),\\alpha_{3} = (1, - 1,a + 2,1),\\alpha_{4} = (1,2,4,a + 8)$ 及 $\\pmb {\\beta} = (1,1,b + 3,5)$\n\n(1) $a, b$ 为何值时， $\\pmb{\\beta}$ 不可由 $\\alpha_{1}, \\alpha_{2}, \\alpha_{3}, \\alpha_{4}$ 线性表示？  \n(2) $a, b$ 为何值时， $\\pmb{\\beta}$ 可由 $\\alpha_{1}, \\alpha_{2}, \\alpha_{3}, \\alpha_{4}$ 唯一线性表示？并写出该表达式.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "$$\n\\left(\\boldsymbol {\\alpha} _ {1} ^ {\\mathrm {T}}, \\boldsymbol {\\alpha} _ {2} ^ {\\mathrm {T}}, \\boldsymbol {\\alpha} _ {3} ^ {\\mathrm {T}}, \\boldsymbol {\\alpha} _ {4} ^ {\\mathrm {T}}; \\boldsymbol {\\beta} ^ {\\mathrm {T}}\\right) = \\left(\\begin{array}{c c c c c c c}1&1&1&1&1\\\\0&1&- 1&2&1\\\\2&3&a + 2&4&b + 3\\\\3&5&1&a + 8&5\\end{array}\\right)\\rightarrow \\left(\\begin{array}{c c c c c c c}1&1&1&1&1\\\\0&1&- 1&2&1\\\\0&0&a + 1&0&b\\\\0&0&0&a + 1&0\\end{array}\\right),\n$$\n\n（1）当 $a = -1, b \\neq 0$ 时，\n\n因为 $r(\\mathbf{A}) \\neq r(\\overline{\\mathbf{A}})$ ，所以方程组 $x_{1}\\pmb{\\alpha}_{1} + x_{2}\\pmb{\\alpha}_{2} + x_{3}\\pmb{\\alpha}_{3} + x_{4}\\pmb{\\alpha}_{4} = \\pmb{\\beta}$ 无解，\n\n即 $\\pmb{\\beta}$ 不可由 $\\alpha_{1},\\alpha_{2},\\alpha_{3},\\alpha_{4}$ 线性表示\n\n（2）当 $a \\neq -1$ 时，\n\n因为 $r(\\mathbf{A}) = r(\\overline{\\mathbf{A}}) = 4$ ，所以方程组 $x_{1}\\pmb{\\alpha}_{1} + x_{2}\\pmb{\\alpha}_{2} + x_{3}\\pmb{\\alpha}_{3} + x_{4}\\pmb{\\alpha}_{4} = \\pmb{\\beta}$ 有唯一解，\n\n且 $x_{1} = -\\frac{2b}{a + 1}, x_{2} = \\frac{a + b + 1}{a + 1}, x_{3} = \\frac{b}{a + 1}, x_{4} = 0,$\n\n故 $\\pmb{\\beta}$ 可由 $\\alpha_{1},\\alpha_{2},\\alpha_{3},\\alpha_{4}$ 唯一线性表示，\n\n且 $\\pmb {\\beta} = -\\frac{2b}{a + 1}\\pmb{\\alpha}_{1} + \\frac{a + b + 1}{a + 1}\\pmb{\\alpha}_{2} + \\frac{b}{a + 1}\\pmb{\\alpha}_{3} + 0\\pmb{\\alpha}_{4}.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q18",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 18,
+      "questionType": "solution",
+      "stem": "设 $\\mathbf{A}$ 为 $n$ 阶正定矩阵， $\\mathbf{E}$ 为 $n$ 阶单位矩阵，证明： $|\\mathbf{A} + \\mathbf{E}| > 1$",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "从而 $A + E$ 的特征值为 $\\lambda_1 + 1, \\lambda_2 + 1, \\dots, \\lambda_n + 1$\n\n故 $|\\mathbf{A} + \\mathbf{E}| = (\\lambda_1 + 1)(\\lambda_2 + 1)\\dots (\\lambda_n + 1) > 1.$\n\n方法二 因为 $A$ 是 $n$ 阶正定矩阵，所以其特征值 $\\lambda_{i} > 0(i = 1,2,\\dots ,n)$\n\n存在正交矩阵 $Q$ ，使得 $Q^{\\mathrm{T}}AQ = \\begin{bmatrix} \\lambda_1 & 0 & \\dots & 0\\\\ 0 & \\lambda_2 & \\dots & 0\\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\dots & \\lambda_n \\end{bmatrix}$ ，或 $\\mathbf{A} = \\mathbf{Q}\\left[ \\begin{array}{cccc}\\lambda_{1} & 0 & \\dots & 0\\\\ 0 & \\lambda_{2} & \\dots & 0\\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\dots & \\lambda_n \\end{array} \\right]Q^{\\mathrm{T}},$\n\n于是 $\\mathbf{A} + \\mathbf{E} = \\mathbf{Q}\\left[ \\begin{array}{cccc}\\lambda_{1} & 0 & \\dots & 0\\\\ 0 & \\lambda_{2} & \\dots & 0\\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\dots & \\lambda_{n} \\end{array} \\right]\\mathbf{Q}^{\\mathrm{T}} + \\mathbf{QQ}^{\\mathrm{T}} = \\mathbf{Q}\\left[ \\begin{array}{cccc} \\lambda_{1} + 1 & 0 & \\dots & 0\\\\ 0 & \\lambda_{2} + 1 & \\dots & 0\\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\dots & \\lambda_{n} + 1 \\end{array} \\right]\\mathbf{Q}^{\\mathrm{T}},$\n\n故 $|\\mathbf{A} + \\mathbf{E}| = |\\mathbf{Q}|\\cdot \\left| \\begin{array}{cccc}\\lambda_{1} + 1 & 0 & \\dots & 0\\\\ 0 & \\lambda_{2} + 1 & \\dots & 0\\\\ \\vdots & \\vdots & & \\vdots \\\\ 0 & 0 & \\dots & \\lambda_{n} + 1 \\end{array} \\right|\\cdot |\\mathbf{Q}^{\\mathrm{T}}|$\n\n$$\n= (\\lambda_ {1} + 1) (\\lambda_ {2} + 1) \\dots (\\lambda_ {n} + 1) > 1.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q19",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 19,
+      "questionType": "solution",
+      "stem": "在上半平面求一条向上凹的曲线，其上任一点 $P(x,y)$ 处的曲率等于此曲线在该点的法线段 $PQ$ 长度的倒数（ $Q$ 是法线与 $x$ 轴的交点），且曲线在点(1,1)处的切线与 $x$ 轴平行.",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "曲线在点 $P(x,y)$ 处的曲率为 $k = \\frac{|y^{\\prime\\prime}|}{(1 + y^{\\prime 2})^{\\frac{3}{2}}}$\n\n曲线在点 $P(x,y)$ 的法线为 $Y - y = -\\frac{1}{y'} (X - x)$\n\n令 $Y = 0$ 得 $X = x + yy'$ ，即 $Q(x + yy', 0)$\n\n$$\n| P Q | = \\sqrt {y ^ {2} y ^ {\\prime 2} + y ^ {2}} = y \\sqrt {1 + y ^ {\\prime 2}},\n$$\n\n由题意得 $\\frac{|y''|}{(1 + y'^2)^{\\frac{3}{2}}} = \\frac{1}{y\\sqrt{1 + y'^2}}$ 整理得 $yy^{\\prime \\prime} = 1 + y^{\\prime 2}$\n\n令 $y^\\prime = p$ ，则 $y p \\frac{\\mathrm{d}p}{\\mathrm{d}y} = 1 + p^2$ ，变量分离得 $\\frac{2p\\mathrm{d}p}{1 + p^2} = \\frac{2\\mathrm{d}y}{y}$\n\n积分得 $\\ln (1 + p^2) = \\ln y^2 + \\ln C_1$ ，即 $1 + p^2 = C_1y^2$\n\n由 $y(1) = 1, y'(1) = 0$ 得 $C_1 = 1$\n\n解得 $y^\\prime = \\pm \\sqrt{y^2 - 1}$ 变量分离得 $\\frac{\\mathrm{dy}}{\\sqrt{y^2 - 1}} = \\pm \\mathrm{dx}$\n\n积分得 $\\ln (y + \\sqrt{y^2 - 1}) = \\pm x + C_2$\n\n由 $y(1) = 1$ 得 $C_2 = \\mp 1$ ，即 $\\ln (y + \\sqrt{y^2 - 1}) = \\pm (x - 1)$\n\n由 $\\left\\{ \\begin{array}{l} y + \\sqrt{y^2 - 1} = \\mathrm{e}^{\\pm (x - 1)} \\\\ y - \\sqrt{y^2 - 1} = \\mathrm{e}^{\\mp (x - 1)} \\end{array} \\right.$ 得 $y = \\frac{\\mathrm{e}^{x - 1} + \\mathrm{e}^{1 - x}}{2}$ ,\n\n故所求的曲线为 $y = \\frac{\\mathrm{e}^{x - 1} + \\mathrm{e}^{1 - x}}{2}$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q20",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 20,
+      "questionType": "fill_in_blank",
+      "stem": "（1）设随机变量 $X$ 服从均值为2、方差为 $\\sigma^2$ 的正态分布，且 $P\\{2 < X < 4\\} = 0.3$ ，则\n\n$$\nP \\{X <   0 \\} = \\underline {{}}.\n$$",
+      "options": [],
+      "answerCandidate": "0.2.",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "（1）【答案】 0.2.\n\n【解】 显然 $X \\sim N(2, \\sigma^2)$ ，标准化得 $\\frac{X - 2}{\\sigma} \\sim N(0,1)$\n\n由 $P\\{2 < X < 4\\} = P\\left\\{0 < \\frac{X - 2}{\\sigma} < \\frac{2}{\\sigma}\\right\\} = \\Phi \\left(\\frac{2}{\\sigma}\\right) - \\Phi (0) = 0.3$ 得\n\n$\\Phi \\left(\\frac{2}{\\sigma}\\right) - 0.5 = 0.3$ ，即 $\\Phi \\left(\\frac{2}{\\sigma}\\right) = 0.8.$\n\n故 $P\\{X < 0\\} = P\\{X \\leqslant 0\\} = P\\left\\{\\frac{X - 2}{\\sigma} \\leqslant -\\frac{2}{\\sigma}\\right\\} = \\Phi\\left(-\\frac{2}{\\sigma}\\right) = 1 - \\Phi\\left(\\frac{2}{\\sigma}\\right) = 0.2.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q21",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 21,
+      "questionType": "fill_in_blank",
+      "stem": "(2) 随机地向半圆 $0 < y < \\sqrt{2ax - x^2}$ ( $a > 0$ ) 内掷一点, 点落在半圆内任何区域的概率与该区域的面积成正比, 则原点与该点的连线与 $x$ 轴的夹角小于 $\\frac{\\pi}{4}$ 的概率为",
+      "options": [],
+      "answerCandidate": "$\\frac{1}{2} +\\frac{1}{\\pi}$",
+      "answerStatus": "candidate_from_solutions",
+      "explanationCandidate": "(2)【答案】 $\\frac{1}{2} +\\frac{1}{\\pi}$\n\n【解】 所求概率 $p = \\frac{\\iint_{D} \\mathrm{d}x \\, \\mathrm{d}y}{\\frac{\\pi a^2}{2}} = \\frac{2}{\\pi a^2} \\int_{0}^{\\frac{\\pi}{4}} \\mathrm{d}\\theta \\int_{0}^{2a\\cos \\theta} r \\, \\mathrm{d}r$\n\n$$\n= \\frac {4}{\\pi} \\int_ {0} ^ {\\frac {\\pi}{4}} \\cos^ {2} \\theta d \\theta = \\frac {2}{\\pi} \\int_ {0} ^ {\\frac {\\pi}{4}} (1 + \\cos 2 \\theta) d \\theta = \\frac {1}{2} + \\frac {1}{\\pi}.\n$$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    },
+    {
+      "stableId": "math1-1991-q22",
+      "sourceRepo": "Kaoyan-Math1-Papers",
+      "sourceRelativePaths": [
+        "papers/1991年考研数学(一)真题.md",
+        "solutions/1991年解析/1991年解析.md"
+      ],
+      "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+      "sourceDirty": true,
+      "sourceYear": 1991,
+      "subjectCode": "math1",
+      "sourceFileHashes": {
+        "paper": "C6B168DFBC4301B2BD3C95567D668EA15DF5B675AEC3DC67E1DCC8E156023051",
+        "solutions": "7E8C4D3534CD8F4603646DC21CF36D36A5C5018A7281FFF1B0615DFC3D3148DC"
+      },
+      "transformVersion": "math1-legacy-transform-v1",
+      "reviewStatus": "needs_human_review",
+      "questionNumber": 22,
+      "questionType": "solution",
+      "stem": "设二维随机变量 $(X,Y)$ 的概率密度为\n\n$$\nf (x, y) = \\left\\{ \\begin{array}{l l} 2 \\mathrm {e} ^ {- (x + 2 y)}, & x > 0, y > 0, \\\\ 0, & \\text {其 他}, \\end{array} \\right.\n$$\n\n求随机变量 $Z = X + 2Y$ 的分布函数",
+      "options": [],
+      "answerCandidate": null,
+      "answerStatus": "missing",
+      "explanationCandidate": "当 $z \\leqslant 0$ 时， $F_Z(z) = 0$\n\n当 $z > 0$ 时， $F_{Z}(z) = \\int_{0}^{z}\\mathrm{d}x\\int_{0}^{\\frac{z - x}{2}}2\\mathrm{e}^{-(x + 2y)}\\mathrm{d}y = \\int_{0}^{z}\\mathrm{e}^{-x}\\mathrm{d}x\\int_{0}^{\\frac{z - x}{2}}2\\mathrm{e}^{-2y}\\mathrm{d}y$\n\n$$\n= \\int_ {0} ^ {z} \\left(\\mathrm {e} ^ {- x} - \\mathrm {e} ^ {- z}\\right) \\mathrm {d} x = 1 - \\mathrm {e} ^ {- z} - z \\mathrm {e} ^ {- z},\n$$\n\n故随机变量 $Z$ 的分布函数为 $F_{Z}(z) = \\left\\{ \\begin{array}{ll}1 - \\mathrm{e}^{-z} - z\\mathrm{e}^{-z}, & z > 0,\\\\ 0, & z\\leqslant 0. \\end{array} \\right.$",
+      "explanationStatus": "candidate_from_solutions",
+      "anomalies": []
+    }
+  ],
+  "validation": {
+    "questionsGenerated": 22,
+    "questionsWithExplanations": 22,
+    "multipleChoiceWithFourOptions": 5,
+    "allNeedsHumanReview": true,
+    "remainingAutomaticAnomalies": 0
+  }
+}

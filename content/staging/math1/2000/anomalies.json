@@ -1,0 +1,163 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "runId": "20260620-150305-cc-math1-md-finalize-year-2000",
+  "task": "cc-math1-md-finalize-year",
+  "subjectCode": "math1",
+  "sourceYear": 2000,
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "totalAnomalies": 10,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 1,
+    "info": 9
+  },
+  "activeAnomalies": [
+    {
+      "questionId": "math1-2000-s01-q03",
+      "type": "formula_fix_applied",
+      "severity": "info",
+      "message": "Unbalanced parentheses in answer fixed. Original: C_2 (C_1, C_2 为任意常数). Fixed: C_2 (C_1, C_2 为任意常数).",
+      "fixApplied": false
+    },
+    {
+      "questionId": "math1-2000-s11-q01",
+      "type": "ocr_noise_raw_matrix",
+      "severity": "warning",
+      "message": "Source solutions/2000年解析.md line 295: raw OCR artifact \"9 2 10 5 1 3 10 5 5\" from failed matrix A rendering. Does not affect staging data.",
+      "fixApplied": false,
+      "needsHumanReview": true
+    },
+    {
+      "questionId": "math1-2000-s01-q01",
+      "type": "image_placement_mismatch",
+      "severity": "info",
+      "message": "Solution image ba84f2ee...jpg labeled \"一(1)题图\" belongs to Q1 but placed between Q2 sections in source markdown.",
+      "fixApplied": false
+    },
+    {
+      "questionId": "math1-2000-s05",
+      "type": "image_dependency",
+      "severity": "info",
+      "message": "Solution references image 64aa7798...jpg showing contour L and ellipse L0. Image exists in source mirror.",
+      "fixApplied": false
+    },
+    {
+      "questionId": "math1-2000-s02-q05",
+      "type": "option_formatting_inconsistency",
+      "severity": "info",
+      "message": "Paper option A uses \\mathrm formatting while B/C/D use standard format. Minor stylistic issue, no impact on correctness.",
+      "fixApplied": false
+    }
+  ],
+  "resolvedAnomalies": [
+    {
+      "questionId": "math1-2000-s04",
+      "type": "answer_extracted_from_explanation",
+      "severity": "info",
+      "message": "Answer extracted from solution explanation (was missing). Final expression for d^2z/dxdy extracted from last line of solution.",
+      "fixApplied": true
+    },
+    {
+      "questionId": "math1-2000-s07",
+      "type": "answer_extracted_from_explanation",
+      "severity": "info",
+      "message": "Answer extracted from solution explanation (was missing). Compound answer: interval, endpoint behavior.",
+      "fixApplied": true
+    },
+    {
+      "questionId": "math1-2000-s09",
+      "type": "missing_answer_proof",
+      "severity": "info",
+      "message": "Proof question: no discrete answer expected. Missing answer is intentional — proof body in explanation serves as answer.",
+      "fixApplied": true
+    },
+    {
+      "questionId": "math1-2000-s11-q01",
+      "type": "answer_extracted_from_explanation",
+      "severity": "info",
+      "message": "Answer extracted from solution explanation (was missing). System of equations and matrix A.",
+      "fixApplied": true
+    },
+    {
+      "questionId": "math1-2000-s11-q02",
+      "type": "answer_extracted_from_explanation",
+      "severity": "info",
+      "message": "Answer extracted from solution explanation (was missing). Eigenvalues lambda1=1, lambda2=1/2.",
+      "fixApplied": true
+    }
+  ],
+  "anomalies": [
+    {
+      "questionId": "math1-2000-s01-q03",
+      "type": "formula_fix_applied",
+      "severity": "info",
+      "message": "Unbalanced parentheses in answer fixed. Original: C_2 (C_1, C_2 为任意常数). Fixed: C_2 (C_1, C_2 为任意常数).",
+      "fixApplied": false
+    },
+    {
+      "questionId": "math1-2000-s04",
+      "type": "answer_extracted_from_explanation",
+      "severity": "info",
+      "message": "Answer extracted from solution explanation (was missing). Final expression for d^2z/dxdy extracted from last line of solution.",
+      "fixApplied": true
+    },
+    {
+      "questionId": "math1-2000-s07",
+      "type": "answer_extracted_from_explanation",
+      "severity": "info",
+      "message": "Answer extracted from solution explanation (was missing). Compound answer: interval, endpoint behavior.",
+      "fixApplied": true
+    },
+    {
+      "questionId": "math1-2000-s09",
+      "type": "missing_answer_proof",
+      "severity": "info",
+      "message": "Proof question: no discrete answer expected. Missing answer is intentional — proof body in explanation serves as answer.",
+      "fixApplied": true
+    },
+    {
+      "questionId": "math1-2000-s11-q01",
+      "type": "answer_extracted_from_explanation",
+      "severity": "info",
+      "message": "Answer extracted from solution explanation (was missing). System of equations and matrix A.",
+      "fixApplied": true
+    },
+    {
+      "questionId": "math1-2000-s11-q02",
+      "type": "answer_extracted_from_explanation",
+      "severity": "info",
+      "message": "Answer extracted from solution explanation (was missing). Eigenvalues lambda1=1, lambda2=1/2.",
+      "fixApplied": true
+    },
+    {
+      "questionId": "math1-2000-s11-q01",
+      "type": "ocr_noise_raw_matrix",
+      "severity": "warning",
+      "message": "Source solutions/2000年解析.md line 295: raw OCR artifact \"9 2 10 5 1 3 10 5 5\" from failed matrix A rendering. Does not affect staging data.",
+      "fixApplied": false,
+      "needsHumanReview": true
+    },
+    {
+      "questionId": "math1-2000-s01-q01",
+      "type": "image_placement_mismatch",
+      "severity": "info",
+      "message": "Solution image ba84f2ee...jpg labeled \"一(1)题图\" belongs to Q1 but placed between Q2 sections in source markdown.",
+      "fixApplied": false
+    },
+    {
+      "questionId": "math1-2000-s05",
+      "type": "image_dependency",
+      "severity": "info",
+      "message": "Solution references image 64aa7798...jpg showing contour L and ellipse L0. Image exists in source mirror.",
+      "fixApplied": false
+    },
+    {
+      "questionId": "math1-2000-s02-q05",
+      "type": "option_formatting_inconsistency",
+      "severity": "info",
+      "message": "Paper option A uses \\mathrm formatting while B/C/D use standard format. Minor stylistic issue, no impact on correctness.",
+      "fixApplied": false
+    }
+  ]
+}

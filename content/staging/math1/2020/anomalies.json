@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "question-transform-v1",
+  "generatedAt": "2026-06-20T17:52:58+08:00",
+  "totalAnomalies": 1,
+  "anomalies": [
+    {
+      "type": "section_header_mismatch",
+      "severity": "info",
+      "message": "Solutions markdown section header says '# 一、填空题' but Q1-Q8 are multiple choice. This is a known source formatting quirk in the solutions file — the content and answer mappings are correct. No question-level impact."
+    }
+  ]
+}

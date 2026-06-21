@@ -1,0 +1,453 @@
+{
+  "schemaVersion": "review-v1",
+  "runId": "20260620-185410-cc-math1-md-finalize-year-2002",
+  "task": "cc-math1-md-finalize-year",
+  "subjectCode": "math1",
+  "sourceYear": 2002,
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewedAt": "2026-06-20T18:54:10+08:00",
+  "reviewStatus": "needs_human_review",
+  "totalQuestions": 20,
+  "mdFinalizationResult": {
+    "readyForApproval": 18,
+    "readyWithInfo": 2,
+    "blocked": 0
+  },
+  "questions": [
+    {
+      "stableId": "math1-2002-q01",
+      "questionNumber": 1,
+      "questionType": "fill_in_blank",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "embedded answers Q2-Q5 split to individual questions in 2026-06-17 run"
+      ],
+      "candidateResult": {
+        "stem": "(1) $\\int_{\\mathrm{e}}^{+\\infty} \\frac{\\mathrm{d}x}{x \\ln^2 x} = \\underline{\\quad}$ .",
+        "options": [],
+        "answerCandidate": "1.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（1）【答案】 1.\n\n【解】 $\\int_{\\mathrm{e}}^{+\\infty}\\frac{\\mathrm{d}x}{x\\ln^2x} = \\int_{\\mathrm{e}}^{+\\infty}\\frac{\\mathrm{d}(\\ln x)}{\\ln^2x} = -\\frac{1}{\\ln x}\\Big|_{\\mathrm{e}}^{+\\infty} = 1.$",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q02",
+      "questionNumber": 2,
+      "questionType": "fill_in_blank",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate and explanationCandidate split from Q1 in 2026-06-17 run"
+      ],
+      "candidateResult": {
+        "stem": "(2) 已知函数 $y = y(x)$ 由方程 $e^{y} + 6xy + x^{2} - 1 = 0$ 确定, 则 $y''(0) =$ ______.",
+        "options": [],
+        "answerCandidate": "-2.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(2)【答案】 -2.\n\n【解】 当 $x = 0$ 时， $y = 0$\n\n$\\mathrm{e}^y + 6xy + x^2 - 1 = 0$ 两边对 $x$ 求导，得 $\\mathrm{e}^y \\frac{\\mathrm{d}y}{\\mathrm{d}x} + 6y + 6x \\frac{\\mathrm{d}y}{\\mathrm{d}x} + 2x = 0$ 则 $y'(0) = 0$ . $\\mathrm{e}^y \\frac{\\mathrm{d}y}{\\mathrm{d}x} + 6y + 6x \\frac{\\mathrm{d}y}{\\mathrm{d}x} + 2x = 0$ 两边对 $x$ 求导，\n\n得 $\\mathrm{e}^{y}\\left(\\frac{\\mathrm{dy}}{\\mathrm{dx}}\\right)^{2} + \\mathrm{e}^{y}\\frac{\\mathrm{d}^{2}y}{\\mathrm{dx}^{2}} +12\\frac{\\mathrm{dy}}{\\mathrm{dx}} +6x\\frac{\\mathrm{d}^{2}y}{\\mathrm{dx}^{2}} +2 = 0$ ，于是 $y^{\\prime \\prime}(0) = -2.$",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q03",
+      "questionNumber": 3,
+      "questionType": "fill_in_blank",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "candidateResult": {
+        "stem": "(3) 微分方程 $y y^{\\prime \\prime} + (y^{\\prime})^{2} = 0$ 满足初始条件 $y \\Big|_{x=0} = 1, y^{\\prime} \\Big|_{x=0} = \\frac{1}{2}$ 的特解是",
+        "options": [],
+        "answerCandidate": "$y = \\sqrt{x + 1}$ .",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(3)【答案】 $y = \\sqrt{x + 1}$ .\n\n【解】方法一 令 $y' = p$ ，则 $y'' = p \\frac{\\mathrm{d}p}{\\mathrm{d}y}$...\n\n方法点评：本题考查可降阶的微分方程的求解。",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q04",
+      "questionNumber": 4,
+      "questionType": "fill_in_blank",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "candidateResult": {
+        "stem": "(4) 已知实二次型 $f(x_{1}, x_{2}, x_{3}) = a\\left(x_{1}^{2} + x_{2}^{2} + x_{3}^{2}\\right) + 4x_{1}x_{2} + 4x_{1}x_{3} + 4x_{2}x_{3}$ 经正交变换 $\\mathbf{x} = \\mathbf{P}\\mathbf{y}$ 可化成标准形 $f = 6y_{1}^{2}$ , 则 $a =$",
+        "options": [],
+        "answerCandidate": "2.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q05",
+      "questionNumber": 5,
+      "questionType": "fill_in_blank",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "candidateResult": {
+        "stem": "(5) 设随机变量 $X$ 服从正态分布 $N(\\mu, \\sigma^2)(\\sigma > 0)$ , 且二次方程 $y^2 + 4y + X = 0$ 无实根的概率为 $\\frac{1}{2}$ , 则 $\\mu = \\_$ .",
+        "options": [],
+        "answerCandidate": "4.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q06",
+      "questionNumber": 6,
+      "questionType": "multiple_choice",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_with_info",
+      "mdFinalizationNote": "性质①②中文描述从solution证据恢复（①连续, ②一阶偏导数连续），数学逻辑唯一确定。精确原文措辞需PDF确认。",
+      "fixes": [
+        "stem properties ①② recovered from OCR loss using solution evidence (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "（1）考虑二元函数 $f(x,y)$ 的下面4条性质：\n\n① $f(x,y)$ 在点 $(x_0,y_0)$ 处连续； ② $f(x,y)$ 在点 $(x_0,y_0)$ 处的两个一阶偏导数连续.\n③ $f(x,y)$ 在点 $(x_0,y_0)$ 处可微； ④ $f(x,y)$ 在点 $(x_0,y_0)$ 处的两个偏导数存在.\n\n若用\" $P \\Rightarrow Q$ \"表示可由性质 $P$ 推出性质 $Q$ , 则有( )\n\n(A) $② \\Rightarrow ③ \\Rightarrow ①$\n\n(B) $③ \\Rightarrow ② \\Rightarrow ①$\n\n(C) $③ \\Rightarrow ④ \\Rightarrow ①$\n\n(D) $③ \\Rightarrow ① \\Rightarrow ④$",
+        "options": [
+          {
+            "label": "A",
+            "value": "$② \\Rightarrow ③ \\Rightarrow ①$"
+          },
+          {
+            "label": "B",
+            "value": "$③ \\Rightarrow ② \\Rightarrow ①$"
+          },
+          {
+            "label": "C",
+            "value": "$③ \\Rightarrow ④ \\Rightarrow ①$"
+          },
+          {
+            "label": "D",
+            "value": "$③ \\Rightarrow ① \\Rightarrow ④$"
+          }
+        ],
+        "answerCandidate": "（A）.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（6）【答案】 （A）.\n\n【解】若 $f(x,y)$ 两个偏导数连续，则 $f(x,y)$ 一定可微，反之不对；\n\n若 $f(x,y)$ 可微，则 $f(x,y)$ 连续且可偏导，反之不对，应选(A).\n\n方法点评：二元函数 $f(x,y)$ 在一点处的连续性、可偏导性、可微性、一阶连续可偏导性之间的关系图如下：\n\n![](images/69dd87d1c301f9d152dbed0a341d4c6c3271361bc8d543ead66d3049ba053c84.jpg)\n一阶连续可偏导",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q07",
+      "questionNumber": 7,
+      "questionType": "multiple_choice",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate and explanationCandidate split from Q6 in 2026-06-17 run"
+      ],
+      "candidateResult": {
+        "stem": "(2) 设 $u_{n} \\neq 0 (n = 1, 2, 3, \\dots)$ , 且 $\\lim_{n \\to \\infty} \\frac{n}{u_{n}} = 1$ , 则级数 $\\sum_{n=1}^{\\infty} (-1)^{n+1} \\left(\\frac{1}{u_{n}} + \\frac{1}{u_{n+1}}\\right)$\n\n（A）发散.\n\n（B）绝对收敛.\n\n（C）条件收敛\n\n(D) 收敛性根据所给条件不能判定.",
+        "options": [
+          {
+            "label": "A",
+            "value": "发散."
+          },
+          {
+            "label": "B",
+            "value": "绝对收敛."
+          },
+          {
+            "label": "C",
+            "value": "条件收敛"
+          },
+          {
+            "label": "D",
+            "value": "收敛性根据所给条件不能判定."
+          }
+        ],
+        "answerCandidate": "(C).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q08",
+      "questionNumber": 8,
+      "questionType": "multiple_choice",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "candidateResult": {
+        "stem": "(3) 设函数 $y = f(x)$ 在 $(0, +\\infty)$ 内有界且可导，则（ ）\n\n(A) 当 $\\lim_{x \\to +\\infty} f(x) = 0$ 时, 必有 $\\lim_{x \\to +\\infty} f'(x) = 0$ .\n(B) 当 $\\lim_{x \\to +\\infty} f'(x)$ 存在时, 必有 $\\lim_{x \\to +\\infty} f'(x) = 0$ .\n(C) 当 $\\lim_{x \\to 0^{+}} f(x) = 0$ 时, 必有 $\\lim_{x \\to 0^{+}} f'(x) = 0$ .\n(D) 当 $\\lim_{x \\to 0^{+}} f'(x)$ 存在时, 必有 $\\lim_{x \\to 0^{+}} f'(x) = 0$ .",
+        "options": [
+          {
+            "label": "A",
+            "value": "当 $\\lim_{x \\to +\\infty} f(x) = 0$ 时, 必有 $\\lim_{x \\to +\\infty} f'(x) = 0$ ."
+          },
+          {
+            "label": "B",
+            "value": "当 $\\lim_{x \\to +\\infty} f'(x)$ 存在时, 必有 $\\lim_{x \\to +\\infty} f'(x) = 0$ ."
+          },
+          {
+            "label": "C",
+            "value": "当 $\\lim_{x \\to 0^{+}} f(x) = 0$ 时, 必有 $\\lim_{x \\to 0^{+}} f'(x) = 0$ ."
+          },
+          {
+            "label": "D",
+            "value": "当 $\\lim_{x \\to 0^{+}} f'(x)$ 存在时, 必有 $\\lim_{x \\to 0^{+}} f'(x) = 0$ ."
+          }
+        ],
+        "answerCandidate": "（B）.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q09",
+      "questionNumber": 9,
+      "questionType": "multiple_choice",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_with_info",
+      "mdFinalizationNote": "全部选项为图片。选项图片标签A/B/C/D已从paper Markdown正确映射到staging options中（A→5a83..., B→8127..., C→6a75..., D→9e0f...）。答案(B)对应三平面交于一直线(8127aa31...)。图片内容精确确认需PDF。",
+      "fixes": [
+        "option image mapping corrected in 2026-06-17 run"
+      ],
+      "candidateResult": {
+        "stem": "(4) 设有三张不同平面的方程 $a_{i1}x + a_{i2}y + a_{i3}z = b_i, i = 1,2,3$ , 它们所组成的线性方程组的系数矩阵与增广矩阵的秩都为 2 , 则这三张平面可能的位置关系为 ( )\n\n![](images/5a83b0446d5d8be79a045e814853bc7c8100c050854275d5d10f62e99d7d957a.jpg)\n(A)\n\n![](images/8127aa31eb9b732b4b21f0f9cef9fb714092b8e440718188c6f9f5e6bca799ea.jpg)\n(B)\n\n![](images/6a75d47c3f3e7e51ebaa752538b7c072f125f4e206a99dc4cf9ded5b5eb9967e.jpg)\n(C)\n\n![](images/9e0f14659cf0e9e2d0d8f7fb57cbd30d2d222507d38b5194e452c67cb2205a15.jpg)\n(D)",
+        "options": [
+          {
+            "label": "A",
+            "value": "![](images/5a83b0446d5d8be79a045e814853bc7c8100c050854275d5d10f62e99d7d957a.jpg)"
+          },
+          {
+            "label": "B",
+            "value": "![](images/8127aa31eb9b732b4b21f0f9cef9fb714092b8e440718188c6f9f5e6bca799ea.jpg)"
+          },
+          {
+            "label": "C",
+            "value": "![](images/6a75d47c3f3e7e51ebaa752538b7c072f125f4e206a99dc4cf9ded5b5eb9967e.jpg)"
+          },
+          {
+            "label": "D",
+            "value": "![](images/9e0f14659cf0e9e2d0d8f7fb57cbd30d2d222507d38b5194e452c67cb2205a15.jpg)"
+          }
+        ],
+        "answerCandidate": "（B）.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q10",
+      "questionNumber": 10,
+      "questionType": "multiple_choice",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "options A/B/C/D correctly extracted from paper Markdown in 2026-06-17 run"
+      ],
+      "candidateResult": {
+        "stem": "(5) 设 $X_{1}$ 和 $X_{2}$ 是任意两个相互独立的连续型随机变量, 它们的概率密度分别为 $f_{1}(x)$ 和 $f_{2}(x)$ , 分布函数分别为 $F_{1}(x)$ 和 $F_{2}(x)$ , 则( )\n\n$(\\mathrm{A})f_{1}(x) + f_{2}(x)$ 必为某一随机变量的概率密度\n(B) $f_{1}(x)f_{2}(x)$ 必为某一随机变量的概率密度.\n$(\\mathrm{C})F_{1}(x) + F_{2}(x)$ 必为某一随机变量的分布函数\n$(\\mathrm{D})F_{1}(x)F_{2}(x)$ 必为某一随机变量的分布函数",
+        "options": [
+          {
+            "label": "A",
+            "value": "$f_{1}(x) + f_{2}(x)$ 必为某一随机变量的概率密度"
+          },
+          {
+            "label": "B",
+            "value": "$f_{1}(x)f_{2}(x)$ 必为某一随机变量的概率密度."
+          },
+          {
+            "label": "C",
+            "value": "$F_{1}(x) + F_{2}(x)$ 必为某一随机变量的分布函数"
+          },
+          {
+            "label": "D",
+            "value": "$F_{1}(x)F_{2}(x)$ 必为某一随机变量的分布函数"
+          }
+        ],
+        "answerCandidate": "(D).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q11",
+      "questionNumber": 11,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate extracted from explanationCandidate (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "设函数 $f(x)$ 在 $x = 0$ 的某邻域内具有一阶连续导数，且 $f(0) \\neq 0, f'(0) \\neq 0$ ，若 $a f(h) + b f(2h) - f(0)$ 在 $h \\to 0$ 时是比 $h$ 高阶的无穷小，试确定 $a, b$ 的值.",
+        "options": [],
+        "answerCandidate": "$a = 2, b = -1$ .",
+        "answerStatus": "candidate_extracted_by_md_finalization",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q12",
+      "questionNumber": 12,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate extracted from explanationCandidate (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "已知两曲线 $y = f(x)$ 与 $y = \\int_{0}^{\\arctan x} \\mathrm{e}^{-t^{2}} \\, \\mathrm{d}t$ 在点 $(0,0)$ 处的切线相同，写出此切线方程，并求极限 $\\lim_{n\\to \\infty}nf\\left(\\frac{2}{n}\\right)$ .",
+        "options": [],
+        "answerCandidate": "切线方程 $y = x$ , $\\lim_{n\\to \\infty} n f\\left(\\frac{2}{n}\\right) = 2$ .",
+        "answerStatus": "candidate_extracted_by_md_finalization",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q13",
+      "questionNumber": 13,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate extracted from explanationCandidate (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "计算二重积分 $\\iint_{D} \\mathrm{e}^{\\max \\left\\{x^{2}, y^{2}\\right\\}} \\mathrm{d} x \\mathrm{~d} y$ ，其中 $D = \\{(x, y) \\mid 0 \\leqslant x \\leqslant 1, 0 \\leqslant y \\leqslant 1\\}$ .",
+        "options": [],
+        "answerCandidate": "$\\mathrm{e} - 1$ .",
+        "answerStatus": "candidate_extracted_by_md_finalization",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q14",
+      "questionNumber": 14,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate extracted from explanationCandidate (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "设函数 $f(x)$ 在 $(- \\infty, + \\infty)$ 内具有一阶连续导数， $L$ 是上半平面 $(y > 0)$ 内的有向分段光滑曲线，其起点为 $(a, b)$ ，终点为 $(c, d)$ . 记\n\n$$\nI = \\int_ {L} \\frac {1}{y} [ 1 + y ^ {2} f (x y) ] d x + \\frac {x}{y ^ {2}} [ y ^ {2} f (x y) - 1 ] d y.\n$$\n\n(1) 证明曲线积分 $I$ 与路径 $L$ 无关;\n(2) 当 $ab = cd$ 时, 求 $I$ 的值.",
+        "options": [],
+        "answerCandidate": "(1) 证明 $\\frac{\\partial Q}{\\partial x} = \\frac{\\partial P}{\\partial y}$ , 曲线积分 $I$ 与路径 $L$ 无关 ; (2) $I = \\frac{bc - ad}{bd}$ .",
+        "answerStatus": "candidate_extracted_by_md_finalization",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q15",
+      "questionNumber": 15,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate extracted from explanationCandidate (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "(1) 验证函数 $y(x) = 1 + \\frac{x^3}{3!} + \\frac{x^6}{6!} + \\frac{x^9}{9!} + \\dots + \\frac{x^{3n}}{(3n)!} + \\dots (-\\infty < x < +\\infty)$ 满足微分方程 $y'' + y' + y = e^x$ ;\n(2) 利用 (1) 的结果求幂级数 $\\sum_{n=0}^{\\infty} \\frac{x^{3n}}{(3n)!}$ 的和函数.",
+        "options": [],
+        "answerCandidate": "(1) 已验证 $y'' + y' + y = \\mathrm{e}^x$ ; (2) 和函数 $y(x) = \\frac{2}{3} \\mathrm{e}^{-\\frac{x}{2}} \\cos \\frac{\\sqrt{3}}{2} x + \\frac{1}{3} \\mathrm{e}^{x}$ .",
+        "answerStatus": "candidate_extracted_by_md_finalization",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q16",
+      "questionNumber": 16,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate extracted (2026-06-20)",
+        "stem LaTeX line break merged (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "设有一小山,取它的底面所在的平面为 $xOy$ 坐标面,其底部所占的区域为 $D = \\{(x,y)\\mid x^2 +y^2 -xy \\leqslant 75\\}$ ,小山的高度函数为 $h(x,y) = 75 - x^{2} - y^{2} + xy.$\n\n(1) 设 $M(x_0, y_0)$ 为区域 $D$ 上一点，问 $h(x, y)$ 在该点沿平面上什么方向的方向导数最大？若记此方向导数的最大值为 $g(x_0, y_0)$ ，试写出 $g(x_0, y_0)$ 的表达式.\n\n(2) 现欲利用此小山开展攀岩活动, 为此需要在山脚寻找一上山坡度最大的点作为攀登的起点. 也就是说, 要在 $D$ 的边界线 $x^{2} + y^{2} - xy = 75$ 上找出使 (1) 中的 $g(x, y)$ 达到最大值的点. 试确定攀登起点的位置.",
+        "options": [],
+        "answerCandidate": "(1) 沿梯度方向方向导数最大, $g(x_0, y_0) = \\sqrt{5x_0^2 + 5y_0^2 - 8x_0y_0}$ ; (2) 攀登起点可选 $(5, -5)$ 或 $(-5, 5)$ .",
+        "answerStatus": "candidate_extracted_by_md_finalization",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q17",
+      "questionNumber": 17,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate extracted from explanationCandidate (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "已知4阶方阵 $A = (\\alpha_{1},\\alpha_{2},\\alpha_{3},\\alpha_{4})$ ， $\\alpha_{1},\\alpha_{2},\\alpha_{3},\\alpha_{4}$ 均为4维列向量，其中 $\\alpha_{2},\\alpha_{3},\\alpha_{4}$ 线性无关， $\\pmb{\\alpha}_{1} = 2\\pmb{\\alpha}_{2} - \\pmb{\\alpha}_{3}$ .如果 $\\pmb {\\beta} = \\pmb {\\alpha}_1 + \\pmb {\\alpha}_2 + \\pmb {\\alpha}_3 + \\pmb {\\alpha}_4$ ，求线性方程组 $Ax = \\beta$ 的通解.",
+        "options": [],
+        "answerCandidate": "通解 $\\mathbf{X} = k (1, -2, 1, 0)^{\\mathrm{T}} + (1, 1, 1, 1)^{\\mathrm{T}}$ , $k$ 为任意常数.",
+        "answerStatus": "candidate_extracted_by_md_finalization",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q18",
+      "questionNumber": 18,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate extracted from explanationCandidate (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "设 $A, B$ 为同阶方阵，\n\n（1）如果 $A, B$ 相似，试证 $A, B$ 的特征多项式相等\n(2) 举一个 2 阶方阵的例子说明 (1) 的逆命题不成立.\n(3) 当 $A, B$ 均为实对称矩阵时, 试证 (1) 的逆命题成立.",
+        "options": [],
+        "answerCandidate": "(1) 已证: $A\\sim B \\Rightarrow |\\lambda E - A| = |\\lambda E - B|$ ; (2) 反例 $A = \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}, B = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}$ , 特征多项式均为 $\\lambda^2$ 但不相似 ; (3) 已证: 实对称矩阵特征多项式相同即相似.",
+        "answerStatus": "candidate_extracted_by_md_finalization",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q19",
+      "questionNumber": 19,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate extracted from explanationCandidate (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "设随机变量 $X$ 的概率密度为\n\n$$\nf (x) = \\left\\{ \\begin{array}{l l} { \\frac {1}{2} \\cos \\frac {x}{2},} & {0 \\leqslant x \\leqslant \\pi ,} \\\\ {0,} & {\\text {其 他},} \\end{array} \\right.\n$$\n\n对 $X$ 独立地重复观察4次，用 $Y$ 表示观察值大于 $\\frac{\\pi}{3}$ 的次数，求 $Y^2$ 的数学期望",
+        "options": [],
+        "answerCandidate": "$E(Y^2) = 5$ .",
+        "answerStatus": "candidate_extracted_by_md_finalization",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    },
+    {
+      "stableId": "math1-2002-q20",
+      "questionNumber": 20,
+      "questionType": "solution",
+      "reviewStatus": "needs_human_review",
+      "mdFinalizationClass": "ready_for_approval",
+      "fixes": [
+        "answerCandidate extracted from explanationCandidate (2026-06-20)"
+      ],
+      "candidateResult": {
+        "stem": "设总体 $X$ 的概率分布为\n\n<table><tr><td>X</td><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><td>P</td><td>θ²</td><td>2θ(1 - θ)</td><td>θ²</td><td>1 - 2θ</td></tr></table>\n\n其中 $\\theta \\left(0 < \\theta < \\frac{1}{2}\\right)$ 是未知参数, 利用总体 $X$ 的如下样本值\n\n$$\n3, 1, 3, 0, 3, 1, 2, 3,\n$$\n\n求 $\\theta$ 的矩估计值和最大似然估计值",
+        "options": [],
+        "answerCandidate": "矩估计 $\\hat{\\theta} = \\frac{1}{4}$ ; 最大似然估计 $\\hat{\\theta} = \\frac{7 - \\sqrt{13}}{12}$ .",
+        "answerStatus": "candidate_extracted_by_md_finalization",
+        "explanationStatus": "candidate_from_solutions"
+      }
+    }
+  ],
+  "reviewSummary": {
+    "annotatedCount": 20,
+    "mdFinalizationClasses": {
+      "ready_for_approval": 18,
+      "ready_with_info": 2,
+      "blocked": 0
+    },
+    "readyWithInfoDetails": [
+      "Q6: 性质①②从solution证据恢复，措辞基于数学逻辑唯一确定但精确原文需PDF确认",
+      "Q9: 全部选项为图片，答案(B)已确定但图片内容精确确认需PDF"
+    ],
+    "overallAssessment": "md-finalization 完成。所有20题答案/解析已由真题Markdown与解析Markdown证据闭合。18题为ready_for_approval（无active error/warning），2题为ready_with_info（仅info级备注，不阻塞内容）。0 active error, 0 active warning。所有题目保持needs_human_review。"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2003-apply-q17-evidence-and-review",
+  "description": "Apply the Codex-confirmed Q17 method-review continuation, then regenerate Math1 2003 semantic review.",
+  "defaultContinueOnError": false,
+  "tasks": [
+    {
+      "label": "Apply updated Math1 2003 Codex visual evidence",
+      "task": "cc-math1-apply-visual-evidence",
+      "year": 2003,
+      "maxTurns": 60
+    },
+    {
+      "label": "Math1 2003 semantic review after Q17 restoration",
+      "task": "ds-math1-year",
+      "year": 2003,
+      "maxTurns": 60
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "20260620-152242-cc-math1-md-finalize-year-1989",
+  "sourceYear": 1989,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T07:25:48.030Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "section_split_mismatch_resolved",
+      "severity": "info",
+      "message": "Original section_split_mismatch in section 三 was resolved during structure repair: Q11-Q13 solutions correctly split",
+      "sectionLabel": "三"
+    },
+    {
+      "type": "missing_solution_resolved",
+      "questionNumber": 12,
+      "severity": "info",
+      "message": "Q12 solution was recovered from the mis-merged Q11 container during structure repair"
+    },
+    {
+      "type": "missing_solution_resolved",
+      "questionNumber": 13,
+      "severity": "info",
+      "message": "Q13 solution was recovered from the mis-merged Q11 container during structure repair"
+    },
+    {
+      "type": "missing_solution_resolved",
+      "questionNumber": 20,
+      "severity": "info",
+      "message": "Q20 solution was recovered from the embedded Q19 container during structure repair"
+    },
+    {
+      "type": "missing_solution_resolved",
+      "questionNumber": 21,
+      "severity": "info",
+      "message": "Q21 solution was recovered from the embedded Q19 container during structure repair"
+    },
+    {
+      "type": "missing_solution_resolved",
+      "questionNumber": 22,
+      "severity": "info",
+      "message": "Q22 solution was recovered from the embedded Q19 container during structure repair"
+    },
+    {
+      "type": "answer_candidate_missing_for_solution_type",
+      "severity": "info",
+      "message": "Questions 11-19 and 23 are solution-type and have no short answerCandidate (by design); full explanations are present"
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 7,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 7
+    },
+    "blockingIssues": [],
+    "originalAnomaliesResolved": 6,
+    "newAnomaliesAdded": 7,
+    "pdfVerification": "not_required_per_md_finalization_policy"
+  },
+  "mdFinalizationNotes": "All 6 original structural anomalies (5 missing_solution + 1 section_split_mismatch) resolved. 7 info-level items remain describing the resolution history and the by-design absence of answerCandidate for solution-type questions."
+}

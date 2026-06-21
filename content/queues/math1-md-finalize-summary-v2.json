@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-md-finalize-summary-v2",
+  "description": "Correct per-question Math1 final aggregation after the first summary used count-order status assignment and stale retry evidence.",
+  "defaultContinueOnError": false,
+  "tasks": [
+    {
+      "label": "Math1 all-years corrected final aggregation",
+      "task": "cc-finalize-summary",
+      "maxTurns": 120
+    }
+  ]
+}

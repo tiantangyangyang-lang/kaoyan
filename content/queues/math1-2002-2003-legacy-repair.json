@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2002-2003-legacy-repair",
+  "description": "Run Claude Code legacy structural repair for Math1 2002 and 2003 so staging matches the known deterministic fixes before semantic-review reruns.",
+  "tasks": [
+    {
+      "label": "Math1 2002 legacy structure repair",
+      "task": "cc-math1-year",
+      "year": 2002,
+      "maxTurns": 60
+    },
+    {
+      "label": "Math1 2003 legacy structure repair",
+      "task": "cc-math1-year",
+      "year": 2003,
+      "maxTurns": 60
+    }
+  ]
+}

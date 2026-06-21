@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "codex-visual-evidence-validation-v2",
+  "runId": "20260620-serializer-recovery-2003-v3",
+  "previousRunId": "20260619-serializer-recovery-2003-v2",
+  "validatedAt": "2026-06-19 23:27:25",
+  "subjectCode": "math1",
+  "sourceYear": 2003,
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "codexVisualEvidenceApplied": true,
+  "codexEvidenceFile": "content/reports/math1-2003/codex-visual-evidence.json",
+  "codexReviewDate": "2026-06-18",
+  "recoveryMethod": "Full rebuild from reviewed JSON via JSON.stringify (deterministic, verifiable)",
+  "recoveryScript": "content/reports/math1-2003/recover_and_verify_v3.js",
+  "finalSourceMarkdownAudit": {
+    "auditedAt": "2026-06-20",
+    "report": "content/reports/math1-2003/source-md-final-audit.md",
+    "paperSha256CurrentBytes": "4D8F9DD6CB6C1BB630563826CA10C5D31A95816B935C4859FAECE48EB49F0938",
+    "solutionsSha256CurrentBytes": "FC6BA4A71F47BDB479FD07FA9C80F4B2AF5F822C51A7680E3C25FD7720C7501F",
+    "sourceRepositoryModifiedByAudit": false,
+    "sourceWorkingTreeNote": "Both files are marked modified because of line-ending normalization; git diff --numstat shows no textual line changes."
+  },
+  "pdfRendered": false,
+  "checks": [
+    {
+      "name": "jsonParseNode",
+      "status": "passed",
+      "details": "Node JSON.parse round-trip verified. All 22 questions intact."
+    },
+    {
+      "name": "jsonParsePython",
+      "status": "passed",
+      "details": "Python json.load cross-validation passed."
+    },
+    {
+      "name": "totalQuestionsMatch",
+      "status": "passed",
+      "details": "22 questions from review source."
+    },
+    {
+      "name": "stableIdsUnique",
+      "status": "passed",
+      "details": "22 unique stableIds math1-2003-q01 through q22."
+    },
+    {
+      "name": "questionNumbersSequential",
+      "status": "passed",
+      "details": "Q1-Q22 sequential, no gaps."
+    },
+    {
+      "name": "allNeedsHumanReview",
+      "status": "passed",
+      "details": "All 22 questions reviewStatus=needs_human_review."
+    },
+    {
+      "name": "noApprovedOrPublished",
+      "status": "passed",
+      "details": "0 approved or published statuses."
+    },
+    {
+      "name": "sourceTrackingPreserved",
+      "status": "passed",
+      "details": "All 22 questions retain sourceRepo, sourceCommit, sourceYear, sourceRelativePaths."
+    },
+    {
+      "name": "noSourceFilesModified",
+      "status": "passed",
+      "details": "Source mirror files not modified."
+    },
+    {
+      "name": "q10OptionsCodexFixed",
+      "status": "passed",
+      "details": "Q10 options: A/B→group II, C/D→group I. Correction #1."
+    },
+    {
+      "name": "q17MethodReviewCodexFixed",
+      "status": "passed",
+      "details": "Q17 has g''(y)=-f''(x)/[f'(x)]^3. Correction #2."
+    },
+    {
+      "name": "q18IntegralCodexFixed",
+      "status": "passed",
+      "details": "Q18 F(t) numerator: \\iiint_{\\Omega(t)}. Correction #3."
+    },
+    {
+      "name": "q19Alpha3CodexFixed",
+      "status": "passed",
+      "details": "Q19 α₃: 3-entry column vector. Correction #4."
+    },
+    {
+      "name": "q22SubstitutionCodexFixed",
+      "status": "passed",
+      "details": "Q22: 令 $2n(x-\\theta)=t$. Correction #5."
+    },
+    {
+      "name": "q19MethodReviewCodexFixed",
+      "status": "passed",
+      "details": "Q19: f(A)α=f(λ₀)α, B·P⁻¹α=λ₀P⁻¹α. Correction #6."
+    },
+    {
+      "name": "allSixCodexCorrectionsVerified",
+      "status": "passed",
+      "details": "All 6 Codex corrections confirmed via content inspection."
+    },
+    {
+      "name": "zeroActiveAnomalies",
+      "status": "passed",
+      "details": "anomalies.json: active=0, resolved=12."
+    },
+    {
+      "name": "jsonStringifySerializer",
+      "status": "passed",
+      "details": "Output via JSON.stringify — deterministic, valid UTF-8, proper backslash escaping."
+    },
+    {
+      "name": "q08OptionSemanticOcrFixed",
+      "status": "passed",
+      "details": "Q8 option D corrected to lim(b_n c_n)=+infinity from the solution proof and direct limit theorem; paper Markdown 'does not exist' was an OCR semantic error."
+    }
+  ],
+  "summary": "All checks passed. Six Codex visual corrections and the Q8 source-Markdown semantic correction are verified. Zero active anomalies. All questions remain needs_human_review pending an explicit approval decision."
+}

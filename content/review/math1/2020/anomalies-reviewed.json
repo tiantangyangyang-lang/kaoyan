@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "review-v1",
+  "generatedAt": "2026-06-20T17:52:58+08:00",
+  "runId": "20260620-175258-cc-math1-md-finalize-year-2020",
+  "totalAnomalies": 1,
+  "anomalies": [
+    {
+      "type": "section_header_mismatch",
+      "severity": "info",
+      "status": "resolved_as_source_quirk",
+      "message": "Solutions markdown section header '# 一、填空题' labels Q1-Q8 as fill-in-blank, but these questions are multiple choice. Content and answer mappings are correct; this is a known formatting quirk in the source solutions file.",
+      "affectedQuestions": ["math1-2020-q01", "math1-2020-q02", "math1-2020-q03", "math1-2020-q04", "math1-2020-q05", "math1-2020-q06", "math1-2020-q07", "math1-2020-q08"],
+      "resolution": "No action needed. Section header does not affect question content, type classification, or answer mapping."
+    }
+  ],
+  "resolvedAnomalies": [
+    {
+      "originalType": "incomplete_options",
+      "questionNumber": 3,
+      "severity": "warning",
+      "resolution": "Fixed — D option label confirmed from source paper markdown line 31, option D extracted correctly",
+      "resolvedBy": "20260620-175258-cc-math1-md-finalize-year-2020"
+    },
+    {
+      "originalType": "embedded_solution_marker",
+      "questionNumber": 22,
+      "severity": "warning",
+      "resolution": "Resolved — human reviewer confirmed Q22 marker-fusion issue is resolved; Q22 content is correctly separated",
+      "resolvedBy": "20260614-human-review"
+    }
+  ]
+}

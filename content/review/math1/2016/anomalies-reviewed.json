@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "local-fallback-2016-md-finalized",
+  "sourceYear": 2016,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T09:29:41.000Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "explanation_typo_fixed",
+      "questionNumber": 16,
+      "severity": "info",
+      "message": "Solution had C₁/λ₁ repeated (should be C₂/λ₂); fixed by mathematical context.",
+      "evidence": "The integral ∫₀^∞ y(x)dx = -(C₁/λ₁ + C₂/λ₂) follows from ∫ e^{λx}dx = -e^{λx}/λ. The result 3/k confirms the correction.",
+      "status": "fixed"
+    }
+  ],
+  "resolvedAnomalies": [
+    {
+      "type": "incomplete_options",
+      "questionNumber": 2,
+      "severity": "warning",
+      "message": "Extracted option labels: []",
+      "resolution": "Options extracted from paper Markdown inline stem text.",
+      "evidence": "Paper Markdown lines 16-23 show (A)-(D) inline."
+    },
+    {
+      "type": "incomplete_options",
+      "questionNumber": 5,
+      "severity": "warning",
+      "message": "Extracted option labels: ['A', 'B', 'C']",
+      "resolution": "Option (D) separated from merged option (C) text.",
+      "evidence": "Paper Markdown lines 52-53 show (D) as a separate line."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 1,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 1
+    },
+    "resolvedCount": 2,
+    "blockingIssues": [],
+    "pdfVerification": "not_run",
+    "mdFinalizationStatus": "completed"
+  }
+}

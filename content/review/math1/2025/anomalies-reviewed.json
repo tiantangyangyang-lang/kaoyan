@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "20260620-144432-cc-math1-md-finalize-year-2025",
+  "sourceYear": 2025,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T06:48:23.422Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "partial_options_ocr_damaged",
+      "questionNumber": 4,
+      "severity": "warning",
+      "message": "Options C and D are OCR-damaged in source; labels A/B reconstructed from source formulas. Answer A confirmed by solution.",
+      "repairAction": "reconstructed_labels_AB_from_source_formulas"
+    },
+    {
+      "type": "reconstructed_options_from_damaged_ocr",
+      "questionNumber": 9,
+      "severity": "warning",
+      "message": "Options B, C, D reconstructed from OCR-damaged source text. Answer C confirmed by solution. Human must verify against PDF.",
+      "repairAction": "reconstructed_BCD_from_context_and_pattern"
+    },
+    {
+      "type": "options_missing_from_source",
+      "questionNumber": 10,
+      "severity": "warning",
+      "message": "Source markdown lacks A/B/C/D option labels and content. Only the correct rejection region formula is present in the stem. Answer D confirmed by solution. Human must verify all options against PDF.",
+      "repairAction": "marked_ABC_missing_D_reconstructed_from_stem"
+    },
+    {
+      "type": "garbled_answer_character_repaired",
+      "questionNumber": 11,
+      "severity": "info",
+      "message": "Answer '1' repaired to '$-1$' — the garbled '' is the Unicode private-use character for minus sign. Solution confirms answer is -1.",
+      "repairAction": "replaced_garbled_minus_with_ascii_minus",
+      "originalValue": "1"
+    },
+    {
+      "type": "garbled_answer_character_repaired",
+      "questionNumber": 15,
+      "severity": "info",
+      "message": "Answer '4' repaired to '$-4$' — the garbled '' is the Unicode private-use character for minus sign. Solution confirms answer is -4.",
+      "repairAction": "replaced_garbled_minus_with_ascii_minus",
+      "originalValue": "4"
+    },
+    {
+      "type": "stem_solution_separated",
+      "questionNumber": 17,
+      "severity": "info",
+      "message": "Stem and solution were combined in source; separated in finalization. Source has OCR error: \\frac{3}{0} in final result, corrected to \\frac{3}{10} based on partial fraction coefficients (A=1/5, B=-1/5, C=3/5).",
+      "repairAction": "separated_stem_from_solution_extracted_answer"
+    },
+    {
+      "type": "ocr_risk_solution_coefficient",
+      "questionNumber": 17,
+      "severity": "warning",
+      "message": "Source solution has B=-1/3 x+3/5 (OCR suspect) and final result \\frac{3}{0}\\ln 2. Correct partial fractions: A=1/5, B=-1/5, C=3/5. Final result should be \\frac{3}{10}\\ln 2 + \\frac{1}{10}\\pi. Human must verify.",
+      "repairAction": "corrected_partial_fractions_and_final_result_based_on_math"
+    },
+    {
+      "type": "stem_solution_separated",
+      "questionNumber": 18,
+      "severity": "info",
+      "message": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+      "repairAction": "separated_stem_from_solution_extracted_answer"
+    },
+    {
+      "type": "stem_solution_separated",
+      "questionNumber": 19,
+      "severity": "info",
+      "message": "Stem and solution were combined in source; separated in finalization. Proof question — no explicit answer field.",
+      "repairAction": "separated_stem_from_solution"
+    },
+    {
+      "type": "stem_solution_separated",
+      "questionNumber": 20,
+      "severity": "info",
+      "message": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+      "repairAction": "separated_stem_from_solution_extracted_answer"
+    },
+    {
+      "type": "stem_solution_separated",
+      "questionNumber": 21,
+      "severity": "info",
+      "message": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+      "repairAction": "separated_stem_from_solution_extracted_answer"
+    },
+    {
+      "type": "stem_solution_separated",
+      "questionNumber": 22,
+      "severity": "info",
+      "message": "Stem and solution were combined in source; separated in finalization. Answer extracted from end of solution.",
+      "repairAction": "separated_stem_from_solution_extracted_answer"
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 12,
+    "bySeverity": {
+      "error": 0,
+      "warning": 4,
+      "info": 8
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_run"
+  }
+}

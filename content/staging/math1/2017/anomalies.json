@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "math1-sequential-transform-v1",
+  "anomalies": [
+    {
+      "type": "section_header_artifact_removed",
+      "questionNumber": 8,
+      "severity": "info",
+      "message": "Removed trailing section header (二、填空题) from q08 stem/option/explanation. Not part of question content."
+    },
+    {
+      "type": "section_header_artifact_removed",
+      "questionNumber": 14,
+      "severity": "info",
+      "message": "Removed trailing section header (三、解答题) from q14 stem/explanation. Not part of question content."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "math1-sequential-transform-v1",
+  "anomalies": [
+    {
+      "type": "option_labels_repaired_from_markdown",
+      "questionNumber": 8,
+      "severity": "info",
+      "message": "Options (A) and (D) lacked labels in source Markdown (paper lines 26/32). Labels assigned by sequence from 4-option layout. (D) content was erroneously merged into (C) — separated by source line correspondence."
+    },
+    {
+      "type": "option_label_in_math_mode",
+      "questionNumber": 13,
+      "severity": "info",
+      "message": "Option (A) label was inside LaTeX math mode '$ (A)...$' in source paper line 72, causing parser miss. Extracted by content inspection."
+    },
+    {
+      "type": "option_labels_in_math_mode",
+      "questionNumber": 14,
+      "severity": "info",
+      "message": "Options (C) and (D) labels were inside LaTeX math mode in source paper lines 92/94. Extracted by content inspection. Section header bleeding cleaned."
+    }
+  ]
+}

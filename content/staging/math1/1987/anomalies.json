@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "sourceYear": 1987,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "anomalies": [
+    {
+      "id": "anom-1987-q02-sol-transcription",
+      "stableId": "math1-1987-q02",
+      "questionNumber": 2,
+      "severity": "info",
+      "field": "explanationCandidate",
+      "description": "解析源结论部分将函数写为 $x^{2^x}$，但推导 $y' = 2^x(1 + x\\ln 2) = 0$ 对应的是 $y = x \\cdot 2^x$。源Markdown中 $x^{2^x}$ 为转录笔误，解析结论已修正为 $x \\cdot 2^x$。答案 $-\\frac{1}{\\ln 2}$ 正确。",
+      "sourceEvidence": "solutions/1987年解析/1987年解析.md: 函数 $y = x^{2^x}$ 取得极小值",
+      "fixApplied": true,
+      "requiresHumanReview": true
+    },
+    {
+      "id": "anom-1987-q08-ocr-y-triple-prime",
+      "stableId": "math1-1987-q08",
+      "questionNumber": 8,
+      "severity": "info",
+      "field": "stem",
+      "description": "真题Markdown题干中 $y^{\\prime \\prime} + 6y^{\\prime \\prime} + ...$ 的第一个 $y^{\\prime\\prime}$ 应为 $y^{\\prime\\prime\\prime}$（三阶导数）。解析方法二的特征方程 $\\lambda^3+6\\lambda^2+...$ 证明原方程是三阶ODE。此为已知OCR问题：三撇被误识别为两撇。",
+      "sourceEvidence": "solutions/1987年解析/1987年解析.md 方法二：特征方程为 λ³+6λ²+(9+a²)λ=0",
+      "fixApplied": false,
+      "requiresHumanReview": true
+    },
+    {
+      "id": "anom-1987-q10-ocr-lianxushu",
+      "stableId": "math1-1987-q10",
+      "questionNumber": 10,
+      "severity": "info",
+      "field": "stem",
+      "description": "题干中\"$f(x)$ 为连续数\"的\"数\"疑为\"函数\"的OCR错误，标准术语应为\"连续函数\"。语义可唯一确定，不影响使用和答题。",
+      "sourceEvidence": "papers/1987年考研数学(一)真题.md: f(x) 为连续数",
+      "fixApplied": false,
+      "requiresHumanReview": true
+    },
+    {
+      "id": "anom-1987-q15-proof-no-answer",
+      "stableId": "math1-1987-q15",
+      "questionNumber": 15,
+      "severity": "info",
+      "field": "answerCandidate",
+      "description": "证明题无独立 answerCandidate，答案即为证明过程（存储在 explanationCandidate 中）。已将 questionType 从 solution 修正为 proof，answerStatus 设为 candidate_in_explanation。",
+      "sourceEvidence": "solutions/1987年解析/1987年解析.md 八、",
+      "fixApplied": true,
+      "requiresHumanReview": true
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 4,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 4
+    },
+    "blockingIssues": [],
+    "allInfoLevel": true,
+    "readyForApprovalWithInfo": true
+  }
+}

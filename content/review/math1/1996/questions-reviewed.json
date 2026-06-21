@@ -1,0 +1,667 @@
+{
+  "schemaVersion": "review-v1",
+  "task": "cc-math1-md-finalize-year",
+  "runId": "20260620-155513-cc-math1-md-finalize-year-1996",
+  "generatedAt": "2026-06-20T15:55:13+08:00",
+  "mdFinalized": true,
+  "sourceInfo": {
+    "sourceRepo": "Kaoyan-Math1-Papers",
+    "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+    "paperRelativePath": "papers/1996年考研数学(一)真题.md",
+    "paperSha256": "6FC6265E934B977740BD4B73F77E2C2A35B22A50FF732E967A7C1A141929E115",
+    "solutionsRelativePath": "solutions/1996年解析/1996年解析.md",
+    "solutionsSha256": "BCD10802CA8285B490E05A5F5F0504B235002CED17779A09474A4656AC92CC09",
+    "stagingGeneratedAt": "2026-06-20T15:55:13+08:00"
+  },
+  "summary": {
+    "totalQuestions": 22,
+    "multipleChoice": 5,
+    "fillInBlank": 7,
+    "solution": 10,
+    "anomaliesConfirmed": 0,
+    "anomaliesResolved": 4,
+    "newAnomaliesDetected": 0,
+    "allNeedsHumanReview": true,
+    "mdFinalClassification": {
+      "ready_for_approval": 22,
+      "ready_with_info": 0,
+      "blocked": 0
+    }
+  },
+  "reviews": [
+    {
+      "stableId": "math1-1996-q01",
+      "candidateResult": {
+        "questionNumber": 1,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "（1）设 $\\lim_{x\\to \\infty}\\left(\\frac{x + 2a}{x - a}\\right)^x = 8$ ，则 $a = \\_$",
+        "options": [],
+        "answerCandidate": "$\\ln 2$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(1)【答案】 $\\ln 2$\n\n【解】 由 $\\lim_{x\\to \\infty}\\left(\\frac{x + 2a}{x - a}\\right)^{x} = \\lim_{x\\to \\infty}\\left[\\left(1 + \\frac{3a}{x - a}\\right)^{\\frac{x - a}{3a}}\\right]^{x\\frac{3a}{x - a}} = \\mathrm{e}^{3a} = 8,$\n\n得 $3a = 3\\ln 2$ ，即得 $a = \\ln 2$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q02",
+      "candidateResult": {
+        "questionNumber": 2,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "（2）设一平面经过原点及点 $(6, -3, 2)$ ，且与平面 $4x - y + 2z = 8$ 垂直，则此平面方程为",
+        "options": [],
+        "answerCandidate": "$2x + 2y - 3z = 0$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(2)【答案】 $2x + 2y - 3z = 0$\n\n【解】设所求的平面方程为 $\\pi :Ax + By + Cz + D = 0$\n\n因为该平面经过原点，所以 $D = 0$\n\n又因为该平面经过点 $(6, -3, 2)$ ，所以 $6A - 3B + 2C = 0$\n\n又因为该平面与平面 $4x - y + 2z = 8$ 垂直，则 $4A - B + 2C = 0$\n\n解得 $B = A, C = -\\frac{3}{2} A$ ，故所求平面为 $\\pi: Ax + Ay - \\frac{3}{2} Az = 0$ ，即 $\\pi: 2x + 2y - 3z = 0$ .",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q03",
+      "candidateResult": {
+        "questionNumber": 3,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "（3）微分方程 $y^{\\prime \\prime} - 2y^{\\prime} + 2y = \\mathrm{e}^{x}$ 的通解为",
+        "options": [],
+        "answerCandidate": "$y = \\mathrm{e}^{x}(C_{1}\\cos x + C_{2}\\sin x) + \\mathrm{e}^{x}$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(3)【答案】 $y = \\mathrm{e}^{x}(C_{1}\\cos x + C_{2}\\sin x) + \\mathrm{e}^{x}$ （ $C_{1},C_{2}$ 为任意常数）.\n\n【解】特征方程为 $\\lambda^2 - 2\\lambda + 2 = 0$ ，特征根为 $\\lambda_{1,2} = 1 \\pm \\mathrm{i}$ ，\n\n$y^{\\prime \\prime} - 2y^{\\prime} + 2y = 0$ 的通解为 $y = \\mathrm{e}^{x}(C_{1}\\cos x + C_{2}\\sin x)$\n\n显然 $y = \\mathrm{e}^{x}$ 为方程 $y^{\\prime \\prime} - 2y^{\\prime} + 2y = \\mathrm{e}^{x}$ 的一个特解，\n\n故 $y^{\\prime \\prime} - 2y^{\\prime} + 2y = \\mathrm{e}^{x}$ 的通解为 $y = \\mathrm{e}^{x}(C_{1}\\cos x + C_{2}\\sin x) + \\mathrm{e}^{x}$ （ $C_{1},C_{2}$ 为任意常数）.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "answerCandidate + explanationCandidate",
+            "action": "fix_ocr_latex_boundary",
+            "originalPattern": "$\\mathrm{e}^{x}(C_{1},C_{2}$ 为任意常数)",
+            "fixedPattern": "$\\mathrm{e}^{x}$ （ $C_{1},C_{2}$ 为任意常数）",
+            "reason": "OCR caused LaTeX boundary split: (C₁,C₂为任意常数) crossed closing $. Moved outside math mode. Mathematically unique resolution.",
+            "evidence": "solutions/1996年解析/1996年解析.md line 23"
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          {
+            "topic": "常微分方程通解",
+            "confidence": "high",
+            "evidence": "二阶常系数非齐次线性微分方程，特征根 1±i，特解 eˣ"
+          }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认修复后的 LaTeX 格式正确。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q04",
+      "candidateResult": {
+        "questionNumber": 4,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "（4）函数 $u = \\ln (x + \\sqrt{y^2 + z^2})$ 在点 $A(1,0,1)$ 处沿点 $A$ 指向点 $B(3, - 2,2)$ 方向的方向导数为",
+        "options": [],
+        "answerCandidate": "$\\frac{1}{2}$ .",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(4)【答案】 $\\frac{1}{2}$ .\n\n【解】 $\\frac{\\partial u}{\\partial x} = \\frac{1}{x + \\sqrt{y^2 + z^2}},$\n\n$$\n\\begin{array}{l} \\frac {\\partial u}{\\partial y} = \\frac {1}{x + \\sqrt {y ^ {2} + z ^ {2}}} \\cdot \\frac {y}{\\sqrt {y ^ {2} + z ^ {2}}}, \\\\ \\frac {\\partial u}{\\partial z} = \\frac {1}{x + \\sqrt {y ^ {2} + z ^ {2}}} \\cdot \\frac {z}{\\sqrt {y ^ {2} + z ^ {2}}}, \\\\ \\left. \\frac {\\partial u}{\\partial x} \\right| _ {(1, 0, 1)} = \\frac {1}{2}, \\quad \\left. \\frac {\\partial u}{\\partial y} \\right| _ {(1, 0, 1)} = 0, \\quad \\left. \\frac {\\partial u}{\\partial z} \\right| _ {(1, 0, 1)} = \\frac {1}{2}, \\quad \\overrightarrow {A B} = \\{2, - 2, 1 \\}, \\\\ \\cos \\alpha = \\frac {2}{3}, \\quad \\cos \\beta = - \\frac {2}{3}, \\quad \\cos \\gamma = \\frac {1}{3}, \\\\ \\end{array}\n$$\n\n则所求的方向导数为 $\\frac{\\partial u}{\\partial x}\\Big|_{(1,0,1)}\\cos \\alpha +\\frac{\\partial u}{\\partial y}\\Big|_{(1,0,1)}\\cos \\beta +\\frac{\\partial u}{\\partial z}\\Big|_{(1,0,1)}\\cos \\gamma = \\frac{1}{2}.$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q05",
+      "candidateResult": {
+        "questionNumber": 5,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "（5）设 $\\mathbf{A}$ 是 $4\\times 3$ 矩阵，且 $\\mathbf{A}$ 的秩 $r(\\mathbf{A}) = 2$ ，而 $\\pmb {B} = \\left( \\begin{array}{rrr}1 & 0 & 2\\\\ 0 & 2 & 0\\\\ -1 & 0 & 3 \\end{array} \\right)$ ，则 $r(\\mathbf{AB}) =$",
+        "options": [],
+        "answerCandidate": "2.",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（5）【答案】2.\n\n【解】因为 $|\\pmb {B}| = \\left| \\begin{array}{rrr}1 & 0 & 2\\\\ 0 & 2 & 0\\\\ -1 & 0 & 3 \\end{array} \\right| = 10\\neq 0$ ，所以矩阵 $\\pmb{B}$ 可逆，\n\n由矩阵秩的性质得 $r(\\mathbf{AB}) = r(\\mathbf{A}) = 2$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q06",
+      "candidateResult": {
+        "questionNumber": 6,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "(1) 已知 $\\frac{(x + ay)\\mathrm{d}x + y\\mathrm{d}y}{(x + y)^2}$ 为某函数的全微分，则 $a$ 等于（ ）.\n\n(A) -1\n\n(B)0\n\n(C)1\n\n(D)2",
+        "options": [
+          { "label": "A", "value": "-1" },
+          { "label": "B", "value": "0" },
+          { "label": "C", "value": "1" },
+          { "label": "D", "value": "2" }
+        ],
+        "answerCandidate": "(D).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(1)【答案】 (D).\n\n【解】 $P(x,y) = \\frac{x + ay}{(x + y)^2},\\quad Q(x,y) = \\frac{y}{(x + y)^2},$\n\n$$\n\\frac {\\partial P}{\\partial y} = \\frac {a (x + y) ^ {2} - 2 (x + y) (x + a y)}{(x + y) ^ {4}} = \\frac {a (x + y) - 2 (x + a y)}{(x + y) ^ {3}}, \\quad \\frac {\\partial Q}{\\partial x} = \\frac {- 2 y}{(x + y) ^ {3}},\n$$\n\n由 $\\frac{\\partial Q}{\\partial x} = \\frac{\\partial P}{\\partial y}$ 得 $a(x + y) - 2(x + ay) = -2y$ ，得 $a = 2$ ，应选(D).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q07",
+      "candidateResult": {
+        "questionNumber": 7,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "（2）设 $f(x)$ 有二阶连续导数，且 $f^{\\prime}(0) = 0,\\lim_{x\\to 0}\\frac{f^{\\prime\\prime}(x)}{|x|} = 1$ ，则（ ）.\n\n(A) $f(0)$ 是 $f(x)$ 的极大值  \n(B) $f(0)$ 是 $f(x)$ 的极小值  \n(C) $(0, f(0))$ 是曲线 $y = f(x)$ 的拐点  \n(D) $f(0)$ 不是 $f(x)$ 的极值， $(0,f(0))$ 也不是曲线 $y = f(x)$ 的拐点",
+        "options": [
+          { "label": "A", "value": "$f(0)$ 是 $f(x)$ 的极大值" },
+          { "label": "B", "value": "$f(0)$ 是 $f(x)$ 的极小值" },
+          { "label": "C", "value": "$(0, f(0))$ 是曲线 $y = f(x)$ 的拐点" },
+          { "label": "D", "value": "$f(0)$ 不是 $f(x)$ 的极值， $(0,f(0))$ 也不是曲线 $y = f(x)$ 的拐点" }
+        ],
+        "answerCandidate": "(B).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(2)【答案】 (B).\n\n【解】因为 $\\lim_{x\\to 0}\\frac{f''(x)}{|x|} = 1 > 0$ ，所以由极限保号性，存在 $\\delta >0$ ，当 $0 < |x| < \\delta$ 时， $\\frac{f''(x)}{|x|} >0$ ，即 $f''(x) > 0$ 从而 $f^{\\prime}(x)$ 在 $(-\\delta ,\\delta)$ 内单调递增.\n\n再由 $f^{\\prime}(0) = 0$ 得 $\\left\\{ \\begin{array}{l} f^{\\prime}(x) < 0, x \\in (-\\delta, 0), \\\\ f^{\\prime}(x) > 0, x \\in (0, \\delta) \\end{array} \\right.$ 得 $f(0)$ 为 $f(x)$ 的极小值，应选(B).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q08",
+      "candidateResult": {
+        "questionNumber": 8,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "(3) 设 $a_{n} > 0 (n = 1,2,\\dots)$ , 且 $\\sum_{n=1}^{\\infty} a_{n}$ 收敛, 常数 $\\lambda \\in \\left(0, \\frac{\\pi}{2}\\right)$ , 则级数 $\\sum_{n=1}^{\\infty} (-1)^{n} \\left(n \\tan \\frac{\\lambda}{n}\\right) a_{2n}$ .\n\n（A）绝对收敛\n\n（B）条件收敛\n\n（C）发散\n\n(D) 收敛性与 $\\lambda$ 有关",
+        "options": [
+          { "label": "A", "value": "绝对收敛" },
+          { "label": "B", "value": "条件收敛" },
+          { "label": "C", "value": "发散" },
+          { "label": "D", "value": "收敛性与 $\\lambda$ 有关" }
+        ],
+        "answerCandidate": "（A).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（3）【答案】 （A).\n\n【解】 因为正项级数 $\\sum_{n = 1}^{\\infty}a_{n}$ 收敛，所以 $\\sum_{n = 1}^{\\infty}a_{2n}$ 收敛，\n\n由 $\\left|(-1)^n\\left(n\\tan \\frac{\\lambda}{n}\\right)a_{2n}\\right|\\sim \\lambda a_{2n}$ 得级数 $\\sum_{n = 1}^{\\infty}\\left|(-1)^n\\left(n\\tan \\frac{\\lambda}{n}\\right)a_{2n}\\right|$ 收敛，\n\n故 $\\sum_{n = 1}^{\\infty}(-1)^{n}\\left(n\\tan {\\frac{\\lambda}{n}}\\right)a_{2n}$ 绝对收敛，应选（A）.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q09",
+      "candidateResult": {
+        "questionNumber": 9,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "（4）设 $f(x)$ 有连续导数， $f(0) = 0, f'(0) \\neq 0, F(x) = \\int_{0}^{x} (x^2 - t^2) f(t) \\, \\mathrm{d}t$ ，且当 $x \\to 0$ 时， $F'(x)$ 与 $x^k$ 是同阶无穷小，则 $k$ 等于（ ）.\n\n(A)1\n\n(B)2\n\n(C)3\n\n(D)4",
+        "options": [
+          { "label": "A", "value": "1" },
+          { "label": "B", "value": "2" },
+          { "label": "C", "value": "3" },
+          { "label": "D", "value": "4" }
+        ],
+        "answerCandidate": "(C).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（4）【答案】 (C).\n\n【解】 $F(x) = \\int_{0}^{x}(x^{2} - t^{2})f(t)\\mathrm{d}t = x^{2}\\int_{0}^{x}f(t)\\mathrm{d}t - \\int_{0}^{x}t^{2}f(t)\\mathrm{d}t,\\quad F^{\\prime}(x) = 2x\\int_{0}^{x}f(t)\\mathrm{d}t,$\n\n由 $\\lim_{x\\to 0}\\frac{F'(x)}{x^3} = 2\\lim_{x\\to 0}\\frac{\\int_0^xf(t)\\mathrm{d}t}{x^2} = \\lim_{x\\to 0}\\frac{f(x) - f(0)}{x} = f'(0)\\neq 0$ 得 $k = 3$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q10",
+      "candidateResult": {
+        "questionNumber": 10,
+        "questionType": "multiple_choice",
+        "reviewStatus": "needs_human_review",
+        "stem": "（5）4阶行列式 $\\left| \\begin{array}{cccc}a_{1} & 0 & 0 & b_{1}\\\\ 0 & a_{2} & b_{2} & 0\\\\ 0 & b_{3} & a_{3} & 0\\\\ b_{4} & 0 & 0 & a_{4} \\end{array} \\right|$ 的值等于（ ）.\n\n(A) $a_{1}a_{2}a_{3}a_{4} - b_{1}b_{2}b_{3}b_{4}$\n\n(B) $a_{1}a_{2}a_{3}a_{4} + b_{1}b_{2}b_{3}b_{4}$\n\n(C) $(a_{1}a_{2} - b_{1}b_{2})(a_{3}a_{4} - b_{3}b_{4})$\n\n(D) $(a_{2}a_{3} - b_{2}b_{3})(a_{1}a_{4} - b_{1}b_{4})$",
+        "options": [
+          { "label": "A", "value": "$a_{1}a_{2}a_{3}a_{4} - b_{1}b_{2}b_{3}b_{4}$" },
+          { "label": "B", "value": "$a_{1}a_{2}a_{3}a_{4} + b_{1}b_{2}b_{3}b_{4}$" },
+          { "label": "C", "value": "$(a_{1}a_{2} - b_{1}b_{2})(a_{3}a_{4} - b_{3}b_{4})$" },
+          { "label": "D", "value": "$(a_{2}a_{3} - b_{2}b_{3})(a_{1}a_{4} - b_{1}b_{4})$" }
+        ],
+        "answerCandidate": "(D).",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "（5）【答案】 (D).\n\n【解】 将行列式按第一行展开，得\n\n$$\n\\begin{array}{l} \\left| \\begin{array}{c c c c} a _ {1} & 0 & 0 & b _ {1} \\\\ 0 & a _ {2} & b _ {2} & 0 \\\\ 0 & b _ {3} & a _ {3} & 0 \\\\ b _ {4} & 0 & 0 & a _ {4} \\end{array} \\right| = a _ {1} A _ {1 1} + b _ {1} A _ {1 4} = a _ {1} M _ {1 1} - b _ {1} M _ {1 4} \\\\ = a _ {1} \\left| \\begin{array}{c c c} a _ {2} & b _ {2} & 0 \\\\ b _ {3} & a _ {3} & 0 \\\\ 0 & 0 & a _ {4} \\end{array} \\right| - b _ {1} \\left| \\begin{array}{c c c} 0 & a _ {2} & b _ {2} \\\\ 0 & b _ {3} & a _ {3} \\\\ b _ {4} & 0 & 0 \\end{array} \\right| \\\\ = a _ {1} a _ {4} \\left(a _ {2} a _ {3} - b _ {2} b _ {3}\\right) - b _ {1} b _ {4} \\left(a _ {2} a _ {3} - b _ {2} b _ {3}\\right) \\\\ = \\left(a _ {1} a _ {4} - b _ {1} b _ {4}\\right) \\left(a _ {2} a _ {3} - b _ {2} b _ {3}\\right), \\\\ \\end{array}\n$$\n\n应选(D).",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q11",
+      "candidateResult": {
+        "questionNumber": 11,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "（1）求心形线 $r = a(1 + \\cos \\theta)$ 的全长，其中 $a > 0$ 是常数",
+        "options": [],
+        "answerCandidate": "$8a$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解】 弧长 $l = 2\\int_{0}^{\\pi}\\sqrt{r^{2}(\\theta) + r^{\\prime 2}(\\theta)}\\mathrm{d}\\theta = 2\\int_{0}^{\\pi}\\sqrt{a^{2}(1 + \\cos\\theta)^{2} + a^{2}\\sin^{2}\\theta}\\mathrm{d}\\theta$\n\n$$\n\\begin{array}{l} = 2 \\sqrt {2} a \\int_ {0} ^ {\\pi} \\sqrt {1 + \\cos \\theta} d \\theta = 4 a \\int_ {0} ^ {\\pi} \\cos \\frac {\\theta}{2} d \\theta \\\\ = 8 a \\int_ {0} ^ {\\pi} \\cos \\frac {\\theta}{2} \\mathrm {d} \\left(\\frac {\\theta}{2}\\right) = 8 a \\int_ {0} ^ {\\frac {\\pi}{2}} \\cos t \\mathrm {d} t = 8 a. \\\\ \\end{array}\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "explanationCandidate",
+            "action": "split_from_q12_and_prepend_opening",
+            "detail": "Split merged Q11/Q12 container. Prepended 弧长 opening line from solutions.md.",
+            "evidence": "solutions/1996年解析/1996年解析.md lines 93-97; questions-structure-repaired.json"
+          },
+          {
+            "field": "answerCandidate",
+            "action": "populated_from_solution",
+            "detail": "Set to $8a$ from final result."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          { "topic": "极坐标曲线弧长", "confidence": "high", "evidence": "心形线 r=a(1+cosθ)，弧长公式 l=2∫₀ᵖⁱ√(r²+r'²)dθ" }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认弧长公式应用和积分结果正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q12",
+      "candidateResult": {
+        "questionNumber": 12,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "（2）设 $x_{1} = 10, x_{n + 1} = \\sqrt{6 + x_{n}} (n = 1,2,\\dots)$ ，试证数列 $\\{x_{n}\\}$ 极限存在，并求此极限.",
+        "options": [],
+        "answerCandidate": "$3$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解】 令 $y = f(x) = \\sqrt{6 + x}$\n\n因为 $f^{\\prime}(x) = \\frac{1}{2\\sqrt{6 + x}} >0$ ，所以 $\\{x_{n}\\}$ 单调.\n\n由 $x_{1} = 10 > x_{2} = 4$ 得数列 $\\{x_{n}\\}$ 单调递减，\n\n再由 $x_{n} > 0$ 得数列 $\\{x_{n}\\}$ 单调递减且有下界，故数列 $\\{x_{n}\\}$ 收敛.\n\n令 $\\lim_{n\\to \\infty}x_n = A$ ，由 $x_{n + 1} = \\sqrt{6 + x_n}$ 得 $A = \\sqrt{6 + A}$ ，解得 $A = 3$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "explanationCandidate",
+            "action": "populated_from_split",
+            "detail": "Q12 explanation was null (merged in Q11 container). Populated from solutions.md section 三 (2).",
+            "evidence": "solutions/1996年解析/1996年解析.md lines 99-107; questions-structure-repaired.json"
+          },
+          {
+            "field": "answerCandidate",
+            "action": "populated_from_solution",
+            "detail": "Set to $3$ from final result A=3."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          { "topic": "数列极限单调有界准则", "confidence": "high", "evidence": "递推数列 x_{n+1}=√(6+x_n), 单调递减有下界" }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认单调性判断和极限求解 A=√(6+A) → A=3 正确。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q13",
+      "candidateResult": {
+        "questionNumber": 13,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "(1) 计算曲面积分 $\\iint_{S} (2x + z) \\, \\mathrm{d}y \\, \\mathrm{d}z + z \\, \\mathrm{d}x \\, \\mathrm{d}y$ ，其中 $S$ 为有向曲面 $z = x^2 + y^2 (0 \\leqslant z \\leqslant 1)$ ，其法向量与 $z$ 轴正向的夹角为锐角.",
+        "options": [],
+        "answerCandidate": "$-\\frac{\\pi}{2}$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解】 令 $S_{1}:z = 1(x^{2} + y^{2}\\leqslant 1)$ ，取下侧，则\n\n$$\n\\iint_ {S} (2 x + z) \\mathrm {d} y \\mathrm {d} z + z \\mathrm {d} x \\mathrm {d} y = \\iint_ {S + S _ {1}} (2 x + z) \\mathrm {d} y \\mathrm {d} z + z \\mathrm {d} x \\mathrm {d} y - \\iint_ {S _ {1}} (2 x + z) \\mathrm {d} y \\mathrm {d} z + z \\mathrm {d} x \\mathrm {d} y,\n$$\n\n由高斯公式得\n\n$$\n\\oiint_ {S + S _ {1}} (2 x + z) \\mathrm {d} y \\mathrm {d} z + z \\mathrm {d} x \\mathrm {d} y = - 3 \\iiint_ {\\Omega} \\mathrm {d} v = - 3 \\int_ {0} ^ {1} \\mathrm {d} z \\iint_ {x ^ {2} + y ^ {2} \\leqslant z} \\mathrm {d} x \\mathrm {d} y = - 3 \\pi \\int_ {0} ^ {1} z \\mathrm {d} z = - \\frac {3 \\pi}{2};\n$$\n\n$$\n\\iint_ {S _ {1}} (2 x + z) \\mathrm {d} y \\mathrm {d} z + z \\mathrm {d} x \\mathrm {d} y = - \\iint_ {x ^ {2} + y ^ {2} \\leqslant 1} \\mathrm {d} x \\mathrm {d} y = - \\pi ,\n$$\n\n故 $\\iint_{S} (2x + z) \\, \\mathrm{d}y \\, \\mathrm{d}z + z \\, \\mathrm{d}x \\, \\mathrm{d}y = -\\frac{\\pi}{2}$ .",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "explanationCandidate",
+            "action": "split_from_q14_and_prepend_opening",
+            "detail": "Split merged Q13/Q14 container. Prepended S₁ construction line from solutions.md.",
+            "evidence": "solutions/1996年解析/1996年解析.md lines 111-127; questions-structure-repaired.json"
+          },
+          {
+            "field": "answerCandidate",
+            "action": "populated_from_solution",
+            "detail": "Set to $-\\frac{\\pi}{2}$ from final result."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          { "topic": "高斯公式与曲面积分", "confidence": "high", "evidence": "补面 S₁: z=1, 用高斯公式计算封闭曲面, 减去辅助面积分" }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认方向设置、高斯公式应用和积分结果正确性。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q14",
+      "candidateResult": {
+        "questionNumber": 14,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "（2）设变换 $\\left\\{ \\begin{array}{l} u = x - 2y, \\\\ v = x + ay \\end{array} \\right.$ 可把方程 $6\\frac{\\partial^2z}{\\partial x^2} + \\frac{\\partial^2z}{\\partial x\\partial y} - \\frac{\\partial^2z}{\\partial y^2} = 0$ 化简为 $\\frac{\\partial^2z}{\\partial u\\partial v} = 0$ ，求常数 $a$ ，其中 $z = z(x,y)$ 有二阶连续的偏导数.",
+        "options": [],
+        "answerCandidate": "$a = 3$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解】 $\\frac{\\partial z}{\\partial x} = \\frac{\\partial z}{\\partial u} \\cdot \\frac{\\partial u}{\\partial x} + \\frac{\\partial z}{\\partial v} \\cdot \\frac{\\partial v}{\\partial x} = \\frac{\\partial z}{\\partial u} + \\frac{\\partial z}{\\partial v}, \\quad \\frac{\\partial z}{\\partial y} = \\frac{\\partial z}{\\partial u} \\cdot \\frac{\\partial u}{\\partial y} + \\frac{\\partial z}{\\partial v} \\cdot \\frac{\\partial v}{\\partial y} = -2 \\frac{\\partial z}{\\partial u} + a \\frac{\\partial z}{\\partial v},$\n\n$$\n\\frac {\\partial^ {2} z}{\\partial x ^ {2}} = \\frac {\\partial^ {2} z}{\\partial u ^ {2}} \\cdot \\frac {\\partial u}{\\partial x} + \\frac {\\partial^ {2} z}{\\partial u \\partial v} \\cdot \\frac {\\partial v}{\\partial x} + \\frac {\\partial^ {2} z}{\\partial v \\partial u} \\cdot \\frac {\\partial u}{\\partial x} + \\frac {\\partial^ {2} z}{\\partial v ^ {2}} \\cdot \\frac {\\partial v}{\\partial x} = \\frac {\\partial^ {2} z}{\\partial u ^ {2}} + 2 \\frac {\\partial^ {2} z}{\\partial v \\partial u} + \\frac {\\partial^ {2} z}{\\partial v ^ {2}},\n$$\n\n$$\n\\frac {\\partial^ {2} z}{\\partial x \\partial y} = - 2 \\frac {\\partial^ {2} z}{\\partial u ^ {2}} + a \\frac {\\partial^ {2} z}{\\partial u \\partial v} - 2 \\frac {\\partial^ {2} z}{\\partial v \\partial u} + a \\frac {\\partial^ {2} z}{\\partial v ^ {2}} = - 2 \\frac {\\partial^ {2} z}{\\partial u ^ {2}} + (a - 2) \\frac {\\partial^ {2} z}{\\partial v \\partial u} + a \\frac {\\partial^ {2} z}{\\partial v ^ {2}},\n$$\n\n$$\n\\begin{array}{l} \\frac {\\partial^ {2} z}{\\partial y ^ {2}} = - 2 \\left(\\frac {\\partial^ {2} z}{\\partial u ^ {2}} \\cdot \\frac {\\partial u}{\\partial y} + \\frac {\\partial^ {2} z}{\\partial u \\partial v} \\cdot \\frac {\\partial v}{\\partial y}\\right) + a \\left(\\frac {\\partial^ {2} z}{\\partial v \\partial u} \\cdot \\frac {\\partial u}{\\partial y} + \\frac {\\partial^ {2} z}{\\partial v ^ {2}} \\cdot \\frac {\\partial v}{\\partial y}\\right) \\\\ = - 2 \\left(- 2 \\frac {\\partial^ {2} z}{\\partial u ^ {2}} + a \\frac {\\partial^ {2} z}{\\partial u \\partial v}\\right) + a \\left(- 2 \\frac {\\partial^ {2} z}{\\partial v \\partial u} + a \\frac {\\partial^ {2} z}{\\partial v ^ {2}}\\right) \\\\ = 4 \\frac {\\partial^ {2} z}{\\partial u ^ {2}} - 4 a \\frac {\\partial^ {2} z}{\\partial u \\partial v} + a ^ {2} \\frac {\\partial^ {2} z}{\\partial v ^ {2}}, \\\\ \\end{array}\n$$\n\n代入整理得\n\n$$\n(5 a + 1 0) \\frac {\\partial^ {2} z}{\\partial v \\partial u} + (- a ^ {2} + a + 6) \\frac {\\partial^ {2} z}{\\partial v ^ {2}} = 0,\n$$\n\n于是 $\\left\\{ \\begin{array}{l}5a + 10\\neq 0,\\\\ -a^2 +a + 6 = 0, \\end{array} \\right.$ 解得 $a = 3$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "explanationCandidate",
+            "action": "populated_from_split",
+            "detail": "Q14 explanation was null (merged in Q13 container). Populated from solutions.md section 四 (2).",
+            "evidence": "solutions/1996年解析/1996年解析.md lines 129-149; questions-structure-repaired.json"
+          },
+          {
+            "field": "answerCandidate",
+            "action": "populated_from_solution",
+            "detail": "Set to $a = 3$ from final result."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          { "topic": "偏微分方程变量变换", "confidence": "high", "evidence": "链式法则计算二阶偏导, 代入方程简化, 解 a=3" }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认链式法则计算正确，最终 a=3 成立。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q15",
+      "candidateResult": {
+        "questionNumber": 15,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "求级数 $\\sum_{n = 2}^{\\infty}\\frac{1}{(n^{2} - 1)2^{n}}$ 的和.",
+        "options": [],
+        "answerCandidate": "$\\frac{5}{8} - \\frac{3}{4}\\ln 2$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解】 令 $S(x) = \\sum_{n=2}^{\\infty} \\frac{x^n}{n^2 - 1} (-1 < x < 1)$ ，\n\n则 $S(x) = \\frac{1}{2}\\left(\\sum_{n = 2}^{\\infty}\\frac{x^n}{n - 1} -\\sum_{n = 2}^{\\infty}\\frac{x^n}{n + 1}\\right),$\n\n$$\nS (0) = 0;\n$$\n\n当 $x \\neq 0$ 时，\n\n$$\n\\begin{array}{l} S (x) = \\frac {x}{2} \\sum_ {n = 2} ^ {\\infty} \\frac {x ^ {n - 1}}{n - 1} - \\frac {1}{2 x} \\sum_ {n = 2} ^ {\\infty} \\frac {x ^ {n + 1}}{n + 1} = \\frac {x}{2} \\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n}}{n} - \\frac {1}{2 x} \\sum_ {n = 3} ^ {\\infty} \\frac {x ^ {n}}{n} \\\\ = - \\frac {x}{2} \\ln (1 - x) - \\frac {1}{2 x} \\left(\\sum_ {n = 1} ^ {\\infty} \\frac {x ^ {n}}{n} - x - \\frac {x ^ {2}}{2}\\right) \\\\ \\end{array}\n$$\n\n$$\n= \\left(\\frac {1}{2 x} - \\frac {x}{2}\\right) \\ln (1 - x) + \\frac {1}{2} + \\frac {x}{4},\n$$\n\n故 $\\sum_{n = 2}^{\\infty}\\frac{1}{(n^{2} - 1)2^{n}} = S\\left(\\frac{1}{2}\\right) = \\frac{5}{8} -\\frac{3}{4}\\ln 2.$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "explanationCandidate",
+            "action": "prepend_missing_opening",
+            "detail": "Prepended S(x) definition from solutions.md.",
+            "evidence": "solutions/1996年解析/1996年解析.md lines 151-169"
+          },
+          {
+            "field": "answerCandidate",
+            "action": "populated_from_solution",
+            "detail": "Set to final result."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          { "topic": "幂级数求和", "confidence": "high", "evidence": "构造幂级数 S(x), 分解为两个级数, 利用 ∑xⁿ/n = -ln(1-x)" }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认级数求和过程正确，最终结果 5/8 - 3/4 ln 2 数值正确。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q16",
+      "candidateResult": {
+        "questionNumber": 16,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设对任意的 $x > 0$ ，曲线 $y = f(x)$ 上点 $(x, f(x))$ 处的切线在 $y$ 轴上的截距等于 $\\frac{1}{x} \\int_{0}^{x} f(t) \\, \\mathrm{d}t$ ，求 $f(x)$ 的一般表达式.",
+        "options": [],
+        "answerCandidate": "$f(x) = C_{1} \\ln x + C_{2}$ （ $C_{1}, C_{2}$ 为任意常数）",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解】 曲线 $y = f(x)$ 在点 $(x, f(x))$ 的切线为\n\n$$\nY - f (x) = f ^ {\\prime} (x) (X - x),\n$$\n\n令 $X = 0$ 得 $Y = f(x) - xf'(x)$\n\n由题意得 $f(x) - xf'(x) = \\frac{1}{x}\\int_{0}^{x}f(t)\\mathrm{d}t$ ，整理得 $xf(x) - x^{2}f^{\\prime}(x) = \\int_{0}^{x}f(t)\\mathrm{d}t$\n\n两边求导得 $f^{\\prime}(x) + xf^{\\prime \\prime}(x) = 0$ ，即 $[xf'(x)]' = 0$\n\n解得 $x f^{\\prime}(x) = C_{1}$ ，或 $f^{\\prime}(x) = \\frac{C_{1}}{x}$ ，故 $f(x) = C_{1} \\ln x + C_{2}$ （ $C_{1}, C_{2}$ 为任意常数）.",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "answerCandidate",
+            "action": "populated_from_solution",
+            "detail": "Set to f(x) = C₁ ln x + C₂."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          { "topic": "微分方程应用题", "confidence": "high", "evidence": "切线截距条件 → 积分方程 → 求导得微分方程 → 通解" }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认切线程式和积分方程求导正确。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q17",
+      "candidateResult": {
+        "questionNumber": 17,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设 $f(x)$ 在 $[0,1]$ 上具有二阶导数，且满足条件： $|f(x)| \\leqslant a, |f''(x)| \\leqslant b$ ，其中 $a, b$ 都是非负常数， $c$ 为 $(0,1)$ 内任意一点.\n\n(1) 写出 $f(x)$ 在点 $x = c$ 处带拉格朗日余项的一阶泰勒公式；  \n（2）证明： $\\left|f^{\\prime}(c)\\right|\\leqslant 2a + \\frac{b}{2}.$",
+        "options": [],
+        "answerCandidate": "(1) $f(x) = f(c) + f'(c)(x - c) + \\frac{f''(\\xi)}{2!}(x - c)^2$ （ $\\xi$ 在 $x$ 与 $c$ 之间）; (2) 证明见解析",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【证明】（1）由泰勒公式得\n\n$$\nf (0) = f (c) + f ^ {\\prime} (c) (0 - c) + \\frac {f ^ {\\prime \\prime} (\\xi_ {1})}{2 !} (0 - c) ^ {2}, \\quad 0 <   \\xi_ {1} <   c,\n$$\n\n$$\nf (1) = f (c) + f ^ {\\prime} (c) (1 - c) + \\frac {f ^ {\\prime \\prime} (\\xi_ {2})}{2 !} (1 - c) ^ {2}, \\quad c <   \\xi_ {2} <   1,\n$$\n\n两式相减得\n\n$$\nf ^ {\\prime} (c) = f (1) - f (0) + \\frac {c ^ {2}}{2} f ^ {\\prime \\prime} (\\xi_ {1}) - \\frac {(1 - c) ^ {2}}{2} f ^ {\\prime \\prime} (\\xi_ {2}).\n$$\n\n(2) $|f'(c)| \\leqslant |f(1)| + |f(0)| + \\frac{c^2}{2} |f''(\\xi_1)| + \\frac{(1 - c)^2}{2} |f''(\\xi_2)|$\n\n$$\n\\leqslant 2 a + \\frac {b}{2} \\left[ c ^ {2} + (1 - c) ^ {2} \\right],\n$$\n\n由 $c^2 \\leqslant c, (1 - c)^2 \\leqslant 1 - c$ 得 $c^2 + (1 - c)^2 \\leqslant 1$ ，故 $|f'(c)| \\leqslant 2a + \\frac{b}{2}$ 。",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "answerCandidate",
+            "action": "populated_from_solution",
+            "detail": "Set to Taylor formula description + proof reference."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          { "topic": "泰勒公式与不等式证明", "confidence": "high", "evidence": "一阶泰勒展开, 两端点代入, 相减消去 f(c), 利用已知界证明" }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认泰勒公式写法和不等式推导正确。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q18",
+      "candidateResult": {
+        "questionNumber": 18,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设 $\\mathbf{A} = \\mathbf{E} - \\boldsymbol{\\xi}\\boldsymbol{\\xi}^{\\mathrm{T}}$ ，其中 $\\pmb{E}$ 是 $n$ 阶单位矩阵， $\\pmb{\\xi}$ 是 $n$ 维非零列向量， $\\pmb{\\xi}^{\\mathrm{T}}$ 是 $\\pmb{\\xi}$ 的转置，证明：\n\n(1) $A^2 = A$ 的充分必要条件是 $\\xi^{\\mathrm{T}}\\xi = 1$   \n（2）当 $\\pmb{\\xi}^{\\mathrm{T}}\\pmb {\\xi} = 1$ 时， $\\mathbf{A}$ 是不可逆矩阵",
+        "options": [],
+        "answerCandidate": "(1) 证明见解析; (2) 证明见解析",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【证明】（1）令 $\\pmb{\\xi}^{\\mathrm{T}}\\pmb {\\xi} = \\pmb{k}$\n\n$$\n\\boldsymbol {A} ^ {2} = (\\boldsymbol {E} - \\boldsymbol {\\xi} \\boldsymbol {\\xi} ^ {\\mathrm {T}}) (\\boldsymbol {E} - \\boldsymbol {\\xi} \\boldsymbol {\\xi} ^ {\\mathrm {T}}) = \\boldsymbol {E} + (k - 2) \\boldsymbol {\\xi} \\boldsymbol {\\xi} ^ {\\mathrm {T}},\n$$\n\n则 $\\mathbf{A}^2 = \\mathbf{A}$ 的充分必要条件是 $k = 1$ ，即 $\\pmb{\\xi}^{\\mathrm{T}}\\pmb {\\xi} = 1$\n\n（2）方法一 当 $\\pmb{\\xi}^{\\mathrm{T}}\\pmb {\\xi} = 1$ 时，由 $A^2 = A$ 得 $A(E - A) = O$ ，从而 $r(A) + r(E - A)\\leqslant n$\n\n再由 $r(\\mathbf{A}) + r(\\mathbf{E} - \\mathbf{A})\\geqslant r(\\mathbf{E}) = n$ 得 $r(\\mathbf{A}) + r(\\mathbf{E} - \\mathbf{A}) = n$\n\n因为 $\\pmb{\\xi}$ 为非零向量，所以 $\\pmb {\\xi}\\pmb{\\xi}^{\\mathrm{T}}\\neq \\pmb{0}$ ，从而 $E - A = \\xi \\xi^{\\mathrm{T}}\\neq O$ ，即 $r(E - A)\\geqslant 1$\n\n故 $r(\\mathbf{A}) < n$ ，即 $\\mathbf{A}$ 是不可逆矩阵\n\n方法二 令 $\\pmb{B} = \\pmb{\\xi}\\pmb{\\xi}^{\\mathrm{T}}$ ，矩阵 $\\pmb{B}$ 的特征值为 $\\lambda_1 = \\pmb{\\xi}^{\\mathrm{T}}\\pmb{\\xi} = 1, \\lambda_2 = \\dots = \\lambda_n = 0$\n\n矩阵 $\\mathbf{A}$ 的特征值为 $\\lambda_{1} = 0, \\lambda_{2} = \\dots = \\lambda_{n} = 1$ ，则 $|\\mathbf{A}| = |\\mathbf{E} - \\mathbf{B}| = 0$\n\n故 $r(\\mathbf{A}) < n$ ，即 $\\mathbf{A}$ 不可逆",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "answerCandidate",
+            "action": "populated_from_solution",
+            "detail": "Proofs are fully in explanationCandidate."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          { "topic": "矩阵幂等性与不可逆证明", "confidence": "high", "evidence": "A²=(E-ξξᵀ)²=E+(k-2)ξξᵀ, 两种方法证明不可逆" }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认 A² 计算正确, 两种不可逆证明逻辑完备。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q19",
+      "candidateResult": {
+        "questionNumber": 19,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "已知二次型 $f(x_{1},x_{2},x_{3}) = 5x_{1}^{2} + 5x_{2}^{2} + cx_{3}^{2} - 2x_{1}x_{2} + 6x_{1}x_{3} - 6x_{2}x_{3}$ 的秩为2.\n\n（1）求参数 $c$ 的值及此二次型对应矩阵的特征值；  \n（2）指出方程 $f(x_{1},x_{2},x_{3}) = 1$ 表示何种二次曲面.",
+        "options": [],
+        "answerCandidate": "(1) $c = 3$, 特征值 $\\lambda_1 = 0, \\lambda_2 = 4, \\lambda_3 = 9$; (2) 椭圆柱面",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解】（1）令 $\\mathbf{A} = \\begin{pmatrix} 5 & -1 & 3 \\\\ -1 & 5 & -3 \\\\ 3 & -3 & c \\end{pmatrix}, \\mathbf{X} = \\begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{pmatrix}$ ，则 $f(x_{1},x_{2},x_{3}) = \\mathbf{X}^{\\mathrm{T}}\\mathbf{A}\\mathbf{X}$\n\n因为二次型的秩为2，所以 $|\\mathbf{A}| = 0$\n\n由 $|\\mathbf{A}| = \\left| \\begin{array}{rrr}5 & -1 & 3\\\\ -1 & 5 & -3\\\\ 3 & -3 & c \\end{array} \\right| = 24c - 72 = 0$ ，得 $c = 3$\n\n容易验证，此时 $\\mathbf{A}$ 的秩是2.A的特征多项式为\n\n$$\n\\left| \\lambda E - A \\right| = \\left| \\begin{array}{c c c} \\lambda - 5 & 1 & - 3 \\\\ 1 & \\lambda - 5 & 3 \\\\ - 3 & 3 & \\lambda - 3 \\end{array} \\right| = \\lambda (\\lambda - 4) (\\lambda - 9),\n$$\n\n故所求特征值为 $\\lambda_1 = 0, \\lambda_2 = 4, \\lambda_3 = 9$ .\n\n（2）二次型 $f$ 的标准形为 $f = 4y_{2}^{2} + 9y_{3}^{2}$\n\n由此可知 $f(x_{1},x_{2},x_{3}) = 1$ 所表示的曲面是椭圆柱面",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "answerCandidate",
+            "action": "populated_from_solution",
+            "detail": "Set to c=3, eigenvalues, ellipsoidal cylinder."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          { "topic": "二次型与二次曲面分类", "confidence": "high", "evidence": "秩为2 → |A|=0 → c=3; 特征值 0,4,9 → 椭圆柱面" }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认行列式计算 c=3 正确, 特征值正确, 曲面分类正确。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q20",
+      "candidateResult": {
+        "questionNumber": 20,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "（1）设工厂 $A$ 和工厂 $B$ 的产品的次品率分别为 $1\\%$ 和 $2\\%$ ，现从由 $A$ 厂和 $B$ 厂的产品分别占 $60\\%$ 和 $40\\%$ 的一批产品中随机抽取一件，发现是次品，则该次品属于 $A$ 厂生产的概率为",
+        "options": [],
+        "answerCandidate": "$\\frac{3}{7}$ .",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(1)【答案】 $\\frac{3}{7}$ .\n\n【解】设 $A_{1} = \\{$ 抽取的为 $A$ 厂产品 $\\}$ , $A_{2} = \\{$ 抽取的为 $B$ 厂产品 $\\}$ , $B = \\{$ 抽取的为次品 $\\}$ ,\n\n$$\nP \\left(A _ {1}\\right) = 0. 6, \\quad P \\left(A _ {2}\\right) = 0. 4, \\quad P \\left(B \\mid A _ {1}\\right) = 0. 0 1, \\quad P \\left(B \\mid A _ {2}\\right) = 0. 0 2,\n$$\n\n则 $P(A_{1} \\mid B) = \\frac{P(A_{1}B)}{P(B)} = \\frac{P(A_{1})P(B \\mid A_{1})}{P(A_{1})P(B \\mid A_{1}) + P(A_{2})P(B \\mid A_{2})}$\n\n$$\n= \\frac {0 . 6 \\times 0 . 0 1}{0 . 6 \\times 0 . 0 1 + 0 . 4 \\times 0 . 0 2} = \\frac {3}{7}.\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q21",
+      "candidateResult": {
+        "questionNumber": 21,
+        "questionType": "fill_in_blank",
+        "reviewStatus": "needs_human_review",
+        "stem": "（2）设 $\\xi, \\eta$ 是两个相互独立且均服从正态分布 $N\\left(0, \\left(\\frac{1}{\\sqrt{2}}\\right)^2\\right)$ 的随机变量，则随机变量 $|\\xi - \\eta|$ 的数学期望 $E(|\\xi - \\eta|) =$",
+        "options": [],
+        "answerCandidate": "$\\frac{2}{\\sqrt{2\\pi}}$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "(2)【答案】 $\\frac{2}{\\sqrt{2\\pi}}$\n\n【解】 令 $U = \\xi -\\eta$\n\n因为 $\\xi, \\eta$ 相互独立且都服从正态分布 $N\\left(0, \\left(\\frac{1}{\\sqrt{2}}\\right)^2\\right)$ ，所以 $U \\sim N(0, 1)$\n\n于是 $E(|\\xi - \\eta|) = E(|U|) = \\int_{-\\infty}^{+\\infty}|u| \\cdot \\frac{1}{\\sqrt{2\\pi}} \\mathrm{e}^{-\\frac{u^2}{2}} \\, \\mathrm{d}u = \\frac{2}{\\sqrt{2\\pi}} \\int_{0}^{+\\infty} u \\mathrm{e}^{-\\frac{u^2}{2}} \\, \\mathrm{d}u$\n\n$$\n= \\frac {2}{\\sqrt {2 \\pi}} \\int_ {0} ^ {+ \\infty} \\mathrm {e} ^ {- \\frac {u ^ {2}}{2}} \\mathrm {d} \\left(\\frac {u ^ {2}}{2}\\right) = \\frac {2}{\\sqrt {2 \\pi}} \\Gamma (1) = \\frac {2}{\\sqrt {2 \\pi}}.\n$$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    },
+    {
+      "stableId": "math1-1996-q22",
+      "candidateResult": {
+        "questionNumber": 22,
+        "questionType": "solution",
+        "reviewStatus": "needs_human_review",
+        "stem": "设 $\\xi, \\eta$ 是相互独立且都服从同一分布的两个随机变量，且 $\\xi$ 的分布律为 $P\\{\\xi = i\\} = \\frac{1}{3}$ $(i = 1,2,3)$ ，又设 $X = \\max \\{\\xi, \\eta\\}, Y = \\min \\{\\xi, \\eta\\}$ .\n\n（1）写出二维随机变量 $(X,Y)$ 的分布律：\n\n<table><tr><td rowspan=\"2\">Y</td><td colspan=\"3\">X</td></tr><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>1</td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td></tr></table>\n\n（2）求随机变量 $X$ 的数学期望 $E(X)$",
+        "options": [],
+        "answerCandidate": "(1) 分布律见解析; (2) $E(X) = \\frac{22}{9}$",
+        "answerStatus": "candidate_from_solutions",
+        "explanationCandidate": "【解】 (1) $P\\{X = 1, Y = 1\\} = P\\{\\xi = 1, \\eta = 1\\} = P\\{\\xi = 1\\} P\\{\\eta = 1\\} = \\frac{1}{9}$ ,\n\n$$\nP \\{X = 1, Y = 2 \\} = 0, \\quad P \\{X = 1, Y = 3 \\} = 0;\n$$\n\n$$\nP \\{X = 2, Y = 1 \\} = P \\{\\xi = 1, \\eta = 2 \\} + P \\{\\xi = 2, \\eta = 1 \\} = \\frac {2}{9},\n$$\n\n$$\nP \\{X = 2, Y = 2 \\} = P \\{\\xi = 2, \\eta = 2 \\} = P \\{\\xi = 2 \\} P \\{\\eta = 2 \\} = \\frac {1}{9},\n$$\n\n$$\nP \\{X = 2, Y = 3 \\} = 0;\n$$\n\n$$\nP \\{X = 3, Y = 1 \\} = P \\{\\xi = 3, \\eta = 1 \\} + P \\{\\xi = 1, \\eta = 3 \\} = \\frac {2}{9},\n$$\n\n$$\nP \\{X = 3, Y = 2 \\} = P \\{\\xi = 3, \\eta = 2 \\} + P \\{\\xi = 2, \\eta = 3 \\} = \\frac {2}{9},\n$$\n\n$$\nP \\{X = 3, Y = 3 \\} = \\frac {1}{9},\n$$\n\n故 $(X,Y)$ 的联合分布律为\n\n<table><tr><td rowspan=\"2\">X</td><td colspan=\"3\">Y</td></tr><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>1</td><td>1/9</td><td>0</td><td>0</td></tr><tr><td>2</td><td>2/9</td><td>1/9</td><td>0</td></tr><tr><td>3</td><td>2/9</td><td>2/9</td><td>1/9</td></tr></table>\n\n（2）随机变量 $X$ 的边缘分布律为\n\n$$\nX \\sim \\left( \\begin{array}{c c c} 1 & 2 & 3 \\\\ \\frac {1}{9} & \\frac {3}{9} & \\frac {5}{9} \\end{array} \\right),\n$$\n\n故 $E(X) = \\frac{1}{9} +\\frac{6}{9} +\\frac{15}{9} = \\frac{22}{9}$",
+        "explanationStatus": "candidate_from_solutions",
+        "anomalies": []
+      },
+      "semanticReview": {
+        "modifications": [
+          {
+            "field": "answerCandidate",
+            "action": "populated_from_solution",
+            "detail": "Distribution table in explanationCandidate, E(X) = 22/9."
+          }
+        ],
+        "uncertainties": [],
+        "conflicts": [],
+        "suggestedTopics": [
+          { "topic": "二维离散随机变量联合分布", "confidence": "high", "evidence": "max/min 随机变量, 独立同分布 P(ξ=i)=1/3" }
+        ],
+        "confidence": "high",
+        "humanReviewFocus": [
+          "确认联合分布律表格和边缘分布 E(X)=22/9 计算正确。"
+        ]
+      },
+      "reviewStatus": "needs_human_review",
+      "mdFinalClassification": "ready_for_approval"
+    }
+  ]
+}

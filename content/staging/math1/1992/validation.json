@@ -1,0 +1,28 @@
+{
+  "questionsGenerated": 22,
+  "questionCounts": {
+    "fill_in_blank": 7,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "expectedCounts": {
+    "fill_in_blank": 7,
+    "multiple_choice": 5,
+    "solution": 10
+  },
+  "countsMatch": true,
+  "questionsWithExplanations": 22,
+  "questionsWithAnswers": 12,
+  "multipleChoiceWithFourOptions": 5,
+  "multipleChoiceWithAnswerFromSolutions": 5,
+  "totalAnomalies": 1,
+  "anomaliesBySeverity": {
+    "error": 0,
+    "warning": 0,
+    "info": 1
+  },
+  "allQuestionsNeedsReview": true,
+  "stableIdsUnique": true,
+  "schemaValid": true,
+  "allMandatoryFieldsPresent": true
+}

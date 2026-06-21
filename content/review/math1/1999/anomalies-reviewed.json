@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "math1-md-finalize-v1",
+  "batchId": "20260620-161006-cc-math1-md-finalize-year-1999",
+  "sourceYear": 1999,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T08:10:00.000Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [
+    {
+      "type": "ocr_artifact_in_explanation",
+      "questionNumber": 6,
+      "severity": "info",
+      "message": "Explanation contains OCR artifact: variable substitution notation rendered as \\frac{t = -u}{-a} instead of \\xlongequal{t = -u}. Mathematical meaning is still discernible."
+    },
+    {
+      "type": "ocr_artifact_in_explanation",
+      "questionNumber": 14,
+      "severity": "info",
+      "message": "Explanation uses f^{\\prime \\prime}(x) for both second and third derivatives. The flattening of f^{\\prime \\prime \\prime} to f^{\\prime \\prime} does not affect the logical flow of the proof."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 2,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 2
+    },
+    "blockingIssues": [],
+    "resolvedFromPrevious": [
+      "Q10 incomplete_options — option A restored from paper Markdown; warning resolved in structure-repair, confirmed in md-finalization"
+    ]
+  }
+}

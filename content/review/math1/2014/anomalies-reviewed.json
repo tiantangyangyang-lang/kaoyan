@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "math1-md-finalized-anomalies-v1",
+  "batchId": "cc-math1-md-finalize-year-2014",
+  "runId": "20260620-171629-cc-math1-md-finalize-year-2014",
+  "sourceYear": 2014,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T09:16:29.000Z",
+  "reviewStatus": "needs_human_review",
+  "anomalies": [],
+  "resolvedAnomalies": [
+    {
+      "type": "incomplete_options",
+      "questionNumber": 3,
+      "originalSeverity": "warning",
+      "resolution": "Option D text present in paper Markdown line 30; label (D) lost in OCR. Split from merged option C and added as separate option D. Solution answer confirms correct option is D.",
+      "evidence": "Paper Markdown lines 27-30, Solution line 38"
+    },
+    {
+      "type": "incomplete_options",
+      "questionNumber": 8,
+      "originalSeverity": "warning",
+      "resolution": "Option D label uses LaTeX formatting \\left(\\mathrm{D}\\right) instead of plain (D). Extracted and added as separate option D. Additionally cleaned stem and option C of trailing section header contamination.",
+      "evidence": "Paper Markdown line 80, Solution line 105"
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 0,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "blockingIssues": [],
+    "resolvedCount": 2
+  }
+}

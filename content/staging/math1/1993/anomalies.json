@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "md-finalization-v1",
+  "runId": "20260620-154345-cc-math1-md-finalize-year-1993",
+  "sourceYear": 1993,
+  "subjectCode": "math1",
+  "anomalies": [
+    {
+      "type": "ocr_noise_repaired",
+      "questionNumber": 7,
+      "severity": "info",
+      "message": "Option C original OCR noise '2√cos20dθ' repaired to LaTeX based on mathematical context; needs human PDF confirmation"
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 1,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 1
+    },
+    "resolvedFromPreviousRun": 7,
+    "newFromThisRun": 1,
+    "blockingIssues": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-2003-final-semantic-review",
+  "description": "Run only the final Math1 2003 semantic review after verified JSON recovery and six applied Codex evidence corrections.",
+  "tasks": [
+    {
+      "label": "Math1 2003 final semantic review after verified JSON recovery",
+      "task": "ds-math1-year",
+      "year": 2003,
+      "maxTurns": 60
+    }
+  ]
+}

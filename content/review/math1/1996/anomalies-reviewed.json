@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "math1-local-anomalies-v1",
+  "batchId": "local-fallback-1996",
+  "sourceYear": 1996,
+  "subjectCode": "math1",
+  "sourceRepo": "Kaoyan-Math1-Papers",
+  "sourceCommit": "3151b4acf26ea19ccd427b869a715e65e1990091",
+  "sourceDirty": true,
+  "reviewTimestamp": "2026-06-20T07:55:13.000Z",
+  "reviewStatus": "needs_human_review",
+  "mdFinalizedAt": "2026-06-20T15:55:13+08:00",
+  "anomalies": [],
+  "resolvedAnomalies": [
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Expected local markers 1..2, found [2]",
+      "sectionLabel": "三",
+      "resolution": "Q11/Q12 explanations split from merged container."
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Expected local markers 1..2, found [2]",
+      "sectionLabel": "四",
+      "resolution": "Q13/Q14 explanations split from merged container."
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 12,
+      "severity": "warning",
+      "message": "Solution block for question 12 was not found",
+      "resolution": "Q12 explanationCandidate now populated."
+    },
+    {
+      "type": "missing_solution",
+      "questionNumber": 14,
+      "severity": "warning",
+      "message": "Solution block for question 14 was not found",
+      "resolution": "Q14 explanationCandidate now populated."
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 0,
+    "totalResolved": 4,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "blockingIssues": [],
+    "pdfVerification": "not_run"
+  }
+}

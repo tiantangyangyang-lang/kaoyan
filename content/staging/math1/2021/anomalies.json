@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "math1-modern-transform-v1",
+  "generatedAt": "2026-06-20T10:05:18.164Z",
+  "runId": "20260620-180254-cc-math1-md-finalize-year-2021",
+  "summary": {
+    "totalAnomalies": 8,
+    "bySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 8
+    }
+  },
+  "anomalies": [
+    {
+      "type": "incomplete_options",
+      "questionNumber": 3,
+      "stableId": "math1-2021-q03",
+      "severity": "info",
+      "message": "Extracted option labels: ['A', 'C']",
+      "fix_applied": true,
+      "fix_note": "Options split from paper Markdown source into proper A/B/C/D labels. Source lines 31-37 confirm all four options exist."
+    },
+    {
+      "type": "numbering_format_inconsistency",
+      "questionNumber": 7,
+      "stableId": "math1-2021-q07",
+      "severity": "info",
+      "message": "Stem numbering \"7）\" missing opening parenthesis — source paper line 69 reads \"7）\", differs from Q1-Q6 \"（N）\"format",
+      "fix_applied": false,
+      "fix_note": null
+    },
+    {
+      "type": "numbering_format_inconsistency",
+      "questionNumber": 8,
+      "stableId": "math1-2021-q08",
+      "severity": "info",
+      "message": "Stem numbering \"8）\" missing opening parenthesis — source paper line 79",
+      "fix_applied": false,
+      "fix_note": null
+    },
+    {
+      "type": "numbering_format_inconsistency",
+      "questionNumber": 9,
+      "stableId": "math1-2021-q09",
+      "severity": "info",
+      "message": "Stem numbering \"9）\" missing opening parenthesis — source paper line 86",
+      "fix_applied": false,
+      "fix_note": null
+    },
+    {
+      "type": "numbering_format_inconsistency",
+      "questionNumber": 10,
+      "stableId": "math1-2021-q10",
+      "severity": "info",
+      "message": "Stem numbering \"10）\" missing opening parenthesis — source paper line 95",
+      "fix_applied": false,
+      "fix_note": null
+    },
+    {
+      "type": "numbering_format_inconsistency",
+      "questionNumber": 11,
+      "stableId": "math1-2021-q11",
+      "severity": "info",
+      "message": "Stem numbering \"11)\" uses \")\" not \"）\" — source paper line 107",
+      "fix_applied": false,
+      "fix_note": null
+    },
+    {
+      "type": "numbering_format_inconsistency",
+      "questionNumber": 14,
+      "stableId": "math1-2021-q14",
+      "severity": "info",
+      "message": "Stem numbering \"4）\" — source paper line 113 (original filler numbering, mapped to q14)",
+      "fix_applied": false,
+      "fix_note": null
+    },
+    {
+      "type": "numbering_format_inconsistency",
+      "questionNumber": 15,
+      "stableId": "math1-2021-q15",
+      "severity": "info",
+      "message": "Stem numbering \"5）\" — source paper line 115 (original filler numbering, mapped to q15)",
+      "fix_applied": false,
+      "fix_note": null
+    }
+  ]
+}

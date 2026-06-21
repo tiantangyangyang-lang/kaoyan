@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "agent-queue-v1",
+  "queueName": "math1-md-finalize-summary",
+  "description": "Aggregate all completed Math1 Markdown-first yearly outputs into the final unapproved question bank and batch report.",
+  "defaultContinueOnError": false,
+  "tasks": [
+    {
+      "label": "Math1 all-years final aggregation",
+      "task": "cc-finalize-summary",
+      "maxTurns": 100
+    }
+  ]
+}
