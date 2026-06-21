@@ -42,7 +42,9 @@ Cloudflare Pages 的自定义域设置中单独处理。
 1. 创建免费 MySQL 服务。
 2. 将 Aiven 页面显示的完整 Service URI 原样写入 Render 的 `DATABASE_URL`。
 3. 将 CA 证书做 Base64 后写入 `DATABASE_CA_BASE64`。
-4. Render 启动 API 时会自动创建所需表，不需要 MySQL Workbench。
+4. Render 启动 API 时会自动创建四张 `kaoyan_` 前缀表，不需要 MySQL Workbench。
+
+已有的通用 `users`、`sessions` 等表不会被读取、修改或删除。
 
 PowerShell 转换 CA：
 

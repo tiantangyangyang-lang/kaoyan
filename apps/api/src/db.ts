@@ -40,7 +40,7 @@ export function createDatabasePool(config: AppConfig): Pool {
 }
 
 const schemaStatements = [
-  `CREATE TABLE IF NOT EXISTS users (
+  `CREATE TABLE IF NOT EXISTS kaoyan_users (
     id CHAR(36) PRIMARY KEY,
     email VARCHAR(320) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
@@ -48,36 +48,36 @@ const schemaStatements = [
     created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)
   )`,
-  `CREATE TABLE IF NOT EXISTS email_verification_tokens (
+  `CREATE TABLE IF NOT EXISTS kaoyan_email_verification_tokens (
     id CHAR(36) PRIMARY KEY,
     user_id CHAR(36) NOT NULL,
     token_hash CHAR(64) NOT NULL UNIQUE,
     expires_at DATETIME(3) NOT NULL,
     used_at DATETIME(3) NULL,
     created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    CONSTRAINT fk_verification_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    CONSTRAINT fk_kaoyan_verification_user FOREIGN KEY (user_id) REFERENCES kaoyan_users(id) ON DELETE CASCADE,
     INDEX idx_verification_user (user_id),
     INDEX idx_verification_expiry (expires_at)
   )`,
-  `CREATE TABLE IF NOT EXISTS sessions (
+  `CREATE TABLE IF NOT EXISTS kaoyan_sessions (
     id CHAR(36) PRIMARY KEY,
     user_id CHAR(36) NOT NULL,
     token_hash CHAR(64) NOT NULL UNIQUE,
     expires_at DATETIME(3) NOT NULL,
     created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     last_seen_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    CONSTRAINT fk_session_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    CONSTRAINT fk_kaoyan_session_user FOREIGN KEY (user_id) REFERENCES kaoyan_users(id) ON DELETE CASCADE,
     INDEX idx_session_user (user_id),
     INDEX idx_session_expiry (expires_at)
   )`,
-  `CREATE TABLE IF NOT EXISTS learning_states (
+  `CREATE TABLE IF NOT EXISTS kaoyan_learning_states (
     user_id CHAR(36) NOT NULL,
     subject_code VARCHAR(32) NOT NULL,
     question_states JSON NOT NULL,
     paper_sessions JSON NOT NULL,
     updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
     PRIMARY KEY (user_id, subject_code),
-    CONSTRAINT fk_learning_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    CONSTRAINT fk_kaoyan_learning_user FOREIGN KEY (user_id) REFERENCES kaoyan_users(id) ON DELETE CASCADE
   )`,
 ];
 
@@ -112,7 +112,7 @@ export class MySqlAuthStore implements AuthStore {
     try {
       await connection.beginTransaction();
       const [rows] = await connection.query<UserRow[]>(
-        "SELECT id, email, password_hash, email_verified_at FROM users WHERE email = ? FOR UPDATE",
+        "SELECT id, email, password_hash, email_verified_at FROM kaoyan_users WHERE email = ? FOR UPDATE",
         [input.email],
       );
       const existing = rows[0];
@@ -123,21 +123,21 @@ export class MySqlAuthStore implements AuthStore {
       const userId = existing?.id ?? randomUUID();
       if (existing) {
         await connection.execute(
-          "UPDATE users SET password_hash = ?, updated_at = CURRENT_TIMESTAMP(3) WHERE id = ?",
+          "UPDATE kaoyan_users SET password_hash = ?, updated_at = CURRENT_TIMESTAMP(3) WHERE id = ?",
           [input.passwordHash, userId],
         );
       } else {
         await connection.execute(
-          "INSERT INTO users (id, email, password_hash) VALUES (?, ?, ?)",
+          "INSERT INTO kaoyan_users (id, email, password_hash) VALUES (?, ?, ?)",
           [userId, input.email, input.passwordHash],
         );
       }
       await connection.execute(
-        "UPDATE email_verification_tokens SET used_at = CURRENT_TIMESTAMP(3) WHERE user_id = ? AND used_at IS NULL",
+        "UPDATE kaoyan_email_verification_tokens SET used_at = CURRENT_TIMESTAMP(3) WHERE user_id = ? AND used_at IS NULL",
         [userId],
       );
       await connection.execute(
-        "INSERT INTO email_verification_tokens (id, user_id, token_hash, expires_at) VALUES (?, ?, ?, ?)",
+        "INSERT INTO kaoyan_email_verification_tokens (id, user_id, token_hash, expires_at) VALUES (?, ?, ?, ?)",
         [randomUUID(), userId, input.tokenHash, input.tokenExpiresAt],
       );
       await connection.commit();
@@ -159,7 +159,7 @@ export class MySqlAuthStore implements AuthStore {
     try {
       await connection.beginTransaction();
       const [rows] = await connection.query<UserRow[]>(
-        "SELECT id, email, password_hash, email_verified_at FROM users WHERE email = ? FOR UPDATE",
+        "SELECT id, email, password_hash, email_verified_at FROM kaoyan_users WHERE email = ? FOR UPDATE",
         [input.email],
       );
       const user = rows[0];
@@ -172,11 +172,11 @@ export class MySqlAuthStore implements AuthStore {
         return "already_verified";
       }
       await connection.execute(
-        "UPDATE email_verification_tokens SET used_at = CURRENT_TIMESTAMP(3) WHERE user_id = ? AND used_at IS NULL",
+        "UPDATE kaoyan_email_verification_tokens SET used_at = CURRENT_TIMESTAMP(3) WHERE user_id = ? AND used_at IS NULL",
         [user.id],
       );
       await connection.execute(
-        "INSERT INTO email_verification_tokens (id, user_id, token_hash, expires_at) VALUES (?, ?, ?, ?)",
+        "INSERT INTO kaoyan_email_verification_tokens (id, user_id, token_hash, expires_at) VALUES (?, ?, ?, ?)",
         [randomUUID(), user.id, input.tokenHash, input.tokenExpiresAt],
       );
       await connection.commit();
@@ -195,8 +195,8 @@ export class MySqlAuthStore implements AuthStore {
       await connection.beginTransaction();
       const [rows] = await connection.query<UserRow[]>(
         `SELECT u.id, u.email, u.password_hash, u.email_verified_at
-         FROM email_verification_tokens t
-         JOIN users u ON u.id = t.user_id
+         FROM kaoyan_email_verification_tokens t
+         JOIN kaoyan_users u ON u.id = t.user_id
          WHERE t.token_hash = ? AND t.used_at IS NULL AND t.expires_at > CURRENT_TIMESTAMP(3)
          FOR UPDATE`,
         [tokenHash],
@@ -207,11 +207,11 @@ export class MySqlAuthStore implements AuthStore {
         return null;
       }
       await connection.execute(
-        "UPDATE users SET email_verified_at = COALESCE(email_verified_at, CURRENT_TIMESTAMP(3)), updated_at = CURRENT_TIMESTAMP(3) WHERE id = ?",
+        "UPDATE kaoyan_users SET email_verified_at = COALESCE(email_verified_at, CURRENT_TIMESTAMP(3)), updated_at = CURRENT_TIMESTAMP(3) WHERE id = ?",
         [user.id],
       );
       await connection.execute(
-        "UPDATE email_verification_tokens SET used_at = CURRENT_TIMESTAMP(3) WHERE user_id = ? AND used_at IS NULL",
+        "UPDATE kaoyan_email_verification_tokens SET used_at = CURRENT_TIMESTAMP(3) WHERE user_id = ? AND used_at IS NULL",
         [user.id],
       );
       await connection.commit();
@@ -226,7 +226,7 @@ export class MySqlAuthStore implements AuthStore {
 
   async findUserByEmail(email: string): Promise<PasswordUser | null> {
     const [rows] = await this.pool.query<UserRow[]>(
-      "SELECT id, email, password_hash, email_verified_at FROM users WHERE email = ?",
+      "SELECT id, email, password_hash, email_verified_at FROM kaoyan_users WHERE email = ?",
       [email],
     );
     const user = rows[0];
@@ -241,7 +241,7 @@ export class MySqlAuthStore implements AuthStore {
     expiresAt: Date;
   }): Promise<void> {
     await this.pool.execute(
-      "INSERT INTO sessions (id, user_id, token_hash, expires_at) VALUES (?, ?, ?, ?)",
+      "INSERT INTO kaoyan_sessions (id, user_id, token_hash, expires_at) VALUES (?, ?, ?, ?)",
       [randomUUID(), input.userId, input.tokenHash, input.expiresAt],
     );
   }
@@ -249,21 +249,21 @@ export class MySqlAuthStore implements AuthStore {
   async findUserBySession(tokenHash: string): Promise<PublicUser | null> {
     const [rows] = await this.pool.query<UserRow[]>(
       `SELECT u.id, u.email, u.password_hash, u.email_verified_at
-       FROM sessions s JOIN users u ON u.id = s.user_id
+       FROM kaoyan_sessions s JOIN kaoyan_users u ON u.id = s.user_id
        WHERE s.token_hash = ? AND s.expires_at > CURRENT_TIMESTAMP(3)`,
       [tokenHash],
     );
     const user = rows[0];
     if (!user) return null;
     await this.pool.execute(
-      "UPDATE sessions SET last_seen_at = CURRENT_TIMESTAMP(3) WHERE token_hash = ?",
+      "UPDATE kaoyan_sessions SET last_seen_at = CURRENT_TIMESTAMP(3) WHERE token_hash = ?",
       [tokenHash],
     );
     return toPublicUser(user);
   }
 
   async deleteSession(tokenHash: string): Promise<void> {
-    await this.pool.execute("DELETE FROM sessions WHERE token_hash = ?", [
+    await this.pool.execute("DELETE FROM kaoyan_sessions WHERE token_hash = ?", [
       tokenHash,
     ]);
   }
@@ -281,7 +281,7 @@ export class MySqlAuthStore implements AuthStore {
         }
       >
     >(
-      "SELECT question_states, paper_sessions, updated_at FROM learning_states WHERE user_id = ? AND subject_code = ?",
+      "SELECT question_states, paper_sessions, updated_at FROM kaoyan_learning_states WHERE user_id = ? AND subject_code = ?",
       [userId, subjectCode],
     );
     const row = rows[0];
@@ -304,7 +304,7 @@ export class MySqlAuthStore implements AuthStore {
     paperSessions: Record<string, unknown>;
   }): Promise<void> {
     await this.pool.execute<ResultSetHeader>(
-      `INSERT INTO learning_states
+      `INSERT INTO kaoyan_learning_states
          (user_id, subject_code, question_states, paper_sessions)
        VALUES (?, ?, ?, ?)
        ON DUPLICATE KEY UPDATE
