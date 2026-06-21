@@ -1,0 +1,8 @@
+;;
+;; Cloudflare DNS import file
+;; Adds the Render API custom-domain record only.
+;;
+$ORIGIN gongren.xyz.
+$TTL 300
+
+api 300 IN CNAME kaoyan-api.onrender.com. ; cf_tags=cf-proxied:false
