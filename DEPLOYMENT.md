@@ -40,15 +40,19 @@ Cloudflare Pages 的自定义域设置中单独处理。
 ## Aiven MySQL
 
 1. 创建免费 MySQL 服务。
-2. 在 Aiven 控制台运行 `apps/api/schema.sql`。
-3. 将 Service URI 写入 Render 的 `DATABASE_URL`。
-4. 将 CA 证书做 Base64 后写入 `DATABASE_CA_BASE64`。
+2. 将 Aiven 页面显示的完整 Service URI 原样写入 Render 的 `DATABASE_URL`。
+3. 将 CA 证书做 Base64 后写入 `DATABASE_CA_BASE64`。
+4. Render 启动 API 时会自动创建所需表，不需要 MySQL Workbench。
 
 PowerShell 转换 CA：
 
 ```powershell
 [Convert]::ToBase64String([IO.File]::ReadAllBytes("ca.pem"))
 ```
+
+不要把 Workbench 的 Host 留为 `localhost`。本项目正常部署不要求安装或使用
+Workbench；如果 `DATABASE_URL` 的 Aiven 主机名错误，API 会在启动阶段直接失败并在
+Render 日志显示 `ENOTFOUND`。
 
 ## Resend
 

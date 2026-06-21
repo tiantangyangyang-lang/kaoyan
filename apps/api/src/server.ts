@@ -1,10 +1,17 @@
 import { createApp } from "./app.js";
 import { loadConfig } from "./config.js";
-import { createDatabasePool, MySqlAuthStore } from "./db.js";
+import {
+  createDatabasePool,
+  initializeDatabase,
+  MySqlAuthStore,
+} from "./db.js";
 import { ResendVerificationMailer } from "./mailer.js";
 
 const config = loadConfig();
 const pool = createDatabasePool(config);
+console.info("Connecting to MySQL and ensuring schema...");
+await initializeDatabase(pool);
+console.info("MySQL connection and schema are ready.");
 const app = createApp({
   config,
   store: new MySqlAuthStore(pool),

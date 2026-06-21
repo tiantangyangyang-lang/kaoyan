@@ -11,11 +11,13 @@ Express + MySQL 后端，提供：
 ## 初始化
 
 1. 将 `.env.example` 复制为 `.env` 并填写数据库。
-2. 在目标 MySQL 执行 `schema.sql`。
-3. 启动：
+2. 启动：
 
 ```cmd
 npm run dev:api
 ```
+
+API 启动时会自动连接 MySQL，并使用 `CREATE TABLE IF NOT EXISTS` 创建所需表。
+`schema.sql` 仍保留为手动初始化和审计参考。
 
 完整部署步骤见仓库根目录 `DEPLOYMENT.md`。
