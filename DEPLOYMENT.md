@@ -67,6 +67,19 @@ PowerShell 转换 CA：
 VITE_API_BASE_URL=https://api.gongren.xyz/api
 ```
 
+## Render 构建
+
+Blueprint 已固定：
+
+```text
+Node.js: 20.x
+Build: npm ci --include=dev && npm run build:api
+Start: npm run start --workspace @kaoyan/api
+```
+
+`--include=dev` 是必要的：Render 在生产环境会默认跳过 TypeScript 和类型声明，
+但它们在构建阶段仍然需要；运行阶段仍只执行编译后的 `apps/api/dist/server.js`。
+
 ## 本地启动
 
 复制两个环境模板并填写 MySQL：

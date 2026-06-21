@@ -273,6 +273,9 @@ hostnames and credentials. Existing MX, SPF, and autodiscover records must remai
 - 每次代理运行必须生成独立日志目录；来源库前后快照不一致、缺少结构化结果或退出码异常时自动判定失败。
 
 ## Errors Encountered
+- Render's first Blueprint build set `NODE_ENV=production`, causing plain `npm ci` to omit the API's
+  TypeScript compiler and declaration packages. The Blueprint now uses `npm ci --include=dev`,
+  the API production tsconfig compiles only `src` into `dist/server.js`, and Node is pinned to 20.x.
 - The first web chunk split appeared ineffective because a stale generated `apps/web/vite.config.js`
   took precedence over `vite.config.ts`. The generated JS/declaration files were removed and are now
   ignored, so Vite reads the maintained TypeScript config.
