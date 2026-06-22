@@ -86,7 +86,7 @@ export function PaperSessionView({
                 onClick={() => updateResult({ answer: option.label })}
               >
                 <strong>{option.label}</strong>
-                <MathContent content={option.value} />
+                <MathContent content={option.value ?? option.text ?? ""} />
               </button>
             ))}
           </div>

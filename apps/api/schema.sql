@@ -40,3 +40,13 @@ CREATE TABLE IF NOT EXISTS kaoyan_learning_states (
   PRIMARY KEY (user_id, subject_code),
   CONSTRAINT fk_kaoyan_learning_user FOREIGN KEY (user_id) REFERENCES kaoyan_users(id) ON DELETE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS kaoyan_question_animations (
+  question_id VARCHAR(64) PRIMARY KEY,
+  subject_code VARCHAR(32) NOT NULL,
+  payload JSON NOT NULL,
+  is_active BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  INDEX idx_question_animation_subject (subject_code, is_active)
+);

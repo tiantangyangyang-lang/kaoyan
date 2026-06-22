@@ -58,13 +58,13 @@ DEPLOYMENT.md           公网部署和 DNS 配置说明
 安装依赖：
 
 ```cmd
-npm install
+make install
 ```
 
 启动前端：
 
 ```cmd
-npm run dev
+make dev
 ```
 
 浏览器打开：
@@ -88,7 +88,7 @@ apps/api/schema.sql
 4. 启动 API：
 
 ```cmd
-npm run dev:api
+make dev-api
 ```
 
 开发环境未配置 `RESEND_API_KEY` 时，验证链接会打印在 API 终端中。
@@ -96,10 +96,13 @@ npm run dev:api
 ## 构建与测试
 
 ```cmd
-npm run typecheck
-npm run build
-npm run test:api
-npm run test:smoke --workspace @kaoyan/web
+make verify
+```
+
+Windows 中如果 PowerShell 将 `npm` 解析到被执行策略阻止的 `npm.ps1`，使用：
+
+```powershell
+make verify NPM=npm.cmd
 ```
 
 当前自动测试覆盖：
@@ -128,6 +131,13 @@ npm run sync:content
 ```
 
 不要直接修改 `apps/web/public/data/math1.json`。
+
+## 工程流程
+
+- 每个新任务先创建 `docs/requirements/REQ-NNN-*.md`。
+- 每个任务使用新的 Codex 线程、新的 `codex/*` 分支和独立 Pull Request。
+- 根目录 `Makefile` 是安装、开发、测试、构建和 PR 验证的统一入口。
+- 完整规则见 [docs/engineering-workflow.md](docs/engineering-workflow.md)。
 
 ## 部署
 

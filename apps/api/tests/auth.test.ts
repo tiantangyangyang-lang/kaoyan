@@ -9,6 +9,7 @@ import type {
   LearningStateRecord,
   PasswordUser,
   PublicUser,
+  QuestionAnimationRecord,
   RegistrationResult,
 } from "../src/store.js";
 
@@ -17,6 +18,17 @@ class MemoryStore implements AuthStore {
   tokens = new Map<string, string>();
   sessions = new Map<string, string>();
   learning = new Map<string, LearningStateRecord>();
+  animations = new Map<string, QuestionAnimationRecord>([
+    [
+      "math1-2023-q01",
+      {
+        questionId: "math1-2023-q01",
+        subjectCode: "math1",
+        payload: { version: 1, kind: "asymptote" },
+        updatedAt: new Date().toISOString(),
+      },
+    ],
+  ]);
 
   async registerUser(input: {
     email: string;
@@ -105,6 +117,16 @@ class MemoryStore implements AuthStore {
       updatedAt: new Date().toISOString(),
     });
   }
+
+  async getQuestionAnimation(
+    questionId: string,
+  ): Promise<QuestionAnimationRecord | null> {
+    return this.animations.get(questionId) ?? null;
+  }
+
+  async hasQuestionAnimation(questionId: string): Promise<boolean> {
+    return this.animations.has(questionId);
+  }
 }
 
 const config: AppConfig = {
@@ -134,6 +156,16 @@ test("register, verify, login, sync and logout", async () => {
   });
   const agent = request.agent(app);
 
+  await request(app)
+    .get("/api/question-animations/math1-2023-q01/availability")
+    .expect(200, { available: true });
+  await request(app)
+    .get("/api/question-animations/math1-2023-q02/availability")
+    .expect(200, { available: false });
+  await request(app)
+    .get("/api/question-animations/math1-2023-q01")
+    .expect(401);
+
   await agent
     .post("/api/auth/register")
     .send({ email: "student@example.com", password: "correct-horse" })
@@ -155,6 +187,13 @@ test("register, verify, login, sync and logout", async () => {
     .send({ email: "student@example.com", password: "correct-horse" })
     .expect(200);
   await agent.get("/api/auth/me").expect(200);
+  const animation = await agent
+    .get("/api/question-animations/math1-2023-q01")
+    .expect(200);
+  assert.equal(animation.body.animation.payload.kind, "asymptote");
+  await agent
+    .get("/api/question-animations/math1-2023-q02")
+    .expect(404, { error: "animation_not_found" });
 
   await agent
     .put("/api/learning-state/math1")
@@ -171,4 +210,7 @@ test("register, verify, login, sync and logout", async () => {
 
   await agent.post("/api/auth/logout").expect(204);
   await agent.get("/api/auth/me").expect(401);
+  await agent
+    .get("/api/question-animations/math1-2023-q01")
+    .expect(401);
 });

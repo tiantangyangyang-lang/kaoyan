@@ -269,6 +269,46 @@ export function createApp({
     },
   );
 
+  app.get(
+    "/api/question-animations/:questionId/availability",
+    async (request, response, next) => {
+      try {
+        const questionId = z
+          .string()
+          .regex(/^math1-\d{4}-q\d{2}$/)
+          .parse(request.params.questionId);
+        response.set("Cache-Control", "public, max-age=300");
+        response.json({
+          available: await store.hasQuestionAnimation(questionId),
+        });
+      } catch (error) {
+        next(error);
+      }
+    },
+  );
+
+  app.get(
+    "/api/question-animations/:questionId",
+    requireUser,
+    async (request: AuthenticatedRequest, response, next) => {
+      try {
+        const questionId = z
+          .string()
+          .regex(/^math1-\d{4}-q\d{2}$/)
+          .parse(request.params.questionId);
+        const animation = await store.getQuestionAnimation(questionId);
+        if (!animation) {
+          response.status(404).json({ error: "animation_not_found" });
+          return;
+        }
+        response.set("Cache-Control", "private, no-store");
+        response.json({ animation });
+      } catch (error) {
+        next(error);
+      }
+    },
+  );
+
   app.use(
     (
       error: unknown,

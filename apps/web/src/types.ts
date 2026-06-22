@@ -17,7 +17,8 @@ export type Correctness = "correct" | "incorrect" | "unknown";
 
 export interface QuestionOption {
   label: string;
-  value: string;
+  value?: string;
+  text?: string;
 }
 
 export interface Question {
@@ -88,6 +89,35 @@ export interface AuthUser {
   id: string;
   email: string;
   emailVerified: boolean;
+}
+
+export type MathAnimationKind =
+  | "asymptote"
+  | "tangent-plane"
+  | "tangent-intercept"
+  | "cylindrical-solid"
+  | "integral-region"
+  | "radial-density";
+
+export interface MathAnimationStep {
+  title: string;
+  body: string;
+}
+
+export interface MathAnimationSpec {
+  version: 1;
+  kind: MathAnimationKind;
+  title: string;
+  summary: string;
+  accent: string;
+  steps: MathAnimationStep[];
+}
+
+export interface QuestionAnimation {
+  questionId: string;
+  subjectCode: SubjectCode;
+  payload: MathAnimationSpec;
+  updatedAt: string;
 }
 
 export type AppView =
