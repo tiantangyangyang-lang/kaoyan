@@ -75,6 +75,14 @@ Implemented, pending Pull Request review.
 - Returns `404` for absent or inactive content.
 - Uses `Cache-Control: private, no-store`.
 
+### Preview Deployment
+
+- The production origin remains `https://gongren.xyz`.
+- HTTPS Cloudflare Pages deployments under `.kaoyan-ddg.pages.dev` are allowed for PR verification.
+- Similar domains that do not contain the dot-delimited project suffix are rejected.
+- Production session cookies use `SameSite=None; Secure` so authenticated preview requests can carry the session cookie.
+- Non-GET preview requests remain protected by the same strict Origin allowlist.
+
 ## Performance Requirements
 
 - Motion must not be part of the primary application chunk.

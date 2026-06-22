@@ -36,6 +36,7 @@
 - 本地前端首次后台启动触发 Windows 环境变量 `Path/PATH` 重复错误；改用隔离环境启动。
 - 首次 `make verify` 发现 smoke 测试依赖手工启动 Vite；新增自包含 runner 后重跑。
 - Claude Code 外部执行在用户知情批准后仍被租户策略拒绝；未绕过，改由当前受信任环境完成同一限定任务。
+- Cloudflare PR 预览登录失败：API CORS 仅返回正式站 Origin，且生产 Cookie 为 SameSite=Lax；增加严格预览后缀白名单和 SameSite=None。
 
 ## Status
 **Complete** — REQ-001 已通过 `make verify`，提交并创建 PR #1。

@@ -8,6 +8,15 @@ const schema = z.object({
   DATABASE_SSL: z.string().default("true").transform((value) => value === "true"),
   DATABASE_CA_BASE64: z.string().optional(),
   WEB_ORIGIN: z.string().url().default("http://127.0.0.1:5173"),
+  WEB_ORIGIN_SUFFIXES: z
+    .string()
+    .default("")
+    .transform((value) =>
+      value
+        .split(",")
+        .map((item) => item.trim().toLowerCase())
+        .filter(Boolean),
+    ),
   COOKIE_DOMAIN: z.string().optional(),
   RESEND_API_KEY: z.string().optional(),
   MAIL_FROM: z.string().min(3).default("研数 <verify@mail.gongren.xyz>"),

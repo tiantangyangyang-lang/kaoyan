@@ -1,7 +1,11 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import request from "supertest";
-import { createApp } from "../src/app.js";
+import {
+  createApp,
+  getSessionCookieOptions,
+  isAllowedWebOrigin,
+} from "../src/app.js";
 import type { AppConfig } from "../src/config.js";
 import { hashToken } from "../src/security.js";
 import type {
@@ -135,12 +139,72 @@ const config: AppConfig = {
   DATABASE_URL: "mysql://test:test@127.0.0.1/test",
   DATABASE_SSL: false,
   WEB_ORIGIN: "http://127.0.0.1:5173",
+  WEB_ORIGIN_SUFFIXES: [".kaoyan-ddg.pages.dev"],
   MAIL_FROM: "研数 <verify@mail.gongren.xyz>",
   VERIFICATION_URL_BASE: "http://127.0.0.1:5173/?verify=",
   VERIFICATION_TTL_MINUTES: 60,
   SESSION_DAYS: 30,
   TRUST_PROXY: 1,
 };
+
+test("allows only configured web origins", () => {
+  assert.equal(
+    isAllowedWebOrigin(config, "http://127.0.0.1:5173"),
+    true,
+  );
+  assert.equal(
+    isAllowedWebOrigin(
+      config,
+      "https://codex-math1-animation-workfl.kaoyan-ddg.pages.dev",
+    ),
+    true,
+  );
+  assert.equal(
+    isAllowedWebOrigin(config, "https://evilkaoyan-ddg.pages.dev"),
+    false,
+  );
+  assert.equal(
+    isAllowedWebOrigin(config, "http://branch.kaoyan-ddg.pages.dev"),
+    false,
+  );
+});
+
+test("production session cookies support approved cross-site previews", () => {
+  const options = getSessionCookieOptions({
+    ...config,
+    NODE_ENV: "production",
+    COOKIE_DOMAIN: ".gongren.xyz",
+  });
+  assert.equal(options.httpOnly, true);
+  assert.equal(options.secure, true);
+  assert.equal(options.sameSite, "none");
+  assert.equal(options.domain, ".gongren.xyz");
+});
+
+test("preview origin receives CORS headers and passes write-origin checks", async () => {
+  const app = createApp({
+    config,
+    store: new MemoryStore(),
+    mailer: { async sendVerification() {} },
+  });
+  const previewOrigin =
+    "https://codex-math1-animation-workfl.kaoyan-ddg.pages.dev";
+
+  await request(app)
+    .options("/api/auth/login")
+    .set("Origin", previewOrigin)
+    .set("Access-Control-Request-Method", "POST")
+    .set("Access-Control-Request-Headers", "content-type")
+    .expect("Access-Control-Allow-Origin", previewOrigin)
+    .expect(204);
+
+  await request(app)
+    .post("/api/auth/login")
+    .set("Origin", previewOrigin)
+    .send({ email: "nobody@example.com", password: "wrong-password" })
+    .expect("Access-Control-Allow-Origin", previewOrigin)
+    .expect(401, { error: "invalid_credentials" });
+});
 
 test("register, verify, login, sync and logout", async () => {
   const store = new MemoryStore();
