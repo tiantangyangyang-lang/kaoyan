@@ -10,7 +10,7 @@
 - [x] P1：验证构建、类型、测试和游客行为
 - [x] P1：建立需求文档、独立分支、Makefile 和 PR 工作流
 - [x] P1：整理 Claude Code 批量任务、种子测试和维护指南
-- [ ] P1：提交、推送并创建 Pull Request
+- [x] P1：提交、推送并创建 Pull Request
 
 ## Key Questions
 1. 现有登录态如何从前端传到 API？
@@ -38,4 +38,4 @@
 - Claude Code 外部执行在用户知情批准后仍被租户策略拒绝；未绕过，改由当前受信任环境完成同一限定任务。
 
 ## Status
-**Ready for commit and PR** — REQ-001、6 道试点、工程工作流与 `make verify` 已完成。
+**Complete** — REQ-001 已通过 `make verify`，提交并创建 PR #1。

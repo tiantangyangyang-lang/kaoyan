@@ -42,6 +42,7 @@
 
 - 需求：`docs/requirements/REQ-001-math1-animation-analysis.md`
 - 分支：`codex/math1-animation-workflow`
+- Pull Request：https://github.com/tiantangyangyang-lang/kaoyan/pull/1
 - 命令入口：根目录 `Makefile`
 - 协作规则：`AGENTS.md` 与 `docs/engineering-workflow.md`
 - PR 模板：`.github/PULL_REQUEST_TEMPLATE.md`
