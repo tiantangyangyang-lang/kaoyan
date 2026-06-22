@@ -10,8 +10,13 @@ import type {
   LearningStateRecord,
   PasswordUser,
   PublicUser,
+  QuestionAnimationRecord,
   RegistrationResult,
 } from "./store.js";
+import {
+  mathAnimationSpecSchema,
+  QUESTION_ANIMATION_SEEDS,
+} from "./animationSeeds.js";
 
 interface UserRow extends RowDataPacket {
   id: string;
@@ -79,6 +84,15 @@ const schemaStatements = [
     PRIMARY KEY (user_id, subject_code),
     CONSTRAINT fk_kaoyan_learning_user FOREIGN KEY (user_id) REFERENCES kaoyan_users(id) ON DELETE CASCADE
   )`,
+  `CREATE TABLE IF NOT EXISTS kaoyan_question_animations (
+    question_id VARCHAR(64) PRIMARY KEY,
+    subject_code VARCHAR(32) NOT NULL,
+    payload JSON NOT NULL,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+    INDEX idx_question_animation_subject (subject_code, is_active)
+  )`,
 ];
 
 export async function initializeDatabase(pool: Pool): Promise<void> {
@@ -87,6 +101,21 @@ export async function initializeDatabase(pool: Pool): Promise<void> {
     await connection.query("SELECT 1");
     for (const statement of schemaStatements) {
       await connection.execute(statement);
+    }
+    await connection.beginTransaction();
+    try {
+      for (const seed of QUESTION_ANIMATION_SEEDS) {
+        await connection.execute(
+          `INSERT IGNORE INTO kaoyan_question_animations
+             (question_id, subject_code, payload)
+           VALUES (?, ?, ?)`,
+          [seed.questionId, seed.subjectCode, JSON.stringify(seed.payload)],
+        );
+      }
+      await connection.commit();
+    } catch (error) {
+      await connection.rollback();
+      throw error;
     }
   } finally {
     connection.release();
@@ -318,5 +347,46 @@ export class MySqlAuthStore implements AuthStore {
         JSON.stringify(input.paperSessions),
       ],
     );
+  }
+
+  async getQuestionAnimation(
+    questionId: string,
+  ): Promise<QuestionAnimationRecord | null> {
+    const [rows] = await this.pool.query<
+      Array<
+        RowDataPacket & {
+          question_id: string;
+          subject_code: string;
+          payload: string | Record<string, unknown>;
+          updated_at: Date;
+        }
+      >
+    >(
+      `SELECT question_id, subject_code, payload, updated_at
+       FROM kaoyan_question_animations
+       WHERE question_id = ? AND is_active = TRUE`,
+      [questionId],
+    );
+    const row = rows[0];
+    if (!row) return null;
+    const payload =
+      typeof row.payload === "string" ? JSON.parse(row.payload) : row.payload;
+    return {
+      questionId: row.question_id,
+      subjectCode: row.subject_code,
+      payload: mathAnimationSpecSchema.parse(payload),
+      updatedAt: row.updated_at.toISOString(),
+    };
+  }
+
+  async hasQuestionAnimation(questionId: string): Promise<boolean> {
+    const [rows] = await this.pool.query<Array<RowDataPacket & { found: number }>>(
+      `SELECT 1 AS found
+       FROM kaoyan_question_animations
+       WHERE question_id = ? AND is_active = TRUE
+       LIMIT 1`,
+      [questionId],
+    );
+    return Boolean(rows[0]?.found);
   }
 }

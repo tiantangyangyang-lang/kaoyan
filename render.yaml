@@ -22,6 +22,8 @@ services:
         sync: false
       - key: WEB_ORIGIN
         value: https://gongren.xyz
+      - key: WEB_ORIGIN_SUFFIXES
+        value: .kaoyan-ddg.pages.dev
       - key: COOKIE_DOMAIN
         value: .gongren.xyz
       - key: RESEND_API_KEY

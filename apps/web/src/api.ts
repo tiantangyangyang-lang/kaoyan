@@ -2,6 +2,7 @@ import type {
   AuthUser,
   PaperSessionMap,
   QuestionStateMap,
+  QuestionAnimation,
   SubjectCode,
 } from "./types";
 
@@ -98,4 +99,25 @@ export async function loadCloudLearningState(subject: SubjectCode) {
     } | null;
   }>(`/learning-state/${subject}`);
   return result.data;
+}
+
+export async function loadQuestionAnimation(
+  questionId: string,
+  signal?: AbortSignal,
+) {
+  const result = await apiRequest<{ animation: QuestionAnimation }>(
+    `/question-animations/${encodeURIComponent(questionId)}`,
+    { signal },
+  );
+  return result.animation;
+}
+
+export async function getQuestionAnimationAvailability(
+  questionId: string,
+  signal?: AbortSignal,
+) {
+  return apiRequest<{ available: boolean }>(
+    `/question-animations/${encodeURIComponent(questionId)}/availability`,
+    { signal },
+  );
 }

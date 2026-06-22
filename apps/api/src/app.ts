@@ -18,6 +18,38 @@ const SESSION_COOKIE = "kaoyan_session";
 
 type AuthenticatedRequest = Request & { user?: PublicUser };
 
+export function isAllowedWebOrigin(
+  config: Pick<AppConfig, "WEB_ORIGIN" | "WEB_ORIGIN_SUFFIXES">,
+  origin: string,
+): boolean {
+  if (origin === config.WEB_ORIGIN) return true;
+  try {
+    const url = new URL(origin);
+    return (
+      url.protocol === "https:" &&
+      config.WEB_ORIGIN_SUFFIXES.some((suffix) => {
+        const normalizedSuffix = suffix.startsWith(".")
+          ? suffix
+          : `.${suffix}`;
+        return url.hostname.endsWith(normalizedSuffix);
+      })
+    );
+  } catch {
+    return false;
+  }
+}
+
+export function getSessionCookieOptions(config: AppConfig) {
+  return {
+    httpOnly: true,
+    secure: config.NODE_ENV === "production",
+    sameSite: config.NODE_ENV === "production" ? ("none" as const) : ("lax" as const),
+    domain: config.COOKIE_DOMAIN,
+    path: "/",
+    maxAge: config.SESSION_DAYS * 24 * 60 * 60 * 1000,
+  };
+}
+
 export function createApp({
   config,
   store,
@@ -32,7 +64,13 @@ export function createApp({
   app.use(helmet());
   app.use(
     cors({
-      origin: config.WEB_ORIGIN,
+      origin(origin, callback) {
+        if (!origin || isAllowedWebOrigin(config, origin)) {
+          callback(null, true);
+          return;
+        }
+        callback(null, false);
+      },
       credentials: true,
     }),
   );
@@ -42,7 +80,7 @@ export function createApp({
     if (
       !["GET", "HEAD", "OPTIONS"].includes(request.method) &&
       request.headers.origin &&
-      request.headers.origin !== config.WEB_ORIGIN
+      !isAllowedWebOrigin(config, request.headers.origin)
     ) {
       response.status(403).json({ error: "origin_not_allowed" });
       return;
@@ -61,14 +99,7 @@ export function createApp({
         });
 
   const setSessionCookie = (response: Response, token: string) => {
-    response.cookie(SESSION_COOKIE, token, {
-      httpOnly: true,
-      secure: config.NODE_ENV === "production",
-      sameSite: "lax",
-      domain: config.COOKIE_DOMAIN,
-      path: "/",
-      maxAge: config.SESSION_DAYS * 24 * 60 * 60 * 1000,
-    });
+    response.cookie(SESSION_COOKIE, token, getSessionCookieOptions(config));
   };
 
   const requireUser = async (
@@ -263,6 +294,46 @@ export function createApp({
           paperSessions: body.paperSessions,
         });
         response.json({ status: "saved" });
+      } catch (error) {
+        next(error);
+      }
+    },
+  );
+
+  app.get(
+    "/api/question-animations/:questionId/availability",
+    async (request, response, next) => {
+      try {
+        const questionId = z
+          .string()
+          .regex(/^math1-\d{4}-q\d{2}$/)
+          .parse(request.params.questionId);
+        response.set("Cache-Control", "public, max-age=300");
+        response.json({
+          available: await store.hasQuestionAnimation(questionId),
+        });
+      } catch (error) {
+        next(error);
+      }
+    },
+  );
+
+  app.get(
+    "/api/question-animations/:questionId",
+    requireUser,
+    async (request: AuthenticatedRequest, response, next) => {
+      try {
+        const questionId = z
+          .string()
+          .regex(/^math1-\d{4}-q\d{2}$/)
+          .parse(request.params.questionId);
+        const animation = await store.getQuestionAnimation(questionId);
+        if (!animation) {
+          response.status(404).json({ error: "animation_not_found" });
+          return;
+        }
+        response.set("Cache-Control", "private, no-store");
+        response.json({ animation });
       } catch (error) {
         next(error);
       }

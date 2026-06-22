@@ -11,6 +11,7 @@ import type {
 } from "../types";
 import { MathContent } from "./MathContent";
 import { ContentStatusBadge } from "./StatusBadge";
+import { QuestionAnimationGate } from "./QuestionAnimationGate";
 
 export function QuestionWorkspace({
   question,
@@ -18,12 +19,14 @@ export function QuestionWorkspace({
   onStateChange,
   onPrevious,
   onNext,
+  isAuthenticated,
 }: {
   question: Question;
   state: QuestionState;
   onStateChange: (state: QuestionState) => void;
   onPrevious?: () => void;
   onNext?: () => void;
+  isAuthenticated: boolean;
 }) {
   const [answer, setAnswer] = useState(state.lastAnswer);
   const [revealed, setRevealed] = useState(false);
@@ -94,7 +97,7 @@ export function QuestionWorkspace({
               onClick={() => chooseAnswer(option.label)}
             >
               <strong>{option.label}</strong>
-              <MathContent content={option.value} />
+              <MathContent content={option.value ?? option.text ?? ""} />
             </button>
           ))}
         </div>
@@ -139,6 +142,10 @@ export function QuestionWorkspace({
             <span className="section-label">解析</span>
             <MathContent content={question.explanation || "暂无解析"} />
           </div>
+          <QuestionAnimationGate
+            questionId={question.stableId}
+            isAuthenticated={isAuthenticated}
+          />
         </section>
       )}
 
