@@ -215,4 +215,4 @@ Math2 2021 is excluded from the pilot because both Markdown candidates are title
 - [x] Root Makefile exposes recurring audit/pilot/verification commands when needed.
 - [x] `mingw32-make NPM=npm.cmd verify` passes.
 - [x] Source repository git state and consumed-file hashes are unchanged after work.
-- [ ] Branch uses Conventional Commits and the PR references REQ-002.
+- [x] Branch uses Conventional Commits and PR #2 references REQ-002.

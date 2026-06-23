@@ -84,3 +84,9 @@ Frontend boundary:
 - Math2 content requests use `credentials: "omit"`;
 - only lightweight API helpers and types were added;
 - Math2 remains unavailable in the UI while the pilot batch is staging.
+
+## Delivery
+
+- Branch: `codex/math2-markdown-import`
+- Implementation commit: `5278be0`
+- Pull request: `https://github.com/tiantangyangyang-lang/kaoyan/pull/2`

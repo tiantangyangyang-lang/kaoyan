@@ -25,7 +25,7 @@ Deliver a reviewed, deterministic Math2 Markdown pilot with a transactional MySQ
 - [x] Phase 7: Freeze MySQL/API/import contract in REQ-002.
 - [x] Phase 8: Implement deterministic inventory, transactional import dry-run, content store, and public API tests.
 - [x] Phase 9: Verify no Math2 static asset/bundle integration and rerun `make verify`.
-- [ ] Phase 10: Conventional commit, push, and open PR referencing REQ-002.
+- [x] Phase 10: Conventional commit, push, and open PR referencing REQ-002.
 
 ## Key Questions
 
@@ -60,4 +60,4 @@ Deliver a reviewed, deterministic Math2 Markdown pilot with a transactional MySQ
 
 ## Status
 
-**Currently in Phase 10** — Conventional Commit, push, and dedicated PR.
+**Complete** — implementation commit `5278be0` is pushed and PR #2 references REQ-002.
