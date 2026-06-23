@@ -4,7 +4,7 @@ interface SubjectCatalog {
   subjects: Array<{
     code: SubjectCode;
     name: string;
-    questionBankUrl: string;
+    questionBankUrl?: string;
     enabled: boolean;
     questionCount: number;
   }>;

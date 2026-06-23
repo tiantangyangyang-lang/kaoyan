@@ -11,12 +11,18 @@ import type {
   PublicUser,
   RegistrationResult,
 } from "../src/store.js";
+import type {
+  ContentQuestionDetail,
+  ContentQuestionPage,
+  ContentStore,
+} from "../src/content-store.js";
 
-class MemoryStore implements AuthStore {
+class MemoryStore implements AuthStore, ContentStore {
   users = new Map<string, PasswordUser>();
   tokens = new Map<string, string>();
   sessions = new Map<string, string>();
   learning = new Map<string, LearningStateRecord>();
+  publishedQuestions: ContentQuestionDetail[] = [];
 
   async registerUser(input: {
     email: string;
@@ -105,6 +111,47 @@ class MemoryStore implements AuthStore {
       updatedAt: new Date().toISOString(),
     });
   }
+
+  async listPublishedQuestions(input: {
+    subjectCode: "math2";
+    year?: number;
+    type?: "multiple_choice" | "fill_in_blank" | "solution";
+    page: number;
+    pageSize: number;
+  }): Promise<ContentQuestionPage> {
+    const filtered = this.publishedQuestions.filter(
+      (question) =>
+        (input.year === undefined || question.sourceYear === input.year) &&
+        (input.type === undefined || question.type === input.type),
+    );
+    const offset = (input.page - 1) * input.pageSize;
+    return {
+      items: filtered.slice(offset, offset + input.pageSize).map((question) => ({
+        stableId: question.stableId,
+        sourceYear: question.sourceYear,
+        type: question.type,
+        questionNumber: question.questionNumber,
+        stem: question.stem,
+        options: question.options,
+        finalizationStatus: question.finalizationStatus,
+      })),
+      page: input.page,
+      pageSize: input.pageSize,
+      totalItems: filtered.length,
+      totalPages: Math.ceil(filtered.length / input.pageSize),
+    };
+  }
+
+  async getPublishedQuestion(
+    _subjectCode: "math2",
+    stableId: string,
+  ): Promise<ContentQuestionDetail | null> {
+    return (
+      this.publishedQuestions.find(
+        (question) => question.stableId === stableId,
+      ) ?? null
+    );
+  }
 }
 
 const config: AppConfig = {
@@ -171,4 +218,58 @@ test("register, verify, login, sync and logout", async () => {
 
   await agent.post("/api/auth/logout").expect(204);
   await agent.get("/api/auth/me").expect(401);
+});
+
+test("published Math2 content is public, bounded and split into list/detail", async () => {
+  const store = new MemoryStore();
+  store.publishedQuestions = [
+    {
+      stableId: "math2-2020-q01",
+      sourceYear: 2020,
+      type: "multiple_choice",
+      questionNumber: 1,
+      stem: "Question stem",
+      options: [
+        { label: "A", value: "One" },
+        { label: "B", value: "Two" },
+        { label: "C", value: "Three" },
+        { label: "D", value: "Four" },
+      ],
+      answer: "A",
+      answerStatus: "reviewed",
+      explanation: "Explanation",
+      explanationStatus: "reviewed",
+      reviewStatus: "reviewed",
+      finalizationStatus: "published",
+      knowledgePoints: ["limits"],
+    },
+  ];
+  const app = createApp({
+    config,
+    store,
+    mailer: { async sendVerification() {} },
+  });
+
+  const list = await request(app)
+    .get("/api/content/math2/questions?page=1&pageSize=1&year=2020")
+    .expect(200);
+  assert.match(list.headers["cache-control"], /^public/);
+  assert.equal(list.body.data.items.length, 1);
+  assert.equal("answer" in list.body.data.items[0], false);
+  assert.equal("explanation" in list.body.data.items[0], false);
+
+  const detail = await request(app)
+    .get("/api/content/math2/questions/math2-2020-q01")
+    .expect(200);
+  assert.equal(detail.body.data.answer, "A");
+  assert.equal(detail.body.data.explanation, "Explanation");
+  assert.equal("sourceTraceability" in detail.body.data, false);
+  assert.equal("anomalies" in detail.body.data, false);
+
+  await request(app)
+    .get("/api/content/math2/questions?pageSize=51")
+    .expect(400);
+  await request(app)
+    .get("/api/content/math2/questions/math2-2020-q99")
+    .expect(404);
 });

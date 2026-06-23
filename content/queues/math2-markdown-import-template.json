@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "math2-mechanical-batch-queue-v1",
+  "status": "blocked_until_primary_agent_and_human_pilot_review",
+  "prompt": "prompts/cc-math2-markdown-mechanical-batch.md",
+  "schema": "content/schema/math2-question-staging-v2.schema.json",
+  "referencePilot": "content/staging/math2/2020/questions.json",
+  "tasks": [],
+  "taskContract": {
+    "requiredFields": [
+      "batchId",
+      "year",
+      "primaryRelativePath",
+      "primarySha256",
+      "secondaryRelativePath",
+      "secondarySha256",
+      "expectedCounts",
+      "allowedWritePaths",
+      "forbiddenPaths",
+      "validationCommands",
+      "resultPath"
+    ],
+    "forbiddenPaths": [
+      "D:/work/Kaoyan-Math2-Papers/**",
+      "apps/web/**",
+      "apps/api/**",
+      "content/approved/**",
+      "content/final/**"
+    ],
+    "resultContract": {
+      "mustReport": [
+        "inputPaths",
+        "inputHashes",
+        "filesRead",
+        "questionsGenerated",
+        "questionsSkipped",
+        "anomalyCounts",
+        "changedFiles",
+        "validationCommands",
+        "validationResults"
+      ],
+      "mustRemain": {
+        "reviewStatus": "needs_human_review",
+        "databaseWrites": false,
+        "frontendPublication": false
+      }
+    }
+  }
+}

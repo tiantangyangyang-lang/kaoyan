@@ -46,6 +46,33 @@ export interface QuestionBank {
   questions: Question[];
 }
 
+export interface Math2QuestionListItem {
+  stableId: string;
+  sourceYear: number;
+  type: QuestionType;
+  questionNumber: number;
+  stem: string;
+  options: QuestionOption[];
+  finalizationStatus: FinalizationStatus | "published";
+}
+
+export interface Math2QuestionDetail extends Math2QuestionListItem {
+  answer: string | null;
+  answerStatus: string;
+  explanation: string | null;
+  explanationStatus: string;
+  reviewStatus: string;
+  knowledgePoints: string[];
+}
+
+export interface Math2QuestionPage {
+  items: Math2QuestionListItem[];
+  page: number;
+  pageSize: number;
+  totalItems: number;
+  totalPages: number;
+}
+
 export interface QuestionState {
   mastery: Mastery;
   inWrongBook: boolean;

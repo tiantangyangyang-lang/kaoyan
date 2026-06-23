@@ -1,5 +1,7 @@
 import type {
   AuthUser,
+  Math2QuestionDetail,
+  Math2QuestionPage,
   PaperSessionMap,
   QuestionStateMap,
   SubjectCode,
@@ -20,7 +22,7 @@ async function apiRequest<T>(
 ): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, {
     ...options,
-    credentials: "include",
+    credentials: options.credentials ?? "include",
     headers: {
       "Content-Type": "application/json",
       ...options.headers,
@@ -97,5 +99,34 @@ export async function loadCloudLearningState(subject: SubjectCode) {
       updatedAt: string;
     } | null;
   }>(`/learning-state/${subject}`);
+  return result.data;
+}
+
+export async function loadMath2QuestionPage(input: {
+  page?: number;
+  pageSize?: number;
+  year?: number;
+  type?: "multiple_choice" | "fill_in_blank" | "solution";
+} = {}) {
+  const params = new URLSearchParams();
+  if (input.page !== undefined) params.set("page", String(input.page));
+  if (input.pageSize !== undefined) {
+    params.set("pageSize", String(input.pageSize));
+  }
+  if (input.year !== undefined) params.set("year", String(input.year));
+  if (input.type !== undefined) params.set("type", input.type);
+  const suffix = params.size > 0 ? `?${params.toString()}` : "";
+  const result = await apiRequest<{ data: Math2QuestionPage }>(
+    `/content/math2/questions${suffix}`,
+    { credentials: "omit" },
+  );
+  return result.data;
+}
+
+export async function loadMath2QuestionDetail(stableId: string) {
+  const result = await apiRequest<{ data: Math2QuestionDetail }>(
+    `/content/math2/questions/${encodeURIComponent(stableId)}`,
+    { credentials: "omit" },
+  );
   return result.data;
 }

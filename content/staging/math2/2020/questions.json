@@ -1,0 +1,1189 @@
+{
+  "schemaVersion": "math2-question-staging-v2",
+  "batchId": "REQ-002-math2-2020-pilot",
+  "subjectCode": "math2",
+  "sourceYear": 2020,
+  "sourceRepository": {
+    "name": "Kaoyan-Math2-Papers",
+    "commit": "fd42c56eed412cce0cb97d6bd688f314c78e542e",
+    "branch": "main",
+    "dirty": true
+  },
+  "sourceFiles": [
+    {
+      "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+      "role": "primary_paper_transcription",
+      "gitState": "untracked",
+      "bytes": 6073,
+      "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+      "answerMarkers": 0,
+      "explanationMarkers": 0,
+      "imageReferences": []
+    },
+    {
+      "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+      "role": "comparison_paper_transcription",
+      "gitState": "tracked",
+      "bytes": 6826,
+      "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+      "answerMarkers": 0,
+      "explanationMarkers": 0,
+      "imageReferences": []
+    }
+  ],
+  "questions": [
+    {
+      "stableId": "math2-2020-q01",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 1,
+      "stem": "当 $x \\rightarrow 0^{+}$ 时, 下列无穷小量中最高阶的是().",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\int_{0}^{x}(e^{t^{2}}-1)dt$"
+        },
+        {
+          "label": "B",
+          "value": "$\\int_{0}^{x}\\ln(1+\\sqrt{t^{3}})\\mathrm{d}t$"
+        },
+        {
+          "label": "C",
+          "value": "$\\int_{0}^{\\sin x}\\sin t^{2}dt$"
+        },
+        {
+          "label": "D",
+          "value": "$\\int_{0}^{1-\\cos x}\\sqrt{\\sin^{3}t}dt$"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 9,
+          "lineEnd": 18
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 9,
+          "lineEnd": 18
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q02",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 2,
+      "stem": "$f(x)=\\frac{\\mathrm{e}^{\\frac{1}{x-1}}\\ln\\left|1+x\\right|}{(\\mathrm{e}^{x}-1)(x-2)}$ 的第二类间断点的个数为().",
+      "options": [
+        {
+          "label": "A",
+          "value": "1"
+        },
+        {
+          "label": "B",
+          "value": "2"
+        },
+        {
+          "label": "C",
+          "value": "3"
+        },
+        {
+          "label": "D",
+          "value": "4"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 19,
+          "lineEnd": 28
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 19,
+          "lineEnd": 28
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q03",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 3,
+      "stem": "$\\int_{0}^{1}\\frac{\\arcsin\\sqrt{x}}{\\sqrt{x(1-x)}}\\mathrm{d}x=(\\quad)$ .",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\frac{\\pi^{2}}{4}$"
+        },
+        {
+          "label": "B",
+          "value": "$\\frac{\\pi^{2}}{8}$"
+        },
+        {
+          "label": "C",
+          "value": "$\\frac{\\pi}{4}$"
+        },
+        {
+          "label": "D",
+          "value": "$\\frac{\\pi}{8}$"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 29,
+          "lineEnd": 38
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 29,
+          "lineEnd": 38
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q04",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 4,
+      "stem": "设 $f(x)=x^{2}\\ln(1-x)$ ，当 $n\\geqslant3$ 时， $f^{(n)}(0)=(\\quad)$ .",
+      "options": [
+        {
+          "label": "A",
+          "value": "$-\\frac{n!}{n-2}$"
+        },
+        {
+          "label": "B",
+          "value": "$\\frac{n!}{n-2}$"
+        },
+        {
+          "label": "C",
+          "value": "$-\\frac{(n-2)!}{n}$"
+        },
+        {
+          "label": "D",
+          "value": "$\\frac{(n-2)!}{n}$"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        },
+        {
+          "type": "comparison_incomplete_options",
+          "severity": "warning",
+          "message": "Comparison transcript option labels are ['A', 'B', 'D'].",
+          "blocksPublication": true,
+          "sourceRelativePath": "solutions/2020/math2_2020/math2_2020.md"
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 39,
+          "lineEnd": 48
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 39,
+          "lineEnd": 48
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q05",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 5,
+      "stem": "关于函数 $f(x, y) = \\begin{cases} xy, & xy \\neq 0, \\\\ x, & y = 0, \\\\ y, & x = 0, \\end{cases}$ 给出如下结论\n\n① $\\left.\\frac{\\partial f}{\\partial x}\\right|_{(0,0)}=1;$ \n\n② $\\left.\\frac{\\partial^2f}{\\partial x\\partial y}\\right|_{(0,0)} = 1;$ \n\n③ $\\lim_{(x,y)\\to(0,0)}f(x,y)=0;$ \n\n④ $\\lim_{y\\to0}\\lim_{x\\to0}f(x,y)=0.$ \n\n其中正确的个数是( ).",
+      "options": [
+        {
+          "label": "A",
+          "value": "4"
+        },
+        {
+          "label": "B",
+          "value": "3"
+        },
+        {
+          "label": "C",
+          "value": "2"
+        },
+        {
+          "label": "D",
+          "value": "1"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 49,
+          "lineEnd": 68
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 49,
+          "lineEnd": 65
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q06",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 6,
+      "stem": "设函数 $f(x)$ 在 $[-2,2]$ 上可导，且 $f'(x) > f(x) > 0$ ，则（）.",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\frac{f(-2)}{f(-1)}>1$"
+        },
+        {
+          "label": "B",
+          "value": "$\\frac{f(0)}{f(-1)}>e$"
+        },
+        {
+          "label": "C",
+          "value": "$\\frac{f(1)}{f(-1)}<e^{2}$"
+        },
+        {
+          "label": "D",
+          "value": "$\\frac{f(2)}{f(-1)}<e^{3}$"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        },
+        {
+          "type": "comparison_incomplete_options",
+          "severity": "warning",
+          "message": "Comparison transcript option labels are ['A', 'B', 'C'].",
+          "blocksPublication": true,
+          "sourceRelativePath": "solutions/2020/math2_2020/math2_2020.md"
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 69,
+          "lineEnd": 78
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 66,
+          "lineEnd": 75
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q07",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 7,
+      "stem": "设 4 阶矩阵 $A = (a_{ij})_{4 \\times 4}$ 不可逆, $a_{12}$ 的代数余子式 $A_{12} \\neq 0$ , $\\alpha_{1}, \\alpha_{2}, \\alpha_{3}, \\alpha_{4}$ 为矩阵 $A$ 的列向量组, $A^{*}$ 为 $A$ 的伴随矩阵, 则方程组 $A^{*}X = 0$ 的通解为 ( ).",
+      "options": [
+        {
+          "label": "A",
+          "value": "$X=k_{1}\\alpha_{1}+k_{2}\\alpha_{2}+k_{3}\\alpha_{3}$ ，其中 $k_{1},k_{2},k_{3}$ 为任意常数"
+        },
+        {
+          "label": "B",
+          "value": "$X=k_{1}\\alpha_{1}+k_{2}\\alpha_{2}+k_{3}\\alpha_{4}$ ，其中 $k_{1},k_{2},k_{3}$ 为任意常数"
+        },
+        {
+          "label": "C",
+          "value": "$X=k_{1}\\alpha_{1}+k_{2}\\alpha_{3}+k_{3}\\alpha_{4}$ ，其中 $k_{1},k_{2},k_{3}$ 为任意常数"
+        },
+        {
+          "label": "D",
+          "value": "$X=k_{1}\\alpha_{2}+k_{2}\\alpha_{3}+k_{3}\\alpha_{4}$ ，其中 $k_{1},k_{2},k_{3}$ 为任意常数"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 79,
+          "lineEnd": 88
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 76,
+          "lineEnd": 82
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q08",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 8,
+      "stem": "设 A 为 3 阶矩阵, $\\alpha_{1}, \\alpha_{2}$ 为 A 的属于特征值 1 的线性无关的特征向量, $\\alpha_{3}$ 为 A 的属于特征值 -1 的特征向量, 则使得 $P^{-1}AP = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$ 的可逆矩阵 P 为().",
+      "options": [
+        {
+          "label": "A",
+          "value": "$(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{3},\\boldsymbol{\\alpha}_{2},-\\boldsymbol{\\alpha}_{3})$"
+        },
+        {
+          "label": "B",
+          "value": "$(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2},\\boldsymbol{\\alpha}_{2},-\\boldsymbol{\\alpha}_{3})$"
+        },
+        {
+          "label": "C",
+          "value": "$(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{3},-\\boldsymbol{\\alpha}_{3},\\boldsymbol{\\alpha}_{2})$"
+        },
+        {
+          "label": "D",
+          "value": "$(\\pmb{\\alpha}_{1} + \\pmb{\\alpha}_{2}, - \\pmb{\\alpha}_{3}, \\pmb{\\alpha}_{2})$ \n\n## 二、填空题(9～14小题,每小题4分,共24分.请将答案写在题中的横线上.)"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 89,
+          "lineEnd": 100
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 83,
+          "lineEnd": 94
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q09",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 9,
+      "stem": "设 $\\left\\{\\begin{aligned} x &= \\sqrt{t^{2}+1}, \\\\ y &= \\ln(t+\\sqrt{t^{2}+1})\\end{aligned}\\right.$ ，则 $\\left.\\frac{d^{2}y}{dx^{2}}\\right|_{t=1}=$ ____.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 101,
+          "lineEnd": 102
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 95,
+          "lineEnd": 96
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q10",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 10,
+      "stem": "$\\int_{0}^{1}\\mathrm{d}y\\int_{\\sqrt{y}}^{1}\\sqrt{x^{3}+1}\\mathrm{d}x=$ ____.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 103,
+          "lineEnd": 104
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 97,
+          "lineEnd": 98
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q11",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 11,
+      "stem": "设 $z = \\arctan[xy + \\sin(x + y)]$ ，则 $\\mathrm{d}z|_{(0,\\pi)} =$ ____.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 105,
+          "lineEnd": 106
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 99,
+          "lineEnd": 100
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q12",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 12,
+      "stem": "斜边长为 2a 的等腰直角三角形平板铅直地沉入水中, 且斜边与水面相齐, 记重力加速度为 g, 水密度为 $\\rho$ , 则该平板一侧所受的水压力为 ____.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 107,
+          "lineEnd": 108
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 101,
+          "lineEnd": 102
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q13",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 13,
+      "stem": "设 $y = y(x)$ 满足 $y'' + 2y' + y = 0$ ，且 $y(0) = 0, y'(0) = 1$ ，则 $\\int_{0}^{+\\infty} y(x) \\, dx =$ ____ .",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 109,
+          "lineEnd": 110
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 103,
+          "lineEnd": 104
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q14",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 14,
+      "stem": "行列式 $\\begin{vmatrix} a & 0 & -1 & 1 \\\\ 0 & a & 1 & -1 \\\\ -1 & 1 & a & 0 \\\\ 1 & -1 & 0 & a \\end{vmatrix} =$ ____.\n\n## 三、解答题(15～23小题,共94分.解答应写出文字说明、证明过程或演算步骤.)",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 111,
+          "lineEnd": 114
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 105,
+          "lineEnd": 108
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q15",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 15,
+      "stem": "(本题满分10分)\n\n求曲线 $y=\\frac{x^{1+x}}{(1+x)^{x}}(x>0)$ 的斜渐近线方程.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 115,
+          "lineEnd": 118
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 109,
+          "lineEnd": 112
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q16",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 16,
+      "stem": "(本题满分10分)\n\n已知函数 $f(x)$ 连续且 $\\lim_{x\\to 0}\\frac{f(x)}{x} = 1,g(x) = \\int_0^1 f(xt)\\mathrm{d}t$ ，求 $g^{\\prime}(x)$ ，并证明 $g^{\\prime}(x)$ 在 $x = 0$ 处连续.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 119,
+          "lineEnd": 122
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 113,
+          "lineEnd": 116
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q17",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 17,
+      "stem": "(本题满分10分)\n\n求函数 $f(x,y) = x^{3} + 8y^{3} - xy$ 的极值.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 123,
+          "lineEnd": 126
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 117,
+          "lineEnd": 120
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q18",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 18,
+      "stem": "(本题满分10分)\n\n设函数 $f(x)$ 的定义域为 $(0, +\\infty)$ 且满足 $2f(x) + x^2 f\\left(\\frac{1}{x}\\right) = \\frac{x^2 + 2x}{\\sqrt{1 + x^2}}$ ，求 $f(x)$ ，并求曲线 $y = f(x), y = \\frac{1}{2}, y = \\frac{\\sqrt{3}}{2}$ 及 $y$ 轴所围图形绕 $x$ 轴旋转所成旋转体的体积.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 127,
+          "lineEnd": 130
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 121,
+          "lineEnd": 124
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q19",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 19,
+      "stem": "(本题满分10分)\n\n平面区域 D 由直线 x=1, x=2, y=x 与 x 轴围成，计算 $\\iint_{D}\\frac{\\sqrt{x^{2}+y^{2}}}{x}dx dy$ .",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 131,
+          "lineEnd": 134
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 125,
+          "lineEnd": 128
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q20",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 20,
+      "stem": "(本题满分11分)\n\n设 $f(x)=\\int_{1}^{x}\\mathrm{e}^{t^{2}}\\mathrm{d}t.$ \n\n（Ⅰ）证明：存在 $\\xi\\in(1,2)$ ，使得 $f(\\xi)=(2-\\xi)\\mathrm{e}^{\\xi^{2}}$ ；\n\n（Ⅱ）证明：存在 $\\eta\\in(1,2)$ ，使得 $f(2)=\\ln2\\cdot\\eta e^{\\eta^{2}}$",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 135,
+          "lineEnd": 142
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 129,
+          "lineEnd": 135
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q21",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 21,
+      "stem": "(本题满分11分)\n\n设曲线 $y=f(x)$ 可导，且 $f'(x)>0$ ，曲线 $y=f(x)(x\\geqslant0)$ 经过坐标原点 O，其上任意一点 M 处的切线与 x 轴交于 T，又 MP 垂直 x 轴于点 P，已知由曲线 $y=f(x)$ ，直线 MP 以及 x 轴所围图形的面积与 $\\triangle MTP$ 的面积之比恒为 3:2，求满足上述条件的曲线方程.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 143,
+          "lineEnd": 146
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 136,
+          "lineEnd": 139
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q22",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 22,
+      "stem": "(本题满分11分)\n\n设二次型 $f(x_{1},x_{2},x_{3})=x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+2ax_{1}x_{2}+2ax_{1}x_{3}+2ax_{2}x_{3}$ 经可逆线性变换 $\\begin{pmatrix}x_{1}\\\\x_{2}\\\\x_{3}\\\\x_{4}\\end{pmatrix}=P\\begin{pmatrix}y_{1}\\\\y_{2}\\\\y_{3}\\\\y_{4}\\end{pmatrix}$ 化为二次型 $g(y_{1},y_{2},y_{3})=y_{1}^{2}+y_{2}^{2}+4y_{3}^{2}+2y_{1}y_{2}.$ \n\n(I) 求 a 的值;\n\n(Ⅱ) 求可逆矩阵 P.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        },
+        {
+          "type": "formula_dimension_conflict",
+          "severity": "error",
+          "message": "The source describes three-variable quadratic forms but the transformation contains x_4/y_4; mathematical repair is forbidden.",
+          "blocksPublication": true,
+          "sourceRelativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md"
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 147,
+          "lineEnd": 154
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 140,
+          "lineEnd": 146
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2020-q23",
+      "sourceYear": 2020,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 23,
+      "stem": "(本题满分11分)\n\n设 A 为 2 阶矩阵, $P = (\\alpha, A\\alpha)$ , 其中 $\\alpha$ 是非零向量且不是 A 的特征向量.\n\n(Ⅰ) 证明: P 为可逆矩阵;\n\n(Ⅱ) 若 $A^{2}\\alpha + A\\alpha - 6\\alpha = 0$ ，求 $P^{-1}AP$ ，并判断 A 是否相似于对角矩阵.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+          "role": "primary_paper_transcription",
+          "gitState": "untracked",
+          "sha256": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+          "lineStart": 155,
+          "lineEnd": 161
+        },
+        {
+          "relativePath": "solutions/2020/math2_2020/math2_2020.md",
+          "role": "comparison_paper_transcription",
+          "gitState": "tracked",
+          "sha256": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7",
+          "lineStart": 147,
+          "lineEnd": 152
+        }
+      ]
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "solution_path_contains_paper_transcription",
+      "severity": "error",
+      "message": "The Markdown under solutions/2020 has 23 question boundaries but no explicit answer or explanation markers; it is comparison-only evidence.",
+      "blocksPublication": true,
+      "sourceRelativePath": "solutions/2020/math2_2020/math2_2020.md"
+    }
+  ],
+  "validation": {
+    "inputFilesRead": 2,
+    "questionsGenerated": 23,
+    "questionCounts": {
+      "multiple_choice": 8,
+      "fill_in_blank": 6,
+      "solution": 9
+    },
+    "expectedCounts": {
+      "multiple_choice": 8,
+      "fill_in_blank": 6,
+      "solution": 9
+    },
+    "countsMatch": true,
+    "stableIdsUnique": true,
+    "allQuestionsBlocked": true,
+    "answersPresent": 0,
+    "explanationsPresent": 0,
+    "schemaValid": true,
+    "schemaErrors": []
+  }
+}

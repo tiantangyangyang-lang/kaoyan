@@ -34,9 +34,9 @@ await writeFile(
         {
           code: "math2",
           name: "数学二",
-          questionBankUrl: "/data/math2.json",
           enabled: false,
           questionCount: 0,
+          delivery: "api",
         },
       ],
     },

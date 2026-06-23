@@ -12,6 +12,12 @@ import type {
   PublicUser,
   RegistrationResult,
 } from "./store.js";
+import type {
+  ContentOption,
+  ContentQuestionDetail,
+  ContentQuestionPage,
+  ContentStore,
+} from "./content-store.js";
 
 interface UserRow extends RowDataPacket {
   id: string;
@@ -79,6 +85,55 @@ const schemaStatements = [
     PRIMARY KEY (user_id, subject_code),
     CONSTRAINT fk_kaoyan_learning_user FOREIGN KEY (user_id) REFERENCES kaoyan_users(id) ON DELETE CASCADE
   )`,
+  `CREATE TABLE IF NOT EXISTS kaoyan_content_batches (
+    id VARCHAR(128) PRIMARY KEY,
+    subject_code VARCHAR(32) NOT NULL,
+    source_year SMALLINT UNSIGNED NOT NULL,
+    schema_version VARCHAR(64) NOT NULL,
+    source_repo VARCHAR(128) NOT NULL,
+    source_commit CHAR(40) NOT NULL,
+    source_dirty BOOLEAN NOT NULL,
+    source_files JSON NOT NULL,
+    expected_counts JSON NOT NULL,
+    actual_counts JSON NOT NULL,
+    content_hash CHAR(64) NOT NULL,
+    status ENUM('staging', 'published', 'superseded', 'failed') NOT NULL DEFAULT 'staging',
+    published_slot VARCHAR(64) GENERATED ALWAYS AS (
+      CASE WHEN status = 'published' THEN CONCAT(subject_code, ':', source_year) ELSE NULL END
+    ) STORED,
+    created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+    published_at DATETIME(3) NULL,
+    INDEX idx_content_batch_public (subject_code, status, source_year),
+    INDEX idx_content_batch_year (subject_code, source_year),
+    UNIQUE KEY uq_content_published_slot (published_slot)
+  )`,
+  `CREATE TABLE IF NOT EXISTS kaoyan_questions (
+    batch_id VARCHAR(128) NOT NULL,
+    stable_id VARCHAR(64) NOT NULL,
+    subject_code VARCHAR(32) NOT NULL,
+    source_year SMALLINT UNSIGNED NOT NULL,
+    question_number SMALLINT UNSIGNED NOT NULL,
+    question_type VARCHAR(32) NOT NULL,
+    stem MEDIUMTEXT NOT NULL,
+    options_json JSON NOT NULL,
+    answer_text MEDIUMTEXT NULL,
+    answer_status VARCHAR(64) NOT NULL,
+    explanation_text LONGTEXT NULL,
+    explanation_status VARCHAR(64) NOT NULL,
+    source_traceability JSON NOT NULL,
+    review_status VARCHAR(64) NOT NULL,
+    finalization_status VARCHAR(64) NOT NULL,
+    knowledge_points JSON NOT NULL,
+    anomalies JSON NOT NULL,
+    created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+    PRIMARY KEY (batch_id, stable_id),
+    UNIQUE KEY uq_question_batch_number (batch_id, question_number),
+    CONSTRAINT fk_kaoyan_question_batch FOREIGN KEY (batch_id) REFERENCES kaoyan_content_batches(id) ON DELETE CASCADE,
+    INDEX idx_question_list (subject_code, source_year, question_type, question_number),
+    INDEX idx_question_stable (stable_id)
+  )`,
 ];
 
 export async function initializeDatabase(pool: Pool): Promise<void> {
@@ -99,7 +154,36 @@ const toPublicUser = (row: UserRow): PublicUser => ({
   emailVerified: Boolean(row.email_verified_at),
 });
 
-export class MySqlAuthStore implements AuthStore {
+interface QuestionContentRow extends RowDataPacket {
+  stable_id: string;
+  source_year: number;
+  question_type: string;
+  question_number: number;
+  stem: string;
+  options_json: string | ContentOption[];
+  answer_text: string | null;
+  answer_status: string;
+  explanation_text: string | null;
+  explanation_status: string;
+  review_status: string;
+  finalization_status: string;
+  knowledge_points: string | string[];
+}
+
+const parseJson = <T>(value: string | T): T =>
+  typeof value === "string" ? (JSON.parse(value) as T) : value;
+
+const toListItem = (row: QuestionContentRow) => ({
+  stableId: row.stable_id,
+  sourceYear: row.source_year,
+  type: row.question_type,
+  questionNumber: row.question_number,
+  stem: row.stem,
+  options: parseJson<ContentOption[]>(row.options_json),
+  finalizationStatus: row.finalization_status,
+});
+
+export class MySqlAuthStore implements AuthStore, ContentStore {
   constructor(private readonly pool: Pool) {}
 
   async registerUser(input: {
@@ -318,5 +402,84 @@ export class MySqlAuthStore implements AuthStore {
         JSON.stringify(input.paperSessions),
       ],
     );
+  }
+
+  async listPublishedQuestions(input: {
+    subjectCode: "math2";
+    year?: number;
+    type?: "multiple_choice" | "fill_in_blank" | "solution";
+    page: number;
+    pageSize: number;
+  }): Promise<ContentQuestionPage> {
+    const filters = ["b.status = 'published'", "q.subject_code = ?"];
+    const params: Array<string | number> = [input.subjectCode];
+    if (input.year !== undefined) {
+      filters.push("q.source_year = ?");
+      params.push(input.year);
+    }
+    if (input.type !== undefined) {
+      filters.push("q.question_type = ?");
+      params.push(input.type);
+    }
+    const where = filters.join(" AND ");
+    const [countRows] = await this.pool.query<
+      Array<RowDataPacket & { total: number }>
+    >(
+      `SELECT COUNT(*) AS total
+       FROM kaoyan_questions q
+       JOIN kaoyan_content_batches b ON b.id = q.batch_id
+       WHERE ${where}`,
+      params,
+    );
+    const totalItems = Number(countRows[0]?.total ?? 0);
+    const offset = (input.page - 1) * input.pageSize;
+    const [rows] = await this.pool.query<QuestionContentRow[]>(
+      `SELECT q.stable_id, q.source_year, q.question_type, q.question_number,
+              q.stem, q.options_json, q.answer_text, q.answer_status,
+              q.explanation_text, q.explanation_status, q.review_status,
+              q.finalization_status, q.knowledge_points
+       FROM kaoyan_questions q
+       JOIN kaoyan_content_batches b ON b.id = q.batch_id
+       WHERE ${where}
+       ORDER BY q.source_year DESC, q.question_number ASC
+       LIMIT ? OFFSET ?`,
+      [...params, input.pageSize, offset],
+    );
+    return {
+      items: rows.map(toListItem),
+      page: input.page,
+      pageSize: input.pageSize,
+      totalItems,
+      totalPages: Math.ceil(totalItems / input.pageSize),
+    };
+  }
+
+  async getPublishedQuestion(
+    subjectCode: "math2",
+    stableId: string,
+  ): Promise<ContentQuestionDetail | null> {
+    const [rows] = await this.pool.query<QuestionContentRow[]>(
+      `SELECT q.stable_id, q.source_year, q.question_type, q.question_number,
+              q.stem, q.options_json, q.answer_text, q.answer_status,
+              q.explanation_text, q.explanation_status, q.review_status,
+              q.finalization_status, q.knowledge_points
+       FROM kaoyan_questions q
+       JOIN kaoyan_content_batches b ON b.id = q.batch_id
+       WHERE b.status = 'published' AND q.subject_code = ? AND q.stable_id = ?
+       LIMIT 1`,
+      [subjectCode, stableId],
+    );
+    const row = rows[0];
+    return row
+      ? {
+          ...toListItem(row),
+          answer: row.answer_text,
+          answerStatus: row.answer_status,
+          explanation: row.explanation_text,
+          explanationStatus: row.explanation_status,
+          reviewStatus: row.review_status,
+          knowledgePoints: parseJson<string[]>(row.knowledge_points),
+        }
+      : null;
   }
 }

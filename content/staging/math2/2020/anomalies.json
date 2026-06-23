@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "math2-question-staging-v2",
+  "totalAnomalies": 27,
+  "anomalies": [
+    {
+      "type": "solution_path_contains_paper_transcription",
+      "severity": "error",
+      "message": "The Markdown under solutions/2020 has 23 question boundaries but no explicit answer or explanation markers; it is comparison-only evidence.",
+      "blocksPublication": true,
+      "sourceRelativePath": "solutions/2020/math2_2020/math2_2020.md"
+    },
+    {
+      "stableId": "math2-2020-q01",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q02",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q03",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q04",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q04",
+      "type": "comparison_incomplete_options",
+      "severity": "warning",
+      "message": "Comparison transcript option labels are ['A', 'B', 'D'].",
+      "blocksPublication": true,
+      "sourceRelativePath": "solutions/2020/math2_2020/math2_2020.md"
+    },
+    {
+      "stableId": "math2-2020-q05",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q06",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q06",
+      "type": "comparison_incomplete_options",
+      "severity": "warning",
+      "message": "Comparison transcript option labels are ['A', 'B', 'C'].",
+      "blocksPublication": true,
+      "sourceRelativePath": "solutions/2020/math2_2020/math2_2020.md"
+    },
+    {
+      "stableId": "math2-2020-q07",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q08",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q09",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q10",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q11",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q12",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q13",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q14",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q15",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q16",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q17",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q18",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q19",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q20",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q21",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q22",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2020-q22",
+      "type": "formula_dimension_conflict",
+      "severity": "error",
+      "message": "The source describes three-variable quadratic forms but the transformation contains x_4/y_4; mathematical repair is forbidden.",
+      "blocksPublication": true,
+      "sourceRelativePath": "papers/MinerU_markdown_math2_2020_2065687152877731840.md"
+    },
+    {
+      "stableId": "math2-2020-q23",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    }
+  ]
+}
