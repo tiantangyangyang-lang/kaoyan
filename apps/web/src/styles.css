@@ -1894,3 +1894,154 @@ textarea:focus-visible {
     transition: none !important;
   }
 }
+.animation-locked,
+.animation-loading,
+.animation-error {
+  margin-top: 18px;
+  border: 1px dashed #c7d2fe;
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: #f8faff;
+  color: #475569;
+}
+
+.animation-locked {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.animation-locked > span {
+  color: #4f46e5;
+  font-size: 24px;
+}
+
+.animation-locked p {
+  margin: 4px 0 0;
+}
+
+.animation-error {
+  border-color: #fecaca;
+  background: #fff7f7;
+  color: #b91c1c;
+}
+
+.math-animation-card {
+  --animation-accent: #4f46e5;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
+  gap: 24px;
+  margin-top: 22px;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--animation-accent) 24%, #e2e8f0);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--animation-accent) 14%, transparent), transparent 34%),
+    #ffffff;
+}
+
+.math-animation-copy h3 {
+  margin: 8px 0 6px;
+  font-size: 1.2rem;
+}
+
+.math-animation-copy > p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.math-animation-steps {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.math-animation-steps button {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  border: 0;
+  border-radius: 11px;
+  padding: 9px 11px;
+  background: #f1f5f9;
+  color: #475569;
+  text-align: left;
+  cursor: pointer;
+}
+
+.math-animation-steps button span {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.math-animation-steps button.active {
+  background: color-mix(in srgb, var(--animation-accent) 12%, white);
+  color: var(--animation-accent);
+  font-weight: 700;
+}
+
+.math-animation-explanation {
+  min-height: 48px;
+  margin: 14px 0;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.animation-play {
+  margin-top: 2px;
+}
+
+.math-animation-stage {
+  display: grid;
+  min-height: 300px;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #f8fafc, #eef2ff);
+}
+
+.math-animation-stage svg {
+  width: min(100%, 430px);
+  max-height: 340px;
+  overflow: visible;
+}
+
+.math-animation-stage text {
+  fill: #334155;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.math-animation-axes line {
+  stroke: #94a3b8;
+  stroke-width: 1.5;
+}
+
+.math-animation-axes path {
+  fill: #94a3b8;
+}
+
+@media (max-width: 820px) {
+  .math-animation-card {
+    grid-template-columns: 1fr;
+  }
+
+  .math-animation-stage {
+    min-height: 250px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .math-animation-card *,
+  .math-animation-card *::before,
+  .math-animation-card *::after {
+    scroll-behavior: auto !important;
+  }
+}

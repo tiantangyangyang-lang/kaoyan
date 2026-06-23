@@ -4,6 +4,7 @@ import type {
   Math2QuestionPage,
   PaperSessionMap,
   QuestionStateMap,
+  QuestionAnimation,
   SubjectCode,
 } from "./types";
 
@@ -129,4 +130,25 @@ export async function loadMath2QuestionDetail(stableId: string) {
     { credentials: "omit" },
   );
   return result.data;
+}
+
+export async function loadQuestionAnimation(
+  questionId: string,
+  signal?: AbortSignal,
+) {
+  const result = await apiRequest<{ animation: QuestionAnimation }>(
+    `/question-animations/${encodeURIComponent(questionId)}`,
+    { signal },
+  );
+  return result.animation;
+}
+
+export async function getQuestionAnimationAvailability(
+  questionId: string,
+  signal?: AbortSignal,
+) {
+  return apiRequest<{ available: boolean }>(
+    `/question-animations/${encodeURIComponent(questionId)}/availability`,
+    { signal },
+  );
 }

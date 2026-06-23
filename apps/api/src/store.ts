@@ -14,6 +14,13 @@ export interface LearningStateRecord {
   updatedAt: string;
 }
 
+export interface QuestionAnimationRecord {
+  questionId: string;
+  subjectCode: string;
+  payload: Record<string, unknown>;
+  updatedAt: string;
+}
+
 export type RegistrationResult =
   | { status: "ready"; userId: string }
   | { status: "email_taken" };
@@ -49,4 +56,8 @@ export interface AuthStore {
     questionStates: Record<string, unknown>;
     paperSessions: Record<string, unknown>;
   }): Promise<void>;
+  getQuestionAnimation(
+    questionId: string,
+  ): Promise<QuestionAnimationRecord | null>;
+  hasQuestionAnimation(questionId: string): Promise<boolean>;
 }

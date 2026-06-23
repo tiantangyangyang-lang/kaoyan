@@ -248,6 +248,7 @@ export function App() {
       {view === "practice" && selectedQuestion && (
         <div className="practice-layout">
           <QuestionWorkspace
+            key={selectedQuestion.stableId}
             question={selectedQuestion}
             state={getQuestionState(states, selectedQuestion.stableId)}
             onStateChange={updateQuestionState}
@@ -261,6 +262,7 @@ export function App() {
                 ? () => openQuestion(questions[selectedIndex + 1])
                 : undefined
             }
+            isAuthenticated={Boolean(user)}
           />
           <aside className="practice-aside">
             <span>题库位置</span>

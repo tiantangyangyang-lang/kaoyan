@@ -91,3 +91,13 @@ CREATE TABLE IF NOT EXISTS kaoyan_questions (
   INDEX idx_question_list (subject_code, source_year, question_type, question_number),
   INDEX idx_question_stable (stable_id)
 );
+
+CREATE TABLE IF NOT EXISTS kaoyan_question_animations (
+  question_id VARCHAR(64) PRIMARY KEY,
+  subject_code VARCHAR(32) NOT NULL,
+  payload JSON NOT NULL,
+  is_active BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  INDEX idx_question_animation_subject (subject_code, is_active)
+);

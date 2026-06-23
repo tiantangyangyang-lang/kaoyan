@@ -74,6 +74,15 @@ Render 日志显示 `ENOTFOUND`。
 VITE_API_BASE_URL=https://api.gongren.xyz/api
 ```
 
+Cloudflare Pages 的 Preview 与 Production 环境都必须配置该变量。API 允许
+`https://gongren.xyz`，以及本项目的 HTTPS 预览域名
+`*.kaoyan-ddg.pages.dev`。对应 Render 环境变量：
+
+```text
+WEB_ORIGIN=https://gongren.xyz
+WEB_ORIGIN_SUFFIXES=.kaoyan-ddg.pages.dev
+```
+
 ## Render 构建
 
 Blueprint 已固定：
