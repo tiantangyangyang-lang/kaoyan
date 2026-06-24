@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kaoyan.local/schema/math2-question-staging-v2.schema.json",
+  "title": "Math2 Question Staging V2",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "batchId",
+    "subjectCode",
+    "sourceYear",
+    "sourceRepository",
+    "sourceFiles",
+    "questions",
+    "anomalies",
+    "validation"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "math2-question-staging-v2" },
+    "batchId": { "type": "string", "minLength": 1 },
+    "subjectCode": { "const": "math2" },
+    "sourceYear": { "const": 2020 },
+    "sourceRepository": { "type": "object" },
+    "sourceFiles": { "type": "array", "minItems": 2 },
+    "questions": {
+      "type": "array",
+      "minItems": 23,
+      "maxItems": 23,
+      "items": { "$ref": "#/$defs/question" }
+    },
+    "anomalies": { "type": "array" },
+    "validation": { "type": "object" }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "option": {
+      "type": "object",
+      "required": ["label", "value"],
+      "properties": {
+        "label": { "enum": ["A", "B", "C", "D"] },
+        "value": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "stableId",
+        "sourceYear",
+        "subjectCode",
+        "type",
+        "questionNumber",
+        "stem",
+        "options",
+        "answer",
+        "answerStatus",
+        "explanation",
+        "explanationStatus",
+        "reviewStatus",
+        "finalizationStatus",
+        "knowledgePoints",
+        "anomalies",
+        "sourceEvidence"
+      ],
+      "properties": {
+        "stableId": { "pattern": "^math2-2020-q(?:0[1-9]|1[0-9]|2[0-3])$" },
+        "sourceYear": { "const": 2020 },
+        "subjectCode": { "const": "math2" },
+        "type": {
+          "enum": ["multiple_choice", "fill_in_blank", "solution"]
+        },
+        "questionNumber": { "type": "integer", "minimum": 1, "maximum": 23 },
+        "stem": { "type": "string", "minLength": 1 },
+        "options": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/option" }
+        },
+        "answer": { "type": "null" },
+        "answerStatus": { "const": "missing" },
+        "explanation": { "type": "null" },
+        "explanationStatus": { "const": "missing" },
+        "reviewStatus": { "const": "needs_human_review" },
+        "finalizationStatus": { "const": "blocked" },
+        "knowledgePoints": { "type": "array", "items": { "type": "string" } },
+        "anomalies": { "type": "array" },
+        "sourceEvidence": { "type": "array", "minItems": 2 }
+      },
+      "additionalProperties": false
+    }
+  }
+}

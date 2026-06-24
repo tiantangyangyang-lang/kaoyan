@@ -85,5 +85,5 @@ JSON 备份格式为 `kaoyan-learning-export-v2`，包含上述两类数据。
 
 1. 增加账号与匿名数据迁移，将本地状态同步到服务端。
 2. 将 `QuestionState` 和 `PaperSession` 映射为数据库表，保留当前 JSON 导入作为恢复入口。
-3. 接入数学二题库，只新增 `subjects.json` 条目和 `math2.json` 数据，不重写页面。
+3. 数学二题库通过分页 API 与单题详情 API 按需读取，不生成或复制 `math2.json` 静态整库。
 4. 完成知识点标注后，再增加有证据题号和样本量的薄弱点分析。

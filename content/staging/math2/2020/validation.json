@@ -1,0 +1,21 @@
+{
+  "inputFilesRead": 2,
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "expectedCounts": {
+    "multiple_choice": 8,
+    "fill_in_blank": 6,
+    "solution": 9
+  },
+  "countsMatch": true,
+  "stableIdsUnique": true,
+  "allQuestionsBlocked": true,
+  "answersPresent": 0,
+  "explanationsPresent": 0,
+  "schemaValid": true,
+  "schemaErrors": []
+}

@@ -10,6 +10,7 @@ import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import { z } from "zod";
 import type { AppConfig } from "./config.js";
+import type { ContentStore } from "./content-store.js";
 import type { VerificationMailer } from "./mailer.js";
 import { createOpaqueToken, hashToken } from "./security.js";
 import type { AuthStore, PublicUser } from "./store.js";
@@ -56,7 +57,7 @@ export function createApp({
   mailer,
 }: {
   config: AppConfig;
-  store: AuthStore;
+  store: AuthStore & ContentStore;
   mailer: VerificationMailer;
 }) {
   const app = express();
@@ -97,6 +98,15 @@ export function createApp({
           standardHeaders: "draft-8",
           legacyHeaders: false,
         });
+  const contentLimiter =
+    config.NODE_ENV === "test"
+      ? (_request: Request, _response: Response, next: NextFunction) => next()
+      : rateLimit({
+          windowMs: 60 * 1000,
+          limit: 120,
+          standardHeaders: "draft-8",
+          legacyHeaders: false,
+        });
 
   const setSessionCookie = (response: Response, token: string) => {
     response.cookie(SESSION_COOKIE, token, getSessionCookieOptions(config));
@@ -128,6 +138,61 @@ export function createApp({
   app.get("/health", (_request, response) => {
     response.json({ status: "ok" });
   });
+
+  app.get(
+    "/api/content/math2/questions",
+    contentLimiter,
+    async (request, response, next) => {
+      try {
+        const query = z
+          .object({
+            page: z.coerce.number().int().min(1).default(1),
+            pageSize: z.coerce.number().int().min(1).max(50).default(20),
+            year: z.coerce.number().int().min(1987).max(2100).optional(),
+            type: z
+              .enum(["multiple_choice", "fill_in_blank", "solution"])
+              .optional(),
+          })
+          .parse(request.query);
+        const data = await store.listPublishedQuestions({
+          subjectCode: "math2",
+          ...query,
+        });
+        response.set(
+          "Cache-Control",
+          "public, max-age=300, stale-while-revalidate=600",
+        );
+        response.json({ data });
+      } catch (error) {
+        next(error);
+      }
+    },
+  );
+
+  app.get(
+    "/api/content/math2/questions/:stableId",
+    contentLimiter,
+    async (request, response, next) => {
+      try {
+        const stableId = z
+          .string()
+          .regex(/^math2-\d{4}-q\d{2}$/)
+          .parse(request.params.stableId);
+        const data = await store.getPublishedQuestion("math2", stableId);
+        if (!data) {
+          response.status(404).json({ error: "question_not_found" });
+          return;
+        }
+        response.set(
+          "Cache-Control",
+          "public, max-age=1800, stale-while-revalidate=3600",
+        );
+        response.json({ data });
+      } catch (error) {
+        next(error);
+      }
+    },
+  );
 
   app.post("/api/auth/register", authLimiter, async (request, response, next) => {
     try {
