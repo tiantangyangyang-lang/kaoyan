@@ -78,4 +78,12 @@ report dir. Decision: already covered; no change.
 
 ## Verification
 
-`mingw32-make NPM=npm.cmd verify` run on the branch (docs-only change).
+`mingw32-make NPM=npm.cmd verify` run on the branch (docs-only change). Result: exit 0 (2020 schemaValid, 96 KaTeX/0 errors, 10 API tests, web smoke, web/API builds, compileall).
+
+## Delivery
+
+- Branch: `codex/agent-workflow-ecc-ref` (based on `origin/main` `d20a724`).
+- Commit: `9233c52` — `docs(workflow): adopt ECC security guardrails + Math2 data discipline` (4 files, +212/-1).
+- PR: https://github.com/tiantangyangyang-lang/kaoyan/pull/5 (base `main`, head `codex/agent-workflow-ecc-ref`).
+- Source repo `D:\work\Kaoyan-Math2-Papers` untouched; unchanged at `fd42c56`.
+- ECC: reviewed read-only via `gh api`; not installed, not vendored.
