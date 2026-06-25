@@ -29,7 +29,7 @@ decision to primary Codex. Do not force a staging through OCR corruption.
 - [x] Phase 8: Write REQ-004, audit report, task_plan, notes.
 - [x] Phase 9: Run `mingw32-make NPM=npm.cmd verify`.
 - [x] Phase 10: Record source commit/dirty state after audit (unchanged).
-- [ ] Phase 11: Commit, push, open PR. (in progress)
+- [x] Phase 11: Commit, push, open PR (#4).
 - [ ] Phase 12: Primary Codex decision on (a)/(b)/(c); follow-up REQ-005 scopes execution.
 
 ## Decisions Made
@@ -52,5 +52,15 @@ decision to primary Codex. Do not force a staging through OCR corruption.
 
 ## Status
 
-**Phase 11 in progress.** Audit complete; 2023 staging blocked on a primary-Codex
-decision (OCR recovery / source-role / schema relaxation). Push and PR follow.
+**Phase 11 complete.** Audit complete; 2023 staging blocked on a primary-Codex
+decision (OCR recovery / source-role / schema relaxation). Committed `aa664ca`,
+pushed `codex/math2-2023-audit`, opened PR #4 (base `main`).
+
+## Delivery
+
+- Branch: `codex/math2-2023-audit` (based on `origin/main` `d20a724`).
+- Commit: `aa664ca` — `docs(math2): audit 2023 staging, block on OCR/source-role decision` (4 files, +378).
+- PR: https://github.com/tiantangyangyang-lang/kaoyan/pull/4 (base `main`, head `codex/math2-2023-audit`).
+- Source repo `D:\work\Kaoyan-Math2-Papers` unchanged at `fd42c56` before and after.
+- Verification: `mingw32-make NPM=npm.cmd verify` passed (docs-only; no 2023 code).
+- Pending: primary-Codex decision on (a) re-OCR / (b) promote comparison / (c) relax schema.
