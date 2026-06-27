@@ -1,0 +1,231 @@
+{
+  "schemaVersion": "math2-full-import-prep-queue-v1",
+  "status": "preparation_only_no_full_import",
+  "requirement": "docs/requirements/REQ-003-math2-full-import-prep.md",
+  "reportDirectory": "content/reports/req-003-math2-full-import-prep",
+  "prompt": "prompts/cc-math2-full-import-prep-mechanical-batch.md",
+  "schema": "content/schema/math2-question-staging-v2.schema.json",
+  "referencePilot": "content/staging/math2/2020/questions.json",
+  "sourceRepository": {
+    "path": "D:/work/Kaoyan-Math2-Papers",
+    "commit": "fd42c56eed412cce0cb97d6bd688f314c78e542e",
+    "branch": "main",
+    "dirty": true,
+    "dirtyStateReason": "five untracked MinerU Markdown paper files under papers/"
+  },
+  "sharedForbiddenPaths": [
+    "D:/work/Kaoyan-Math2-Papers/**",
+    "apps/web/**",
+    "apps/api/**",
+    "content/final/**",
+    "content/approved/**",
+    "content/review/**",
+    "content/staging/math1/**",
+    "content/review/math1/**",
+    "content/final/math1/**"
+  ],
+  "resultContract": {
+    "mustReport": [
+      "inputPaths",
+      "inputHashes",
+      "sourceCommit",
+      "sourceDirtyState",
+      "filesRead",
+      "changedFiles",
+      "questionsGenerated",
+      "questionsSkipped",
+      "questionCountsByType",
+      "anomalyCounts",
+      "imageReferences",
+      "schemaValidationResult",
+      "katexValidationResult",
+      "deterministicRerunResult",
+      "dryRunImportResult",
+      "rollbackResult",
+      "unresolvedBlockers",
+      "forbiddenPathsUnchanged"
+    ],
+    "mustRemain": {
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "frontendPublication": false,
+      "databasePublication": false,
+      "sourceRepositoryWrites": false
+    }
+  },
+  "tasks": [
+    {
+      "batchId": "math2-2020-reference-gate",
+      "status": "reference_only",
+      "years": [2020],
+      "allowedReadPaths": [
+        "papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+        "solutions/2020/math2_2020/math2_2020.md"
+      ],
+      "inputHashes": {
+        "papers/MinerU_markdown_math2_2020_2065687152877731840.md": "12b4c86d1e5ad865f2354e62d1d64ea6d8472f6d07f2cf457127d77d94b7091d",
+        "solutions/2020/math2_2020/math2_2020.md": "539e2ecb995ce03ad1c2207c1855321732eec3b7c0211c9011477fcb0cd611e7"
+      },
+      "expectedOutputs": [
+        "content/staging/math2/2020/questions.json",
+        "content/staging/math2/2020/anomalies.json",
+        "content/staging/math2/2020/validation.json",
+        "content/staging/math2/2020/katex-validation.json",
+        "content/staging/math2/2020/summary.md"
+      ],
+      "validationCommands": [
+        "mingw32-make NPM=npm.cmd math2-validate",
+        "mingw32-make NPM=npm.cmd test-math2"
+      ],
+      "dryRunImportCommand": "mingw32-make NPM=npm.cmd math2-import-dry-run",
+      "rollbackRequired": true,
+      "delegation": "do_not_delegate_reference_only"
+    },
+    {
+      "batchId": "math2-2023-paper-only-staging",
+      "status": "queued_blocked_until_primary_approval",
+      "years": [2023],
+      "allowedReadPaths": [
+        "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+        "solutions/2023/math2_2023/math2_2023.md"
+      ],
+      "inputHashes": {
+        "papers/MinerU_markdown_math2_2023_2065687933685170176.md": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+        "solutions/2023/math2_2023/math2_2023.md": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8"
+      },
+      "expectedOutputs": [
+        "content/staging/math2/2023/questions.json",
+        "content/staging/math2/2023/anomalies.json",
+        "content/staging/math2/2023/validation.json",
+        "content/staging/math2/2023/katex-validation.json",
+        "content/staging/math2/2023/summary.md",
+        "content/reports/math2-2023/human-review-checklist.md"
+      ],
+      "validationCommands": [
+        "python scripts/transform_math2_2023.py D:/work/Kaoyan-Math2-Papers content/staging/math2/2023",
+        "node scripts/validate_math2_katex.mjs content/staging/math2/2023/questions.json content/staging/math2/2023/katex-validation.json",
+        "python -m unittest tests.test_transform_math2_2023 -v"
+      ],
+      "dryRunImportCommand": "mingw32-make NPM=npm.cmd math2-import-dry-run after importer input path is explicitly pointed at 2023",
+      "rollbackRequired": true,
+      "stopOnAnomalies": true
+    },
+    {
+      "batchId": "math2-2024-role-ambiguous-paper-like",
+      "status": "blocked_missing_paper_and_image_review",
+      "years": [2024],
+      "allowedReadPaths": [
+        "solutions/2024/math2_2024.md",
+        "solutions/2024/images/7884391bcaec6d4b3b606a079c578a4913ccb65a0f43986faeb8ca2af3e7e68e.jpg",
+        "solutions/2024/images/d98314f433fa3074d0317cf7d9672b1e6b185e8a8e5a3e2a22ab1853b1498ae1.jpg",
+        "solutions/2024/images/ccde6b36e7a52892b052d64b0476872615cb2aba24502e52d014c6603b5e2c11.jpg"
+      ],
+      "inputHashes": {
+        "solutions/2024/math2_2024.md": "38d3a737c302a4ae79094fbaacb489d33fcb7b15de1330aa6b20888aaea8358b"
+      },
+      "expectedOutputs": [
+        "content/staging/math2/2024/questions.json",
+        "content/staging/math2/2024/anomalies.json",
+        "content/staging/math2/2024/validation.json",
+        "content/staging/math2/2024/katex-validation.json",
+        "content/staging/math2/2024/summary.md",
+        "content/reports/math2-2024/human-review-checklist.md"
+      ],
+      "validationCommands": [
+        "python scripts/transform_math2_2024.py D:/work/Kaoyan-Math2-Papers content/staging/math2/2024",
+        "node scripts/validate_math2_katex.mjs content/staging/math2/2024/questions.json content/staging/math2/2024/katex-validation.json",
+        "python -m unittest tests.test_transform_math2_2024 -v"
+      ],
+      "dryRunImportCommand": "forbidden until primary Codex resolves missing-paper and image review",
+      "rollbackRequired": false,
+      "stopOnAnomalies": true
+    },
+    {
+      "batchId": "math2-2021-wrong-subject-audit",
+      "status": "audit_only_blocked",
+      "years": [2021],
+      "allowedReadPaths": [
+        "papers/MinerU_markdown_math2_2021_2065687851346780160.md",
+        "solutions/2021/math2_2021/math2_2021.md"
+      ],
+      "inputHashes": {
+        "papers/MinerU_markdown_math2_2021_2065687851346780160.md": "6c7c470e3edcafa3a5541365406c10cfcd6322db32cb5e27581cb3e8a34f8f1e",
+        "solutions/2021/math2_2021/math2_2021.md": "effe54ef9285571d75a9b3eff150fcad8276aa180298f242c289b0626992229d"
+      },
+      "expectedOutputs": [
+        "content/reports/math2-2021/source-role-audit.md"
+      ],
+      "validationCommands": [
+        "source hash check",
+        "title and heading scan",
+        "boundary scan",
+        "answer/explanation marker scan"
+      ],
+      "dryRunImportCommand": "forbidden",
+      "rollbackRequired": false,
+      "stopOnAnomalies": true
+    },
+    {
+      "batchId": "math2-2022-ocr-boundary-audit",
+      "status": "audit_only_blocked",
+      "years": [2022],
+      "allowedReadPaths": [
+        "papers/MinerU_markdown_math2_2022_2065687890395758592.md",
+        "solutions/2022/math2_2022/math2_2022.md"
+      ],
+      "inputHashes": {
+        "papers/MinerU_markdown_math2_2022_2065687890395758592.md": "5ccb6ed1c8d12157bd72d44414dff2616465da113a39295acedceb7675052b70",
+        "solutions/2022/math2_2022/math2_2022.md": "9c6f7ffb8c0780413b6c81e37f3e2d4b1a007ddf0b1f02b4ae681d441bd3de6c"
+      },
+      "expectedOutputs": [
+        "content/reports/math2-2022/source-role-audit.md",
+        "content/reports/math2-2022/boundary-risk-map.md"
+      ],
+      "validationCommands": [
+        "source hash check",
+        "ordinary and fallback boundary scans",
+        "answer/explanation marker scan",
+        "OCR noise scan"
+      ],
+      "dryRunImportCommand": "forbidden",
+      "rollbackRequired": false,
+      "stopOnAnomalies": true
+    },
+    {
+      "batchId": "math2-1987-2019-per-year-split-prep",
+      "status": "split_prep_only",
+      "years": [1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+      "allowedReadPaths": [
+        "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+        "solutions/math2_1987-2019/math2_1987-2019.md",
+        "solutions/math2_1987-2019/images/** only when referenced by selected year section"
+      ],
+      "inputHashes": {
+        "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+        "solutions/math2_1987-2019/math2_1987-2019.md": "ef715711e094d2c30af75dee43e777c3870c781b91521da6604579d04e955e01"
+      },
+      "expectedOutputsPattern": [
+        "content/staging/math2/<year>/questions.json",
+        "content/staging/math2/<year>/anomalies.json",
+        "content/staging/math2/<year>/validation.json",
+        "content/staging/math2/<year>/katex-validation.json",
+        "content/staging/math2/<year>/summary.md",
+        "content/reports/math2-<year>/human-review-checklist.md"
+      ],
+      "validationCommands": [
+        "python scripts/split_math2_1987_2019.py D:/work/Kaoyan-Math2-Papers content/intermediate/math2-split",
+        "python scripts/transform_math2_<year>.py D:/work/Kaoyan-Math2-Papers content/staging/math2/<year>",
+        "node scripts/validate_math2_katex.mjs content/staging/math2/<year>/questions.json content/staging/math2/<year>/katex-validation.json",
+        "python -m unittest tests.test_transform_math2_<year> -v"
+      ],
+      "dryRunImportCommand": "forbidden until split script, subject mapping, and per-year review pass",
+      "rollbackRequired": false,
+      "stopOnAnomalies": true,
+      "specialBlockers": [
+        "1987-1996 historical headings say 试卷三",
+        "remote paper image references are not immutable local evidence",
+        "combined source must not be imported as one batch"
+      ]
+    }
+  ]
+}
