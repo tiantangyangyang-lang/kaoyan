@@ -1,6 +1,14 @@
 {
   "schemaVersion": "math2-mechanical-batch-queue-v1",
   "status": "blocked_until_primary_agent_and_human_pilot_review",
+  "sourceBaselineStatus": {
+    "requirement": "docs/requirements/REQ-006-math2-source-baseline-refresh.md",
+    "report": "content/reports/req-006-math2-source-baseline-refresh/source-baseline.md",
+    "currentSourceCommit": "fd42c56eed412cce0cb97d6bd688f314c78e542e",
+    "currentSourceDirty": false,
+    "blockedReason": "REQ-002 primary MinerU paper Markdown files under papers/ are missing from the current clean source checkout.",
+    "runnable": false
+  },
   "prompt": "prompts/cc-math2-markdown-mechanical-batch.md",
   "schema": "content/schema/math2-question-staging-v2.schema.json",
   "referencePilot": "content/staging/math2/2020/questions.json",
