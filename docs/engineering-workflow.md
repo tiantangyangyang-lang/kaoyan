@@ -77,3 +77,5 @@ The smoke target starts and stops its own Vite server. PR verification must not
 depend on a developer already running `make dev`.
 
 The PR description records the command and result. If a check cannot run, the PR must name the blocker instead of marking it passed.
+
+Build the PR body from the full diff (`git diff <base>...HEAD`), not just the latest commit, and include a test plan with TODOs for any untested state.
