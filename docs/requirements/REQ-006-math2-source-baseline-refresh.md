@@ -61,7 +61,7 @@ Inventory commands should be bounded to Math2 source metadata. Full content conv
 - [x] No source repo files are modified.
 - [x] No full Math2 import, frontend static bank, dynamic explanation, or Motion work is performed.
 - [x] The smallest meaningful verification is run; `mingw32-make NPM=npm.cmd verify` was also run and failed at the expected missing-source gate.
-- [ ] Changes are committed with a Conventional Commit, pushed, and opened as a dedicated PR referencing this requirement.
+- [x] Changes are committed with a Conventional Commit, pushed, and opened as PR #6 referencing this requirement.
 
 ## Verification Commands
 

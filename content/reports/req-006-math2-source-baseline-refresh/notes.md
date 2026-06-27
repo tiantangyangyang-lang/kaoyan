@@ -47,3 +47,9 @@ Claude Code may later do mechanical source listing, hash computation, byte count
 - JSON parse check for `content/queues/math2-markdown-import-template.json` and `content/reports/req-006-math2-source-baseline-refresh/source-inventory.json`: passed.
 - Source repo unchanged check: passed, `## main...origin/main`.
 - `mingw32-make NPM=npm.cmd verify`: failed at `math2-pilot` with missing audited Math2 2020 Markdown inputs; documented in `verification.md`.
+
+## Handoff
+
+- Initial implementation commit: `e44395d docs(math2): refresh source baseline`
+- Branch: `codex/math2-source-baseline-refresh`
+- PR: #6, `https://github.com/tiantangyangyang-lang/kaoyan/pull/6`

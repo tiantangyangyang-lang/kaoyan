@@ -11,7 +11,7 @@ Refresh the Math2 source baseline and queue assumptions without editing the sour
 - [x] Phase 3: Gather read-only source repository state, file inventory, and hashes.
 - [x] Phase 4: Compare current evidence against REQ-002 and queue assumptions.
 - [x] Phase 5: Write source-baseline artifacts and queue consequence report.
-- [ ] Phase 6: Run verification, commit, push, and open the PR.
+- [x] Phase 6: Run verification, commit, push, and open the PR.
 
 ## Key Questions
 
@@ -36,4 +36,4 @@ Refresh the Math2 source baseline and queue assumptions without editing the sour
 
 ## Status
 
-**Currently in Phase 6** - Final verification/report cleanup before commit, push, and PR.
+**Complete** - Initial implementation commit `e44395d` was pushed to `codex/math2-source-baseline-refresh`, and PR #6 was opened for REQ-006.
