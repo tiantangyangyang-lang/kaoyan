@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "math2-question-staging-v2",
+  "totalAnomalies": 26,
+  "anomalies": [
+    {
+      "type": "maintainer_source_decision",
+      "severity": "warning",
+      "message": "REQ-010 uses the maintainer-approved Markdown source solutions/2024/math2_2024.md; the origin PDF is not a prerequisite.",
+      "blocksPublication": false,
+      "sourceRelativePath": "solutions/2024/math2_2024.md"
+    },
+    {
+      "type": "source_contains_no_answers_or_explanations",
+      "severity": "error",
+      "message": "The approved Markdown contains no explicit answer or explanation markers; all answers and explanations remain missing.",
+      "blocksPublication": true,
+      "sourceRelativePath": "solutions/2024/math2_2024.md"
+    },
+    {
+      "type": "feedback_email_not_hardcoded",
+      "severity": "warning",
+      "message": "A visible user feedback path requires maintainer configuration of VITE_FEEDBACK_EMAIL before launch; no feedback email was present in repo config.",
+      "blocksPublication": false
+    },
+    {
+      "stableId": "math2-2024-q01",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q02",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q03",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q04",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q05",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q06",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q07",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q08",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q09",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q10",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q11",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q12",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q13",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q14",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q15",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q16",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q17",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q18",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q19",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q20",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q21",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q22",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in the approved Markdown source.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2024-q22",
+      "type": "watermark_image_references_omitted",
+      "severity": "warning",
+      "message": "Trailing image references are REQ-009 watermark/logo artifacts and are omitted from the question stem.",
+      "blocksPublication": false,
+      "sourceRelativePath": "solutions/2024/math2_2024.md"
+    }
+  ]
+}

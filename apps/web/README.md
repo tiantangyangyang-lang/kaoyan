@@ -87,3 +87,7 @@ JSON 备份格式为 `kaoyan-learning-export-v2`，包含上述两类数据。
 2. 将 `QuestionState` 和 `PaperSession` 映射为数据库表，保留当前 JSON 导入作为恢复入口。
 3. 数学二题库通过分页 API 与单题详情 API 按需读取，不生成或复制 `math2.json` 静态整库。
 4. 完成知识点标注后，再增加有证据题号和样本量的薄弱点分析。
+
+### 内容反馈邮箱
+
+配置 `VITE_FEEDBACK_EMAIL` 后，待核对题目的提示区会显示“反馈此题”邮件链接，并自动带上题目 `stableId`、年份和题号。不要把验证邮件发送地址当作反馈邮箱使用。
