@@ -92,7 +92,7 @@ The dry-run must roll back. A batch result is invalid if any row is visible as
 
 ### Batch `math2-2023-paper-only-staging`
 
-- Status: queued, blocked until primary-agent approval
+- Status: staged, blocked for human review
 - Input year: 2023
 - Allowed read paths:
   - `papers/MinerU_markdown_math2_2023_2065687933685170176.md`
@@ -100,6 +100,15 @@ The dry-run must roll back. A batch result is invalid if any row is visible as
 - Known hashes:
   - paper: `eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f`
   - comparison: `c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8`
+- Source-role decision:
+  - Requirement: `docs/requirements/REQ-008-math2-2023-comparison-primary-staging.md`
+  - Prior audit: `docs/requirements/REQ-004-math2-2023-staging.md`
+  - Decision: use the live-verified complete transcript as primary.
+  - Primary: `papers/MinerU_markdown_math2_2023_2065687933685170176.md`
+  - Comparison: `solutions/2023/math2_2023/math2_2023.md`
+  - Correction: REQ-004 path labels are inverted relative to current file
+    contents; the `papers/` file is complete, while the `solutions/` file has
+    option defects.
 - Expected outputs:
   - `content/staging/math2/2023/questions.json`
   - `content/staging/math2/2023/anomalies.json`
@@ -108,17 +117,20 @@ The dry-run must roll back. A batch result is invalid if any row is visible as
   - `content/staging/math2/2023/summary.md`
   - `content/reports/math2-2023/human-review-checklist.md`
 - Expected result:
-  - Q1-Q22 candidate boundaries only
-  - answers/explanations missing unless explicit source markers are found
-  - all solution-path evidence treated as comparison until answer/explanation markers are verified
+  - 22 questions
+  - 10 multiple choice, 6 fill-in-the-blank, 6 solution/proof
+  - primary transcript complete for Q1-Q10 options A-D
+  - answers/explanations missing
+  - all records blocked for human review and publication
+  - comparison transcript option defects preserved for Q2/Q4/Q6/Q7/Q9/Q10
 - Validation:
-  - `python scripts/transform_math2_2023.py D:\work\Kaoyan-Math2-Papers content/staging/math2/2023`
-  - `node scripts/validate_math2_katex.mjs content/staging/math2/2023/questions.json content/staging/math2/2023/katex-validation.json`
-  - `python -m unittest tests.test_transform_math2_2023 -v`
+  - `mingw32-make NPM=npm.cmd math2-2023-validate`
 - Dry-run import:
   - `mingw32-make NPM=npm.cmd math2-import-dry-run` after staging path is parameterized or explicitly pointed at 2023
 - Rollback requirement: dry-run must leave no staging-to-published side effect.
-- Stop conditions: missing question boundary, unexpected answer evidence, option shape drift, duplicate Q number, schema error, KaTeX error, image reference, or source hash mismatch.
+- Stop conditions: missing question boundary, unexpected answer evidence, primary
+  option shape drift, duplicate Q number, schema error, KaTeX error, image
+  reference, source hash mismatch, or any new source-role ambiguity.
 
 ### Batch `math2-2024-role-ambiguous-paper-like`
 

@@ -1,0 +1,229 @@
+{
+  "schemaVersion": "math2-question-staging-v2",
+  "totalAnomalies": 31,
+  "anomalies": [
+    {
+      "type": "source_role_decision_option_b",
+      "severity": "warning",
+      "message": "REQ-008 uses the maintainer-approved REQ-004 option (b): the currently verified complete 2023 transcript is primary. Live source verification shows the complete transcript is the MinerU paper path, while the solutions path contains the known Q2/Q4/Q6/Q7/Q9/Q10 option defects.",
+      "blocksPublication": false,
+      "sourceRelativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md"
+    },
+    {
+      "type": "primary_is_question_transcription",
+      "severity": "error",
+      "message": "The approved primary file contains question transcription only; no answer or explanation markers are present.",
+      "blocksPublication": true,
+      "sourceRelativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md"
+    },
+    {
+      "type": "comparison_options_incomplete",
+      "severity": "warning",
+      "message": "The solutions comparison transcript is comparison evidence because its MC options are incomplete for Q2, Q4, Q6, Q7, Q9, and Q10.",
+      "blocksPublication": false,
+      "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+    },
+    {
+      "stableId": "math2-2023-q01",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q02",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q02",
+      "type": "comparison_options_incomplete",
+      "severity": "warning",
+      "message": "Comparison transcript has incomplete or empty options for Q2; approved primary transcript is used.",
+      "blocksPublication": false,
+      "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+    },
+    {
+      "stableId": "math2-2023-q03",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q04",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q04",
+      "type": "comparison_options_incomplete",
+      "severity": "warning",
+      "message": "Comparison transcript has incomplete or empty options for Q4; approved primary transcript is used.",
+      "blocksPublication": false,
+      "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+    },
+    {
+      "stableId": "math2-2023-q05",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q06",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q06",
+      "type": "comparison_options_incomplete",
+      "severity": "warning",
+      "message": "Comparison transcript has incomplete or empty options for Q6; approved primary transcript is used.",
+      "blocksPublication": false,
+      "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+    },
+    {
+      "stableId": "math2-2023-q07",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q07",
+      "type": "comparison_options_incomplete",
+      "severity": "warning",
+      "message": "Comparison transcript has incomplete or empty options for Q7; approved primary transcript is used.",
+      "blocksPublication": false,
+      "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+    },
+    {
+      "stableId": "math2-2023-q08",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q09",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q09",
+      "type": "comparison_options_incomplete",
+      "severity": "warning",
+      "message": "Comparison transcript has incomplete or empty options for Q9; approved primary transcript is used.",
+      "blocksPublication": false,
+      "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+    },
+    {
+      "stableId": "math2-2023-q10",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q10",
+      "type": "comparison_options_incomplete",
+      "severity": "warning",
+      "message": "Comparison transcript has incomplete or empty options for Q10; approved primary transcript is used.",
+      "blocksPublication": false,
+      "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+    },
+    {
+      "stableId": "math2-2023-q11",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q12",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q13",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q14",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q15",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q16",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q17",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q18",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q19",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q20",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q21",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2023-q22",
+      "type": "missing_answer_and_explanation",
+      "severity": "error",
+      "message": "No explicit answer or explanation exists in either audited Markdown input.",
+      "blocksPublication": true
+    }
+  ]
+}
