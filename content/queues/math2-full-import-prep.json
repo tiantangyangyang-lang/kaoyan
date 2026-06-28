@@ -118,7 +118,7 @@
     },
     {
       "batchId": "math2-2024-role-ambiguous-paper-like",
-      "status": "blocked_missing_paper_and_image_review",
+      "status": "audit_completed_markdown_source_approved_for_followup_staging",
       "years": [2024],
       "allowedReadPaths": [
         "solutions/2024/math2_2024.md",
@@ -127,7 +127,18 @@
         "solutions/2024/images/ccde6b36e7a52892b052d64b0476872615cb2aba24502e52d014c6603b5e2c11.jpg"
       ],
       "inputHashes": {
-        "solutions/2024/math2_2024.md": "38d3a737c302a4ae79094fbaacb489d33fcb7b15de1330aa6b20888aaea8358b"
+        "solutions/2024/math2_2024.md": "38d3a737c302a4ae79094fbaacb489d33fcb7b15de1330aa6b20888aaea8358b",
+        "solutions/2024/images/7884391bcaec6d4b3b606a079c578a4913ccb65a0f43986faeb8ca2af3e7e68e.jpg": "143fbb6e676f2d2c9d81665184043e8c7b44dd0730008d37a99c4e177b557c54",
+        "solutions/2024/images/d98314f433fa3074d0317cf7d9672b1e6b185e8a8e5a3e2a22ab1853b1498ae1.jpg": "ddef685f158502f8b177dd0d3c36ef61a58e8b0b1cc897bfccae1a0f3fdff128",
+        "solutions/2024/images/ccde6b36e7a52892b052d64b0476872615cb2aba24502e52d014c6603b5e2c11.jpg": "390bb4fd531eb7723b9ca56744b3ef38079eb98566fb7f7250634355302cfd69"
+      },
+      "sourceRoleDecision": {
+        "requirement": "docs/requirements/REQ-009-math2-2024-source-role-image-audit.md",
+        "report": "content/reports/req-009-math2-2024-source-role-image-audit/source-role-image-audit.md",
+        "decision": "solutions_2024_markdown_is_sufficient_primary_source_for_followup_staging",
+        "finding": "The maintainer clarified that solutions/2024/math2_2024.md is sufficient as the 2024 Markdown source despite living under solutions/. No PDF-backed repair requirement is needed before the next staging task.",
+        "imageFinding": "All three queued JPG references resolve locally but are GaoLian watermark/logo crops, not mathematical evidence; they are non-blocking source artifacts.",
+        "stagingDecision": "ready_for_followup_markdown_staging_requirement"
       },
       "expectedOutputs": [
         "content/staging/math2/2024/questions.json",
@@ -142,7 +153,7 @@
         "node scripts/validate_math2_katex.mjs content/staging/math2/2024/questions.json content/staging/math2/2024/katex-validation.json",
         "python -m unittest tests.test_transform_math2_2024 -v"
       ],
-      "dryRunImportCommand": "forbidden until primary Codex resolves missing-paper and image review",
+      "dryRunImportCommand": "forbidden until the follow-up Markdown staging task passes schema, KaTeX, deterministic rerun, and human spot-check gates",
       "rollbackRequired": false,
       "stopOnAnomalies": true
     },
