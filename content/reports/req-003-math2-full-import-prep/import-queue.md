@@ -134,15 +134,19 @@ The dry-run must roll back. A batch result is invalid if any row is visible as
 
 ### Batch `math2-2024-role-ambiguous-paper-like`
 
-- Status: queued, blocked until missing-paper and image review
+- Status: audit completed by REQ-009; Markdown source approved for a follow-up
+  staging requirement
 - Input year: 2024
 - Allowed read paths:
   - `solutions/2024/math2_2024.md`
   - `solutions/2024/images/7884391bcaec6d4b3b606a079c578a4913ccb65a0f43986faeb8ca2af3e7e68e.jpg`
   - `solutions/2024/images/d98314f433fa3074d0317cf7d9672b1e6b185e8a8e5a3e2a22ab1853b1498ae1.jpg`
   - `solutions/2024/images/ccde6b36e7a52892b052d64b0476872615cb2aba24502e52d014c6603b5e2c11.jpg`
-- Known hash:
-  - source: `38d3a737c302a4ae79094fbaacb489d33fcb7b15de1330aa6b20888aaea8358b`
+- Known hashes:
+  - `solutions/2024/math2_2024.md`: `38d3a737c302a4ae79094fbaacb489d33fcb7b15de1330aa6b20888aaea8358b`
+  - `solutions/2024/images/7884391bcaec6d4b3b606a079c578a4913ccb65a0f43986faeb8ca2af3e7e68e.jpg`: `143fbb6e676f2d2c9d81665184043e8c7b44dd0730008d37a99c4e177b557c54`
+  - `solutions/2024/images/d98314f433fa3074d0317cf7d9672b1e6b185e8a8e5a3e2a22ab1853b1498ae1.jpg`: `ddef685f158502f8b177dd0d3c36ef61a58e8b0b1cc897bfccae1a0f3fdff128`
+  - `solutions/2024/images/ccde6b36e7a52892b052d64b0476872615cb2aba24502e52d014c6603b5e2c11.jpg`: `390bb4fd531eb7723b9ca56744b3ef38079eb98566fb7f7250634355302cfd69`
 - Expected outputs:
   - `content/staging/math2/2024/questions.json`
   - `content/staging/math2/2024/anomalies.json`
@@ -151,18 +155,22 @@ The dry-run must roll back. A batch result is invalid if any row is visible as
   - `content/staging/math2/2024/summary.md`
   - `content/reports/math2-2024/human-review-checklist.md`
 - Expected result:
-  - Q1-Q22 candidate boundaries only
-  - required `missing_paper_candidate` anomaly
-  - required image-reference review items
+  - `solutions/2024/math2_2024.md` is the approved Markdown source for the next
+    2024 staging task
+  - three queued JPG references resolved but classified as non-blocking
+    watermark/logo artifacts
   - answers/explanations missing unless source markers are explicit
+  - all records remain blocked for human review and publication
 - Validation:
   - `python scripts/transform_math2_2024.py D:\work\Kaoyan-Math2-Papers content/staging/math2/2024`
   - `node scripts/validate_math2_katex.mjs content/staging/math2/2024/questions.json content/staging/math2/2024/katex-validation.json`
   - `python -m unittest tests.test_transform_math2_2024 -v`
 - Dry-run import:
-  - forbidden until missing-paper and image review are resolved by primary Codex
+  - forbidden until the follow-up Markdown staging task passes schema, KaTeX,
+    deterministic rerun, and human spot-check gates
 - Rollback requirement: not applicable until dry-run is approved; any accidental DB write fails acceptance.
-- Stop conditions: image cannot be resolved, source role ambiguity expands, answer invention pressure, schema error, or KaTeX error.
+- Stop conditions: image cannot be resolved, source role ambiguity expands,
+  answer invention pressure, schema error, or KaTeX error.
 
 ### Batch `math2-2021-wrong-subject-audit`
 
