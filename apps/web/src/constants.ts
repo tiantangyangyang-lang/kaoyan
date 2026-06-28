@@ -31,3 +31,5 @@ export const STATUS_LABELS: Record<string, string> = {
   ready_with_info: "有提示项",
   blocked: "待核对",
 };
+
+export const FEEDBACK_EMAIL = import.meta.env.VITE_FEEDBACK_EMAIL?.trim() ?? "";

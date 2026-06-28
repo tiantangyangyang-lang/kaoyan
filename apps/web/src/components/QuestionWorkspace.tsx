@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {
+  FEEDBACK_EMAIL,
   MASTERY_LABELS,
   TYPE_LABELS,
 } from "../constants";
@@ -64,6 +65,19 @@ export function QuestionWorkspace({
           1,
         )[0]
       : question.stem;
+  const feedbackHref = FEEDBACK_EMAIL
+    ? `mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(
+        `题目反馈：${question.stableId}`,
+      )}&body=${encodeURIComponent(
+        [
+          `题目：${question.stableId}`,
+          `年份：${question.sourceYear}`,
+          `题号：${question.questionNumber ?? ""}`,
+          "",
+          "问题描述：",
+        ].join("\n"),
+      )}`
+    : null;
 
   return (
     <article className="workspace">
@@ -82,7 +96,12 @@ export function QuestionWorkspace({
 
       {question.finalizationStatus === "blocked" && (
         <div className="content-warning">
-          这道题存在待核对的源内容问题，可练习，但请谨慎使用答案。
+          <span>这道题存在待核对的源内容问题，可练习，但请谨慎使用答案。</span>
+          {feedbackHref && (
+            <a className="feedback-link" href={feedbackHref}>
+              反馈此题
+            </a>
+          )}
         </div>
       )}
 

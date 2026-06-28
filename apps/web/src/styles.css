@@ -751,6 +751,13 @@ textarea:focus-visible {
   line-height: 1.6;
 }
 
+.feedback-link {
+  display: inline-flex;
+  margin-left: 10px;
+  color: #7a2d33;
+  font-weight: 750;
+}
+
 .math-content {
   line-height: 1.85;
   white-space: pre-wrap;
