@@ -83,7 +83,7 @@
     },
     {
       "batchId": "math2-2023-paper-only-staging",
-      "status": "queued_blocked_until_primary_approval",
+      "status": "staged_blocked_for_human_review",
       "years": [2023],
       "allowedReadPaths": [
         "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
@@ -92,6 +92,14 @@
       "inputHashes": {
         "papers/MinerU_markdown_math2_2023_2065687933685170176.md": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
         "solutions/2023/math2_2023/math2_2023.md": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8"
+      },
+      "sourceRoleDecision": {
+        "requirement": "docs/requirements/REQ-008-math2-2023-comparison-primary-staging.md",
+        "priorAudit": "docs/requirements/REQ-004-math2-2023-staging.md",
+        "decision": "use_verified_complete_transcript_as_primary",
+        "primaryRelativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+        "comparisonRelativePath": "solutions/2023/math2_2023/math2_2023.md",
+        "pathLabelCorrection": "REQ-004 path labels are inverted relative to current file contents; REQ-008 uses the live-verified complete transcript as primary."
       },
       "expectedOutputs": [
         "content/staging/math2/2023/questions.json",
@@ -102,13 +110,11 @@
         "content/reports/math2-2023/human-review-checklist.md"
       ],
       "validationCommands": [
-        "python scripts/transform_math2_2023.py D:/work/Kaoyan-Math2-Papers content/staging/math2/2023",
-        "node scripts/validate_math2_katex.mjs content/staging/math2/2023/questions.json content/staging/math2/2023/katex-validation.json",
-        "python -m unittest tests.test_transform_math2_2023 -v"
+        "mingw32-make NPM=npm.cmd math2-2023-validate"
       ],
       "dryRunImportCommand": "mingw32-make NPM=npm.cmd math2-import-dry-run after importer input path is explicitly pointed at 2023",
       "rollbackRequired": true,
-      "stopOnAnomalies": true
+      "stopOnUnexpectedAnomalies": true
     },
     {
       "batchId": "math2-2024-role-ambiguous-paper-like",

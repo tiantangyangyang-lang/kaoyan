@@ -1,0 +1,1228 @@
+{
+  "schemaVersion": "math2-question-staging-v2",
+  "batchId": "REQ-008-math2-2023-comparison-primary-staging",
+  "subjectCode": "math2",
+  "sourceYear": 2023,
+  "sourceRepository": {
+    "name": "Kaoyan-Math2-Papers",
+    "commit": "fd42c56eed412cce0cb97d6bd688f314c78e542e",
+    "branch": "main",
+    "dirty": true
+  },
+  "sourceRoleDecision": {
+    "requirement": "docs/requirements/REQ-008-math2-2023-comparison-primary-staging.md",
+    "priorAudit": "docs/requirements/REQ-004-math2-2023-staging.md",
+    "decision": "use_verified_complete_transcript_as_primary",
+    "primaryRelativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+    "comparisonRelativePath": "solutions/2023/math2_2023/math2_2023.md",
+    "pathLabelCorrection": "REQ-004 labels the paths in the opposite direction of the current file contents; REQ-008 uses the path whose live hash/content has complete Q1-Q22 and complete MC options."
+  },
+  "sourceFiles": [
+    {
+      "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+      "role": "primary_complete_question_transcription",
+      "gitState": "untracked",
+      "bytes": 6964,
+      "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+      "hashMatchesExpected": true,
+      "answerMarkers": 0,
+      "explanationMarkers": 0,
+      "imageReferences": []
+    },
+    {
+      "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+      "role": "comparison_incomplete_question_transcription",
+      "gitState": "tracked",
+      "bytes": 7730,
+      "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+      "hashMatchesExpected": true,
+      "answerMarkers": 0,
+      "explanationMarkers": 0,
+      "imageReferences": []
+    }
+  ],
+  "questions": [
+    {
+      "stableId": "math2-2023-q01",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 1,
+      "stem": "曲线 $y=x\\ln\\left(\\mathrm{e}+\\frac{1}{x-1}\\right)$ 的斜渐近线为",
+      "options": [
+        {
+          "label": "A",
+          "value": "$y = x + \\mathrm{e}$"
+        },
+        {
+          "label": "B",
+          "value": "$y = x + \\frac{1}{\\mathrm{e}}$"
+        },
+        {
+          "label": "C",
+          "value": "$y = x$"
+        },
+        {
+          "label": "D",
+          "value": "$y = x - \\frac{1}{\\mathrm{e}}$"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 5,
+          "lineEnd": 14
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 5,
+          "lineEnd": 14
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q02",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 2,
+      "stem": "函数 $f(x)=\\left\\{\\begin{aligned}\\frac{1}{\\sqrt{1+x^{2}}},&x\\leqslant0,\\\\ (x+1)\\cos x,x&>0.\\end{aligned}\\right.$ 的一个原函数是",
+      "options": [
+        {
+          "label": "A",
+          "value": "$F(x)=\\left\\{\\begin{aligned}\\ln\\left(\\sqrt{1+x^{2}}-x\\right),&x\\leqslant0\\\\ (x+1)\\cos x-\\sin x,x&>0\\end{aligned}\\right.$"
+        },
+        {
+          "label": "B",
+          "value": "$F(x)=\\left\\{\\begin{aligned}\\ln\\left(\\sqrt{1+x^{2}}-x\\right)+1,\\quad&x\\leqslant0\\\\ (x+1)\\cos x-\\sin x,\\quad&x>0\\end{aligned}\\right.$"
+        },
+        {
+          "label": "C",
+          "value": "$F(x)=\\left\\{\\begin{aligned}\\ln\\left(\\sqrt{1+x^{2}}+x\\right),&x\\leqslant0\\\\ (x+1)\\sin x+\\cos x,x&>0\\end{aligned}\\right.$"
+        },
+        {
+          "label": "D",
+          "value": "$F(x)=\\left\\{\\begin{aligned}\\ln\\left(\\sqrt{1+x^{2}}+x\\right)+1,\\quad&x\\leqslant0\\\\ (x+1)\\sin x+\\cos x,\\quad&x>0\\end{aligned}\\right.$"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        },
+        {
+          "type": "comparison_options_incomplete",
+          "severity": "warning",
+          "message": "Comparison transcript has incomplete or empty options for Q2; approved primary transcript is used.",
+          "blocksPublication": false,
+          "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 15,
+          "lineEnd": 24
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 15,
+          "lineEnd": 16
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q03",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 3,
+      "stem": "已知 $\\{x_{n}\\},\\{y_{n}\\}$ 满足： $x_{1}=y_{1}=\\frac{1}{2},x_{n+1}=\\sin x_{n},y_{n+1}=y_{n}^{2}(n=1,2,\\cdots)$ ，则当 $n\\to\\infty$ 时，",
+      "options": [
+        {
+          "label": "A",
+          "value": "$x_{n}$ 是 $y_{n}$ 高阶无穷小"
+        },
+        {
+          "label": "B",
+          "value": "$y_{n}$ 是 $x_{n}$ 高阶无穷小"
+        },
+        {
+          "label": "C",
+          "value": "$x_{n}$ 与 $y_{n}$ 是等价无穷小"
+        },
+        {
+          "label": "D",
+          "value": "$x_{n}$ 与 $y_{n}$ 是同阶但不等价无穷小"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 25,
+          "lineEnd": 34
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 17,
+          "lineEnd": 26
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q04",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 4,
+      "stem": "若微分方程 $y'' + ay' + by = 0$ 的解在 $(- \\infty, + \\infty)$ 上有界，则",
+      "options": [
+        {
+          "label": "A",
+          "value": "$a < 0, b > 0$"
+        },
+        {
+          "label": "B",
+          "value": "$a > 0, b > 0$"
+        },
+        {
+          "label": "C",
+          "value": "$a = 0, b > 0$"
+        },
+        {
+          "label": "D",
+          "value": "$a = 0, b < 0$"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        },
+        {
+          "type": "comparison_options_incomplete",
+          "severity": "warning",
+          "message": "Comparison transcript has incomplete or empty options for Q4; approved primary transcript is used.",
+          "blocksPublication": false,
+          "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 35,
+          "lineEnd": 44
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 27,
+          "lineEnd": 30
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q05",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 5,
+      "stem": "设函数 $y = f(x)$ 是由 $\\left\\{ \\begin{array}{l} x = 2t + |t|, \\\\ y = |t|\\sin t. \\end{array} \\right.$ 确定，则",
+      "options": [
+        {
+          "label": "A",
+          "value": "$f(x)$ 连续， $f'(0)$ 不存在"
+        },
+        {
+          "label": "B",
+          "value": "$f'(0)$ 存在， $f'(x)$ 在x=0处不连续"
+        },
+        {
+          "label": "C",
+          "value": "$f'(x)$ 连续， $f''(0)$ 不存在"
+        },
+        {
+          "label": "D",
+          "value": "$f''(0)$ 存在， $f''(x)$ 在x=0处不连续"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 45,
+          "lineEnd": 54
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 31,
+          "lineEnd": 40
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q06",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 6,
+      "stem": "若函数 $f(\\alpha) = \\int_{2}^{+\\infty}\\frac{1}{x(\\ln x)^{\\alpha + 1}}\\mathrm{d}x$ 在 $\\alpha = \\alpha_0$ 处取得最小值，则 $\\alpha_0 =$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$-\\frac{1}{\\ln(\\ln2)}$"
+        },
+        {
+          "label": "B",
+          "value": "- $\\ln (\\ln 2)$"
+        },
+        {
+          "label": "C",
+          "value": "$\\frac{1}{\\ln 2}$"
+        },
+        {
+          "label": "D",
+          "value": "ln2"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        },
+        {
+          "type": "comparison_options_incomplete",
+          "severity": "warning",
+          "message": "Comparison transcript has incomplete or empty options for Q6; approved primary transcript is used.",
+          "blocksPublication": false,
+          "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 55,
+          "lineEnd": 64
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 41,
+          "lineEnd": 50
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q07",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 7,
+      "stem": "设函数 $f(x) = (x^{2} + a)\\mathrm{e}^{x}$ . 若 $f(x)$ 没有极值点，但曲线 $y = f(x)$ 有拐点，则 $a$ 得取值范围是",
+      "options": [
+        {
+          "label": "A",
+          "value": "[0,1)"
+        },
+        {
+          "label": "B",
+          "value": "$[1, +\\infty)$"
+        },
+        {
+          "label": "C",
+          "value": "$[1,2)$"
+        },
+        {
+          "label": "D",
+          "value": "$[2, +\\infty)$"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        },
+        {
+          "type": "comparison_options_incomplete",
+          "severity": "warning",
+          "message": "Comparison transcript has incomplete or empty options for Q7; approved primary transcript is used.",
+          "blocksPublication": false,
+          "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 65,
+          "lineEnd": 74
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 51,
+          "lineEnd": 57
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q08",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 8,
+      "stem": "设 $\\mathbf{A},\\mathbf{B}$ 为 $n$ 阶可逆矩阵， $\\pmb{E}$ 是 $n$ 阶单位矩阵， $\\pmb{M}^*$ 为 $\\pmb{M}$ 的伴随矩阵，则 $\\left[ \\begin{array}{ll}\\pmb {A} & \\pmb {E}\\\\ \\pmb {O} & \\pmb {B} \\end{array} \\right]^*$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\left[ \\begin{array}{cc}|\\boldsymbol {A}|\\boldsymbol {B}^{*} & -\\boldsymbol {B}^{*}\\boldsymbol {A}^{*}\\\\ \\boldsymbol {O} & |\\boldsymbol {B}|\\boldsymbol {A}^{*} \\end{array} \\right]$"
+        },
+        {
+          "label": "B",
+          "value": "$\\left[ \\begin{array}{cc}|\\pmb {A}|\\pmb {B}^{*} & -\\pmb {A}^{*}\\pmb {B}^{*}\\\\ \\pmb {O} & |\\pmb {B}|\\pmb {A}^{*} \\end{array} \\right]$"
+        },
+        {
+          "label": "C",
+          "value": "$\\left[ \\begin{array}{cc}|\\boldsymbol {B}|\\boldsymbol {A}^{*} & -\\boldsymbol {B}^{*}\\boldsymbol {A}^{*}\\\\ \\boldsymbol {O} & |\\boldsymbol {A}|\\boldsymbol {B}^{*} \\end{array} \\right]$"
+        },
+        {
+          "label": "D",
+          "value": "$\\left[ \\begin{array}{cc}|\\pmb {B}|\\pmb {A}^{*} & -\\pmb {A}^{*}\\pmb {B}^{*}\\\\ \\pmb {O} & |\\pmb {A}|\\pmb {B}^{*} \\end{array} \\right]$"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 75,
+          "lineEnd": 84
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 58,
+          "lineEnd": 83
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q09",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 9,
+      "stem": "二次型 $f(x_{1},x_{2},x_{3}) = (x_{1} + x_{2})^{2} + (x_{1} + x_{3})^{2} - 4(x_{2} - x_{3})^{2}$ 的规范形为",
+      "options": [
+        {
+          "label": "A",
+          "value": "$y_{1}^{2}+y_{2}^{2}$"
+        },
+        {
+          "label": "B",
+          "value": "$y_{1}^{2}-y_{2}^{2}$"
+        },
+        {
+          "label": "C",
+          "value": "$y_{1}^{2}+y_{2}^{2}-4y_{3}^{2}$"
+        },
+        {
+          "label": "D",
+          "value": "$y_{1}^{2}+y_{2}^{2}-y_{3}^{2}$"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        },
+        {
+          "type": "comparison_options_incomplete",
+          "severity": "warning",
+          "message": "Comparison transcript has incomplete or empty options for Q9; approved primary transcript is used.",
+          "blocksPublication": false,
+          "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 85,
+          "lineEnd": 94
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 84,
+          "lineEnd": 85
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q10",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "multiple_choice",
+      "questionNumber": 10,
+      "stem": "已知向量 $\\pmb{\\alpha}_{1} = \\begin{bmatrix} 1\\\\ 2\\\\ 3 \\end{bmatrix},\\pmb{\\alpha}_{2} = \\begin{bmatrix} 2\\\\ 1\\\\ 1 \\end{bmatrix},\\pmb{\\beta}_{1} = \\begin{bmatrix} 2\\\\ 5\\\\ 9 \\end{bmatrix},\\pmb{\\beta}_{2} = \\begin{bmatrix} 1\\\\ 0\\\\ 1 \\end{bmatrix}$ . 若 $\\pmb{\\gamma}$ 可有 $\\pmb{\\alpha}_{1},\\pmb{\\alpha}_{2}$ 线性表示，也可由 $\\pmb{\\beta}_{1},\\pmb{\\beta}_{2}$ 线性表示，则 $\\pmb{\\gamma} =$",
+      "options": [
+        {
+          "label": "A",
+          "value": "$k\\begin{bmatrix}3\\\\ 3\\\\ 4\\end{bmatrix},k\\in\\mathbb{R}$"
+        },
+        {
+          "label": "B",
+          "value": "$k\\left[\\begin{array}{c}3\\\\ 5\\\\ 10\\end{array}\\right],k\\in\\mathbb{R}$"
+        },
+        {
+          "label": "C",
+          "value": "$k\\begin{bmatrix}-1\\\\ 1\\\\ 2\\end{bmatrix},k\\in\\mathbb{R}$"
+        },
+        {
+          "label": "D",
+          "value": "$k\\left[\\begin{array}{l}1\\\\ 5\\\\ 8\\end{array}\\right],k\\in\\mathbb{R}$ \n\n## 二、填空题（11~16 小题，每小题 5 分，共 30 分）"
+        }
+      ],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        },
+        {
+          "type": "comparison_options_incomplete",
+          "severity": "warning",
+          "message": "Comparison transcript has incomplete or empty options for Q10; approved primary transcript is used.",
+          "blocksPublication": false,
+          "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 95,
+          "lineEnd": 106
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 86,
+          "lineEnd": 93
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q11",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 11,
+      "stem": "当 $x \\to 0$ 时，函数 $f(x) = ax + bx^2 + \\ln (1 + x)$ 与 $g(x) = \\mathrm{e}^{x^2} - \\cos x$ 是等价无穷小，则 $ab =$ ____.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 107,
+          "lineEnd": 108
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 94,
+          "lineEnd": 95
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q12",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 12,
+      "stem": "曲线 $\\int_{-\\sqrt{3}}^{x}\\sqrt{3 - t^2}\\mathrm{d}t$ 的弧长为",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 109,
+          "lineEnd": 110
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 96,
+          "lineEnd": 96
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q13",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 13,
+      "stem": "设函数 $z = z(x,y)$ 由 $\\mathrm{e}^z +xz = 2x - y$ 确定，则 $\\left.\\frac{\\partial^2z}{\\partial x^2}\\right|_{(1,1)} = \\underline{\\quad}$ .",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 111,
+          "lineEnd": 112
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 97,
+          "lineEnd": 97
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q14",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 14,
+      "stem": "曲线 $3x^{3}=y^{5}+2y^{3}$ 在x=1对应点处的法线斜率为____.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 113,
+          "lineEnd": 114
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 98,
+          "lineEnd": 99
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q15",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 15,
+      "stem": "设连续函数 $f(x)$ 满足 $f(x + 2) - f(x) = x, \\int_{0}^{2} f(x) \\mathrm{d}x = 0$ ，则 $\\int_{1}^{3} f(x) \\mathrm{d}x =$ ____.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 115,
+          "lineEnd": 116
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 100,
+          "lineEnd": 101
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q16",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "fill_in_blank",
+      "questionNumber": 16,
+      "stem": "已知线性方程组 $\\left\\{ \\begin{array}{ll}ax_{1} + x_{3} = 1,\\\\ x_{1} + ax_{2} + x_{3} = 0,\\\\ x_{1} + 2x_{2} + ax_{3} = 0,\\\\ ax_{1} + bx_{2} = 2 \\end{array} \\right.$ 有解，其中 $a,b$ 为常数.若 $\\left| \\begin{array}{lll}a & 0 & 1\\\\ 1 & a & 1\\\\ 1 & 2 & a \\end{array} \\right| = 4$ ，则 $\\left| \\begin{array}{lll}1 & a & 1\\\\ 1 & 2 & a\\\\ a & b & 0 \\end{array} \\right| = \\_$ .\n\n## 三、解答题（17~22 小题，共 70 分. 解答应写出文字说明、证明过程或演算步骤.）",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 117,
+          "lineEnd": 120
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 102,
+          "lineEnd": 105
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q17",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 17,
+      "stem": "（本题满分 10 分）\n\n设曲线 $L:y=y(x)(x>\\mathrm{e})$ 经过点 $(\\mathrm{e}^{2},0)$ ，L上任一点 $P(x,y)$ 到y轴的距离等于该点处的切线在y轴上的截距.\n\n(I)求 $y(x)$ ;\n\n(II)在 $L$ 上求一点，使该点处的切线与两坐标轴所围三角形的面积最小，并求此最小面积.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 121,
+          "lineEnd": 128
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 106,
+          "lineEnd": 113
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q18",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 18,
+      "stem": "（本题满分 12 分）\n\n求函数 $f(x,y)=x\\mathrm{e}^{\\cos y}+\\frac{x^{2}}{2}$ 的极值.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 129,
+          "lineEnd": 132
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 114,
+          "lineEnd": 117
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q19",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 19,
+      "stem": "（本题满分 12 分）\n\n已知平面区域 $D = \\left\\{(x,y) | 0 \\leqslant y \\leqslant \\frac{1}{x\\sqrt{1 + x^2}}, x \\geqslant 1\\right\\}$ .\n\n(I)求 $D$ 的面积;\n\n(II)求 D 绕 x 轴旋转所成旋转体的体积.",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 133,
+          "lineEnd": 140
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 118,
+          "lineEnd": 124
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q20",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 20,
+      "stem": "（本题满分12分）\n\n设平面有界区域 $D$ 位于第一象限，由曲线 $x^{2} + y^{2} - xy = 1, x^{2} + y^{2} - xy = 2$ 与直线 $y = \\sqrt{3} x, y = 0$ 围成，计算 $\\iint_{D} \\frac{1}{3x^2 + y^2} \\mathrm{d}x \\mathrm{d}y$ .",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 141,
+          "lineEnd": 144
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 125,
+          "lineEnd": 130
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q21",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 21,
+      "stem": "（本题满分 12 分）\n\n设函数 $f(x)$ 在 $[-a, a]$ 上具有2阶连续导数，证明：\n\n(I)若 $f(0)=0$ ，则存在 $\\xi\\in(-a,a)$ ，使得 $f''(\\xi)=\\frac{1}{a^{2}}[f(a)+f(-a)]$ ;\n\n(II)若 $f(x)$ 在 $(-a, a)$ 内取得极值，则存在 $\\eta \\in (-a, a)$ ，使得\n\n$$\n\\left| f ^ {\\prime \\prime} (\\eta) \\right| \\geqslant \\frac {1}{2 a ^ {2}} | f (a) - f (- a) |.\n$$",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 145,
+          "lineEnd": 156
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 131,
+          "lineEnd": 142
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2023-q22",
+      "sourceYear": 2023,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 22,
+      "stem": "（本题满分12分）\n\n设矩阵 $\\mathbf{A}$ 满足：对任意 $x_{1}, x_{2}, x_{3}$ ，均有 $\\mathbf{A}\\left[ \\begin{array}{c}x_{1}\\\\ x_{2}\\\\ x_{3} \\end{array} \\right] = \\left[ \\begin{array}{c}x_{1} + x_{2} + x_{3}\\\\ 2x_{1} - x_{2} + x_{3}\\\\ x_{2} - x_{3} \\end{array} \\right].$ \n\n(I)求 $\\pmb{A}$ \n\n(II)求可逆矩阵 P 与对角矩阵 $\\Lambda$ ，使得 $P^{-1}AP = \\Lambda$ .",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_answer_and_explanation",
+          "severity": "error",
+          "message": "No explicit answer or explanation exists in either audited Markdown input.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md",
+          "role": "primary_complete_question_transcription",
+          "gitState": "untracked",
+          "sha256": "eef3ea76c3491b8753230bfc1089493d2b67f1b1a815bc45de6666a70cdcb02f",
+          "lineStart": 157,
+          "lineEnd": 163
+        },
+        {
+          "relativePath": "solutions/2023/math2_2023/math2_2023.md",
+          "role": "comparison_incomplete_question_transcription",
+          "gitState": "tracked",
+          "sha256": "c353e535aa9dcda945bc9d88c3c441f3f4d23060a3408209ac3e90efa202bed8",
+          "lineStart": 143,
+          "lineEnd": 149
+        }
+      ]
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "source_role_decision_option_b",
+      "severity": "warning",
+      "message": "REQ-008 uses the maintainer-approved REQ-004 option (b): the currently verified complete 2023 transcript is primary. Live source verification shows the complete transcript is the MinerU paper path, while the solutions path contains the known Q2/Q4/Q6/Q7/Q9/Q10 option defects.",
+      "blocksPublication": false,
+      "sourceRelativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md"
+    },
+    {
+      "type": "primary_is_question_transcription",
+      "severity": "error",
+      "message": "The approved primary file contains question transcription only; no answer or explanation markers are present.",
+      "blocksPublication": true,
+      "sourceRelativePath": "papers/MinerU_markdown_math2_2023_2065687933685170176.md"
+    },
+    {
+      "type": "comparison_options_incomplete",
+      "severity": "warning",
+      "message": "The solutions comparison transcript is comparison evidence because its MC options are incomplete for Q2, Q4, Q6, Q7, Q9, and Q10.",
+      "blocksPublication": false,
+      "sourceRelativePath": "solutions/2023/math2_2023/math2_2023.md"
+    }
+  ],
+  "validation": {
+    "inputFilesRead": 2,
+    "questionsGenerated": 22,
+    "questionCounts": {
+      "multiple_choice": 10,
+      "fill_in_blank": 6,
+      "solution": 6
+    },
+    "expectedCounts": {
+      "multiple_choice": 10,
+      "fill_in_blank": 6,
+      "solution": 6
+    },
+    "countsMatch": true,
+    "stableIdsUnique": true,
+    "allQuestionsBlocked": true,
+    "answersPresent": 0,
+    "explanationsPresent": 0,
+    "primaryOptionsComplete": true,
+    "hashesMatchExpected": true,
+    "schemaValid": true,
+    "schemaErrors": []
+  }
+}
