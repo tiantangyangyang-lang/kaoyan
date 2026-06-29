@@ -79,9 +79,13 @@
 - Existing mail value:
   - `MAIL_FROM=研数 <verify@mail.gongren.xyz>`
   - Purpose: email verification sender.
-- Decision: do not hardcode or reuse this as feedback contact. Add a
-  configurable feedback email path and mark launch as requiring a maintainer
-  supplied address.
+- Initial decision: do not reuse the verification sender as feedback contact.
+- Maintainer update on 2026-06-28:
+  - Public feedback mailbox is `tiantangyangyang@gmail.com`.
+  - Questions missing answers/explanations may go online if the feedback path is
+    visible.
+  - Do not discuss/run DB import for this batch until broader multi-year Math2
+    data is ready for database import.
 
 ## Generated Outputs
 
@@ -100,6 +104,7 @@ Generated contract:
 - Explanations present: `0`
 - All records: `reviewStatus: needs_human_review`,
   `finalizationStatus: blocked`.
+- Feedback email: `tiantangyangyang@gmail.com`.
 - Q10 fused fill-in heading was removed from option D.
 - Q22 trailing image references were omitted from the stem and recorded as
   non-blocking watermark artifacts.
@@ -140,3 +145,19 @@ Generated contract:
   - API tests: 10 passed.
   - Web smoke test: passed.
   - Web/API builds and Python compileall: passed.
+
+## Maintainer Update Verification 2026-06-30
+
+- Maintainer supplied public feedback email:
+  `tiantangyangyang@gmail.com`.
+- Maintainer allowed first launch with missing answers/explanations if the UI
+  keeps the under-review state and exact-issue feedback path visible.
+- Maintainer deferred DB import until broader multi-year Math2 data is ready.
+- `python scripts/transform_math2_2024.py D:/work/Kaoyan-Math2-Papers content/staging/math2/2024 --review-checklist content/reports/math2-2024/human-review-checklist.md`
+  - Passed: `Math2 2024: 22 questions, schemaValid=True`.
+- `mingw32-make NPM=npm.cmd math2-2024-validate`
+  - Passed: 117 KaTeX expressions, 0 errors; 12 tests passed.
+- `npm.cmd run typecheck:web`
+  - Passed.
+- `mingw32-make NPM=npm.cmd verify`
+  - Passed after the feedback-email update.

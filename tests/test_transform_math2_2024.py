@@ -122,10 +122,10 @@ class Math2_2024RealSourceTests(unittest.TestCase):
             )
         )
 
-    def test_feedback_email_is_configured_not_hardcoded(self):
+    def test_maintainer_feedback_email_is_recorded(self):
         self.assertEqual(self.payload["feedback"]["configuredBy"], "VITE_FEEDBACK_EMAIL")
-        self.assertIsNone(self.payload["feedback"]["hardcodedEmail"])
-        self.assertEqual(self.payload["feedback"]["status"], "awaiting_maintainer_email")
+        self.assertEqual(self.payload["feedback"]["publicEmail"], "tiantangyangyang@gmail.com")
+        self.assertEqual(self.payload["feedback"]["status"], "maintainer_email_configured")
 
     def test_schema_rejects_option_text(self):
         broken = copy.deepcopy(self.payload)

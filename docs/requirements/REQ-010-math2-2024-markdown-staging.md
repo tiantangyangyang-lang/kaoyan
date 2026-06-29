@@ -56,16 +56,16 @@ answers or explanations.
 - Add Make targets for focused 2024 regeneration and validation.
 - Keep every record conservative unless a separate launch/promotion requirement
   approves publication.
-- Provide a visible feedback-email path only through a maintainer-provided
-  configured address; do not invent or repurpose a verification sender.
+- Provide a visible feedback-email path using the maintainer-provided public
+  address `tiantangyangyang@gmail.com`; do not repurpose a verification sender.
 
 ## Out of Scope
 
 - Re-auditing the PDF or requiring it as evidence.
 - Editing, deleting, normalizing, or committing anything in
   `D:\work\Kaoyan-Math2-Papers`.
-- Live database dry-run without configured `DATABASE_URL` and explicit
-  maintainer approval.
+- Live database dry-run or import. The maintainer wants to defer database import
+  until broader multi-year Math2 coverage is ready.
 - Importing Math2 into frontend static assets.
 - Dynamic explanations or Motion animations.
 - API, database, authentication, deployment, or Math1 changes unless a minimal
@@ -82,8 +82,10 @@ answers or explanations.
   `missing`.
 - Records remain `reviewStatus: needs_human_review` and
   `finalizationStatus: blocked` in this staging task.
-- Feedback email must be supplied by configuration, not hardcoded from an
-  unrelated sender.
+- Feedback email is `tiantangyangyang@gmail.com` by maintainer decision and can
+  still be overridden by `VITE_FEEDBACK_EMAIL`.
+- Missing answers/explanations may be allowed in a later user-facing launch only
+  if the UI keeps the under-review state and feedback path visible.
 
 ## Acceptance Criteria
 
@@ -116,12 +118,14 @@ answers or explanations.
   - Passed: Math2 2020, 2023, and 2024 validation; web/API typecheck; API
     tests; web smoke; web/API builds; Python compileall.
 
-## Known Launch Limit
+## Launch Decision Update
 
-No dedicated feedback email exists in repo config. REQ-010 adds the visible
-question feedback path behind `VITE_FEEDBACK_EMAIL`; a maintainer-provided public
-feedback address is still required before launch. The verification sender
-`verify@mail.gongren.xyz` was not reused.
+- Public feedback email: `tiantangyangyang@gmail.com`.
+- The maintainer allows questions with missing answers/explanations to go online
+  for first launch if users have a visible exact-issue feedback path.
+- Database import remains out of scope for REQ-010 and should wait until broader
+  Math2 year coverage is ready.
+- The verification sender `verify@mail.gongren.xyz` was not reused.
 
 ## Verification Commands
 

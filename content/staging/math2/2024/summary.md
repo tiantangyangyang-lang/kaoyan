@@ -8,5 +8,6 @@
 - Explanations present: 0.
 - Primary options complete: true.
 - Schema contract valid: true.
-- Feedback email: configure `VITE_FEEDBACK_EMAIL` before launch; no address is hardcoded.
+- Feedback email: `tiantangyangyang@gmail.com` by default; `VITE_FEEDBACK_EMAIL` may override it.
+- Launch boundary: missing answers/explanations are allowed for first launch if the promotion task keeps the under-review state visible.
 - Image references: three REQ-009 watermark/logo artifacts recorded as non-blocking source files.

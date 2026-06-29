@@ -90,4 +90,4 @@ JSON 备份格式为 `kaoyan-learning-export-v2`，包含上述两类数据。
 
 ### 内容反馈邮箱
 
-配置 `VITE_FEEDBACK_EMAIL` 后，待核对题目的提示区会显示“反馈此题”邮件链接，并自动带上题目 `stableId`、年份和题号。不要把验证邮件发送地址当作反馈邮箱使用。
+待核对题目的提示区会显示“反馈此题”邮件链接，并自动带上题目 `stableId`、年份和题号。默认公开反馈邮箱为 `tiantangyangyang@gmail.com`；部署时也可以用 `VITE_FEEDBACK_EMAIL` 覆盖。

@@ -32,4 +32,6 @@ export const STATUS_LABELS: Record<string, string> = {
   blocked: "待核对",
 };
 
-export const FEEDBACK_EMAIL = import.meta.env.VITE_FEEDBACK_EMAIL?.trim() ?? "";
+export const DEFAULT_FEEDBACK_EMAIL = "tiantangyangyang@gmail.com";
+export const FEEDBACK_EMAIL =
+  import.meta.env.VITE_FEEDBACK_EMAIL?.trim() || DEFAULT_FEEDBACK_EMAIL;
