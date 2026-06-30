@@ -140,7 +140,7 @@
         "finding": "The maintainer clarified that solutions/2024/math2_2024.md is sufficient as the 2024 Markdown source despite living under solutions/. No PDF-backed repair requirement is needed before the next staging task.",
         "imageFinding": "All three queued JPG references resolve locally but are GaoLian watermark/logo crops, not mathematical evidence; they are non-blocking source artifacts.",
         "stagingDecision": "staged_as_blocked_markdown_batch",
-        "feedbackDecision": "VITE_FEEDBACK_EMAIL must be configured with a maintainer-provided public feedback address before launch; no address is hardcoded."
+        "feedbackDecision": "Maintainer supplied tiantangyangyang@gmail.com as the public feedback address; VITE_FEEDBACK_EMAIL can override it. Missing answers/explanations may go online only with visible under-review state and issue-report path."
       },
       "expectedOutputs": [
         "content/staging/math2/2024/questions.json",
@@ -155,7 +155,7 @@
         "node scripts/validate_math2_katex.mjs content/staging/math2/2024/questions.json content/staging/math2/2024/katex-validation.json",
         "python -m unittest tests.test_transform_math2_2024 -v"
       ],
-      "dryRunImportCommand": "forbidden until REQ-010 passes schema, KaTeX, deterministic rerun, feedback-email configuration, and explicit maintainer approval for a DB dry-run",
+      "dryRunImportCommand": "forbidden for REQ-010; maintainer deferred DB import until broader multi-year Math2 data is ready",
       "rollbackRequired": false,
       "stopOnAnomalies": true
     },

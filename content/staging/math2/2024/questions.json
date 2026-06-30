@@ -25,9 +25,9 @@
   },
   "feedback": {
     "configuredBy": "VITE_FEEDBACK_EMAIL",
-    "requiredForLaunch": true,
-    "hardcodedEmail": null,
-    "status": "awaiting_maintainer_email"
+    "publicEmail": "tiantangyangyang@gmail.com",
+    "requiredForLaunch": false,
+    "status": "maintainer_email_configured"
   },
   "sourceFiles": [
     {
@@ -1013,9 +1013,9 @@
       "sourceRelativePath": "solutions/2024/math2_2024.md"
     },
     {
-      "type": "feedback_email_not_hardcoded",
+      "type": "maintainer_feedback_email_configured",
       "severity": "warning",
-      "message": "A visible user feedback path requires maintainer configuration of VITE_FEEDBACK_EMAIL before launch; no feedback email was present in repo config.",
+      "message": "The maintainer supplied tiantangyangyang@gmail.com as the public feedback mailbox for exact issue reports.",
       "blocksPublication": false
     }
   ],

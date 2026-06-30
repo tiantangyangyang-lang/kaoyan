@@ -32,8 +32,11 @@ maintainer-approved Markdown source and leave a clear launch-readiness boundary.
 - Keep all generated records blocked and marked `needs_human_review`.
 - Treat the three image references as non-blocking source artifacts from
   REQ-009 unless the Markdown parser finds they are needed for a question.
-- Do not hardcode `verify@mail.gongren.xyz`; it is a verification sender, not a
-  feedback address.
+- Use maintainer-provided `tiantangyangyang@gmail.com` as the public feedback
+  address; do not reuse `verify@mail.gongren.xyz`.
+- Missing answers/explanations may go online in a later launch task if the
+  under-review state and feedback path remain visible.
+- Defer DB import until broader multi-year Math2 data is ready.
 
 ## Errors Encountered
 

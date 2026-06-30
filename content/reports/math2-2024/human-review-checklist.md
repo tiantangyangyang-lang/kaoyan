@@ -32,5 +32,6 @@ Review focus:
 
 - Confirm Q1-Q22 stems/options against the approved Markdown source.
 - Supply answers and explanations only from approved answer evidence in a later task.
-- Configure `VITE_FEEDBACK_EMAIL` before any user-facing launch so users can report exact issue IDs.
-- Keep all records blocked until the launch/promotion requirement explicitly changes publication state.
+- Use `tiantangyangyang@gmail.com` as the public user feedback mailbox unless deployment overrides `VITE_FEEDBACK_EMAIL`.
+- Missing answers/explanations may be launched only with visible under-review state and issue-report path.
+- Do not run a DB import in REQ-010; defer database import until broader Math2 year coverage is ready.

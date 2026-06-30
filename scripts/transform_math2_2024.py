@@ -16,6 +16,7 @@ SOURCE_REPO = "Kaoyan-Math2-Papers"
 SOURCE_YEAR = 2024
 SUBJECT_CODE = "math2"
 PRIMARY_RELATIVE = "solutions/2024/math2_2024.md"
+FEEDBACK_EMAIL = "tiantangyangyang@gmail.com"
 EXPECTED_PRIMARY_HASH = "38d3a737c302a4ae79094fbaacb489d33fcb7b15de1330aa6b20888aaea8358b"
 EXPECTED_IMAGE_HASHES = {
     "solutions/2024/images/7884391bcaec6d4b3b606a079c578a4913ccb65a0f43986faeb8ca2af3e7e68e.jpg": "143fbb6e676f2d2c9d81665184043e8c7b44dd0730008d37a99c4e177b557c54",
@@ -333,11 +334,11 @@ def transform(source_root: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]:
             source_relative_path=PRIMARY_RELATIVE,
         ),
         anomaly(
-            "feedback_email_not_hardcoded",
+            "maintainer_feedback_email_configured",
             "warning",
             (
-                "A visible user feedback path requires maintainer configuration of "
-                "VITE_FEEDBACK_EMAIL before launch; no feedback email was present in repo config."
+                "The maintainer supplied tiantangyangyang@gmail.com as the public "
+                "feedback mailbox for exact issue reports."
             ),
             blocks_publication=False,
         ),
@@ -423,9 +424,9 @@ def transform(source_root: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]:
         },
         "feedback": {
             "configuredBy": "VITE_FEEDBACK_EMAIL",
-            "requiredForLaunch": True,
-            "hardcodedEmail": None,
-            "status": "awaiting_maintainer_email",
+            "publicEmail": FEEDBACK_EMAIL,
+            "requiredForLaunch": False,
+            "status": "maintainer_email_configured",
         },
         "sourceFiles": [primary_record, *image_records],
         "questions": questions,
@@ -503,7 +504,8 @@ def write_outputs(
             "- Explanations present: 0.",
             f"- Primary options complete: {str(validation['primaryOptionsComplete']).lower()}.",
             f"- Schema contract valid: {str(validation['schemaValid']).lower()}.",
-            "- Feedback email: configure `VITE_FEEDBACK_EMAIL` before launch; no address is hardcoded.",
+            f"- Feedback email: `{FEEDBACK_EMAIL}` by default; `VITE_FEEDBACK_EMAIL` may override it.",
+            "- Launch boundary: missing answers/explanations are allowed for first launch if the promotion task keeps the under-review state visible.",
             "- Image references: three REQ-009 watermark/logo artifacts recorded as non-blocking source files.",
             "",
         ]),
@@ -542,8 +544,9 @@ def write_review_checklist(report_path: Path, payload: dict[str, Any]) -> None:
             "",
             "- Confirm Q1-Q22 stems/options against the approved Markdown source.",
             "- Supply answers and explanations only from approved answer evidence in a later task.",
-            "- Configure `VITE_FEEDBACK_EMAIL` before any user-facing launch so users can report exact issue IDs.",
-            "- Keep all records blocked until the launch/promotion requirement explicitly changes publication state.",
+            f"- Use `{FEEDBACK_EMAIL}` as the public user feedback mailbox unless deployment overrides `VITE_FEEDBACK_EMAIL`.",
+            "- Missing answers/explanations may be launched only with visible under-review state and issue-report path.",
+            "- Do not run a DB import in REQ-010; defer database import until broader Math2 year coverage is ready.",
             "",
         ]),
         encoding="utf-8",
