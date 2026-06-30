@@ -1,0 +1,1895 @@
+{
+  "schemaVersion": "math2-2021-2022-readiness-audit-v1",
+  "requirement": "docs/requirements/REQ-011-math2-2021-2022-staging-readiness.md",
+  "reportDirectory": "content/reports/req-011-math2-2021-2022-staging-readiness",
+  "sourceRepository": {
+    "name": "Kaoyan-Math2-Papers",
+    "path": "D:\\work\\Kaoyan-Math2-Papers",
+    "commit": "fd42c56eed412cce0cb97d6bd688f314c78e542e",
+    "branch": "main",
+    "dirty": true,
+    "dirtyState": [
+      "?? papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "?? papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+      "?? papers/MinerU_markdown_math2_2021_2065687851346780160.md",
+      "?? papers/MinerU_markdown_math2_2022_2065687890395758592.md",
+      "?? papers/MinerU_markdown_math2_2023_2065687933685170176.md"
+    ]
+  },
+  "years": [
+    {
+      "year": 2021,
+      "batchId": "math2-2021-wrong-subject-audit",
+      "expectedQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "expectedQuestionCounts": {
+        "multiple_choice": 10,
+        "fill_in_blank": 6,
+        "solution": 6
+      },
+      "sources": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2021_2065687851346780160.md",
+          "role": "paper_candidate",
+          "gitState": "untracked",
+          "bytes": 29863,
+          "lines": 419,
+          "sha256": "6c7c470e3edcafa3a5541365406c10cfcd6322db32cb5e27581cb3e8a34f8f1e",
+          "expectedSha256": "6c7c470e3edcafa3a5541365406c10cfcd6322db32cb5e27581cb3e8a34f8f1e",
+          "hashMatchesExpected": true,
+          "subjectIdentity": {
+            "expectedSubjectCode": "math2",
+            "detectedSubjectCode": "math3",
+            "detectedMarker": "三",
+            "matchesExpected": false,
+            "evidence": [
+              {
+                "line": 1,
+                "text": "## 2021考研数学三试题解析"
+              }
+            ]
+          },
+          "answerMarkers": 16,
+          "explanationMarkers": 23,
+          "sections": [
+            {
+              "line": 3,
+              "text": "## 一、选择题（本题共 10题，每小题 5分，共 50分）"
+            },
+            {
+              "line": 227,
+              "text": "## 二、填空题（本题共 6题，每小题5分，共 30分）"
+            },
+            {
+              "line": 285,
+              "text": "## 三、解答题（本题共 6小题，共70分）"
+            }
+          ],
+          "imageReferences": [],
+          "boundaryScans": {
+            "strictParenthesized": {
+              "numbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrenceNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrences": [
+                {
+                  "number": 1,
+                  "line": 5,
+                  "text": "（1）当 时， $\\int _ { 0 } ^ { x ^ { 2 } } \\left( e ^ { t ^ { 3 } } - 1 \\right) \\mathrm { d } t$ rx² 是 的"
+                },
+                {
+                  "number": 2,
+                  "line": 21,
+                  "text": "（2）函数 $f ( x ) = { \\left\\{ \\begin{array} { l l } { \\displaystyle e ^ { x } - 1 } , x \\neq 0 \\right.} \\\\ { \\qquad x } \\\\ { \\quad 1 , x = 0 } \\end{array}  $ ，在 处"
+                },
+                {
+                  "number": 3,
+                  "line": 37,
+                  "text": "（3）设函数 $f ( x ) = a x - b \\ln x ( a > 0 )$ 有两个零点，则 $\\frac { b } { a }$ 的取值范围是"
+                },
+                {
+                  "number": 4,
+                  "line": 59,
+                  "text": "（4）设函数 $f ( x , y )$ 可微， $f ( x + 1 , e ^ { x } ) = x ( x + 1 ) ^ { 2 } , f ( x , x ^ { 2 } ) = 2 x ^ { 2 } \\mathrm { l n } x$ ，则 $\\mathrm { d } f ( 1 , 1 ) =$"
+                },
+                {
+                  "number": 5,
+                  "line": 91,
+                  "text": "（5）二次型 $f ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = ( x _ { 1 } + x _ { 2 } ) ^ { 2 } + ( x _ { 2 } + x _ { 3 } ) ^ { 2 } - ( x _ { 3 } - x _ { 1 } ) ^ { 2 }$ 的正惯"
+                },
+                {
+                  "number": 6,
+                  "line": 121,
+                  "text": "（6）设 $A = \\left( \\alpha _ { 1 } , \\alpha _ { 2 } , \\alpha _ { 3 } , \\alpha _ { 4 } \\right)$ 为 阶正交矩阵，若矩阵 $B = \\left[ \\begin{array} { l } { \\pmb { \\alpha } _ { 1 "
+                },
+                {
+                  "number": 7,
+                  "line": 137,
+                  "text": "（7）已知矩阵 $\\pmb { A } = \\left[ \\begin{array} { c c c } { 1 } & { 0 } & { - 1 } \\\\ { 2 } & { - 1 } & { 1 } \\\\ { - 1 } & { 2 } & { - 5 } \\end{array} \\right]$ ，若下三角可"
+                },
+                {
+                  "number": 8,
+                  "line": 155,
+                  "text": "（8）设 为随机事件，且 ，下列命题中不成立的是"
+                },
+                {
+                  "number": 9,
+                  "line": 181,
+                  "text": "（9）设 $( X _ { 1 } , Y _ { 1 } ) , ( X _ { 2 } , Y _ { 2 } ) , \\cdots , ( X _ { n } , Y _ { n } )$ 为来自总体 $N ( \\mu _ { 1 } , \\mu _ { 2 } ; \\sigma _ { 1 } ^ { 2 } "
+                },
+                {
+                  "number": 10,
+                  "line": 207,
+                  "text": "（10）设总体 的概率分布为 $P \\{ X = 1 \\} = \\frac { 1 - \\theta } { 2 } , P \\{ X = 2 \\} = P \\{ X = 3 \\} = \\frac { 1 + \\theta } { 4 }$ 则利用来自总体的样本值 ，可得 的最大似然估计值为"
+                },
+                {
+                  "number": 11,
+                  "line": 229,
+                  "text": "（11）若 $y = \\cos e ^ { - { \\sqrt { x } } }$ ，则 $\\left. { \\frac { \\mathrm { d } y } { \\mathrm { d } x } } \\right| _ { x = 1 } = - .$"
+                },
+                {
+                  "number": 12,
+                  "line": 235,
+                  "text": "（12） $\\int _ { \\sqrt { 5 } } ^ { 5 } { \\frac { x } { \\sqrt { \\left| x ^ { 2 } - 9 \\right| } } } \\mathrm { d } x =$"
+                },
+                {
+                  "number": 13,
+                  "line": 243,
+                  "text": "（13）设平面区域 由曲线 $y = { \\sqrt { x } } \\sin \\pi x ( 0 \\leq x \\leq 1 )$ 与 轴围成，则 绕 轴旋转所成旋转体的体积为"
+                },
+                {
+                  "number": 14,
+                  "line": 249,
+                  "text": "（14）差分方程 $\\triangle y _ { t } = t$ 的通解为"
+                },
+                {
+                  "number": 15,
+                  "line": 257,
+                  "text": "（15）多项式 $f ( x ) = { \\left| \\begin{array} { l l l l } { x } & { x } & { 1 } & { 2 x } \\\\ { 1 } & { x } & { 2 } & { - 1 } \\\\ { 2 } & { 1 } & { x } & { 1 } \\\\ { 2"
+                },
+                {
+                  "number": 16,
+                  "line": 269,
+                  "text": "（16）甲乙两个盒子中各装有 2个红球和 个白球，先从甲盒中任取一球，观察颜色后放入乙盒中，再从乙盒中任取一球，令 $X , Y$ 分别表示从甲盒中和乙盒中取到的红球个数，则 与 的相关系数"
+                },
+                {
+                  "number": 17,
+                  "line": 287,
+                  "text": "（17）（本题满分 10分）"
+                },
+                {
+                  "number": 18,
+                  "line": 303,
+                  "text": "（18）（本题满分 12分）"
+                },
+                {
+                  "number": 19,
+                  "line": 317,
+                  "text": "（19）（本题满分 12分）"
+                },
+                {
+                  "number": 20,
+                  "line": 343,
+                  "text": "## （20）（本题满分 12分）"
+                },
+                {
+                  "number": 21,
+                  "line": 363,
+                  "text": "（21）（本题满分 12分）"
+                },
+                {
+                  "number": 22,
+                  "line": 387,
+                  "text": "## （22）（本题满分 12分）"
+                }
+              ],
+              "missingExpectedNumbers": [],
+              "duplicateNumbers": [],
+              "unexpectedNumbers": [],
+              "containsExpectedQuestionSet": true,
+              "firstOccurrencesMatchExpected": true
+            },
+            "fallbackNumeric": {
+              "numbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrenceNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrences": [
+                {
+                  "number": 1,
+                  "line": 5,
+                  "text": "（1）当 时， $\\int _ { 0 } ^ { x ^ { 2 } } \\left( e ^ { t ^ { 3 } } - 1 \\right) \\mathrm { d } t$ rx² 是 的"
+                },
+                {
+                  "number": 2,
+                  "line": 21,
+                  "text": "（2）函数 $f ( x ) = { \\left\\{ \\begin{array} { l l } { \\displaystyle e ^ { x } - 1 } , x \\neq 0 \\right.} \\\\ { \\qquad x } \\\\ { \\quad 1 , x = 0 } \\end{array}  $ ，在 处"
+                },
+                {
+                  "number": 3,
+                  "line": 37,
+                  "text": "（3）设函数 $f ( x ) = a x - b \\ln x ( a > 0 )$ 有两个零点，则 $\\frac { b } { a }$ 的取值范围是"
+                },
+                {
+                  "number": 4,
+                  "line": 59,
+                  "text": "（4）设函数 $f ( x , y )$ 可微， $f ( x + 1 , e ^ { x } ) = x ( x + 1 ) ^ { 2 } , f ( x , x ^ { 2 } ) = 2 x ^ { 2 } \\mathrm { l n } x$ ，则 $\\mathrm { d } f ( 1 , 1 ) =$"
+                },
+                {
+                  "number": 5,
+                  "line": 91,
+                  "text": "（5）二次型 $f ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = ( x _ { 1 } + x _ { 2 } ) ^ { 2 } + ( x _ { 2 } + x _ { 3 } ) ^ { 2 } - ( x _ { 3 } - x _ { 1 } ) ^ { 2 }$ 的正惯"
+                },
+                {
+                  "number": 6,
+                  "line": 121,
+                  "text": "（6）设 $A = \\left( \\alpha _ { 1 } , \\alpha _ { 2 } , \\alpha _ { 3 } , \\alpha _ { 4 } \\right)$ 为 阶正交矩阵，若矩阵 $B = \\left[ \\begin{array} { l } { \\pmb { \\alpha } _ { 1 "
+                },
+                {
+                  "number": 7,
+                  "line": 137,
+                  "text": "（7）已知矩阵 $\\pmb { A } = \\left[ \\begin{array} { c c c } { 1 } & { 0 } & { - 1 } \\\\ { 2 } & { - 1 } & { 1 } \\\\ { - 1 } & { 2 } & { - 5 } \\end{array} \\right]$ ，若下三角可"
+                },
+                {
+                  "number": 8,
+                  "line": 155,
+                  "text": "（8）设 为随机事件，且 ，下列命题中不成立的是"
+                },
+                {
+                  "number": 9,
+                  "line": 181,
+                  "text": "（9）设 $( X _ { 1 } , Y _ { 1 } ) , ( X _ { 2 } , Y _ { 2 } ) , \\cdots , ( X _ { n } , Y _ { n } )$ 为来自总体 $N ( \\mu _ { 1 } , \\mu _ { 2 } ; \\sigma _ { 1 } ^ { 2 } "
+                },
+                {
+                  "number": 10,
+                  "line": 207,
+                  "text": "（10）设总体 的概率分布为 $P \\{ X = 1 \\} = \\frac { 1 - \\theta } { 2 } , P \\{ X = 2 \\} = P \\{ X = 3 \\} = \\frac { 1 + \\theta } { 4 }$ 则利用来自总体的样本值 ，可得 的最大似然估计值为"
+                },
+                {
+                  "number": 11,
+                  "line": 229,
+                  "text": "（11）若 $y = \\cos e ^ { - { \\sqrt { x } } }$ ，则 $\\left. { \\frac { \\mathrm { d } y } { \\mathrm { d } x } } \\right| _ { x = 1 } = - .$"
+                },
+                {
+                  "number": 12,
+                  "line": 235,
+                  "text": "（12） $\\int _ { \\sqrt { 5 } } ^ { 5 } { \\frac { x } { \\sqrt { \\left| x ^ { 2 } - 9 \\right| } } } \\mathrm { d } x =$"
+                },
+                {
+                  "number": 13,
+                  "line": 243,
+                  "text": "（13）设平面区域 由曲线 $y = { \\sqrt { x } } \\sin \\pi x ( 0 \\leq x \\leq 1 )$ 与 轴围成，则 绕 轴旋转所成旋转体的体积为"
+                },
+                {
+                  "number": 14,
+                  "line": 249,
+                  "text": "（14）差分方程 $\\triangle y _ { t } = t$ 的通解为"
+                },
+                {
+                  "number": 15,
+                  "line": 257,
+                  "text": "（15）多项式 $f ( x ) = { \\left| \\begin{array} { l l l l } { x } & { x } & { 1 } & { 2 x } \\\\ { 1 } & { x } & { 2 } & { - 1 } \\\\ { 2 } & { 1 } & { x } & { 1 } \\\\ { 2"
+                },
+                {
+                  "number": 16,
+                  "line": 269,
+                  "text": "（16）甲乙两个盒子中各装有 2个红球和 个白球，先从甲盒中任取一球，观察颜色后放入乙盒中，再从乙盒中任取一球，令 $X , Y$ 分别表示从甲盒中和乙盒中取到的红球个数，则 与 的相关系数"
+                },
+                {
+                  "number": 17,
+                  "line": 287,
+                  "text": "（17）（本题满分 10分）"
+                },
+                {
+                  "number": 18,
+                  "line": 303,
+                  "text": "（18）（本题满分 12分）"
+                },
+                {
+                  "number": 19,
+                  "line": 317,
+                  "text": "（19）（本题满分 12分）"
+                },
+                {
+                  "number": 20,
+                  "line": 343,
+                  "text": "## （20）（本题满分 12分）"
+                },
+                {
+                  "number": 21,
+                  "line": 363,
+                  "text": "（21）（本题满分 12分）"
+                },
+                {
+                  "number": 22,
+                  "line": 387,
+                  "text": "## （22）（本题满分 12分）"
+                }
+              ],
+              "missingExpectedNumbers": [],
+              "duplicateNumbers": [],
+              "unexpectedNumbers": [],
+              "containsExpectedQuestionSet": true,
+              "firstOccurrencesMatchExpected": true
+            }
+          },
+          "choiceOptionScan": {
+            "questionsScanned": 10,
+            "completeChoiceQuestions": [
+              1,
+              2,
+              3,
+              6,
+              8,
+              9,
+              10
+            ],
+            "incompleteChoiceQuestions": [
+              {
+                "questionNumber": 4,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "missingLabels": [],
+                "emptyLabels": [
+                  "B",
+                  "C"
+                ]
+              },
+              {
+                "questionNumber": 5,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "missingLabels": [],
+                "emptyLabels": [
+                  "A",
+                  "B",
+                  "C"
+                ]
+              },
+              {
+                "questionNumber": 7,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "missingLabels": [
+                  "D"
+                ],
+                "emptyLabels": []
+              }
+            ],
+            "allChoiceOptionsComplete": false
+          }
+        },
+        {
+          "relativePath": "solutions/2021/math2_2021/math2_2021.md",
+          "role": "solutions_candidate",
+          "gitState": "tracked",
+          "bytes": 29823,
+          "lines": 412,
+          "sha256": "effe54ef9285571d75a9b3eff150fcad8276aa180298f242c289b0626992229d",
+          "expectedSha256": "effe54ef9285571d75a9b3eff150fcad8276aa180298f242c289b0626992229d",
+          "hashMatchesExpected": true,
+          "subjectIdentity": {
+            "expectedSubjectCode": "math2",
+            "detectedSubjectCode": "math3",
+            "detectedMarker": "三",
+            "matchesExpected": false,
+            "evidence": [
+              {
+                "line": 1,
+                "text": "# 2021考研数学三试题解析"
+              }
+            ]
+          },
+          "answerMarkers": 16,
+          "explanationMarkers": 22,
+          "sections": [
+            {
+              "line": 3,
+              "text": "# 一、选择题（本题共 10题，每小题 5分，共 50分）"
+            },
+            {
+              "line": 224,
+              "text": "# 二、填空题（本题共 6 题，每小题 5 分，共 30 分）"
+            },
+            {
+              "line": 282,
+              "text": "# 三、解答题（本题共 6小题，共70分）"
+            }
+          ],
+          "imageReferences": [],
+          "boundaryScans": {
+            "strictParenthesized": {
+              "numbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrenceNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrences": [
+                {
+                  "number": 1,
+                  "line": 5,
+                  "text": "（1）当 $x \\to 0$ 时， $\\int _ { 0 } ^ { x ^ { 2 } } \\left( e ^ { t ^ { 3 } } - 1 \\right) \\mathrm { d } t$ 是 $x ^ { 7 }$ 的"
+                },
+                {
+                  "number": 2,
+                  "line": 21,
+                  "text": "（2）函数 $f ( x ) = { \\left\\{ \\begin{array} { l l } { \\displaystyle e ^ { x } - 1 } , x \\neq 0 \\right.} \\\\ { \\qquad x } \\\\ { \\quad 1 , x = 0 } \\end{array}  $ ，在 $x"
+                },
+                {
+                  "number": 3,
+                  "line": 37,
+                  "text": "（3）设函数 $f ( x ) = a x - b \\ln x ( a > 0 )$ 有两个零点，则 $\\frac { b } { a }$ 的取值范围是"
+                },
+                {
+                  "number": 4,
+                  "line": 59,
+                  "text": "（4）设函数 $f ( x , y )$ 可微， $f ( x + 1 , e ^ { x } ) = x ( x + 1 ) ^ { 2 } , f ( x , x ^ { 2 } ) = 2 x ^ { 2 } \\mathrm { l n } x$ ，则 $\\mathrm { d } f ( 1 , 1 ) =$"
+                },
+                {
+                  "number": 5,
+                  "line": 91,
+                  "text": "（5）二次型 $f ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = ( x _ { 1 } + x _ { 2 } ) ^ { 2 } + ( x _ { 2 } + x _ { 3 } ) ^ { 2 } - ( x _ { 3 } - x _ { 1 } ) ^ { 2 }$ 的正惯"
+                },
+                {
+                  "number": 6,
+                  "line": 121,
+                  "text": "（6）设 $A = \\left( \\alpha _ { 1 } , \\alpha _ { 2 } , \\alpha _ { 3 } , \\alpha _ { 4 } \\right)$ 为 阶正交矩阵，若矩阵 $B = \\left[ \\begin{array} { l } { \\pmb { \\alpha } _ { 1 "
+                },
+                {
+                  "number": 7,
+                  "line": 137,
+                  "text": "（7）已知矩阵 $\\pmb { A } = \\left[ \\begin{array} { c c c } { 1 } & { 0 } & { - 1 } \\\\ { 2 } & { - 1 } & { 1 } \\\\ { - 1 } & { 2 } & { - 5 } \\end{array} \\right] ,$ ，若下三"
+                },
+                {
+                  "number": 8,
+                  "line": 157,
+                  "text": "（8）设 $A , B$ 为随机事件，且 $0 < P ( B ) < 1$ ，下列命题中不成立的是"
+                },
+                {
+                  "number": 9,
+                  "line": 180,
+                  "text": "（9）设 $( X _ { 1 } , Y _ { 1 } ) , ( X _ { 2 } , Y _ { 2 } ) , \\cdots , ( X _ { n } , Y _ { n } )$ 为来自总体 $N ( \\mu _ { 1 } , \\mu _ { 2 } ; \\sigma _ { 1 } ^ { 2 } "
+                },
+                {
+                  "number": 10,
+                  "line": 204,
+                  "text": "（10）设总体 $X$ 的概率分布为 $P \\left\\{ X = 1 \\right\\} = \\frac { 1 - \\theta } { 2 } , P \\left\\{ X = 2 \\right\\} = P \\left\\{ X = 3 \\right\\} = \\frac { 1 + \\theta } { 4 } ,$ "
+                },
+                {
+                  "number": 11,
+                  "line": 226,
+                  "text": "（11）若 $y = \\cos e ^ { - { \\sqrt { x } } }$ ，则 $\\left. { \\frac { \\mathrm { d } y } { \\mathrm { d } x } } \\right| _ { x = 1 } = - .$"
+                },
+                {
+                  "number": 12,
+                  "line": 232,
+                  "text": "（12） $\\int _ { { \\sqrt { 5 } } } ^ { 5 } { \\frac { x } { \\sqrt { \\left| x ^ { 2 } - 9 \\right| } } } \\mathrm { d } x = { \\cfrac { . } { } }$"
+                },
+                {
+                  "number": 13,
+                  "line": 240,
+                  "text": "（13）设平面区域 $D$ 由曲线 $y = { \\sqrt { x } } \\sin \\pi x ( 0 \\leq x \\leq 1 )$ 与 $_ x$ 轴围成，则 $D$ 绕 $_ x$ 轴旋转所成旋转体的体积为"
+                },
+                {
+                  "number": 14,
+                  "line": 246,
+                  "text": "（14）差分方程 $\\triangle y _ { t } = t$ 的通解为"
+                },
+                {
+                  "number": 15,
+                  "line": 254,
+                  "text": "（15）多项式 $f ( x ) = { \\left| \\begin{array} { l l l l } { x } & { x } & { 1 } & { 2 x } \\\\ { 1 } & { x } & { 2 } & { - 1 } \\\\ { 2 } & { 1 } & { x } & { 1 } \\\\ { 2"
+                },
+                {
+                  "number": 16,
+                  "line": 266,
+                  "text": "（16）甲乙两个盒子中各装有 2个红球和 个白球，先从甲盒中任取一球，观察颜色后放入乙盒中，再从乙盒中任取一球，令 分别表示从甲盒中和乙盒中取到的红球个数，则 $X$ 与 的相关系数"
+                },
+                {
+                  "number": 17,
+                  "line": 284,
+                  "text": "（17）（本题满分 10分）"
+                },
+                {
+                  "number": 18,
+                  "line": 300,
+                  "text": "（18）（本题满分 12分）"
+                },
+                {
+                  "number": 19,
+                  "line": 314,
+                  "text": "（19）（本题满分 12分）"
+                },
+                {
+                  "number": 20,
+                  "line": 338,
+                  "text": "# （20）（本题满分 12分）"
+                },
+                {
+                  "number": 21,
+                  "line": 358,
+                  "text": "（21）（本题满分 12分）"
+                },
+                {
+                  "number": 22,
+                  "line": 382,
+                  "text": "（22）（本题满分 12分）"
+                }
+              ],
+              "missingExpectedNumbers": [],
+              "duplicateNumbers": [],
+              "unexpectedNumbers": [],
+              "containsExpectedQuestionSet": true,
+              "firstOccurrencesMatchExpected": true
+            },
+            "fallbackNumeric": {
+              "numbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrenceNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrences": [
+                {
+                  "number": 1,
+                  "line": 5,
+                  "text": "（1）当 $x \\to 0$ 时， $\\int _ { 0 } ^ { x ^ { 2 } } \\left( e ^ { t ^ { 3 } } - 1 \\right) \\mathrm { d } t$ 是 $x ^ { 7 }$ 的"
+                },
+                {
+                  "number": 2,
+                  "line": 21,
+                  "text": "（2）函数 $f ( x ) = { \\left\\{ \\begin{array} { l l } { \\displaystyle e ^ { x } - 1 } , x \\neq 0 \\right.} \\\\ { \\qquad x } \\\\ { \\quad 1 , x = 0 } \\end{array}  $ ，在 $x"
+                },
+                {
+                  "number": 3,
+                  "line": 37,
+                  "text": "（3）设函数 $f ( x ) = a x - b \\ln x ( a > 0 )$ 有两个零点，则 $\\frac { b } { a }$ 的取值范围是"
+                },
+                {
+                  "number": 4,
+                  "line": 59,
+                  "text": "（4）设函数 $f ( x , y )$ 可微， $f ( x + 1 , e ^ { x } ) = x ( x + 1 ) ^ { 2 } , f ( x , x ^ { 2 } ) = 2 x ^ { 2 } \\mathrm { l n } x$ ，则 $\\mathrm { d } f ( 1 , 1 ) =$"
+                },
+                {
+                  "number": 5,
+                  "line": 91,
+                  "text": "（5）二次型 $f ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = ( x _ { 1 } + x _ { 2 } ) ^ { 2 } + ( x _ { 2 } + x _ { 3 } ) ^ { 2 } - ( x _ { 3 } - x _ { 1 } ) ^ { 2 }$ 的正惯"
+                },
+                {
+                  "number": 6,
+                  "line": 121,
+                  "text": "（6）设 $A = \\left( \\alpha _ { 1 } , \\alpha _ { 2 } , \\alpha _ { 3 } , \\alpha _ { 4 } \\right)$ 为 阶正交矩阵，若矩阵 $B = \\left[ \\begin{array} { l } { \\pmb { \\alpha } _ { 1 "
+                },
+                {
+                  "number": 7,
+                  "line": 137,
+                  "text": "（7）已知矩阵 $\\pmb { A } = \\left[ \\begin{array} { c c c } { 1 } & { 0 } & { - 1 } \\\\ { 2 } & { - 1 } & { 1 } \\\\ { - 1 } & { 2 } & { - 5 } \\end{array} \\right] ,$ ，若下三"
+                },
+                {
+                  "number": 8,
+                  "line": 157,
+                  "text": "（8）设 $A , B$ 为随机事件，且 $0 < P ( B ) < 1$ ，下列命题中不成立的是"
+                },
+                {
+                  "number": 9,
+                  "line": 180,
+                  "text": "（9）设 $( X _ { 1 } , Y _ { 1 } ) , ( X _ { 2 } , Y _ { 2 } ) , \\cdots , ( X _ { n } , Y _ { n } )$ 为来自总体 $N ( \\mu _ { 1 } , \\mu _ { 2 } ; \\sigma _ { 1 } ^ { 2 } "
+                },
+                {
+                  "number": 10,
+                  "line": 204,
+                  "text": "（10）设总体 $X$ 的概率分布为 $P \\left\\{ X = 1 \\right\\} = \\frac { 1 - \\theta } { 2 } , P \\left\\{ X = 2 \\right\\} = P \\left\\{ X = 3 \\right\\} = \\frac { 1 + \\theta } { 4 } ,$ "
+                },
+                {
+                  "number": 11,
+                  "line": 226,
+                  "text": "（11）若 $y = \\cos e ^ { - { \\sqrt { x } } }$ ，则 $\\left. { \\frac { \\mathrm { d } y } { \\mathrm { d } x } } \\right| _ { x = 1 } = - .$"
+                },
+                {
+                  "number": 12,
+                  "line": 232,
+                  "text": "（12） $\\int _ { { \\sqrt { 5 } } } ^ { 5 } { \\frac { x } { \\sqrt { \\left| x ^ { 2 } - 9 \\right| } } } \\mathrm { d } x = { \\cfrac { . } { } }$"
+                },
+                {
+                  "number": 13,
+                  "line": 240,
+                  "text": "（13）设平面区域 $D$ 由曲线 $y = { \\sqrt { x } } \\sin \\pi x ( 0 \\leq x \\leq 1 )$ 与 $_ x$ 轴围成，则 $D$ 绕 $_ x$ 轴旋转所成旋转体的体积为"
+                },
+                {
+                  "number": 14,
+                  "line": 246,
+                  "text": "（14）差分方程 $\\triangle y _ { t } = t$ 的通解为"
+                },
+                {
+                  "number": 15,
+                  "line": 254,
+                  "text": "（15）多项式 $f ( x ) = { \\left| \\begin{array} { l l l l } { x } & { x } & { 1 } & { 2 x } \\\\ { 1 } & { x } & { 2 } & { - 1 } \\\\ { 2 } & { 1 } & { x } & { 1 } \\\\ { 2"
+                },
+                {
+                  "number": 16,
+                  "line": 266,
+                  "text": "（16）甲乙两个盒子中各装有 2个红球和 个白球，先从甲盒中任取一球，观察颜色后放入乙盒中，再从乙盒中任取一球，令 分别表示从甲盒中和乙盒中取到的红球个数，则 $X$ 与 的相关系数"
+                },
+                {
+                  "number": 17,
+                  "line": 284,
+                  "text": "（17）（本题满分 10分）"
+                },
+                {
+                  "number": 18,
+                  "line": 300,
+                  "text": "（18）（本题满分 12分）"
+                },
+                {
+                  "number": 19,
+                  "line": 314,
+                  "text": "（19）（本题满分 12分）"
+                },
+                {
+                  "number": 20,
+                  "line": 338,
+                  "text": "# （20）（本题满分 12分）"
+                },
+                {
+                  "number": 21,
+                  "line": 358,
+                  "text": "（21）（本题满分 12分）"
+                },
+                {
+                  "number": 22,
+                  "line": 382,
+                  "text": "（22）（本题满分 12分）"
+                }
+              ],
+              "missingExpectedNumbers": [],
+              "duplicateNumbers": [],
+              "unexpectedNumbers": [],
+              "containsExpectedQuestionSet": true,
+              "firstOccurrencesMatchExpected": true
+            }
+          },
+          "choiceOptionScan": {
+            "questionsScanned": 10,
+            "completeChoiceQuestions": [
+              1,
+              2,
+              6,
+              8,
+              9
+            ],
+            "incompleteChoiceQuestions": [
+              {
+                "questionNumber": 3,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "missingLabels": [],
+                "emptyLabels": [
+                  "B"
+                ]
+              },
+              {
+                "questionNumber": 4,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "missingLabels": [],
+                "emptyLabels": [
+                  "A",
+                  "B",
+                  "C"
+                ]
+              },
+              {
+                "questionNumber": 5,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "missingLabels": [],
+                "emptyLabels": [
+                  "A",
+                  "B",
+                  "C"
+                ]
+              },
+              {
+                "questionNumber": 7,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "C"
+                ],
+                "missingLabels": [
+                  "B",
+                  "D"
+                ],
+                "emptyLabels": []
+              },
+              {
+                "questionNumber": 10,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "C",
+                  "D"
+                ],
+                "missingLabels": [
+                  "B"
+                ],
+                "emptyLabels": []
+              }
+            ],
+            "allChoiceOptionsComplete": false
+          }
+        }
+      ],
+      "status": "blocked_wrong_subject",
+      "stagingReady": false,
+      "decision": "do_not_stage_until_true_math2_source_is_supplied_or_approved",
+      "blockers": [
+        {
+          "type": "subject_identity_mismatch",
+          "severity": "critical",
+          "message": "Expected Math2 source evidence, but candidate title evidence detects math3."
+        }
+      ],
+      "nextActions": [
+        "Maintainer must supply or approve a true Math2 2021 source before staging.",
+        "Do not reuse Math3 answers/explanations as Math2 evidence."
+      ]
+    },
+    {
+      "year": 2022,
+      "batchId": "math2-2022-ocr-boundary-audit",
+      "expectedQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "expectedQuestionCounts": {
+        "multiple_choice": 10,
+        "fill_in_blank": 6,
+        "solution": 6
+      },
+      "sources": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_2022_2065687890395758592.md",
+          "role": "paper_candidate",
+          "gitState": "untracked",
+          "bytes": 32659,
+          "lines": 493,
+          "sha256": "5ccb6ed1c8d12157bd72d44414dff2616465da113a39295acedceb7675052b70",
+          "expectedSha256": "5ccb6ed1c8d12157bd72d44414dff2616465da113a39295acedceb7675052b70",
+          "hashMatchesExpected": true,
+          "subjectIdentity": {
+            "expectedSubjectCode": "math2",
+            "detectedSubjectCode": "math2",
+            "detectedMarker": "二",
+            "matchesExpected": true,
+            "evidence": [
+              {
+                "line": 1,
+                "text": "## 2022年数学二试题解析"
+              }
+            ]
+          },
+          "answerMarkers": 16,
+          "explanationMarkers": 20,
+          "sections": [
+            {
+              "line": 3,
+              "text": "## 一、选择题（1～10 小题，每小题 5 分，共 50 分）"
+            },
+            {
+              "line": 235,
+              "text": "## 二、填空题（11～16小题，每小题5 分，共 30分）"
+            },
+            {
+              "line": 305,
+              "text": "## 三、解答题（17～22小题，共70分）"
+            }
+          ],
+          "imageReferences": [],
+          "boundaryScans": {
+            "strictParenthesized": {
+              "numbers": [
+                1,
+                3,
+                4,
+                5,
+                6,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrenceNumbers": [
+                1,
+                3,
+                4,
+                5,
+                6,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrences": [
+                {
+                  "number": 1,
+                  "line": 5,
+                  "text": "（1）当 时， $\\alpha ( { x } ) , \\beta ( { x } )$ 是非零无穷小量，给出下列四个命题："
+                },
+                {
+                  "number": 3,
+                  "line": 55,
+                  "text": "（3）设函数 在 $x = x _ { 0 }$ 处有2阶导数，则"
+                },
+                {
+                  "number": 4,
+                  "line": 75,
+                  "text": "（4）设函数 连续，令 $F ( x , y ) = \\int _ { 0 } ^ { x - y } ( x - y - t ) f ( t ) \\mathrm { d } t$ ，则"
+                },
+                {
+                  "number": 5,
+                  "line": 111,
+                  "text": "（5）设 为常数，若反常积分 $\\int _ { 0 } ^ { 1 } { \\frac { \\ln x } { x ^ { p } ( 1 - x ) ^ { 1 - p } } } ,$ 收敛，则 的取值范围是"
+                },
+                {
+                  "number": 6,
+                  "line": 127,
+                  "text": "（6）设有数列 $\\left\\{ x _ { n } \\right\\}$ ，其中 $^ { \\mathrm { ~ I ~ } } x _ { n }$ 满足 $- \\ { \\frac { \\pi } { 2 } } \\leqslant x _ { n } \\leqslant { \\frac { \\pi } { 2 }"
+                },
+                {
+                  "number": 8,
+                  "line": 163,
+                  "text": "（8）设 为三阶矩阵， $\\pmb { \\Lambda } = \\left[ \\begin{array} { c c c } { 1 } & { 0 } & { 0 } \\\\ { 0 } & { - 1 } & { 0 } \\\\ { 0 } & { 0 } & { 0 } \\end{array} \\right]$ ，则"
+                },
+                {
+                  "number": 9,
+                  "line": 179,
+                  "text": "（9）设矩阵 $A = { \\left[ \\begin{array} { l l l } { 1 } & { 1 } & { 1 } \\\\ { 1 } & { a } & { a ^ { 2 } } \\\\ { 1 } & { b } & { b ^ { 2 } } \\end{array} \\right] } , b ="
+                },
+                {
+                  "number": 10,
+                  "line": 203,
+                  "text": "（10）设 $\\pmb { \\alpha } _ { 1 } = \\left[ \\begin{array} { l } { \\lambda } \\\\ { 1 } \\\\ { 1 } \\end{array} \\right] , \\pmb { \\alpha } _ { 2 } = \\left[ \\begin{array} {"
+                },
+                {
+                  "number": 11,
+                  "line": 237,
+                  "text": "（11） $\\operatorname* { l i m } _ { x \\to 0 } \\left( { \\frac { 1 + \\mathrm { e } ^ { x } } { 2 } } \\right) ^ { \\mathrm { c o t } x } =$"
+                },
+                {
+                  "number": 12,
+                  "line": 245,
+                  "text": "（12）已知函数 $y = y ( x )$ 是由方程 $x ^ { 2 } + x y + y ^ { 3 } = 3$ 所确定，则 $y ^ { \\prime \\prime } ( 1 ) =$"
+                },
+                {
+                  "number": 13,
+                  "line": 263,
+                  "text": "（13） $\\int _ { 0 } ^ { 1 } { \\frac { 2 x + 3 } { x ^ { 2 } - x + 1 } } \\mathrm { d } x =$"
+                },
+                {
+                  "number": 14,
+                  "line": 277,
+                  "text": "（14）微分方程 $y ^ { \\prime \\prime \\prime } - 2 y ^ { \\prime \\prime } + 5 y ^ { \\prime } = 0$ 的通解为"
+                },
+                {
+                  "number": 15,
+                  "line": 281,
+                  "text": "（15）已知曲线 的极坐标方程为 $\\vert r = \\sin 3 \\theta \\left( 0 \\leqslant \\theta \\leqslant \\frac { \\pi } { 3 } \\right)$ ，则曲线 与极坐标所围成的面积为"
+                },
+                {
+                  "number": 16,
+                  "line": 287,
+                  "text": "（16）设 为 3阶矩阵，交换 的第二行和第三行，再将第二列的-1倍加到第一列，得到矩阵 $\\left[ { \\begin{array} { l l l } { - 2 } & { 1 } & { - 1 } \\\\ { 1 } & { - 1 } & { 0 } \\\\ { - 1 } & { 0 } & { 0 } \\"
+                },
+                {
+                  "number": 17,
+                  "line": 307,
+                  "text": "（17）（本题满分 10分）"
+                },
+                {
+                  "number": 18,
+                  "line": 329,
+                  "text": "## （18）（本题满分 12分）"
+                },
+                {
+                  "number": 19,
+                  "line": 349,
+                  "text": "## （19）（本题满分 12分）"
+                },
+                {
+                  "number": 20,
+                  "line": 367,
+                  "text": "## （20）（本题满分 12分）"
+                },
+                {
+                  "number": 21,
+                  "line": 401,
+                  "text": "## （21）（本题满分 12分）"
+                },
+                {
+                  "number": 22,
+                  "line": 443,
+                  "text": "（22）（本题满分 12分）"
+                }
+              ],
+              "missingExpectedNumbers": [
+                2,
+                7
+              ],
+              "duplicateNumbers": [],
+              "unexpectedNumbers": [],
+              "containsExpectedQuestionSet": false,
+              "firstOccurrencesMatchExpected": false
+            },
+            "fallbackNumeric": {
+              "numbers": [
+                1,
+                3,
+                4,
+                5,
+                6,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrenceNumbers": [
+                1,
+                3,
+                4,
+                5,
+                6,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrences": [
+                {
+                  "number": 1,
+                  "line": 5,
+                  "text": "（1）当 时， $\\alpha ( { x } ) , \\beta ( { x } )$ 是非零无穷小量，给出下列四个命题："
+                },
+                {
+                  "number": 3,
+                  "line": 55,
+                  "text": "（3）设函数 在 $x = x _ { 0 }$ 处有2阶导数，则"
+                },
+                {
+                  "number": 4,
+                  "line": 75,
+                  "text": "（4）设函数 连续，令 $F ( x , y ) = \\int _ { 0 } ^ { x - y } ( x - y - t ) f ( t ) \\mathrm { d } t$ ，则"
+                },
+                {
+                  "number": 5,
+                  "line": 111,
+                  "text": "（5）设 为常数，若反常积分 $\\int _ { 0 } ^ { 1 } { \\frac { \\ln x } { x ^ { p } ( 1 - x ) ^ { 1 - p } } } ,$ 收敛，则 的取值范围是"
+                },
+                {
+                  "number": 6,
+                  "line": 127,
+                  "text": "（6）设有数列 $\\left\\{ x _ { n } \\right\\}$ ，其中 $^ { \\mathrm { ~ I ~ } } x _ { n }$ 满足 $- \\ { \\frac { \\pi } { 2 } } \\leqslant x _ { n } \\leqslant { \\frac { \\pi } { 2 }"
+                },
+                {
+                  "number": 8,
+                  "line": 163,
+                  "text": "（8）设 为三阶矩阵， $\\pmb { \\Lambda } = \\left[ \\begin{array} { c c c } { 1 } & { 0 } & { 0 } \\\\ { 0 } & { - 1 } & { 0 } \\\\ { 0 } & { 0 } & { 0 } \\end{array} \\right]$ ，则"
+                },
+                {
+                  "number": 9,
+                  "line": 179,
+                  "text": "（9）设矩阵 $A = { \\left[ \\begin{array} { l l l } { 1 } & { 1 } & { 1 } \\\\ { 1 } & { a } & { a ^ { 2 } } \\\\ { 1 } & { b } & { b ^ { 2 } } \\end{array} \\right] } , b ="
+                },
+                {
+                  "number": 10,
+                  "line": 203,
+                  "text": "（10）设 $\\pmb { \\alpha } _ { 1 } = \\left[ \\begin{array} { l } { \\lambda } \\\\ { 1 } \\\\ { 1 } \\end{array} \\right] , \\pmb { \\alpha } _ { 2 } = \\left[ \\begin{array} {"
+                },
+                {
+                  "number": 11,
+                  "line": 237,
+                  "text": "（11） $\\operatorname* { l i m } _ { x \\to 0 } \\left( { \\frac { 1 + \\mathrm { e } ^ { x } } { 2 } } \\right) ^ { \\mathrm { c o t } x } =$"
+                },
+                {
+                  "number": 12,
+                  "line": 245,
+                  "text": "（12）已知函数 $y = y ( x )$ 是由方程 $x ^ { 2 } + x y + y ^ { 3 } = 3$ 所确定，则 $y ^ { \\prime \\prime } ( 1 ) =$"
+                },
+                {
+                  "number": 13,
+                  "line": 263,
+                  "text": "（13） $\\int _ { 0 } ^ { 1 } { \\frac { 2 x + 3 } { x ^ { 2 } - x + 1 } } \\mathrm { d } x =$"
+                },
+                {
+                  "number": 14,
+                  "line": 277,
+                  "text": "（14）微分方程 $y ^ { \\prime \\prime \\prime } - 2 y ^ { \\prime \\prime } + 5 y ^ { \\prime } = 0$ 的通解为"
+                },
+                {
+                  "number": 15,
+                  "line": 281,
+                  "text": "（15）已知曲线 的极坐标方程为 $\\vert r = \\sin 3 \\theta \\left( 0 \\leqslant \\theta \\leqslant \\frac { \\pi } { 3 } \\right)$ ，则曲线 与极坐标所围成的面积为"
+                },
+                {
+                  "number": 16,
+                  "line": 287,
+                  "text": "（16）设 为 3阶矩阵，交换 的第二行和第三行，再将第二列的-1倍加到第一列，得到矩阵 $\\left[ { \\begin{array} { l l l } { - 2 } & { 1 } & { - 1 } \\\\ { 1 } & { - 1 } & { 0 } \\\\ { - 1 } & { 0 } & { 0 } \\"
+                },
+                {
+                  "number": 17,
+                  "line": 307,
+                  "text": "（17）（本题满分 10分）"
+                },
+                {
+                  "number": 18,
+                  "line": 329,
+                  "text": "## （18）（本题满分 12分）"
+                },
+                {
+                  "number": 19,
+                  "line": 349,
+                  "text": "## （19）（本题满分 12分）"
+                },
+                {
+                  "number": 20,
+                  "line": 367,
+                  "text": "## （20）（本题满分 12分）"
+                },
+                {
+                  "number": 21,
+                  "line": 401,
+                  "text": "## （21）（本题满分 12分）"
+                },
+                {
+                  "number": 22,
+                  "line": 443,
+                  "text": "（22）（本题满分 12分）"
+                }
+              ],
+              "missingExpectedNumbers": [
+                2,
+                7
+              ],
+              "duplicateNumbers": [],
+              "unexpectedNumbers": [],
+              "containsExpectedQuestionSet": false,
+              "firstOccurrencesMatchExpected": false
+            }
+          },
+          "choiceOptionScan": {
+            "questionsScanned": 10,
+            "completeChoiceQuestions": [
+              1,
+              3,
+              6,
+              8,
+              9
+            ],
+            "incompleteChoiceQuestions": [
+              {
+                "questionNumber": 2,
+                "status": "missing_question_boundary",
+                "labels": [],
+                "missingLabels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "emptyLabels": []
+              },
+              {
+                "questionNumber": 4,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "C",
+                  "D"
+                ],
+                "missingLabels": [
+                  "B"
+                ],
+                "emptyLabels": []
+              },
+              {
+                "questionNumber": 5,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "missingLabels": [],
+                "emptyLabels": [
+                  "A",
+                  "B"
+                ]
+              },
+              {
+                "questionNumber": 7,
+                "status": "missing_question_boundary",
+                "labels": [],
+                "missingLabels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "emptyLabels": []
+              },
+              {
+                "questionNumber": 10,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "missingLabels": [],
+                "emptyLabels": [
+                  "A"
+                ]
+              }
+            ],
+            "allChoiceOptionsComplete": false
+          }
+        },
+        {
+          "relativePath": "solutions/2022/math2_2022/math2_2022.md",
+          "role": "solutions_candidate",
+          "gitState": "tracked",
+          "bytes": 34036,
+          "lines": 464,
+          "sha256": "9c6f7ffb8c0780413b6c81e37f3e2d4b1a007ddf0b1f02b4ae681d441bd3de6c",
+          "expectedSha256": "9c6f7ffb8c0780413b6c81e37f3e2d4b1a007ddf0b1f02b4ae681d441bd3de6c",
+          "hashMatchesExpected": true,
+          "subjectIdentity": {
+            "expectedSubjectCode": "math2",
+            "detectedSubjectCode": "math2",
+            "detectedMarker": "二",
+            "matchesExpected": true,
+            "evidence": [
+              {
+                "line": 1,
+                "text": "# 2022 年数学二试题解析"
+              }
+            ]
+          },
+          "answerMarkers": 16,
+          "explanationMarkers": 19,
+          "sections": [
+            {
+              "line": 3,
+              "text": "# 一、选择题（ $1 \\sim 1 0$ 小题，每小题 5 分，共 50 分）"
+            },
+            {
+              "line": 222,
+              "text": "# 二、填空题（ $1 1 \\sim 1 6$ 小题，每小题5 分，共 30分）"
+            },
+            {
+              "line": 286,
+              "text": "# 三、解答题（ $1 7 \\sim 2 2$ 小题，共70分）"
+            }
+          ],
+          "imageReferences": [],
+          "boundaryScans": {
+            "strictParenthesized": {
+              "numbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrenceNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrences": [
+                {
+                  "number": 1,
+                  "line": 5,
+                  "text": "（1）当 $x \\to 0$ 时， $\\alpha ( { x } ) , \\beta ( { x } )$ 是非零无穷小量，给出下列四个命题："
+                },
+                {
+                  "number": 2,
+                  "line": 32,
+                  "text": "（2） $\\int _ { 0 } ^ { 2 } \\mathrm { d } y \\int _ { y } ^ { 2 } \\frac { y } { \\sqrt { 1 + x ^ { 3 } } } \\mathrm { d } x =$ dy"
+                },
+                {
+                  "number": 3,
+                  "line": 50,
+                  "text": "（3）设函数 $f ( x )$ 在 $x = x _ { 0 }$ 处有 2 阶导数，则"
+                },
+                {
+                  "number": 4,
+                  "line": 67,
+                  "text": "（4）设函数 $f ( t )$ 连续，令 $F ( x , y ) = \\int _ { 0 } ^ { x - y } ( x - y - t ) f ( t ) \\mathrm { d } t$ ，则"
+                },
+                {
+                  "number": 5,
+                  "line": 108,
+                  "text": "（5）设 $p$ 为常数，若反常积分 $\\int _ { 0 } ^ { 1 } { \\frac { \\ln x } { x ^ { p } ( 1 - x ) ^ { 1 - p } } } \\mathrm { d } x$ 收敛，则 的取值范围是 $p$"
+                },
+                {
+                  "number": 6,
+                  "line": 124,
+                  "text": "（6）设有数列 $\\left\\{ x _ { n } \\right\\}$ ，其中 $x _ { n }$ 满足 $- \\ { \\frac { \\pi } { 2 } } \\leqslant x _ { n } \\leqslant { \\frac { \\pi } { 2 } }$ ，则"
+                },
+                {
+                  "number": 7,
+                  "line": 137,
+                  "text": "（7）已知 $I _ { 1 } = \\int _ { 0 } ^ { 1 } \\frac { x } { 2 ( 1 + \\cos x ) } \\mathrm { d } x , I _ { 2 } = \\int _ { 0 } ^ { 1 } \\frac { \\ln { ( 1 + x ) } } { 1 + \\c"
+                },
+                {
+                  "number": 8,
+                  "line": 151,
+                  "text": "（8）设 $\\pmb { A }$ 为三阶矩阵， $\\pmb { \\Lambda } = \\left[ \\begin{array} { c c c } { 1 } & { 0 } & { 0 } \\\\ { 0 } & { - 1 } & { 0 } \\\\ { 0 } & { 0 } & { 0 } \\end{array"
+                },
+                {
+                  "number": 9,
+                  "line": 164,
+                  "text": "（9）设矩阵 $A = { \\left[ \\begin{array} { l l l } { 1 } & { 1 } & { 1 } \\\\ { 1 } & { a } & { a ^ { 2 } } \\\\ { 1 } & { b } & { b ^ { 2 } } \\end{array} \\right] } , b ="
+                },
+                {
+                  "number": 11,
+                  "line": 224,
+                  "text": "（11） $\\operatorname * { l i m } _ { x \\to 0 } \\left( { \\frac { 1 + \\mathrm { e } ^ { x } } { 2 } } \\right) ^ { \\mathrm { c o t } x } = \\qquad .$"
+                },
+                {
+                  "number": 12,
+                  "line": 232,
+                  "text": "（12）已知函数 $y = y ( x )$ 是由方程 $x ^ { 2 } + x y + y ^ { 3 } = 3$ 所确定，则 $y ^ { \\prime \\prime } ( 1 ) = \\qquad $"
+                },
+                {
+                  "number": 13,
+                  "line": 250,
+                  "text": "（13） $\\int _ { 0 } ^ { 1 } { \\frac { 2 x + 3 } { x ^ { 2 } - x + 1 } } \\mathrm { d } x = \\qquad \\quad .$"
+                },
+                {
+                  "number": 14,
+                  "line": 258,
+                  "text": "（14）微分方程 $y ^ { \\prime \\prime \\prime } - 2 y ^ { \\prime \\prime } + 5 y ^ { \\prime } = 0$ 的通解为 $y ( x ) = .$"
+                },
+                {
+                  "number": 15,
+                  "line": 262,
+                  "text": "（15）已知曲线 $L$ 的极坐标方程为 $r = \\sin 3 \\theta \\Big ( 0 \\leqslant \\theta \\leqslant \\frac { \\pi } { 3 } \\Big )$ ，则曲线 $L$ 与极坐标所围成的面积为_"
+                },
+                {
+                  "number": 16,
+                  "line": 268,
+                  "text": "（16）设 $A$ 为 3阶矩阵，交换 $A$ 的第二行和第三行，再将第二列的-1倍加到第一列，得到矩阵 $\\left[ { \\begin{array} { l l l } { - 2 } & { 1 } & { - 1 } \\\\ { 1 } & { - 1 } & { 0 } \\\\ { - 1 } & { 0 } &"
+                },
+                {
+                  "number": 17,
+                  "line": 288,
+                  "text": "（17）（本题满分 10分）"
+                },
+                {
+                  "number": 18,
+                  "line": 310,
+                  "text": "（18）（本题满分 12分）"
+                },
+                {
+                  "number": 19,
+                  "line": 330,
+                  "text": "（19）（本题满分 12分）"
+                },
+                {
+                  "number": 20,
+                  "line": 340,
+                  "text": "（20）（本题满分 12分）"
+                },
+                {
+                  "number": 21,
+                  "line": 373,
+                  "text": "# （21）（本题满分 12分）"
+                },
+                {
+                  "number": 22,
+                  "line": 415,
+                  "text": "（22）（本题满分 12分）"
+                }
+              ],
+              "missingExpectedNumbers": [
+                10
+              ],
+              "duplicateNumbers": [],
+              "unexpectedNumbers": [],
+              "containsExpectedQuestionSet": false,
+              "firstOccurrencesMatchExpected": false
+            },
+            "fallbackNumeric": {
+              "numbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrenceNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22
+              ],
+              "firstOccurrences": [
+                {
+                  "number": 1,
+                  "line": 5,
+                  "text": "（1）当 $x \\to 0$ 时， $\\alpha ( { x } ) , \\beta ( { x } )$ 是非零无穷小量，给出下列四个命题："
+                },
+                {
+                  "number": 2,
+                  "line": 32,
+                  "text": "（2） $\\int _ { 0 } ^ { 2 } \\mathrm { d } y \\int _ { y } ^ { 2 } \\frac { y } { \\sqrt { 1 + x ^ { 3 } } } \\mathrm { d } x =$ dy"
+                },
+                {
+                  "number": 3,
+                  "line": 50,
+                  "text": "（3）设函数 $f ( x )$ 在 $x = x _ { 0 }$ 处有 2 阶导数，则"
+                },
+                {
+                  "number": 4,
+                  "line": 67,
+                  "text": "（4）设函数 $f ( t )$ 连续，令 $F ( x , y ) = \\int _ { 0 } ^ { x - y } ( x - y - t ) f ( t ) \\mathrm { d } t$ ，则"
+                },
+                {
+                  "number": 5,
+                  "line": 108,
+                  "text": "（5）设 $p$ 为常数，若反常积分 $\\int _ { 0 } ^ { 1 } { \\frac { \\ln x } { x ^ { p } ( 1 - x ) ^ { 1 - p } } } \\mathrm { d } x$ 收敛，则 的取值范围是 $p$"
+                },
+                {
+                  "number": 6,
+                  "line": 124,
+                  "text": "（6）设有数列 $\\left\\{ x _ { n } \\right\\}$ ，其中 $x _ { n }$ 满足 $- \\ { \\frac { \\pi } { 2 } } \\leqslant x _ { n } \\leqslant { \\frac { \\pi } { 2 } }$ ，则"
+                },
+                {
+                  "number": 7,
+                  "line": 137,
+                  "text": "（7）已知 $I _ { 1 } = \\int _ { 0 } ^ { 1 } \\frac { x } { 2 ( 1 + \\cos x ) } \\mathrm { d } x , I _ { 2 } = \\int _ { 0 } ^ { 1 } \\frac { \\ln { ( 1 + x ) } } { 1 + \\c"
+                },
+                {
+                  "number": 8,
+                  "line": 151,
+                  "text": "（8）设 $\\pmb { A }$ 为三阶矩阵， $\\pmb { \\Lambda } = \\left[ \\begin{array} { c c c } { 1 } & { 0 } & { 0 } \\\\ { 0 } & { - 1 } & { 0 } \\\\ { 0 } & { 0 } & { 0 } \\end{array"
+                },
+                {
+                  "number": 9,
+                  "line": 164,
+                  "text": "（9）设矩阵 $A = { \\left[ \\begin{array} { l l l } { 1 } & { 1 } & { 1 } \\\\ { 1 } & { a } & { a ^ { 2 } } \\\\ { 1 } & { b } & { b ^ { 2 } } \\end{array} \\right] } , b ="
+                },
+                {
+                  "number": 11,
+                  "line": 224,
+                  "text": "（11） $\\operatorname * { l i m } _ { x \\to 0 } \\left( { \\frac { 1 + \\mathrm { e } ^ { x } } { 2 } } \\right) ^ { \\mathrm { c o t } x } = \\qquad .$"
+                },
+                {
+                  "number": 12,
+                  "line": 232,
+                  "text": "（12）已知函数 $y = y ( x )$ 是由方程 $x ^ { 2 } + x y + y ^ { 3 } = 3$ 所确定，则 $y ^ { \\prime \\prime } ( 1 ) = \\qquad $"
+                },
+                {
+                  "number": 13,
+                  "line": 250,
+                  "text": "（13） $\\int _ { 0 } ^ { 1 } { \\frac { 2 x + 3 } { x ^ { 2 } - x + 1 } } \\mathrm { d } x = \\qquad \\quad .$"
+                },
+                {
+                  "number": 14,
+                  "line": 258,
+                  "text": "（14）微分方程 $y ^ { \\prime \\prime \\prime } - 2 y ^ { \\prime \\prime } + 5 y ^ { \\prime } = 0$ 的通解为 $y ( x ) = .$"
+                },
+                {
+                  "number": 15,
+                  "line": 262,
+                  "text": "（15）已知曲线 $L$ 的极坐标方程为 $r = \\sin 3 \\theta \\Big ( 0 \\leqslant \\theta \\leqslant \\frac { \\pi } { 3 } \\Big )$ ，则曲线 $L$ 与极坐标所围成的面积为_"
+                },
+                {
+                  "number": 16,
+                  "line": 268,
+                  "text": "（16）设 $A$ 为 3阶矩阵，交换 $A$ 的第二行和第三行，再将第二列的-1倍加到第一列，得到矩阵 $\\left[ { \\begin{array} { l l l } { - 2 } & { 1 } & { - 1 } \\\\ { 1 } & { - 1 } & { 0 } \\\\ { - 1 } & { 0 } &"
+                },
+                {
+                  "number": 17,
+                  "line": 288,
+                  "text": "（17）（本题满分 10分）"
+                },
+                {
+                  "number": 18,
+                  "line": 310,
+                  "text": "（18）（本题满分 12分）"
+                },
+                {
+                  "number": 19,
+                  "line": 330,
+                  "text": "（19）（本题满分 12分）"
+                },
+                {
+                  "number": 20,
+                  "line": 340,
+                  "text": "（20）（本题满分 12分）"
+                },
+                {
+                  "number": 21,
+                  "line": 373,
+                  "text": "# （21）（本题满分 12分）"
+                },
+                {
+                  "number": 22,
+                  "line": 415,
+                  "text": "（22）（本题满分 12分）"
+                }
+              ],
+              "missingExpectedNumbers": [
+                10
+              ],
+              "duplicateNumbers": [],
+              "unexpectedNumbers": [],
+              "containsExpectedQuestionSet": false,
+              "firstOccurrencesMatchExpected": false
+            }
+          },
+          "choiceOptionScan": {
+            "questionsScanned": 10,
+            "completeChoiceQuestions": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              8,
+              9
+            ],
+            "incompleteChoiceQuestions": [
+              {
+                "questionNumber": 5,
+                "status": "incomplete",
+                "labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "missingLabels": [],
+                "emptyLabels": [
+                  "A",
+                  "B",
+                  "C"
+                ]
+              },
+              {
+                "questionNumber": 7,
+                "status": "incomplete",
+                "labels": [
+                  "A"
+                ],
+                "missingLabels": [
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "emptyLabels": []
+              },
+              {
+                "questionNumber": 10,
+                "status": "missing_question_boundary",
+                "labels": [],
+                "missingLabels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "emptyLabels": []
+              }
+            ],
+            "allChoiceOptionsComplete": false
+          }
+        }
+      ],
+      "status": "blocked_source_role_decision_required",
+      "stagingReady": false,
+      "decision": "do_not_stage_in_req_011; create a focused 2022 source-role or repair requirement before generating blocked staging",
+      "blockers": [
+        {
+          "type": "paper_candidate_not_mechanically_stageable",
+          "severity": "error",
+          "message": "The 2022 paper candidate is not mechanically stageable: missing question boundaries [2, 7]; incomplete choice options for Q[2, 4, 5, 7, 10].",
+          "sourceRelativePath": "papers/MinerU_markdown_math2_2022_2065687890395758592.md"
+        },
+        {
+          "type": "solutions_candidate_not_mechanically_stageable_without_repair",
+          "severity": "error",
+          "message": "The 2022 solutions candidate is not mechanically stageable as-is: missing question boundaries [10]; incomplete choice options for Q[5, 7, 10].",
+          "sourceRelativePath": "solutions/2022/math2_2022/math2_2022.md"
+        },
+        {
+          "type": "solutions_candidate_requires_source_role_decision",
+          "severity": "warning",
+          "message": "The 2022 solutions candidate includes explicit answer/explanation markers. Using it as primary question evidence or answer evidence requires a separate source-role decision and cannot be done silently in this audit task.",
+          "sourceRelativePath": "solutions/2022/math2_2022/math2_2022.md"
+        }
+      ],
+      "nextActions": [
+        "Choose whether 2022 may use either candidate as primary or comparison evidence.",
+        "Repair or explicitly account for missing Q2/Q7 paper boundaries and missing Q10 solutions boundary.",
+        "If approved, generate blocked staging in a separate 2022-only PR.",
+        "Do not invent missing boundaries, options, answers, explanations, or formulas."
+      ]
+    }
+  ],
+  "roadmap": [
+    {
+      "scope": "2021",
+      "recommendation": "Keep blocked until a true Math2 2021 source is supplied or approved."
+    },
+    {
+      "scope": "2022",
+      "recommendation": "Open a 2022-only source-role/repair PR before staging."
+    },
+    {
+      "scope": "1987-2019",
+      "recommendation": "Handle in later aggregate-split requirements; do not mix with REQ-011."
+    }
+  ]
+}
