@@ -4,12 +4,14 @@ import { Icon } from "../components/Icon";
 import { QuestionList } from "../components/QuestionList";
 
 export function DashboardView({
+  subjectName,
   questions,
   states,
   onPractice,
   onOpenQuestion,
   onOpenWrong,
 }: {
+  subjectName: string;
   questions: Question[];
   states: QuestionStateMap;
   onPractice: () => void;
@@ -38,7 +40,7 @@ export function DashboardView({
       <div className="page-heading">
         <div>
           <h1>今天从一道真题开始</h1>
-          <p>数学一真题已覆盖 1987–2025 年，共 {questions.length} 题。</p>
+          <p>{subjectName}真题当前收录 {questions.length} 题。</p>
         </div>
         <button className="button primary" onClick={onPractice}>
           继续练习 <Icon name="arrow" size={18} />

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {
   FEEDBACK_EMAIL,
   MASTERY_LABELS,
+  SUBJECT_LABELS,
   TYPE_LABELS,
 } from "../constants";
 import type {
@@ -84,7 +85,7 @@ export function QuestionWorkspace({
       <div className="workspace-header">
         <div>
           <span className="eyeline">
-            {question.sourceYear} 年数学一 ·{" "}
+            {question.sourceYear} 年{SUBJECT_LABELS[question.subjectCode]} ·{" "}
             {TYPE_LABELS[question.type] ?? question.type}
           </span>
           <h2>
@@ -96,10 +97,12 @@ export function QuestionWorkspace({
 
       {question.finalizationStatus === "blocked" && (
         <div className="content-warning">
-          <span>这道题存在待核对的源内容问题，可练习，但请谨慎使用答案。</span>
+          <span>
+            这道题处于待复核状态。答案解析整理中，题干可先练；发现问题请反馈。
+          </span>
           {feedbackHref && (
             <a className="feedback-link" href={feedbackHref}>
-              反馈此题
+              反馈：{FEEDBACK_EMAIL}
             </a>
           )}
         </div>
@@ -154,12 +157,23 @@ export function QuestionWorkspace({
             {question.answer ? (
               <MathContent content={question.answer} />
             ) : (
-              <p className="muted">本题没有独立答案字段，请结合解析核对。</p>
+              <p className="muted">
+                {question.answerStatus === "missing"
+                  ? "答案整理中，暂未发布参考答案。"
+                  : "本题没有独立答案字段，请结合解析核对。"}
+              </p>
             )}
           </div>
           <div className="solution-block">
             <span className="section-label">解析</span>
-            <MathContent content={question.explanation || "暂无解析"} />
+            <MathContent
+              content={
+                question.explanation ||
+                (question.explanationStatus === "missing"
+                  ? "解析整理中，暂未发布。"
+                  : "暂无解析")
+              }
+            />
           </div>
           <QuestionAnimationGate
             questionId={question.stableId}

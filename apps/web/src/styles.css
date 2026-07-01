@@ -265,6 +265,11 @@ textarea:focus-visible {
   background: var(--navy);
 }
 
+.subject-card.review {
+  border-color: #f0cf91;
+  background: #fffaf0;
+}
+
 .subject-index {
   color: #94a5c6;
   font-family: Georgia, serif;
@@ -299,6 +304,10 @@ textarea:focus-visible {
   color: #9db7ff;
 }
 
+.subject-card.review > strong {
+  color: #8b641e;
+}
+
 .subject-status {
   display: inline-flex;
   min-height: 24px;
@@ -317,26 +326,6 @@ textarea:focus-visible {
 .subject-status.pending {
   color: #8b641e;
   background: #fff0ce;
-}
-
-.subject-unavailable {
-  max-width: 720px;
-  padding: 48px;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: var(--shadow);
-}
-
-.subject-unavailable h1 {
-  margin: 18px 0 10px;
-  font-size: clamp(28px, 4vw, 42px);
-}
-
-.subject-unavailable p {
-  margin: 0 0 28px;
-  color: var(--muted);
-  line-height: 1.8;
 }
 
 .button {
@@ -749,6 +738,10 @@ textarea:focus-visible {
   background: #fff3f4;
   font-size: 13px;
   line-height: 1.6;
+}
+
+.subject-review-warning {
+  margin-top: -12px;
 }
 
 .feedback-link {
@@ -1854,10 +1847,6 @@ textarea:focus-visible {
   .subject-card {
     min-height: 220px;
     padding: 24px;
-  }
-
-  .subject-unavailable {
-    padding: 30px 22px;
   }
 
   .paper-card {
