@@ -143,21 +143,30 @@ test("canonical option shape rejects option.text", () => {
   assert.throws(() => validateMath2ImportPayload(invalid));
 });
 
-test("gold pilot validates and dry-run rolls back all 23 inserts", async () => {
+test("staged Math2 years validate and dry-run rolls back inserts", async () => {
   const testDirectory = dirname(fileURLToPath(import.meta.url));
-  const pilotPath = resolve(
-    testDirectory,
-    "../../../content/staging/math2/2020/questions.json",
-  );
-  const pilot = JSON.parse(await readFile(pilotPath, "utf8")) as unknown;
-  const validated = validateMath2ImportPayload(pilot);
-  assert.equal(validated.questions.length, 23);
+  const cases = [
+    { year: 2020, expected: 23 },
+    { year: 2023, expected: 22 },
+    { year: 2024, expected: 22 },
+  ];
 
-  const connection = new FakeConnection();
-  const result = await importMath2Batch(fakePool(connection), pilot, {
-    dryRun: true,
-  });
-  assert.equal(result.questionsInserted, 23);
-  assert.equal(result.transaction, "rolled_back");
-  assert.deepEqual(connection.events, ["begin", "rollback", "release"]);
+  for (const item of cases) {
+    const payloadPath = resolve(
+      testDirectory,
+      `../../../content/staging/math2/${item.year}/questions.json`,
+    );
+    const rawPayload = JSON.parse(await readFile(payloadPath, "utf8")) as unknown;
+    const validated = validateMath2ImportPayload(rawPayload);
+    assert.equal(validated.sourceYear, item.year);
+    assert.equal(validated.questions.length, item.expected);
+
+    const connection = new FakeConnection();
+    const result = await importMath2Batch(fakePool(connection), rawPayload, {
+      dryRun: true,
+    });
+    assert.equal(result.questionsInserted, item.expected);
+    assert.equal(result.transaction, "rolled_back");
+    assert.deepEqual(connection.events, ["begin", "rollback", "release"]);
+  }
 });
