@@ -2,14 +2,17 @@ PYTHON ?= python
 NPM ?= npm
 MATH2_SOURCE ?= D:/work/Kaoyan-Math2-Papers
 MATH2_OUTPUT := content/staging/math2/2020
+MATH2_2020_INPUT := content/staging/math2/2020/questions.json
 MATH2_2023_OUTPUT := content/staging/math2/2023
+MATH2_2023_INPUT := content/staging/math2/2023/questions.json
 MATH2_2023_REVIEW := content/reports/math2-2023/human-review-checklist.md
 MATH2_2024_OUTPUT := content/staging/math2/2024
+MATH2_2024_INPUT := content/staging/math2/2024/questions.json
 MATH2_2024_REVIEW := content/reports/math2-2024/human-review-checklist.md
 MATH2_REPORT := content/reports/req-002-math2-markdown-import
 MATH2_INVENTORY := $(MATH2_REPORT)/source-inventory.json
 
-.PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math2-inventory math2-pilot math2-katex math2-validate math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math2-import-dry-run test-math2 test-python-all verify
+.PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math2-inventory math2-pilot math2-katex math2-validate math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run math2-db-preview-import-dry-run math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit math2-db-preview-import-commit math2-import-dry-run test-math2 test-python-all verify
 
 help:
 	@echo "Available targets:"
@@ -24,7 +27,11 @@ help:
 	@echo "  make math2-validate           Regenerate and validate the Math2 pilot"
 	@echo "  make math2-2023-validate      Regenerate and validate Math2 2023 staging"
 	@echo "  make math2-2024-validate      Regenerate and validate Math2 2024 staging"
-	@echo "  make math2-import-dry-run     Exercise MySQL import and roll it back"
+	@echo "  make math2-import-dry-run     Exercise Math2 2020 MySQL import and roll it back"
+	@echo "  make math2-db-preview-import-dry-run"
+	@echo "                                Dry-run DB imports for Math2 2020/2023/2024"
+	@echo "  make math2-db-preview-import-commit"
+	@echo "                                Commit DB staging imports for Math2 2020/2023/2024"
 	@echo "  make verify                   Run the full PR verification gate"
 
 install:
@@ -95,8 +102,29 @@ math2-2024-katex: math2-2024-staging
 math2-2024-validate: math2-2024-katex
 	set MATH2_SOURCE_DIR=$(MATH2_SOURCE)&& $(PYTHON) -m unittest tests.test_transform_math2_2024 -v
 
-math2-import-dry-run: math2-validate
-	$(NPM) run import:math2 --workspace @kaoyan/api -- --input "$(MATH2_OUTPUT)/questions.json"
+math2-2020-import-dry-run: math2-validate
+	$(NPM) run import:math2 --workspace @kaoyan/api -- --input "$(MATH2_2020_INPUT)"
+
+math2-2023-import-dry-run: math2-2023-validate
+	$(NPM) run import:math2 --workspace @kaoyan/api -- --input "$(MATH2_2023_INPUT)"
+
+math2-2024-import-dry-run: math2-2024-validate
+	$(NPM) run import:math2 --workspace @kaoyan/api -- --input "$(MATH2_2024_INPUT)"
+
+math2-db-preview-import-dry-run: math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run
+
+math2-2020-import-commit: math2-validate
+	$(NPM) run import:math2 --workspace @kaoyan/api -- --input "$(MATH2_2020_INPUT)" --commit
+
+math2-2023-import-commit: math2-2023-validate
+	$(NPM) run import:math2 --workspace @kaoyan/api -- --input "$(MATH2_2023_INPUT)" --commit
+
+math2-2024-import-commit: math2-2024-validate
+	$(NPM) run import:math2 --workspace @kaoyan/api -- --input "$(MATH2_2024_INPUT)" --commit
+
+math2-db-preview-import-commit: math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit
+
+math2-import-dry-run: math2-2020-import-dry-run
 
 test-python-all:
 	$(PYTHON) -m unittest discover -s tests -p "test_*.py"
