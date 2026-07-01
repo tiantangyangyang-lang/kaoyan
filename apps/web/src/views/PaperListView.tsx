@@ -1,65 +1,77 @@
-import { useState } from "react";
-import {
-  SubjectSelector,
-  SubjectUnavailable,
-} from "../components/SubjectSelector";
+import { SubjectSelector } from "../components/SubjectSelector";
 import { getQuestionState } from "../storage";
 import type {
   PaperSessionMap,
   Question,
   QuestionStateMap,
+  SubjectCatalog,
   SubjectCode,
 } from "../types";
 
 export function PaperListView({
+  subject,
+  subjectName,
+  subjectCatalog,
+  subjectChosen,
+  onSubjectChosenChange,
+  onSubjectChange,
   questions,
   states,
   sessions,
   onStart,
 }: {
+  subject: SubjectCode;
+  subjectName: string;
+  subjectCatalog: SubjectCatalog | null;
+  subjectChosen: boolean;
+  onSubjectChosenChange: (selected: boolean) => void;
+  onSubjectChange: (subject: SubjectCode) => void;
   questions: Question[];
   states: QuestionStateMap;
   sessions: PaperSessionMap;
   onStart: (year: number) => void;
 }) {
-  const [selectedSubject, setSelectedSubject] = useState<SubjectCode | null>(
-    null,
-  );
   const years = [...new Set(questions.map((question) => question.sourceYear))].sort(
     (a, b) => b - a,
   );
 
-  if (selectedSubject === null) {
+  const selectSubject = (nextSubject: SubjectCode) => {
+    onSubjectChange(nextSubject);
+    onSubjectChosenChange(true);
+  };
+
+  if (!subjectChosen) {
     return (
       <SubjectSelector
         featureLabel="整卷练习"
-        onSelect={setSelectedSubject}
-      />
-    );
-  }
-
-  if (selectedSubject === "math2") {
-    return (
-      <SubjectUnavailable
-        featureLabel="整卷练习"
-        onBack={() => setSelectedSubject(null)}
+        subjectCatalog={subjectCatalog}
+        onSelect={selectSubject}
       />
     );
   }
 
   return (
     <div className="page">
-      <button className="back-link" onClick={() => setSelectedSubject(null)}>
+      <button className="back-link" onClick={() => onSubjectChosenChange(false)}>
         ← 返回选择科目
       </button>
       <div className="page-heading">
         <div>
-          <span className="page-kicker">考研数学 · 数学一</span>
-          <h1>数学一整卷练习</h1>
+          <span className="page-kicker">考研数学 · {subjectName}</span>
+          <h1>{subjectName}整卷练习</h1>
           <p>按年份完成一整套真题。交卷前只保存草稿，不计入正确率。</p>
         </div>
         <span className="result-count">{years.length} 套</span>
       </div>
+
+      {subject === "math2" && (
+        <div className="content-warning subject-review-warning">
+          <span>
+            数学二整卷为待复核预览：答案解析整理中，请提交后按“待核对”状态记录。
+            反馈邮箱：tiantangyangyang@gmail.com。
+          </span>
+        </div>
+      )}
 
       <div className="paper-grid">
         {years.map((year) => {
@@ -79,7 +91,7 @@ export function PaperListView({
           return (
             <article className="paper-card" key={year}>
               <div className="paper-year">
-                <span>数学一</span>
+                <span>{subjectName}</span>
                 <strong>{year}</strong>
               </div>
               <div className="paper-card-body">
