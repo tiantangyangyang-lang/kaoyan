@@ -1,18 +1,32 @@
 import { useMemo, useState } from "react";
 import { Icon } from "../components/Icon";
 import { QuestionList } from "../components/QuestionList";
-import {
-  SubjectSelector,
-  SubjectUnavailable,
-} from "../components/SubjectSelector";
+import { SubjectSelector } from "../components/SubjectSelector";
 import { TYPE_LABELS } from "../constants";
-import type { Question, QuestionStateMap, SubjectCode } from "../types";
+import type {
+  Question,
+  QuestionStateMap,
+  SubjectCatalog,
+  SubjectCode,
+} from "../types";
 
 export function BankView({
+  subject,
+  subjectName,
+  subjectCatalog,
+  subjectChosen,
+  onSubjectChosenChange,
+  onSubjectChange,
   questions,
   states,
   onOpenQuestion,
 }: {
+  subject: SubjectCode;
+  subjectName: string;
+  subjectCatalog: SubjectCatalog | null;
+  subjectChosen: boolean;
+  onSubjectChosenChange: (selected: boolean) => void;
+  onSubjectChange: (subject: SubjectCode) => void;
   questions: Question[];
   states: QuestionStateMap;
   onOpenQuestion: (question: Question) => void;
@@ -25,9 +39,6 @@ export function BankView({
   const [type, setType] = useState("all");
   const [status, setStatus] = useState("all");
   const [query, setQuery] = useState("");
-  const [selectedSubject, setSelectedSubject] = useState<SubjectCode | null>(
-    null,
-  );
 
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -45,37 +56,47 @@ export function BankView({
     });
   }, [questions, query, status, type, year]);
 
-  if (selectedSubject === null) {
+  const selectSubject = (nextSubject: SubjectCode) => {
+    onSubjectChange(nextSubject);
+    onSubjectChosenChange(true);
+    setYear("all");
+    setType("all");
+    setStatus("all");
+    setQuery("");
+  };
+
+  if (!subjectChosen) {
     return (
       <SubjectSelector
         featureLabel="真题库"
-        onSelect={setSelectedSubject}
-      />
-    );
-  }
-
-  if (selectedSubject === "math2") {
-    return (
-      <SubjectUnavailable
-        featureLabel="真题库"
-        onBack={() => setSelectedSubject(null)}
+        subjectCatalog={subjectCatalog}
+        onSelect={selectSubject}
       />
     );
   }
 
   return (
     <div className="page bank-page">
-      <button className="back-link" onClick={() => setSelectedSubject(null)}>
+      <button className="back-link" onClick={() => onSubjectChosenChange(false)}>
         ← 返回选择科目
       </button>
       <div className="page-heading">
         <div>
-          <span className="page-kicker">考研数学 · 数学一</span>
-          <h1>数学一真题库</h1>
+          <span className="page-kicker">考研数学 · {subjectName}</span>
+          <h1>{subjectName}真题库</h1>
           <p>按年份、题型与内容状态筛选，点击题目进入练习。</p>
         </div>
         <span className="result-count">{filtered.length} 题</span>
       </div>
+
+      {subject === "math2" && (
+        <div className="content-warning subject-review-warning">
+          <span>
+            数学二当前为待复核预览：题干可先练，答案和解析整理中。发现问题请反馈至
+            tiantangyangyang@gmail.com。
+          </span>
+        </div>
+      )}
 
       <div className="filter-bar">
         <label className="search-box">

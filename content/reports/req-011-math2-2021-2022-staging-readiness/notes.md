@@ -144,3 +144,22 @@
   - API tests: 10 passed.
   - Web smoke test: passed.
   - Web/API typecheck, web/API builds, and Python compileall passed.
+
+## 2026-07-02 PR Conflict Resolution
+
+- PR #12 status before fix:
+  - number: `12`
+  - title: `feat(math2): audit 2021-2022 readiness`
+  - state: `OPEN`
+  - URL: `https://github.com/tiantangyangyang-lang/kaoyan/pull/12`
+  - mergeable: `CONFLICTING`
+- Conflict source: merging current `origin/main` into
+  `codex/req-011-math2-2021-2022-staging-readiness` conflicted only in the
+  `Makefile` `.PHONY` target list.
+- Resolution: kept both REQ-011's `math2-2021-2022-audit` target and the later
+  main-branch Math2 database preview import targets from REQ-013.
+- Verification after conflict resolution:
+  - `rg -n "^(<<<<<<<|=======|>>>>>>>)" Makefile docs content apps scripts tests -S`
+    found no conflict markers.
+  - `git diff --cached --check` passed.
+  - `mingw32-make NPM=npm.cmd verify` passed.

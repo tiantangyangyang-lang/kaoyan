@@ -1,4 +1,4 @@
-import type { Mastery, QuestionState } from "./types";
+import type { Mastery, QuestionState, SubjectCode } from "./types";
 
 export const EMPTY_QUESTION_STATE: QuestionState = {
   mastery: "unmarked",
@@ -30,6 +30,11 @@ export const STATUS_LABELS: Record<string, string> = {
   ready_for_approval: "内容完整",
   ready_with_info: "有提示项",
   blocked: "待核对",
+};
+
+export const SUBJECT_LABELS: Record<SubjectCode, string> = {
+  math1: "数学一",
+  math2: "数学二",
 };
 
 export const DEFAULT_FEEDBACK_EMAIL = "tiantangyangyang@gmail.com";

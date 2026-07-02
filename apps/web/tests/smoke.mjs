@@ -45,10 +45,16 @@ try {
   await page.getByRole("button", { name: "真题库" }).click();
   await page.getByRole("heading", { name: "选择考试科目" }).waitFor();
   await page.getByRole("button", { name: /数学二/ }).click();
-  await page
-    .getByRole("heading", { name: "数学二真题库尚未完成" })
-    .waitFor();
-  await page.getByRole("button", { name: "返回选择数学一" }).click();
+  await page.getByRole("heading", { name: "数学二真题库" }).waitFor();
+  await page.getByText("67 题", { exact: true }).waitFor();
+  await page.locator(".subject-review-warning").getByText(/答案.*解析整理中/).waitFor();
+  await page.locator(".question-row").first().click();
+  await page.locator(".workspace").waitFor();
+  await page.getByText(/反馈：tiantangyangyang@gmail\.com/).waitFor();
+  await page.getByRole("button", { name: "查看答案解析" }).click();
+  await page.getByText("答案整理中，暂未发布参考答案。").waitFor();
+  await page.getByRole("button", { name: "真题库" }).click();
+  await page.getByRole("button", { name: "← 返回选择科目" }).click();
   await page.getByRole("button", { name: /数学一/ }).click();
   await page.getByRole("heading", { name: "数学一真题库" }).waitFor();
   await page.locator("select").nth(0).selectOption("2025");
@@ -95,6 +101,14 @@ try {
 
   await page.getByRole("button", { name: "整卷练习" }).click();
   await page.getByRole("heading", { name: "选择考试科目" }).waitFor();
+  await page.getByRole("button", { name: /数学二/ }).click();
+  await page.getByRole("heading", { name: "数学二整卷练习" }).waitFor();
+  await page.locator(".subject-review-warning").getByText(/答案.*解析整理中/).waitFor();
+  await page.locator(".paper-card").first().getByRole("button").click();
+  await page.locator(".paper-session-layout").waitFor();
+  await page.getByText(/反馈：tiantangyangyang@gmail\.com/).waitFor();
+  await page.getByRole("button", { name: "保存并退出" }).click();
+  await page.getByRole("button", { name: "← 返回选择科目" }).click();
   await page.getByRole("button", { name: /数学一/ }).click();
   await page.getByRole("heading", { name: "数学一整卷练习" }).waitFor();
   await page.locator(".paper-card").first().getByRole("button").click();

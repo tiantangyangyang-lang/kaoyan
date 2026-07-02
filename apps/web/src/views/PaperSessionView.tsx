@@ -1,6 +1,6 @@
 import { MathContent } from "../components/MathContent";
 import { ContentStatusBadge } from "../components/StatusBadge";
-import { TYPE_LABELS } from "../constants";
+import { FEEDBACK_EMAIL, SUBJECT_LABELS, TYPE_LABELS } from "../constants";
 import type {
   Correctness,
   PaperQuestionResult,
@@ -40,6 +40,19 @@ export function PaperSessionView({
   const completed = Object.values(session.results).filter(
     (item) => item.answer.trim() || item.correctness !== "unknown",
   ).length;
+  const feedbackHref = FEEDBACK_EMAIL
+    ? `mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(
+        `题目反馈：${question.stableId}`,
+      )}&body=${encodeURIComponent(
+        [
+          `题目：${question.stableId}`,
+          `年份：${question.sourceYear}`,
+          `题号：${question.questionNumber ?? ""}`,
+          "",
+          "问题描述：",
+        ].join("\n"),
+      )}`
+    : null;
 
   const updateResult = (patch: Partial<PaperQuestionResult>) => {
     onChange({
@@ -65,12 +78,26 @@ export function PaperSessionView({
         <div className="workspace-header">
           <div>
             <span className="eyeline">
-              {session.sourceYear} 年整卷 · {TYPE_LABELS[question.type]}
+              {session.sourceYear} 年{SUBJECT_LABELS[question.subjectCode]}整卷 ·{" "}
+              {TYPE_LABELS[question.type]}
             </span>
             <h2>第 {question.questionNumber ?? currentIndex + 1} 题</h2>
           </div>
           <ContentStatusBadge status={question.finalizationStatus} />
         </div>
+
+        {question.finalizationStatus === "blocked" && (
+          <div className="content-warning">
+            <span>
+              本题处于待复核状态。答案解析整理中，提交后可先按待核对记录。
+            </span>
+            {feedbackHref && (
+              <a className="feedback-link" href={feedbackHref}>
+                反馈：{FEEDBACK_EMAIL}
+              </a>
+            )}
+          </div>
+        )}
 
         <MathContent content={displayedStem} className="question-stem" />
 
@@ -132,11 +159,25 @@ export function PaperSessionView({
           <section className="solution-panel">
             <div className="solution-block">
               <span className="section-label">参考答案</span>
-              <MathContent content={question.answer || "本题无独立答案字段"} />
+              <MathContent
+                content={
+                  question.answer ||
+                  (question.answerStatus === "missing"
+                    ? "答案整理中，暂未发布参考答案。"
+                    : "本题无独立答案字段")
+                }
+              />
             </div>
             <div className="solution-block">
               <span className="section-label">解析</span>
-              <MathContent content={question.explanation || "暂无解析"} />
+              <MathContent
+                content={
+                  question.explanation ||
+                  (question.explanationStatus === "missing"
+                    ? "解析整理中，暂未发布。"
+                    : "暂无解析")
+                }
+              />
             </div>
           </section>
         )}

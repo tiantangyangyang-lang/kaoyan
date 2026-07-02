@@ -47,6 +47,22 @@ export interface QuestionBank {
   questions: Question[];
 }
 
+export interface SubjectCatalogItem {
+  code: SubjectCode;
+  name: string;
+  questionBankUrl?: string;
+  enabled: boolean;
+  questionCount: number;
+  statusLabel?: string;
+  reviewNote?: string;
+  feedbackEmail?: string;
+}
+
+export interface SubjectCatalog {
+  schemaVersion: "kaoyan-subject-catalog-v1";
+  subjects: SubjectCatalogItem[];
+}
+
 export interface Math2ContentOption {
   label: string;
   value: string;

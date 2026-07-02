@@ -1,4 +1,4 @@
-import type { AppView } from "../types";
+import type { AppView, SubjectCode } from "../types";
 import { Icon } from "./Icon";
 
 const navItems: Array<{
@@ -20,6 +20,7 @@ const navItems: Array<{
 export function AppShell({
   view,
   onViewChange,
+  subject,
   subjectName,
   children,
   mobileOpen,
@@ -27,6 +28,7 @@ export function AppShell({
 }: {
   view: AppView;
   onViewChange: (view: AppView) => void;
+  subject: SubjectCode;
   subjectName: string;
   children: React.ReactNode;
   mobileOpen: boolean;
@@ -71,7 +73,11 @@ export function AppShell({
         <div className="subject-switcher">
           <span>当前科目</span>
           <strong>{subjectName}</strong>
-          <small>数学二即将接入</small>
+          <small>
+            {subject === "math2"
+              ? "待复核预览，答案解析整理中"
+              : "数学二待复核预览已开放"}
+          </small>
         </div>
       </aside>
 

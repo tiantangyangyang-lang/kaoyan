@@ -1,14 +1,4 @@
-import type { QuestionBank, SubjectCode } from "./types";
-
-interface SubjectCatalog {
-  subjects: Array<{
-    code: SubjectCode;
-    name: string;
-    questionBankUrl?: string;
-    enabled: boolean;
-    questionCount: number;
-  }>;
-}
+import type { QuestionBank, SubjectCatalog } from "./types";
 
 export async function loadSubjectCatalog(): Promise<SubjectCatalog> {
   const response = await fetch("/data/subjects.json");

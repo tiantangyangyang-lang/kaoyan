@@ -14,7 +14,9 @@ hand off a small PR that does not create unsafe staging artifacts.
 - [x] Phase 5: Implement focused audit script, tests, and Make target.
 - [x] Phase 6: Generate audit artifacts and update queue readiness status.
 - [x] Phase 7: Run focused validation and full verification.
-- [ ] Phase 8: Record final source repo state, commit, push, and open PR.
+- [x] Phase 8: Record final source repo state, commit, push, and open PR.
+- [x] Phase 9: Merge current `origin/main`, resolve PR #12 conflict, verify,
+  and push the conflict-resolution commit.
 
 ## Key Questions
 
@@ -43,4 +45,5 @@ hand off a small PR that does not create unsafe staging artifacts.
 
 ## Status
 
-**Currently in Phase 8** - Verification passed; commit, push, and PR remain.
+**Phase 9 complete** - PR #12 conflict was resolved locally, and
+`mingw32-make NPM=npm.cmd verify` passed after the merge.

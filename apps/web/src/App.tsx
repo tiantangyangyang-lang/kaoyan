@@ -33,13 +33,19 @@ import { ReviewQueueView } from "./views/ReviewQueueView";
 import { DataCenterView } from "./views/DataCenterView";
 import { AccountView } from "./views/AccountView";
 import { getCurrentUser, verifyAccount } from "./api";
-import type { AuthUser } from "./types";
+import type { AuthUser, SubjectCatalog } from "./types";
+import { SUBJECT_LABELS } from "./constants";
 
 export function App() {
   const [bank, setBank] = useState<QuestionBank | null>(null);
   const [subjectName, setSubjectName] = useState("数学一");
-  const [subject] = useState<SubjectCode>("math1");
+  const [subject, setSubject] = useState<SubjectCode>("math1");
+  const [subjectCatalog, setSubjectCatalog] = useState<SubjectCatalog | null>(
+    null,
+  );
   const [view, setView] = useState<AppView>("dashboard");
+  const [bankSubjectChosen, setBankSubjectChosen] = useState(false);
+  const [paperSubjectChosen, setPaperSubjectChosen] = useState(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [states, setStates] = useState<QuestionStateMap>(() =>
     loadQuestionStates("math1"),
@@ -54,16 +60,35 @@ export function App() {
   const [authNotice, setAuthNotice] = useState("");
 
   useEffect(() => {
-    Promise.all([loadSubjectCatalog(), loadQuestionBank("/data/math1.json")])
-      .then(([catalog, loadedBank]) => {
+    let cancelled = false;
+    async function loadCurrentSubject() {
+      try {
+        setError("");
+        setBank(null);
+        const catalog = await loadSubjectCatalog();
+        if (cancelled) return;
+        setSubjectCatalog(catalog);
+        const item = catalog.subjects.find((entry) => entry.code === subject);
+        const nextSubjectName = item?.name ?? SUBJECT_LABELS[subject];
+        setSubjectName(nextSubjectName);
+        if (!item?.enabled || !item.questionBankUrl) {
+          throw new Error(`${nextSubjectName}题库暂不可用`);
+        }
+        const loadedBank = await loadQuestionBank(item.questionBankUrl);
+        if (loadedBank.subjectCode !== subject) {
+          throw new Error(`${nextSubjectName}题库科目标记不一致`);
+        }
+        if (cancelled) return;
         setBank(loadedBank);
-        setSubjectName(
-          catalog.subjects.find((item) => item.code === subject)?.name ?? "数学一",
-        );
-      })
-      .catch((reason: unknown) => {
+      } catch (reason: unknown) {
+        if (cancelled) return;
         setError(reason instanceof Error ? reason.message : "题库加载失败");
-      });
+      }
+    }
+    void loadCurrentSubject();
+    return () => {
+      cancelled = true;
+    };
   }, [subject]);
 
   useEffect(() => {
@@ -105,7 +130,18 @@ export function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const switchSubject = (nextSubject: SubjectCode) => {
+    if (nextSubject === subject) return;
+    setSubjectName(SUBJECT_LABELS[nextSubject]);
+    setSubject(nextSubject);
+    setStates(loadQuestionStates(nextSubject));
+    setPaperSessions(loadPaperSessions(nextSubject));
+    setSelectedId(null);
+    setCurrentPaperYear(null);
+  };
+
   const startPractice = () => {
+    if (questions.length === 0) return;
     const last = [...questions]
       .filter((question) => states[question.stableId]?.lastAttemptAt)
       .sort((a, b) =>
@@ -216,7 +252,7 @@ export function App() {
     return (
       <div className="loading-state">
         <div className="loading-mark">研</div>
-        <p>正在加载数学一题库…</p>
+        <p>正在加载{subjectName}题库…</p>
       </div>
     );
   }
@@ -225,12 +261,14 @@ export function App() {
     <AppShell
       view={view}
       onViewChange={setView}
+      subject={subject}
       subjectName={subjectName}
       mobileOpen={mobileOpen}
       onMobileOpenChange={setMobileOpen}
     >
       {view === "dashboard" && (
         <DashboardView
+          subjectName={subjectName}
           questions={questions}
           states={states}
           onPractice={startPractice}
@@ -240,6 +278,12 @@ export function App() {
       )}
       {view === "bank" && (
         <BankView
+          subject={subject}
+          subjectName={subjectName}
+          subjectCatalog={subjectCatalog}
+          subjectChosen={bankSubjectChosen}
+          onSubjectChosenChange={setBankSubjectChosen}
+          onSubjectChange={switchSubject}
           questions={questions}
           states={states}
           onOpenQuestion={openQuestion}
@@ -297,6 +341,12 @@ export function App() {
       )}
       {view === "papers" && (
         <PaperListView
+          subject={subject}
+          subjectName={subjectName}
+          subjectCatalog={subjectCatalog}
+          subjectChosen={paperSubjectChosen}
+          onSubjectChosenChange={setPaperSubjectChosen}
+          onSubjectChange={switchSubject}
           questions={questions}
           states={states}
           sessions={paperSessions}
