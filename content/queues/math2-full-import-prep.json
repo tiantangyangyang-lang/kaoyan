@@ -163,6 +163,13 @@
       "batchId": "math2-2021-wrong-subject-audit",
       "status": "audit_only_blocked",
       "years": [2021],
+      "readinessAudit": {
+        "requirement": "docs/requirements/REQ-011-math2-2021-2022-staging-readiness.md",
+        "status": "blocked_wrong_subject",
+        "report": "content/reports/math2-2021/source-role-audit.md",
+        "generatedAudit": "content/reports/req-011-math2-2021-2022-staging-readiness/audit.json",
+        "finding": "Both 2021 candidates identify as Math3 in title evidence; do not stage as Math2 until a true Math2 source is supplied or approved."
+      },
       "allowedReadPaths": [
         "papers/MinerU_markdown_math2_2021_2065687851346780160.md",
         "solutions/2021/math2_2021/math2_2021.md"
@@ -188,6 +195,14 @@
       "batchId": "math2-2022-ocr-boundary-audit",
       "status": "audit_only_blocked",
       "years": [2022],
+      "readinessAudit": {
+        "requirement": "docs/requirements/REQ-011-math2-2021-2022-staging-readiness.md",
+        "status": "blocked_source_role_decision_required",
+        "report": "content/reports/math2-2022/source-role-audit.md",
+        "boundaryRiskMap": "content/reports/math2-2022/boundary-risk-map.md",
+        "generatedAudit": "content/reports/req-011-math2-2021-2022-staging-readiness/audit.json",
+        "finding": "The paper candidate misses Q2/Q7 boundaries and several choice options; the solutions candidate misses Q10 and includes answer/explanation markers. No 2022 staging is generated in REQ-011."
+      },
       "allowedReadPaths": [
         "papers/MinerU_markdown_math2_2022_2065687890395758592.md",
         "solutions/2022/math2_2022/math2_2022.md"

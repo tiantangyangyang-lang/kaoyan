@@ -9,10 +9,11 @@ MATH2_2023_REVIEW := content/reports/math2-2023/human-review-checklist.md
 MATH2_2024_OUTPUT := content/staging/math2/2024
 MATH2_2024_INPUT := content/staging/math2/2024/questions.json
 MATH2_2024_REVIEW := content/reports/math2-2024/human-review-checklist.md
+MATH2_2021_2022_REPORT := content/reports/req-011-math2-2021-2022-staging-readiness
 MATH2_REPORT := content/reports/req-002-math2-markdown-import
 MATH2_INVENTORY := $(MATH2_REPORT)/source-inventory.json
 
-.PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math2-inventory math2-pilot math2-katex math2-validate math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run math2-db-preview-import-dry-run math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit math2-db-preview-import-commit math2-import-dry-run test-math2 test-python-all verify
+.PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math2-inventory math2-pilot math2-katex math2-validate math2-2021-2022-audit math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run math2-db-preview-import-dry-run math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit math2-db-preview-import-commit math2-import-dry-run test-math2 test-python-all verify
 
 help:
 	@echo "Available targets:"
@@ -25,6 +26,7 @@ help:
 	@echo "  make build                    Build web and API"
 	@echo "  make math2-inventory          Audit read-only Math2 Markdown sources"
 	@echo "  make math2-validate           Regenerate and validate the Math2 pilot"
+	@echo "  make math2-2021-2022-audit    Audit Math2 2021/2022 source readiness"
 	@echo "  make math2-2023-validate      Regenerate and validate Math2 2023 staging"
 	@echo "  make math2-2024-validate      Regenerate and validate Math2 2024 staging"
 	@echo "  make math2-import-dry-run     Exercise Math2 2020 MySQL import and roll it back"
@@ -84,6 +86,10 @@ test-math2:
 
 math2-validate: math2-inventory math2-katex test-math2
 
+math2-2021-2022-audit:
+	$(PYTHON) scripts/audit_math2_2021_2022.py "$(MATH2_SOURCE)" "$(MATH2_2021_2022_REPORT)"
+	set MATH2_SOURCE_DIR=$(MATH2_SOURCE)&& $(PYTHON) -m unittest tests.test_audit_math2_2021_2022 -v
+
 math2-2023-staging:
 	$(PYTHON) scripts/transform_math2_2023.py "$(MATH2_SOURCE)" "$(MATH2_2023_OUTPUT)" --review-checklist "$(MATH2_2023_REVIEW)"
 
@@ -129,5 +135,5 @@ math2-import-dry-run: math2-2020-import-dry-run
 test-python-all:
 	$(PYTHON) -m unittest discover -s tests -p "test_*.py"
 
-verify: math2-validate math2-2023-validate math2-2024-validate typecheck test build
+verify: math2-validate math2-2021-2022-audit math2-2023-validate math2-2024-validate typecheck test build
 	$(PYTHON) -m compileall -q scripts tests
