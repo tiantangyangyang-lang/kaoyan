@@ -1,5 +1,7 @@
 # DB Import Runbook: Math3 1987-1996 Staging
 
+> Completed on 2026-07-04. Final result: `db-import-result.md`.
+
 ## Boundary
 
 Codex did not run a live DB import or commit. The maintainer should run these commands only in an environment where `DATABASE_URL` points at the intended MySQL database.

@@ -39,10 +39,12 @@
 
 ## DB Import Boundary
 
-- Codex did not run a live DB dry-run or commit.
-- Maintainer runbook: `content/reports/req-016-math3-1987-1996-staging-db-readiness/db-import-runbook.md`
+- Live DB dry-run and commit were completed after the maintainer configured `D:\work\kaoyan\.env`.
+- Import result report: `content/reports/req-016-math3-1987-1996-staging-db-readiness/db-import-result.md`
+- Original runbook: `content/reports/req-016-math3-1987-1996-staging-db-readiness/db-import-runbook.md`
 - Dry-run target: `mingw32-make NPM=npm.cmd math3-db-1987-1996-import-dry-run`
 - Commit target: `mingw32-make NPM=npm.cmd math3-db-1987-1996-import-commit`
+- Final DB state: 10 `math3` batches, all `status = staging`, 178 total questions.
 
 ## Verification So Far
 
@@ -51,7 +53,12 @@
 - `npm.cmd run typecheck:web` passed.
 - `npm.cmd run test:api` passed.
 - `mingw32-make NPM=npm.cmd verify` passed.
+- After the import CLI path fix, `mingw32-make NPM=npm.cmd verify` passed again.
 
 ## PR
 
 - https://github.com/tiantangyangyang-lang/kaoyan/pull/17
+
+## Follow-Up
+
+- Promotion from staging to published remains out of scope and needs a separate requirement.

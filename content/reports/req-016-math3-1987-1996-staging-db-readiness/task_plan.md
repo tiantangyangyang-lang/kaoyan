@@ -32,7 +32,9 @@ Prepare 1987-1996 aggregate sections as Math3 staging batches, add safe import s
 - `split_years` initially ended 1996 at EOF because only Math3 headings were considered. Fixed it to end each Math3 year at the next top-level heading, which prevents 1997-2019 Math2 content from entering Math3 staging.
 - `npm` was blocked by PowerShell execution policy. Used `npm.cmd`, matching project guidance.
 - New generic Math3 importer test initially mismatched `sourceYear` and `stableId`. Corrected the fixture to use 1987 consistently.
+- DB dry-run initially failed before connecting because workspace import scripts resolved `--input content/...` under `apps/api/`. Fixed import CLI path resolution to also accept repository-root relative paths.
+- DB dry-run then hit a TLS self-signed certificate chain error. The maintainer updated local `.env` with the needed SSL configuration; no secret values were recorded.
 
 ## Status
 
-**Complete** - Full verification passed. PR opened: https://github.com/tiantangyangyang-lang/kaoyan/pull/17
+**Complete** - Full verification passed. DB staging import completed for 1987-1996 Math3. PR opened: https://github.com/tiantangyangyang-lang/kaoyan/pull/17
