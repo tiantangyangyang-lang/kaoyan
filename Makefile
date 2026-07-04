@@ -12,8 +12,10 @@ MATH2_2024_REVIEW := content/reports/math2-2024/human-review-checklist.md
 MATH2_2021_2022_REPORT := content/reports/req-011-math2-2021-2022-staging-readiness
 MATH2_REPORT := content/reports/req-002-math2-markdown-import
 MATH2_INVENTORY := $(MATH2_REPORT)/source-inventory.json
+MATH3_1987_1996_OUTPUT := content/staging/math3
+MATH3_1987_1996_REPORT := content/reports/req-016-math3-1987-1996-staging-db-readiness
 
-.PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math2-inventory math2-pilot math2-katex math2-validate math2-2021-2022-audit math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run math2-db-preview-import-dry-run math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit math2-db-preview-import-commit math2-import-dry-run test-math2 test-python-all verify
+.PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math2-inventory math2-pilot math2-katex math2-validate math2-2021-2022-audit math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math3-1987-1996-staging math3-1987-1996-katex-report math3-1987-1996-validate math3-1987-import-dry-run math3-1988-import-dry-run math3-1989-import-dry-run math3-1990-import-dry-run math3-1991-import-dry-run math3-1992-import-dry-run math3-1993-import-dry-run math3-1994-import-dry-run math3-1995-import-dry-run math3-1996-import-dry-run math3-db-1987-1996-import-dry-run math3-1987-import-commit math3-1988-import-commit math3-1989-import-commit math3-1990-import-commit math3-1991-import-commit math3-1992-import-commit math3-1993-import-commit math3-1994-import-commit math3-1995-import-commit math3-1996-import-commit math3-db-1987-1996-import-commit math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run math2-db-preview-import-dry-run math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit math2-db-preview-import-commit math2-import-dry-run test-math2 test-python-all verify
 
 help:
 	@echo "Available targets:"
@@ -29,11 +31,16 @@ help:
 	@echo "  make math2-2021-2022-audit    Audit Math2 2021/2022 source readiness"
 	@echo "  make math2-2023-validate      Regenerate and validate Math2 2023 staging"
 	@echo "  make math2-2024-validate      Regenerate and validate Math2 2024 staging"
+	@echo "  make math3-1987-1996-validate Regenerate and validate Math3 1987-1996 staging"
 	@echo "  make math2-import-dry-run     Exercise Math2 2020 MySQL import and roll it back"
 	@echo "  make math2-db-preview-import-dry-run"
 	@echo "                                Dry-run DB imports for Math2 2020/2023/2024"
 	@echo "  make math2-db-preview-import-commit"
 	@echo "                                Commit DB staging imports for Math2 2020/2023/2024"
+	@echo "  make math3-db-1987-1996-import-dry-run"
+	@echo "                                Dry-run DB imports for Math3 1987-1996"
+	@echo "  make math3-db-1987-1996-import-commit"
+	@echo "                                Commit DB staging imports for Math3 1987-1996"
 	@echo "  make verify                   Run the full PR verification gate"
 
 install:
@@ -108,6 +115,24 @@ math2-2024-katex: math2-2024-staging
 math2-2024-validate: math2-2024-katex
 	set MATH2_SOURCE_DIR=$(MATH2_SOURCE)&& $(PYTHON) -m unittest tests.test_transform_math2_2024 -v
 
+math3-1987-1996-staging:
+	$(PYTHON) scripts/transform_math3_1987_1996.py "$(MATH2_SOURCE)" "$(MATH3_1987_1996_OUTPUT)" "$(MATH3_1987_1996_REPORT)"
+
+math3-1987-1996-katex-report: math3-1987-1996-staging
+	-node scripts/validate_math2_katex.mjs "$(MATH3_1987_1996_OUTPUT)/1987/questions.json" "$(MATH3_1987_1996_OUTPUT)/1987/katex-validation.json"
+	-node scripts/validate_math2_katex.mjs "$(MATH3_1987_1996_OUTPUT)/1988/questions.json" "$(MATH3_1987_1996_OUTPUT)/1988/katex-validation.json"
+	-node scripts/validate_math2_katex.mjs "$(MATH3_1987_1996_OUTPUT)/1989/questions.json" "$(MATH3_1987_1996_OUTPUT)/1989/katex-validation.json"
+	-node scripts/validate_math2_katex.mjs "$(MATH3_1987_1996_OUTPUT)/1990/questions.json" "$(MATH3_1987_1996_OUTPUT)/1990/katex-validation.json"
+	-node scripts/validate_math2_katex.mjs "$(MATH3_1987_1996_OUTPUT)/1991/questions.json" "$(MATH3_1987_1996_OUTPUT)/1991/katex-validation.json"
+	-node scripts/validate_math2_katex.mjs "$(MATH3_1987_1996_OUTPUT)/1992/questions.json" "$(MATH3_1987_1996_OUTPUT)/1992/katex-validation.json"
+	-node scripts/validate_math2_katex.mjs "$(MATH3_1987_1996_OUTPUT)/1993/questions.json" "$(MATH3_1987_1996_OUTPUT)/1993/katex-validation.json"
+	-node scripts/validate_math2_katex.mjs "$(MATH3_1987_1996_OUTPUT)/1994/questions.json" "$(MATH3_1987_1996_OUTPUT)/1994/katex-validation.json"
+	-node scripts/validate_math2_katex.mjs "$(MATH3_1987_1996_OUTPUT)/1995/questions.json" "$(MATH3_1987_1996_OUTPUT)/1995/katex-validation.json"
+	-node scripts/validate_math2_katex.mjs "$(MATH3_1987_1996_OUTPUT)/1996/questions.json" "$(MATH3_1987_1996_OUTPUT)/1996/katex-validation.json"
+
+math3-1987-1996-validate: math3-1987-1996-katex-report
+	set MATH2_SOURCE_DIR=$(MATH2_SOURCE)&& $(PYTHON) -m unittest tests.test_transform_math3_1987_1996 -v
+
 math2-2020-import-dry-run: math2-validate
 	$(NPM) run import:math2 --workspace @kaoyan/api -- --input "$(MATH2_2020_INPUT)"
 
@@ -130,10 +155,74 @@ math2-2024-import-commit: math2-2024-validate
 
 math2-db-preview-import-commit: math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit
 
+math3-1987-import-dry-run: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1987/questions.json"
+
+math3-1988-import-dry-run: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1988/questions.json"
+
+math3-1989-import-dry-run: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1989/questions.json"
+
+math3-1990-import-dry-run: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1990/questions.json"
+
+math3-1991-import-dry-run: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1991/questions.json"
+
+math3-1992-import-dry-run: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1992/questions.json"
+
+math3-1993-import-dry-run: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1993/questions.json"
+
+math3-1994-import-dry-run: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1994/questions.json"
+
+math3-1995-import-dry-run: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1995/questions.json"
+
+math3-1996-import-dry-run: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1996/questions.json"
+
+math3-db-1987-1996-import-dry-run: math3-1987-import-dry-run math3-1988-import-dry-run math3-1989-import-dry-run math3-1990-import-dry-run math3-1991-import-dry-run math3-1992-import-dry-run math3-1993-import-dry-run math3-1994-import-dry-run math3-1995-import-dry-run math3-1996-import-dry-run
+
+math3-1987-import-commit: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1987/questions.json" --commit
+
+math3-1988-import-commit: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1988/questions.json" --commit
+
+math3-1989-import-commit: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1989/questions.json" --commit
+
+math3-1990-import-commit: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1990/questions.json" --commit
+
+math3-1991-import-commit: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1991/questions.json" --commit
+
+math3-1992-import-commit: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1992/questions.json" --commit
+
+math3-1993-import-commit: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1993/questions.json" --commit
+
+math3-1994-import-commit: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1994/questions.json" --commit
+
+math3-1995-import-commit: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1995/questions.json" --commit
+
+math3-1996-import-commit: math3-1987-1996-validate
+	$(NPM) run import:math3 --workspace @kaoyan/api -- --input "$(MATH3_1987_1996_OUTPUT)/1996/questions.json" --commit
+
+math3-db-1987-1996-import-commit: math3-1987-import-commit math3-1988-import-commit math3-1989-import-commit math3-1990-import-commit math3-1991-import-commit math3-1992-import-commit math3-1993-import-commit math3-1994-import-commit math3-1995-import-commit math3-1996-import-commit
+
 math2-import-dry-run: math2-2020-import-dry-run
 
 test-python-all:
 	$(PYTHON) -m unittest discover -s tests -p "test_*.py"
 
-verify: math2-validate math2-2021-2022-audit math2-2023-validate math2-2024-validate typecheck test build
+verify: math2-validate math2-2021-2022-audit math2-2023-validate math2-2024-validate math3-1987-1996-validate typecheck test build
 	$(PYTHON) -m compileall -q scripts tests

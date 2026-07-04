@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "math3-aggregate-1987-1996-v1",
+  "totalAnomalies": 7,
+  "anomalies": [
+    {
+      "type": "historical_subject_title_math3",
+      "severity": "warning",
+      "message": "Aggregate heading says `考研数学试卷三解答`; staged under math3, not math2.",
+      "blocksPublication": false,
+      "sourceRelativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "heading": "# 一九九二年考研数学试卷三解答"
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected 5 local questions but found markers [1, 2, 3, 5]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+      "sectionRoman": "一",
+      "expectedLocalCount": 5,
+      "foundLocalMarkers": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "stableId": "math3-1992-q01",
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected 5 local questions but found markers [1, 2, 3, 5]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+      "sectionRoman": "一",
+      "expectedLocalCount": 5,
+      "foundLocalMarkers": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "stableId": "math3-1992-q04",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math3-1992-q04",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": []
+    },
+    {
+      "stableId": "math3-1992-q12",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math3-1992-q16",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    }
+  ]
+}

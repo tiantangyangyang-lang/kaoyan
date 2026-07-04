@@ -32,14 +32,14 @@ export interface ContentQuestionPage {
 
 export interface ContentStore {
   listPublishedQuestions(input: {
-    subjectCode: "math2";
+    subjectCode: "math2" | "math3";
     year?: number;
-    type?: "multiple_choice" | "fill_in_blank" | "solution";
+    type?: "multiple_choice" | "fill_in_blank" | "solution" | "proof" | "unknown";
     page: number;
     pageSize: number;
   }): Promise<ContentQuestionPage>;
   getPublishedQuestion(
-    subjectCode: "math2",
+    subjectCode: "math2" | "math3",
     stableId: string,
   ): Promise<ContentQuestionDetail | null>;
 }

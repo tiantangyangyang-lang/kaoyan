@@ -1,0 +1,743 @@
+{
+  "schemaVersion": "math2-question-staging-v2",
+  "batchId": "REQ-016-math3-1993-aggregate-staging",
+  "subjectCode": "math3",
+  "sourceYear": 1993,
+  "sourceRepository": {
+    "name": "Kaoyan-Math2-Papers",
+    "commit": "fd42c56eed412cce0cb97d6bd688f314c78e542e",
+    "branch": "main",
+    "dirty": true,
+    "dirtyState": [
+      "?? papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "?? papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+      "?? papers/MinerU_markdown_math2_2021_2065687851346780160.md",
+      "?? papers/MinerU_markdown_math2_2022_2065687890395758592.md",
+      "?? papers/MinerU_markdown_math2_2023_2065687933685170176.md"
+    ]
+  },
+  "sourceRoleDecision": {
+    "requirement": "docs/requirements/REQ-016-math3-1987-1996-staging-db-readiness.md",
+    "priorAudit": "docs/requirements/REQ-015-math2-1987-2019-aggregate-split-staging.md",
+    "decision": "stage_1987_1996_as_math3_from_aggregate_trial_paper_three_headings",
+    "primaryRelativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+    "solutionsRelativePath": "solutions/math2_1987-2019/math2_1987-2019.md",
+    "pdfPrerequisite": false
+  },
+  "feedback": {
+    "configuredBy": "VITE_FEEDBACK_EMAIL",
+    "publicEmail": "tiantangyangyang@gmail.com",
+    "requiredForLaunch": false,
+    "status": "maintainer_email_configured"
+  },
+  "sourceFiles": [
+    {
+      "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "role": "primary_aggregate_math3_1987_1996_source",
+      "gitState": "untracked",
+      "bytes": 444494,
+      "lineCount": 8197,
+      "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+      "hashMatchesExpected": true,
+      "yearHeadings": [
+        {
+          "year": 1987,
+          "line": 1,
+          "title": "# 一九八七年考研数学试卷三解答"
+        },
+        {
+          "year": 1988,
+          "line": 147,
+          "title": "# 一九八八年考研数学试卷三解答"
+        },
+        {
+          "year": 1989,
+          "line": 272,
+          "title": "# 一九八九年考研数学试卷三解答"
+        },
+        {
+          "year": 1990,
+          "line": 428,
+          "title": "# 一九九〇年考研数学试卷三解答"
+        },
+        {
+          "year": 1991,
+          "line": 542,
+          "title": "# 一九九一年考研数学试卷三解答"
+        },
+        {
+          "year": 1992,
+          "line": 676,
+          "title": "# 一九九二年考研数学试卷三解答"
+        },
+        {
+          "year": 1993,
+          "line": 802,
+          "title": "# 一九九三年考研数学试卷三解答"
+        },
+        {
+          "year": 1994,
+          "line": 966,
+          "title": "# 一九九四年考研数学试卷三解答"
+        },
+        {
+          "year": 1995,
+          "line": 1130,
+          "title": "# 一九九五年考研数学试卷三解答"
+        },
+        {
+          "year": 1996,
+          "line": 1280,
+          "title": "# 一九九六年考研数学试卷三解答"
+        }
+      ],
+      "answerExplanationMarkers": 540,
+      "imageReferences": 20
+    },
+    {
+      "relativePath": "solutions/math2_1987-2019/math2_1987-2019.md",
+      "role": "solutions_aggregate_reference",
+      "gitState": "tracked",
+      "bytes": 391659,
+      "lineCount": 7907,
+      "sha256": "ef715711e094d2c30af75dee43e777c3870c781b91521da6604579d04e955e01",
+      "hashMatchesExpected": true,
+      "yearHeadings": [
+        {
+          "year": 1987,
+          "line": 1,
+          "title": "# 一九八七年考研数学试卷三解答"
+        },
+        {
+          "year": 1988,
+          "line": 145,
+          "title": "# 一九八八年考研数学试卷三解答"
+        },
+        {
+          "year": 1989,
+          "line": 265,
+          "title": "# 一九八九年考研数学试卷三解答"
+        },
+        {
+          "year": 1990,
+          "line": 421,
+          "title": "# 一九九〇年考研数学试卷三解答"
+        },
+        {
+          "year": 1991,
+          "line": 535,
+          "title": "# 一九九一年考研数学试卷三解答"
+        },
+        {
+          "year": 1992,
+          "line": 667,
+          "title": "# 一九九二年考研数学试卷三解答"
+        },
+        {
+          "year": 1993,
+          "line": 791,
+          "title": "# 一九九三年考研数学试卷三解答"
+        },
+        {
+          "year": 1994,
+          "line": 955,
+          "title": "# 一九九四年考研数学试卷三解答"
+        },
+        {
+          "year": 1995,
+          "line": 1112,
+          "title": "# 一九九五年考研数学试卷三解答"
+        },
+        {
+          "year": 1996,
+          "line": 1259,
+          "title": "# 一九九六年考研数学试卷三解答"
+        }
+      ],
+      "answerExplanationMarkers": 550,
+      "imageReferences": 20
+    }
+  ],
+  "questions": [
+    {
+      "stableId": "math3-1993-q01",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "fill_in_blank",
+      "questionNumber": 1,
+      "stem": "1. $\\operatorname* { l i m } _ { x \\to 0 ^ { + } } x \\ln x =$",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 由洛必达法则，求得极限等于 0\n\n2. 函数 $y = y ( x )$ 由方程 $\\sin ( x ^ { 2 } + y ^ { 2 } ) + \\mathbf { e } ^ { x } - x y ^ { 2 } = 0$ 所确定，则 ${ \\frac { \\mathrm { d } y } { \\mathrm { d } x } } = { }$ \n\n解. $\\frac { y ^ { 2 } - 2 x \\cos ( x ^ { 2 } + y ^ { 2 } ) - \\mathbf { e } ^ { x } } { 2 y \\cos ( x ^ { 2 } + y ^ { 2 } ) - 2 x y }$ \n\n3. 同试卷一第一[1]题\n\n$\\int { \\frac { \\tan { x } } { \\sqrt { \\cos { x } } } } \\mathrm { d } x =$ \n\n解. ${ \\frac { 2 } { \\sqrt { \\cos x } } } + C .$ \n\n5. 已知曲线 $y = f ( x )$ 过点 $\\left( 0 , - { \\frac { 1 } { 2 } } \\right)$ ，且其上任一点 $( x , y )$ 处的切线斜率为 $x \\ln ( 1 + x ^ { 2 } )$ ，则 f (x ) =\n\n解. $\\frac { 1 } { 2 } ( 1 + x ^ { 2 } ) [ \\ln ( 1 + x ^ { 2 } ) - 1 ]$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "section_split_mismatch",
+          "severity": "warning",
+          "message": "Section expected 5 local questions but found markers [1, 2, 3, 5]; kept the section as one blocked review item.",
+          "blocksPublication": true,
+          "sectionTitle": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "sectionRoman": "一",
+          "expectedLocalCount": 5,
+          "foundLocalMarkers": [
+            1,
+            2,
+            3,
+            5
+          ]
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 805,
+          "lineEnd": 823
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q02",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "multiple_choice",
+      "questionNumber": 2,
+      "stem": "当 x → 0 时，变量 ${ \\frac { 1 } { x ^ { 2 } } } \\sin { \\frac { 1 } { x } }$ 是·",
+      "options": [
+        {
+          "label": "A",
+          "value": "无穷小"
+        },
+        {
+          "label": "B",
+          "value": "无穷大"
+        },
+        {
+          "label": "C",
+          "value": "有界的，但不是无穷小"
+        },
+        {
+          "label": "D",
+          "value": "有界的，但不是无穷大"
+        }
+      ],
+      "answer": "D",
+      "answerStatus": "sourced_from_aggregate",
+      "explanation": "解. 应选 (D)",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 826,
+          "lineEnd": 837
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q03",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "multiple_choice",
+      "questionNumber": 3,
+      "stem": "设 $f ( x ) = { \\left\\{ \\begin{array} { l l } { { \\frac { | x ^ { 2 } - 1 | } { x - 1 } } , } & { x \\neq 1 , } \\\\ { 2 , } & { x = 1 , } \\end{array} \\right. }$ x 6= 1, 则在点 x = 1 处函数 f (x ) · · · ·",
+      "options": [
+        {
+          "label": "A",
+          "value": "不连续"
+        },
+        {
+          "label": "B",
+          "value": "连续，但不可导"
+        },
+        {
+          "label": "C",
+          "value": "可导，但导数不连续"
+        },
+        {
+          "label": "D",
+          "value": "可导，且导数连续"
+        }
+      ],
+      "answer": "A",
+      "answerStatus": "sourced_from_aggregate",
+      "explanation": "解. 应选 (A)",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 838,
+          "lineEnd": 849
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q04",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "unknown",
+      "questionNumber": 4,
+      "stem": "已知 $f ( x ) = { \\left\\{ \\begin{array} { l l } { x ^ { 2 } , } & { 0 \\leqslant x < 1 , } \\\\ { 1 , } & { 1 \\leqslant x \\leqslant 2 , } \\end{array} \\right. }$ ¨ x 2 , 0 ¶ x < 1, 设 $F ( x ) = \\int _ { 1 } ^ { x } f ( t ) \\mathrm { d } t ( 0 \\leqslant x \\leqslant 2 )$ x ），则 F (x ) 为 · ( )\n\n$\\left\\{ { \\begin{array} { l l } { { \\frac { 1 } { 3 } } x ^ { 3 } , } & { 0 \\leqslant x < 1 ; } \\\\ { x , } & { 1 \\leqslant x \\leqslant 2 . } \\end{array} } \\right.$ (  x 3 , (A) \n\n$\\left\\{ \\begin{array} { l l } { { \\displaystyle \\frac { 1 } { 3 } x ^ { 3 } - \\frac { 1 } { 3 } , } } & { 0 \\leqslant x < 1 ; } \\\\ { x , } & { 1 \\leqslant x \\leqslant 2 . } \\end{array} \\right.$ (  x 3 − (B) \n\n$\\left\\{ { \\begin{array} { l l } { { \\frac { 1 } { 3 } } x ^ { 3 } , } & { 0 \\leqslant x < 1 ; } \\\\ { x - 1 , } & { 1 \\leqslant x \\leqslant 2 . } \\end{array} } \\right.$ (  x 3 , (C) \n\n$\\left\\{ \\begin{array} { l l } { { \\displaystyle \\frac { 1 } { 3 } x ^ { 3 } - \\frac { 1 } { 3 } , } } & { { 0 \\leqslant x < 1 ; } } \\\\ { { x - 1 , } } & { { 1 \\leqslant x \\leqslant 2 . } } \\end{array} \\right.$ (  x 3 (D)",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 应选 (D)",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "incomplete_choice_options",
+          "severity": "error",
+          "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+          "blocksPublication": true,
+          "foundOptionLabels": []
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 850,
+          "lineEnd": 861
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q05",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "multiple_choice",
+      "questionNumber": 5,
+      "stem": "设常数 $k > 0$ ，函数 $f ( x ) = \\ln x - { \\frac { x } { e } } + k$ 在 $( 0 , + \\infty )$ 内的零点个数为· · · · · · · · ( )",
+      "options": [
+        {
+          "label": "A",
+          "value": "3．"
+        },
+        {
+          "label": "B",
+          "value": "2"
+        },
+        {
+          "label": "C",
+          "value": "1"
+        },
+        {
+          "label": "D",
+          "value": "0．"
+        }
+      ],
+      "answer": "B",
+      "answerStatus": "sourced_from_aggregate",
+      "explanation": "解. 应选 (B)．",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 862,
+          "lineEnd": 873
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q06",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "multiple_choice",
+      "questionNumber": 6,
+      "stem": "设 $f ( x ) { = } { - } f ( - x )$ ，在 $( 0 , + \\infty )$ 内 $f ^ { \\prime } ( x ) > 0 , f ^ { \\prime \\prime } ( x ) > 0$ ，则 f (x ) 在 $( - \\infty , 0 )$ 内( )",
+      "options": [
+        {
+          "label": "A",
+          "value": "$f ^ { \\prime } ( x ) < 0 , f ^ { \\prime \\prime } ( x ) < 0$"
+        },
+        {
+          "label": "B",
+          "value": "$f ^ { \\prime } ( x ) < 0 , f ^ { \\prime \\prime } ( x ) > 0 .$"
+        },
+        {
+          "label": "C",
+          "value": "$f ^ { \\prime } ( x ) > 0 , f ^ { \\prime \\prime } ( x ) < 0$"
+        },
+        {
+          "label": "D",
+          "value": "$f ^ { \\prime } ( x ) > 0 , f ^ { \\prime \\prime } ( x ) > 0$"
+        }
+      ],
+      "answer": "C",
+      "answerStatus": "sourced_from_aggregate",
+      "explanation": "解. 应选 (C)．",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 874,
+          "lineEnd": 885
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q07",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 7,
+      "stem": "设 $y = \\sin [ f ( x ^ { 2 } ) ]$ ，其中 f 具有二阶导数，求 $\\frac { \\mathrm { d } ^ { 2 } y } { \\mathrm { d } x ^ { 2 } }$ dx 2",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. ${ \\frac { \\mathrm { d } ^ { 2 } y } { \\mathrm { d } x ^ { 2 } } } = 2 f ^ { \\prime } ( x ^ { 2 } ) \\cos [ f ( x ^ { 2 } ) ] + 4 x ^ { 2 } \\{ f ^ { \\prime \\prime } ( x ^ { 2 } ) \\cos [ f ( x ^ { 2 } ) ] - [ f ^ { \\prime } ( x ^ { 2 } ) ] ^ { 2 } \\sin [ f ( x ^ { 2 } ) ] \\} .$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 888,
+          "lineEnd": 891
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q08",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 8,
+      "stem": "求 $\\operatorname* { l i m } _ { x \\to - \\infty } x ( { \\sqrt { x ^ { 2 } + 1 0 0 + x } } )$",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. −50．",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 892,
+          "lineEnd": 895
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q09",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 9,
+      "stem": "求 $\\int _ { 0 } ^ { \\frac { \\pi } { 4 } } { \\frac { x } { 1 + \\cos 2 x } } \\mathrm { d } x$",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. ${ \\frac { \\pi } { 8 } } - { \\frac { 1 } { 4 } } \\ln 2 .$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 896,
+          "lineEnd": 899
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q10",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 10,
+      "stem": "求 $\\int _ { 0 } ^ { + \\infty } { \\frac { x } { ( 1 + x ) ^ { 3 } } } \\mathrm { d } x .$",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. ${ \\frac { 1 } { 2 } } .$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 900,
+          "lineEnd": 903
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q11",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 11,
+      "stem": "求微分方程 $\\scriptstyle ( x ^ { 2 } - 1 ) \\mathbf { d } y + ( 2 x y - \\cos x ) \\mathbf { d } x = 0$ 满足初始条件 $y | _ { x = 0 } = 0$ 的特解",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. $y = { \\frac { \\sin x - 1 } { x ^ { 2 } - 1 } }$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 904,
+          "lineEnd": 907
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q12",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 12,
+      "stem": "设二阶常系数线性微分方程 $y ^ { \\prime \\prime } + \\alpha y ^ { \\prime } + \\beta y = \\gamma \\mathbf { e } ^ { x }$ 的一个特解为 $y = \\mathbf { e } ^ { 2 x } + ( 1 +$ $x ) \\mathbf { e } ^ { x }$ ，试确定常数 $\\alpha , \\beta , \\gamma$ ，并求该方程的通解",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. $y = C _ { 1 } \\mathbf { e } ^ { x } + C _ { 2 } \\mathbf { e } ^ { 2 x } + x \\mathbf { e } ^ { x }$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 909,
+          "lineEnd": 913
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q13",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 13,
+      "stem": "设平面图形 A 由 $x ^ { 2 } + y ^ { 2 } \\leqslant 2 x$ 与 $y \\geqslant x$ 所确定，求图形 A 绕 $x = 2$ 旋转一周所得旋转体的体积",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. $V = \\int _ { 0 } ^ { 1 } 2 \\pi \\big [ \\sqrt { 1 - y ^ { 2 } } - ( 1 - y ) ^ { 2 } \\big ] \\mathrm { d } y = \\frac { \\pi } { 2 } - \\frac { 2 } { 3 } \\pi .$ 2π -p1 − y 2 − (1 − y )2 \u0003 d y = π2 − 23",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 915,
+          "lineEnd": 919
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q14",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 14,
+      "stem": "作半径为r 的球的外切正圆锥，问此圆锥的高h 为何值时，其体积V 最小，并求出该最小值",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 当 $h = 4 r$ 时，V 取最小值 $V ( 4 r ) { = } \\frac { 8 \\pi r ^ { 3 } } { 3 }$ 8πr 3",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 921,
+          "lineEnd": 925
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q15",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 15,
+      "stem": "设 $x > 0$ ，常数 $a > { \\mathbf { e } }$ ，证明： $( a + x ) ^ { a } < a ^ { a + x }$",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 令 $f ( x ) = ( a + x ) \\ln a - a \\ln ( a + x )$ ，则当 $x > 0$ 时 $f ^ { \\prime } ( x ) = \\ln a - { \\frac { a } { a + x } } > 0$ ，所以f (x ) 在 $[ 0 , + \\infty ]$ 上单调增加，从而 $f ( x ) > f ( 0 ) = 0$ ．即结论成立",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 927,
+          "lineEnd": 931
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1993-q16",
+      "sourceYear": 1993,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 16,
+      "stem": "设 f 0(x ) 在 [0, a ] 上连续，且 f (0) = 0，证明：\n\n$$\n\\left| \\int_ {0} ^ {a} f (x) \\mathrm{d} x \\right| \\leqslant \\frac {M a ^ {2}}{2},\n$$\n\n其中 $M = \\operatorname* { m a x } _ { 0 \\leqslant x \\leqslant a } \\left| f ^ { \\prime } ( x ) \\right|$",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 证法一：任取 $x \\in ( 0 , a ]$ ，由微分中值定理有\n\n$$\nf (x) = f (x) - f (0) = f ^ {\\prime} (\\xi) x, \\quad \\xi \\in (0, x).\n$$\n\n再由定积分的绝对值不等式有\n\n$$\n\\left| \\int_ {0} ^ {a} f (x) \\mathrm{d} x \\right| = \\left| \\int_ {0} ^ {a} f ^ {\\prime} (\\xi) x \\mathrm{d} x \\right| \\leqslant \\int_ {0} ^ {a} \\left| f ^ {\\prime} (\\xi) \\right| x \\mathrm{d} x \\leqslant M \\int_ {0} ^ {a} x \\mathrm{d} x = \\frac {M a ^ {2}}{2}.\n$$\n\n证法二：由微积分基本公式及定积分的绝对值不等式有\n\n$$\n| f (x) | = | f (x) - f (0) | = \\left| \\int_ {0} ^ {x} f ^ {\\prime} (t) \\mathrm{d} t \\right| \\leqslant \\int_ {0} ^ {x} \\left| f ^ {\\prime} (t) \\right| \\mathrm{d} t \\leqslant \\int_ {0} ^ {x} M \\mathrm{d} t = M x.\n$$\n\n从而由积分的保号性有\n\n$$\n\\left| \\int_ {0} ^ {a} f (x) \\mathrm{d} x \\right| \\leqslant \\int_ {0} ^ {a} | f (x) | \\mathrm{d} x \\leqslant \\int_ {0} ^ {a} M x \\mathrm{d} x = \\frac {M a ^ {2}}{2}.\n$$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 933,
+          "lineEnd": 965
+        }
+      ]
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "historical_subject_title_math3",
+      "severity": "warning",
+      "message": "Aggregate heading says `考研数学试卷三解答`; staged under math3, not math2.",
+      "blocksPublication": false,
+      "sourceRelativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "heading": "# 一九九三年考研数学试卷三解答"
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected 5 local questions but found markers [1, 2, 3, 5]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+      "sectionRoman": "一",
+      "expectedLocalCount": 5,
+      "foundLocalMarkers": [
+        1,
+        2,
+        3,
+        5
+      ]
+    }
+  ],
+  "validation": {
+    "inputFilesRead": 2,
+    "questionsGenerated": 16,
+    "questionCounts": {
+      "fill_in_blank": 1,
+      "multiple_choice": 4,
+      "unknown": 1,
+      "solution": 10,
+      "proof": 0
+    },
+    "expectedCounts": {
+      "fill_in_blank": 1,
+      "multiple_choice": 4,
+      "unknown": 1,
+      "solution": 10,
+      "proof": 0
+    },
+    "countsMatch": true,
+    "stableIdsUnique": true,
+    "allQuestionsBlocked": true,
+    "allQuestionsNeedReview": true,
+    "answersPresent": 4,
+    "explanationsPresent": 16,
+    "choiceOptionsComplete": true,
+    "schemaValid": true,
+    "schemaErrors": [],
+    "anomaliesBySeverity": {
+      "warning": 3,
+      "error": 1
+    }
+  }
+}

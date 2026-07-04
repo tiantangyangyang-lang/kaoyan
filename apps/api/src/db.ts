@@ -434,9 +434,9 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
   }
 
   async listPublishedQuestions(input: {
-    subjectCode: "math2";
+    subjectCode: "math2" | "math3";
     year?: number;
-    type?: "multiple_choice" | "fill_in_blank" | "solution";
+    type?: "multiple_choice" | "fill_in_blank" | "solution" | "proof" | "unknown";
     page: number;
     pageSize: number;
   }): Promise<ContentQuestionPage> {
@@ -484,7 +484,7 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
   }
 
   async getPublishedQuestion(
-    subjectCode: "math2",
+    subjectCode: "math2" | "math3",
     stableId: string,
   ): Promise<ContentQuestionDetail | null> {
     const [rows] = await this.pool.query<QuestionContentRow[]>(

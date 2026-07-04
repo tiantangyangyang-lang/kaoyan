@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "math3-aggregate-1987-1996-v1",
+  "totalAnomalies": 3,
+  "anomalies": [
+    {
+      "type": "historical_subject_title_math3",
+      "severity": "warning",
+      "message": "Aggregate heading says `考研数学试卷三解答`; staged under math3, not math2.",
+      "blocksPublication": false,
+      "sourceRelativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "heading": "# 一九八七年考研数学试卷三解答"
+    },
+    {
+      "stableId": "math3-1987-q17",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math3-1987-q17",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": []
+    }
+  ]
+}

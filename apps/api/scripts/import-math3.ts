@@ -1,0 +1,27 @@
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { createDatabasePool, initializeDatabase } from "../src/db.js";
+import { loadConfig } from "../src/config.js";
+import { importQuestionBatch, validateQuestionImportPayload } from "../src/math2-import.js";
+
+const args = process.argv.slice(2);
+const inputIndex = args.indexOf("--input");
+if (inputIndex === -1 || !args[inputIndex + 1]) {
+  throw new Error("Usage: npm run import:math3 -- --input <questions.json> [--commit]");
+}
+const dryRun = !args.includes("--commit");
+const inputPath = resolve(args[inputIndex + 1]);
+const payload = JSON.parse(await readFile(inputPath, "utf8")) as unknown;
+const validated = validateQuestionImportPayload(payload);
+if (validated.subjectCode !== "math3") {
+  throw new Error("import:math3 only accepts subjectCode math3");
+}
+const pool = createDatabasePool(loadConfig());
+
+try {
+  await initializeDatabase(pool);
+  const result = await importQuestionBatch(pool, validated, { dryRun });
+  console.log(JSON.stringify(result, null, 2));
+} finally {
+  await pool.end();
+}

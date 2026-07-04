@@ -9,12 +9,21 @@ const optionSchema = z
   })
   .strict();
 
+const subjectSchema = z.enum(["math2", "math3"]);
+const questionTypeSchema = z.enum([
+  "multiple_choice",
+  "fill_in_blank",
+  "solution",
+  "proof",
+  "unknown",
+]);
+
 const questionSchema = z
   .object({
-    stableId: z.string().regex(/^math2-\d{4}-q\d{2}$/),
+    stableId: z.string().regex(/^math[23]-\d{4}-q\d{2,3}$/),
     sourceYear: z.number().int(),
-    subjectCode: z.literal("math2"),
-    type: z.enum(["multiple_choice", "fill_in_blank", "solution"]),
+    subjectCode: subjectSchema,
+    type: questionTypeSchema,
     questionNumber: z.number().int().positive(),
     stem: z.string().min(1),
     options: z.array(optionSchema),
@@ -47,7 +56,7 @@ const importPayloadSchema = z
   .object({
     schemaVersion: z.literal("math2-question-staging-v2"),
     batchId: z.string().min(1).max(128),
-    subjectCode: z.literal("math2"),
+    subjectCode: subjectSchema,
     sourceYear: z.number().int(),
     sourceRepository: z.object({
       name: z.string().min(1),
@@ -78,8 +87,9 @@ const importPayloadSchema = z
   .passthrough();
 
 export type Math2ImportPayload = z.infer<typeof importPayloadSchema>;
+export type QuestionImportPayload = z.infer<typeof importPayloadSchema>;
 
-export function validateMath2ImportPayload(input: unknown): Math2ImportPayload {
+export function validateQuestionImportPayload(input: unknown): QuestionImportPayload {
   const payload = importPayloadSchema.parse(input);
   const numbers = payload.questions.map((question) => question.questionNumber);
   const stableIds = payload.questions.map((question) => question.stableId);
@@ -117,7 +127,8 @@ export function validateMath2ImportPayload(input: unknown): Math2ImportPayload {
   for (const question of payload.questions) {
     if (
       question.sourceYear !== payload.sourceYear ||
-      !question.stableId.startsWith(`math2-${payload.sourceYear}-`)
+      question.subjectCode !== payload.subjectCode ||
+      !question.stableId.startsWith(`${payload.subjectCode}-${payload.sourceYear}-`)
     ) {
       throw new Error(`year mismatch for ${question.stableId}`);
     }
@@ -135,7 +146,15 @@ export function validateMath2ImportPayload(input: unknown): Math2ImportPayload {
   return payload;
 }
 
-const contentHash = (payload: Math2ImportPayload) =>
+export function validateMath2ImportPayload(input: unknown): Math2ImportPayload {
+  const payload = validateQuestionImportPayload(input);
+  if (payload.subjectCode !== "math2") {
+    throw new Error("validateMath2ImportPayload only accepts subjectCode math2");
+  }
+  return payload;
+}
+
+const contentHash = (payload: QuestionImportPayload) =>
   createHash("sha256")
     .update(JSON.stringify(payload.questions))
     .digest("hex");
@@ -146,7 +165,7 @@ type ImportConnection = Pick<
   "beginTransaction" | "commit" | "rollback" | "execute" | "query" | "release"
 >;
 
-export async function importMath2Batch(
+export async function importQuestionBatch(
   pool: ImportPool,
   rawPayload: unknown,
   options: { dryRun: boolean },
@@ -157,7 +176,7 @@ export async function importMath2Batch(
   dryRun: boolean;
   transaction: "rolled_back" | "committed";
 }> {
-  const payload = validateMath2ImportPayload(rawPayload);
+  const payload = validateQuestionImportPayload(rawPayload);
   const connection = (await pool.getConnection()) as ImportConnection;
   let transactionOpen = false;
   try {
@@ -268,4 +287,13 @@ export async function importMath2Batch(
   } finally {
     connection.release();
   }
+}
+
+export async function importMath2Batch(
+  pool: ImportPool,
+  rawPayload: unknown,
+  options: { dryRun: boolean },
+) {
+  const payload = validateMath2ImportPayload(rawPayload);
+  return importQuestionBatch(pool, payload, options);
 }

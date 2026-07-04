@@ -35,6 +35,7 @@ export const STATUS_LABELS: Record<string, string> = {
 export const SUBJECT_LABELS: Record<SubjectCode, string> = {
   math1: "数学一",
   math2: "数学二",
+  math3: "数学三",
 };
 
 export const DEFAULT_FEEDBACK_EMAIL = "tiantangyangyang@gmail.com";

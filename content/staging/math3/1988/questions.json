@@ -1,0 +1,806 @@
+{
+  "schemaVersion": "math2-question-staging-v2",
+  "batchId": "REQ-016-math3-1988-aggregate-staging",
+  "subjectCode": "math3",
+  "sourceYear": 1988,
+  "sourceRepository": {
+    "name": "Kaoyan-Math2-Papers",
+    "commit": "fd42c56eed412cce0cb97d6bd688f314c78e542e",
+    "branch": "main",
+    "dirty": true,
+    "dirtyState": [
+      "?? papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "?? papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+      "?? papers/MinerU_markdown_math2_2021_2065687851346780160.md",
+      "?? papers/MinerU_markdown_math2_2022_2065687890395758592.md",
+      "?? papers/MinerU_markdown_math2_2023_2065687933685170176.md"
+    ]
+  },
+  "sourceRoleDecision": {
+    "requirement": "docs/requirements/REQ-016-math3-1987-1996-staging-db-readiness.md",
+    "priorAudit": "docs/requirements/REQ-015-math2-1987-2019-aggregate-split-staging.md",
+    "decision": "stage_1987_1996_as_math3_from_aggregate_trial_paper_three_headings",
+    "primaryRelativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+    "solutionsRelativePath": "solutions/math2_1987-2019/math2_1987-2019.md",
+    "pdfPrerequisite": false
+  },
+  "feedback": {
+    "configuredBy": "VITE_FEEDBACK_EMAIL",
+    "publicEmail": "tiantangyangyang@gmail.com",
+    "requiredForLaunch": false,
+    "status": "maintainer_email_configured"
+  },
+  "sourceFiles": [
+    {
+      "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "role": "primary_aggregate_math3_1987_1996_source",
+      "gitState": "untracked",
+      "bytes": 444494,
+      "lineCount": 8197,
+      "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+      "hashMatchesExpected": true,
+      "yearHeadings": [
+        {
+          "year": 1987,
+          "line": 1,
+          "title": "# 一九八七年考研数学试卷三解答"
+        },
+        {
+          "year": 1988,
+          "line": 147,
+          "title": "# 一九八八年考研数学试卷三解答"
+        },
+        {
+          "year": 1989,
+          "line": 272,
+          "title": "# 一九八九年考研数学试卷三解答"
+        },
+        {
+          "year": 1990,
+          "line": 428,
+          "title": "# 一九九〇年考研数学试卷三解答"
+        },
+        {
+          "year": 1991,
+          "line": 542,
+          "title": "# 一九九一年考研数学试卷三解答"
+        },
+        {
+          "year": 1992,
+          "line": 676,
+          "title": "# 一九九二年考研数学试卷三解答"
+        },
+        {
+          "year": 1993,
+          "line": 802,
+          "title": "# 一九九三年考研数学试卷三解答"
+        },
+        {
+          "year": 1994,
+          "line": 966,
+          "title": "# 一九九四年考研数学试卷三解答"
+        },
+        {
+          "year": 1995,
+          "line": 1130,
+          "title": "# 一九九五年考研数学试卷三解答"
+        },
+        {
+          "year": 1996,
+          "line": 1280,
+          "title": "# 一九九六年考研数学试卷三解答"
+        }
+      ],
+      "answerExplanationMarkers": 540,
+      "imageReferences": 20
+    },
+    {
+      "relativePath": "solutions/math2_1987-2019/math2_1987-2019.md",
+      "role": "solutions_aggregate_reference",
+      "gitState": "tracked",
+      "bytes": 391659,
+      "lineCount": 7907,
+      "sha256": "ef715711e094d2c30af75dee43e777c3870c781b91521da6604579d04e955e01",
+      "hashMatchesExpected": true,
+      "yearHeadings": [
+        {
+          "year": 1987,
+          "line": 1,
+          "title": "# 一九八七年考研数学试卷三解答"
+        },
+        {
+          "year": 1988,
+          "line": 145,
+          "title": "# 一九八八年考研数学试卷三解答"
+        },
+        {
+          "year": 1989,
+          "line": 265,
+          "title": "# 一九八九年考研数学试卷三解答"
+        },
+        {
+          "year": 1990,
+          "line": 421,
+          "title": "# 一九九〇年考研数学试卷三解答"
+        },
+        {
+          "year": 1991,
+          "line": 535,
+          "title": "# 一九九一年考研数学试卷三解答"
+        },
+        {
+          "year": 1992,
+          "line": 667,
+          "title": "# 一九九二年考研数学试卷三解答"
+        },
+        {
+          "year": 1993,
+          "line": 791,
+          "title": "# 一九九三年考研数学试卷三解答"
+        },
+        {
+          "year": 1994,
+          "line": 955,
+          "title": "# 一九九四年考研数学试卷三解答"
+        },
+        {
+          "year": 1995,
+          "line": 1112,
+          "title": "# 一九九五年考研数学试卷三解答"
+        },
+        {
+          "year": 1996,
+          "line": 1259,
+          "title": "# 一九九六年考研数学试卷三解答"
+        }
+      ],
+      "answerExplanationMarkers": 550,
+      "imageReferences": 20
+    }
+  ],
+  "questions": [
+    {
+      "stableId": "math3-1988-q01",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "fill_in_blank",
+      "questionNumber": 1,
+      "stem": "若 $f ( x ) = { \\left\\{ \\begin{array} { l l } { \\mathbf { e } ^ { 2 } ( \\sin x + \\cos x ) , } & { x > 0 } \\\\ { 2 x + a , } & { x \\leqslant 0 } \\end{array} \\right. }$ 是 $( - \\infty , + \\infty )$ 上的连续函数，则a =",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. a = 1",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 151,
+          "lineEnd": 154
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q02",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "fill_in_blank",
+      "questionNumber": 2,
+      "stem": "同试卷一第二[1]题",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_explanation_marker",
+          "severity": "error",
+          "message": "No explicit `解.` marker was found in this source block.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 155,
+          "lineEnd": 156
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q03",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "fill_in_blank",
+      "questionNumber": 3,
+      "stem": "同试卷一第二 [3] 题",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_explanation_marker",
+          "severity": "error",
+          "message": "No explicit `解.` marker was found in this source block.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 157,
+          "lineEnd": 158
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q04",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "fill_in_blank",
+      "questionNumber": 4,
+      "stem": "$\\operatorname* { l i m } _ { x \\to + 0 } { \\left( \\frac { 1 } { \\sqrt { x } } \\right) } ^ { \\tan x }$ x → 0",
+      "options": [],
+      "answer": "1",
+      "answerStatus": "sourced_from_aggregate",
+      "explanation": "解. 应填1",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 159,
+          "lineEnd": 162
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q05",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "fill_in_blank",
+      "questionNumber": 5,
+      "stem": "$\\int _ { 0 } ^ { 4 } \\mathrm { e } ^ { \\sqrt { x } } \\mathrm { d } x =$",
+      "options": [],
+      "answer": "$2 ( \\mathbf { e } ^ { 2 } + 1 )$",
+      "answerStatus": "sourced_from_aggregate",
+      "explanation": "解. 应填 $2 ( \\mathbf { e } ^ { 2 } + 1 )$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 163,
+          "lineEnd": 166
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q06",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "multiple_choice",
+      "questionNumber": 6,
+      "stem": "$f ( x ) = { \\frac { 1 } { 3 } } x ^ { 3 } + { \\frac { 1 } { 2 } } x ^ { 2 } + 6 x + 1$ + 的图形在点 (0, 1) 处切线与 x 轴交点的坐标是 · · · ( )",
+      "options": [
+        {
+          "label": "A",
+          "value": "$\\left( - \\frac { 1 } { 6 } , 0 \\right)$"
+        },
+        {
+          "label": "B",
+          "value": "(−1, 0)"
+        },
+        {
+          "label": "C",
+          "value": "$\\left( { \\frac { 1 } { 6 } } , 0 \\right)$"
+        },
+        {
+          "label": "D",
+          "value": "(1, 0)"
+        }
+      ],
+      "answer": "A",
+      "answerStatus": "sourced_from_aggregate",
+      "explanation": "解. 应选 (A)",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 169,
+          "lineEnd": 180
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q07",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "unknown",
+      "questionNumber": 7,
+      "stem": "若 f (x ) 与 g (x ) 在 $( - \\infty , + \\infty )$ 上皆可导，且 $f ( x ) < g ( x )$ ，则必有 · · · · · · · · · ( )",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 可导必定连续，从而选(C)",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "incomplete_choice_options",
+          "severity": "error",
+          "message": "Expected complete A-D options, found labels ['A', 'B', 'C']; stored as unknown review item without options.",
+          "blocksPublication": true,
+          "foundOptionLabels": [
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 181,
+          "lineEnd": 192
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q08",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "unknown",
+      "questionNumber": 8,
+      "stem": "同试卷一第三[1]题",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_explanation_marker",
+          "severity": "error",
+          "message": "No explicit `解.` marker was found in this source block.",
+          "blocksPublication": true
+        },
+        {
+          "type": "incomplete_choice_options",
+          "severity": "error",
+          "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+          "blocksPublication": true,
+          "foundOptionLabels": []
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 193,
+          "lineEnd": 194
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q09",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "multiple_choice",
+      "questionNumber": 9,
+      "stem": "曲线 $y = \\sin ^ { 3 / 2 } x ( 0 \\leqslant x \\leqslant \\pi )$ ）与 x 轴围成的图形绕 x 轴旋转所形成的旋转体体积为 · · · · · · · ( )",
+      "options": [
+        {
+          "label": "A",
+          "value": "${ \\frac { 4 } { 3 } } .$"
+        },
+        {
+          "label": "B",
+          "value": "${ \\frac { 4 } { 3 } } \\pi .$"
+        },
+        {
+          "label": "C",
+          "value": "${ \\frac { 2 } { 3 } } \\pi ^ { 2 }$ 2 π2．"
+        },
+        {
+          "label": "D",
+          "value": "${ \\frac { 2 } { 3 } } \\pi .$"
+        }
+      ],
+      "answer": "B",
+      "answerStatus": "sourced_from_aggregate",
+      "explanation": "解. 应选 (B).",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 195,
+          "lineEnd": 206
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q10",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "unknown",
+      "questionNumber": 10,
+      "stem": "同试卷一第三[5]题",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_explanation_marker",
+          "severity": "error",
+          "message": "No explicit `解.` marker was found in this source block.",
+          "blocksPublication": true
+        },
+        {
+          "type": "incomplete_choice_options",
+          "severity": "error",
+          "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+          "blocksPublication": true,
+          "foundOptionLabels": []
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 207,
+          "lineEnd": 208
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q11",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 11,
+      "stem": "同试卷一第一[2]题",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_explanation_marker",
+          "severity": "error",
+          "message": "No explicit `解.` marker was found in this source block.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 211,
+          "lineEnd": 212
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q12",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 12,
+      "stem": "已知 $y = 1 + x \\mathbf { e } ^ { x y }$ ，求 $y ^ { \\prime } \\vert _ { x = 0 }$ 及 $y ^ { \\prime \\prime } \\rvert _ { x = 0 }$",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. $y ^ { \\prime } | _ { x = 0 } = 1 , ~ y ^ { \\prime \\prime } | _ { x = 0 } = 2$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 213,
+          "lineEnd": 216
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q13",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 13,
+      "stem": "求微分方程 $y ^ { \\prime } + { \\frac { 1 } { x } } y = { \\frac { 1 } { x ( x ^ { 2 } + 1 ) } }$ 的通解（一般解）",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 通解为 $y = { \\frac { 1 } { x } } ( \\arctan x + C )$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 217,
+          "lineEnd": 220
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q14",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 14,
+      "stem": "作函数 y = $y = { \\frac { 6 } { x ^ { 2 } - 2 x + 4 } }$ x 2 − 2x + 4 的图形，并填写下表\n\n<table><tr><td>单调增区间</td><td></td></tr><tr><td>单调减区间</td><td></td></tr><tr><td>极值点</td><td></td></tr><tr><td>极值</td><td></td></tr><tr><td>凹(∪)区间</td><td></td></tr><tr><td>凸(∩)区间</td><td></td></tr><tr><td>拐点</td><td></td></tr><tr><td>渐近线</td><td></td></tr></table>",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 所得数据如下表：\n\n<table><tr><td>单调增区间</td><td><eq>(-∞,1)</eq></td></tr><tr><td>单调减区间</td><td><eq>(1,+∞)</eq></td></tr><tr><td>极值点</td><td>1</td></tr><tr><td>极值</td><td>2</td></tr><tr><td>凹(∪)区间</td><td><eq>(-∞,0)</eq>及<eq>(2,+∞)</eq></td></tr><tr><td>凸(∩)区间</td><td><eq>(0,2)</eq></td></tr><tr><td>拐点</td><td><eq>\\left(0,\\frac{3}{2}\\right)</eq>及<eq>\\left(2,\\frac{3}{2}\\right)</eq></td></tr><tr><td>渐近线</td><td><eq>y=0</eq></td></tr></table>\n\n其图形如下：\n\n![image](https://cdn-mineru.openxlab.org.cn/result/2026-06-13/e449599b-2700-4385-854a-dadd4cdb0815/f6a61cbaa58a28e3cb9423f09228c9b093b82f643b04c176004a2f76014c10bb.jpg)",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "image_reference_in_source",
+          "severity": "warning",
+          "message": "Source block includes an image reference; human review must confirm the rendered figure.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 222,
+          "lineEnd": 235
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q15",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 15,
+      "stem": "将长为a 的铁丝切成两段，一段围成正方形，另一段围成圆形．问这两段铁丝各长为多少时，正方形与圆形的面积之和为最小？\n\n$x = { \\frac { \\pi a } { 4 + \\pi } }$ $a - x = { \\frac { 4 a } { 4 + \\pi } }$ 4 + π 4a 时，面积之和最小．",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_explanation_marker",
+          "severity": "error",
+          "message": "No explicit `解.` marker was found in this source block.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 237,
+          "lineEnd": 241
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q16",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 16,
+      "stem": "同试卷一第五题",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "missing_explanation_marker",
+          "severity": "error",
+          "message": "No explicit `解.` marker was found in this source block.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 243,
+          "lineEnd": 245
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q17",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 17,
+      "stem": "设 $x \\geqslant - 1$ ，求 $\\int _ { - 1 } ^ { x } ( 1 - | t | ) { \\bf d } t$ −1",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 当 $- 1 \\leqslant x < 0$ 时，积分等于 ${ \\frac { 1 } { 2 } } ( 1 + x ) ^ { 2 }$ ．当 $x \\geqslant 0$ 时，积分等于 $1 - { \\frac { 1 } { 2 } } ( 1 - x ) ^ { 2 }$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 247,
+          "lineEnd": 251
+        }
+      ]
+    },
+    {
+      "stableId": "math3-1988-q18",
+      "sourceYear": 1988,
+      "subjectCode": "math3",
+      "type": "solution",
+      "questionNumber": 18,
+      "stem": "设 f (x ) 在 $( - \\infty + \\infty )$ 上有连续导数，且 $m \\leqslant f ( x ) \\leqslant M$ \n\n(Ⅰ) 求 $\\operatorname* { l i m } _ { a \\to + 0 } { \\frac { 1 } { 4 a ^ { 2 } } } \\int _ { - a } ^ { a } [ f ( t + a ) - f ( t - a ) ] \\mathrm { d } t .$ \n\n(Ⅱ) 证明 $\\left| { \\frac { 1 } { 2 a } } \\int _ { - a } ^ { a } f ( t ) \\mathrm { d } t - f ( x ) \\right| \\leqslant M - m ( a > 0 )$ −",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. (Ⅰ)可以用积分中值定理和微分中值定理．这里用洛必达法则直接计算：\n\n$$\n\\begin{array}{l} \\text {原式} = \\lim _ {a \\rightarrow + 0} \\frac {1}{4 a ^ {2}} \\left[ \\int_ {0} ^ {2 a} f (u) \\mathrm{d} u - \\int_ {- 2 a} ^ {0} f (u) \\mathrm{d} u \\right] \\\\ = \\lim _ {a \\rightarrow + 0} \\frac {1}{8 a} [ 2 f (2 a) - 2 f (- 2 a) ] = \\lim _ {a \\rightarrow + 0} \\frac {1}{4 a} [ f (2 a) - f (- 2 a) ] \\\\ = \\lim _ {a \\to + 0} \\frac {1}{4} \\left[ 2 f ^ {\\prime} (2 a) + 2 f ^ {\\prime} (- 2 a) \\right] = f ^ {\\prime} (0). \\\\ \\end{array}\n$$\n\n(Ⅱ)可以分别估计两项．这里利用积分的绝对值不等式来估计：\n\n$$\n\\begin{array}{l} \\left| \\frac {1}{2 a} \\int_ {- a} ^ {a} f (t) \\mathrm{d} t - f (x) \\right| = \\left| \\frac {1}{2 a} \\int_ {- a} ^ {a} [ f (t) - f (x) ] \\mathrm{d} t \\right| \\\\ \\leqslant \\frac {1}{2 a} \\int_ {- a} ^ {a} | f (t) - f (x) | \\mathrm{d} t \\leqslant \\frac {1}{2 a} \\int_ {- a} ^ {a} (M - m) \\mathrm{d} t = M - m \\\\ \\end{array}\n$$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math3_1987_1996_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 253,
+          "lineEnd": 271
+        }
+      ]
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "historical_subject_title_math3",
+      "severity": "warning",
+      "message": "Aggregate heading says `考研数学试卷三解答`; staged under math3, not math2.",
+      "blocksPublication": false,
+      "sourceRelativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "heading": "# 一九八八年考研数学试卷三解答"
+    }
+  ],
+  "validation": {
+    "inputFilesRead": 2,
+    "questionsGenerated": 18,
+    "questionCounts": {
+      "fill_in_blank": 5,
+      "multiple_choice": 2,
+      "unknown": 3,
+      "solution": 8,
+      "proof": 0
+    },
+    "expectedCounts": {
+      "fill_in_blank": 5,
+      "multiple_choice": 2,
+      "unknown": 3,
+      "solution": 8,
+      "proof": 0
+    },
+    "countsMatch": true,
+    "stableIdsUnique": true,
+    "allQuestionsBlocked": true,
+    "allQuestionsNeedReview": true,
+    "answersPresent": 4,
+    "explanationsPresent": 11,
+    "choiceOptionsComplete": true,
+    "schemaValid": true,
+    "schemaErrors": [],
+    "anomaliesBySeverity": {
+      "warning": 2,
+      "error": 10
+    }
+  }
+}
