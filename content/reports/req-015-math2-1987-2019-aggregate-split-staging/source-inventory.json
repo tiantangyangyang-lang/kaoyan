@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "math2-1987-2019-source-inventory-v1",
+  "sourceRepository": {
+    "name": "Kaoyan-Math2-Papers",
+    "path": "D:\\work\\Kaoyan-Math2-Papers",
+    "branch": "main",
+    "commit": "fd42c56eed412cce0cb97d6bd688f314c78e542e",
+    "dirty": true,
+    "dirtyState": [
+      "?? papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "?? papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+      "?? papers/MinerU_markdown_math2_2021_2065687851346780160.md",
+      "?? papers/MinerU_markdown_math2_2022_2065687890395758592.md",
+      "?? papers/MinerU_markdown_math2_2023_2065687933685170176.md"
+    ]
+  },
+  "sources": [
+    {
+      "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "role": "aggregate_paper_path_contains_solutions",
+      "gitState": "untracked",
+      "bytes": 444494,
+      "lines": 8197,
+      "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+      "expectedSha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+      "hashMatchesExpected": true
+    },
+    {
+      "relativePath": "solutions/math2_1987-2019/math2_1987-2019.md",
+      "role": "aggregate_solutions_path",
+      "gitState": "tracked",
+      "bytes": 391659,
+      "lines": 7907,
+      "sha256": "ef715711e094d2c30af75dee43e777c3870c781b91521da6604579d04e955e01",
+      "expectedSha256": "ef715711e094d2c30af75dee43e777c3870c781b91521da6604579d04e955e01",
+      "hashMatchesExpected": true
+    }
+  ]
+}
