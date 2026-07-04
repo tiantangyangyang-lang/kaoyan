@@ -129,9 +129,9 @@ class MemoryStore implements AuthStore, ContentStore {
   }
 
   async listPublishedQuestions(input: {
-    subjectCode: "math2";
+    subjectCode: "math2" | "math3";
     year?: number;
-    type?: "multiple_choice" | "fill_in_blank" | "solution";
+    type?: "multiple_choice" | "fill_in_blank" | "solution" | "proof" | "unknown";
     page: number;
     pageSize: number;
   }): Promise<ContentQuestionPage> {
@@ -159,7 +159,7 @@ class MemoryStore implements AuthStore, ContentStore {
   }
 
   async getPublishedQuestion(
-    _subjectCode: "math2",
+    _subjectCode: "math2" | "math3",
     stableId: string,
   ): Promise<ContentQuestionDetail | null> {
     return (
@@ -214,6 +214,46 @@ test("allows only configured web origins", () => {
     isAllowedWebOrigin(config, "http://branch.kaoyan-ddg.pages.dev"),
     false,
   );
+});
+
+test("published Math3 content uses the same public content contract", async () => {
+  const store = new MemoryStore();
+  store.publishedQuestions = [
+    {
+      stableId: "math3-1987-q01",
+      sourceYear: 1987,
+      type: "fill_in_blank",
+      questionNumber: 1,
+      stem: "Math3 stem",
+      options: [],
+      answer: null,
+      answerStatus: "missing",
+      explanation: "Sourced explanation",
+      explanationStatus: "sourced_from_aggregate",
+      reviewStatus: "needs_human_review",
+      finalizationStatus: "published",
+      knowledgePoints: [],
+    },
+  ];
+  const app = createApp({
+    config,
+    store,
+    mailer: { async sendVerification() {} },
+  });
+
+  const list = await request(app)
+    .get("/api/content/math3/questions?page=1&pageSize=1&year=1987")
+    .expect(200);
+  assert.equal(list.body.data.items[0].stableId, "math3-1987-q01");
+
+  const detail = await request(app)
+    .get("/api/content/math3/questions/math3-1987-q01")
+    .expect(200);
+  assert.equal(detail.body.data.explanationStatus, "sourced_from_aggregate");
+
+  await request(app)
+    .get("/api/content/math3/questions/math2-2020-q01")
+    .expect(400, { error: "stable_id_subject_mismatch" });
 });
 
 test("production session cookies support approved cross-site previews", () => {

@@ -111,6 +111,15 @@ export function createApp({
   const setSessionCookie = (response: Response, token: string) => {
     response.cookie(SESSION_COOKIE, token, getSessionCookieOptions(config));
   };
+  const subjectCodeSchema = z.enum(["math1", "math2", "math3"]);
+  const contentSubjectCodeSchema = z.enum(["math2", "math3"]);
+  const contentTypeSchema = z.enum([
+    "multiple_choice",
+    "fill_in_blank",
+    "solution",
+    "proof",
+    "unknown",
+  ]);
 
   const requireUser = async (
     request: AuthenticatedRequest,
@@ -140,22 +149,23 @@ export function createApp({
   });
 
   app.get(
-    "/api/content/math2/questions",
+    "/api/content/:subjectCode/questions",
     contentLimiter,
     async (request, response, next) => {
       try {
+        const subjectCode = contentSubjectCodeSchema.parse(
+          request.params.subjectCode,
+        );
         const query = z
           .object({
             page: z.coerce.number().int().min(1).default(1),
             pageSize: z.coerce.number().int().min(1).max(50).default(20),
             year: z.coerce.number().int().min(1987).max(2100).optional(),
-            type: z
-              .enum(["multiple_choice", "fill_in_blank", "solution"])
-              .optional(),
+            type: contentTypeSchema.optional(),
           })
           .parse(request.query);
         const data = await store.listPublishedQuestions({
-          subjectCode: "math2",
+          subjectCode,
           ...query,
         });
         response.set(
@@ -170,15 +180,22 @@ export function createApp({
   );
 
   app.get(
-    "/api/content/math2/questions/:stableId",
+    "/api/content/:subjectCode/questions/:stableId",
     contentLimiter,
     async (request, response, next) => {
       try {
+        const subjectCode = contentSubjectCodeSchema.parse(
+          request.params.subjectCode,
+        );
         const stableId = z
           .string()
-          .regex(/^math2-\d{4}-q\d{2}$/)
+          .regex(/^math[23]-\d{4}-q\d{2,3}$/)
           .parse(request.params.stableId);
-        const data = await store.getPublishedQuestion("math2", stableId);
+        if (!stableId.startsWith(`${subjectCode}-`)) {
+          response.status(400).json({ error: "stable_id_subject_mismatch" });
+          return;
+        }
+        const data = await store.getPublishedQuestion(subjectCode, stableId);
         if (!data) {
           response.status(404).json({ error: "question_not_found" });
           return;
@@ -324,9 +341,7 @@ export function createApp({
     requireUser,
     async (request: AuthenticatedRequest, response, next) => {
       try {
-        const subjectCode = z.enum(["math1", "math2"]).parse(
-          request.params.subjectCode,
-        );
+        const subjectCode = subjectCodeSchema.parse(request.params.subjectCode);
         const data = await store.getLearningState(
           request.user!.id,
           subjectCode,
@@ -343,9 +358,7 @@ export function createApp({
     requireUser,
     async (request: AuthenticatedRequest, response, next) => {
       try {
-        const subjectCode = z.enum(["math1", "math2"]).parse(
-          request.params.subjectCode,
-        );
+        const subjectCode = subjectCodeSchema.parse(request.params.subjectCode);
         const body = z
           .object({
             questionStates: z.record(z.string(), z.unknown()),

@@ -5,7 +5,9 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { Pool } from "mysql2/promise";
 import {
+  importQuestionBatch,
   importMath2Batch,
+  validateQuestionImportPayload,
   validateMath2ImportPayload,
 } from "../src/math2-import.js";
 
@@ -143,6 +145,28 @@ test("canonical option shape rejects option.text", () => {
   assert.throws(() => validateMath2ImportPayload(invalid));
 });
 
+test("generic importer accepts blocked Math3 staging payloads", async () => {
+  const math3Payload = structuredClone(payload);
+  math3Payload.batchId = "REQ-016-test";
+  math3Payload.subjectCode = "math3";
+  math3Payload.sourceYear = 1987;
+  math3Payload.questions[0].stableId = "math3-1987-q01";
+  math3Payload.questions[0].sourceYear = 1987;
+  math3Payload.questions[0].subjectCode = "math3";
+
+  const validated = validateQuestionImportPayload(math3Payload);
+  assert.equal(validated.subjectCode, "math3");
+  assert.throws(() => validateMath2ImportPayload(math3Payload), /math2/);
+
+  const connection = new FakeConnection();
+  const result = await importQuestionBatch(fakePool(connection), math3Payload, {
+    dryRun: true,
+  });
+  assert.equal(result.batchId, "REQ-016-test");
+  assert.equal(result.questionsInserted, 1);
+  assert.equal(result.transaction, "rolled_back");
+});
+
 test("staged Math2 years validate and dry-run rolls back inserts", async () => {
   const testDirectory = dirname(fileURLToPath(import.meta.url));
   const cases = [
@@ -168,5 +192,40 @@ test("staged Math2 years validate and dry-run rolls back inserts", async () => {
     assert.equal(result.questionsInserted, item.expected);
     assert.equal(result.transaction, "rolled_back");
     assert.deepEqual(connection.events, ["begin", "rollback", "release"]);
+  }
+});
+
+test("staged Math3 aggregate years validate and dry-run rolls back inserts", async () => {
+  const testDirectory = dirname(fileURLToPath(import.meta.url));
+  const cases = [
+    { year: 1987, expected: 18 },
+    { year: 1988, expected: 18 },
+    { year: 1989, expected: 17 },
+    { year: 1990, expected: 20 },
+    { year: 1991, expected: 20 },
+    { year: 1992, expected: 16 },
+    { year: 1993, expected: 16 },
+    { year: 1994, expected: 20 },
+    { year: 1995, expected: 21 },
+    { year: 1996, expected: 12 },
+  ];
+
+  for (const item of cases) {
+    const payloadPath = resolve(
+      testDirectory,
+      `../../../content/staging/math3/${item.year}/questions.json`,
+    );
+    const rawPayload = JSON.parse(await readFile(payloadPath, "utf8")) as unknown;
+    const validated = validateQuestionImportPayload(rawPayload);
+    assert.equal(validated.subjectCode, "math3");
+    assert.equal(validated.sourceYear, item.year);
+    assert.equal(validated.questions.length, item.expected);
+
+    const connection = new FakeConnection();
+    const result = await importQuestionBatch(fakePool(connection), rawPayload, {
+      dryRun: true,
+    });
+    assert.equal(result.questionsInserted, item.expected);
+    assert.equal(result.transaction, "rolled_back");
   }
 });

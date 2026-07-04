@@ -9,10 +9,24 @@ export function SubjectSelector({
   subjectCatalog: SubjectCatalog | null;
   onSelect: (subject: SubjectCode) => void;
 }) {
-  const math1 = subjectCatalog?.subjects.find((item) => item.code === "math1");
-  const math2 = subjectCatalog?.subjects.find((item) => item.code === "math2");
-  const math1Count = math1?.questionCount ?? 852;
-  const math2Count = math2?.questionCount ?? 67;
+  const subjects =
+    subjectCatalog?.subjects.filter((item) => item.enabled) ?? [
+      {
+        code: "math1" as const,
+        name: "数学一",
+        enabled: true,
+        questionCount: 852,
+        statusLabel: "已接入",
+      },
+      {
+        code: "math2" as const,
+        name: "数学二",
+        enabled: true,
+        questionCount: 67,
+        statusLabel: "待复核",
+        reviewNote: "2020、2023、2024 年题干已开放预览，答案解析整理中。",
+      },
+    ];
 
   return (
     <div className="page subject-selection-page">
@@ -25,28 +39,29 @@ export function SubjectSelector({
       </div>
 
       <div className="subject-card-grid">
-        <button className="subject-card available" onClick={() => onSelect("math1")}>
-          <span className="subject-index">01</span>
-          <div>
-            <span className="subject-status ready">已接入</span>
-            <h2>数学一</h2>
-            <p>1987—2025 年，当前收录 {math1Count} 道真题。</p>
-          </div>
-          <strong>进入{featureLabel} →</strong>
-        </button>
-
-        <button className="subject-card review" onClick={() => onSelect("math2")}>
-          <span className="subject-index">02</span>
-          <div>
-            <span className="subject-status pending">待复核</span>
-            <h2>数学二</h2>
-            <p>
-              {math2?.reviewNote ??
-                `2020、2023、2024 年，当前收录 ${math2Count} 道题；答案解析整理中。`}
-            </p>
-          </div>
-          <strong>进入{featureLabel} →</strong>
-        </button>
+        {subjects.map((item, index) => {
+          const isReady = item.statusLabel === "已接入";
+          return (
+            <button
+              className={isReady ? "subject-card available" : "subject-card review"}
+              key={item.code}
+              onClick={() => onSelect(item.code)}
+            >
+              <span className="subject-index">{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <span className={isReady ? "subject-status ready" : "subject-status pending"}>
+                  {item.statusLabel ?? "待复核"}
+                </span>
+                <h2>{item.name}</h2>
+                <p>
+                  {item.reviewNote ??
+                    `当前收录 ${item.questionCount} 道真题。`}
+                </p>
+              </div>
+              <strong>进入{featureLabel} →</strong>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-export type SubjectCode = "math1" | "math2";
+export type SubjectCode = "math1" | "math2" | "math3";
 
 export type QuestionType =
   | "multiple_choice"

@@ -1,0 +1,1341 @@
+{
+  "schemaVersion": "math3-aggregate-1987-1996-v1",
+  "yearBoundaryScan": [
+    {
+      "year": 1987,
+      "lineStart": 1,
+      "lineEnd": 146,
+      "title": "# 一九八七年考研数学试卷三解答",
+      "subjectTitleRisk": "math3_not_math2"
+    },
+    {
+      "year": 1988,
+      "lineStart": 147,
+      "lineEnd": 271,
+      "title": "# 一九八八年考研数学试卷三解答",
+      "subjectTitleRisk": "math3_not_math2"
+    },
+    {
+      "year": 1989,
+      "lineStart": 272,
+      "lineEnd": 427,
+      "title": "# 一九八九年考研数学试卷三解答",
+      "subjectTitleRisk": "math3_not_math2"
+    },
+    {
+      "year": 1990,
+      "lineStart": 428,
+      "lineEnd": 541,
+      "title": "# 一九九〇年考研数学试卷三解答",
+      "subjectTitleRisk": "math3_not_math2"
+    },
+    {
+      "year": 1991,
+      "lineStart": 542,
+      "lineEnd": 675,
+      "title": "# 一九九一年考研数学试卷三解答",
+      "subjectTitleRisk": "math3_not_math2"
+    },
+    {
+      "year": 1992,
+      "lineStart": 676,
+      "lineEnd": 801,
+      "title": "# 一九九二年考研数学试卷三解答",
+      "subjectTitleRisk": "math3_not_math2"
+    },
+    {
+      "year": 1993,
+      "lineStart": 802,
+      "lineEnd": 965,
+      "title": "# 一九九三年考研数学试卷三解答",
+      "subjectTitleRisk": "math3_not_math2"
+    },
+    {
+      "year": 1994,
+      "lineStart": 966,
+      "lineEnd": 1129,
+      "title": "# 一九九四年考研数学试卷三解答",
+      "subjectTitleRisk": "math3_not_math2"
+    },
+    {
+      "year": 1995,
+      "lineStart": 1130,
+      "lineEnd": 1279,
+      "title": "# 一九九五年考研数学试卷三解答",
+      "subjectTitleRisk": "math3_not_math2"
+    },
+    {
+      "year": 1996,
+      "lineStart": 1280,
+      "lineEnd": 1450,
+      "title": "# 一九九六年考研数学试卷三解答",
+      "subjectTitleRisk": "math3_not_math2"
+    }
+  ],
+  "questionBoundaryScan": [
+    {
+      "year": 1987,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题满分10分，每小题2分）",
+          "lineStart": 3,
+          "lineEnd": 24,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "（本题满分6分）",
+          "lineStart": 25,
+          "lineEnd": 30,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "（本题满分7分）",
+          "lineStart": 31,
+          "lineEnd": 36,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分8分）",
+          "lineStart": 37,
+          "lineEnd": 46,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分8分）",
+          "lineStart": 47,
+          "lineEnd": 52,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "证明题（本题满分 10 分，每小题 5 分）",
+          "lineStart": 53,
+          "lineEnd": 68,
+          "expectedCount": 2,
+          "generatedItems": 2,
+          "type": "proof",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分10分）",
+          "lineStart": 69,
+          "lineEnd": 80,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "计算题（本题满分15分）",
+          "lineStart": 81,
+          "lineEnd": 94,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "九",
+          "title": "选择题（本题满分 16 分，每小题 4 分）",
+          "lineStart": 95,
+          "lineEnd": 134,
+          "expectedCount": 4,
+          "generatedItems": 4,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "十",
+          "title": "（本题满分10分）",
+          "lineStart": 135,
+          "lineEnd": 146,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 18,
+      "stableIds": [
+        "math3-1987-q01",
+        "math3-1987-q02",
+        "math3-1987-q03",
+        "math3-1987-q04",
+        "math3-1987-q05",
+        "math3-1987-q06",
+        "math3-1987-q07",
+        "math3-1987-q08",
+        "math3-1987-q09",
+        "math3-1987-q10",
+        "math3-1987-q11",
+        "math3-1987-q12",
+        "math3-1987-q13",
+        "math3-1987-q14",
+        "math3-1987-q15",
+        "math3-1987-q16",
+        "math3-1987-q17",
+        "math3-1987-q18"
+      ]
+    },
+    {
+      "year": 1988,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题满分20分，每小题4分）",
+          "lineStart": 149,
+          "lineEnd": 166,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题满分20分，每小题4分）",
+          "lineStart": 167,
+          "lineEnd": 208,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "计算题（本题满分15分，每小题5分）",
+          "lineStart": 209,
+          "lineEnd": 220,
+          "expectedCount": 3,
+          "generatedItems": 3,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分12分）",
+          "lineStart": 221,
+          "lineEnd": 235,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分8分）",
+          "lineStart": 236,
+          "lineEnd": 241,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分10分）",
+          "lineStart": 242,
+          "lineEnd": 245,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分6分）",
+          "lineStart": 246,
+          "lineEnd": 251,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分6分）",
+          "lineStart": 252,
+          "lineEnd": 271,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 18,
+      "stableIds": [
+        "math3-1988-q01",
+        "math3-1988-q02",
+        "math3-1988-q03",
+        "math3-1988-q04",
+        "math3-1988-q05",
+        "math3-1988-q06",
+        "math3-1988-q07",
+        "math3-1988-q08",
+        "math3-1988-q09",
+        "math3-1988-q10",
+        "math3-1988-q11",
+        "math3-1988-q12",
+        "math3-1988-q13",
+        "math3-1988-q14",
+        "math3-1988-q15",
+        "math3-1988-q16",
+        "math3-1988-q17",
+        "math3-1988-q18"
+      ]
+    },
+    {
+      "year": 1989,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题满分15分，每小题3分）",
+          "lineStart": 274,
+          "lineEnd": 301,
+          "expectedCount": 5,
+          "generatedItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "二",
+          "title": "计算题（本题满分20分，每小题4分）",
+          "lineStart": 302,
+          "lineEnd": 327,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "选择题（本题满分18分，每小题3分）",
+          "lineStart": 328,
+          "lineEnd": 391,
+          "expectedCount": 6,
+          "generatedItems": 6,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分6分）",
+          "lineStart": 392,
+          "lineEnd": 403,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分7分）",
+          "lineStart": 404,
+          "lineEnd": 407,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分7分）",
+          "lineStart": 408,
+          "lineEnd": 411,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分11分）",
+          "lineStart": 412,
+          "lineEnd": 421,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分10分）",
+          "lineStart": 422,
+          "lineEnd": 427,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 17,
+      "stableIds": [
+        "math3-1989-q01",
+        "math3-1989-q02",
+        "math3-1989-q03",
+        "math3-1989-q04",
+        "math3-1989-q05",
+        "math3-1989-q06",
+        "math3-1989-q07",
+        "math3-1989-q08",
+        "math3-1989-q09",
+        "math3-1989-q10",
+        "math3-1989-q11",
+        "math3-1989-q12",
+        "math3-1989-q13",
+        "math3-1989-q14",
+        "math3-1989-q15",
+        "math3-1989-q16",
+        "math3-1989-q17"
+      ]
+    },
+    {
+      "year": 1990,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题满分15分，每小题3分）",
+          "lineStart": 430,
+          "lineEnd": 449,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题满分15分，每小题3分）",
+          "lineStart": 450,
+          "lineEnd": 491,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "计算题（本题满分25分，每小题5分）",
+          "lineStart": 492,
+          "lineEnd": 511,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分9分）",
+          "lineStart": 512,
+          "lineEnd": 517,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分9分）",
+          "lineStart": 518,
+          "lineEnd": 523,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分9分）",
+          "lineStart": 524,
+          "lineEnd": 529,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分 9 分）",
+          "lineStart": 530,
+          "lineEnd": 533,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分8分）",
+          "lineStart": 534,
+          "lineEnd": 541,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 20,
+      "stableIds": [
+        "math3-1990-q01",
+        "math3-1990-q02",
+        "math3-1990-q03",
+        "math3-1990-q04",
+        "math3-1990-q05",
+        "math3-1990-q06",
+        "math3-1990-q07",
+        "math3-1990-q08",
+        "math3-1990-q09",
+        "math3-1990-q10",
+        "math3-1990-q11",
+        "math3-1990-q12",
+        "math3-1990-q13",
+        "math3-1990-q14",
+        "math3-1990-q15",
+        "math3-1990-q16",
+        "math3-1990-q17",
+        "math3-1990-q18",
+        "math3-1990-q19",
+        "math3-1990-q20"
+      ]
+    },
+    {
+      "year": 1991,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题满分15分，每小题3分）",
+          "lineStart": 544,
+          "lineEnd": 565,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题满分15分，每小题3分）",
+          "lineStart": 566,
+          "lineEnd": 620,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "计算题（本题满分25分，每小题5分）",
+          "lineStart": 621,
+          "lineEnd": 642,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分9分）",
+          "lineStart": 643,
+          "lineEnd": 648,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分9分）",
+          "lineStart": 649,
+          "lineEnd": 654,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分9分）",
+          "lineStart": 655,
+          "lineEnd": 660,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分9分）",
+          "lineStart": 661,
+          "lineEnd": 669,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分8分）",
+          "lineStart": 670,
+          "lineEnd": 675,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 20,
+      "stableIds": [
+        "math3-1991-q01",
+        "math3-1991-q02",
+        "math3-1991-q03",
+        "math3-1991-q04",
+        "math3-1991-q05",
+        "math3-1991-q06",
+        "math3-1991-q07",
+        "math3-1991-q08",
+        "math3-1991-q09",
+        "math3-1991-q10",
+        "math3-1991-q11",
+        "math3-1991-q12",
+        "math3-1991-q13",
+        "math3-1991-q14",
+        "math3-1991-q15",
+        "math3-1991-q16",
+        "math3-1991-q17",
+        "math3-1991-q18",
+        "math3-1991-q19",
+        "math3-1991-q20"
+      ]
+    },
+    {
+      "year": 1992,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 678,
+          "lineEnd": 701,
+          "expectedCount": 5,
+          "generatedItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共5小题，每小题3分，满分15分）",
+          "lineStart": 702,
+          "lineEnd": 753,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "计算题（本题共5小题，每小题5分，满分25分）",
+          "lineStart": 754,
+          "lineEnd": 775,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分 9 分）",
+          "lineStart": 776,
+          "lineEnd": 779,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分9分）",
+          "lineStart": 780,
+          "lineEnd": 785,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分9分）",
+          "lineStart": 786,
+          "lineEnd": 791,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分 6 分）",
+          "lineStart": 792,
+          "lineEnd": 797,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分8分）",
+          "lineStart": 798,
+          "lineEnd": 801,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 16,
+      "stableIds": [
+        "math3-1992-q01",
+        "math3-1992-q02",
+        "math3-1992-q03",
+        "math3-1992-q04",
+        "math3-1992-q05",
+        "math3-1992-q06",
+        "math3-1992-q07",
+        "math3-1992-q08",
+        "math3-1992-q09",
+        "math3-1992-q10",
+        "math3-1992-q11",
+        "math3-1992-q12",
+        "math3-1992-q13",
+        "math3-1992-q14",
+        "math3-1992-q15",
+        "math3-1992-q16"
+      ]
+    },
+    {
+      "year": 1993,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 804,
+          "lineEnd": 823,
+          "expectedCount": 5,
+          "generatedItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共5小题，每小题3分，满分15分）",
+          "lineStart": 824,
+          "lineEnd": 885,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "计算题（本题共5小题，每小题5分，满分25分）",
+          "lineStart": 886,
+          "lineEnd": 907,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分9分）",
+          "lineStart": 908,
+          "lineEnd": 913,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分9分）",
+          "lineStart": 914,
+          "lineEnd": 919,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分9分）",
+          "lineStart": 920,
+          "lineEnd": 925,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分9分）",
+          "lineStart": 926,
+          "lineEnd": 931,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分9分）",
+          "lineStart": 932,
+          "lineEnd": 965,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 16,
+      "stableIds": [
+        "math3-1993-q01",
+        "math3-1993-q02",
+        "math3-1993-q03",
+        "math3-1993-q04",
+        "math3-1993-q05",
+        "math3-1993-q06",
+        "math3-1993-q07",
+        "math3-1993-q08",
+        "math3-1993-q09",
+        "math3-1993-q10",
+        "math3-1993-q11",
+        "math3-1993-q12",
+        "math3-1993-q13",
+        "math3-1993-q14",
+        "math3-1993-q15",
+        "math3-1993-q16"
+      ]
+    },
+    {
+      "year": 1994,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 968,
+          "lineEnd": 989,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 990,
+          "lineEnd": 1053,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（本题共 5 小题，每小题 5 分，满分 25 分）",
+          "lineStart": 1054,
+          "lineEnd": 1076,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分9分）",
+          "lineStart": 1077,
+          "lineEnd": 1082,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分9分）",
+          "lineStart": 1083,
+          "lineEnd": 1105,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分9分）",
+          "lineStart": 1106,
+          "lineEnd": 1113,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分 9 分）",
+          "lineStart": 1114,
+          "lineEnd": 1123,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分8分）",
+          "lineStart": 1124,
+          "lineEnd": 1129,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 20,
+      "stableIds": [
+        "math3-1994-q01",
+        "math3-1994-q02",
+        "math3-1994-q03",
+        "math3-1994-q04",
+        "math3-1994-q05",
+        "math3-1994-q06",
+        "math3-1994-q07",
+        "math3-1994-q08",
+        "math3-1994-q09",
+        "math3-1994-q10",
+        "math3-1994-q11",
+        "math3-1994-q12",
+        "math3-1994-q13",
+        "math3-1994-q14",
+        "math3-1994-q15",
+        "math3-1994-q16",
+        "math3-1994-q17",
+        "math3-1994-q18",
+        "math3-1994-q19",
+        "math3-1994-q20"
+      ]
+    },
+    {
+      "year": 1995,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 1132,
+          "lineEnd": 1153,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 1154,
+          "lineEnd": 1217,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（本题共6小题，每小题5分，满分30分）",
+          "lineStart": 1218,
+          "lineEnd": 1243,
+          "expectedCount": 6,
+          "generatedItems": 6,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分8分）",
+          "lineStart": 1244,
+          "lineEnd": 1249,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分8分）",
+          "lineStart": 1250,
+          "lineEnd": 1255,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分8分）",
+          "lineStart": 1256,
+          "lineEnd": 1261,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分8分）",
+          "lineStart": 1262,
+          "lineEnd": 1267,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分8分）",
+          "lineStart": 1268,
+          "lineEnd": 1279,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 21,
+      "stableIds": [
+        "math3-1995-q01",
+        "math3-1995-q02",
+        "math3-1995-q03",
+        "math3-1995-q04",
+        "math3-1995-q05",
+        "math3-1995-q06",
+        "math3-1995-q07",
+        "math3-1995-q08",
+        "math3-1995-q09",
+        "math3-1995-q10",
+        "math3-1995-q11",
+        "math3-1995-q12",
+        "math3-1995-q13",
+        "math3-1995-q14",
+        "math3-1995-q15",
+        "math3-1995-q16",
+        "math3-1995-q17",
+        "math3-1995-q18",
+        "math3-1995-q19",
+        "math3-1995-q20",
+        "math3-1995-q21"
+      ]
+    },
+    {
+      "year": 1996,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 1282,
+          "lineEnd": 1303,
+          "expectedCount": 5,
+          "generatedItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 1304,
+          "lineEnd": 1371,
+          "expectedCount": 5,
+          "generatedItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "计算题（本题共6小题，每小题5分，满分30分）",
+          "lineStart": 1372,
+          "lineEnd": 1400,
+          "expectedCount": 6,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": false
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分8分）",
+          "lineStart": 1401,
+          "lineEnd": 1406,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分8分）",
+          "lineStart": 1407,
+          "lineEnd": 1418,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分8分）",
+          "lineStart": 1419,
+          "lineEnd": 1424,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分8分）",
+          "lineStart": 1425,
+          "lineEnd": 1438,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分8分）",
+          "lineStart": 1439,
+          "lineEnd": 1450,
+          "expectedCount": 1,
+          "generatedItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 12,
+      "stableIds": [
+        "math3-1996-q01",
+        "math3-1996-q02",
+        "math3-1996-q03",
+        "math3-1996-q04",
+        "math3-1996-q05",
+        "math3-1996-q06",
+        "math3-1996-q07",
+        "math3-1996-q08",
+        "math3-1996-q09",
+        "math3-1996-q10",
+        "math3-1996-q11",
+        "math3-1996-q12"
+      ]
+    }
+  ],
+  "choiceOptionScan": [
+    {
+      "year": 1987,
+      "multipleChoiceRecords": 3,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 1
+    },
+    {
+      "year": 1988,
+      "multipleChoiceRecords": 2,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 3
+    },
+    {
+      "year": 1989,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 2
+    },
+    {
+      "year": 1990,
+      "multipleChoiceRecords": 3,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 2
+    },
+    {
+      "year": 1991,
+      "multipleChoiceRecords": 3,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 2
+    },
+    {
+      "year": 1992,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 1
+    },
+    {
+      "year": 1993,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 1
+    },
+    {
+      "year": 1994,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 1
+    },
+    {
+      "year": 1995,
+      "multipleChoiceRecords": 3,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 2
+    },
+    {
+      "year": 1996,
+      "multipleChoiceRecords": 5,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 0
+    }
+  ],
+  "answerExplanationMarkerScan": [
+    {
+      "year": 1987,
+      "answersPresent": 3,
+      "explanationsPresent": 17,
+      "missingExplanationMarkers": 1
+    },
+    {
+      "year": 1988,
+      "answersPresent": 4,
+      "explanationsPresent": 11,
+      "missingExplanationMarkers": 7
+    },
+    {
+      "year": 1989,
+      "answersPresent": 5,
+      "explanationsPresent": 13,
+      "missingExplanationMarkers": 4
+    },
+    {
+      "year": 1990,
+      "answersPresent": 7,
+      "explanationsPresent": 14,
+      "missingExplanationMarkers": 6
+    },
+    {
+      "year": 1991,
+      "answersPresent": 7,
+      "explanationsPresent": 19,
+      "missingExplanationMarkers": 1
+    },
+    {
+      "year": 1992,
+      "answersPresent": 5,
+      "explanationsPresent": 13,
+      "missingExplanationMarkers": 3
+    },
+    {
+      "year": 1993,
+      "answersPresent": 4,
+      "explanationsPresent": 16,
+      "missingExplanationMarkers": 0
+    },
+    {
+      "year": 1994,
+      "answersPresent": 9,
+      "explanationsPresent": 18,
+      "missingExplanationMarkers": 2
+    },
+    {
+      "year": 1995,
+      "answersPresent": 8,
+      "explanationsPresent": 20,
+      "missingExplanationMarkers": 1
+    },
+    {
+      "year": 1996,
+      "answersPresent": 6,
+      "explanationsPresent": 12,
+      "missingExplanationMarkers": 0
+    }
+  ],
+  "historicalTitleRiskScan": [
+    {
+      "year": 1987,
+      "decision": "stage_under_math3",
+      "title": "# 一九八七年考研数学试卷三解答",
+      "blocksMath2Import": true
+    },
+    {
+      "year": 1988,
+      "decision": "stage_under_math3",
+      "title": "# 一九八八年考研数学试卷三解答",
+      "blocksMath2Import": true
+    },
+    {
+      "year": 1989,
+      "decision": "stage_under_math3",
+      "title": "# 一九八九年考研数学试卷三解答",
+      "blocksMath2Import": true
+    },
+    {
+      "year": 1990,
+      "decision": "stage_under_math3",
+      "title": "# 一九九〇年考研数学试卷三解答",
+      "blocksMath2Import": true
+    },
+    {
+      "year": 1991,
+      "decision": "stage_under_math3",
+      "title": "# 一九九一年考研数学试卷三解答",
+      "blocksMath2Import": true
+    },
+    {
+      "year": 1992,
+      "decision": "stage_under_math3",
+      "title": "# 一九九二年考研数学试卷三解答",
+      "blocksMath2Import": true
+    },
+    {
+      "year": 1993,
+      "decision": "stage_under_math3",
+      "title": "# 一九九三年考研数学试卷三解答",
+      "blocksMath2Import": true
+    },
+    {
+      "year": 1994,
+      "decision": "stage_under_math3",
+      "title": "# 一九九四年考研数学试卷三解答",
+      "blocksMath2Import": true
+    },
+    {
+      "year": 1995,
+      "decision": "stage_under_math3",
+      "title": "# 一九九五年考研数学试卷三解答",
+      "blocksMath2Import": true
+    },
+    {
+      "year": 1996,
+      "decision": "stage_under_math3",
+      "title": "# 一九九六年考研数学试卷三解答",
+      "blocksMath2Import": true
+    }
+  ]
+}
