@@ -12,7 +12,7 @@ Prepare 1987-1996 aggregate sections as Math3 staging batches, add safe import s
 - [x] Phase 4: Generalize backend import and static web sync for Math3.
 - [x] Phase 5: Generate staging outputs and reports.
 - [x] Phase 6: Run focused validation and full verify.
-- [ ] Phase 7: Commit, push, open focused PR, and hand off DB import runbook.
+- [x] Phase 7: Commit, push, open focused PR, and hand off DB import runbook.
 
 ## Key Questions
 
@@ -35,4 +35,4 @@ Prepare 1987-1996 aggregate sections as Math3 staging batches, add safe import s
 
 ## Status
 
-**Currently in Phase 7** - Full verification passed; preparing commit, push, and PR.
+**Complete** - Full verification passed. PR opened: https://github.com/tiantangyangyang-lang/kaoyan/pull/17

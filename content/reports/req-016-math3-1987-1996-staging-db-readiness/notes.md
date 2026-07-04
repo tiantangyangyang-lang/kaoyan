@@ -51,3 +51,7 @@
 - `npm.cmd run typecheck:web` passed.
 - `npm.cmd run test:api` passed.
 - `mingw32-make NPM=npm.cmd verify` passed.
+
+## PR
+
+- https://github.com/tiantangyangyang-lang/kaoyan/pull/17
