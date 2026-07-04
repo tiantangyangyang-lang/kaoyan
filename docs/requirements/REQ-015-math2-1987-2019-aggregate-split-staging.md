@@ -5,6 +5,8 @@
 Implemented as a deterministic split/audit requirement on branch
 `codex/req-015-math2-1987-2019-aggregate-split-staging`.
 
+PR: https://github.com/tiantangyangyang-lang/kaoyan/pull/16
+
 ## Problem and User Value
 
 Math2 1987-2019 is still locked inside aggregate Markdown sources. The site can
@@ -78,7 +80,7 @@ an explicit list of years that may proceed to later staging or database import.
 - [x] Focused tests pass.
 - [x] Full `mingw32-make NPM=npm.cmd verify` is run before PR handoff or a
       concrete blocker is reported.
-- [ ] Branch uses Conventional Commits, is pushed, and a dedicated PR references
+- [x] Branch uses Conventional Commits, is pushed, and a dedicated PR references
       this requirement.
 
 ## Decision

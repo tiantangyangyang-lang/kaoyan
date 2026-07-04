@@ -18,7 +18,7 @@ or mixing unrelated work.
 - [x] Phase 7: Generate audit artifacts and decide future staging boundaries.
 - [x] Phase 8: Add focused tests and Makefile target.
 - [x] Phase 9: Run focused validation and full verification.
-- [ ] Phase 10: Record source after-state, commit, push, and open PR.
+- [x] Phase 10: Record source after-state, commit, push, and open PR.
 
 ## Key Questions
 
@@ -59,5 +59,5 @@ or mixing unrelated work.
 
 ## Status
 
-**Currently in Phase 10** - Focused aggregate audit and full verification passed;
-source after-state is recorded; preparing commit, push, and PR.
+**Complete** - Focused aggregate audit and full verification passed; source
+after-state is recorded; commit `befc506` was pushed; PR #16 was opened.

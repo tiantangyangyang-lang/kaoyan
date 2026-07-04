@@ -10,6 +10,7 @@
 - PR #15 branch: `codex/req-014-math2-2022-source-role-staging`.
 - PR #15 conclusion used as evidence only: 2022 remains blocked because Q5,
   Q7, and Q10 cannot be represented as complete A-D options without invention.
+- REQ-015 PR: `https://github.com/tiantangyangyang-lang/kaoyan/pull/16`.
 
 ## Prior Requirement Boundaries
 
@@ -118,3 +119,10 @@
   - `?? papers/MinerU_markdown_math2_2021_2065687851346780160.md`
   - `?? papers/MinerU_markdown_math2_2022_2065687890395758592.md`
   - `?? papers/MinerU_markdown_math2_2023_2065687933685170176.md`
+
+## PR Handoff
+
+- Commit: `befc506 feat(math2): audit 1987-2019 aggregate split`
+- Branch pushed:
+  `codex/req-015-math2-1987-2019-aggregate-split-staging`
+- PR URL: `https://github.com/tiantangyangyang-lang/kaoyan/pull/16`
