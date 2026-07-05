@@ -89,3 +89,9 @@ Get-ChildItem -Recurse -File D:\work\Kaoyan-Math2-Papers | Where-Object { $_.Ful
 - `mingw32-make NPM=npm.cmd verify`
   - Passed.
   - Includes Math2 inventory, 2020 validation, 2021/2022 audit, 1997-2019 validation, 2023/2024 validation, Math3 1987-1996 validation, web/API typecheck, API tests, web smoke, web/API builds, and Python compileall.
+## PR Handoff
+
+- PR: https://github.com/tiantangyangyang-lang/kaoyan/pull/19
+- Branch: `codex/req-017-math2-1997-2019-staging-readiness`
+- Primary commit: `feat(math2): stage 1997-2019 aggregate batches`
+- DB import status: not run; maintainer approval required before any REQ-017 live DB dry-run or commit.

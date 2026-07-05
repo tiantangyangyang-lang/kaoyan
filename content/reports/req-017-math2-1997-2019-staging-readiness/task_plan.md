@@ -14,7 +14,7 @@ Split and audit the Math2 aggregate 1997-2019 source, then generate and verify o
 - [x] Phase 6: Decide safe staging years and implement deterministic transform for safe years only.
 - [x] Phase 7: Generate staging, KaTeX reports, human-review checklist, audit summaries, Makefile targets, and focused tests.
 - [x] Phase 8: Run targeted validation and `make verify`.
-- [ ] Phase 9: Commit, push, open focused PR, and report DB import boundary.
+- [x] Phase 9: Commit, push, open focused PR, and report DB import boundary.
 
 ## Key Questions
 
@@ -37,4 +37,4 @@ Split and audit the Math2 aggregate 1997-2019 source, then generate and verify o
 
 ## Status
 
-**Currently in Phase 9** - Focused validation and full `make verify` passed; preparing commit and PR.
+**Complete** - PR #19 is open and REQ-017 handoff is recorded.
