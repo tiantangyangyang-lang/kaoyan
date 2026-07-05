@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "math2-aggregate-1997-2019-v1",
+  "totalAnomalies": 6,
+  "anomalies": [
+    {
+      "type": "aggregate_subject_title_math2",
+      "severity": "info",
+      "message": "Aggregate heading says `考研数学试卷二解答`; staged under math2.",
+      "blocksPublication": false,
+      "heading": "# 二〇〇〇年考研数学试卷二解答"
+    },
+    {
+      "stableId": "math2-2000-q08",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2000-q08",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2000-q08",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": []
+    },
+    {
+      "stableId": "math2-2000-q16",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2000-q16",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    }
+  ]
+}

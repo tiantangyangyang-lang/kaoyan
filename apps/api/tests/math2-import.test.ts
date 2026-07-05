@@ -195,6 +195,27 @@ test("staged Math2 years validate and dry-run rolls back inserts", async () => {
   }
 });
 
+test("staged Math2 aggregate years validate and dry-run rolls back inserts", async () => {
+  const testDirectory = dirname(fileURLToPath(import.meta.url));
+  for (let year = 1997; year <= 2019; year += 1) {
+    const payloadPath = resolve(
+      testDirectory,
+      `../../../content/staging/math2/${year}/questions.json`,
+    );
+    const rawPayload = JSON.parse(await readFile(payloadPath, "utf8")) as unknown;
+    const validated = validateMath2ImportPayload(rawPayload);
+    assert.equal(validated.sourceYear, year);
+    assert.equal(validated.subjectCode, "math2");
+    assert.ok(validated.questions.length > 0);
+
+    const connection = new FakeConnection();
+    const result = await importMath2Batch(fakePool(connection), rawPayload, {
+      dryRun: true,
+    });
+    assert.equal(result.questionsInserted, validated.questions.length);
+    assert.equal(result.transaction, "rolled_back");
+  }
+});
 test("staged Math3 aggregate years validate and dry-run rolls back inserts", async () => {
   const testDirectory = dirname(fileURLToPath(import.meta.url));
   const cases = [

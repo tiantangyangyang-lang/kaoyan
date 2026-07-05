@@ -1,0 +1,765 @@
+{
+  "schemaVersion": "math2-question-staging-v2",
+  "batchId": "REQ-017-math2-2015-aggregate-staging",
+  "subjectCode": "math2",
+  "sourceYear": 2015,
+  "sourceRepository": {
+    "name": "Kaoyan-Math2-Papers",
+    "commit": "fd42c56eed412cce0cb97d6bd688f314c78e542e",
+    "branch": "main",
+    "dirty": true,
+    "dirtyState": [
+      "?? papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "?? papers/MinerU_markdown_math2_2020_2065687152877731840.md",
+      "?? papers/MinerU_markdown_math2_2021_2065687851346780160.md",
+      "?? papers/MinerU_markdown_math2_2022_2065687890395758592.md",
+      "?? papers/MinerU_markdown_math2_2023_2065687933685170176.md"
+    ]
+  },
+  "sourceRoleDecision": {
+    "requirement": "docs/requirements/REQ-017-math2-1997-2019-staging-readiness.md",
+    "priorAudit": "docs/requirements/REQ-003-math2-full-import-prep.md",
+    "decision": "stage_1997_2019_as_math2_from_aggregate_trial_paper_two_headings",
+    "primaryRelativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+    "solutionsRelativePath": "solutions/math2_1987-2019/math2_1987-2019.md",
+    "pdfPrerequisite": false
+  },
+  "feedback": {
+    "configuredBy": "VITE_FEEDBACK_EMAIL",
+    "publicEmail": "tiantangyangyang@gmail.com",
+    "requiredForLaunch": false,
+    "status": "maintainer_email_configured"
+  },
+  "sourceFiles": [
+    {
+      "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+      "role": "primary_aggregate_math2_1997_2019_source",
+      "gitState": "untracked",
+      "bytes": 444494,
+      "lineCount": 8197,
+      "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+      "hashMatchesExpected": true,
+      "yearHeadings": [
+        {
+          "year": 1997,
+          "line": 1451,
+          "title": "# 一九九七年考研数学试卷二解答"
+        },
+        {
+          "year": 1998,
+          "line": 1607,
+          "title": "# 一九九八年考研数学试卷二解答"
+        },
+        {
+          "year": 1999,
+          "line": 1811,
+          "title": "# 一九九九年考研数学试卷二解答"
+        },
+        {
+          "year": 2000,
+          "line": 2133,
+          "title": "# 二〇〇〇年考研数学试卷二解答"
+        },
+        {
+          "year": 2001,
+          "line": 2531,
+          "title": "# 二〇〇一年考研数学试卷二解答"
+        },
+        {
+          "year": 2002,
+          "line": 2923,
+          "title": "# 二〇〇二年考研数学试卷二解答"
+        },
+        {
+          "year": 2003,
+          "line": 3341,
+          "title": "# 二〇〇三年考研数学试卷二解答"
+        },
+        {
+          "year": 2004,
+          "line": 3730,
+          "title": "# 二〇〇四年考研数学试卷二解答"
+        },
+        {
+          "year": 2005,
+          "line": 4065,
+          "title": "# 二〇〇五年考研数学试卷二解答"
+        },
+        {
+          "year": 2006,
+          "line": 4365,
+          "title": "# 二〇〇六年考研数学试卷二解答"
+        },
+        {
+          "year": 2007,
+          "line": 4531,
+          "title": "# 二〇〇七年考研数学试卷二解答"
+        },
+        {
+          "year": 2008,
+          "line": 4811,
+          "title": "# 二〇〇八年考研数学试卷二解答"
+        },
+        {
+          "year": 2009,
+          "line": 5124,
+          "title": "# 二〇〇九年考研数学试卷二解答"
+        },
+        {
+          "year": 2010,
+          "line": 5407,
+          "title": "# 二〇一〇年考研数学试卷二解答"
+        },
+        {
+          "year": 2011,
+          "line": 5705,
+          "title": "# 二〇一一年考研数学试卷二解答"
+        },
+        {
+          "year": 2012,
+          "line": 5924,
+          "title": "# 二〇一二年考研数学试卷二解答"
+        },
+        {
+          "year": 2013,
+          "line": 6112,
+          "title": "# 二〇一三年考研数学试卷二解答"
+        },
+        {
+          "year": 2014,
+          "line": 6368,
+          "title": "# 二〇一四年考研数学试卷二解答"
+        },
+        {
+          "year": 2015,
+          "line": 6658,
+          "title": "# 二〇一五年考研数学试卷二解答"
+        },
+        {
+          "year": 2016,
+          "line": 6964,
+          "title": "# 二〇一六年考研数学试卷二解答"
+        },
+        {
+          "year": 2017,
+          "line": 7283,
+          "title": "# 二〇一七年考研数学试卷二解答"
+        },
+        {
+          "year": 2018,
+          "line": 7535,
+          "title": "# 二〇一八年考研数学试卷二解答"
+        },
+        {
+          "year": 2019,
+          "line": 7851,
+          "title": "# 二〇一九年考研数学试卷二解答"
+        }
+      ],
+      "answerExplanationMarkers": 540,
+      "imageReferences": 20
+    },
+    {
+      "relativePath": "solutions/math2_1987-2019/math2_1987-2019.md",
+      "role": "solutions_aggregate_reference",
+      "gitState": "tracked",
+      "bytes": 391659,
+      "lineCount": 7907,
+      "sha256": "ef715711e094d2c30af75dee43e777c3870c781b91521da6604579d04e955e01",
+      "hashMatchesExpected": true,
+      "yearHeadings": [
+        {
+          "year": 1997,
+          "line": 1426,
+          "title": "# 一九九七年考研数学试卷二解答"
+        },
+        {
+          "year": 1998,
+          "line": 1577,
+          "title": "# 一九九八年考研数学试卷二解答"
+        },
+        {
+          "year": 1999,
+          "line": 1770,
+          "title": "# 一九九九年考研数学试卷二解答"
+        },
+        {
+          "year": 2000,
+          "line": 2075,
+          "title": "# 二〇〇〇年考研数学试卷二解答"
+        },
+        {
+          "year": 2001,
+          "line": 2465,
+          "title": "# 二〇〇一年考研数学试卷二解答"
+        },
+        {
+          "year": 2002,
+          "line": 2858,
+          "title": "# 二〇〇二年考研数学试卷二解答"
+        },
+        {
+          "year": 2003,
+          "line": 3260,
+          "title": "# 二〇〇三年考研数学试卷二解答"
+        },
+        {
+          "year": 2004,
+          "line": 3625,
+          "title": "# 二〇〇四年考研数学试卷二解答"
+        },
+        {
+          "year": 2005,
+          "line": 3936,
+          "title": "# 二〇〇五年考研数学试卷二解答"
+        },
+        {
+          "year": 2006,
+          "line": 4230,
+          "title": "# 二〇〇六年考研数学试卷二解答"
+        },
+        {
+          "year": 2007,
+          "line": 4383,
+          "title": "# 二〇〇七年考研数学试卷二解答"
+        },
+        {
+          "year": 2008,
+          "line": 4648,
+          "title": "# 二〇〇八年考研数学试卷二解答"
+        },
+        {
+          "year": 2009,
+          "line": 4944,
+          "title": "# 二〇〇九年考研数学试卷二解答"
+        },
+        {
+          "year": 2010,
+          "line": 5218,
+          "title": "# 二〇一〇年考研数学试卷二解答"
+        },
+        {
+          "year": 2011,
+          "line": 5502,
+          "title": "# 二〇一一年考研数学试卷二解答"
+        },
+        {
+          "year": 2012,
+          "line": 5707,
+          "title": "# 二〇一二年考研数学试卷二解答"
+        },
+        {
+          "year": 2013,
+          "line": 5893,
+          "title": "# 二〇一三年考研数学试卷二解答"
+        },
+        {
+          "year": 2014,
+          "line": 6145,
+          "title": "# 二〇一四年考研数学试卷二解答"
+        },
+        {
+          "year": 2015,
+          "line": 6424,
+          "title": "# 二〇一五年考研数学试卷二解答"
+        },
+        {
+          "year": 2016,
+          "line": 6723,
+          "title": "# 二〇一六年考研数学试卷二解答"
+        },
+        {
+          "year": 2017,
+          "line": 7019,
+          "title": "# 二〇一七年考研数学试卷二解答"
+        },
+        {
+          "year": 2018,
+          "line": 7244,
+          "title": "# 二〇一八年考研数学试卷二解答"
+        },
+        {
+          "year": 2019,
+          "line": 7556,
+          "title": "# 二〇一九年考研数学试卷二解答"
+        }
+      ],
+      "answerExplanationMarkers": 550,
+      "imageReferences": 20
+    }
+  ],
+  "questions": [
+    {
+      "stableId": "math2-2015-q01",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "unknown",
+      "questionNumber": 1,
+      "stem": "1. 下列反常积分收敛的是· · ·",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 应选 (D)．这是因为\n\n$$\n\\int_ {2} ^ {+ \\infty} \\frac {x}{\\mathrm{e} ^ {x}} \\mathrm{d} x = [ - (x + 1) \\mathrm{e} ^ {- x} ] _ {2} ^ {+ \\infty} = 3 \\mathrm{e} ^ {- 2} - \\lim _ {x \\rightarrow + \\infty} (x + 1) \\mathrm{e} ^ {- x} = 3 \\mathrm{e} ^ {- 2}.\n$$\n\n2. 函数 $f ( x ) = \\operatorname* { l i m } _ { t \\to 0 } \\left( 1 + { \\frac { \\sin t } { x } } \\right) ^ { \\frac { x ^ { 2 } } { t } }$ 在 $( - \\infty , + \\infty )$ 内 · · ·\n\n(A) 连续．\n\n(B)有可去间断点\n\n(C)有跳跃间断点\n\n(D)有无穷间断点\n\n解. 应选(B)．因为当 $x \\neq 0$ 时有\n\n$$\nf (x) = \\lim _ {t \\rightarrow 0} \\left(1 + \\frac {\\sin t}{x}\\right) ^ {\\frac {x ^ {2}}{t}} = \\exp \\left(\\lim _ {t \\rightarrow 0} \\frac {\\sin t}{x} \\frac {x ^ {2}}{t}\\right) = e ^ {x},\n$$\n\n所以 f (x)有可去间断点 x =0\n\n3. 设函数 $f ( x ) = { \\left\\{ \\begin{array} { l l } { x ^ { \\alpha } \\cos { \\frac { 1 } { x ^ { \\beta } } } , } & { x > 0 } \\\\ { 0 , } & { x \\leqslant 0 } \\end{array} \\right. } ( \\alpha > 0 , \\beta > 0 )$ ），若 f 0(x ) 在 x = 0 处连续，则( )\n\n(A) $\\alpha - \\beta > 1$ \n\n(B) $0 < \\alpha - \\beta \\leqslant 1$ \n\n(C) $\\alpha - \\beta > 2$ \n\n(D) $0 < \\alpha - \\beta \\leqslant 2$ \n\n解. 应选 (A)． f 0(x ) 在 x = 0 处连续，故 f 0(0) 存在，从而有\n\n$$\n0 = f _ {-} ^ {\\prime} (0) = f _ {+} ^ {\\prime} (0) = \\lim _ {x \\rightarrow 0 ^ {+}} \\frac {x ^ {\\alpha} \\cos \\frac {1}{x ^ {\\beta}} - 0}{x} = \\lim _ {x \\rightarrow 0 ^ {+}} x ^ {\\alpha - 1} \\cos \\frac {1}{x ^ {\\beta}}.\n$$\n\n从而得到 $\\alpha - 1 > 0$ ．当 $x < 0$ 时 f 0(x ) = 0．当 $x > 0$ 时，\n\n$$\n\\begin{array}{l} f ^ {\\prime} (x) = \\alpha x ^ {\\alpha - 1} \\cos \\frac {1}{x ^ {\\beta}} + (- 1) x ^ {\\alpha} \\sin \\frac {1}{x ^ {\\beta}} (- \\beta) \\frac {1}{x ^ {\\beta + 1}} \\\\ = \\alpha x ^ {\\alpha - 1} \\cos \\frac {1}{x ^ {\\beta}} + \\beta x ^ {\\alpha - \\beta - 1} \\sin \\frac {1}{x ^ {\\beta}}. \\\\ \\end{array}\n$$\n\n由 f 0(x ) 在 x = 0 处连续得\n\n$$\n0 = f ^ {\\prime} \\left(0 ^ {-}\\right) = f ^ {\\prime} \\left(0 ^ {+}\\right) = \\lim _ {x \\rightarrow 0 ^ {+}} \\left(\\alpha x ^ {\\alpha - 1} \\cos \\frac {1}{x ^ {\\beta}} + \\beta x ^ {\\alpha - \\beta - 1} \\sin \\frac {1}{x ^ {\\beta}}\\right).\n$$\n\n由此得到 $\\alpha - \\beta - 1 > 0$ \n\n4. 同试卷一第一[1]题\n\n$f ( u , \\nu )$ $f \\left( x + y , { \\frac { y } { x } } \\right) = x ^ { 2 } - y ^ { 2 }$ $\\frac { \\partial f } { \\partial u } \\Big | _ { \\nu = 1 }$ u=1 与 $\\frac { \\partial f } { \\partial \\nu } \\bigr | _ { \\nu = 1 }$ 依次是 · · · ( )\n\n(A) ${ \\frac { 1 } { 2 } } , 0 .$ \n\n(B) 0, 1 $0 , { \\frac { 1 } { 2 } } .$ \n\n$- { \\frac { 1 } { 2 } } , 0 .$ \n\n(D) 0, − 1 $0 , - { \\frac { 1 } { 2 } }$ \n\n解. 应选 (D)．令 $u = x + y , \\nu = { \\frac { y } { x } }$ ， 则 $x = \\frac { u } { 1 + \\nu } , y = \\frac { u \\nu } { 1 + \\nu }$ ， 从而得到\n\n$$\nf (u, v) = \\left(\\frac {u}{1 + v}\\right) ^ {2} - \\left(\\frac {u v}{1 + v}\\right) ^ {2} = \\frac {u ^ {2} (1 - v)}{1 + v}.\n$$\n\n求偏导得 $\\frac { \\partial f } { \\partial u } = \\frac { 2 u ( 1 - \\nu ) } { 1 + \\nu } , \\frac { \\partial f } { \\partial \\nu } = - \\frac { 2 u ^ { 2 } } { ( 1 + \\nu ) ^ { 2 } }$ ．因而 $\\frac { \\partial f } { \\partial u } \\Big | _ { \\nu = 1 } = 0 , \\frac { \\partial f } { \\partial \\nu } \\Big | _ { \\nu = 1 } = - \\frac { 1 } { 2 }$ \n\n6. 同试卷一第一[4]题\n\n7. 同试卷一第一 [5] 题\n\n8. 同试卷一第一[6]题",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "section_split_mismatch",
+          "severity": "warning",
+          "message": "Section expected markers [1, 2, 3, 4, 5, 6, 7, 8] but found markers [1, 2, 3, 4, 6, 7, 8]; kept the section as one blocked review item.",
+          "blocksPublication": true,
+          "sectionTitle": "选择题（1～8小题，每小题4分，共32分）",
+          "sectionRoman": "一",
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundMarkers": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "type": "cross_paper_reference",
+          "severity": "error",
+          "message": "Source block references another paper; content is not expanded or invented.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6661,
+          "lineEnd": 6749
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2015-q02",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "unknown",
+      "questionNumber": 2,
+      "stem": "9. 设 $\\left\\{ \\begin{array} { l } { { x = \\arctan t , } } \\\\ { { y = 3 t + t ^ { 3 } , } } \\end{array} \\right.$ , 则 ${ \\frac { \\mathrm { d } ^ { 2 } y } { \\mathrm { d } x ^ { 2 } } } { \\Big | } _ { t = 1 } =$",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 应填48．由参数方程的求导公式得\n\n$$\n\\frac {\\mathrm{d} y}{\\mathrm{d} x} = \\frac {\\frac {\\mathrm{d} y}{\\mathrm{d} t}}{\\frac {\\mathrm{d} x}{\\mathrm{d} t}} = \\frac {3 + 3 t ^ {2}}{\\frac {1}{1 + t ^ {2}}} = 3 (1 + t ^ {2}) ^ {2},\n$$\n\n$$\n\\frac {\\mathrm{d} ^ {2} y}{\\mathrm{d} x ^ {2}} = \\frac {\\mathrm{d}}{\\mathrm{d} x} \\left[ 3 (1 + t ^ {2}) ^ {2} \\right] = \\frac {\\frac {\\mathrm{d} [ 3 (1 + t ^ {2}) ^ {2} ]}{\\mathrm{d} t}}{\\frac {\\mathrm{d} x}{\\mathrm{d} t}} = \\frac {1 2 t (1 + t ^ {2})}{\\frac {1}{1 + t ^ {2}}} = 1 2 t (1 + t ^ {2}) ^ {2}.\n$$\n\n因此 $\\left. \\frac { \\mathrm { d } ^ { 2 } y } { \\mathrm { d } x ^ { 2 } } \\right| _ { t = 1 } = 4 8 .$ ．dx 2 \n\nt 1\n\n10. 函数 $f ( x ) = x ^ { 2 } \\cdot 2 ^ { x }$ 在 x = 0 处的 n 阶导数 $f ^ { ( n ) } ( 0 ) =$ \n\n解. 应填 $n ( n - 1 ) ( \\ln 2 ) ^ { n - 2 }$ ．由莱布尼茨公式得\n\n$$\nf ^ {(n)} (x) = x ^ {2} \\cdot 2 ^ {x} (\\ln 2) ^ {n} + C _ {n} ^ {1} \\cdot (2 x) \\cdot 2 ^ {x} (\\ln 2) ^ {n - 1} + C _ {n} ^ {2} \\cdot 2 \\cdot 2 ^ {x} (\\ln 2) ^ {n - 2}.\n$$\n\n因此在 x =0处的n 阶导数为\n\n$$\nf ^ {(n)} (0) = \\frac {n (n - 1)}{2} 2 (\\ln 2) ^ {n - 2} = n (n - 1) (\\ln 2) ^ {n - 2}.\n$$\n\n$\\varphi ( x ) = \\int _ { 0 } ^ { x ^ { 2 } } x f ( t ) \\mathrm { d } t$ x 211. 设 f (x ) 连续， ，若 $\\varphi ( 1 ) = 1 , \\varphi ^ { \\prime } ( 1 ) = 5$ ，则 f (1) =\n\n解. 应填 2．对 $\\varphi ( x ) = x \\int _ { 0 } ^ { x ^ { 2 } } f ( t ) \\mathrm { d } t$ x 2 求导得 $\\varphi ^ { \\prime } ( x ) = \\int _ { 0 } ^ { x ^ { 2 } } f ( t ) \\mathrm { d } t + 2 x ^ { 2 } f ( x ^ { 2 } )$ x 2 ，故有\n\n$$\n\\varphi (1) = \\int_ {0} ^ {1} f (t) \\mathrm{d} t = 1, \\quad \\varphi^ {\\prime} (1) = 1 + 2 f (1) = 5.\n$$\n\n从而 f (1) = 2\n\n12. 设函数 $y = y ( x )$ 是微分方程 $y ^ { \\prime \\prime } { + } y ^ { \\prime } { - } 2 y { = } 0$ 的解，且在 x = 0 处 y (x ) 取得极值3，则 y (x )=\n\n解. 应填 $\\mathbf { e } ^ { - 2 x } + 2 \\mathbf { e } ^ { x }$ ．由特征方程 $\\lambda ^ { 2 } + \\lambda - 2 = 0$ 解得 $\\lambda _ { 1 } = 1 , \\lambda _ { 2 } = - 2$ ，所以微分方程的通解为 $y = C _ { 1 } \\mathbf { e } ^ { x } + C _ { 2 } \\mathbf { e } ^ { - 2 x }$ ．依题意得 $y ( 0 ) = 3 , \\ y ^ { \\prime } ( 0 ) = 0$ ．代入通解求得 $C _ { 1 } = 2$ ，$C _ { 2 } = 1$ ．即 $y = 2 \\mathbf { e } ^ { x } + \\mathbf { e } ^ { - 2 x }$ \n\n13. 若函数 $z = z ( x , y )$ 由方程 $\\mathbf { e } ^ { x + 2 y + 3 z } + x y z = 1$ 确定，则 $\\left. \\mathrm { d } z \\right| _ { ( 0 , 0 ) } =$ \n\n解. 应填 $- \\frac 1 3 ( \\mathrm { d } x + 2 \\mathrm { d } y )$ ．对方程两边求偏导得\n\n$$\n(3 \\mathrm{e} ^ {x + 2 y + 3 z} + x y) \\frac {\\partial z}{\\partial x} = - y z - \\mathrm{e} ^ {x + 2 y + 3 z}, (3 \\mathrm{e} ^ {x + 2 y + 3 z} + x y) \\frac {\\partial z}{\\partial y} = - x z - 2 \\mathrm{e} ^ {x + 2 y + 3 z}.\n$$\n\n当 $x = 0 , y = 0$ 时z =0，将该点代入可求得\n\n$$\n\\left. \\frac {\\partial z}{\\partial x} \\right| _ {(0, 0)} = - \\frac {1}{3}, \\quad \\left. \\frac {\\partial z}{\\partial y} \\right| _ {(0, 0)} = - \\frac {2}{3}.\n$$\n\n$\\mathbf { d } z | _ { ( 0 , 0 ) } = - \\frac { 1 } { 3 } \\mathbf { d } x - \\frac { 2 } { 3 } \\mathbf { d } y = - \\frac { 1 } { 3 } ( \\mathbf { d } x + 2 \\mathbf { d } y ) .$ \n\n14. 若 3 阶矩阵 A 的特征值为 2,−2, 1， $B = A ^ { 2 } - A + E$ ，其中 E 为3阶单位阵，则行列式 |B | =\n\n解. 应填21．因为A 的所有特征值为2,−2, 1，所以B 的所有特征值为3, 7, 1，从而$| B | = 3 \\times 7 \\times 1 = 2 1$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "section_split_mismatch",
+          "severity": "warning",
+          "message": "Section expected markers [9, 10, 11, 12, 13, 14] but found markers [9, 10, 12, 13, 14]; kept the section as one blocked review item.",
+          "blocksPublication": true,
+          "sectionTitle": "填空题（9～14小题，每小题4分，共24分）",
+          "sectionRoman": "二",
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundMarkers": [
+            9,
+            10,
+            12,
+            13,
+            14
+          ]
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6751,
+          "lineEnd": 6815
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2015-q03",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 3,
+      "stem": "同试卷一第三 [15] 题",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "cross_paper_reference",
+          "severity": "error",
+          "message": "Source block references another paper; content is not expanded or invented.",
+          "blocksPublication": true
+        },
+        {
+          "type": "missing_explanation_marker",
+          "severity": "error",
+          "message": "No explicit `解.` marker was found in this source block.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6818,
+          "lineEnd": 6819
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2015-q04",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 4,
+      "stem": "（本题满分10分）\n\n设 $A > 0 , \\ D$ 是由曲线段 $y = A \\sin x ( 0 \\leqslant x \\leqslant \\frac { \\pi } { 2 } )$ ）及直线 $y = 0 , x = { \\frac { \\pi } { 2 } }$ 所围成的平面区域， $V _ { 1 } , \\ V _ { 2 }$ 分别表示 D 绕 x 轴与绕 y 轴旋转成旋转体的体积，若 $V _ { 1 } = V _ { 2 }$ ，求A 的值",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 由旋转体的体积公式，得\n\n$$\nV _ {1} = \\int_ {0} ^ {\\frac {\\pi}{2}} \\pi f ^ {2} (x) \\mathrm{d} x = \\int_ {0} ^ {\\frac {\\pi}{2}} \\pi (A \\sin x) ^ {2} \\mathrm{d} x = \\pi A ^ {2} \\int_ {0} ^ {\\frac {\\pi}{2}} \\frac {1 - \\cos 2 x}{2} \\mathrm{d} x = \\frac {\\pi^ {2} A ^ {2}}{4},\n$$\n\n$$\nV _ {2} = \\int_ {0} ^ {\\frac {\\pi}{2}} 2 \\pi x f (x) \\mathrm{d} x = - 2 \\pi A \\int_ {0} ^ {\\frac {\\pi}{2}} x \\mathrm{d} (\\cos x) = 2 \\pi A.\n$$\n\n由题设 $V _ { 1 } = V _ { 2 }$ ，因此可求得 $A = { \\frac { 8 } { \\pi } }$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6820,
+          "lineEnd": 6835
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2015-q05",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 5,
+      "stem": "（本题满分11分）\n\n已知函数 f (x , y ) 满足\n\n$$\nf _ {x y} ^ {\\prime \\prime} (x, y) = 2 (y + 1) \\mathrm{e} ^ {x}, f _ {x} ^ {\\prime} (x, 0) = (x + 1) \\mathrm{e} ^ {x}, f (0, y) = y ^ {2} + 2 y.\n$$\n\n求 f (x , y ) 的极值",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 在 $f _ { x y } ^ { \\prime \\prime } ( x , y ) { = } 2 ( y + 1 ) \\mathbf { e } ^ { x }$ 两边对 y 积分得\n\n$$\nf _ {x} ^ {\\prime} (x, y) = (y ^ {2} + 2 y) \\mathrm{e} ^ {x} + \\phi (x).\n$$\n\n故由 $f _ { x } ^ { \\prime } ( x , 0 ) = \\phi ( x ) = ( x + 1 ) \\mathbf { e } ^ { x }$ ，可求得 $\\phi ( x ) = \\mathbf { e } ^ { x } ( x + 1 )$ ，即有\n\n$$\nf _ {x} ^ {\\prime} (x, y) = \\left(y ^ {2} + 2 y\\right) \\mathrm{e} ^ {x} + \\mathrm{e} ^ {x} (1 + x).\n$$\n\n在上式两边对 x 积分得\n\n$$\nf (x, y) = (y ^ {2} + 2 y) \\mathrm{e} ^ {x} + x \\mathrm{e} ^ {x} + C\n$$\n\n故由 $f ( 0 , y ) = y ^ { 2 } + 2 y + C = y ^ { 2 } + 2 y$ ，可求得 C = 0，即有\n\n$$\nf (x, y) = (y ^ {2} + 2 y) \\mathrm{e} ^ {x} + x \\mathrm{e} ^ {x}.\n$$\n\n对上式求偏导数并令它们等于零得\n\n$$\nf _ {x} ^ {\\prime} = (y ^ {2} + 2 y) \\mathrm{e} ^ {x} + (x + 1) \\mathrm{e} ^ {x} = 0, f _ {y} ^ {\\prime} = (2 y + 2) \\mathrm{e} ^ {x} = 0.\n$$\n\n因此得到驻点 (0,−1)．又\n\n$$\nf _ {x x} ^ {\\prime \\prime} = (y ^ {2} + 2 y) \\mathrm{e} ^ {x} + (x + 2) \\mathrm{e} ^ {x}, f _ {x y} ^ {\\prime \\prime} = 2 (y + 1) \\mathrm{e} ^ {x}, f _ {y y} ^ {\\prime \\prime} = 2 \\mathrm{e} ^ {x},\n$$\n\n故在驻点 (0,−1) 处 $A C - B ^ { 2 } > 0$ ，所以 f (0,−1) = −1 为极小值",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6836,
+          "lineEnd": 6883
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2015-q06",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 6,
+      "stem": "（本题满分10分）\n\n计算二重积分 $\\iint _ { D } x ( x + y ) \\mathrm { d } x \\mathrm { d } y$ ，其中 $D = \\left\\{ ( x , y ) { \\big | } x ^ { 2 } + y ^ { 2 } \\leqslant 2 , y \\geqslant x ^ { 2 } \\right\\}$ ．",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 由二重积分的奇偶对称性和换元积分法有\n\n$$\n\\begin{array}{l} \\iint_ {D} x (x + y) \\mathrm{d} x \\mathrm{d} y = \\iint_ {D} x ^ {2} \\mathrm{d} x \\mathrm{d} y = 2 \\int_ {0} ^ {1} \\mathrm{d} x \\int_ {x ^ {2}} ^ {\\sqrt {2 - x ^ {2}}} x ^ {2} \\mathrm{d} y \\\\ = 2 \\int_ {0} ^ {1} x ^ {2} (\\sqrt {2 - x ^ {2}} - x ^ {2}) \\mathrm{d} x = 2 \\int_ {0} ^ {1} x ^ {2} \\sqrt {2 - x ^ {2}} \\mathrm{d} x - \\frac {2}{5} \\\\ = 2 \\int_ {0} ^ {\\frac {\\pi}{4}} 2 \\sin^ {2} t \\cdot 2 \\cos^ {2} t d t - \\frac {2}{5} = 2 \\int_ {0} ^ {\\frac {\\pi}{4}} \\sin^ {2} 2 t d t - \\frac {2}{5} \\\\ = \\int_ {0} ^ {\\frac {\\pi}{2}} \\sin^ {2} u \\mathrm{d} u - \\frac {2}{5} = \\frac {\\pi}{4} - \\frac {2}{5}. \\\\ \\end{array}\n$$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6884,
+          "lineEnd": 6893
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2015-q07",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 7,
+      "stem": "（本题满分11分）\n\n已知函数 f ( x ) = Z 1x p 1 + t 2 d t + Z x 21 p 1 $f ( x ) { = } \\int _ { x } ^ { 1 } { \\sqrt { 1 + t ^ { 2 } } } \\mathrm { d } t + \\int _ { 1 } ^ { x ^ { 2 } } { \\sqrt { 1 + t } } \\mathrm { d } t$ ，求 f (x ) 的零点个数．",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 对 f (x ) 求导得\n\n$$\nf ^ {\\prime} (x) = - \\sqrt {1 + x ^ {2}} + 2 x \\sqrt {1 + x ^ {2}} = \\sqrt {1 + x ^ {2}} (2 x - 1).\n$$\n\n令 $f ^ { \\prime } ( x ) = 0$ ，得驻点为 $x = { \\frac { 1 } { 2 } } .$ ．因为在 $\\left( - \\infty , \\frac { 1 } { 2 } \\right)$ 内 f (x ) 单调递减；在 $\\left( { \\frac { 1 } { 2 } } , + \\infty \\right)$ 内 f (x ) 单调递增，所以 $f \\left( { \\frac { 1 } { 2 } } \\right)$ 为唯一的极小值，也是最小值．因为 $f ( 1 ) = 0$ ，所以函数在 $\\left( { \\frac { 1 } { 2 } } , + \\infty \\right)$ 内存在唯一的零点．又因为\n\n$$\nf \\left(\\frac {1}{2}\\right) <   f (1) = 0, \\quad f (- 1) = \\int_ {- 1} ^ {1} \\sqrt {1 + t ^ {2}} d t > 0,\n$$\n\n所以函数在 $\\left( - \\infty , \\frac { 1 } { 2 } \\right)$ 内存在唯一的零点．综上所述， $f ( x )$ 的零点个数为 2．",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6894,
+          "lineEnd": 6911
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2015-q08",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 8,
+      "stem": "（本题满分10分）\n\n已知高温物体置于低温介质中，任一时刻该物体温度对时间的变化率与该时刻物体和介质的温差成正比，现将一初始温度为 $1 2 0 ^ { \\circ } C$ 的物体在 $2 0 ^ { \\circ } C$ 的恒温介质中冷却，30min后该物体降至 $3 0 ^ { \\circ } C$ ，若要将该物体的温度继续降至 $2 1 ^ { \\circ } C$ ，还需冷却多长时间？",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 设t 时刻物体温度为 x(t)，比例常数为 $k > 0$ ，则有\n\n$$\n\\frac {\\mathrm{d} x}{\\mathrm{d} t} = - k (x - 2 0) \\Rightarrow x (t) = C \\mathrm{e} ^ {- k t} + 2 0.\n$$\n\n由 $x ( 0 ) = 1 2 0$ 得 $C = 1 0 0 _ { \\mathrm { : } }$ ，即有 $x ( t ) = 1 0 0 \\mathrm { e } ^ { - k t } + 2 0$ ．又由 $x ( 3 0 ) = 3 0$ 得 $k = \\frac { \\ln 1 0 } { 3 0 }$ 即有 $x ( t ) { = } 1 0 0 \\exp \\biggl ( - \\frac { \\ln 1 0 } { 3 0 } t \\biggr ) { + } 2 0 $ ．当 $x = 2 1$ 时， $t = 6 0$ ，所以还需要冷却 $6 0 { - } 3 0 =$ $3 0 \\mathrm { { m i n } }$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6912,
+          "lineEnd": 6923
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2015-q09",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 9,
+      "stem": "（本题满分10分）\n\n已知函数 f (x ) 在区间 $[ a , + \\infty )$ 上具有 2 阶导数， $f ( a ) { = } 0 , f ^ { \\prime } ( x ) > 0 , f ^ { \\prime \\prime } ( x ) > 0$ 设 $b > a$ ，曲线 $y = f ( x )$ 在点 $( b , f ( b ) )$ 处的切线与 x 轴的交点是 $( x _ { 0 } , 0 )$ ，证明$a < x _ { 0 } < b$ ．",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. 曲线在点 $( b , f ( b ) )$ 处的切线方程为 $y - f ( b ) = f ^ { \\prime } ( b ) ( x - b )$ ．令 $y = 0$ ，得交点$x _ { 0 } = b - { \\frac { f ( b ) } { f ^ { \\prime } ( b ) } }$ ．因为 $f ^ { \\prime } ( x ) > 0$ ，所以 $f ( x )$ 单调递增，从而 $f ( b ) > f ( a ) = 0$ ．又因为 $f ^ { \\prime } ( b ) > 0$ ，所以 $x _ { 0 } = b - { \\frac { f ( b ) } { f ^ { \\prime } ( b ) } } < b$ ．在区间 $[ a , b ]$ 上应用拉格朗日中值定理，存在 $\\xi \\in ( a , b )$ 使得\n\n$$\n\\frac {f (b) - f (a)}{b - a} = f ^ {\\prime} (\\xi) \\Rightarrow f (b) = f ^ {\\prime} (\\xi) (b - a).\n$$\n\n从而得到\n\n$$\nx _ {0} - a = b - a - \\frac {f (b)}{f ^ {\\prime} (b)} = \\frac {f ^ {\\prime} (b) (b - a) - f ^ {\\prime} (\\xi) (b - a)}{f ^ {\\prime} (b)} = \\frac {[ f ^ {\\prime} (b) - f ^ {\\prime} (\\xi) ] (b - a)}{f ^ {\\prime} (b)}.\n$$\n\n因为 $f ^ { \\prime \\prime } ( x ) > 0$ ，所以 f 0(x ) 单调递增，所以 $f ^ { \\prime } ( b ) > f ^ { \\prime } ( \\zeta )$ ，从而 $x _ { 0 } - a > 0$ ，即$x _ { 0 } > a$ ．综上所述， $a < x _ { 0 } < b$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6924,
+          "lineEnd": 6941
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2015-q10",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 10,
+      "stem": "（本题满分11分）\n\n设矩阵 $A { = } { \\left( \\begin{array} { l l l } { a } & { 1 } & { 0 } \\\\ { 1 } & { a } & { { - } 1 } \\\\ { 0 } & { 1 } & { a } \\end{array} \\right) }$ 且 $A ^ { 3 } = O$ ．\n\n(Ⅰ) 求 a 的值；\n\n(Ⅱ) 若矩阵 X 满足 $X - X A ^ { 2 } - A X + A X A ^ { 2 } = E$ ，E 为 3 阶单位阵，求 X",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": "解. (Ⅰ) 因为 $A ^ { 3 } = O$ ，所以\n\n$$\n| A | = 0 \\quad \\Rightarrow \\quad \\left| \\begin{array}{c c c} a & 1 & 0 \\\\ 1 & a & - 1 \\\\ 0 & 1 & a \\end{array} \\right| = \\left| \\begin{array}{c c c} 0 & 1 & 0 \\\\ 1 - a ^ {2} & a & - 1 \\\\ - a & 1 & a \\end{array} \\right| = a ^ {3} = 0 \\quad \\Rightarrow \\quad a = 0.\n$$\n\n(Ⅱ) 由 $X - X A ^ { 2 } - A X + A X A ^ { 2 } = E$ 得 $\\left( E - A \\right) X \\left( E - A ^ { 2 } \\right) = E$ ，从而\n\n$$\n\\begin{array}{l} X = (E - A) ^ {- 1} \\left(E - A ^ {2}\\right) ^ {- 1} = \\left[ \\left(E - A ^ {2}\\right) (E - A) \\right] ^ {- 1} = \\left(E - A ^ {2} - A\\right) ^ {- 1} \\\\ = \\left( \\begin{array}{c c c} 0 & - 1 & 1 \\\\ - 1 & 1 & 1 \\\\ - 1 & - 1 & 2 \\end{array} \\right) ^ {- 1} = \\left( \\begin{array}{c c c} 3 & 1 & - 2 \\\\ 1 & 1 & - 1 \\\\ 2 & 1 & - 1 \\end{array} \\right). \\\\ \\end{array}\n$$",
+      "explanationStatus": "sourced_from_aggregate",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6942,
+          "lineEnd": 6961
+        }
+      ]
+    },
+    {
+      "stableId": "math2-2015-q11",
+      "sourceYear": 2015,
+      "subjectCode": "math2",
+      "type": "solution",
+      "questionNumber": 11,
+      "stem": "同试卷一第三 [21] 题",
+      "options": [],
+      "answer": null,
+      "answerStatus": "missing",
+      "explanation": null,
+      "explanationStatus": "missing",
+      "reviewStatus": "needs_human_review",
+      "finalizationStatus": "blocked",
+      "knowledgePoints": [],
+      "anomalies": [
+        {
+          "type": "cross_paper_reference",
+          "severity": "error",
+          "message": "Source block references another paper; content is not expanded or invented.",
+          "blocksPublication": true
+        },
+        {
+          "type": "missing_explanation_marker",
+          "severity": "error",
+          "message": "No explicit `解.` marker was found in this source block.",
+          "blocksPublication": true
+        }
+      ],
+      "sourceEvidence": [
+        {
+          "relativePath": "papers/MinerU_markdown_math2_1987-2019_2065686324641095680.md",
+          "role": "primary_aggregate_math2_1997_2019_source",
+          "gitState": "untracked",
+          "sha256": "c8cf81ea4a1b38fd483cbd5bc569a1e7d443792406f075f2fecb61f0156f23d3",
+          "lineStart": 6962,
+          "lineEnd": 6963
+        }
+      ]
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "aggregate_subject_title_math2",
+      "severity": "info",
+      "message": "Aggregate heading says `考研数学试卷二解答`; staged under math2.",
+      "blocksPublication": false,
+      "heading": "# 二〇一五年考研数学试卷二解答"
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected markers [1, 2, 3, 4, 5, 6, 7, 8] but found markers [1, 2, 3, 4, 6, 7, 8]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "选择题（1～8小题，每小题4分，共32分）",
+      "sectionRoman": "一",
+      "expectedMarkers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "foundMarkers": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected markers [9, 10, 11, 12, 13, 14] but found markers [9, 10, 12, 13, 14]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "填空题（9～14小题，每小题4分，共24分）",
+      "sectionRoman": "二",
+      "expectedMarkers": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "foundMarkers": [
+        9,
+        10,
+        12,
+        13,
+        14
+      ]
+    }
+  ],
+  "validation": {
+    "inputFilesRead": 2,
+    "questionsGenerated": 11,
+    "questionCounts": {
+      "unknown": 2,
+      "solution": 9,
+      "multiple_choice": 0,
+      "fill_in_blank": 0,
+      "proof": 0
+    },
+    "expectedCounts": {
+      "unknown": 2,
+      "solution": 9,
+      "multiple_choice": 0,
+      "fill_in_blank": 0,
+      "proof": 0
+    },
+    "countsMatch": true,
+    "stableIdsUnique": true,
+    "allQuestionsBlocked": true,
+    "allQuestionsNeedReview": true,
+    "answersPresent": 0,
+    "explanationsPresent": 9,
+    "choiceOptionsComplete": true,
+    "schemaValid": true,
+    "schemaErrors": [],
+    "anomaliesBySeverity": {
+      "info": 1,
+      "warning": 4,
+      "error": 5
+    }
+  }
+}

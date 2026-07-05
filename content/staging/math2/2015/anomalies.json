@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "math2-aggregate-1997-2019-v1",
+  "totalAnomalies": 10,
+  "anomalies": [
+    {
+      "type": "aggregate_subject_title_math2",
+      "severity": "info",
+      "message": "Aggregate heading says `考研数学试卷二解答`; staged under math2.",
+      "blocksPublication": false,
+      "heading": "# 二〇一五年考研数学试卷二解答"
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected markers [1, 2, 3, 4, 5, 6, 7, 8] but found markers [1, 2, 3, 4, 6, 7, 8]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "选择题（1～8小题，每小题4分，共32分）",
+      "sectionRoman": "一",
+      "expectedMarkers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "foundMarkers": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected markers [9, 10, 11, 12, 13, 14] but found markers [9, 10, 12, 13, 14]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "填空题（9～14小题，每小题4分，共24分）",
+      "sectionRoman": "二",
+      "expectedMarkers": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "foundMarkers": [
+        9,
+        10,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "stableId": "math2-2015-q01",
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected markers [1, 2, 3, 4, 5, 6, 7, 8] but found markers [1, 2, 3, 4, 6, 7, 8]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "选择题（1～8小题，每小题4分，共32分）",
+      "sectionRoman": "一",
+      "expectedMarkers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "foundMarkers": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "stableId": "math2-2015-q01",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2015-q02",
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected markers [9, 10, 11, 12, 13, 14] but found markers [9, 10, 12, 13, 14]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "填空题（9～14小题，每小题4分，共24分）",
+      "sectionRoman": "二",
+      "expectedMarkers": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "foundMarkers": [
+        9,
+        10,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "stableId": "math2-2015-q03",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2015-q03",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2015-q11",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2015-q11",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    }
+  ]
+}
