@@ -1,0 +1,2991 @@
+{
+  "schemaVersion": "math2-aggregate-1997-2019-v1",
+  "yearBoundaryScan": [
+    {
+      "year": 1997,
+      "lineStart": 1451,
+      "lineEnd": 1606,
+      "title": "# 一九九七年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 1998,
+      "lineStart": 1607,
+      "lineEnd": 1810,
+      "title": "# 一九九八年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 1999,
+      "lineStart": 1811,
+      "lineEnd": 2132,
+      "title": "# 一九九九年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2000,
+      "lineStart": 2133,
+      "lineEnd": 2530,
+      "title": "# 二〇〇〇年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2001,
+      "lineStart": 2531,
+      "lineEnd": 2922,
+      "title": "# 二〇〇一年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2002,
+      "lineStart": 2923,
+      "lineEnd": 3340,
+      "title": "# 二〇〇二年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2003,
+      "lineStart": 3341,
+      "lineEnd": 3729,
+      "title": "# 二〇〇三年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2004,
+      "lineStart": 3730,
+      "lineEnd": 4064,
+      "title": "# 二〇〇四年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2005,
+      "lineStart": 4065,
+      "lineEnd": 4364,
+      "title": "# 二〇〇五年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2006,
+      "lineStart": 4365,
+      "lineEnd": 4530,
+      "title": "# 二〇〇六年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2007,
+      "lineStart": 4531,
+      "lineEnd": 4810,
+      "title": "# 二〇〇七年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2008,
+      "lineStart": 4811,
+      "lineEnd": 5123,
+      "title": "# 二〇〇八年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2009,
+      "lineStart": 5124,
+      "lineEnd": 5406,
+      "title": "# 二〇〇九年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2010,
+      "lineStart": 5407,
+      "lineEnd": 5704,
+      "title": "# 二〇一〇年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2011,
+      "lineStart": 5705,
+      "lineEnd": 5923,
+      "title": "# 二〇一一年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2012,
+      "lineStart": 5924,
+      "lineEnd": 6111,
+      "title": "# 二〇一二年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2013,
+      "lineStart": 6112,
+      "lineEnd": 6367,
+      "title": "# 二〇一三年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2014,
+      "lineStart": 6368,
+      "lineEnd": 6657,
+      "title": "# 二〇一四年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2015,
+      "lineStart": 6658,
+      "lineEnd": 6963,
+      "title": "# 二〇一五年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2016,
+      "lineStart": 6964,
+      "lineEnd": 7282,
+      "title": "# 二〇一六年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2017,
+      "lineStart": 7283,
+      "lineEnd": 7534,
+      "title": "# 二〇一七年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2018,
+      "lineStart": 7535,
+      "lineEnd": 7850,
+      "title": "# 二〇一八年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    },
+    {
+      "year": 2019,
+      "lineStart": 7851,
+      "lineEnd": 8197,
+      "title": "# 二〇一九年考研数学试卷二解答",
+      "subjectTitleRisk": "math2_heading_confirmed"
+    }
+  ],
+  "questionBoundaryScan": [
+    {
+      "year": 1997,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 1453,
+          "lineEnd": 1474,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共5小题，每小题3分，满分15分）",
+          "lineStart": 1475,
+          "lineEnd": 1516,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "计算题（本题共 6 小题，每小题 5 分，满分 30 分）",
+          "lineStart": 1517,
+          "lineEnd": 1542,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "foundItems": 6,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分8分）",
+          "lineStart": 1543,
+          "lineEnd": 1558,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分8分）",
+          "lineStart": 1559,
+          "lineEnd": 1564,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分8分）",
+          "lineStart": 1565,
+          "lineEnd": 1570,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分8分）",
+          "lineStart": 1571,
+          "lineEnd": 1594,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分8分）",
+          "lineStart": 1595,
+          "lineEnd": 1606,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 17,
+      "stableIds": [
+        "math2-1997-q01",
+        "math2-1997-q02",
+        "math2-1997-q03",
+        "math2-1997-q04",
+        "math2-1997-q05",
+        "math2-1997-q06",
+        "math2-1997-q07",
+        "math2-1997-q08",
+        "math2-1997-q09",
+        "math2-1997-q10",
+        "math2-1997-q11",
+        "math2-1997-q12",
+        "math2-1997-q13",
+        "math2-1997-q14",
+        "math2-1997-q15",
+        "math2-1997-q16",
+        "math2-1997-q17"
+      ]
+    },
+    {
+      "year": 1998,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 1609,
+          "lineEnd": 1646,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 5,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共5小题，每小题3分，满分15分）",
+          "lineStart": 1647,
+          "lineEnd": 1688,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "（本题满分5分）",
+          "lineStart": 1689,
+          "lineEnd": 1694,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分5分）",
+          "lineStart": 1695,
+          "lineEnd": 1700,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分5分）",
+          "lineStart": 1701,
+          "lineEnd": 1706,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分6分）",
+          "lineStart": 1707,
+          "lineEnd": 1712,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分6分）",
+          "lineStart": 1713,
+          "lineEnd": 1716,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分8分）",
+          "lineStart": 1717,
+          "lineEnd": 1720,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "九",
+          "title": "（本题满分8分）",
+          "lineStart": 1721,
+          "lineEnd": 1726,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十",
+          "title": "（本题满分 8 分）",
+          "lineStart": 1727,
+          "lineEnd": 1732,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十一",
+          "title": "（本题满分6分）",
+          "lineStart": 1733,
+          "lineEnd": 1772,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十二",
+          "title": "（本题满分5分）",
+          "lineStart": 1773,
+          "lineEnd": 1780,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十三",
+          "title": "（本题满分8分）",
+          "lineStart": 1781,
+          "lineEnd": 1810,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 21,
+      "stableIds": [
+        "math2-1998-q01",
+        "math2-1998-q02",
+        "math2-1998-q03",
+        "math2-1998-q04",
+        "math2-1998-q05",
+        "math2-1998-q06",
+        "math2-1998-q07",
+        "math2-1998-q08",
+        "math2-1998-q09",
+        "math2-1998-q10",
+        "math2-1998-q11",
+        "math2-1998-q12",
+        "math2-1998-q13",
+        "math2-1998-q14",
+        "math2-1998-q15",
+        "math2-1998-q16",
+        "math2-1998-q17",
+        "math2-1998-q18",
+        "math2-1998-q19",
+        "math2-1998-q20",
+        "math2-1998-q21"
+      ]
+    },
+    {
+      "year": 1999,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 1813,
+          "lineEnd": 1860,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 1861,
+          "lineEnd": 1914,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "（本题满分5分）",
+          "lineStart": 1915,
+          "lineEnd": 1924,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分6分）",
+          "lineStart": 1925,
+          "lineEnd": 1934,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分7分）",
+          "lineStart": 1935,
+          "lineEnd": 1958,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分7分）",
+          "lineStart": 1959,
+          "lineEnd": 1962,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分8分）",
+          "lineStart": 1963,
+          "lineEnd": 2002,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分8分）",
+          "lineStart": 2003,
+          "lineEnd": 2048,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "九",
+          "title": "（本题满分9分）",
+          "lineStart": 2049,
+          "lineEnd": 2052,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十",
+          "title": "（本题满分6分）",
+          "lineStart": 2053,
+          "lineEnd": 2076,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十一",
+          "title": "（本题满分8分）",
+          "lineStart": 2077,
+          "lineEnd": 2100,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十二",
+          "title": "（本题满分 5 分）",
+          "lineStart": 2101,
+          "lineEnd": 2132,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 16,
+      "stableIds": [
+        "math2-1999-q01",
+        "math2-1999-q02",
+        "math2-1999-q03",
+        "math2-1999-q04",
+        "math2-1999-q05",
+        "math2-1999-q06",
+        "math2-1999-q07",
+        "math2-1999-q08",
+        "math2-1999-q09",
+        "math2-1999-q10",
+        "math2-1999-q11",
+        "math2-1999-q12",
+        "math2-1999-q13",
+        "math2-1999-q14",
+        "math2-1999-q15",
+        "math2-1999-q16"
+      ]
+    },
+    {
+      "year": 2000,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 2135,
+          "lineEnd": 2184,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 5,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共 5 小题，每小题 3 分，共 15 分）",
+          "lineStart": 2185,
+          "lineEnd": 2262,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "（本题满分5分）",
+          "lineStart": 2263,
+          "lineEnd": 2272,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分5分）",
+          "lineStart": 2273,
+          "lineEnd": 2312,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分5分）",
+          "lineStart": 2313,
+          "lineEnd": 2336,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分6分）",
+          "lineStart": 2337,
+          "lineEnd": 2366,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分7分）",
+          "lineStart": 2367,
+          "lineEnd": 2390,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分6分）",
+          "lineStart": 2391,
+          "lineEnd": 2394,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "九",
+          "title": "（本题满分7分）",
+          "lineStart": 2395,
+          "lineEnd": 2428,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十",
+          "title": "（本题满分8分）",
+          "lineStart": 2429,
+          "lineEnd": 2446,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十一",
+          "title": "（本题满分8分）",
+          "lineStart": 2447,
+          "lineEnd": 2486,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十二",
+          "title": "（本题满分6分）",
+          "lineStart": 2487,
+          "lineEnd": 2506,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十三",
+          "title": "（本题满分7分）",
+          "lineStart": 2507,
+          "lineEnd": 2530,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 21,
+      "stableIds": [
+        "math2-2000-q01",
+        "math2-2000-q02",
+        "math2-2000-q03",
+        "math2-2000-q04",
+        "math2-2000-q05",
+        "math2-2000-q06",
+        "math2-2000-q07",
+        "math2-2000-q08",
+        "math2-2000-q09",
+        "math2-2000-q10",
+        "math2-2000-q11",
+        "math2-2000-q12",
+        "math2-2000-q13",
+        "math2-2000-q14",
+        "math2-2000-q15",
+        "math2-2000-q16",
+        "math2-2000-q17",
+        "math2-2000-q18",
+        "math2-2000-q19",
+        "math2-2000-q20",
+        "math2-2000-q21"
+      ]
+    },
+    {
+      "year": 2001,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 2533,
+          "lineEnd": 2574,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 5,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共 5 小题，每小题 3 分，共 15 分）",
+          "lineStart": 2575,
+          "lineEnd": 2642,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "（本题满分6分）",
+          "lineStart": 2643,
+          "lineEnd": 2652,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分7分）",
+          "lineStart": 2653,
+          "lineEnd": 2664,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分7分）",
+          "lineStart": 2665,
+          "lineEnd": 2692,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分7分）",
+          "lineStart": 2693,
+          "lineEnd": 2726,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分 7 分）",
+          "lineStart": 2727,
+          "lineEnd": 2752,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分9分）",
+          "lineStart": 2753,
+          "lineEnd": 2808,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "九",
+          "title": "（本题满分7分）",
+          "lineStart": 2809,
+          "lineEnd": 2826,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十",
+          "title": "（本题满分8分）",
+          "lineStart": 2827,
+          "lineEnd": 2860,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十一",
+          "title": "（本题满分6分）",
+          "lineStart": 2861,
+          "lineEnd": 2888,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十二",
+          "title": "（本题满分6分）",
+          "lineStart": 2889,
+          "lineEnd": 2922,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 20,
+      "stableIds": [
+        "math2-2001-q01",
+        "math2-2001-q02",
+        "math2-2001-q03",
+        "math2-2001-q04",
+        "math2-2001-q05",
+        "math2-2001-q06",
+        "math2-2001-q07",
+        "math2-2001-q08",
+        "math2-2001-q09",
+        "math2-2001-q10",
+        "math2-2001-q11",
+        "math2-2001-q12",
+        "math2-2001-q13",
+        "math2-2001-q14",
+        "math2-2001-q15",
+        "math2-2001-q16",
+        "math2-2001-q17",
+        "math2-2001-q18",
+        "math2-2001-q19",
+        "math2-2001-q20"
+      ]
+    },
+    {
+      "year": 2002,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 5 小题，每小题 3 分，满分 15 分）",
+          "lineStart": 2925,
+          "lineEnd": 2980,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 5,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共 5 小题，每小题 3 分，共 15 分）",
+          "lineStart": 2981,
+          "lineEnd": 3066,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "foundItems": 5,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "（本题满分6分）",
+          "lineStart": 3067,
+          "lineEnd": 3094,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分7分）",
+          "lineStart": 3095,
+          "lineEnd": 3116,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分7分）",
+          "lineStart": 3117,
+          "lineEnd": 3146,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分8分）",
+          "lineStart": 3147,
+          "lineEnd": 3170,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分 7 分）",
+          "lineStart": 3171,
+          "lineEnd": 3204,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分8分）",
+          "lineStart": 3205,
+          "lineEnd": 3228,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "九",
+          "title": "（本题满分 8 分）",
+          "lineStart": 3229,
+          "lineEnd": 3260,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十",
+          "title": "（本题满分 8 分）",
+          "lineStart": 3261,
+          "lineEnd": 3310,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十一",
+          "title": "（本题满分6分）",
+          "lineStart": 3311,
+          "lineEnd": 3336,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十二",
+          "title": "（本题满分6分）",
+          "lineStart": 3337,
+          "lineEnd": 3340,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 20,
+      "stableIds": [
+        "math2-2002-q01",
+        "math2-2002-q02",
+        "math2-2002-q03",
+        "math2-2002-q04",
+        "math2-2002-q05",
+        "math2-2002-q06",
+        "math2-2002-q07",
+        "math2-2002-q08",
+        "math2-2002-q09",
+        "math2-2002-q10",
+        "math2-2002-q11",
+        "math2-2002-q12",
+        "math2-2002-q13",
+        "math2-2002-q14",
+        "math2-2002-q15",
+        "math2-2002-q16",
+        "math2-2002-q17",
+        "math2-2002-q18",
+        "math2-2002-q19",
+        "math2-2002-q20"
+      ]
+    },
+    {
+      "year": 2003,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（本题共 6 小题，每小题 4 分，满分 24 分）",
+          "lineStart": 3343,
+          "lineEnd": 3402,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（本题共6小题，每小题4分，满分24分）",
+          "lineStart": 3403,
+          "lineEnd": 3464,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "foundItems": 1,
+          "type": "multiple_choice",
+          "splitSafe": false
+        },
+        {
+          "roman": "三",
+          "title": "（本题满分10分）",
+          "lineStart": 3465,
+          "lineEnd": 3490,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "四",
+          "title": "（本题满分9分）",
+          "lineStart": 3491,
+          "lineEnd": 3520,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "五",
+          "title": "（本题满分9分）",
+          "lineStart": 3521,
+          "lineEnd": 3548,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "六",
+          "title": "（本题满分12分）",
+          "lineStart": 3549,
+          "lineEnd": 3552,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "七",
+          "title": "（本题满分12分）",
+          "lineStart": 3553,
+          "lineEnd": 3580,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "八",
+          "title": "（本题满分12分）",
+          "lineStart": 3581,
+          "lineEnd": 3626,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "九",
+          "title": "（本题满分 10 分）",
+          "lineStart": 3627,
+          "lineEnd": 3659,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十",
+          "title": "（本题满分10分）",
+          "lineStart": 3660,
+          "lineEnd": 3689,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十一",
+          "title": "（本题满分10分）",
+          "lineStart": 3690,
+          "lineEnd": 3725,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        },
+        {
+          "roman": "十二",
+          "title": "（本题满分8分）",
+          "lineStart": 3726,
+          "lineEnd": 3729,
+          "expectedMarkers": null,
+          "foundItems": 1,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 17,
+      "stableIds": [
+        "math2-2003-q01",
+        "math2-2003-q02",
+        "math2-2003-q03",
+        "math2-2003-q04",
+        "math2-2003-q05",
+        "math2-2003-q06",
+        "math2-2003-q07",
+        "math2-2003-q08",
+        "math2-2003-q09",
+        "math2-2003-q10",
+        "math2-2003-q11",
+        "math2-2003-q12",
+        "math2-2003-q13",
+        "math2-2003-q14",
+        "math2-2003-q15",
+        "math2-2003-q16",
+        "math2-2003-q17"
+      ]
+    },
+    {
+      "year": 2004,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（1～6小题，每小题4分，共24分）",
+          "lineStart": 3732,
+          "lineEnd": 3791,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（7～14小题，每小题4分，共32分）",
+          "lineStart": 3792,
+          "lineEnd": 3888,
+          "expectedMarkers": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23 小题，共 94 分）",
+          "lineStart": 3889,
+          "lineEnd": 4064,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 23,
+      "stableIds": [
+        "math2-2004-q01",
+        "math2-2004-q02",
+        "math2-2004-q03",
+        "math2-2004-q04",
+        "math2-2004-q05",
+        "math2-2004-q06",
+        "math2-2004-q07",
+        "math2-2004-q08",
+        "math2-2004-q09",
+        "math2-2004-q10",
+        "math2-2004-q11",
+        "math2-2004-q12",
+        "math2-2004-q13",
+        "math2-2004-q14",
+        "math2-2004-q15",
+        "math2-2004-q16",
+        "math2-2004-q17",
+        "math2-2004-q18",
+        "math2-2004-q19",
+        "math2-2004-q20",
+        "math2-2004-q21",
+        "math2-2004-q22",
+        "math2-2004-q23"
+      ]
+    },
+    {
+      "year": 2005,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（1～6小题，每小题4分，共24分）",
+          "lineStart": 4067,
+          "lineEnd": 4122,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "foundItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "二",
+          "title": "选择题（7～14 小题，每小题 4 分，共 32 分）",
+          "lineStart": 4123,
+          "lineEnd": 4186,
+          "expectedMarkers": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23小题，共94分）",
+          "lineStart": 4187,
+          "lineEnd": 4364,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 18,
+      "stableIds": [
+        "math2-2005-q01",
+        "math2-2005-q02",
+        "math2-2005-q03",
+        "math2-2005-q04",
+        "math2-2005-q05",
+        "math2-2005-q06",
+        "math2-2005-q07",
+        "math2-2005-q08",
+        "math2-2005-q09",
+        "math2-2005-q10",
+        "math2-2005-q11",
+        "math2-2005-q12",
+        "math2-2005-q13",
+        "math2-2005-q14",
+        "math2-2005-q15",
+        "math2-2005-q16",
+        "math2-2005-q17",
+        "math2-2005-q18"
+      ]
+    },
+    {
+      "year": 2006,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "填空题（1～6小题，每小题4分，共24分）",
+          "lineStart": 4367,
+          "lineEnd": 4394,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "选择题（7～14 小题，每小题 4 分，共 32 分）",
+          "lineStart": 4395,
+          "lineEnd": 4448,
+          "expectedMarkers": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23 小题，共 94 分）",
+          "lineStart": 4449,
+          "lineEnd": 4530,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 23,
+      "stableIds": [
+        "math2-2006-q01",
+        "math2-2006-q02",
+        "math2-2006-q03",
+        "math2-2006-q04",
+        "math2-2006-q05",
+        "math2-2006-q06",
+        "math2-2006-q07",
+        "math2-2006-q08",
+        "math2-2006-q09",
+        "math2-2006-q10",
+        "math2-2006-q11",
+        "math2-2006-q12",
+        "math2-2006-q13",
+        "math2-2006-q14",
+        "math2-2006-q15",
+        "math2-2006-q16",
+        "math2-2006-q17",
+        "math2-2006-q18",
+        "math2-2006-q19",
+        "math2-2006-q20",
+        "math2-2006-q21",
+        "math2-2006-q22",
+        "math2-2006-q23"
+      ]
+    },
+    {
+      "year": 2007,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～10小题，每小题4分，共40分）",
+          "lineStart": 4533,
+          "lineEnd": 4614,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "foundItems": 10,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "填空题（11～16小题，每小题4分，共24分）",
+          "lineStart": 4615,
+          "lineEnd": 4664,
+          "expectedMarkers": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（17～24小题，共86分）",
+          "lineStart": 4665,
+          "lineEnd": 4810,
+          "expectedMarkers": [
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "foundItems": 8,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 24,
+      "stableIds": [
+        "math2-2007-q01",
+        "math2-2007-q02",
+        "math2-2007-q03",
+        "math2-2007-q04",
+        "math2-2007-q05",
+        "math2-2007-q06",
+        "math2-2007-q07",
+        "math2-2007-q08",
+        "math2-2007-q09",
+        "math2-2007-q10",
+        "math2-2007-q11",
+        "math2-2007-q12",
+        "math2-2007-q13",
+        "math2-2007-q14",
+        "math2-2007-q15",
+        "math2-2007-q16",
+        "math2-2007-q17",
+        "math2-2007-q18",
+        "math2-2007-q19",
+        "math2-2007-q20",
+        "math2-2007-q21",
+        "math2-2007-q22",
+        "math2-2007-q23",
+        "math2-2007-q24"
+      ]
+    },
+    {
+      "year": 2008,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 4813,
+          "lineEnd": 4918,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14 小题，每小题 4 分，共 24 分）",
+          "lineStart": 4919,
+          "lineEnd": 4976,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23 小题，共 94 分）",
+          "lineStart": 4977,
+          "lineEnd": 5123,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 23,
+      "stableIds": [
+        "math2-2008-q01",
+        "math2-2008-q02",
+        "math2-2008-q03",
+        "math2-2008-q04",
+        "math2-2008-q05",
+        "math2-2008-q06",
+        "math2-2008-q07",
+        "math2-2008-q08",
+        "math2-2008-q09",
+        "math2-2008-q10",
+        "math2-2008-q11",
+        "math2-2008-q12",
+        "math2-2008-q13",
+        "math2-2008-q14",
+        "math2-2008-q15",
+        "math2-2008-q16",
+        "math2-2008-q17",
+        "math2-2008-q18",
+        "math2-2008-q19",
+        "math2-2008-q20",
+        "math2-2008-q21",
+        "math2-2008-q22",
+        "math2-2008-q23"
+      ]
+    },
+    {
+      "year": 2009,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 5126,
+          "lineEnd": 5239,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14小题，每小题4分，共24分）",
+          "lineStart": 5240,
+          "lineEnd": 5311,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23小题，共94分）",
+          "lineStart": 5312,
+          "lineEnd": 5406,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 23,
+      "stableIds": [
+        "math2-2009-q01",
+        "math2-2009-q02",
+        "math2-2009-q03",
+        "math2-2009-q04",
+        "math2-2009-q05",
+        "math2-2009-q06",
+        "math2-2009-q07",
+        "math2-2009-q08",
+        "math2-2009-q09",
+        "math2-2009-q10",
+        "math2-2009-q11",
+        "math2-2009-q12",
+        "math2-2009-q13",
+        "math2-2009-q14",
+        "math2-2009-q15",
+        "math2-2009-q16",
+        "math2-2009-q17",
+        "math2-2009-q18",
+        "math2-2009-q19",
+        "math2-2009-q20",
+        "math2-2009-q21",
+        "math2-2009-q22",
+        "math2-2009-q23"
+      ]
+    },
+    {
+      "year": 2010,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 5409,
+          "lineEnd": 5506,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14小题，每小题4分，共24分）",
+          "lineStart": 5507,
+          "lineEnd": 5560,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23 小题，共 94 分）",
+          "lineStart": 5561,
+          "lineEnd": 5704,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 23,
+      "stableIds": [
+        "math2-2010-q01",
+        "math2-2010-q02",
+        "math2-2010-q03",
+        "math2-2010-q04",
+        "math2-2010-q05",
+        "math2-2010-q06",
+        "math2-2010-q07",
+        "math2-2010-q08",
+        "math2-2010-q09",
+        "math2-2010-q10",
+        "math2-2010-q11",
+        "math2-2010-q12",
+        "math2-2010-q13",
+        "math2-2010-q14",
+        "math2-2010-q15",
+        "math2-2010-q16",
+        "math2-2010-q17",
+        "math2-2010-q18",
+        "math2-2010-q19",
+        "math2-2010-q20",
+        "math2-2010-q21",
+        "math2-2010-q22",
+        "math2-2010-q23"
+      ]
+    },
+    {
+      "year": 2011,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 5707,
+          "lineEnd": 5780,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14小题，每小题4分，共24分）",
+          "lineStart": 5781,
+          "lineEnd": 5824,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23 小题，共 94 分）",
+          "lineStart": 5825,
+          "lineEnd": 5923,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 23,
+      "stableIds": [
+        "math2-2011-q01",
+        "math2-2011-q02",
+        "math2-2011-q03",
+        "math2-2011-q04",
+        "math2-2011-q05",
+        "math2-2011-q06",
+        "math2-2011-q07",
+        "math2-2011-q08",
+        "math2-2011-q09",
+        "math2-2011-q10",
+        "math2-2011-q11",
+        "math2-2011-q12",
+        "math2-2011-q13",
+        "math2-2011-q14",
+        "math2-2011-q15",
+        "math2-2011-q16",
+        "math2-2011-q17",
+        "math2-2011-q18",
+        "math2-2011-q19",
+        "math2-2011-q20",
+        "math2-2011-q21",
+        "math2-2011-q22",
+        "math2-2011-q23"
+      ]
+    },
+    {
+      "year": 2012,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 5926,
+          "lineEnd": 5975,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 1,
+          "type": "multiple_choice",
+          "splitSafe": false
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14小题，每小题4分，共24分）",
+          "lineStart": 5976,
+          "lineEnd": 6017,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23小题，共94分）",
+          "lineStart": 6018,
+          "lineEnd": 6111,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 16,
+      "stableIds": [
+        "math2-2012-q01",
+        "math2-2012-q02",
+        "math2-2012-q03",
+        "math2-2012-q04",
+        "math2-2012-q05",
+        "math2-2012-q06",
+        "math2-2012-q07",
+        "math2-2012-q08",
+        "math2-2012-q09",
+        "math2-2012-q10",
+        "math2-2012-q11",
+        "math2-2012-q12",
+        "math2-2012-q13",
+        "math2-2012-q14",
+        "math2-2012-q15",
+        "math2-2012-q16"
+      ]
+    },
+    {
+      "year": 2013,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 6114,
+          "lineEnd": 6229,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14 小题，每小题 4 分，共 24 分）",
+          "lineStart": 6230,
+          "lineEnd": 6273,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23小题，共94分）",
+          "lineStart": 6274,
+          "lineEnd": 6367,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 18,
+      "stableIds": [
+        "math2-2013-q01",
+        "math2-2013-q02",
+        "math2-2013-q03",
+        "math2-2013-q04",
+        "math2-2013-q05",
+        "math2-2013-q06",
+        "math2-2013-q07",
+        "math2-2013-q08",
+        "math2-2013-q09",
+        "math2-2013-q10",
+        "math2-2013-q11",
+        "math2-2013-q12",
+        "math2-2013-q13",
+        "math2-2013-q14",
+        "math2-2013-q15",
+        "math2-2013-q16",
+        "math2-2013-q17",
+        "math2-2013-q18"
+      ]
+    },
+    {
+      "year": 2014,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题．每小题4分，共32分）",
+          "lineStart": 6370,
+          "lineEnd": 6453,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14小题，每小题4分，共24分）",
+          "lineStart": 6454,
+          "lineEnd": 6505,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23小题，共94分）",
+          "lineStart": 6506,
+          "lineEnd": 6657,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 23,
+      "stableIds": [
+        "math2-2014-q01",
+        "math2-2014-q02",
+        "math2-2014-q03",
+        "math2-2014-q04",
+        "math2-2014-q05",
+        "math2-2014-q06",
+        "math2-2014-q07",
+        "math2-2014-q08",
+        "math2-2014-q09",
+        "math2-2014-q10",
+        "math2-2014-q11",
+        "math2-2014-q12",
+        "math2-2014-q13",
+        "math2-2014-q14",
+        "math2-2014-q15",
+        "math2-2014-q16",
+        "math2-2014-q17",
+        "math2-2014-q18",
+        "math2-2014-q19",
+        "math2-2014-q20",
+        "math2-2014-q21",
+        "math2-2014-q22",
+        "math2-2014-q23"
+      ]
+    },
+    {
+      "year": 2015,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 6660,
+          "lineEnd": 6749,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 1,
+          "type": "multiple_choice",
+          "splitSafe": false
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14小题，每小题4分，共24分）",
+          "lineStart": 6750,
+          "lineEnd": 6815,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23题，共94分）",
+          "lineStart": 6816,
+          "lineEnd": 6963,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 11,
+      "stableIds": [
+        "math2-2015-q01",
+        "math2-2015-q02",
+        "math2-2015-q03",
+        "math2-2015-q04",
+        "math2-2015-q05",
+        "math2-2015-q06",
+        "math2-2015-q07",
+        "math2-2015-q08",
+        "math2-2015-q09",
+        "math2-2015-q10",
+        "math2-2015-q11"
+      ]
+    },
+    {
+      "year": 2016,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 6966,
+          "lineEnd": 7060,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 1,
+          "type": "multiple_choice",
+          "splitSafe": false
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14小题，每小题4分，共24分）",
+          "lineStart": 7061,
+          "lineEnd": 7130,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23小题，共94分）",
+          "lineStart": 7131,
+          "lineEnd": 7282,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 16,
+      "stableIds": [
+        "math2-2016-q01",
+        "math2-2016-q02",
+        "math2-2016-q03",
+        "math2-2016-q04",
+        "math2-2016-q05",
+        "math2-2016-q06",
+        "math2-2016-q07",
+        "math2-2016-q08",
+        "math2-2016-q09",
+        "math2-2016-q10",
+        "math2-2016-q11",
+        "math2-2016-q12",
+        "math2-2016-q13",
+        "math2-2016-q14",
+        "math2-2016-q15",
+        "math2-2016-q16"
+      ]
+    },
+    {
+      "year": 2017,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 7285,
+          "lineEnd": 7394,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14 小题，每小题 4 分，共 24 分）",
+          "lineStart": 7395,
+          "lineEnd": 7454,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23小题，共94分）",
+          "lineStart": 7455,
+          "lineEnd": 7534,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 18,
+      "stableIds": [
+        "math2-2017-q01",
+        "math2-2017-q02",
+        "math2-2017-q03",
+        "math2-2017-q04",
+        "math2-2017-q05",
+        "math2-2017-q06",
+        "math2-2017-q07",
+        "math2-2017-q08",
+        "math2-2017-q09",
+        "math2-2017-q10",
+        "math2-2017-q11",
+        "math2-2017-q12",
+        "math2-2017-q13",
+        "math2-2017-q14",
+        "math2-2017-q15",
+        "math2-2017-q16",
+        "math2-2017-q17",
+        "math2-2017-q18"
+      ]
+    },
+    {
+      "year": 2018,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 7537,
+          "lineEnd": 7636,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14小题，每小题4分，共24分）",
+          "lineStart": 7637,
+          "lineEnd": 7708,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 1,
+          "type": "fill_in_blank",
+          "splitSafe": false
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23 小题，共 94 分）",
+          "lineStart": 7709,
+          "lineEnd": 7850,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 18,
+      "stableIds": [
+        "math2-2018-q01",
+        "math2-2018-q02",
+        "math2-2018-q03",
+        "math2-2018-q04",
+        "math2-2018-q05",
+        "math2-2018-q06",
+        "math2-2018-q07",
+        "math2-2018-q08",
+        "math2-2018-q09",
+        "math2-2018-q10",
+        "math2-2018-q11",
+        "math2-2018-q12",
+        "math2-2018-q13",
+        "math2-2018-q14",
+        "math2-2018-q15",
+        "math2-2018-q16",
+        "math2-2018-q17",
+        "math2-2018-q18"
+      ]
+    },
+    {
+      "year": 2019,
+      "sections": [
+        {
+          "roman": "一",
+          "title": "选择题（1～8小题，每小题4分，共32分）",
+          "lineStart": 7853,
+          "lineEnd": 7968,
+          "expectedMarkers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "foundItems": 8,
+          "type": "multiple_choice",
+          "splitSafe": true
+        },
+        {
+          "roman": "二",
+          "title": "填空题（9～14小题，每小题4分，共24分）",
+          "lineStart": 7969,
+          "lineEnd": 8032,
+          "expectedMarkers": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "foundItems": 6,
+          "type": "fill_in_blank",
+          "splitSafe": true
+        },
+        {
+          "roman": "三",
+          "title": "解答题（15～23 题，共 94 分）",
+          "lineStart": 8033,
+          "lineEnd": 8197,
+          "expectedMarkers": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "foundItems": 9,
+          "type": "solution",
+          "splitSafe": true
+        }
+      ],
+      "questionsGenerated": 23,
+      "stableIds": [
+        "math2-2019-q01",
+        "math2-2019-q02",
+        "math2-2019-q03",
+        "math2-2019-q04",
+        "math2-2019-q05",
+        "math2-2019-q06",
+        "math2-2019-q07",
+        "math2-2019-q08",
+        "math2-2019-q09",
+        "math2-2019-q10",
+        "math2-2019-q11",
+        "math2-2019-q12",
+        "math2-2019-q13",
+        "math2-2019-q14",
+        "math2-2019-q15",
+        "math2-2019-q16",
+        "math2-2019-q17",
+        "math2-2019-q18",
+        "math2-2019-q19",
+        "math2-2019-q20",
+        "math2-2019-q21",
+        "math2-2019-q22",
+        "math2-2019-q23"
+      ]
+    }
+  ],
+  "choiceOptionScan": [
+    {
+      "year": 1997,
+      "multipleChoiceRecords": 3,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 3
+    },
+    {
+      "year": 1998,
+      "multipleChoiceRecords": 3,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 2
+    },
+    {
+      "year": 1999,
+      "multipleChoiceRecords": 3,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 3
+    },
+    {
+      "year": 2000,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 1
+    },
+    {
+      "year": 2001,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 1
+    },
+    {
+      "year": 2002,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 1
+    },
+    {
+      "year": 2003,
+      "multipleChoiceRecords": 0,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 1
+    },
+    {
+      "year": 2004,
+      "multipleChoiceRecords": 2,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 6
+    },
+    {
+      "year": 2005,
+      "multipleChoiceRecords": 3,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 6
+    },
+    {
+      "year": 2006,
+      "multipleChoiceRecords": 3,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 5
+    },
+    {
+      "year": 2007,
+      "multipleChoiceRecords": 1,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 9
+    },
+    {
+      "year": 2008,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 4
+    },
+    {
+      "year": 2009,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 4
+    },
+    {
+      "year": 2010,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 4
+    },
+    {
+      "year": 2011,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 4
+    },
+    {
+      "year": 2012,
+      "multipleChoiceRecords": 0,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 1
+    },
+    {
+      "year": 2013,
+      "multipleChoiceRecords": 5,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 4
+    },
+    {
+      "year": 2014,
+      "multipleChoiceRecords": 3,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 5
+    },
+    {
+      "year": 2015,
+      "multipleChoiceRecords": 0,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 2
+    },
+    {
+      "year": 2016,
+      "multipleChoiceRecords": 0,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 1
+    },
+    {
+      "year": 2017,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 5
+    },
+    {
+      "year": 2018,
+      "multipleChoiceRecords": 4,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 5
+    },
+    {
+      "year": 2019,
+      "multipleChoiceRecords": 5,
+      "choiceOptionsComplete": true,
+      "unknownRecords": 3
+    }
+  ],
+  "answerExplanationMarkerScan": [
+    {
+      "year": 1997,
+      "answersPresent": 3,
+      "explanationsPresent": 15,
+      "missingExplanationMarkers": 2
+    },
+    {
+      "year": 1998,
+      "answersPresent": 7,
+      "explanationsPresent": 16,
+      "missingExplanationMarkers": 5
+    },
+    {
+      "year": 1999,
+      "answersPresent": 3,
+      "explanationsPresent": 12,
+      "missingExplanationMarkers": 4
+    },
+    {
+      "year": 2000,
+      "answersPresent": 9,
+      "explanationsPresent": 19,
+      "missingExplanationMarkers": 2
+    },
+    {
+      "year": 2001,
+      "answersPresent": 9,
+      "explanationsPresent": 17,
+      "missingExplanationMarkers": 3
+    },
+    {
+      "year": 2002,
+      "answersPresent": 8,
+      "explanationsPresent": 17,
+      "missingExplanationMarkers": 3
+    },
+    {
+      "year": 2003,
+      "answersPresent": 6,
+      "explanationsPresent": 14,
+      "missingExplanationMarkers": 3
+    },
+    {
+      "year": 2004,
+      "answersPresent": 7,
+      "explanationsPresent": 15,
+      "missingExplanationMarkers": 8
+    },
+    {
+      "year": 2005,
+      "answersPresent": 3,
+      "explanationsPresent": 10,
+      "missingExplanationMarkers": 8
+    },
+    {
+      "year": 2006,
+      "answersPresent": 7,
+      "explanationsPresent": 11,
+      "missingExplanationMarkers": 12
+    },
+    {
+      "year": 2007,
+      "answersPresent": 5,
+      "explanationsPresent": 12,
+      "missingExplanationMarkers": 12
+    },
+    {
+      "year": 2008,
+      "answersPresent": 9,
+      "explanationsPresent": 17,
+      "missingExplanationMarkers": 6
+    },
+    {
+      "year": 2009,
+      "answersPresent": 10,
+      "explanationsPresent": 17,
+      "missingExplanationMarkers": 6
+    },
+    {
+      "year": 2010,
+      "answersPresent": 10,
+      "explanationsPresent": 16,
+      "missingExplanationMarkers": 7
+    },
+    {
+      "year": 2011,
+      "answersPresent": 8,
+      "explanationsPresent": 12,
+      "missingExplanationMarkers": 11
+    },
+    {
+      "year": 2012,
+      "answersPresent": 6,
+      "explanationsPresent": 11,
+      "missingExplanationMarkers": 5
+    },
+    {
+      "year": 2013,
+      "answersPresent": 5,
+      "explanationsPresent": 13,
+      "missingExplanationMarkers": 5
+    },
+    {
+      "year": 2014,
+      "answersPresent": 7,
+      "explanationsPresent": 12,
+      "missingExplanationMarkers": 11
+    },
+    {
+      "year": 2015,
+      "answersPresent": 0,
+      "explanationsPresent": 9,
+      "missingExplanationMarkers": 2
+    },
+    {
+      "year": 2016,
+      "answersPresent": 6,
+      "explanationsPresent": 15,
+      "missingExplanationMarkers": 1
+    },
+    {
+      "year": 2017,
+      "answersPresent": 4,
+      "explanationsPresent": 9,
+      "missingExplanationMarkers": 9
+    },
+    {
+      "year": 2018,
+      "answersPresent": 4,
+      "explanationsPresent": 9,
+      "missingExplanationMarkers": 9
+    },
+    {
+      "year": 2019,
+      "answersPresent": 11,
+      "explanationsPresent": 20,
+      "missingExplanationMarkers": 3
+    }
+  ],
+  "crossPaperReferenceScan": [
+    {
+      "year": 1997,
+      "crossPaperReferenceRecords": 2
+    },
+    {
+      "year": 1998,
+      "crossPaperReferenceRecords": 5
+    },
+    {
+      "year": 1999,
+      "crossPaperReferenceRecords": 5
+    },
+    {
+      "year": 2000,
+      "crossPaperReferenceRecords": 2
+    },
+    {
+      "year": 2001,
+      "crossPaperReferenceRecords": 1
+    },
+    {
+      "year": 2002,
+      "crossPaperReferenceRecords": 3
+    },
+    {
+      "year": 2003,
+      "crossPaperReferenceRecords": 3
+    },
+    {
+      "year": 2004,
+      "crossPaperReferenceRecords": 8
+    },
+    {
+      "year": 2005,
+      "crossPaperReferenceRecords": 9
+    },
+    {
+      "year": 2006,
+      "crossPaperReferenceRecords": 12
+    },
+    {
+      "year": 2007,
+      "crossPaperReferenceRecords": 12
+    },
+    {
+      "year": 2008,
+      "crossPaperReferenceRecords": 6
+    },
+    {
+      "year": 2009,
+      "crossPaperReferenceRecords": 6
+    },
+    {
+      "year": 2010,
+      "crossPaperReferenceRecords": 7
+    },
+    {
+      "year": 2011,
+      "crossPaperReferenceRecords": 11
+    },
+    {
+      "year": 2012,
+      "crossPaperReferenceRecords": 5
+    },
+    {
+      "year": 2013,
+      "crossPaperReferenceRecords": 6
+    },
+    {
+      "year": 2014,
+      "crossPaperReferenceRecords": 10
+    },
+    {
+      "year": 2015,
+      "crossPaperReferenceRecords": 3
+    },
+    {
+      "year": 2016,
+      "crossPaperReferenceRecords": 2
+    },
+    {
+      "year": 2017,
+      "crossPaperReferenceRecords": 9
+    },
+    {
+      "year": 2018,
+      "crossPaperReferenceRecords": 9
+    },
+    {
+      "year": 2019,
+      "crossPaperReferenceRecords": 3
+    }
+  ]
+}

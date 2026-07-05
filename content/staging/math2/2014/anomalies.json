@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "math2-aggregate-1997-2019-v1",
+  "totalAnomalies": 27,
+  "anomalies": [
+    {
+      "type": "aggregate_subject_title_math2",
+      "severity": "info",
+      "message": "Aggregate heading says `考研数学试卷二解答`; staged under math2.",
+      "blocksPublication": false,
+      "heading": "# 二〇一四年考研数学试卷二解答"
+    },
+    {
+      "stableId": "math2-2014-q02",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q02",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q02",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": []
+    },
+    {
+      "stableId": "math2-2014-q03",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q03",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q03",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": []
+    },
+    {
+      "stableId": "math2-2014-q05",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q05",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels ['A', 'C', 'D']; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": [
+        "A",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "stableId": "math2-2014-q07",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q07",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q07",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": []
+    },
+    {
+      "stableId": "math2-2014-q08",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q08",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q08",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": []
+    },
+    {
+      "stableId": "math2-2014-q10",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q10",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q14",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q14",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q15",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q15",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q18",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q18",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q22",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q22",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q23",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2014-q23",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    }
+  ]
+}

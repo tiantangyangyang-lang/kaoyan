@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "math2-aggregate-1997-2019-v1",
+  "totalAnomalies": 25,
+  "anomalies": [
+    {
+      "type": "aggregate_subject_title_math2",
+      "severity": "info",
+      "message": "Aggregate heading says `考研数学试卷二解答`; staged under math2.",
+      "blocksPublication": false,
+      "heading": "# 二〇一七年考研数学试卷二解答"
+    },
+    {
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected markers [9, 10, 11, 12, 13, 14] but found markers [9, 10, 11, 12, 14]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "填空题（9～14 小题，每小题 4 分，共 24 分）",
+      "sectionRoman": "二",
+      "expectedMarkers": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "foundMarkers": [
+        9,
+        10,
+        11,
+        12,
+        14
+      ]
+    },
+    {
+      "stableId": "math2-2017-q01",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q01",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q01",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": []
+    },
+    {
+      "stableId": "math2-2017-q02",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels ['A', 'B']; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "stableId": "math2-2017-q06",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q06",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q06",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": []
+    },
+    {
+      "stableId": "math2-2017-q08",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q08",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q08",
+      "type": "incomplete_choice_options",
+      "severity": "error",
+      "message": "Expected complete A-D options, found labels []; stored as unknown review item without options.",
+      "blocksPublication": true,
+      "foundOptionLabels": []
+    },
+    {
+      "stableId": "math2-2017-q09",
+      "type": "section_split_mismatch",
+      "severity": "warning",
+      "message": "Section expected markers [9, 10, 11, 12, 13, 14] but found markers [9, 10, 11, 12, 14]; kept the section as one blocked review item.",
+      "blocksPublication": true,
+      "sectionTitle": "填空题（9～14 小题，每小题 4 分，共 24 分）",
+      "sectionRoman": "二",
+      "expectedMarkers": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "foundMarkers": [
+        9,
+        10,
+        11,
+        12,
+        14
+      ]
+    },
+    {
+      "stableId": "math2-2017-q11",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q11",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q12",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q12",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q13",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q13",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q14",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q14",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q17",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q17",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q18",
+      "type": "cross_paper_reference",
+      "severity": "error",
+      "message": "Source block references another paper; content is not expanded or invented.",
+      "blocksPublication": true
+    },
+    {
+      "stableId": "math2-2017-q18",
+      "type": "missing_explanation_marker",
+      "severity": "error",
+      "message": "No explicit `解.` marker was found in this source block.",
+      "blocksPublication": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "inputFilesRead": 2,
+  "questionsGenerated": 23,
+  "questionCounts": {
+    "multiple_choice": 4,
+    "unknown": 4,
+    "fill_in_blank": 6,
+    "solution": 9,
+    "proof": 0
+  },
+  "expectedCounts": {
+    "multiple_choice": 4,
+    "unknown": 4,
+    "fill_in_blank": 6,
+    "solution": 9,
+    "proof": 0
+  },
+  "countsMatch": true,
+  "stableIdsUnique": true,
+  "allQuestionsBlocked": true,
+  "allQuestionsNeedReview": true,
+  "answersPresent": 10,
+  "explanationsPresent": 16,
+  "choiceOptionsComplete": true,
+  "schemaValid": true,
+  "schemaErrors": [],
+  "anomaliesBySeverity": {
+    "info": 1,
+    "error": 18,
+    "warning": 1
+  }
+}
