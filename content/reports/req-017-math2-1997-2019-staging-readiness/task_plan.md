@@ -15,6 +15,7 @@ Split and audit the Math2 aggregate 1997-2019 source, then generate and verify o
 - [x] Phase 7: Generate staging, KaTeX reports, human-review checklist, audit summaries, Makefile targets, and focused tests.
 - [x] Phase 8: Run targeted validation and `make verify`.
 - [x] Phase 9: Commit, push, open focused PR, and report DB import boundary.
+- [x] Phase 10: Persist DB import targets, dry-run all 1997-2019 staging batches, commit import, and verify database counts.
 
 ## Key Questions
 
@@ -28,13 +29,15 @@ Split and audit the Math2 aggregate 1997-2019 source, then generate and verify o
 - Branch: `codex/req-017-math2-1997-2019-staging-readiness`.
 - Scope excludes Math3 1987-1996 and unrelated website publication work.
 - Live DB commands require explicit approval for REQ-017 even though prior DB setup exists.
+- DB import completed only after all 1997-2019 staging payloads passed dry-run; imported rows stay staging/blocked and are not published.
 - 1997-2019 can be generated as schema-valid Math2 staging because source headings say 试卷二; all generated records remain blocked due source-review anomalies.
 - Cross-paper references such as 同试卷一... are not expanded or invented; they are stored as unknown or blocked review items with cross_paper_reference anomalies.
 
 ## Errors Encountered
 
 - Source read blocked on 2026-07-04: escalated read-only commands for `D:\work\Kaoyan-Math2-Papers` were rejected by the approval layer because the Codex usage limit was reached. No workaround was attempted. Without direct source access, REQ-017 cannot safely decide year boundaries, option completeness, or staging eligibility.
+- DB dry-run first failed in the sandbox with network `EACCES`; approved external-network retry passed for all 23 years. Commit import then passed for all 23 years and SQL verification found 23 staging batches / 455 questions.
 
 ## Status
 
-**Complete** - PR #19 is open and REQ-017 handoff is recorded.
+**Complete** - PR #19 is open; REQ-017 DB dry-run, commit import, and read-only count verification are recorded.

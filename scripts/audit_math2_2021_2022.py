@@ -19,6 +19,7 @@ REPORT_DIR = "content/reports/req-011-math2-2021-2022-staging-readiness"
 EXPECTED_NUMBERS = list(range(1, 23))
 CHOICE_NUMBERS = list(range(1, 11))
 OPTION_LABELS = ["A", "B", "C", "D"]
+IGNORED_SOURCE_STATUS_PREFIXES = ("?? .obsidian/",)
 
 YEAR_SPECS: dict[int, dict[str, Any]] = {
     2021: {
@@ -111,7 +112,11 @@ def git_state(root: Path, relative_path: str) -> str:
 
 
 def source_repo_state(source_root: Path) -> dict[str, Any]:
-    dirty_state = git_output(source_root, "status", "--porcelain=v1").splitlines()
+    dirty_state = [
+        line
+        for line in git_output(source_root, "status", "--porcelain=v1").splitlines()
+        if not line.startswith(IGNORED_SOURCE_STATUS_PREFIXES)
+    ]
     return {
         "name": SOURCE_REPO,
         "path": str(source_root),

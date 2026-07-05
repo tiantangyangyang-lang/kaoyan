@@ -16,6 +16,7 @@ ANSWER_RE = re.compile(r"【答案】|答案[:：]|参考答案")
 EXPLANATION_RE = re.compile(r"【解】|【解析】|解答[:：]")
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 QUESTION_RE = re.compile(r"^\s*(?:#{1,6}\s*)?[（(]?\s*(\d{1,2})\s*[）).、]", re.M)
+IGNORED_SOURCE_DIRS = {".git", ".obsidian"}
 
 
 def git(root: Path, *args: str) -> str:
@@ -82,7 +83,11 @@ def build_inventory(root: Path) -> dict[str, Any]:
         for line in git(root, "ls-files").splitlines()
         if line
     }
-    all_files = sorted(path for path in root.rglob("*") if path.is_file() and ".git" not in path.parts)
+    all_files = sorted(
+        path
+        for path in root.rglob("*")
+        if path.is_file() and not any(part in IGNORED_SOURCE_DIRS for part in path.parts)
+    )
     extensions = Counter(path.suffix.lower() or "[none]" for path in all_files)
     markdown_paths = [
         path for path in all_files

@@ -45,6 +45,7 @@ IMAGE_RE = re.compile(r"!\[[^\]]*\]\([^)]+\)")
 COUNT_RE = re.compile(r"共\s*(\d+)\s*小题")
 TOTAL_POINTS_RE = re.compile(r"满分\s*(\d+)\s*分")
 EACH_POINTS_RE = re.compile(r"每小题\s*(\d+)\s*分")
+IGNORED_SOURCE_STATUS_PREFIXES = ("?? .obsidian/",)
 
 
 def normalize_newlines(text: str) -> str:
@@ -88,7 +89,11 @@ def git_state(root: Path, relative_path: str) -> str:
 
 
 def source_repository(root: Path) -> dict[str, Any]:
-    dirty_state = git_output(root, "status", "--porcelain=v1").splitlines()
+    dirty_state = [
+        line
+        for line in git_output(root, "status", "--porcelain=v1").splitlines()
+        if not line.startswith(IGNORED_SOURCE_STATUS_PREFIXES)
+    ]
     return {
         "name": SOURCE_REPO,
         "commit": git_output(root, "rev-parse", "HEAD"),

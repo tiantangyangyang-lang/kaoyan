@@ -17,6 +17,7 @@ SOURCE_YEAR = 2024
 SUBJECT_CODE = "math2"
 PRIMARY_RELATIVE = "solutions/2024/math2_2024.md"
 FEEDBACK_EMAIL = "tiantangyangyang@gmail.com"
+IGNORED_SOURCE_STATUS_PREFIXES = ("?? .obsidian/",)
 EXPECTED_PRIMARY_HASH = "38d3a737c302a4ae79094fbaacb489d33fcb7b15de1330aa6b20888aaea8358b"
 EXPECTED_IMAGE_HASHES = {
     "solutions/2024/images/7884391bcaec6d4b3b606a079c578a4913ccb65a0f43986faeb8ca2af3e7e68e.jpg": "143fbb6e676f2d2c9d81665184043e8c7b44dd0730008d37a99c4e177b557c54",
@@ -403,6 +404,11 @@ def transform(source_root: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]:
         kind: sum(question["type"] == kind for question in questions)
         for kind in EXPECTED_COUNTS
     }
+    source_dirty_state = [
+        line
+        for line in git_output(source_root, "status", "--porcelain=v1").splitlines()
+        if not line.startswith(IGNORED_SOURCE_STATUS_PREFIXES)
+    ]
     payload = {
         "schemaVersion": SCHEMA_VERSION,
         "batchId": "REQ-010-math2-2024-markdown-staging",
@@ -412,8 +418,8 @@ def transform(source_root: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]:
             "name": SOURCE_REPO,
             "commit": git_output(source_root, "rev-parse", "HEAD"),
             "branch": git_output(source_root, "branch", "--show-current"),
-            "dirty": bool(git_output(source_root, "status", "--porcelain=v1")),
-            "dirtyState": git_output(source_root, "status", "--porcelain=v1").splitlines(),
+            "dirty": bool(source_dirty_state),
+            "dirtyState": source_dirty_state,
         },
         "sourceRoleDecision": {
             "requirement": "docs/requirements/REQ-010-math2-2024-markdown-staging.md",

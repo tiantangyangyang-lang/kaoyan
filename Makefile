@@ -12,12 +12,13 @@ MATH2_2024_REVIEW := content/reports/math2-2024/human-review-checklist.md
 MATH2_2021_2022_REPORT := content/reports/req-011-math2-2021-2022-staging-readiness
 MATH2_1997_2019_OUTPUT := content/staging/math2
 MATH2_1997_2019_REPORT := content/reports/req-017-math2-1997-2019-staging-readiness
+MATH2_1997_2019_YEARS := 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019
 MATH2_REPORT := content/reports/req-002-math2-markdown-import
 MATH2_INVENTORY := $(MATH2_REPORT)/source-inventory.json
 MATH3_1987_1996_OUTPUT := content/staging/math3
 MATH3_1987_1996_REPORT := content/reports/req-016-math3-1987-1996-staging-db-readiness
 
-.PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math2-inventory math2-pilot math2-katex math2-validate math2-2021-2022-audit math2-1997-2019-staging math2-1997-2019-katex-report math2-1997-2019-validate math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math3-1987-1996-staging math3-1987-1996-katex-report math3-1987-1996-validate math3-1987-import-dry-run math3-1988-import-dry-run math3-1989-import-dry-run math3-1990-import-dry-run math3-1991-import-dry-run math3-1992-import-dry-run math3-1993-import-dry-run math3-1994-import-dry-run math3-1995-import-dry-run math3-1996-import-dry-run math3-db-1987-1996-import-dry-run math3-1987-import-commit math3-1988-import-commit math3-1989-import-commit math3-1990-import-commit math3-1991-import-commit math3-1992-import-commit math3-1993-import-commit math3-1994-import-commit math3-1995-import-commit math3-1996-import-commit math3-db-1987-1996-import-commit math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run math2-db-preview-import-dry-run math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit math2-db-preview-import-commit math2-import-dry-run test-math2 test-python-all verify
+.PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math2-inventory math2-pilot math2-katex math2-validate math2-2021-2022-audit math2-1997-2019-staging math2-1997-2019-katex-report math2-1997-2019-validate math2-db-1997-2019-import-dry-run math2-db-1997-2019-import-commit math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math3-1987-1996-staging math3-1987-1996-katex-report math3-1987-1996-validate math3-1987-import-dry-run math3-1988-import-dry-run math3-1989-import-dry-run math3-1990-import-dry-run math3-1991-import-dry-run math3-1992-import-dry-run math3-1993-import-dry-run math3-1994-import-dry-run math3-1995-import-dry-run math3-1996-import-dry-run math3-db-1987-1996-import-dry-run math3-1987-import-commit math3-1988-import-commit math3-1989-import-commit math3-1990-import-commit math3-1991-import-commit math3-1992-import-commit math3-1993-import-commit math3-1994-import-commit math3-1995-import-commit math3-1996-import-commit math3-db-1987-1996-import-commit math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run math2-db-preview-import-dry-run math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit math2-db-preview-import-commit math2-import-dry-run test-math2 test-python-all verify
 
 help:
 	@echo "Available targets:"
@@ -32,6 +33,10 @@ help:
 	@echo "  make math2-validate           Regenerate and validate the Math2 pilot"
 	@echo "  make math2-2021-2022-audit    Audit Math2 2021/2022 source readiness"
 	@echo "  make math2-1997-2019-validate Regenerate and validate Math2 1997-2019 aggregate staging"
+	@echo "  make math2-db-1997-2019-import-dry-run"
+	@echo "                                Dry-run DB imports for Math2 1997-2019"
+	@echo "  make math2-db-1997-2019-import-commit"
+	@echo "                                Commit DB staging imports for Math2 1997-2019"
 	@echo "  make math2-2023-validate      Regenerate and validate Math2 2023 staging"
 	@echo "  make math2-2024-validate      Regenerate and validate Math2 2024 staging"
 	@echo "  make math3-1987-1996-validate Regenerate and validate Math3 1987-1996 staging"
@@ -131,6 +136,12 @@ math2-1997-2019-katex-report: math2-1997-2019-staging
 
 math2-1997-2019-validate: math2-1997-2019-katex-report
 	set MATH2_SOURCE_DIR=$(MATH2_SOURCE)&& $(PYTHON) -m unittest tests.test_transform_math2_1997_2019 -v
+
+math2-db-1997-2019-import-dry-run: math2-1997-2019-validate
+	@for %%Y in ($(MATH2_1997_2019_YEARS)) do $(NPM) run import:math2 --workspace @kaoyan/api -- --input "$(MATH2_1997_2019_OUTPUT)/%%Y/questions.json" || exit /b 1
+
+math2-db-1997-2019-import-commit: math2-1997-2019-validate
+	@for %%Y in ($(MATH2_1997_2019_YEARS)) do $(NPM) run import:math2 --workspace @kaoyan/api -- --input "$(MATH2_1997_2019_OUTPUT)/%%Y/questions.json" --commit || exit /b 1
 math2-2023-staging:
 	$(PYTHON) scripts/transform_math2_2023.py "$(MATH2_SOURCE)" "$(MATH2_2023_OUTPUT)" --review-checklist "$(MATH2_2023_REVIEW)"
 

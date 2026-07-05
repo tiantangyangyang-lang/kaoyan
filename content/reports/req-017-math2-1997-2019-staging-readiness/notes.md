@@ -95,3 +95,29 @@ Get-ChildItem -Recurse -File D:\work\Kaoyan-Math2-Papers | Where-Object { $_.Ful
 - Branch: `codex/req-017-math2-1997-2019-staging-readiness`
 - Primary commit: `feat(math2): stage 1997-2019 aggregate batches`
 - DB import status: not run; maintainer approval required before any REQ-017 live DB dry-run or commit.
+
+## REQ-017 DB Import Result
+
+- Date: 2026-07-05.
+- Added Makefile targets:
+  - `math2-db-1997-2019-import-dry-run`
+  - `math2-db-1997-2019-import-commit`
+- Local dependency setup:
+  - `npm.cmd install` initially failed inside the sandbox with npm cache `EPERM`.
+  - Retried with approved filesystem access and succeeded.
+  - Warning: repo requires Node `20.x`; current shell used Node `v24.15.0`.
+- Dry-run:
+  - Initial sandboxed DB attempt was blocked by network policy (`EACCES`).
+  - Approved external-network retry passed for all 23 years.
+  - All 23 results had `dryRun: true` and `transaction: rolled_back`.
+- Commit import:
+  - `mingw32-make NPM=npm.cmd math2-db-1997-2019-import-commit` passed.
+  - All 23 results had `dryRun: false` and `transaction: committed`.
+- Read-only SQL verification:
+  - 23 staging batches found for `REQ-017-math2-<year>-aggregate-staging`.
+  - 455 questions found for Math2 years 1997-2019.
+  - All 455 rows have `review_status = needs_human_review`.
+  - All 455 rows have `finalization_status = blocked`.
+- Detailed DB report: `content/reports/req-017-math2-1997-2019-staging-readiness/db-import-result.md`.
+- Publication boundary remains unchanged: no year is publishable in this requirement because every year has blocking source-review anomalies.
+- Follow-up verification fix: source inventory/staging dirty-state generation now ignores `.obsidian/` local tool metadata while preserving MinerU source dirty evidence.
