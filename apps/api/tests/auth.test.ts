@@ -129,7 +129,7 @@ class MemoryStore implements AuthStore, ContentStore {
   }
 
   async listPublishedQuestions(input: {
-    subjectCode: "math2" | "math3";
+    subjectCode: "math1" | "math2" | "math3";
     year?: number;
     type?: "multiple_choice" | "fill_in_blank" | "solution" | "proof" | "unknown";
     page: number;
@@ -159,7 +159,7 @@ class MemoryStore implements AuthStore, ContentStore {
   }
 
   async getPublishedQuestion(
-    _subjectCode: "math2" | "math3",
+    _subjectCode: "math1" | "math2" | "math3",
     stableId: string,
   ): Promise<ContentQuestionDetail | null> {
     return (
@@ -366,7 +366,7 @@ test("register, verify, login, sync and logout", async () => {
     .expect(401);
 });
 
-test("published Math2 content is public, bounded and split into list/detail", async () => {
+test("published content is public, bounded and split into list/detail", async () => {
   const store = new MemoryStore();
   store.publishedQuestions = [
     {
@@ -417,5 +417,9 @@ test("published Math2 content is public, bounded and split into list/detail", as
     .expect(400);
   await request(app)
     .get("/api/content/math2/questions/math2-2020-q99")
+    .expect(404);
+
+  await request(app)
+    .get("/api/content/math1/questions/math1-2020-q01")
     .expect(404);
 });

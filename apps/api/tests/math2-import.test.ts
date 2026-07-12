@@ -145,6 +145,29 @@ test("canonical option shape rejects option.text", () => {
   assert.throws(() => validateMath2ImportPayload(invalid));
 });
 
+test("Math2 and Math3 staging payloads must keep source evidence arrays", () => {
+  const invalid = structuredClone(payload) as typeof payload & {
+    questions: Array<Record<string, unknown>>;
+  };
+  delete invalid.questions[0].sourceEvidence;
+  invalid.questions[0].sourceTraceability = {
+    sourceRepo: "kaoyan",
+    sourceRelativePaths: ["content/final/math1/question-bank.json"],
+    sourceCommit: "a".repeat(40),
+    sourcePageRefs: [],
+    sourceFileHashes: {
+      "content/final/math1/question-bank.json": "b".repeat(64),
+    },
+    transformVersion: "test",
+    originalQuestionNumber: 1,
+  };
+
+  assert.throws(
+    () => validateQuestionImportPayload(invalid),
+    /sourceEvidence/,
+  );
+});
+
 test("generic importer accepts blocked Math3 staging payloads", async () => {
   const math3Payload = structuredClone(payload);
   math3Payload.batchId = "REQ-016-test";

@@ -16,8 +16,9 @@ MATH2_REPORT := content/reports/req-002-math2-markdown-import
 MATH2_INVENTORY := $(MATH2_REPORT)/source-inventory.json
 MATH3_1987_1996_OUTPUT := content/staging/math3
 MATH3_1987_1996_REPORT := content/reports/req-016-math3-1987-1996-staging-db-readiness
+MATH1_FINAL_INPUT := content/final/math1/question-bank.json
 
-.PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math2-inventory math2-pilot math2-katex math2-validate math2-2021-2022-audit math2-1997-2019-staging math2-1997-2019-katex-report math2-1997-2019-validate math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math3-1987-1996-staging math3-1987-1996-katex-report math3-1987-1996-validate math3-1987-import-dry-run math3-1988-import-dry-run math3-1989-import-dry-run math3-1990-import-dry-run math3-1991-import-dry-run math3-1992-import-dry-run math3-1993-import-dry-run math3-1994-import-dry-run math3-1995-import-dry-run math3-1996-import-dry-run math3-db-1987-1996-import-dry-run math3-1987-import-commit math3-1988-import-commit math3-1989-import-commit math3-1990-import-commit math3-1991-import-commit math3-1992-import-commit math3-1993-import-commit math3-1994-import-commit math3-1995-import-commit math3-1996-import-commit math3-db-1987-1996-import-commit math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run math2-db-preview-import-dry-run math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit math2-db-preview-import-commit math2-import-dry-run test-math2 test-python-all verify
+.PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math1-db-import-dry-run math1-db-import-commit math2-inventory math2-pilot math2-katex math2-validate math2-2021-2022-audit math2-1997-2019-staging math2-1997-2019-katex-report math2-1997-2019-validate math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math3-1987-1996-staging math3-1987-1996-katex-report math3-1987-1996-validate math3-1987-import-dry-run math3-1988-import-dry-run math3-1989-import-dry-run math3-1990-import-dry-run math3-1991-import-dry-run math3-1992-import-dry-run math3-1993-import-dry-run math3-1994-import-dry-run math3-1995-import-dry-run math3-1996-import-dry-run math3-db-1987-1996-import-dry-run math3-1987-import-commit math3-1988-import-commit math3-1989-import-commit math3-1990-import-commit math3-1991-import-commit math3-1992-import-commit math3-1993-import-commit math3-1994-import-commit math3-1995-import-commit math3-1996-import-commit math3-db-1987-1996-import-commit math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run math2-db-preview-import-dry-run math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit math2-db-preview-import-commit math2-import-dry-run test-math2 test-python-all verify
 
 help:
 	@echo "Available targets:"
@@ -29,6 +30,8 @@ help:
 	@echo "  make test                     Run API and web smoke tests"
 	@echo "  make build                    Build web and API"
 	@echo "  make math2-inventory          Audit read-only Math2 Markdown sources"
+	@echo "  make math1-db-import-dry-run  Validate all canonical Math1 years in a rolled-back DB import"
+	@echo "  make math1-db-import-commit   Commit all canonical Math1 years as DB staging"
 	@echo "  make math2-validate           Regenerate and validate the Math2 pilot"
 	@echo "  make math2-2021-2022-audit    Audit Math2 2021/2022 source readiness"
 	@echo "  make math2-1997-2019-validate Regenerate and validate Math2 1997-2019 aggregate staging"
@@ -81,6 +84,12 @@ build-web:
 
 build-api:
 	$(NPM) run build:api
+
+math1-db-import-dry-run:
+	$(NPM) run import:math1 --workspace @kaoyan/api -- --input "$(MATH1_FINAL_INPUT)"
+
+math1-db-import-commit:
+	$(NPM) run import:math1 --workspace @kaoyan/api -- --input "$(MATH1_FINAL_INPUT)" --commit
 
 math2-inventory:
 	$(PYTHON) scripts/inventory_math2_markdown.py "$(MATH2_SOURCE)" "$(MATH2_INVENTORY)"

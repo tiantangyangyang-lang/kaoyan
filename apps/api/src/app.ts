@@ -112,7 +112,7 @@ export function createApp({
     response.cookie(SESSION_COOKIE, token, getSessionCookieOptions(config));
   };
   const subjectCodeSchema = z.enum(["math1", "math2", "math3"]);
-  const contentSubjectCodeSchema = z.enum(["math2", "math3"]);
+  const contentSubjectCodeSchema = z.enum(["math1", "math2", "math3"]);
   const contentTypeSchema = z.enum([
     "multiple_choice",
     "fill_in_blank",
@@ -189,7 +189,9 @@ export function createApp({
         );
         const stableId = z
           .string()
-          .regex(/^math[23]-\d{4}-q\d{2,3}$/)
+          .regex(
+            /^(?:math[23]-\d{4}-q\d{2,3}|math1-\d{4}-(?:q\d{2,3}|s\d{2}(?:-q\d{2,3})?))$/,
+          )
           .parse(request.params.stableId);
         if (!stableId.startsWith(`${subjectCode}-`)) {
           response.status(400).json({ error: "stable_id_subject_mismatch" });
