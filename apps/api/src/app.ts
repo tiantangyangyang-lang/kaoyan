@@ -151,6 +151,7 @@ export function createApp({
   app.get(
     "/api/content/:subjectCode/questions",
     contentLimiter,
+    requireUser,
     async (request, response, next) => {
       try {
         const subjectCode = contentSubjectCodeSchema.parse(
@@ -168,10 +169,7 @@ export function createApp({
           subjectCode,
           ...query,
         });
-        response.set(
-          "Cache-Control",
-          "public, max-age=300, stale-while-revalidate=600",
-        );
+        response.set("Cache-Control", "private, no-store");
         response.json({ data });
       } catch (error) {
         next(error);
@@ -182,6 +180,7 @@ export function createApp({
   app.get(
     "/api/content/:subjectCode/questions/:stableId",
     contentLimiter,
+    requireUser,
     async (request, response, next) => {
       try {
         const subjectCode = contentSubjectCodeSchema.parse(
@@ -202,10 +201,7 @@ export function createApp({
           response.status(404).json({ error: "question_not_found" });
           return;
         }
-        response.set(
-          "Cache-Control",
-          "public, max-age=1800, stale-while-revalidate=3600",
-        );
+        response.set("Cache-Control", "private, no-store");
         response.json({ data });
       } catch (error) {
         next(error);

@@ -6,7 +6,7 @@ Express + MySQL 后端，提供：
 - Argon2id 密码哈希
 - MySQL 会话和 HttpOnly Cookie
 - 数学一 / 数学二 / 数学三学习记录云端保存
-- 数学一 / 数学二 / 数学三 published-only 内容查询
+- 登录后可用的数学一 / 数学二 / 数学三 published-only 内容查询
 - 年度题库 staging 导入和带审核门槛的 promotion
 - `/health` 部署健康检查
 
@@ -39,13 +39,21 @@ npm run import:math1 -- --input ../../content/final/math1/question-bank.json --c
 中断后可用 `--from-year 2016` 从指定年份恢复。Math2/Math3 schema payload
 可通过 `import:questions` 导入。
 
-批次经过人工审核后使用：
+REQ-018 固定授权范围使用以下受控命令，默认 dry-run：
 
 ```cmd
-npm run content:publish -- --batch-id <batch-id>
-npm run content:publish -- --batch-id <batch-id> --commit
+npm run content:approve
+npm run content:approve -- --commit
+npm run content:publish-authorized
+npm run content:publish-authorized -- --commit
+npm run content:verify-promoted
 ```
 
-该命令要求批次仍为 `staging`、所有题目 `review_status=approved` 且没有
+`content:approve` 只接受固定 74 个 batch ID 和 1552 题，只更新审核状态；
+不修改题干、选项、答案、解析、公式或来源证据。promotion 要求批次仍为
+`staging`、所有题目 `review_status=approved` 且没有
 `finalization_status=blocked`；同科目同年份的旧 published 批次会在同一事务中
 转为 `superseded`。
+
+published 内容列表和详情接口要求有效会话，匿名请求返回 401，认证响应使用
+`Cache-Control: private, no-store`。

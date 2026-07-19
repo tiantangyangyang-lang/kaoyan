@@ -3,8 +3,8 @@
 一个面向考研数学真题练习、错题复盘和学习记录管理的全栈 Web 应用。
 
 当前版本以数学一为基础，收录 1987—2025 年（不含缺失来源的 1994 年）
-共 852 道真题。数学二、数学三已有静态复核预览和数据库 staging；公开内容
-API 只返回经过审核并明确 promotion 为 `published` 的批次。
+共 852 道真题。数学二、数学三已有静态复核预览和数据库内容；内容 API
+只向登录用户返回经过审核并明确 promotion 为 `published` 的批次。
 
 ## 功能
 
@@ -75,7 +75,7 @@ http://127.0.0.1:5173
 ```
 
 当前静态题库预览、练习、错题本和导出功能不需要启动 API。生产内容 API
-只读取数据库 `published` 批次，不能把 staging 导入视为发布完成。
+要求有效登录会话且只读取数据库 `published` 批次。
 
 ## 启动账号系统
 
@@ -144,15 +144,19 @@ make math1-db-import-commit
 npm run import:questions --workspace @kaoyan/api -- --input <questions.json>
 ```
 
-发布是独立操作，默认同样只做回滚验证：
+固定的维护者授权范围先通过受控审批，再运行 promotion；各命令默认 dry-run：
 
 ```cmd
-npm run content:publish --workspace @kaoyan/api -- --batch-id <batch-id>
-npm run content:publish --workspace @kaoyan/api -- --batch-id <batch-id> --commit
+make content-db-approve-dry-run
+make content-db-approve-commit
+make content-db-publish-dry-run
+make content-db-publish-commit
+make content-db-verify-promoted
 ```
 
 promotion 会拒绝包含 `review_status != approved` 或
 `finalization_status = blocked` 的批次。不要通过直接 SQL 绕过该门槛。
+内容列表和详情接口要求有效会话，匿名请求返回 401。
 
 ## 工程流程
 
