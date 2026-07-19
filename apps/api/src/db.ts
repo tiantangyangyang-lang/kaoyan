@@ -17,6 +17,7 @@ import type {
   ContentOption,
   ContentQuestionDetail,
   ContentQuestionPage,
+  ContentSubjectCode,
   ContentStore,
 } from "./content-store.js";
 import {
@@ -43,6 +44,8 @@ export function createDatabasePool(config: AppConfig): Pool {
     password: decodeURIComponent(url.password),
     database: url.pathname.replace(/^\//, ""),
     connectionLimit: 5,
+    enableKeepAlive: true,
+    keepAliveInitialDelay: 0,
     timezone: "Z",
     ssl: config.DATABASE_SSL
       ? { rejectUnauthorized: true, ...(ca ? { ca } : {}) }
@@ -434,7 +437,7 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
   }
 
   async listPublishedQuestions(input: {
-    subjectCode: "math2" | "math3";
+    subjectCode: ContentSubjectCode;
     year?: number;
     type?: "multiple_choice" | "fill_in_blank" | "solution" | "proof" | "unknown";
     page: number;
@@ -484,7 +487,7 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
   }
 
   async getPublishedQuestion(
-    subjectCode: "math2" | "math3",
+    subjectCode: ContentSubjectCode,
     stableId: string,
   ): Promise<ContentQuestionDetail | null> {
     const [rows] = await this.pool.query<QuestionContentRow[]>(

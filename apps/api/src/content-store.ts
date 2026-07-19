@@ -30,16 +30,18 @@ export interface ContentQuestionPage {
   totalPages: number;
 }
 
+export type ContentSubjectCode = "math1" | "math2" | "math3";
+
 export interface ContentStore {
   listPublishedQuestions(input: {
-    subjectCode: "math2" | "math3";
+    subjectCode: ContentSubjectCode;
     year?: number;
     type?: "multiple_choice" | "fill_in_blank" | "solution" | "proof" | "unknown";
     page: number;
     pageSize: number;
   }): Promise<ContentQuestionPage>;
   getPublishedQuestion(
-    subjectCode: "math2" | "math3",
+    subjectCode: ContentSubjectCode,
     stableId: string,
   ): Promise<ContentQuestionDetail | null>;
 }

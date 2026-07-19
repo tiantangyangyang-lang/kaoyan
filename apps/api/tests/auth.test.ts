@@ -129,7 +129,7 @@ class MemoryStore implements AuthStore, ContentStore {
   }
 
   async listPublishedQuestions(input: {
-    subjectCode: "math2" | "math3";
+    subjectCode: "math1" | "math2" | "math3";
     year?: number;
     type?: "multiple_choice" | "fill_in_blank" | "solution" | "proof" | "unknown";
     page: number;
@@ -159,7 +159,7 @@ class MemoryStore implements AuthStore, ContentStore {
   }
 
   async getPublishedQuestion(
-    _subjectCode: "math2" | "math3",
+    _subjectCode: "math1" | "math2" | "math3",
     stableId: string,
   ): Promise<ContentQuestionDetail | null> {
     return (
@@ -194,6 +194,18 @@ const config: AppConfig = {
   TRUST_PROXY: 1,
 };
 
+const addAuthenticatedSession = (store: MemoryStore) => {
+  const token = "authenticated-content-token";
+  store.users.set("student@example.com", {
+    id: "user-1",
+    email: "student@example.com",
+    passwordHash: "unused",
+    emailVerified: true,
+  });
+  store.sessions.set(hashToken(token), "user-1");
+  return `kaoyan_session=${token}`;
+};
+
 test("allows only configured web origins", () => {
   assert.equal(
     isAllowedWebOrigin(config, "http://127.0.0.1:5173"),
@@ -216,7 +228,7 @@ test("allows only configured web origins", () => {
   );
 });
 
-test("published Math3 content uses the same public content contract", async () => {
+test("published Math3 content requires authentication", async () => {
   const store = new MemoryStore();
   store.publishedQuestions = [
     {
@@ -241,18 +253,29 @@ test("published Math3 content uses the same public content contract", async () =
     mailer: { async sendVerification() {} },
   });
 
+  await request(app)
+    .get("/api/content/math3/questions?page=1&pageSize=1&year=1987")
+    .expect(401, { error: "authentication_required" });
+  await request(app)
+    .get("/api/content/math3/questions/math3-1987-q01")
+    .expect(401, { error: "authentication_required" });
+
+  const cookie = addAuthenticatedSession(store);
   const list = await request(app)
     .get("/api/content/math3/questions?page=1&pageSize=1&year=1987")
+    .set("Cookie", cookie)
     .expect(200);
   assert.equal(list.body.data.items[0].stableId, "math3-1987-q01");
 
   const detail = await request(app)
     .get("/api/content/math3/questions/math3-1987-q01")
+    .set("Cookie", cookie)
     .expect(200);
   assert.equal(detail.body.data.explanationStatus, "sourced_from_aggregate");
 
   await request(app)
     .get("/api/content/math3/questions/math2-2020-q01")
+    .set("Cookie", cookie)
     .expect(400, { error: "stable_id_subject_mismatch" });
 });
 
@@ -366,7 +389,7 @@ test("register, verify, login, sync and logout", async () => {
     .expect(401);
 });
 
-test("published Math2 content is public, bounded and split into list/detail", async () => {
+test("published content is authenticated, bounded and split into list/detail", async () => {
   const store = new MemoryStore();
   store.publishedQuestions = [
     {
@@ -395,18 +418,29 @@ test("published Math2 content is public, bounded and split into list/detail", as
     store,
     mailer: { async sendVerification() {} },
   });
+  const cookie = addAuthenticatedSession(store);
+
+  await request(app)
+    .get("/api/content/math2/questions?page=1&pageSize=1&year=2020")
+    .expect(401, { error: "authentication_required" });
+  await request(app)
+    .get("/api/content/math2/questions/math2-2020-q01")
+    .expect(401, { error: "authentication_required" });
 
   const list = await request(app)
     .get("/api/content/math2/questions?page=1&pageSize=1&year=2020")
+    .set("Cookie", cookie)
     .expect(200);
-  assert.match(list.headers["cache-control"], /^public/);
+  assert.equal(list.headers["cache-control"], "private, no-store");
   assert.equal(list.body.data.items.length, 1);
   assert.equal("answer" in list.body.data.items[0], false);
   assert.equal("explanation" in list.body.data.items[0], false);
 
   const detail = await request(app)
     .get("/api/content/math2/questions/math2-2020-q01")
+    .set("Cookie", cookie)
     .expect(200);
+  assert.equal(detail.headers["cache-control"], "private, no-store");
   assert.equal(detail.body.data.answer, "A");
   assert.equal(detail.body.data.explanation, "Explanation");
   assert.equal("sourceTraceability" in detail.body.data, false);
@@ -414,8 +448,15 @@ test("published Math2 content is public, bounded and split into list/detail", as
 
   await request(app)
     .get("/api/content/math2/questions?pageSize=51")
+    .set("Cookie", cookie)
     .expect(400);
   await request(app)
     .get("/api/content/math2/questions/math2-2020-q99")
+    .set("Cookie", cookie)
+    .expect(404);
+
+  await request(app)
+    .get("/api/content/math1/questions/math1-2020-q01")
+    .set("Cookie", cookie)
     .expect(404);
 });

@@ -9,7 +9,7 @@ const optionSchema = z
   })
   .strict();
 
-const subjectSchema = z.enum(["math2", "math3"]);
+const subjectSchema = z.enum(["math1", "math2", "math3"]);
 const questionTypeSchema = z.enum([
   "multiple_choice",
   "fill_in_blank",
@@ -18,9 +18,40 @@ const questionTypeSchema = z.enum([
   "unknown",
 ]);
 
+const sourceEvidenceSchema = z
+  .array(
+    z
+      .object({
+        relativePath: z.string().min(1),
+        role: z.string().min(1),
+        gitState: z.enum(["tracked", "modified", "untracked"]),
+        sha256: z.string().regex(/^[0-9a-f]{64}$/i),
+        lineStart: z.number().int().positive(),
+        lineEnd: z.number().int().positive(),
+      })
+      .strict(),
+  )
+  .min(1);
+
+const sourceTraceabilitySchema = z
+  .object({
+    sourceRepo: z.string().min(1),
+    sourceRelativePaths: z.array(z.string().min(1)).min(1),
+    sourceCommit: z.string().regex(/^[0-9a-f]{40}$/i),
+    sourcePageRefs: z.array(z.unknown()),
+    sourceFileHashes: z.record(z.string(), z.string().nullable()),
+    transformVersion: z.string().min(1),
+    originalQuestionNumber: z.number().int().positive().nullable(),
+  })
+  .strict();
+
 const questionSchema = z
   .object({
-    stableId: z.string().regex(/^math[23]-\d{4}-q\d{2,3}$/),
+    stableId: z
+      .string()
+      .regex(
+        /^(?:math[23]-\d{4}-q\d{2,3}|math1-\d{4}-(?:q\d{2,3}|s\d{2}(?:-q\d{2,3})?))$/,
+      ),
     sourceYear: z.number().int(),
     subjectCode: subjectSchema,
     type: questionTypeSchema,
@@ -35,26 +66,21 @@ const questionSchema = z
     finalizationStatus: z.string().min(1),
     knowledgePoints: z.array(z.string()),
     anomalies: z.array(z.record(z.string(), z.unknown())),
-    sourceEvidence: z
-      .array(
-        z
-          .object({
-            relativePath: z.string().min(1),
-            role: z.string().min(1),
-            gitState: z.enum(["tracked", "modified", "untracked"]),
-            sha256: z.string().regex(/^[0-9a-f]{64}$/i),
-            lineStart: z.number().int().positive(),
-            lineEnd: z.number().int().positive(),
-          })
-          .strict(),
-      )
-      .min(1),
+    sourceEvidence: sourceEvidenceSchema.optional(),
+    sourceTraceability: sourceTraceabilitySchema.optional(),
   })
-  .strict();
+  .strict()
+  .refine(
+    (question) => question.sourceEvidence || question.sourceTraceability,
+    "source traceability is required",
+  );
 
 const importPayloadSchema = z
   .object({
-    schemaVersion: z.literal("math2-question-staging-v2"),
+    schemaVersion: z.enum([
+      "math2-question-staging-v2",
+      "math1-final-db-v1",
+    ]),
     batchId: z.string().min(1).max(128),
     subjectCode: subjectSchema,
     sourceYear: z.number().int(),
@@ -84,7 +110,51 @@ const importPayloadSchema = z
       schemaValid: z.literal(true),
     }).passthrough(),
   })
-  .passthrough();
+  .passthrough()
+  .superRefine((payload, context) => {
+    if (
+      payload.schemaVersion === "math1-final-db-v1" &&
+      payload.subjectCode !== "math1"
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "math1-final-db-v1 only accepts subjectCode math1",
+        path: ["subjectCode"],
+      });
+    }
+    if (
+      payload.schemaVersion === "math2-question-staging-v2" &&
+      payload.subjectCode === "math1"
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "math1 payloads must use math1-final-db-v1",
+        path: ["schemaVersion"],
+      });
+    }
+    for (const [index, question] of payload.questions.entries()) {
+      if (
+        payload.schemaVersion === "math2-question-staging-v2" &&
+        !question.sourceEvidence
+      ) {
+        context.addIssue({
+          code: "custom",
+          message: "math2/math3 staging questions require sourceEvidence",
+          path: ["questions", index, "sourceEvidence"],
+        });
+      }
+      if (
+        payload.schemaVersion === "math1-final-db-v1" &&
+        !question.sourceTraceability
+      ) {
+        context.addIssue({
+          code: "custom",
+          message: "math1 import questions require sourceTraceability",
+          path: ["questions", index, "sourceTraceability"],
+        });
+      }
+    }
+  });
 
 export type Math2ImportPayload = z.infer<typeof importPayloadSchema>;
 export type QuestionImportPayload = z.infer<typeof importPayloadSchema>;
@@ -241,7 +311,9 @@ export async function importQuestionBatch(
           question.answerStatus,
           question.explanation,
           question.explanationStatus,
-          JSON.stringify(question.sourceEvidence),
+          JSON.stringify(
+            question.sourceEvidence ?? question.sourceTraceability,
+          ),
           question.reviewStatus,
           question.finalizationStatus,
           JSON.stringify(question.knowledgePoints),
