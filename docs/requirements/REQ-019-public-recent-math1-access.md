@@ -17,6 +17,8 @@ changing any question, answer, option, formula, explanation, or provenance recor
 - Apply the same rule to list and detail APIs.
 - Ensure an unfiltered anonymous Math1 list returns only 2018-2025 content.
 - Remove protected content from anonymously downloadable static web assets.
+- Keep legacy Math2/Math3 static URLs from serving stale cached question payloads
+  after deployment.
 - Keep the web application hybrid: recent Math1 may remain static, while protected
   content is loaded through authenticated APIs.
 
@@ -43,6 +45,9 @@ changing any question, answer, option, formula, explanation, or provenance recor
 8. Stable IDs and the promoted counts remain Math1 852, Math2 522, Math3 178, total
    1,552, with no duplicate stable IDs.
 9. Existing known-risk audit records remain unchanged.
+10. Legacy `/data/math2.json` and `/data/math3.json` requests resolve to the
+    authenticated API, while a safe static fallback contains only an
+    `authentication_required` denial and no question records.
 
 ## Constraints
 

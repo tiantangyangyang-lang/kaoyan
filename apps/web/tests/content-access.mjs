@@ -4,7 +4,8 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const testDir = dirname(fileURLToPath(import.meta.url));
-const dataDir = resolve(testDir, "..", "public", "data");
+const publicDir = resolve(testDir, "..", "public");
+const dataDir = resolve(publicDir, "data");
 
 const readJson = async (name) =>
   JSON.parse(await readFile(resolve(dataDir, name), "utf8"));
@@ -35,8 +36,26 @@ assert.equal(
   math1.questions.length,
   "public Math1 stable IDs must be unique",
 );
-assert.equal(await exists("math2.json"), false);
-assert.equal(await exists("math3.json"), false);
+for (const subjectCode of ["math2", "math3"]) {
+  assert.equal(await exists(`${subjectCode}.json`), true);
+  const denial = await readJson(`${subjectCode}.json`);
+  assert.deepEqual(denial, {
+    schemaVersion: "kaoyan-protected-content-v1",
+    subjectCode,
+    error: "authentication_required",
+  });
+  assert.equal("questions" in denial, false);
+}
+const redirects = await readFile(resolve(publicDir, "_redirects"), "utf8");
+for (const subjectCode of ["math2", "math3"]) {
+  assert.match(
+    redirects,
+    new RegExp(
+      `^/data/${subjectCode}\\.json https://api\\.gongren\\.xyz/api/content/${subjectCode}/questions\\?page=1&pageSize=1 302$`,
+      "m",
+    ),
+  );
+}
 
 const catalog = await readJson("subjects.json");
 const byCode = new Map(catalog.subjects.map((subject) => [subject.code, subject]));
@@ -67,6 +86,7 @@ console.log(
     status: "passed",
     publicMath1Questions: math1.questions.length,
     publicYears: [2018, 2025],
-    protectedArtifactsPresent: false,
+    protectedQuestionPayloadsPresent: false,
+    legacyProtectedPaths: "authentication_required",
   }),
 );

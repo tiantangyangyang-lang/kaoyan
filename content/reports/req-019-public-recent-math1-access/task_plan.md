@@ -16,7 +16,8 @@ Enforce Math1 2018-2025 as the only anonymously visible question content across 
 - [x] Phase 3: Implement the server-side policy and tests.
 - [x] Phase 4: Remove protected static payloads and implement authenticated frontend loading with tests.
 - [x] Phase 5: Run targeted/full verification, review the diff, and write the access audit.
-- [ ] Phase 6: Commit the reviewed scope, push the branch, update the PR, deploy, and verify production access.
+- [x] Phase 6: Commit the reviewed scope, push the branch, merge PR 21, and verify the production API.
+- [ ] Phase 7: Replace stale protected static cache keys with denial responses, deploy, and verify production access.
 
 ## Key questions
 1. Can existing session middleware distinguish authenticated and anonymous access without changing response shapes?
@@ -39,7 +40,8 @@ Enforce Math1 2018-2025 as the only anonymously visible question content across 
 - Browser console assertions initially reported expected mock 401/404 resource errors and exposed a real Math2-to-Math1-animation API mismatch. The workspace now renders animation gates only for Math1; anonymous auth mocks return a null user without console noise.
 - Live database verification was blocked by sandbox networking, and the controlled network retry was rejected because the authorization reviewer hit its usage limit. No database command ran with elevated network access.
 - `make verify` stopped at the pre-existing Math2 source inventory mismatch (current 792 files versus fixed expectation 775). Generated REQ-002 inventory changes were removed with a precise reverse patch; the external source repository was unchanged.
+- The production Pages deploy removed Math2/Math3 files from the new artifact set, but an existing edge continued serving the deleted JSON with a seven-day shared-cache TTL. Browser policy blocked dashboard purging and no Cloudflare API credential was present, so Phase 7 uses same-path denial assets plus exact authenticated-API redirects.
 - Two multi-hunk smoke-test patches failed context verification and made no changes. Smaller exact patches applied successfully.
 
 ## Status
-**Currently in Phase 6** - implementation is locally complete; Git delivery and production verification are in progress.
+**Currently in Phase 7** - API deployment is complete; the static cache-denial follow-up is being verified and deployed.
