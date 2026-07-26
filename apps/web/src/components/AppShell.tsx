@@ -74,9 +74,9 @@ export function AppShell({
           <span>当前科目</span>
           <strong>{subjectName}</strong>
           <small>
-            {subject === "math2"
-              ? "待复核预览，答案解析整理中"
-              : "数学二待复核预览已开放"}
+            {subject === "math1"
+              ? "2018—2025 免登录，完整题库登录后可见"
+              : "登录后可见，已知内容风险保留审计"}
           </small>
         </div>
       </aside>

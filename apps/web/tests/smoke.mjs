@@ -8,6 +8,52 @@ const chromePath =
   "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const outputDir = resolve("temp", "web-qa");
 
+const fulfillJson = (route, status, body) =>
+  route.fulfill({
+    status,
+    contentType: "application/json",
+    body: JSON.stringify(body),
+  });
+
+const publishedQuestion = (subject) => ({
+  stableId: `${subject}-2020-q01`,
+  sourceYear: 2020,
+  type: "multiple_choice",
+  questionNumber: 1,
+  stem: `${subject} authenticated smoke question`,
+  options: [
+    { label: "A", value: "选项一" },
+    { label: "B", value: "选项二" },
+  ],
+  finalizationStatus: "published",
+});
+
+const captureBrowserIssues = (page) => {
+  const issues = [];
+  page.on("console", (message) => {
+    if (["error", "warning"].includes(message.type())) {
+      issues.push(`console ${message.type()}: ${message.text()}`);
+    }
+  });
+  page.on("pageerror", (error) => issues.push(`pageerror: ${error.message}`));
+  return issues;
+};
+
+const routeAnonymousApi = (page) =>
+  page.route("**/api/**", (route) => {
+    const pathname = new URL(route.request().url()).pathname;
+    if (pathname.endsWith("/api/auth/me")) {
+      return fulfillJson(route, 200, { user: null });
+    }
+    if (pathname.endsWith("/availability")) {
+      return fulfillJson(route, 200, { available: false });
+    }
+    if (pathname.includes("/api/content/")) {
+      return fulfillJson(route, 401, { error: "authentication_required" });
+    }
+    return fulfillJson(route, 200, {});
+  });
+
 await mkdir(outputDir, { recursive: true });
 
 const browser = await chromium.launch({
@@ -20,6 +66,8 @@ try {
     viewport: { width: 1440, height: 1000 },
     deviceScaleFactor: 1,
   });
+  const pageIssues = captureBrowserIssues(page);
+  await routeAnonymousApi(page);
 
   await page.goto(baseUrl, { waitUntil: "networkidle" });
   await page.evaluate(() => localStorage.clear());
@@ -27,7 +75,7 @@ try {
 
   await page.getByRole("heading", { name: "今天从一道真题开始" }).waitFor();
   const bodyText = await page.locator("body").innerText();
-  if (!bodyText.includes("852 题")) throw new Error("Question count missing");
+  if (!bodyText.includes("179 题")) throw new Error("Public question count missing");
 
   await page.screenshot({
     path: resolve(outputDir, "dashboard-desktop.png"),
@@ -45,16 +93,9 @@ try {
   await page.getByRole("button", { name: "真题库" }).click();
   await page.getByRole("heading", { name: "选择考试科目" }).waitFor();
   await page.getByRole("button", { name: /数学二/ }).click();
-  await page.getByRole("heading", { name: "数学二真题库" }).waitFor();
-  await page.getByText("67 题", { exact: true }).waitFor();
-  await page.locator(".subject-review-warning").getByText(/答案.*解析整理中/).waitFor();
-  await page.locator(".question-row").first().click();
-  await page.locator(".workspace").waitFor();
-  await page.getByText(/反馈：tiantangyangyang@gmail\.com/).waitFor();
-  await page.getByRole("button", { name: "查看答案解析" }).click();
-  await page.getByText("答案整理中，暂未发布参考答案。").waitFor();
+  await page.getByRole("heading", { name: "让学习记录跨设备保存" }).waitFor();
+  await page.getByText(/数学一 2018 年以前及数学二、数学三需要登录/).waitFor();
   await page.getByRole("button", { name: "真题库" }).click();
-  await page.getByRole("button", { name: "← 返回选择科目" }).click();
   await page.getByRole("button", { name: /数学一/ }).click();
   await page.getByRole("heading", { name: "数学一真题库" }).waitFor();
   await page.locator("select").nth(0).selectOption("2025");
@@ -102,13 +143,8 @@ try {
   await page.getByRole("button", { name: "整卷练习" }).click();
   await page.getByRole("heading", { name: "选择考试科目" }).waitFor();
   await page.getByRole("button", { name: /数学二/ }).click();
-  await page.getByRole("heading", { name: "数学二整卷练习" }).waitFor();
-  await page.locator(".subject-review-warning").getByText(/答案.*解析整理中/).waitFor();
-  await page.locator(".paper-card").first().getByRole("button").click();
-  await page.locator(".paper-session-layout").waitFor();
-  await page.getByText(/反馈：tiantangyangyang@gmail\.com/).waitFor();
-  await page.getByRole("button", { name: "保存并退出" }).click();
-  await page.getByRole("button", { name: "← 返回选择科目" }).click();
+  await page.getByRole("heading", { name: "让学习记录跨设备保存" }).waitFor();
+  await page.getByRole("button", { name: "整卷练习" }).click();
   await page.getByRole("button", { name: /数学一/ }).click();
   await page.getByRole("heading", { name: "数学一整卷练习" }).waitFor();
   await page.locator(".paper-card").first().getByRole("button").click();
@@ -144,6 +180,8 @@ try {
     viewport: { width: 390, height: 844 },
     deviceScaleFactor: 1,
   });
+  const mobileIssues = captureBrowserIssues(mobile);
+  await routeAnonymousApi(mobile);
   await mobile.goto(baseUrl, { waitUntil: "networkidle" });
   await mobile.getByRole("heading", { name: "今天从一道真题开始" }).waitFor();
   await mobile.screenshot({
@@ -156,6 +194,75 @@ try {
   await mobile.getByRole("button", { name: /数学一/ }).click();
   await mobile.getByRole("heading", { name: "数学一真题库" }).waitFor();
 
+  const authenticated = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+  });
+  const authenticatedIssues = captureBrowserIssues(authenticated);
+  await authenticated.route("**/api/**", (route) => {
+    const url = new URL(route.request().url());
+    if (url.pathname.endsWith("/api/auth/me")) {
+      return fulfillJson(route, 200, {
+        user: { id: "smoke-user", email: "smoke@example.com", emailVerified: true },
+      });
+    }
+    if (url.pathname.includes("/api/question-animations/")) {
+      return fulfillJson(route, 404, { error: "animation_not_found" });
+    }
+    const detailMatch = /\/api\/content\/(math[123])\/questions\/(.+)$/.exec(
+      url.pathname,
+    );
+    if (detailMatch) {
+      const question = publishedQuestion(detailMatch[1]);
+      return fulfillJson(route, 200, {
+        data: {
+          ...question,
+          answer: "A",
+          answerStatus: "reviewed",
+          explanation: "已登录详情",
+          explanationStatus: "reviewed",
+          reviewStatus: "reviewed",
+          knowledgePoints: [],
+        },
+      });
+    }
+    const listMatch = /\/api\/content\/(math[123])\/questions$/.exec(url.pathname);
+    if (listMatch) {
+      return fulfillJson(route, 200, {
+        data: {
+          items: [publishedQuestion(listMatch[1])],
+          page: 1,
+          pageSize: 50,
+          totalItems: 1,
+          totalPages: 1,
+        },
+      });
+    }
+    return fulfillJson(route, 404, { error: "not_found" });
+  });
+  await authenticated.goto(baseUrl, { waitUntil: "networkidle" });
+  await authenticated.getByRole("button", { name: "真题库" }).click();
+  await authenticated.getByRole("button", { name: /数学二/ }).click();
+  await authenticated.getByRole("heading", { name: "数学二真题库" }).waitFor();
+  await authenticated.getByText("1 题", { exact: true }).waitFor();
+  await authenticated.locator(".question-row").first().click();
+  await authenticated.locator(".workspace").waitFor();
+  await authenticated.getByRole("button", { name: "查看答案解析" }).click();
+  await authenticated.getByText("已登录详情", { exact: true }).waitFor();
+  await authenticated.screenshot({
+    path: resolve(outputDir, "authenticated-math2.png"),
+    fullPage: true,
+  });
+
+  const browserIssues = [
+    ...pageIssues,
+    ...mobileIssues,
+    ...authenticatedIssues,
+  ];
+  if (browserIssues.length > 0) {
+    throw new Error(`Browser console/page errors:\n${browserIssues.join("\n")}`);
+  }
+
   console.log(
     JSON.stringify(
       {
@@ -163,6 +270,9 @@ try {
         dashboard: "dashboard-desktop.png",
         practice: "practice-desktop.png",
         mobile: "dashboard-mobile.png",
+        authenticated: "authenticated-math2.png",
+        anonymousProtectedRedirect: true,
+        authenticatedProtectedContent: true,
         paperSubmission: true,
         reviewQueue: true,
         exports: ["json", "zip"],

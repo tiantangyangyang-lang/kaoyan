@@ -17,6 +17,8 @@ export function BankView({
   subjectChosen,
   onSubjectChosenChange,
   onSubjectChange,
+  isAuthenticated,
+  onLoginRequired,
   questions,
   states,
   onOpenQuestion,
@@ -27,6 +29,8 @@ export function BankView({
   subjectChosen: boolean;
   onSubjectChosenChange: (selected: boolean) => void;
   onSubjectChange: (subject: SubjectCode) => void;
+  isAuthenticated: boolean;
+  onLoginRequired: () => void;
   questions: Question[];
   states: QuestionStateMap;
   onOpenQuestion: (question: Question) => void;
@@ -70,7 +74,9 @@ export function BankView({
       <SubjectSelector
         featureLabel="真题库"
         subjectCatalog={subjectCatalog}
+        isAuthenticated={isAuthenticated}
         onSelect={selectSubject}
+        onLoginRequired={onLoginRequired}
       />
     );
   }
@@ -92,7 +98,7 @@ export function BankView({
       {subject === "math2" && (
         <div className="content-warning subject-review-warning">
           <span>
-            数学二当前为待复核预览：题干可先练，答案和解析整理中。发现问题请反馈至
+            数学二包含已记录的缺失答案、缺失解析与待人工复核项。发现问题请反馈至
             tiantangyangyang@gmail.com。
           </span>
         </div>

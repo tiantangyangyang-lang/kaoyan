@@ -1,7 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { AppShell } from "./components/AppShell";
 import { QuestionWorkspace } from "./components/QuestionWorkspace";
-import { loadQuestionBank, loadSubjectCatalog } from "./data";
+import {
+  loadAuthenticatedQuestionBank,
+  loadAuthenticatedQuestionDetail,
+  loadQuestionBank,
+  loadSubjectCatalog,
+} from "./data";
 import {
   exportLearningData,
   getQuestionState,
@@ -57,11 +62,13 @@ export function App() {
   const [error, setError] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [user, setUser] = useState<AuthUser | null>(null);
+  const [authReady, setAuthReady] = useState(false);
   const [authNotice, setAuthNotice] = useState("");
 
   useEffect(() => {
     let cancelled = false;
     async function loadCurrentSubject() {
+      if (!authReady) return;
       try {
         setError("");
         setBank(null);
@@ -71,10 +78,20 @@ export function App() {
         const item = catalog.subjects.find((entry) => entry.code === subject);
         const nextSubjectName = item?.name ?? SUBJECT_LABELS[subject];
         setSubjectName(nextSubjectName);
-        if (!item?.enabled || !item.questionBankUrl) {
+        if (!item?.enabled) {
           throw new Error(`${nextSubjectName}题库暂不可用`);
         }
-        const loadedBank = await loadQuestionBank(item.questionBankUrl);
+        if (!user && subject !== "math1") {
+          throw new Error(`${nextSubjectName}题库需要登录后查看`);
+        }
+        const loadedBank = user
+          ? await loadAuthenticatedQuestionBank(subject)
+          : item.questionBankUrl
+            ? await loadQuestionBank(item.questionBankUrl)
+            : null;
+        if (!loadedBank) {
+          throw new Error(`${nextSubjectName}题库暂不可用`);
+        }
         if (loadedBank.subjectCode !== subject) {
           throw new Error(`${nextSubjectName}题库科目标记不一致`);
         }
@@ -89,10 +106,12 @@ export function App() {
     return () => {
       cancelled = true;
     };
-  }, [subject]);
+  }, [authReady, subject, user]);
 
   useEffect(() => {
-    void getCurrentUser().then(setUser);
+    void getCurrentUser()
+      .then(setUser)
+      .finally(() => setAuthReady(true));
     const url = new URL(window.location.href);
     const token = url.searchParams.get("verify");
     if (!token) return;
@@ -124,14 +143,65 @@ export function App() {
   const selectedQuestion =
     selectedIndex >= 0 ? questions[selectedIndex] : questions[0];
 
+  const loadDetails = async (targets: Question[]) => {
+    const details: Question[] = [];
+    for (let start = 0; start < targets.length; start += 4) {
+      details.push(
+        ...(await Promise.all(
+          targets
+            .slice(start, start + 4)
+            .map((question) =>
+              loadAuthenticatedQuestionDetail(subject, question.stableId),
+            ),
+        )),
+      );
+    }
+    return details;
+  };
+
+  const replaceQuestionDetails = (
+    currentBank: QuestionBank,
+    details: Question[],
+  ): QuestionBank => {
+    const detailById = new Map(details.map((question) => [question.stableId, question]));
+    return {
+      ...currentBank,
+      questions: currentBank.questions.map(
+        (question) => detailById.get(question.stableId) ?? question,
+      ),
+    };
+  };
+
   const openQuestion = (question: Question) => {
-    setSelectedId(question.stableId);
-    setView("practice");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const showQuestion = () => {
+      setSelectedId(question.stableId);
+      setView("practice");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    if (!user || question.detailLoaded !== false || !bank) {
+      showQuestion();
+      return;
+    }
+    const currentBank = bank;
+    setBank(null);
+    void loadDetails([question])
+      .then((details) => {
+        setBank(replaceQuestionDetails(currentBank, details));
+        showQuestion();
+      })
+      .catch(() => {
+        setBank(currentBank);
+        setError("登录内容加载失败，请刷新页面后重试。");
+      });
   };
 
   const switchSubject = (nextSubject: SubjectCode) => {
     if (nextSubject === subject) return;
+    if (!user && nextSubject !== "math1") {
+      setAuthNotice("数学一 2018 年以前及数学二、数学三需要登录后查看。");
+      setView("account");
+      return;
+    }
     setSubjectName(SUBJECT_LABELS[nextSubject]);
     setSubject(nextSubject);
     setStates(loadQuestionStates(nextSubject));
@@ -161,6 +231,30 @@ export function App() {
   };
 
   const startPaper = (year: number) => {
+    if (user && bank) {
+      const missingDetails = questions.filter(
+        (question) =>
+          question.sourceYear === year && question.detailLoaded === false,
+      );
+      if (missingDetails.length > 0) {
+        const currentBank = bank;
+        setBank(null);
+        void loadDetails(missingDetails)
+          .then((details) => {
+            setBank(replaceQuestionDetails(currentBank, details));
+            startPaperSession(year);
+          })
+          .catch(() => {
+            setBank(currentBank);
+            setError("整卷答案与解析加载失败，请刷新页面后重试。");
+          });
+        return;
+      }
+    }
+    startPaperSession(year);
+  };
+
+  const startPaperSession = (year: number) => {
     const key = String(year);
     const existing = paperSessions[key];
     if (!existing || existing.status === "submitted") {
@@ -243,7 +337,7 @@ export function App() {
       <div className="fatal-state">
         <h1>题库加载失败</h1>
         <p>{error}</p>
-        <p>请先运行 `npm run sync:content` 后重试。</p>
+        <p>请刷新页面或稍后重试。</p>
       </div>
     );
   }
@@ -284,6 +378,11 @@ export function App() {
           subjectChosen={bankSubjectChosen}
           onSubjectChosenChange={setBankSubjectChosen}
           onSubjectChange={switchSubject}
+          isAuthenticated={Boolean(user)}
+          onLoginRequired={() => {
+            setAuthNotice("数学一 2018 年以前及数学二、数学三需要登录后查看。");
+            setView("account");
+          }}
           questions={questions}
           states={states}
           onOpenQuestion={openQuestion}
@@ -347,6 +446,11 @@ export function App() {
           subjectChosen={paperSubjectChosen}
           onSubjectChosenChange={setPaperSubjectChosen}
           onSubjectChange={switchSubject}
+          isAuthenticated={Boolean(user)}
+          onLoginRequired={() => {
+            setAuthNotice("数学一 2018 年以前及数学二、数学三需要登录后查看。");
+            setView("account");
+          }}
           questions={questions}
           states={states}
           sessions={paperSessions}
@@ -408,7 +512,17 @@ export function App() {
           subject={subject}
           states={states}
           paperSessions={paperSessions}
-          onUserChange={setUser}
+          onUserChange={(nextUser) => {
+            setUser(nextUser);
+            if (!nextUser && subject !== "math1") {
+              setSubject("math1");
+              setSubjectName(SUBJECT_LABELS.math1);
+              setBankSubjectChosen(false);
+              setPaperSubjectChosen(false);
+              setSelectedId(null);
+              setCurrentPaperYear(null);
+            }
+          }}
           onRestore={(cloudStates, cloudSessions) => {
             setStates(cloudStates);
             setPaperSessions(cloudSessions);

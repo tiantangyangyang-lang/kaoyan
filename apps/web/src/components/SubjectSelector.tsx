@@ -3,11 +3,15 @@ import type { SubjectCatalog, SubjectCode } from "../types";
 export function SubjectSelector({
   featureLabel,
   subjectCatalog,
+  isAuthenticated,
   onSelect,
+  onLoginRequired,
 }: {
   featureLabel: string;
   subjectCatalog: SubjectCatalog | null;
+  isAuthenticated: boolean;
   onSelect: (subject: SubjectCode) => void;
+  onLoginRequired: () => void;
 }) {
   const subjects =
     subjectCatalog?.subjects.filter((item) => item.enabled) ?? [
@@ -40,17 +44,20 @@ export function SubjectSelector({
 
       <div className="subject-card-grid">
         {subjects.map((item, index) => {
-          const isReady = item.statusLabel === "已接入";
+          const requiresLogin = item.code !== "math1" && !isAuthenticated;
+          const isReady = !requiresLogin;
           return (
             <button
               className={isReady ? "subject-card available" : "subject-card review"}
               key={item.code}
-              onClick={() => onSelect(item.code)}
+              onClick={() =>
+                requiresLogin ? onLoginRequired() : onSelect(item.code)
+              }
             >
               <span className="subject-index">{String(index + 1).padStart(2, "0")}</span>
               <div>
                 <span className={isReady ? "subject-status ready" : "subject-status pending"}>
-                  {item.statusLabel ?? "待复核"}
+                  {requiresLogin ? "登录后可用" : item.statusLabel ?? "已接入"}
                 </span>
                 <h2>{item.name}</h2>
                 <p>
@@ -58,7 +65,9 @@ export function SubjectSelector({
                     `当前收录 ${item.questionCount} 道真题。`}
                 </p>
               </div>
-              <strong>进入{featureLabel} →</strong>
+              <strong>
+                {requiresLogin ? "登录后查看" : `进入${featureLabel}`} →
+              </strong>
             </button>
           );
         })}

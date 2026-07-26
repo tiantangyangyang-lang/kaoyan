@@ -36,6 +36,8 @@ export interface ContentStore {
   listPublishedQuestions(input: {
     subjectCode: ContentSubjectCode;
     year?: number;
+    minYear?: number;
+    maxYear?: number;
     type?: "multiple_choice" | "fill_in_blank" | "solution" | "proof" | "unknown";
     page: number;
     pageSize: number;
