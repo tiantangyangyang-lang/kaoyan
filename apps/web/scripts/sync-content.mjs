@@ -1,4 +1,4 @@
-import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -15,6 +15,11 @@ const math1Destination = resolve(dataDir, "math1.json");
 const math2Destination = resolve(dataDir, "math2.json");
 const math3Destination = resolve(dataDir, "math3.json");
 const catalogDestination = resolve(dataDir, "subjects.json");
+const protectedArtifact = (subjectCode) => ({
+  schemaVersion: "kaoyan-protected-content-v1",
+  subjectCode,
+  error: "authentication_required",
+});
 
 const bank = JSON.parse(await readFile(math1Source, "utf8"));
 if (!Array.isArray(bank.questions) || bank.questions.length !== PROMOTED_COUNTS.math1) {
@@ -52,8 +57,16 @@ const publicBank = {
 
 await mkdir(dataDir, { recursive: true });
 await writeFile(math1Destination, `${JSON.stringify(publicBank, null, 2)}\n`, "utf8");
-await rm(math2Destination, { force: true });
-await rm(math3Destination, { force: true });
+await writeFile(
+  math2Destination,
+  `${JSON.stringify(protectedArtifact("math2"), null, 2)}\n`,
+  "utf8",
+);
+await writeFile(
+  math3Destination,
+  `${JSON.stringify(protectedArtifact("math3"), null, 2)}\n`,
+  "utf8",
+);
 await writeFile(
   catalogDestination,
   `${JSON.stringify(
@@ -96,4 +109,4 @@ await writeFile(
 console.log(
   `Synced ${publicQuestions.length} public Math1 questions (${PUBLIC_MATH1_MIN_YEAR}-${PUBLIC_MATH1_MAX_YEAR}) to ${math1Destination}`,
 );
-console.log("Removed protected Math2 and Math3 public question-bank artifacts");
+console.log("Replaced legacy Math2 and Math3 artifact paths with denial payloads");

@@ -64,3 +64,18 @@
   tests in that invoked Math2 segment passed before the stop.
 - Local runtime is Node 24.15.0 while the repository declares Node 20.x; npm emitted an
   engine warning, but all targeted type checks, tests, and builds passed.
+
+## Production cache follow-up
+
+- PR 21 merged as `5e1609bd76998ae8b7404789d3e4920628887598`.
+- Render deployed the new API policy successfully: anonymous recent Math1 returned
+  200, while Math1 2017, Math2, and Math3 returned 401.
+- Cloudflare deployed the new frontend, but deleted `math2.json` and `math3.json`
+  remained readable from an existing edge cache with
+  `Cache-Control: public, s-maxage=604800`.
+- Cloudflare documents that deleted Pages assets can remain in a data center for up
+  to one week. Browser policy prevented dashboard cache purging, and no Cloudflare API
+  credential was present.
+- The controlled fallback keeps the legacy paths as tiny denial artifacts and adds
+  exact `_redirects` rules to the authenticated API. This updates the same cache keys,
+  contains no protected question data, and makes the normal final response 401.

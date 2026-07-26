@@ -1,7 +1,7 @@
 # REQ-019 Access Audit
 
-Status: local implementation and targeted verification complete; Git delivery and
-deployment not started.
+Status: PR 21 merged and API deployment verified; a follow-up static-cache denial
+deployment is in progress.
 
 ## Result
 
@@ -32,9 +32,9 @@ parameterized minimum and maximum year predicates.
 
 - Generated public Math1 artifact: 179 questions, minimum year 2018, maximum year
   2025, 179 unique stable IDs.
-- Generated public Math2 artifacts: none.
-- Generated public Math3 artifacts: none.
-- Production build data files: `math1.json`, `subjects.json` only.
+- Generated Math2/Math3 legacy paths contain only an
+  `authentication_required` denial and no question records.
+- Exact Cloudflare Pages redirects send those legacy paths to the authenticated API.
 - Anonymous Math2/Math3 cards route to the account screen without requesting content.
 - Authenticated subjects load published list pages from the API, then load details on
   demand for one question or one paper.
@@ -79,7 +79,7 @@ and 2022 remain excluded. These risks are not hidden or rewritten by REQ-019.
 - Original REQ-018 worktree and its uncommitted audit reports.
 - Question/provenance source data and the promoted database.
 - Read-only `D:\work\Kaoyan-Math2-Papers` content and Git state.
-- Git remote, PRs, production API, Cloudflare Pages, and Render deployment.
+- Question data, database state, and production secrets.
 
 ## Verification summary
 
@@ -91,3 +91,13 @@ and 2022 remain excluded. These risks are not hidden or rewritten by REQ-019.
 - `git diff --check`: passed.
 - Full `make verify`: blocked by unrelated fixed inventory count (792 current versus
   775 expected); generated unrelated diffs were removed.
+
+## Deployment follow-up
+
+- PR 21: merged at `5e1609bd76998ae8b7404789d3e4920628887598`.
+- Production API: new policy verified (recent Math1 200; Math1 2017, Math2, Math3
+  401).
+- Production Pages build: new Math1 artifact verified, but deleted Math2/Math3 files
+  remained at an edge with a seven-day shared-cache TTL.
+- Follow-up: replace both legacy paths with denial-only payloads and redirect them to
+  authenticated API routes, then redeploy and verify that no protected JSON remains.
