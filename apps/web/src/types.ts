@@ -10,7 +10,8 @@ export type QuestionType =
 export type FinalizationStatus =
   | "ready_for_approval"
   | "ready_with_info"
-  | "blocked";
+  | "blocked"
+  | "published";
 
 export type Mastery = "unmarked" | "mastered" | "fuzzy" | "unknown";
 export type Correctness = "correct" | "incorrect" | "unknown";
@@ -33,10 +34,11 @@ export interface Question {
   answerStatus: string;
   explanation: string;
   explanationStatus: string;
-  reviewStatus: "needs_human_review";
+  reviewStatus: string;
   finalizationStatus: FinalizationStatus;
   knowledgePoints: string[];
   anomalies: Array<Record<string, unknown>>;
+  detailLoaded?: boolean;
 }
 
 export interface QuestionBank {
@@ -63,22 +65,22 @@ export interface SubjectCatalog {
   subjects: SubjectCatalogItem[];
 }
 
-export interface Math2ContentOption {
+export interface PublishedContentOption {
   label: string;
   value: string;
 }
 
-export interface Math2QuestionListItem {
+export interface PublishedQuestionListItem {
   stableId: string;
   sourceYear: number;
   type: QuestionType;
   questionNumber: number;
   stem: string;
-  options: Math2ContentOption[];
-  finalizationStatus: FinalizationStatus | "published";
+  options: PublishedContentOption[];
+  finalizationStatus: FinalizationStatus;
 }
 
-export interface Math2QuestionDetail extends Math2QuestionListItem {
+export interface PublishedQuestionDetail extends PublishedQuestionListItem {
   answer: string | null;
   answerStatus: string;
   explanation: string | null;
@@ -87,8 +89,8 @@ export interface Math2QuestionDetail extends Math2QuestionListItem {
   knowledgePoints: string[];
 }
 
-export interface Math2QuestionPage {
-  items: Math2QuestionListItem[];
+export interface PublishedQuestionPage {
+  items: PublishedQuestionListItem[];
   page: number;
   pageSize: number;
   totalItems: number;

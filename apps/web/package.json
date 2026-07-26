@@ -12,7 +12,8 @@
     "typecheck": "tsc -b --pretty false",
     "preview": "vite preview --host 127.0.0.1",
     "test:smoke": "node tests/smoke.mjs",
-    "test:smoke:ci": "npm run sync:content && node tests/run-smoke.mjs"
+    "test:content-access": "node tests/content-access.mjs",
+    "test:smoke:ci": "npm run sync:content && npm run test:content-access && node tests/run-smoke.mjs"
   },
   "dependencies": {
     "jszip": "^3.10.1",

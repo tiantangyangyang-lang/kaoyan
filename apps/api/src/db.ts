@@ -439,6 +439,8 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
   async listPublishedQuestions(input: {
     subjectCode: ContentSubjectCode;
     year?: number;
+    minYear?: number;
+    maxYear?: number;
     type?: "multiple_choice" | "fill_in_blank" | "solution" | "proof" | "unknown";
     page: number;
     pageSize: number;
@@ -448,6 +450,14 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
     if (input.year !== undefined) {
       filters.push("q.source_year = ?");
       params.push(input.year);
+    }
+    if (input.minYear !== undefined) {
+      filters.push("q.source_year >= ?");
+      params.push(input.minYear);
+    }
+    if (input.maxYear !== undefined) {
+      filters.push("q.source_year <= ?");
+      params.push(input.maxYear);
     }
     if (input.type !== undefined) {
       filters.push("q.question_type = ?");

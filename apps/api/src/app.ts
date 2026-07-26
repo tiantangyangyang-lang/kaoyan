@@ -16,6 +16,8 @@ import { createOpaqueToken, hashToken } from "./security.js";
 import type { AuthStore, PublicUser } from "./store.js";
 
 const SESSION_COOKIE = "kaoyan_session";
+const PUBLIC_MATH1_MIN_YEAR = 2018;
+const PUBLIC_MATH1_MAX_YEAR = 2025;
 
 type AuthenticatedRequest = Request & { user?: PublicUser };
 
@@ -121,27 +123,40 @@ export function createApp({
     "unknown",
   ]);
 
-  const requireUser = async (
+  const resolveUser = async (
     request: AuthenticatedRequest,
     response: Response,
-    next: NextFunction,
-  ) => {
+  ): Promise<PublicUser | null> => {
+    if (request.user) return request.user;
     const token = request.cookies[SESSION_COOKIE] as string | undefined;
-    if (!token) {
-      response.status(401).json({ error: "authentication_required" });
-      return;
-    }
+    if (!token) return null;
     const user = await store.findUserBySession(hashToken(token));
     if (!user) {
       response.clearCookie(SESSION_COOKIE, {
         domain: config.COOKIE_DOMAIN,
         path: "/",
       });
+      return null;
+    }
+    request.user = user;
+    return user;
+  };
+
+  const requireUser = async (
+    request: AuthenticatedRequest,
+    response: Response,
+    next: NextFunction,
+  ) => {
+    const user = await resolveUser(request, response);
+    if (!user) {
       response.status(401).json({ error: "authentication_required" });
       return;
     }
-    request.user = user;
     next();
+  };
+
+  const rejectAnonymous = (response: Response) => {
+    response.status(401).json({ error: "authentication_required" });
   };
 
   app.get("/health", (_request, response) => {
@@ -151,8 +166,7 @@ export function createApp({
   app.get(
     "/api/content/:subjectCode/questions",
     contentLimiter,
-    requireUser,
-    async (request, response, next) => {
+    async (request: AuthenticatedRequest, response, next) => {
       try {
         const subjectCode = contentSubjectCodeSchema.parse(
           request.params.subjectCode,
@@ -165,11 +179,28 @@ export function createApp({
             type: contentTypeSchema.optional(),
           })
           .parse(request.query);
+        const user = await resolveUser(request, response);
+        const isPublicMath1Request =
+          subjectCode === "math1" &&
+          (query.year === undefined ||
+            (query.year >= PUBLIC_MATH1_MIN_YEAR &&
+              query.year <= PUBLIC_MATH1_MAX_YEAR));
+        if (!user && !isPublicMath1Request) {
+          rejectAnonymous(response);
+          return;
+        }
         const data = await store.listPublishedQuestions({
           subjectCode,
           ...query,
+          ...(!user && query.year === undefined
+            ? {
+                minYear: PUBLIC_MATH1_MIN_YEAR,
+                maxYear: PUBLIC_MATH1_MAX_YEAR,
+              }
+            : {}),
         });
         response.set("Cache-Control", "private, no-store");
+        response.vary("Cookie");
         response.json({ data });
       } catch (error) {
         next(error);
@@ -180,8 +211,7 @@ export function createApp({
   app.get(
     "/api/content/:subjectCode/questions/:stableId",
     contentLimiter,
-    requireUser,
-    async (request, response, next) => {
+    async (request: AuthenticatedRequest, response, next) => {
       try {
         const subjectCode = contentSubjectCodeSchema.parse(
           request.params.subjectCode,
@@ -196,12 +226,24 @@ export function createApp({
           response.status(400).json({ error: "stable_id_subject_mismatch" });
           return;
         }
+        const user = await resolveUser(request, response);
+        const math1YearMatch = /^math1-(\d{4})-/.exec(stableId);
+        const isPublicMath1Request =
+          subjectCode === "math1" &&
+          math1YearMatch !== null &&
+          Number(math1YearMatch[1]) >= PUBLIC_MATH1_MIN_YEAR &&
+          Number(math1YearMatch[1]) <= PUBLIC_MATH1_MAX_YEAR;
+        if (!user && !isPublicMath1Request) {
+          rejectAnonymous(response);
+          return;
+        }
         const data = await store.getPublishedQuestion(subjectCode, stableId);
         if (!data) {
           response.status(404).json({ error: "question_not_found" });
           return;
         }
         response.set("Cache-Control", "private, no-store");
+        response.vary("Cookie");
         response.json({ data });
       } catch (error) {
         next(error);

@@ -131,13 +131,18 @@ class MemoryStore implements AuthStore, ContentStore {
   async listPublishedQuestions(input: {
     subjectCode: "math1" | "math2" | "math3";
     year?: number;
+    minYear?: number;
+    maxYear?: number;
     type?: "multiple_choice" | "fill_in_blank" | "solution" | "proof" | "unknown";
     page: number;
     pageSize: number;
   }): Promise<ContentQuestionPage> {
     const filtered = this.publishedQuestions.filter(
       (question) =>
+        question.stableId.startsWith(`${input.subjectCode}-`) &&
         (input.year === undefined || question.sourceYear === input.year) &&
+        (input.minYear === undefined || question.sourceYear >= input.minYear) &&
+        (input.maxYear === undefined || question.sourceYear <= input.maxYear) &&
         (input.type === undefined || question.type === input.type),
     );
     const offset = (input.page - 1) * input.pageSize;
@@ -206,6 +211,27 @@ const addAuthenticatedSession = (store: MemoryStore) => {
   return `kaoyan_session=${token}`;
 };
 
+const makePublishedMath1Question = (
+  year: number,
+): ContentQuestionDetail => ({
+  stableId: `math1-${year}-q01`,
+  sourceYear: year,
+  type: "multiple_choice",
+  questionNumber: 1,
+  stem: `${year} Math1 stem`,
+  options: [
+    { label: "A", value: "One" },
+    { label: "B", value: "Two" },
+  ],
+  answer: "A",
+  answerStatus: "reviewed",
+  explanation: `${year} explanation`,
+  explanationStatus: "reviewed",
+  reviewStatus: "reviewed",
+  finalizationStatus: "published",
+  knowledgePoints: [],
+});
+
 test("allows only configured web origins", () => {
   assert.equal(
     isAllowedWebOrigin(config, "http://127.0.0.1:5173"),
@@ -226,6 +252,60 @@ test("allows only configured web origins", () => {
     isAllowedWebOrigin(config, "http://branch.kaoyan-ddg.pages.dev"),
     false,
   );
+});
+
+test("anonymous access is limited to published Math1 from 2018 through 2025", async () => {
+  const store = new MemoryStore();
+  store.publishedQuestions = [2017, 2018, 2025, 2026].map(
+    makePublishedMath1Question,
+  );
+  const app = createApp({
+    config,
+    store,
+    mailer: { async sendVerification() {} },
+  });
+
+  const publicList = await request(app)
+    .get("/api/content/math1/questions?page=1&pageSize=10")
+    .expect(200);
+  assert.equal(publicList.headers["cache-control"], "private, no-store");
+  assert.match(publicList.headers.vary, /Cookie/);
+  assert.deepEqual(
+    publicList.body.data.items.map((item: { sourceYear: number }) => item.sourceYear),
+    [2018, 2025],
+  );
+  assert.equal(publicList.body.data.totalItems, 2);
+
+  await request(app)
+    .get("/api/content/math1/questions?page=1&pageSize=10&year=2018")
+    .expect(200);
+  await request(app)
+    .get("/api/content/math1/questions/math1-2025-q01")
+    .expect(200);
+
+  for (const year of [2017, 2026]) {
+    await request(app)
+      .get(`/api/content/math1/questions?page=1&pageSize=10&year=${year}`)
+      .expect(401, { error: "authentication_required" });
+    await request(app)
+      .get(`/api/content/math1/questions/math1-${year}-q01`)
+      .expect(401, { error: "authentication_required" });
+  }
+
+  const cookie = addAuthenticatedSession(store);
+  const authenticatedList = await request(app)
+    .get("/api/content/math1/questions?page=1&pageSize=10")
+    .set("Cookie", cookie)
+    .expect(200);
+  assert.equal(authenticatedList.body.data.totalItems, 4);
+  await request(app)
+    .get("/api/content/math1/questions/math1-2017-q01")
+    .set("Cookie", cookie)
+    .expect(200);
+  await request(app)
+    .get("/api/content/math1/questions/math1-2026-q01")
+    .set("Cookie", cookie)
+    .expect(200);
 });
 
 test("published Math3 content requires authentication", async () => {

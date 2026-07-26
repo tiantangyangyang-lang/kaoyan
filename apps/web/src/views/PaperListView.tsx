@@ -15,6 +15,8 @@ export function PaperListView({
   subjectChosen,
   onSubjectChosenChange,
   onSubjectChange,
+  isAuthenticated,
+  onLoginRequired,
   questions,
   states,
   sessions,
@@ -26,6 +28,8 @@ export function PaperListView({
   subjectChosen: boolean;
   onSubjectChosenChange: (selected: boolean) => void;
   onSubjectChange: (subject: SubjectCode) => void;
+  isAuthenticated: boolean;
+  onLoginRequired: () => void;
   questions: Question[];
   states: QuestionStateMap;
   sessions: PaperSessionMap;
@@ -45,7 +49,9 @@ export function PaperListView({
       <SubjectSelector
         featureLabel="整卷练习"
         subjectCatalog={subjectCatalog}
+        isAuthenticated={isAuthenticated}
         onSelect={selectSubject}
+        onLoginRequired={onLoginRequired}
       />
     );
   }
@@ -67,7 +73,7 @@ export function PaperListView({
       {subject === "math2" && (
         <div className="content-warning subject-review-warning">
           <span>
-            数学二整卷为待复核预览：答案解析整理中，请提交后按“待核对”状态记录。
+            数学二包含已记录的缺失答案、缺失解析与待人工复核项，请按“待核对”状态记录。
             反馈邮箱：tiantangyangyang@gmail.com。
           </span>
         </div>

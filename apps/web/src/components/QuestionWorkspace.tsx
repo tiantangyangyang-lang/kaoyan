@@ -175,10 +175,12 @@ export function QuestionWorkspace({
               }
             />
           </div>
-          <QuestionAnimationGate
-            questionId={question.stableId}
-            isAuthenticated={isAuthenticated}
-          />
+      {question.subjectCode === "math1" && (
+        <QuestionAnimationGate
+          questionId={question.stableId}
+          isAuthenticated={isAuthenticated}
+        />
+      )}
         </section>
       )}
 
