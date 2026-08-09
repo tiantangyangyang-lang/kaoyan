@@ -12,7 +12,7 @@ Provide one-command, audited database content corrections that survive imports, 
 - [x] P0 — Implement transactional upsert/revert service and generic operator command.
 - [x] P0 — Merge overrides into API reads and non-blocking public Math1 loading.
 - [x] P0 — Add tests, example, Make commands, and durable operating instructions.
-- [ ] P0 — Run targeted database dry-run, full task-relevant verification, security and diff review. (code verification complete; production dry-run follows deployment)
+- [x] P0 — Run full task-relevant verification, security scan, diff review, and two-pass independent review.
 - [ ] P1 — Commit, push, independently review, merge, deploy, and verify production behavior.
 
 ## Decisions
@@ -28,4 +28,4 @@ Provide one-command, audited database content corrections that survive imports, 
 
 ## Status
 
-Implementation and local verification are complete. Preparing commit, PR, independent review, deployment, and production dry-run.
+Implementation, local verification, PR preview, and second-pass independent approval are complete. Awaiting merge, deployment, and production dry-run.
