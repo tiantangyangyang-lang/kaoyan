@@ -8,6 +8,7 @@
 
 - Record the maintainer-supplied image as correction evidence without altering it.
 - Replace only option C and option D of `math1-2025-q04` in the canonical and review data.
+- Normalize Q04's structured stem to end at the equals sign, removing duplicated option text and the embedded answer marker from the stem while preserving the separate answer field.
 - Update only correction-related status and audit metadata that the existing schemas support.
 - Regenerate the public Math1 artifact from canonical content.
 - Update the already-published database record through a transactional, parameterized, auditable project workflow.
@@ -15,7 +16,7 @@
 
 ## Out of scope
 
-- Changing option A or B, the stem, correct answer, explanation, animation, or any other question.
+- Changing option A or B, the mathematical question text, correct answer, explanation, animation, or any other question.
 - Correcting the mathematics beyond faithfully transcribing the supplied source image.
 - Changing Math2 or Math3 content.
 - Changing authentication or public-visibility policy.
@@ -24,11 +25,12 @@
 
 1. Option C exactly preserves the two source-image integrals, including the displayed bounds and order.
 2. Option D exactly preserves the source-image iterated integral.
-3. Option A, option B, stem, answer, explanation, and every other stable ID remain byte-for-byte unchanged in their semantic payloads.
-4. The generated public Math1 bank contains 179 questions and exposes corrected Q04 to anonymous users under the existing 2018+ policy.
-5. The database retains 852 Math1 questions and the existing approval/publication state; only `math1-2025-q04` receives the controlled correction.
-6. The database update checks the expected old values, runs in a transaction, uses parameterized SQL, and creates or preserves an audit record.
-7. No secret or connection string is printed, written, or committed.
+3. Option A, option B, answer, explanation, and every other stable ID remain byte-for-byte unchanged in their semantic payloads.
+4. Q04's rendered stem contains only the question through the equals sign; duplicated options and `【答案】A` are absent from the stem, while the separate answer remains A.
+5. The generated public Math1 bank contains 179 questions and exposes corrected Q04 to anonymous users under the existing 2018+ policy.
+6. The database retains 852 Math1 questions and the existing approval/publication state; only `math1-2025-q04` receives the controlled correction.
+7. The database update checks the expected old values and old stem structure, runs in a transaction, uses parameterized SQL, and creates or preserves an audit record.
+8. No secret or connection string is printed, written, or committed.
 
 ## Constraints
 

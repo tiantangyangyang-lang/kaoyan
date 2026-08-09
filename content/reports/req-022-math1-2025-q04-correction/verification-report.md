@@ -9,16 +9,16 @@
 ## Untouched files
 
 - Root checkout user file `.claude/` was not touched.
-- Math1 Q04 stem, A/B, answer A, explanation, and animation were not changed.
+- Math1 Q04's mathematical question text, A/B, answer A, explanation, and animation were not changed; only the duplicated option/answer suffix was removed from the stem.
 - The other 851 Math1 questions and all Math2/Math3 content were not changed.
 - The two unrelated generated Math2 files created by the failed full gate were restored.
 
 ## Commands and results
 
-- `node --import tsx --test ...`: 7 focused import/correction/approval/unpublish tests passed.
-- `mingw32-make NPM=npm.cmd typecheck test build`: passed; 26 API tests, Web smoke/content-access tests, API/Web type checks, and production builds all passed.
+- `node --import tsx --test ...`: 4 focused Q04 correction/import tests passed, including old stem and old option rejection guards.
+- `mingw32-make NPM=npm.cmd typecheck test build`: passed; 27 API tests, Web smoke/content-access tests, API/Web type checks, and production builds all passed.
 - Public content sync: 179 Math1 questions for 2018–2025; Math2/Math3 legacy files remain denial payloads.
-- Semantic comparison against `origin/main`: 852 canonical questions, 851 unrelated questions unchanged, answer A unchanged, zero duplicate stable IDs.
+- Semantic comparison against `origin/main`: 852 canonical questions, 851 unrelated questions unchanged, answer A unchanged, zero duplicate stable IDs; Q04 stem is structurally cleaned without changing the mathematical question text.
 - Q04 option C/D KaTeX rendering: passed.
 - `git diff --check`: passed.
 - `mingw32-make NPM=npm.cmd verify`: stopped at the unrelated Math2 inventory fixture (`792 != 775`) before the remaining gates; the equivalent task-relevant type/test/build gates were run separately and passed.
@@ -26,7 +26,7 @@
 ## Database result
 
 - Preflight read-only verification passed for 1552 published questions and access policy.
-- Production correction dry-run passed and rolled back: 22-row v2 batch, Math1 total 852.
+- Production correction dry-run passed and rolled back: 22-row v2 batch, Math1 total 852, old/new options and stem hashes matched the audit evidence.
 - Commit-mode result and post-commit verification are pending a traceable code commit/PR.
 
 ## Known limits

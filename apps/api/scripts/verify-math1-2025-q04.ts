@@ -7,6 +7,7 @@ import { createDatabasePool } from "../src/db.js";
 import {
   EXPECTED_NEW_OPTION_C,
   EXPECTED_NEW_OPTION_D,
+  EXPECTED_NEW_STEM,
 } from "../src/math1-q04-correction.js";
 
 interface BatchRow extends RowDataPacket {
@@ -22,6 +23,7 @@ interface SourceFile {
 }
 
 interface QuestionRow extends RowDataPacket {
+  stem: string;
   options_json: string | Array<{ label: string; value: string }>;
   anomalies: string | Array<Record<string, unknown>>;
   review_status: string;
@@ -83,7 +85,7 @@ try {
   }
 
   const [questionRows] = await pool.query<QuestionRow[]>(
-    `SELECT q.options_json, q.anomalies, q.review_status, q.finalization_status
+    `SELECT q.stem, q.options_json, q.anomalies, q.review_status, q.finalization_status
      FROM kaoyan_questions q
      JOIN kaoyan_content_batches b ON b.id = q.batch_id
      WHERE b.status = 'published' AND q.stable_id = ?`,
@@ -96,6 +98,7 @@ try {
   );
   const anomalies = parseJson<Array<Record<string, unknown>>>(question.anomalies);
   if (
+    question.stem !== EXPECTED_NEW_STEM ||
     options[2]?.value !== EXPECTED_NEW_OPTION_C ||
     options[3]?.value !== EXPECTED_NEW_OPTION_D ||
     anomalies.length !== 0 ||
@@ -126,6 +129,7 @@ try {
     totalQuestions: number;
     questions: Array<{
       stableId: string;
+      stem: string;
       options: Array<{ label: string; value: string }>;
     }>;
   };
@@ -134,6 +138,7 @@ try {
   );
   if (
     publicBank.totalQuestions !== 179 ||
+    publicQuestion?.stem !== EXPECTED_NEW_STEM ||
     publicQuestion?.options[2]?.value !== EXPECTED_NEW_OPTION_C ||
     publicQuestion?.options[3]?.value !== EXPECTED_NEW_OPTION_D
   ) {

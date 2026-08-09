@@ -9,5 +9,16 @@
     "C": "$\\int_{0}^{4}\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x,y)\\,\\mathrm{d}x+\\int_{2}^{\\sqrt{4-y}} f(x,y)\\,\\mathrm{d}x\\right]\\mathrm{d}y$",
     "D": "$2\\int_{0}^{4}\\mathrm{d}y\\int_{\\sqrt{4-y}}^{2} f(x,y)\\,\\mathrm{d}x$"
   },
-  "preservationNote": "The second integral in option C is intentionally transcribed from 2 to sqrt(4-y), exactly as displayed in the supplied image. No mathematical normalization was applied."
+  "preservationNote": "The second integral in option C is intentionally transcribed from 2 to sqrt(4-y), exactly as displayed in the supplied image. No mathematical normalization was applied.",
+  "renderingEvidence": {
+    "originalFilename": "codex-clipboard-99bac4b3-b00e-48c2-97ed-4a7f4165a373.png",
+    "sha256": "A07AD413DD411B1BDA13193A1396D45A3CF49337A530E51FCCC3C70412914762",
+    "observedIssue": "Production rendered duplicated A/B, damaged C/D, and the embedded answer from the old stem above the structured option cards."
+  },
+  "structuralCorrection": {
+    "field": "stem",
+    "oldSha256": "A3B93FC93FBA5E3F8A762883BB1737EF9CB2BF9FB6C1EA3697395BD51F415264",
+    "newSha256": "9DBD689AC17D466B7924ADE9D8AB6EB8E3ABB21457149662A221EFCF2E2C4593",
+    "rule": "Preserve the original question text through the equals sign; remove duplicated option text and the embedded answer marker because those values already exist in structured fields."
+  }
 }

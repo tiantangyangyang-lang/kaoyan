@@ -20,6 +20,8 @@ export const EXPECTED_NEW_OPTION_C =
   "$\\int_{0}^{4}\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x,y)\\,\\mathrm{d}x+\\int_{2}^{\\sqrt{4-y}} f(x,y)\\,\\mathrm{d}x\\right]\\mathrm{d}y$";
 export const EXPECTED_NEW_OPTION_D =
   "$2\\int_{0}^{4}\\mathrm{d}y\\int_{\\sqrt{4-y}}^{2} f(x,y)\\,\\mathrm{d}x$";
+export const EXPECTED_NEW_STEM =
+  "4．设函数 $f ( x , y )$ 连续，则 $\\int _ { - 2 } ^ { 2 } \\mathrm { d } x \\int _ { 4 - x ^ { 2 } } ^ { 4 } f \\big ( x , y \\big ) \\mathrm { d } y =$";
 
 interface ContentOption {
   label: string;
@@ -32,6 +34,7 @@ interface BatchRow extends RowDataPacket {
 }
 
 interface QuestionRow extends RowDataPacket {
+  stem: string;
   options_json: string | ContentOption[];
   anomalies: string | Array<Record<string, unknown>>;
   review_status: string;
@@ -61,6 +64,7 @@ export interface Math1Q04CorrectionInput {
     sha256: string;
   }>;
   contentHash: string;
+  stem: string;
   options: ContentOption[];
   anomalies: Array<Record<string, unknown>>;
 }
@@ -70,6 +74,8 @@ const parseJson = <T>(value: string | T): T =>
 
 const digest = (value: unknown) =>
   createHash("sha256").update(JSON.stringify(value)).digest("hex");
+const textDigest = (value: string) =>
+  createHash("sha256").update(value).digest("hex");
 
 function validateInput(input: Math1Q04CorrectionInput) {
   if (!/^[0-9a-f]{40}$/i.test(input.sourceCommit)) {
@@ -101,6 +107,9 @@ function validateInput(input: Math1Q04CorrectionInput) {
   if (input.anomalies.length !== 0) {
     throw new Error("corrected Q04 must not retain active anomalies");
   }
+  if (input.stem !== EXPECTED_NEW_STEM) {
+    throw new Error("canonical Q04 stem does not match the REQ-022 structure");
+  }
 }
 
 export async function replacePublishedMath1Q04(
@@ -115,6 +124,8 @@ export async function replacePublishedMath1Q04(
   publishedMath1Questions: number;
   beforeOptionsHash: string;
   afterOptionsHash: string;
+  beforeStemHash: string;
+  afterStemHash: string;
   dryRun: boolean;
   transaction: "rolled_back" | "committed";
 }> {
@@ -142,7 +153,7 @@ export async function replacePublishedMath1Q04(
     }
 
     const [questionRows] = await connection.query<QuestionRow[]>(
-      `SELECT options_json, anomalies, review_status, finalization_status
+      `SELECT stem, options_json, anomalies, review_status, finalization_status
        FROM kaoyan_questions
        WHERE batch_id = ? AND stable_id = ?
        FOR UPDATE`,
@@ -155,6 +166,14 @@ export async function replacePublishedMath1Q04(
       question.finalization_status !== "approved_with_known_risks"
     ) {
       throw new Error(`${TARGET_STABLE_ID} approval state changed unexpectedly`);
+    }
+    if (
+      !question.stem.startsWith(`${input.stem}\n\n`) ||
+      !question.stem.includes("C．") ||
+      !question.stem.includes("D．") ||
+      !question.stem.includes("【答案】A")
+    ) {
+      throw new Error("Q04 old stem structure precondition failed");
     }
 
     const oldOptions = parseJson<ContentOption[]>(question.options_json);
@@ -243,9 +262,10 @@ export async function replacePublishedMath1Q04(
     }
     const [updateResult] = await connection.execute<ResultSetHeader>(
       `UPDATE kaoyan_questions
-       SET options_json = ?, anomalies = ?
+       SET stem = ?, options_json = ?, anomalies = ?
        WHERE batch_id = ? AND stable_id = ?`,
       [
+        input.stem,
         JSON.stringify(input.options),
         JSON.stringify(input.anomalies),
         TO_BATCH_ID,
@@ -317,6 +337,8 @@ export async function replacePublishedMath1Q04(
       publishedMath1Questions,
       beforeOptionsHash: digest(oldOptions),
       afterOptionsHash: digest(input.options),
+      beforeStemHash: textDigest(question.stem),
+      afterStemHash: textDigest(input.stem),
       dryRun: options.dryRun,
       transaction: options.dryRun
         ? ("rolled_back" as const)

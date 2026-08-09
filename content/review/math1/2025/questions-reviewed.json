@@ -169,7 +169,7 @@
         "questionNumber": 4,
         "questionType": "multiple_choice",
         "reviewStatus": "needs_human_review",
-        "stem": "4．设函数 $f ( x , y )$ 连续，则 $\\int _ { - 2 } ^ { 2 } \\mathrm { d } x \\int _ { 4 - x ^ { 2 } } ^ { 4 } f \\big ( x , y \\big ) \\mathrm { d } y =$\n\n$\\int _ { 0 } ^ { 4 } \\biggl [ \\int _ { - 2 } ^ { - \\sqrt { 4 - y } } f \\left( x , y \\right) \\mathrm { d } x + \\int _ { \\sqrt { 4 - y } } ^ { 2 } f \\left( x , y \\right) \\mathrm { d } x \\biggr ] \\mathrm { d } y \\ .$   \n$\\int _ { 0 } ^ { 4 } \\biggl [ \\int _ { - 2 } ^ { \\sqrt { 4 - y } } f \\left( x , y \\right) \\mathrm { d } x + \\int _ { \\sqrt { 4 - y } } ^ { 2 } f \\left( x , y \\right) \\mathrm { d } x \\biggr ] \\mathrm { d } y \\ .$   \nC．    4 4 40 2 2, d , d dy yf x y x f x y x y         ．   \nD．  4 20 42 d , dyy f x y x   ．\n\n【答案】A",
+        "stem": "4．设函数 $f ( x , y )$ 连续，则 $\\int _ { - 2 } ^ { 2 } \\mathrm { d } x \\int _ { 4 - x ^ { 2 } } ^ { 4 } f \\big ( x , y \\big ) \\mathrm { d } y =$",
         "options": [
           {
             "label": "A",
@@ -205,6 +205,12 @@
             "before": "OCR-damaged placeholders",
             "after": "LaTeX transcription of the supplied source image",
             "reason": "Maintainer-provided image makes both option formulas legible; recorded under REQ-022 with SHA-256 C1477487B3B3F6C790BECCFA9E718B534D526B774F24F17512CF942D190F1B50."
+          },
+          {
+            "field": "stem",
+            "before": "Question stem plus duplicated A-D option text and an embedded answer marker",
+            "after": "Question text ending at the equals sign",
+            "reason": "The option and answer block belongs to structured fields and caused duplicated damaged text plus answer leakage in the rendered practice page."
           }
         ],
         "uncertainties": [],

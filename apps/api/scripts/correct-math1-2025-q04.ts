@@ -50,6 +50,7 @@ try {
         },
       ],
       contentHash: sha256(JSON.stringify(payload.questions)),
+      stem: question.stem,
       options: question.options,
       anomalies: question.anomalies,
     },

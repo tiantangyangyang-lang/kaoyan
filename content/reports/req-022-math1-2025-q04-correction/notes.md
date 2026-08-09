@@ -10,8 +10,9 @@
 ## Findings
 
 - Canonical and reviewed Q04 held OCR placeholders for C/D; A/B and answer A were intact.
+- The production screenshot also showed that Q04's raw stem duplicated A-D and embedded `【答案】A`; this caused visible damaged text above the option cards and leaked the answer before interaction.
 - The ordinary Math1 importer correctly refuses to replace a published batch.
-- The correction workflow therefore creates `math1-final-2025-v2`, copies the 22 approved rows, changes only Q04 `options_json` and its now-resolved anomaly, supersedes v1, and publishes v2 in one transaction.
+- The correction workflow therefore creates `math1-final-2025-v2`, copies the 22 approved rows, changes only Q04 `stem`, `options_json`, and its now-resolved anomaly, supersedes v1, and publishes v2 in one transaction.
 - The v2 batch records hashes of the canonical bank and REQ-022 evidence JSON in `source_files`; v1 remains intact as the database audit history.
 - Public policy is unchanged: Math1 2018–2025 remains anonymous, older Math1 plus all Math2/Math3 remain authenticated.
 
@@ -22,3 +23,5 @@
 - Correction dry-run: v1 → v2, 22 questions, resulting published Math1 852; transaction rolled back.
 - Before options hash: `4c941fab4a62d3e6c23367fe2de585f11304ca243e1418a5db425107ee4f2f49`.
 - After options hash: `fb938591aa5320a0f362da8c98d31ba2f155d38bfb58fb5e0a2d8552b7259c74`.
+- Before stem hash: `a3b93fc93fba5e3f8a762883bb1737ef9cb2bf9fb6c1ea3697395bd51f415264`.
+- After stem hash: `9dbd689ac17d466b7924ade9d8ab6eb8e3abb21457149662a221efcf2e2c4593`.

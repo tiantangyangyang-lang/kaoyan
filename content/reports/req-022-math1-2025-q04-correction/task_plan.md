@@ -16,6 +16,7 @@
 
 - The source image is authoritative for C and D only.
 - The reversed-looking second integral in C must remain exactly as printed; this task is transcription, not mathematical reinterpretation.
+- The maintainer's production screenshot expands acceptance: remove the duplicated option/answer block from Q04's stem so the corrected structured options are the only rendered choices and the answer is not leaked.
 - Database mutation is permitted only through an existing controlled workflow or a narrowly scoped guarded workflow added under this requirement.
 
 ## Blockers

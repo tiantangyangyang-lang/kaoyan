@@ -4,6 +4,7 @@ import type { Pool } from "mysql2/promise";
 import {
   EXPECTED_NEW_OPTION_C,
   EXPECTED_NEW_OPTION_D,
+  EXPECTED_NEW_STEM,
   EXPECTED_OLD_OPTION_C,
   EXPECTED_OLD_OPTION_D,
   replacePublishedMath1Q04,
@@ -33,6 +34,7 @@ const input: Math1Q04CorrectionInput = {
     },
   ],
   contentHash: "d".repeat(64),
+  stem: EXPECTED_NEW_STEM,
   options: newOptions,
   anomalies: [],
 };
@@ -40,6 +42,7 @@ const input: Math1Q04CorrectionInput = {
 class FakeCorrectionConnection {
   events: string[] = [];
   oldOptionD = EXPECTED_OLD_OPTION_D;
+  oldStem = `${EXPECTED_NEW_STEM}\n\nA/B duplicated\nC．damaged\nD．damaged\n\n【答案】A`;
 
   async beginTransaction() {
     this.events.push("begin");
@@ -59,6 +62,7 @@ class FakeCorrectionConnection {
     }
     if (sql.includes("stable_id = ?")) {
       return [[{
+        stem: this.oldStem,
         options_json: [
           { label: "A", value: "option-a" },
           { label: "B", value: "option-b" },
@@ -131,6 +135,16 @@ test("Q04 correction rejects a database value that no longer matches the audited
   await assert.rejects(
     replacePublishedMath1Q04(fakePool(connection), input, { dryRun: false }),
     /old C\/D precondition failed/,
+  );
+  assert.deepEqual(connection.events, ["begin", "rollback", "release"]);
+});
+
+test("Q04 correction rejects a source stem without the audited duplicate block", async () => {
+  const connection = new FakeCorrectionConnection();
+  connection.oldStem = EXPECTED_NEW_STEM;
+  await assert.rejects(
+    replacePublishedMath1Q04(fakePool(connection), input, { dryRun: false }),
+    /old stem structure precondition failed/,
   );
   assert.deepEqual(connection.events, ["begin", "rollback", "release"]);
 });
