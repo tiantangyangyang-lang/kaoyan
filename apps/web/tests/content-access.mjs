@@ -58,20 +58,31 @@ for (const subjectCode of ["math2", "math3"]) {
 }
 
 const headers = await readFile(resolve(publicDir, "_headers"), "utf8");
-assert.match(
-  headers,
-  /^\/assets\/\*\s*\r?\n\s+Cache-Control: public, max-age=31536000, immutable\s*$/m,
-  "content-hashed assets must use immutable browser caching",
+const headerRules = new Map();
+let currentHeaderPath = null;
+for (const line of headers.split(/\r?\n/)) {
+  if (!line.trim()) continue;
+  if (!/^\s/.test(line)) {
+    currentHeaderPath = line.trim();
+    headerRules.set(currentHeaderPath, []);
+    continue;
+  }
+  assert.ok(currentHeaderPath, "header value must follow a path rule");
+  headerRules.get(currentHeaderPath).push(line.trim());
+}
+const immutableRules = [...headerRules.entries()]
+  .filter(([, values]) => values.some((value) => /\bimmutable\b/.test(value)))
+  .map(([path]) => path);
+assert.deepEqual(
+  immutableRules,
+  ["/assets/*"],
+  "only content-hashed assets may use immutable browser caching",
 );
-assert.doesNotMatch(
-  headers,
-  /^\/data\/\*/m,
-  "mutable data artifacts must not use the immutable asset policy",
-);
-assert.doesNotMatch(
-  headers,
-  /^\/index\.html/m,
-  "HTML must not use the immutable asset policy",
+assert.ok(
+  headerRules
+    .get("/assets/*")
+    ?.includes("Cache-Control: public, max-age=31536000, immutable"),
+  "content-hashed assets must use the expected one-year cache policy",
 );
 
 const catalog = await readJson("subjects.json");

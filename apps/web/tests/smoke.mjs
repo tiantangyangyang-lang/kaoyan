@@ -70,8 +70,12 @@ try {
   const parallelRequests = new Set();
   let authPending = true;
   let releaseAuth = () => {};
+  let releaseAuthenticatedBank = () => {};
   const authGate = new Promise((resolveGate) => {
     releaseAuth = resolveGate;
+  });
+  const authenticatedBankGate = new Promise((resolveGate) => {
+    releaseAuthenticatedBank = resolveGate;
   });
   parallelPage.on("request", (request) => {
     parallelRequests.add(new URL(request.url()).pathname);
@@ -91,6 +95,7 @@ try {
     }
     const listMatch = /\/api\/content\/(math[123])\/questions$/.exec(pathname);
     if (listMatch) {
+      await authenticatedBankGate;
       return fulfillJson(route, 200, {
         data: {
           items: [publishedQuestion(listMatch[1])],
@@ -116,6 +121,17 @@ try {
   }
 
   releaseAuth();
+  for (let attempt = 0; attempt < 50; attempt += 1) {
+    if (parallelRequests.has("/api/content/math1/questions")) break;
+    await parallelPage.waitForTimeout(20);
+  }
+  await parallelPage
+    .getByText("数学一真题当前收录 179 题。", { exact: true })
+    .waitFor();
+  if ((await parallelPage.locator(".loading-state").count()) !== 0) {
+    throw new Error("Public Math1 disappeared during authenticated bank loading");
+  }
+  releaseAuthenticatedBank();
   await parallelPage
     .getByText("数学一真题当前收录 1 题。", { exact: true })
     .waitFor();
@@ -123,6 +139,60 @@ try {
     throw new Error("Authenticated Math1 did not replace the public bank");
   }
   await parallelPage.close();
+
+  const authRacePage = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+  });
+  const authRaceIssues = captureBrowserIssues(authRacePage);
+  let releaseStaleAuth = () => {};
+  const staleAuthGate = new Promise((resolveGate) => {
+    releaseStaleAuth = resolveGate;
+  });
+  await authRacePage.route("**/api/**", async (route) => {
+    const pathname = new URL(route.request().url()).pathname;
+    if (pathname.endsWith("/api/auth/me")) {
+      await staleAuthGate;
+      return fulfillJson(route, 200, { user: null });
+    }
+    if (pathname.endsWith("/api/auth/login")) {
+      return fulfillJson(route, 200, {
+        user: {
+          id: "manual-login-user",
+          email: "manual@example.com",
+          emailVerified: true,
+        },
+      });
+    }
+    const listMatch = /\/api\/content\/(math[123])\/questions$/.exec(pathname);
+    if (listMatch) {
+      return fulfillJson(route, 200, {
+        data: {
+          items: [publishedQuestion(listMatch[1])],
+          page: 1,
+          pageSize: 50,
+          totalItems: 1,
+          totalPages: 1,
+        },
+      });
+    }
+    return fulfillJson(route, 404, { error: "not_found" });
+  });
+  await authRacePage.goto(baseUrl, { waitUntil: "domcontentloaded" });
+  await authRacePage
+    .getByText("数学一真题当前收录 179 题。", { exact: true })
+    .waitFor();
+  await authRacePage.getByRole("button", { name: "账号" }).click();
+  await authRacePage.getByPlaceholder("name@example.com").fill("manual@example.com");
+  await authRacePage.getByPlaceholder("输入密码").fill("password123");
+  await authRacePage.getByRole("button", { name: "登录", exact: true }).last().click();
+  await authRacePage.getByRole("heading", { name: "我的账号" }).waitFor();
+  await authRacePage.getByText("当前登录：manual@example.com").waitFor();
+  releaseStaleAuth();
+  await authRacePage.waitForTimeout(100);
+  await authRacePage.getByRole("heading", { name: "我的账号" }).waitFor();
+  await authRacePage.getByText("当前登录：manual@example.com").waitFor();
+  await authRacePage.close();
 
   const unauthorizedPage = await browser.newPage({
     viewport: { width: 1280, height: 900 },
@@ -346,6 +416,7 @@ try {
 
   const browserIssues = [
     ...parallelIssues,
+    ...authRaceIssues,
     ...pageIssues,
     ...mobileIssues,
     ...authenticatedIssues,
@@ -366,6 +437,8 @@ try {
         authenticatedProtectedContent: true,
         publicLoadParallelWithAuthentication: true,
         authenticatedBankReplacedPublicBank: true,
+        publicBankStayedVisibleDuringAuthenticatedLoad: true,
+        staleStartupAuthDidNotOverrideManualLogin: true,
         anonymousAuth401Fallback: true,
         paperSubmission: true,
         reviewQueue: true,

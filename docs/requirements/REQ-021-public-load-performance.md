@@ -33,11 +33,14 @@ and make repeat visits reuse versioned assets safely.
    resolves.
 2. Public Math1 renders when authentication is slow or returns `401`.
 3. A logged-in user still receives the full API-backed bank after authentication resolves.
-4. Existing public-year and login-only access rules remain unchanged.
-5. Hashed `/assets/*` files are served with `Cache-Control: public, max-age=31536000,
+4. The 179-question public bank remains usable while the authenticated bank loads in the
+   background; the upgrade does not return to a full-screen loading state.
+5. A stale startup authentication response cannot overwrite a newer manual login/logout.
+6. Existing public-year and login-only access rules remain unchanged.
+7. Hashed `/assets/*` files are served with `Cache-Control: public, max-age=31536000,
    immutable`; HTML and mutable `/data/*.json` are not given immutable caching.
-6. Tests cover slow authentication, anonymous fallback, authenticated replacement, and
-   relevant cache configuration.
+8. Tests cover slow authentication, anonymous fallback, authenticated replacement, manual
+   login races, background bank replacement, and relevant cache configuration.
 
 ## Constraints
 

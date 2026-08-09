@@ -58,6 +58,22 @@ of this requirement.
 - Production remains pending because repository policy requires independent PR review before
   merge; PR #23 currently has no review decision.
 
+## Independent review remediation
+
+The first independent review blocked merge on a stale startup-authentication race and also
+identified two performance/test warnings. All three were addressed:
+
+- startup auth responses are revision-guarded and cannot overwrite a later manual login or
+  logout;
+- the public same-subject bank stays visible while authenticated content loads in the
+  background;
+- cache tests parse header blocks and allow `immutable` only on `/assets/*`.
+
+New smoke assertions passed for stale-auth protection and public-bank visibility during the
+authenticated upgrade. Web/API typecheck, API 24/24, web smoke, and Web/API builds passed
+after remediation. Merge remains blocked until independent re-review approves the updated
+full diff.
+
 ## Security and data boundary
 
 - No credentials, connection strings, cookies, or secrets were added.

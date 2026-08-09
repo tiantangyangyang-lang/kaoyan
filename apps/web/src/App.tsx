@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AppShell } from "./components/AppShell";
 import { QuestionWorkspace } from "./components/QuestionWorkspace";
 import {
@@ -63,13 +63,20 @@ export function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [user, setUser] = useState<AuthUser | null>(null);
   const [authNotice, setAuthNotice] = useState("");
+  const authRevision = useRef(0);
 
   useEffect(() => {
     let cancelled = false;
     async function loadCurrentSubject() {
       try {
         setError("");
-        setBank(null);
+        if (!user) {
+          setBank(null);
+        } else {
+          setBank((current) =>
+            current?.subjectCode === subject ? current : null,
+          );
+        }
         const catalog = await loadSubjectCatalog();
         if (cancelled) return;
         setSubjectCatalog(catalog);
@@ -107,7 +114,10 @@ export function App() {
   }, [subject, user]);
 
   useEffect(() => {
-    void getCurrentUser().then(setUser);
+    const revision = authRevision.current;
+    void getCurrentUser().then((nextUser) => {
+      if (authRevision.current === revision) setUser(nextUser);
+    });
     const url = new URL(window.location.href);
     const token = url.searchParams.get("verify");
     if (!token) return;
@@ -509,6 +519,7 @@ export function App() {
           states={states}
           paperSessions={paperSessions}
           onUserChange={(nextUser) => {
+            authRevision.current += 1;
             setUser(nextUser);
             if (!nextUser && subject !== "math1") {
               setSubject("math1");

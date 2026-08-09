@@ -73,3 +73,21 @@
   - `/data/math1.json`: `public, max-age=0, must-revalidate`.
 - Production `https://gongren.xyz` still requires PR merge. Repository policy prohibits
   merging without independent review; PR #23 currently has no review decision.
+
+## Independent review and remediation
+
+- The first independent review returned `REQUEST CHANGES` with one HIGH finding: a delayed
+  startup `/auth/me` response could overwrite a newer manual login state.
+- `App.tsx` now uses an authentication revision. Manual login/logout increments the
+  revision; the startup response writes state only if its revision is still current.
+- Authenticated Math1 loading now keeps the existing same-subject public bank visible until
+  the full API-backed bank is ready. Logout still clears the authenticated bank immediately
+  before restoring public content.
+- The smoke test now holds startup auth, completes a manual login, releases a stale `null`
+  response, and verifies that the user remains logged in.
+- The smoke test also holds the authenticated bank response and verifies that the public
+  179-question dashboard stays visible without `.loading-state`.
+- The `_headers` test now parses complete rule blocks and asserts that `/assets/*` is the
+  only rule containing `immutable`, preventing a broad `/*` false positive.
+- Post-remediation Web/API typecheck, API tests (24/24), web smoke, and Web/API production
+  builds passed. Independent re-review is required before merge.
