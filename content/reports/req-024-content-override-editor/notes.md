@@ -32,3 +32,15 @@
   source repository has 792 files while the historical test expects 775.
 - The command-generated inventory and KaTeX report changes were restored and
   are not part of REQ-024.
+
+## Independent review changes
+
+- Initial review requested changes because partial option arrays could remove
+  B-D and because core MySQL-store/transaction branches lacked direct tests.
+- Option overrides now require exactly four ordered A-D values and are rejected
+  for non-multiple-choice questions before any mutation.
+- Added direct MySQL-store tests and transaction coverage for historical revert,
+  stale base, merge/reactivation, invalid stored JSON, public SQL filters, and
+  both write-count failure paths.
+- Public SQL now independently constrains both override and base subject fields;
+  invalid stored patches are wrapped as server integrity failures, not request 400s.

@@ -13,7 +13,8 @@ history, optimistic locking, public-content behavior, and rollback.
 - Add persistent question override and immutable override-revision tables.
 - Add one generic JSON patch command with dry-run default and explicit commit.
 - Support `upsert` and `revert` actions with expected-revision locking.
-- Allow only content fields: stem, A-D options, answer/status, and explanation/status.
+- Allow only content fields: stem, exactly four ordered A-D options for
+  multiple-choice questions, answer/status, and explanation/status.
 - Merge active overrides into authenticated API list/detail responses.
 - Provide a small public Math1 override endpoint and merge it into the already
   loaded 2018-2025 static bank without blocking initial rendering.

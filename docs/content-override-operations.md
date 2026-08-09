@@ -29,8 +29,10 @@ Authenticated API reads see every subject override. Anonymous Math1 2018-2025
 reads receive the small public override payload after the static bank appears.
 
 Allowed `changes` keys are `stem`, `options`, `answer`, `answerStatus`,
-`explanation`, and `explanationStatus`. Options must be an ordered A-D array of
-`{"label","value"}` objects. Unknown keys are rejected before a transaction.
+`explanation`, and `explanationStatus`. For a multiple-choice question, options
+must be exactly four ordered A-D `{"label","value"}` objects. Options are
+rejected for every other question type. Unknown keys are rejected before a
+transaction.
 
 ## Revert without deleting history
 

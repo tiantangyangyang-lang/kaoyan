@@ -35,6 +35,8 @@ const upsertCommand = {
 
 class FakeOverrideConnection {
   events: string[] = [];
+  executions: Array<{ sql: string; params: unknown[] }> = [];
+  base = { ...baseRow };
   current: {
     revision: number;
     patch_json: object;
@@ -42,6 +44,7 @@ class FakeOverrideConnection {
     is_active: boolean;
   } | null = null;
   targetPatch: object | null = null;
+  targetBaseSnapshotHash: string | null = null;
   writeAffectedRows = 1;
   auditAffectedRows = 1;
 
@@ -58,14 +61,15 @@ class FakeOverrideConnection {
     this.events.push("release");
   }
   async query(sql: string) {
-    if (sql.includes("FROM kaoyan_questions q")) return [[baseRow]];
+    if (sql.includes("FROM kaoyan_questions q")) return [[this.base]];
     if (sql.includes("FROM kaoyan_question_override_revisions")) {
       return [[
         this.targetPatch === null
           ? undefined
           : {
               after_patch_json: this.targetPatch,
-              base_snapshot_hash: this.current?.base_snapshot_hash,
+              base_snapshot_hash:
+                this.targetBaseSnapshotHash ?? this.current?.base_snapshot_hash,
             },
       ].filter(Boolean)];
     }
@@ -74,7 +78,8 @@ class FakeOverrideConnection {
     }
     throw new Error(`Unexpected query: ${sql}`);
   }
-  async execute(sql: string) {
+  async execute(sql: string, params: unknown[] = []) {
+    this.executions.push({ sql, params });
     if (sql.includes("kaoyan_question_override_revisions")) {
       this.events.push("insert-audit");
       return [{ affectedRows: this.auditAffectedRows }];
@@ -231,6 +236,207 @@ test("invalid fields are rejected before opening a connection", async () => {
     ),
   );
   assert.equal(opened, false);
+});
+
+test("incomplete or unordered options are rejected before opening a connection", async () => {
+  const invalidOptions = [
+    [],
+    [{ label: "A", value: "One" }],
+    [
+      { label: "A", value: "One" },
+      { label: "B", value: "Two" },
+    ],
+    [
+      { label: "A", value: "One" },
+      { label: "B", value: "Two" },
+      { label: "C", value: "Three" },
+    ],
+    [
+      { label: "A", value: "One" },
+      { label: "C", value: "Three" },
+      { label: "B", value: "Two" },
+      { label: "D", value: "Four" },
+    ],
+    [
+      { label: "A", value: "One" },
+      { label: "B", value: "Two" },
+      { label: "B", value: "Duplicate" },
+      { label: "D", value: "Four" },
+    ],
+  ];
+  let opened = 0;
+  const pool = {
+    async getConnection() {
+      opened += 1;
+      return new FakeOverrideConnection();
+    },
+  } as unknown as Pick<Pool, "getConnection">;
+  for (const options of invalidOptions) {
+    await assert.rejects(
+      executeContentOverride(
+        pool,
+        { ...upsertCommand, changes: { options } },
+        { dryRun: true },
+      ),
+    );
+  }
+  assert.equal(opened, 0);
+});
+
+test("options cannot be added to a non-multiple-choice question", async () => {
+  const connection = new FakeOverrideConnection();
+  connection.base.question_type = "fill_in_blank";
+  await assert.rejects(
+    executeContentOverride(
+      fakePool(connection),
+      {
+        ...upsertCommand,
+        changes: {
+          options: [
+            { label: "A", value: "One" },
+            { label: "B", value: "Two" },
+            { label: "C", value: "Three" },
+            { label: "D", value: "Four" },
+          ],
+        },
+      },
+      { dryRun: true },
+    ),
+    /options can only be overridden for multiple-choice questions/,
+  );
+  assert.deepEqual(connection.events, ["begin", "rollback", "release"]);
+  assert.equal(connection.executions.length, 0);
+});
+
+test("active stale override blocks upsert", async () => {
+  const connection = new FakeOverrideConnection();
+  connection.current = {
+    revision: 1,
+    patch_json: { stem: "Existing correction" },
+    base_snapshot_hash: "stale-base-hash",
+    is_active: true,
+  };
+  await assert.rejects(
+    executeContentOverride(
+      fakePool(connection),
+      { ...upsertCommand, expectedRevision: 1 },
+      { dryRun: true },
+    ),
+    /published base content changed/,
+  );
+  assert.deepEqual(connection.events, ["begin", "rollback", "release"]);
+});
+
+test("existing active patch is merged and an inactive override can reactivate", async () => {
+  const seed = await executeContentOverride(
+    fakePool(new FakeOverrideConnection()),
+    upsertCommand,
+    { dryRun: true },
+  );
+  const active = new FakeOverrideConnection();
+  active.current = {
+    revision: 1,
+    patch_json: { stem: "Existing correction" },
+    base_snapshot_hash: seed.baseSnapshotHash,
+    is_active: true,
+  };
+  await executeContentOverride(
+    fakePool(active),
+    {
+      ...upsertCommand,
+      expectedRevision: 1,
+      changes: { explanation: "Merged explanation" },
+    },
+    { dryRun: true },
+  );
+  const activeUpdate = active.executions.find(({ sql }) =>
+    sql.includes("UPDATE kaoyan_question_overrides"),
+  );
+  assert.deepEqual(JSON.parse(String(activeUpdate?.params[2])), {
+    stem: "Existing correction",
+    explanation: "Merged explanation",
+  });
+
+  const inactive = new FakeOverrideConnection();
+  inactive.current = {
+    revision: 2,
+    patch_json: {},
+    base_snapshot_hash: "old-base-hash",
+    is_active: false,
+  };
+  const reactivated = await executeContentOverride(
+    fakePool(inactive),
+    { ...upsertCommand, expectedRevision: 2 },
+    { dryRun: true },
+  );
+  assert.equal(reactivated.revision, 3);
+  assert.ok(inactive.events.includes("update-override"));
+});
+
+test("historical revert succeeds and rejects missing or mismatched targets", async () => {
+  const seed = await executeContentOverride(
+    fakePool(new FakeOverrideConnection()),
+    upsertCommand,
+    { dryRun: true },
+  );
+  const makeCurrent = () => {
+    const connection = new FakeOverrideConnection();
+    connection.current = {
+      revision: 2,
+      patch_json: { stem: "Revision two" },
+      base_snapshot_hash: seed.baseSnapshotHash,
+      is_active: true,
+    };
+    return connection;
+  };
+  const command = {
+    schemaVersion: "kaoyan-content-override-v1",
+    action: "revert",
+    stableId: "math1-2025-q04",
+    expectedRevision: 2,
+    editor: "maintainer",
+    reason: "Restore revision one",
+    targetRevision: 1,
+  } as const;
+
+  const success = makeCurrent();
+  success.targetPatch = { stem: "Revision one" };
+  const result = await executeContentOverride(fakePool(success), command, {
+    dryRun: true,
+  });
+  assert.equal(result.revision, 3);
+  assert.notEqual(result.afterPatchHash, null);
+
+  const missing = makeCurrent();
+  await assert.rejects(
+    executeContentOverride(fakePool(missing), command, { dryRun: true }),
+    /target revision 1 was not found/,
+  );
+
+  const mismatched = makeCurrent();
+  mismatched.targetPatch = { stem: "Revision one" };
+  mismatched.targetBaseSnapshotHash = "different-base-hash";
+  await assert.rejects(
+    executeContentOverride(fakePool(mismatched), command, { dryRun: true }),
+    /target revision belongs to a different base snapshot/,
+  );
+});
+
+test("override affectedRows mismatch rolls back before audit insertion", async () => {
+  const connection = new FakeOverrideConnection();
+  connection.writeAffectedRows = 0;
+  await assert.rejects(
+    executeContentOverride(fakePool(connection), upsertCommand, {
+      dryRun: false,
+    }),
+    /override write affected 0 rows/,
+  );
+  assert.deepEqual(connection.events, [
+    "begin",
+    "insert-override",
+    "rollback",
+    "release",
+  ]);
 });
 
 test("audit affectedRows mismatch rolls back the override write", async () => {

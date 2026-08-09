@@ -4,7 +4,7 @@
 
 - `npm.cmd run typecheck:api`: passed.
 - `npm.cmd run typecheck:web`: passed.
-- `npm.cmd run test:api`: 37/37 passed.
+- `npm.cmd run test:api`: 46/46 passed after independent-review fixes.
 - `$env:BASE_URL='http://127.0.0.1:5174'; npm.cmd run test:smoke:ci --workspace @kaoyan/web`: passed.
   - public Math1 179 questions appeared while the override response was pending;
   - returned override changed the rendered question;
@@ -24,3 +24,10 @@
 - Live public endpoint, protected-subject access, and unchanged question counts.
 - Final secret scan, PR review result, deployment identifiers, and production
   verification evidence.
+
+## Independent review
+
+- First pass: `REQUEST_CHANGES`, with two P1 findings covering partial options
+  and missing direct database-path tests; two defense-in-depth P2 findings.
+- All four findings were addressed. A second independent review is required
+  before merge.

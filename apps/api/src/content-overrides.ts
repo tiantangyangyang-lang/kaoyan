@@ -22,14 +22,14 @@ export const contentOverrideChangesSchema = z
     stem: z.string().min(1).max(100_000).optional(),
     options: z
       .array(optionSchema)
-      .max(4)
+      .length(4)
       .refine(
         (options) =>
           new Set(options.map((option) => option.label)).size === options.length &&
           options.every(
             (option, index) => option.label.charCodeAt(0) === 65 + index,
           ),
-        "options must be uniquely ordered from A",
+        "options must contain exactly A, B, C, D in order",
       )
       .optional(),
     answer: z.string().max(100_000).nullable().optional(),
@@ -195,6 +195,13 @@ export async function executeContentOverride(
       );
     }
     const currentBaseHash = baseSnapshotHash(base);
+    if (
+      command.action === "upsert" &&
+      command.changes.options !== undefined &&
+      base.question_type !== "multiple_choice"
+    ) {
+      throw new Error("options can only be overridden for multiple-choice questions");
+    }
     const [overrideRows] = await connection.query<OverrideRow[]>(
       `SELECT revision, patch_json, base_snapshot_hash, is_active
        FROM kaoyan_question_overrides

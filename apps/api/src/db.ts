@@ -239,10 +239,20 @@ interface QuestionContentRow extends RowDataPacket {
 const parseJson = <T>(value: string | T): T =>
   typeof value === "string" ? (JSON.parse(value) as T) : value;
 
+const parseStoredOverride = (
+  value: string | ContentOverrideChanges,
+): ContentOverrideChanges => {
+  try {
+    return contentOverrideChangesSchema.parse(parseJson(value));
+  } catch {
+    throw new Error("stored content override failed integrity validation");
+  }
+};
+
 const parseOverride = (row: QuestionContentRow) =>
   row.override_patch_json === null
     ? null
-    : contentOverrideChangesSchema.parse(parseJson(row.override_patch_json));
+    : parseStoredOverride(row.override_patch_json);
 
 const toListItem = (row: QuestionContentRow) => {
   const override = parseOverride(row);
@@ -591,6 +601,8 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
        JOIN kaoyan_content_batches b ON b.id = q.batch_id
        WHERE o.is_active = TRUE
          AND o.subject_code = 'math1'
+         AND q.subject_code = 'math1'
+         AND o.subject_code = q.subject_code
          AND b.status = 'published'
          AND q.source_year BETWEEN 2018 AND 2025
        ORDER BY o.stable_id`,
@@ -598,7 +610,7 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
     return rows.map((row) => ({
       stableId: row.stable_id,
       revision: Number(row.revision),
-      changes: contentOverrideChangesSchema.parse(parseJson(row.patch_json)),
+      changes: parseStoredOverride(row.patch_json),
     }));
   }
 
