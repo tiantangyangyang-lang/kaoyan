@@ -9,8 +9,8 @@
 - [x] P0 — Add or adapt a guarded database correction workflow if no supported one exists.
 - [x] P0 — Regenerate the public Math1 bank and prove unrelated payloads/counts are unchanged.
 - [x] P0 — Run targeted tests, full verification, diff checks, and secret checks.
-- [ ] P0 — Apply the controlled production database correction and verify anonymous/authenticated reads.
-- [ ] P1 — Prepare commit/PR handoff; do not merge or deploy without independent review.
+- [x] P0 — Apply the controlled production database correction and verify anonymous/authenticated reads.
+- [x] P1 — Prepare commit/PR handoff and obtain independent review approval before merge/deployment.
 
 ## Decisions
 

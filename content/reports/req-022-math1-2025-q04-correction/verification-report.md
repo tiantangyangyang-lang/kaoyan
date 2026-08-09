@@ -27,7 +27,10 @@
 
 - Preflight read-only verification passed for 1552 published questions and access policy.
 - Production correction dry-run passed and rolled back: 22-row v2 batch, Math1 total 852, old/new options and stem hashes matched the audit evidence.
-- Commit-mode result and post-commit verification are pending a traceable code commit/PR.
+- Production correction committed through the guarded transaction: `math1-final-2025-v1` is `superseded`, `math1-final-2025-v2` is `published`, and the published Math1 total remains 38 batches / 852 unique questions.
+- Q04 now has four structured options, zero active anomalies, `reviewStatus: approved`, and `finalizationStatus: approved_with_known_risks`.
+- Post-commit access verification passed: anonymous Math1 returns 179 public 2018–2025 questions; authenticated Math1 returns 852; anonymous Math2/Math3 return 401 while authenticated reads return 522/178.
+- All 1552 promoted questions remain approved with known-risk audit records; duplicate stable IDs and staging batches are both zero.
 
 ## Known limits
 
