@@ -26,7 +26,7 @@ export const AUTHORIZED_BATCH_IDS = [
   ...[
     ...range(1987, 1993),
     ...range(1995, 2025),
-  ].map((year) => `math1-final-${year}-v${year === 2025 ? 2 : 1}`),
+  ].map((year) => `math1-final-${year}-v${year === 2025 ? 3 : 1}`),
   ...range(1997, 2019).map(
     (year) => `REQ-017-math2-${year}-aggregate-staging`,
   ),
