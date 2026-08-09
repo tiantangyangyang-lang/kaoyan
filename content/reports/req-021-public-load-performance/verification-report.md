@@ -45,6 +45,19 @@ repository's authorized deployment path.
 775. The generated inventory and KaTeX report differences were restored; they are not part
 of this requirement.
 
+## Publication status
+
+- Commit `9251015` is pushed to `codex/req-021-public-load-performance`.
+- PR #23: `https://github.com/tiantangyangyang-lang/kaoyan/pull/23`.
+- Cloudflare Pages check passed and deployed Preview
+  `https://60638744.kaoyan-ddg.pages.dev`.
+- Deployed Preview verified the intended sequence: 179 public questions render first, then
+  an existing authenticated session replaces the bank with all 852 Math1 questions.
+- Cloudflare serves the hashed JavaScript asset with one-year immutable caching; `/` and
+  `/data/math1.json` retain `max-age=0, must-revalidate`.
+- Production remains pending because repository policy requires independent PR review before
+  merge; PR #23 currently has no review decision.
+
 ## Security and data boundary
 
 - No credentials, connection strings, cookies, or secrets were added.

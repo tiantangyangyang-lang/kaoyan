@@ -57,3 +57,19 @@
   contains 792 files while `test_exact_repository_counts` expects 775. The command stopped
   before reaching this change's typecheck/test/build phases; those phases were run
   independently and passed.
+
+## Publication and Preview deployment
+
+- Commit: `9251015 perf(web): parallelize public Math1 loading`.
+- Pull Request: `https://github.com/tiantangyangyang-lang/kaoyan/pull/23`.
+- Cloudflare Preview: `https://60638744.kaoyan-ddg.pages.dev` (successful).
+- Browser QA on Preview first observed the 179-question public dashboard; after the existing
+  login session resolved, the Math1 bank showed all 852 questions. This confirms the public-
+  first/authenticated-replacement sequence on the deployed build.
+- Preview console contained no application warnings/errors and Math1-bank navigation worked.
+- Live Preview headers:
+  - `/assets/index-Bors5hCA.js`: `public, max-age=31536000, immutable`.
+  - `/`: `public, max-age=0, must-revalidate`.
+  - `/data/math1.json`: `public, max-age=0, must-revalidate`.
+- Production `https://gongren.xyz` still requires PR merge. Repository policy prohibits
+  merging without independent review; PR #23 currently has no review decision.

@@ -57,5 +57,6 @@ immutably without changing access rules or content.
 
 ## Status
 
-**Currently in Phase 7** - the maintainer authorized commit and deployment; publishing the
-reviewed scope and checking the deployment path.
+**Currently in Phase 7** - commit `9251015` is pushed, PR #23 is open, and Cloudflare
+Preview deployment passed. Production merge/deployment is waiting for the independent PR
+review required by repository policy.
