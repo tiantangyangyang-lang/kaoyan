@@ -164,6 +164,20 @@ export function createApp({
   });
 
   app.get(
+    "/api/content/math1/public-overrides",
+    contentLimiter,
+    async (_request, response, next) => {
+      try {
+        const data = await store.listPublicMath1Overrides();
+        response.set("Cache-Control", "public, max-age=0, must-revalidate");
+        response.json({ data });
+      } catch (error) {
+        next(error);
+      }
+    },
+  );
+
+  app.get(
     "/api/content/:subjectCode/questions",
     contentLimiter,
     async (request: AuthenticatedRequest, response, next) => {

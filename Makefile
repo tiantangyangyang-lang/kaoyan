@@ -17,9 +17,11 @@ MATH2_INVENTORY := $(MATH2_REPORT)/source-inventory.json
 MATH3_1987_1996_OUTPUT := content/staging/math3
 MATH3_1987_1996_REPORT := content/reports/req-016-math3-1987-1996-staging-db-readiness
 MATH1_FINAL_INPUT := content/final/math1/question-bank.json
+PATCH ?= content/examples/content-override.math1-2025-q04.json
 
 .PHONY: help install sync dev dev-api typecheck typecheck-web typecheck-api test test-api test-smoke build build-web build-api math1-db-import-dry-run math1-db-import-commit math2-inventory math2-pilot math2-katex math2-validate math2-2021-2022-audit math2-1997-2019-staging math2-1997-2019-katex-report math2-1997-2019-validate math2-2023-staging math2-2023-katex math2-2023-validate math2-2024-staging math2-2024-katex math2-2024-validate math3-1987-1996-staging math3-1987-1996-katex-report math3-1987-1996-validate math3-1987-import-dry-run math3-1988-import-dry-run math3-1989-import-dry-run math3-1990-import-dry-run math3-1991-import-dry-run math3-1992-import-dry-run math3-1993-import-dry-run math3-1994-import-dry-run math3-1995-import-dry-run math3-1996-import-dry-run math3-db-1987-1996-import-dry-run math3-1987-import-commit math3-1988-import-commit math3-1989-import-commit math3-1990-import-commit math3-1991-import-commit math3-1992-import-commit math3-1993-import-commit math3-1994-import-commit math3-1995-import-commit math3-1996-import-commit math3-db-1987-1996-import-commit math2-2020-import-dry-run math2-2023-import-dry-run math2-2024-import-dry-run math2-db-preview-import-dry-run math2-2020-import-commit math2-2023-import-commit math2-2024-import-commit math2-db-preview-import-commit math2-import-dry-run test-math2 test-python-all verify
 .PHONY: content-db-approve-dry-run content-db-approve-commit content-db-publish-dry-run content-db-publish-commit content-db-unpublish-dry-run content-db-unpublish-commit content-db-verify-promoted content-db-verify-rollback math1-2025-q04-correct-dry-run math1-2025-q04-correct-commit math1-2025-q04-verify math1-2025-q04-explanation-content-verify math1-2025-q04-explanation-correct-dry-run math1-2025-q04-explanation-correct-commit math1-2025-q04-explanation-verify
+.PHONY: content-override-dry-run content-override-commit content-override-example-dry-run
 
 help:
 	@echo "Available targets:"
@@ -45,6 +47,9 @@ help:
 	@echo "  make math1-2025-q04-explanation-correct-commit   Version and publish the corrected explanation"
 	@echo "  make math1-2025-q04-explanation-content-verify  Verify source/public content and KaTeX"
 	@echo "  make math1-2025-q04-explanation-verify  Verify v3, explanation-only diff, counts, and public artifact"
+	@echo "  make content-override-dry-run PATCH=file.json  Validate one audited correction and roll back"
+	@echo "  make content-override-commit PATCH=file.json   Commit one audited correction"
+	@echo "  make content-override-example-dry-run          Dry-run the bundled safe example"
 	@echo "  make math2-inventory          Audit read-only Math2 Markdown sources"
 	@echo "  make math1-db-import-dry-run  Validate all canonical Math1 years in a rolled-back DB import"
 	@echo "  make math1-db-import-commit   Commit all canonical Math1 years as DB staging"
@@ -142,6 +147,15 @@ math1-2025-q04-explanation-content-verify:
 
 math1-2025-q04-explanation-verify:
 	$(NPM) run content:verify-math1-2025-q04-explanation --workspace @kaoyan/api
+
+content-override-dry-run:
+	$(NPM) run content:override --workspace @kaoyan/api -- --input "$(PATCH)"
+
+content-override-commit:
+	$(NPM) run content:override --workspace @kaoyan/api -- --input "$(PATCH)" --commit
+
+content-override-example-dry-run:
+	$(NPM) run content:override --workspace @kaoyan/api -- --input "content/examples/content-override.math1-2025-q04.json"
 
 content-db-verify-rollback:
 	$(NPM) run content:verify-rollback --workspace @kaoyan/api

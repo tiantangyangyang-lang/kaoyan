@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { AppShell } from "./components/AppShell";
 import { QuestionWorkspace } from "./components/QuestionWorkspace";
 import {
+  applyPublicQuestionOverrides,
   loadAuthenticatedQuestionBank,
   loadAuthenticatedQuestionDetail,
   loadQuestionBank,
@@ -37,7 +38,11 @@ import { PaperSessionView } from "./views/PaperSessionView";
 import { ReviewQueueView } from "./views/ReviewQueueView";
 import { DataCenterView } from "./views/DataCenterView";
 import { AccountView } from "./views/AccountView";
-import { getCurrentUser, verifyAccount } from "./api";
+import {
+  getCurrentUser,
+  loadPublicMath1Overrides,
+  verifyAccount,
+} from "./api";
 import type { AuthUser, SubjectCatalog } from "./types";
 import { SUBJECT_LABELS } from "./constants";
 
@@ -89,6 +94,10 @@ export function App() {
         if (!user && subject !== "math1") {
           throw new Error(`${nextSubjectName}题库需要登录后查看`);
         }
+        const publicOverridesPromise =
+          !user && subject === "math1"
+            ? loadPublicMath1Overrides().catch(() => [])
+            : null;
         const loadedBank = user
           ? await loadAuthenticatedQuestionBank(subject)
           : item.questionBankUrl
@@ -102,6 +111,16 @@ export function App() {
         }
         if (cancelled) return;
         setBank(loadedBank);
+        if (publicOverridesPromise) {
+          void publicOverridesPromise.then((overrides) => {
+            if (cancelled || overrides.length === 0) return;
+            setBank((current) =>
+              current?.subjectCode === "math1"
+                ? applyPublicQuestionOverrides(current, overrides)
+                : current,
+            );
+          });
+        }
       } catch (reason: unknown) {
         if (cancelled) return;
         setError(reason instanceof Error ? reason.message : "题库加载失败");

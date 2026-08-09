@@ -5,6 +5,7 @@ import {
 import type {
   PublishedQuestionDetail,
   PublishedQuestionListItem,
+  PublicQuestionOverride,
   Question,
   QuestionBank,
   SubjectCatalog,
@@ -26,6 +27,38 @@ export async function loadQuestionBank(url: string): Promise<QuestionBank> {
   const bank = (await response.json()) as QuestionBank;
   if (!Array.isArray(bank.questions)) throw new Error("题库格式不正确");
   return bank;
+}
+
+export function applyPublicQuestionOverrides(
+  bank: QuestionBank,
+  overrides: PublicQuestionOverride[],
+): QuestionBank {
+  if (bank.subjectCode !== "math1" || overrides.length === 0) return bank;
+  const byStableId = new Map(
+    overrides.map((override) => [override.stableId, override.changes]),
+  );
+  let changed = false;
+  const questions = bank.questions.map((question) => {
+    const changes = byStableId.get(question.stableId);
+    if (!changes) return question;
+    changed = true;
+    return {
+      ...question,
+      ...(changes.stem !== undefined ? { stem: changes.stem } : {}),
+      ...(changes.options !== undefined ? { options: changes.options } : {}),
+      ...(Object.hasOwn(changes, "answer") ? { answer: changes.answer } : {}),
+      ...(changes.answerStatus !== undefined
+        ? { answerStatus: changes.answerStatus }
+        : {}),
+      ...(Object.hasOwn(changes, "explanation")
+        ? { explanation: changes.explanation ?? "" }
+        : {}),
+      ...(changes.explanationStatus !== undefined
+        ? { explanationStatus: changes.explanationStatus }
+        : {}),
+    };
+  });
+  return changed ? { ...bank, questions } : bank;
 }
 
 function listItemToQuestion(

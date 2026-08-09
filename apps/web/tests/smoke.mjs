@@ -48,6 +48,9 @@ const routeAnonymousApi = (page) =>
     if (pathname.endsWith("/availability")) {
       return fulfillJson(route, 200, { available: false });
     }
+    if (pathname.endsWith("/api/content/math1/public-overrides")) {
+      return fulfillJson(route, 200, { data: [] });
+    }
     if (pathname.includes("/api/content/")) {
       return fulfillJson(route, 401, { error: "authentication_required" });
     }
@@ -92,6 +95,9 @@ try {
           emailVerified: true,
         },
       });
+    }
+    if (pathname.endsWith("/api/content/math1/public-overrides")) {
+      return fulfillJson(route, 200, { data: [] });
     }
     const listMatch = /\/api\/content\/(math[123])\/questions$/.exec(pathname);
     if (listMatch) {
@@ -140,6 +146,58 @@ try {
   }
   await parallelPage.close();
 
+  const overridePage = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+  });
+  const overrideIssues = captureBrowserIssues(overridePage);
+  let overridePending = true;
+  let releaseOverride = () => {};
+  const overrideGate = new Promise((resolveGate) => {
+    releaseOverride = resolveGate;
+  });
+  await overridePage.route("**/api/**", async (route) => {
+    const pathname = new URL(route.request().url()).pathname;
+    if (pathname.endsWith("/api/auth/me")) {
+      return fulfillJson(route, 200, { user: null });
+    }
+    if (pathname.endsWith("/api/content/math1/public-overrides")) {
+      await overrideGate;
+      overridePending = false;
+      return fulfillJson(route, 200, {
+        data: [
+          {
+            stableId: "math1-2025-q01",
+            revision: 1,
+            changes: { stem: "公开覆盖测试题干" },
+          },
+        ],
+      });
+    }
+    if (pathname.endsWith("/availability")) {
+      return fulfillJson(route, 200, { available: false });
+    }
+    return fulfillJson(route, 404, { error: "not_found" });
+  });
+  await overridePage.goto(baseUrl, { waitUntil: "domcontentloaded" });
+  await overridePage
+    .getByText("数学一真题当前收录 179 题。", { exact: true })
+    .waitFor();
+  if (!overridePending) {
+    throw new Error("Public Math1 waited for the override request");
+  }
+  releaseOverride();
+  await overridePage.waitForTimeout(200);
+  await overridePage.getByRole("button", { name: "真题库" }).click();
+  await overridePage.getByRole("button", { name: /数学一/ }).click();
+  await overridePage.locator("select").nth(0).selectOption("2025");
+  await overridePage.locator(".question-row").first().click();
+  await overridePage.getByText("公开覆盖测试题干").waitFor();
+  if (overrideIssues.length) {
+    throw new Error(`Public override browser issues:\n${overrideIssues.join("\n")}`);
+  }
+  await overridePage.close();
+
   const authRacePage = await browser.newPage({
     viewport: { width: 1280, height: 900 },
     deviceScaleFactor: 1,
@@ -163,6 +221,9 @@ try {
           emailVerified: true,
         },
       });
+    }
+    if (pathname.endsWith("/api/content/math1/public-overrides")) {
+      return fulfillJson(route, 200, { data: [] });
     }
     const listMatch = /\/api\/content\/(math[123])\/questions$/.exec(pathname);
     if (listMatch) {
@@ -207,6 +268,9 @@ try {
     }
     if (pathname.endsWith("/availability")) {
       return fulfillJson(route, 200, { available: false });
+    }
+    if (pathname.endsWith("/api/content/math1/public-overrides")) {
+      return fulfillJson(route, 200, { data: [] });
     }
     if (pathname.includes("/api/content/")) {
       return fulfillJson(route, 401, { error: "authentication_required" });
@@ -438,6 +502,8 @@ try {
         publicLoadParallelWithAuthentication: true,
         authenticatedBankReplacedPublicBank: true,
         publicBankStayedVisibleDuringAuthenticatedLoad: true,
+        publicOverrideDidNotBlockInitialBank: true,
+        publicOverrideAppliedAfterResponse: true,
         staleStartupAuthDidNotOverrideManualLogin: true,
         anonymousAuth401Fallback: true,
         paperSubmission: true,

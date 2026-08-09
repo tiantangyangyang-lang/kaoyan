@@ -4,8 +4,13 @@ import { dirname, resolve } from "node:path";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const webRoot = resolve(here, "..");
-const repoRoot = resolve(webRoot, "../..");
+const vitePackageEntry = fileURLToPath(import.meta.resolve("vite"));
+const viteEntry = resolve(dirname(vitePackageEntry), "../../bin/vite.js");
 const baseUrl = process.env.BASE_URL ?? "http://127.0.0.1:5173";
+const parsedBaseUrl = new URL(baseUrl);
+const serverHost = parsedBaseUrl.hostname;
+const serverPort = parsedBaseUrl.port ||
+  (parsedBaseUrl.protocol === "https:" ? "443" : "80");
 let server;
 
 async function isReachable() {
@@ -30,11 +35,11 @@ if (!(await isReachable())) {
   server = spawn(
     process.execPath,
     [
-      resolve(repoRoot, "node_modules/vite/bin/vite.js"),
+      viteEntry,
       "--host",
-      "127.0.0.1",
+      serverHost,
       "--port",
-      "5173",
+      serverPort,
       "--strictPort",
     ],
     {

@@ -3,6 +3,7 @@ import type {
   PaperSessionMap,
   PublishedQuestionDetail,
   PublishedQuestionPage,
+  PublicQuestionOverride,
   QuestionStateMap,
   QuestionAnimation,
   SubjectCode,
@@ -132,6 +133,13 @@ export async function loadPublishedQuestionDetail(
 ) {
   const result = await apiRequest<{ data: PublishedQuestionDetail }>(
     `/content/${subject}/questions/${encodeURIComponent(stableId)}`,
+  );
+  return result.data;
+}
+
+export async function loadPublicMath1Overrides() {
+  const result = await apiRequest<{ data: PublicQuestionOverride[] }>(
+    "/content/math1/public-overrides",
   );
   return result.data;
 }
