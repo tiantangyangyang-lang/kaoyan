@@ -33637,13 +33637,13 @@
         },
         {
           "label": "C",
-          "value": "[OCR-damaged in source:    4 4 40 2 2, d , d dy yf x y x f x y x y        ]",
-          "sourceStatus": "source_damaged_ocr_unrecoverable"
+          "value": "$\\int_{0}^{4}\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x,y)\\,\\mathrm{d}x+\\int_{2}^{\\sqrt{4-y}} f(x,y)\\,\\mathrm{d}x\\right]\\mathrm{d}y$",
+          "sourceStatus": "human_verified_user_image"
         },
         {
           "label": "D",
-          "value": "[OCR-damaged in source:  4 20 42 d , dyy f x y x  ]",
-          "sourceStatus": "source_damaged_ocr_unrecoverable"
+          "value": "$2\\int_{0}^{4}\\mathrm{d}y\\int_{\\sqrt{4-y}}^{2} f(x,y)\\,\\mathrm{d}x$",
+          "sourceStatus": "human_verified_user_image"
         }
       ],
       "answer": "A",
@@ -33660,15 +33660,7 @@
       "reviewStatus": "needs_human_review",
       "finalizationStatus": "blocked",
       "knowledgePoints": [],
-      "anomalies": [
-        {
-          "type": "partial_options_ocr_damaged",
-          "questionNumber": 4,
-          "severity": "warning",
-          "message": "Options C and D are OCR-damaged in source; labels A/B reconstructed from source formulas. Answer A confirmed by solution.",
-          "repairAction": "reconstructed_labels_AB_from_source_formulas"
-        }
-      ],
+      "anomalies": [],
       "sourceDirty": true,
       "sourceFileHashes": {
         "paper": "E0EF1990220462C71A896764F2672AC5396E4438CD81565561EA1C5F4DB4E0AE",
