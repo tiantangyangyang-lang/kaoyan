@@ -5,7 +5,8 @@
 - Q04 canonical/review/public explanation is 334 characters and contains no unresolved image reference or OCR `for` artifact.
 - The cleaned explanation preserves answer A and renders all eight inline/block LaTeX expressions with strict KaTeX parsing.
 - The guarded production dry-run validated v2-to-v3, copied 22 questions, retained 852 published Math1 questions, and rolled back.
-- Production was not mutated; `math1-final-2025-v2` remains published until the change has a traceable commit and review.
+- After commit `acddac8`, independent review approved with no P0/P1 findings. The commit-mode transaction then superseded `math1-final-2025-v2` and published `math1-final-2025-v3`.
+- Post-commit comparison confirmed exactly one explanation change across the 22-row batch and zero non-explanation changes.
 
 ## Changed files
 
@@ -25,6 +26,8 @@
 ## Verification
 
 - `math1-2025-q04-explanation-correct-dry-run`: passed and rolled back; old/new explanation hashes matched the audited values.
+- `math1-2025-q04-explanation-correct-commit`: committed; v2 is `superseded`, v3 is `published`, and Math1 remains 38 batches / 852 unique questions.
+- Promoted-content verification: 1552 total, zero duplicate stable IDs, zero staging batches; anonymous Math1 179 and authenticated 852; anonymous Math2/Math3 401 and authenticated 522/178.
 - Content verifier: 852 canonical / 852 unique stable IDs / 179 public; 851 unrelated questions unchanged; answer A unchanged; eight KaTeX expressions passed.
 - API targeted tests: 6/6 passed, covering default rollback and changed-old-content/OCR rejection.
 - Full API suite: 30/30 passed.
@@ -36,7 +39,5 @@
 
 ## Remaining production steps
 
-1. Stage and commit only REQ-023 files.
-2. Push and open one PR against `main`.
-3. Obtain review and passing deployment preview.
-4. Run commit mode, verify v2 is superseded and v3 published, then merge/deploy.
+1. Commit this final production audit result to PR #25.
+2. Confirm the updated Cloudflare preview and merge/deploy.

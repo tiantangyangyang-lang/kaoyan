@@ -27,4 +27,4 @@ Replace the damaged Q04 explanation in source artifacts and provide a guarded v2
 
 ## Status
 
-Implementation and task-relevant verification are complete. Production remains on v2 pending explicit authorization for commit, push, PR, review, merge, and the commit-mode transaction.
+Implementation, independent review, and the production v2-to-v3 transaction are complete. PR #25 is ready for final deployment check and merge.
