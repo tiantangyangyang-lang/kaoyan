@@ -169,7 +169,7 @@
         "questionNumber": 4,
         "questionType": "multiple_choice",
         "reviewStatus": "needs_human_review",
-        "stem": "4．设函数 $f ( x , y )$ 连续，则 $\\int _ { - 2 } ^ { 2 } \\mathrm { d } x \\int _ { 4 - x ^ { 2 } } ^ { 4 } f \\big ( x , y \\big ) \\mathrm { d } y =$\n\n$\\int _ { 0 } ^ { 4 } \\biggl [ \\int _ { - 2 } ^ { - \\sqrt { 4 - y } } f \\left( x , y \\right) \\mathrm { d } x + \\int _ { \\sqrt { 4 - y } } ^ { 2 } f \\left( x , y \\right) \\mathrm { d } x \\biggr ] \\mathrm { d } y \\ .$   \n$\\int _ { 0 } ^ { 4 } \\biggl [ \\int _ { - 2 } ^ { \\sqrt { 4 - y } } f \\left( x , y \\right) \\mathrm { d } x + \\int _ { \\sqrt { 4 - y } } ^ { 2 } f \\left( x , y \\right) \\mathrm { d } x \\biggr ] \\mathrm { d } y \\ .$   \nC．    4 4 40 2 2, d , d dy yf x y x f x y x y         ．   \nD．  4 20 42 d , dyy f x y x   ．\n\n【答案】A",
+        "stem": "4．设函数 $f ( x , y )$ 连续，则 $\\int _ { - 2 } ^ { 2 } \\mathrm { d } x \\int _ { 4 - x ^ { 2 } } ^ { 4 } f \\big ( x , y \\big ) \\mathrm { d } y =$",
         "options": [
           {
             "label": "A",
@@ -183,38 +183,37 @@
           },
           {
             "label": "C",
-            "value": "[OCR-damaged in source:    4 4 40 2 2, d , d dy yf x y x f x y x y        ]",
-            "sourceStatus": "source_damaged_ocr_unrecoverable"
+            "value": "$\\int_{0}^{4}\\left[\\int_{-2}^{-\\sqrt{4-y}} f(x,y)\\,\\mathrm{d}x+\\int_{2}^{\\sqrt{4-y}} f(x,y)\\,\\mathrm{d}x\\right]\\mathrm{d}y$",
+            "sourceStatus": "human_verified_user_image"
           },
           {
             "label": "D",
-            "value": "[OCR-damaged in source:  4 20 42 d , dyy f x y x  ]",
-            "sourceStatus": "source_damaged_ocr_unrecoverable"
+            "value": "$2\\int_{0}^{4}\\mathrm{d}y\\int_{\\sqrt{4-y}}^{2} f(x,y)\\,\\mathrm{d}x$",
+            "sourceStatus": "human_verified_user_image"
           }
         ],
         "answerCandidate": "A",
         "answerStatus": "candidate_from_solutions",
         "explanationCandidate": "【解析】由题易知，此二重积分积分区域为\n\n![](images/d1aac1acec58059a3d6cf16b6341ff359ed2871f9b14a50a3c79e1389f2d802b.jpg)\n\n$\\mathrm { D } = \\left\\{ ( x , y ) { \\big | } 4 - x ^ { 2 } \\leq y \\leq 4 , - 2 \\leq x \\leq 2 \\right\\}$ ，对应图像为上图所示。\n\n记 $\\mathrm D _ { 1 } = \\Big \\{ ( x , y ) \\Big | 4 - x ^ { 2 } \\leq y \\leq 4 , - 2 \\leq x \\leq 0 \\Big \\} , \\mathrm D _ { 2 } = \\Big \\{ ( x , y ) \\Big | 4 - x ^ { 2 } \\leq y \\leq 4 , 0 \\leq x \\leq 2 \\Big \\} \\ \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\ \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\ \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\ \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\ \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\mathrm { ~ f ~ o ~ r ~ } \\qquad \\qquad \\mathrm { ~ f ~ o ~ r ~ o ~ r ~ } \\qquad \\qquad \\mathrm { ~ f ~ o ~ r ~ }$ ${ \\mathrm { D } } _ { 2 } = \\left\\{ ( x , y ) { \\left| 4 - x ^ { 2 } \\leq y \\leq 4 , 0 \\leq x \\leq 2 \\right. } \\right\\}$ ， 且\n\n${ \\mathrm { I } } { = } \\int _ { - 2 } ^ { 2 } \\mathrm { d } x \\int _ { 4 - x ^ { 2 } } ^ { 4 } f \\left( x , y \\right) \\mathrm { d } y \\ , \\mathbb { M } { \\mathrm { I } } = \\int _ { D _ { 1 } } ^ { } f \\left( x , y \\right) \\mathrm { d } \\sigma + \\int _ { D _ { 2 } } ^ { } f \\left( x , y \\right) \\mathrm { d } \\sigma$ $\\mathbf { \\Pi } [ = \\int \\intop _ { D _ { 1 } } f { \\big ( } x , y { \\big ) } \\mathrm { d } \\sigma + \\intop _ { D _ { 2 } } f \\left( x , y \\right) \\mathrm { d } \\sigma$ ，交换积分次序得\n\n$$\n\\begin{array}{l} \\mathrm {I} = \\int_ {0} ^ {4} \\mathrm {d} y \\int_ {- 2} ^ {- \\sqrt {4 - y}} f (x, y) \\mathrm {d} x + \\int_ {0} ^ {4} \\mathrm {d} y \\int_ {\\sqrt {4 - y}} ^ {2} f (x, y) \\mathrm {d} x \\\\ = \\int_ {0} ^ {4} \\left[ \\int_ {- 2} ^ {- \\sqrt {4 - y}} f (x, y) d x + \\int_ {\\sqrt {4 - y}} ^ {2} f (x, y) d x \\right] d y \\\\ \\end{array}\n$$\n\n故 A 正确。",
         "explanationStatus": "candidate_from_solutions",
-        "anomalies": [
-          {
-            "type": "partial_options_ocr_damaged",
-            "questionNumber": 4,
-            "severity": "warning",
-            "message": "Options C and D are OCR-damaged in source; labels A/B reconstructed from source formulas. Answer A confirmed by solution.",
-            "repairAction": "reconstructed_labels_AB_from_source_formulas"
-          }
-        ]
+        "anomalies": []
       },
       "semanticReview": {
-        "modifications": [],
-        "uncertainties": [
+        "modifications": [
           {
-            "item": "partial_options_ocr_damaged",
-            "detail": "Options C and D are OCR-damaged in source; labels A/B reconstructed from source formulas. Answer A confirmed by solution.",
-            "severity": "warning"
+            "field": "options.C/options.D",
+            "before": "OCR-damaged placeholders",
+            "after": "LaTeX transcription of the supplied source image",
+            "reason": "Maintainer-provided image makes both option formulas legible; recorded under REQ-022 with SHA-256 C1477487B3B3F6C790BECCFA9E718B534D526B774F24F17512CF942D190F1B50."
+          },
+          {
+            "field": "stem",
+            "before": "Question stem plus duplicated A-D option text and an embedded answer marker",
+            "after": "Question text ending at the equals sign",
+            "reason": "The option and answer block belongs to structured fields and caused duplicated damaged text plus answer leakage in the rendered practice page."
           }
         ],
+        "uncertainties": [],
         "conflicts": [],
         "suggestedTopics": [
           {
@@ -223,10 +222,8 @@
             "evidence": "Markdown-first finalization; all content preserved from source with deterministic repairs."
           }
         ],
-        "confidence": "low",
-        "humanReviewFocus": [
-          "确认 partial_options_ocr_damaged: Options C and D are OCR-damaged in source; labels A/B reconstructed from source formulas. Answer A confirmed by solution."
-        ]
+        "confidence": "high",
+        "humanReviewFocus": []
       },
       "reviewStatus": "needs_human_review"
     },

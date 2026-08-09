@@ -13,6 +13,8 @@
     "content:unpublish-authorized": "tsx scripts/unpublish-authorized-content.ts",
     "content:verify-promoted": "tsx scripts/verify-promoted-content.ts",
     "content:verify-rollback": "tsx scripts/verify-content-rollback.ts",
+    "content:correct-math1-2025-q04": "tsx scripts/correct-math1-2025-q04.ts",
+    "content:verify-math1-2025-q04": "tsx scripts/verify-math1-2025-q04.ts",
     "import:math1": "tsx scripts/import-math1.ts",
     "import:questions": "tsx scripts/import-questions.ts",
     "import:math2": "tsx scripts/import-math2.ts",

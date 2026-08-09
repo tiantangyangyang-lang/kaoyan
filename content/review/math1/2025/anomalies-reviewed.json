@@ -10,13 +10,6 @@
   "reviewStatus": "needs_human_review",
   "anomalies": [
     {
-      "type": "partial_options_ocr_damaged",
-      "questionNumber": 4,
-      "severity": "warning",
-      "message": "Options C and D are OCR-damaged in source; labels A/B reconstructed from source formulas. Answer A confirmed by solution.",
-      "repairAction": "reconstructed_labels_AB_from_source_formulas"
-    },
-    {
       "type": "reconstructed_options_from_damaged_ocr",
       "questionNumber": 9,
       "severity": "warning",
@@ -97,13 +90,23 @@
     }
   ],
   "summary": {
-    "totalAnomalies": 12,
+    "totalAnomalies": 11,
     "bySeverity": {
       "error": 0,
-      "warning": 4,
+      "warning": 3,
       "info": 8
     },
     "blockingIssues": [],
     "pdfVerification": "not_run"
-  }
+  },
+  "resolvedAnomalies": [
+    {
+      "originalType": "partial_options_ocr_damaged",
+      "questionNumber": 4,
+      "severity": "warning",
+      "resolution": "Options C and D transcribed from the maintainer-supplied image without mathematical reinterpretation.",
+      "resolvedBy": "REQ-022",
+      "evidenceSha256": "C1477487B3B3F6C790BECCFA9E718B534D526B774F24F17512CF942D190F1B50"
+    }
+  ]
 }
