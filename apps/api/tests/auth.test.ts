@@ -20,6 +20,7 @@ import type {
   ContentQuestionDetail,
   ContentQuestionPage,
   ContentStore,
+  PublicContentOverride,
 } from "../src/content-store.js";
 
 class MemoryStore implements AuthStore, ContentStore {
@@ -28,6 +29,7 @@ class MemoryStore implements AuthStore, ContentStore {
   sessions = new Map<string, string>();
   learning = new Map<string, LearningStateRecord>();
   publishedQuestions: ContentQuestionDetail[] = [];
+  publicOverrides: PublicContentOverride[] = [];
   animations = new Map<string, QuestionAnimationRecord>([
     [
       "math1-2023-q01",
@@ -174,6 +176,10 @@ class MemoryStore implements AuthStore, ContentStore {
     );
   }
 
+  async listPublicMath1Overrides(): Promise<PublicContentOverride[]> {
+    return this.publicOverrides;
+  }
+
   async getQuestionAnimation(
     questionId: string,
   ): Promise<QuestionAnimationRecord | null> {
@@ -259,6 +265,13 @@ test("anonymous access is limited to published Math1 from 2018 through 2025", as
   store.publishedQuestions = [2017, 2018, 2025, 2026].map(
     makePublishedMath1Question,
   );
+  store.publicOverrides = [
+    {
+      stableId: "math1-2025-q01",
+      revision: 1,
+      changes: { explanation: "Corrected public explanation" },
+    },
+  ];
   const app = createApp({
     config,
     store,
@@ -275,6 +288,12 @@ test("anonymous access is limited to published Math1 from 2018 through 2025", as
     [2018, 2025],
   );
   assert.equal(publicList.body.data.totalItems, 2);
+
+  const publicOverrides = await request(app)
+    .get("/api/content/math1/public-overrides")
+    .expect(200);
+  assert.equal(publicOverrides.headers["cache-control"], "public, max-age=0, must-revalidate");
+  assert.deepEqual(publicOverrides.body.data, store.publicOverrides);
 
   await request(app)
     .get("/api/content/math1/questions?page=1&pageSize=10&year=2018")

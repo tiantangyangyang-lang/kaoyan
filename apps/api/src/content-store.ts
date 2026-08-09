@@ -1,3 +1,5 @@
+import type { ContentOverrideChanges } from "./content-overrides.js";
+
 export interface ContentOption {
   label: string;
   value: string;
@@ -32,6 +34,12 @@ export interface ContentQuestionPage {
 
 export type ContentSubjectCode = "math1" | "math2" | "math3";
 
+export interface PublicContentOverride {
+  stableId: string;
+  revision: number;
+  changes: ContentOverrideChanges;
+}
+
 export interface ContentStore {
   listPublishedQuestions(input: {
     subjectCode: ContentSubjectCode;
@@ -46,4 +54,5 @@ export interface ContentStore {
     subjectCode: ContentSubjectCode,
     stableId: string,
   ): Promise<ContentQuestionDetail | null>;
+  listPublicMath1Overrides(): Promise<PublicContentOverride[]>;
 }

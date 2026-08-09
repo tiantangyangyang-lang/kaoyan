@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "kaoyan-content-override-v1",
+  "action": "upsert",
+  "stableId": "math1-2025-q04",
+  "expectedRevision": 0,
+  "editor": "maintainer",
+  "reason": "Dry-run example using the current reference answer",
+  "changes": {
+    "answer": "A"
+  }
+}

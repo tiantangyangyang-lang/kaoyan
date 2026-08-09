@@ -97,6 +97,21 @@ export interface PublishedQuestionPage {
   totalPages: number;
 }
 
+export interface PublicQuestionOverrideChanges {
+  stem?: string;
+  options?: PublishedContentOption[];
+  answer?: string | null;
+  answerStatus?: string;
+  explanation?: string | null;
+  explanationStatus?: string;
+}
+
+export interface PublicQuestionOverride {
+  stableId: string;
+  revision: number;
+  changes: PublicQuestionOverrideChanges;
+}
+
 export interface QuestionState {
   mastery: Mastery;
   inWrongBook: boolean;

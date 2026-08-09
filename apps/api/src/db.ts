@@ -24,6 +24,11 @@ import {
   mathAnimationSpecSchema,
   QUESTION_ANIMATION_SEEDS,
 } from "./animationSeeds.js";
+import {
+  applyContentOverride,
+  contentOverrideChangesSchema,
+  type ContentOverrideChanges,
+} from "./content-overrides.js";
 
 interface UserRow extends RowDataPacket {
   id: string;
@@ -142,6 +147,34 @@ const schemaStatements = [
     INDEX idx_question_list (subject_code, source_year, question_type, question_number),
     INDEX idx_question_stable (stable_id)
   )`,
+  `CREATE TABLE IF NOT EXISTS kaoyan_question_overrides (
+    stable_id VARCHAR(64) PRIMARY KEY,
+    subject_code VARCHAR(32) NOT NULL,
+    revision INT UNSIGNED NOT NULL,
+    patch_json JSON NOT NULL,
+    base_snapshot_hash CHAR(64) NOT NULL,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    editor VARCHAR(128) NOT NULL,
+    reason VARCHAR(500) NOT NULL,
+    created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+    INDEX idx_question_override_public (subject_code, is_active)
+  )`,
+  `CREATE TABLE IF NOT EXISTS kaoyan_question_override_revisions (
+    stable_id VARCHAR(64) NOT NULL,
+    revision INT UNSIGNED NOT NULL,
+    subject_code VARCHAR(32) NOT NULL,
+    action ENUM('upsert', 'revert') NOT NULL,
+    target_revision INT UNSIGNED NULL,
+    before_patch_json JSON NULL,
+    after_patch_json JSON NULL,
+    base_snapshot_hash CHAR(64) NOT NULL,
+    editor VARCHAR(128) NOT NULL,
+    reason VARCHAR(500) NOT NULL,
+    created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    PRIMARY KEY (stable_id, revision),
+    INDEX idx_question_override_revision_time (created_at)
+  )`,
   `CREATE TABLE IF NOT EXISTS kaoyan_question_animations (
     question_id VARCHAR(64) PRIMARY KEY,
     subject_code VARCHAR(32) NOT NULL,
@@ -200,20 +233,40 @@ interface QuestionContentRow extends RowDataPacket {
   review_status: string;
   finalization_status: string;
   knowledge_points: string | string[];
+  override_patch_json: string | ContentOverrideChanges | null;
 }
 
 const parseJson = <T>(value: string | T): T =>
   typeof value === "string" ? (JSON.parse(value) as T) : value;
 
-const toListItem = (row: QuestionContentRow) => ({
-  stableId: row.stable_id,
-  sourceYear: row.source_year,
-  type: row.question_type,
-  questionNumber: row.question_number,
-  stem: row.stem,
-  options: parseJson<ContentOption[]>(row.options_json),
-  finalizationStatus: row.finalization_status,
-});
+const parseStoredOverride = (
+  value: string | ContentOverrideChanges,
+): ContentOverrideChanges => {
+  try {
+    return contentOverrideChangesSchema.parse(parseJson(value));
+  } catch {
+    throw new Error("stored content override failed integrity validation");
+  }
+};
+
+const parseOverride = (row: QuestionContentRow) =>
+  row.override_patch_json === null
+    ? null
+    : parseStoredOverride(row.override_patch_json);
+
+const toListItem = (row: QuestionContentRow) => {
+  const override = parseOverride(row);
+  return {
+    stableId: row.stable_id,
+    sourceYear: row.source_year,
+    type: row.question_type,
+    questionNumber: row.question_number,
+    stem: override?.stem ?? row.stem,
+    options:
+      override?.options ?? parseJson<ContentOption[]>(row.options_json),
+    finalizationStatus: row.finalization_status,
+  };
+};
 
 export class MySqlAuthStore implements AuthStore, ContentStore {
   constructor(private readonly pool: Pool) {}
@@ -479,9 +532,12 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
       `SELECT q.stable_id, q.source_year, q.question_type, q.question_number,
               q.stem, q.options_json, q.answer_text, q.answer_status,
               q.explanation_text, q.explanation_status, q.review_status,
-              q.finalization_status, q.knowledge_points
+              q.finalization_status, q.knowledge_points,
+              o.patch_json AS override_patch_json
        FROM kaoyan_questions q
        JOIN kaoyan_content_batches b ON b.id = q.batch_id
+       LEFT JOIN kaoyan_question_overrides o
+         ON o.stable_id = q.stable_id AND o.is_active = TRUE
        WHERE ${where}
        ORDER BY q.source_year DESC, q.question_number ASC
        LIMIT ? OFFSET ?`,
@@ -504,25 +560,58 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
       `SELECT q.stable_id, q.source_year, q.question_type, q.question_number,
               q.stem, q.options_json, q.answer_text, q.answer_status,
               q.explanation_text, q.explanation_status, q.review_status,
-              q.finalization_status, q.knowledge_points
+              q.finalization_status, q.knowledge_points,
+              o.patch_json AS override_patch_json
        FROM kaoyan_questions q
        JOIN kaoyan_content_batches b ON b.id = q.batch_id
+       LEFT JOIN kaoyan_question_overrides o
+         ON o.stable_id = q.stable_id AND o.is_active = TRUE
        WHERE b.status = 'published' AND q.subject_code = ? AND q.stable_id = ?
        LIMIT 1`,
       [subjectCode, stableId],
     );
     const row = rows[0];
-    return row
-      ? {
-          ...toListItem(row),
-          answer: row.answer_text,
-          answerStatus: row.answer_status,
-          explanation: row.explanation_text,
-          explanationStatus: row.explanation_status,
-          reviewStatus: row.review_status,
-          knowledgePoints: parseJson<string[]>(row.knowledge_points),
+    if (!row) return null;
+    const detail = {
+      ...toListItem(row),
+      answer: row.answer_text,
+      answerStatus: row.answer_status,
+      explanation: row.explanation_text,
+      explanationStatus: row.explanation_status,
+      reviewStatus: row.review_status,
+      knowledgePoints: parseJson<string[]>(row.knowledge_points),
+    };
+    const override = parseOverride(row);
+    return override ? applyContentOverride(detail, override) : detail;
+  }
+
+  async listPublicMath1Overrides() {
+    const [rows] = await this.pool.query<
+      Array<
+        RowDataPacket & {
+          stable_id: string;
+          revision: number;
+          patch_json: string | ContentOverrideChanges;
         }
-      : null;
+      >
+    >(
+      `SELECT o.stable_id, o.revision, o.patch_json
+       FROM kaoyan_question_overrides o
+       JOIN kaoyan_questions q ON q.stable_id = o.stable_id
+       JOIN kaoyan_content_batches b ON b.id = q.batch_id
+       WHERE o.is_active = TRUE
+         AND o.subject_code = 'math1'
+         AND q.subject_code = 'math1'
+         AND o.subject_code = q.subject_code
+         AND b.status = 'published'
+         AND q.source_year BETWEEN 2018 AND 2025
+       ORDER BY o.stable_id`,
+    );
+    return rows.map((row) => ({
+      stableId: row.stable_id,
+      revision: Number(row.revision),
+      changes: parseStoredOverride(row.patch_json),
+    }));
   }
 
   async getQuestionAnimation(

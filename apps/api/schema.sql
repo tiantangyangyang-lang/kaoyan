@@ -92,6 +92,36 @@ CREATE TABLE IF NOT EXISTS kaoyan_questions (
   INDEX idx_question_stable (stable_id)
 );
 
+CREATE TABLE IF NOT EXISTS kaoyan_question_overrides (
+  stable_id VARCHAR(64) PRIMARY KEY,
+  subject_code VARCHAR(32) NOT NULL,
+  revision INT UNSIGNED NOT NULL,
+  patch_json JSON NOT NULL,
+  base_snapshot_hash CHAR(64) NOT NULL,
+  is_active BOOLEAN NOT NULL DEFAULT TRUE,
+  editor VARCHAR(128) NOT NULL,
+  reason VARCHAR(500) NOT NULL,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  INDEX idx_question_override_public (subject_code, is_active)
+);
+
+CREATE TABLE IF NOT EXISTS kaoyan_question_override_revisions (
+  stable_id VARCHAR(64) NOT NULL,
+  revision INT UNSIGNED NOT NULL,
+  subject_code VARCHAR(32) NOT NULL,
+  action ENUM('upsert', 'revert') NOT NULL,
+  target_revision INT UNSIGNED NULL,
+  before_patch_json JSON NULL,
+  after_patch_json JSON NULL,
+  base_snapshot_hash CHAR(64) NOT NULL,
+  editor VARCHAR(128) NOT NULL,
+  reason VARCHAR(500) NOT NULL,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  PRIMARY KEY (stable_id, revision),
+  INDEX idx_question_override_revision_time (created_at)
+);
+
 CREATE TABLE IF NOT EXISTS kaoyan_question_animations (
   question_id VARCHAR(64) PRIMARY KEY,
   subject_code VARCHAR(32) NOT NULL,
