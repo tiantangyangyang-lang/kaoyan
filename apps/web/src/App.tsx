@@ -62,13 +62,11 @@ export function App() {
   const [error, setError] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [user, setUser] = useState<AuthUser | null>(null);
-  const [authReady, setAuthReady] = useState(false);
   const [authNotice, setAuthNotice] = useState("");
 
   useEffect(() => {
     let cancelled = false;
     async function loadCurrentSubject() {
-      if (!authReady) return;
       try {
         setError("");
         setBank(null);
@@ -106,12 +104,10 @@ export function App() {
     return () => {
       cancelled = true;
     };
-  }, [authReady, subject, user]);
+  }, [subject, user]);
 
   useEffect(() => {
-    void getCurrentUser()
-      .then(setUser)
-      .finally(() => setAuthReady(true));
+    void getCurrentUser().then(setUser);
     const url = new URL(window.location.href);
     const token = url.searchParams.get("verify");
     if (!token) return;

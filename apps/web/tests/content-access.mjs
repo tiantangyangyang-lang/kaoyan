@@ -57,6 +57,23 @@ for (const subjectCode of ["math2", "math3"]) {
   );
 }
 
+const headers = await readFile(resolve(publicDir, "_headers"), "utf8");
+assert.match(
+  headers,
+  /^\/assets\/\*\s*\r?\n\s+Cache-Control: public, max-age=31536000, immutable\s*$/m,
+  "content-hashed assets must use immutable browser caching",
+);
+assert.doesNotMatch(
+  headers,
+  /^\/data\/\*/m,
+  "mutable data artifacts must not use the immutable asset policy",
+);
+assert.doesNotMatch(
+  headers,
+  /^\/index\.html/m,
+  "HTML must not use the immutable asset policy",
+);
+
 const catalog = await readJson("subjects.json");
 const byCode = new Map(catalog.subjects.map((subject) => [subject.code, subject]));
 assert.equal(byCode.get("math1")?.questionBankUrl, "/data/math1.json");

@@ -62,6 +62,96 @@ const browser = await chromium.launch({
 });
 
 try {
+  const parallelPage = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+  });
+  const parallelIssues = captureBrowserIssues(parallelPage);
+  const parallelRequests = new Set();
+  let authPending = true;
+  let releaseAuth = () => {};
+  const authGate = new Promise((resolveGate) => {
+    releaseAuth = resolveGate;
+  });
+  parallelPage.on("request", (request) => {
+    parallelRequests.add(new URL(request.url()).pathname);
+  });
+  await parallelPage.route("**/api/**", async (route) => {
+    const pathname = new URL(route.request().url()).pathname;
+    if (pathname.endsWith("/api/auth/me")) {
+      await authGate;
+      authPending = false;
+      return fulfillJson(route, 200, {
+        user: {
+          id: "parallel-user",
+          email: "parallel@example.com",
+          emailVerified: true,
+        },
+      });
+    }
+    const listMatch = /\/api\/content\/(math[123])\/questions$/.exec(pathname);
+    if (listMatch) {
+      return fulfillJson(route, 200, {
+        data: {
+          items: [publishedQuestion(listMatch[1])],
+          page: 1,
+          pageSize: 50,
+          totalItems: 1,
+          totalPages: 1,
+        },
+      });
+    }
+    return fulfillJson(route, 404, { error: "not_found" });
+  });
+
+  await parallelPage.goto(baseUrl, { waitUntil: "domcontentloaded" });
+  await parallelPage
+    .getByText("数学一真题当前收录 179 题。", { exact: true })
+    .waitFor();
+  if (!authPending) {
+    throw new Error("Public Math1 waited for authentication to settle");
+  }
+  if (!parallelRequests.has("/data/math1.json")) {
+    throw new Error("Public Math1 request did not start while authentication was pending");
+  }
+
+  releaseAuth();
+  await parallelPage
+    .getByText("数学一真题当前收录 1 题。", { exact: true })
+    .waitFor();
+  if (!parallelRequests.has("/api/content/math1/questions")) {
+    throw new Error("Authenticated Math1 did not replace the public bank");
+  }
+  await parallelPage.close();
+
+  const unauthorizedPage = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+  });
+  let sawUnauthorizedAuth = false;
+  await unauthorizedPage.route("**/api/**", (route) => {
+    const pathname = new URL(route.request().url()).pathname;
+    if (pathname.endsWith("/api/auth/me")) {
+      sawUnauthorizedAuth = true;
+      return fulfillJson(route, 401, { error: "authentication_required" });
+    }
+    if (pathname.endsWith("/availability")) {
+      return fulfillJson(route, 200, { available: false });
+    }
+    if (pathname.includes("/api/content/")) {
+      return fulfillJson(route, 401, { error: "authentication_required" });
+    }
+    return fulfillJson(route, 200, {});
+  });
+  await unauthorizedPage.goto(baseUrl, { waitUntil: "domcontentloaded" });
+  await unauthorizedPage
+    .getByText("数学一真题当前收录 179 题。", { exact: true })
+    .waitFor();
+  if (!sawUnauthorizedAuth) {
+    throw new Error("Anonymous fallback did not exercise an auth 401 response");
+  }
+  await unauthorizedPage.close();
+
   const page = await browser.newPage({
     viewport: { width: 1440, height: 1000 },
     deviceScaleFactor: 1,
@@ -255,6 +345,7 @@ try {
   });
 
   const browserIssues = [
+    ...parallelIssues,
     ...pageIssues,
     ...mobileIssues,
     ...authenticatedIssues,
@@ -273,6 +364,9 @@ try {
         authenticated: "authenticated-math2.png",
         anonymousProtectedRedirect: true,
         authenticatedProtectedContent: true,
+        publicLoadParallelWithAuthentication: true,
+        authenticatedBankReplacedPublicBank: true,
+        anonymousAuth401Fallback: true,
         paperSubmission: true,
         reviewQueue: true,
         exports: ["json", "zip"],
