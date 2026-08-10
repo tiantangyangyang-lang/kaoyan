@@ -96,6 +96,9 @@ try {
         },
       });
     }
+    if (pathname.endsWith("/api/admin/content/access")) {
+      return fulfillJson(route, 200, { eligible: false });
+    }
     if (pathname.endsWith("/api/content/math1/public-overrides")) {
       return fulfillJson(route, 200, { data: [] });
     }
@@ -221,6 +224,9 @@ try {
           emailVerified: true,
         },
       });
+    }
+    if (pathname.endsWith("/api/admin/content/access")) {
+      return fulfillJson(route, 200, { eligible: false });
     }
     if (pathname.endsWith("/api/content/math1/public-overrides")) {
       return fulfillJson(route, 200, { data: [] });
@@ -430,8 +436,13 @@ try {
         user: { id: "smoke-user", email: "smoke@example.com", emailVerified: true },
       });
     }
+    if (url.pathname.endsWith("/api/admin/content/access")) {
+      return fulfillJson(route, 200, { eligible: false });
+    }
     if (url.pathname.includes("/api/question-animations/")) {
-      return fulfillJson(route, 404, { error: "animation_not_found" });
+      return url.pathname.endsWith("/availability")
+        ? fulfillJson(route, 200, { available: false })
+        : fulfillJson(route, 404, { error: "animation_not_found" });
     }
     const detailMatch = /\/api\/content\/(math[123])\/questions\/(.+)$/.exec(
       url.pathname,
@@ -478,12 +489,208 @@ try {
     fullPage: true,
   });
 
+  const adminPage = await browser.newPage({
+    viewport: { width: 1440, height: 1000 },
+    deviceScaleFactor: 1,
+  });
+  const adminIssues = captureBrowserIssues(adminPage);
+  const adminKey = "browser-test-admin-key";
+  let committedAdminChange = false;
+  let sawAdminKeyHeader = false;
+  let sawClientEditorField = false;
+  let sawExplicitRevertTarget = false;
+  const adminBase = {
+    stableId: "math1-2025-q04",
+    sourceYear: 2025,
+    type: "multiple_choice",
+    questionNumber: 4,
+    stem: "原始题干",
+    options: [
+      { label: "A", value: "选项 A" },
+      { label: "B", value: "选项 B" },
+      { label: "C", value: "选项 C" },
+      { label: "D", value: "选项 D" },
+    ],
+    answer: "A",
+    answerStatus: "reviewed",
+    explanation: "原始解析",
+    explanationStatus: "reviewed",
+    reviewStatus: "approved",
+    finalizationStatus: "published",
+    knowledgePoints: [],
+  };
+  const adminSnapshot = () => ({
+    stableId: adminBase.stableId,
+    subjectCode: "math1",
+    base: adminBase,
+    effective: {
+      ...adminBase,
+      explanation: committedAdminChange ? "浏览器测试修正解析" : "原始解析",
+    },
+    override: committedAdminChange
+      ? {
+          revision: 3,
+          active: true,
+          changes: { explanation: "浏览器测试修正解析" },
+          editor: "admin@example.com",
+          reason: "浏览器测试修正",
+          updatedAt: new Date().toISOString(),
+        }
+      : {
+          revision: 2,
+          active: true,
+          changes: { explanation: "原始解析" },
+          editor: "admin@example.com",
+          reason: "初始测试修订",
+          updatedAt: new Date().toISOString(),
+        },
+    revisions: [],
+    historyHasMore: true,
+  });
+  await adminPage.route("**/api/**", async (route) => {
+    const url = new URL(route.request().url());
+    const pathname = url.pathname;
+    if (pathname.endsWith("/api/auth/me")) {
+      return fulfillJson(route, 200, {
+        user: {
+          id: "admin-user",
+          email: "admin@example.com",
+          emailVerified: true,
+        },
+      });
+    }
+    if (pathname.endsWith("/api/auth/logout")) {
+      return route.fulfill({ status: 204, body: "" });
+    }
+    if (pathname.endsWith("/api/admin/content/access")) {
+      return fulfillJson(route, 200, { eligible: true });
+    }
+    if (pathname.endsWith("/api/admin/content/questions/math1-2025-q04")) {
+      const suppliedKey = route.request().headers()["x-admin-content-key"];
+      sawAdminKeyHeader = sawAdminKeyHeader || suppliedKey === adminKey;
+      if (suppliedKey !== adminKey) {
+        return fulfillJson(route, 403, { error: "admin_access_denied" });
+      }
+      return fulfillJson(route, 200, { data: adminSnapshot() });
+    }
+    if (
+      pathname.endsWith(
+        "/api/admin/content/questions/math1-2025-q04/override",
+      )
+    ) {
+      sawAdminKeyHeader =
+        sawAdminKeyHeader ||
+        route.request().headers()["x-admin-content-key"] === adminKey;
+      const input = route.request().postDataJSON();
+      sawClientEditorField = sawClientEditorField || "editor" in input;
+      sawExplicitRevertTarget =
+        sawExplicitRevertTarget ||
+        (input.action === "revert" && input.targetRevision === 1);
+      if (input.mode === "commit") committedAdminChange = true;
+      return fulfillJson(route, 200, {
+        result: {
+          stableId: adminBase.stableId,
+          subjectCode: "math1",
+          action: input.action,
+          previousRevision: 2,
+          revision: 3,
+          targetRevision: input.action === "revert" ? input.targetRevision : null,
+          beforePatchHash: "a".repeat(64),
+          afterPatchHash: "b".repeat(64),
+          baseSnapshotHash: "c".repeat(64),
+          dryRun: input.mode === "preview",
+          transaction: input.mode === "preview" ? "rolled_back" : "committed",
+        },
+      });
+    }
+    const listMatch = /\/api\/content\/(math[123])\/questions$/.exec(pathname);
+    if (listMatch) {
+      return fulfillJson(route, 200, {
+        data: {
+          items: [publishedQuestion(listMatch[1])],
+          page: 1,
+          pageSize: 50,
+          totalItems: 1,
+          totalPages: 1,
+        },
+      });
+    }
+    if (pathname.includes("/api/question-animations/")) {
+      return pathname.endsWith("/availability")
+        ? fulfillJson(route, 200, { available: false })
+        : fulfillJson(route, 404, { error: "animation_not_found" });
+    }
+    if (pathname.endsWith("/api/content/math1/public-overrides")) {
+      return fulfillJson(route, 200, { data: [] });
+    }
+    return fulfillJson(route, 200, {});
+  });
+  await adminPage.goto(baseUrl, { waitUntil: "networkidle" });
+  await adminPage.getByRole("button", { name: "内容管理" }).click();
+  await adminPage.getByRole("heading", { name: "内容管理" }).waitFor();
+  await adminPage.getByLabel(/管理员密钥/).fill(adminKey);
+  await adminPage.getByLabel("题目 stable ID").fill("math1-2025-q04");
+  await adminPage.getByRole("button", { name: "查询题目" }).click();
+  await adminPage.getByText("math1-2025-q04", { exact: true }).waitFor();
+  await adminPage
+    .locator(".admin-editor-grid .admin-field-wide textarea")
+    .nth(1)
+    .fill("浏览器测试修正解析");
+  await adminPage
+    .getByLabel(/修改原因/)
+    .fill("浏览器测试修正");
+  await adminPage.getByRole("button", { name: "1. 预览并回滚事务" }).click();
+  await adminPage.getByText(/预览成功：数据库事务已回滚/).waitFor();
+  await adminPage.getByRole("button", { name: "2. 确认保存到数据库" }).click();
+  await adminPage.getByText("保存成功，当前修订号为 3。").waitFor();
+  if (!sawAdminKeyHeader) throw new Error("Admin key header was not sent");
+  if (sawClientEditorField) throw new Error("Browser was allowed to choose audit editor");
+  const persistedAdminKey = await adminPage.evaluate((key) => {
+    const storageValues = [localStorage, sessionStorage].flatMap((storage) =>
+      Array.from({ length: storage.length }, (_, index) =>
+        storage.getItem(storage.key(index) ?? ""),
+      ),
+    );
+    return storageValues.some((value) => value?.includes(key));
+  }, adminKey);
+  if (persistedAdminKey) throw new Error("Admin key was persisted in browser storage");
+  await adminPage.getByRole("button", { name: "恢复历史版本" }).click();
+  await adminPage.getByLabel(/目标修订号/).fill("1");
+  await adminPage.getByLabel(/修改原因/).fill("恢复到未列出的早期版本");
+  await adminPage.getByRole("button", { name: "1. 预览并回滚事务" }).click();
+  await adminPage.getByText(/预览成功：数据库事务已回滚/).waitFor();
+  if (!sawExplicitRevertTarget) {
+    throw new Error("Explicit older revision was not accepted for revert preview");
+  }
+  const expectedDeniedIssueStart = adminIssues.length;
+  await adminPage.getByLabel(/管理员密钥/).fill("incorrect-browser-key");
+  await adminPage.getByRole("button", { name: "查询题目" }).click();
+  await adminPage.getByText(/管理员密钥不正确/).waitFor();
+  if ((await adminPage.getByLabel(/管理员密钥/).inputValue()) !== "") {
+    throw new Error("Rejected admin key was not cleared from React state");
+  }
+  adminIssues.splice(
+    expectedDeniedIssueStart,
+    adminIssues.length - expectedDeniedIssueStart,
+    ...adminIssues
+      .slice(expectedDeniedIssueStart)
+      .filter((issue) => !issue.includes("status of 403")),
+  );
+  await adminPage.getByRole("button", { name: "账号" }).click();
+  await adminPage.getByRole("button", { name: "退出登录" }).click();
+  await adminPage.getByRole("heading", { name: "让学习记录跨设备保存" }).waitFor();
+  if ((await adminPage.getByRole("button", { name: "内容管理" }).count()) !== 0) {
+    throw new Error("Admin navigation remained visible after logout");
+  }
+  await adminPage.close();
+
   const browserIssues = [
     ...parallelIssues,
     ...authRaceIssues,
     ...pageIssues,
     ...mobileIssues,
     ...authenticatedIssues,
+    ...adminIssues,
   ];
   if (browserIssues.length > 0) {
     throw new Error(`Browser console/page errors:\n${browserIssues.join("\n")}`);
@@ -504,6 +711,9 @@ try {
         publicBankStayedVisibleDuringAuthenticatedLoad: true,
         publicOverrideDidNotBlockInitialBank: true,
         publicOverrideAppliedAfterResponse: true,
+        adminTwoGateEditor: true,
+        adminPreviewBeforeCommit: true,
+        adminKeyMemoryOnly: true,
         staleStartupAuthDidNotOverrideManualLogin: true,
         anonymousAuth401Fallback: true,
         paperSubmission: true,

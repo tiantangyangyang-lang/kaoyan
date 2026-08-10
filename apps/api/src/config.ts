@@ -27,6 +27,25 @@ const schema = z.object({
   VERIFICATION_TTL_MINUTES: z.coerce.number().int().positive().default(60),
   SESSION_DAYS: z.coerce.number().int().positive().default(30),
   TRUST_PROXY: z.coerce.number().int().min(0).max(2).default(1),
+  ADMIN_CONTENT_EMAILS: z
+    .string()
+    .default("")
+    .transform((value) =>
+      value
+        .split(",")
+        .map((item) => item.trim().toLowerCase())
+        .filter(Boolean),
+    )
+    .pipe(z.array(z.string().email().max(128))),
+  ADMIN_CONTENT_KEY_SHA256: z.preprocess(
+    (value) =>
+      typeof value === "string" && value.trim() === "" ? undefined : value,
+    z
+      .string()
+      .regex(/^[a-f0-9]{64}$/i)
+      .transform((value) => value.toLowerCase())
+      .optional(),
+  ),
 });
 
 export type AppConfig = z.infer<typeof schema>;

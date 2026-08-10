@@ -1,5 +1,8 @@
 import type {
   AuthUser,
+  AdminContentChanges,
+  AdminOverrideResult,
+  AdminQuestionSnapshot,
   PaperSessionMap,
   PublishedQuestionDetail,
   PublishedQuestionPage,
@@ -142,6 +145,55 @@ export async function loadPublicMath1Overrides() {
     "/content/math1/public-overrides",
   );
   return result.data;
+}
+
+const adminKeyHeaders = (key: string) => ({
+  "X-Admin-Content-Key": key,
+});
+
+export async function getAdminContentAccess() {
+  const result = await apiRequest<{ eligible: boolean }>(
+    "/admin/content/access",
+  );
+  return result.eligible;
+}
+
+export async function loadAdminQuestion(stableId: string, key: string) {
+  const result = await apiRequest<{ data: AdminQuestionSnapshot }>(
+    `/admin/content/questions/${encodeURIComponent(stableId)}`,
+    { headers: adminKeyHeaders(key) },
+  );
+  return result.data;
+}
+
+export async function executeAdminContentAction(
+  stableId: string,
+  key: string,
+  input:
+    | {
+        action: "upsert";
+        mode: "preview" | "commit";
+        expectedRevision: number;
+        reason: string;
+        changes: AdminContentChanges;
+      }
+    | {
+        action: "revert";
+        mode: "preview" | "commit";
+        expectedRevision: number;
+        reason: string;
+        targetRevision: number;
+      },
+) {
+  const result = await apiRequest<{ result: AdminOverrideResult }>(
+    `/admin/content/questions/${encodeURIComponent(stableId)}/override`,
+    {
+      method: "POST",
+      headers: adminKeyHeaders(key),
+      body: JSON.stringify(input),
+    },
+  );
+  return result.result;
 }
 
 export async function loadQuestionAnimation(
