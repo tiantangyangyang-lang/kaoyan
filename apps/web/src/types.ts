@@ -106,6 +106,50 @@ export interface PublicQuestionOverrideChanges {
   explanationStatus?: string;
 }
 
+export type AdminContentChanges = PublicQuestionOverrideChanges;
+
+export interface AdminOverrideRevision {
+  revision: number;
+  action: "upsert" | "revert";
+  targetRevision: number | null;
+  beforePatch: AdminContentChanges | null;
+  afterPatch: AdminContentChanges | null;
+  editor: string;
+  reason: string;
+  createdAt: string;
+}
+
+export interface AdminQuestionSnapshot {
+  stableId: string;
+  subjectCode: SubjectCode;
+  base: PublishedQuestionDetail;
+  effective: PublishedQuestionDetail;
+  override: {
+    revision: number;
+    active: boolean;
+    changes: AdminContentChanges | null;
+    editor: string;
+    reason: string;
+    updatedAt: string;
+  } | null;
+  revisions: AdminOverrideRevision[];
+  historyHasMore: boolean;
+}
+
+export interface AdminOverrideResult {
+  stableId: string;
+  subjectCode: SubjectCode;
+  action: "upsert" | "revert";
+  previousRevision: number;
+  revision: number;
+  targetRevision: number | null;
+  beforePatchHash: string | null;
+  afterPatchHash: string | null;
+  baseSnapshotHash: string;
+  dryRun: boolean;
+  transaction: "rolled_back" | "committed";
+}
+
 export interface PublicQuestionOverride {
   stableId: string;
   revision: number;
@@ -195,4 +239,5 @@ export type AppView =
   | "wrong"
   | "stats"
   | "data"
-  | "account";
+  | "account"
+  | "admin-content";

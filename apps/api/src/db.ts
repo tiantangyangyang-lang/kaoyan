@@ -4,6 +4,7 @@ import mysql, {
   type ResultSetHeader,
   type RowDataPacket,
 } from "mysql2/promise";
+import { getAdminQuestionSnapshot } from "./admin-content-store.js";
 import type { AppConfig } from "./config.js";
 import type {
   AuthStore,
@@ -20,6 +21,10 @@ import type {
   ContentSubjectCode,
   ContentStore,
 } from "./content-store.js";
+import type {
+  AdminContentStore,
+  AdminQuestionSnapshot,
+} from "./admin-content.js";
 import {
   mathAnimationSpecSchema,
   QUESTION_ANIMATION_SEEDS,
@@ -27,8 +32,15 @@ import {
 import {
   applyContentOverride,
   contentOverrideChangesSchema,
+  executeContentOverride,
+  type ContentOverrideCommand,
   type ContentOverrideChanges,
+  type ContentOverrideResult,
 } from "./content-overrides.js";
+import {
+  parseStoredContentOptions,
+  parseStoredKnowledgePoints,
+} from "./content-store-validation.js";
 
 interface UserRow extends RowDataPacket {
   id: string;
@@ -221,6 +233,7 @@ const toPublicUser = (row: UserRow): PublicUser => ({
 
 interface QuestionContentRow extends RowDataPacket {
   stable_id: string;
+  subject_code?: "math1" | "math2" | "math3";
   source_year: number;
   question_type: string;
   question_number: number;
@@ -263,12 +276,31 @@ const toListItem = (row: QuestionContentRow) => {
     questionNumber: row.question_number,
     stem: override?.stem ?? row.stem,
     options:
-      override?.options ?? parseJson<ContentOption[]>(row.options_json),
+      override?.options ??
+      parseStoredContentOptions(row.question_type, row.options_json),
     finalizationStatus: row.finalization_status,
   };
 };
 
-export class MySqlAuthStore implements AuthStore, ContentStore {
+const toBaseDetail = (row: QuestionContentRow): ContentQuestionDetail => ({
+  stableId: row.stable_id,
+  sourceYear: row.source_year,
+  type: row.question_type,
+  questionNumber: row.question_number,
+  stem: row.stem,
+  options: parseStoredContentOptions(row.question_type, row.options_json),
+  finalizationStatus: row.finalization_status,
+  answer: row.answer_text,
+  answerStatus: row.answer_status,
+  explanation: row.explanation_text,
+  explanationStatus: row.explanation_status,
+  reviewStatus: row.review_status,
+  knowledgePoints: parseStoredKnowledgePoints(row.knowledge_points),
+});
+
+export class MySqlAuthStore
+  implements AuthStore, ContentStore, AdminContentStore
+{
   constructor(private readonly pool: Pool) {}
 
   async registerUser(input: {
@@ -572,17 +604,20 @@ export class MySqlAuthStore implements AuthStore, ContentStore {
     );
     const row = rows[0];
     if (!row) return null;
-    const detail = {
-      ...toListItem(row),
-      answer: row.answer_text,
-      answerStatus: row.answer_status,
-      explanation: row.explanation_text,
-      explanationStatus: row.explanation_status,
-      reviewStatus: row.review_status,
-      knowledgePoints: parseJson<string[]>(row.knowledge_points),
-    };
+    const detail = toBaseDetail(row);
     const override = parseOverride(row);
     return override ? applyContentOverride(detail, override) : detail;
+  }
+
+  async getAdminQuestion(stableId: string): Promise<AdminQuestionSnapshot | null> {
+    return getAdminQuestionSnapshot(this.pool, stableId);
+  }
+
+  async executeAdminOverride(
+    command: ContentOverrideCommand,
+    options: { dryRun: boolean },
+  ): Promise<ContentOverrideResult> {
+    return executeContentOverride(this.pool, command, options);
   }
 
   async listPublicMath1Overrides() {

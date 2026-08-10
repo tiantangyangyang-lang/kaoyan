@@ -38,7 +38,9 @@ import { PaperSessionView } from "./views/PaperSessionView";
 import { ReviewQueueView } from "./views/ReviewQueueView";
 import { DataCenterView } from "./views/DataCenterView";
 import { AccountView } from "./views/AccountView";
+import { AdminContentView } from "./views/AdminContentView";
 import {
+  getAdminContentAccess,
   getCurrentUser,
   loadPublicMath1Overrides,
   verifyAccount,
@@ -68,6 +70,8 @@ export function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [user, setUser] = useState<AuthUser | null>(null);
   const [authNotice, setAuthNotice] = useState("");
+  const [adminEligible, setAdminEligible] = useState(false);
+  const [adminContentKey, setAdminContentKey] = useState("");
   const authRevision = useRef(0);
 
   useEffect(() => {
@@ -151,6 +155,39 @@ export function App() {
         setAuthNotice("验证链接无效或已经过期，请重新发送验证邮件。");
       });
   }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    if (!user) {
+      setAdminEligible(false);
+      setAdminContentKey("");
+      return () => {
+        cancelled = true;
+      };
+    }
+    void getAdminContentAccess()
+      .then((eligible) => {
+        if (cancelled) return;
+        setAdminEligible(eligible);
+        if (!eligible) {
+          setAdminContentKey("");
+        }
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setAdminEligible(false);
+        setAdminContentKey("");
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [user]);
+
+  useEffect(() => {
+    if (view === "admin-content" && (!user || !adminEligible)) {
+      setView("account");
+    }
+  }, [view, user, adminEligible]);
 
   useEffect(() => {
     saveQuestionStates(subject, states);
@@ -384,6 +421,7 @@ export function App() {
       subjectName={subjectName}
       mobileOpen={mobileOpen}
       onMobileOpenChange={setMobileOpen}
+      showAdminContent={adminEligible}
     >
       {view === "dashboard" && (
         <DashboardView
@@ -540,6 +578,7 @@ export function App() {
           onUserChange={(nextUser) => {
             authRevision.current += 1;
             setUser(nextUser);
+            if (!nextUser) setAdminContentKey("");
             if (!nextUser && subject !== "math1") {
               setSubject("math1");
               setSubjectName(SUBJECT_LABELS.math1);
@@ -553,6 +592,13 @@ export function App() {
             setStates(cloudStates);
             setPaperSessions(cloudSessions);
           }}
+        />
+      )}
+      {view === "admin-content" && user && adminEligible && (
+        <AdminContentView
+          adminKey={adminContentKey}
+          onAdminKeyChange={setAdminContentKey}
+          onKeyRejected={() => setAdminContentKey("")}
         />
       )}
     </AppShell>

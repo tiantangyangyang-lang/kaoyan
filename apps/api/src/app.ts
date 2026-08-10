@@ -9,8 +9,21 @@ import express, {
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import { z } from "zod";
+import {
+  adminContentActionSchema,
+  adminStableIdSchema,
+  isAdminContentEmail,
+  type AdminContentStore,
+  verifyAdminContentKey,
+} from "./admin-content.js";
 import type { AppConfig } from "./config.js";
 import type { ContentStore } from "./content-store.js";
+import {
+  ContentOverrideConflictError,
+  ContentOverrideNotFoundError,
+  ContentOverrideValidationError,
+  type ContentOverrideCommand,
+} from "./content-overrides.js";
 import type { VerificationMailer } from "./mailer.js";
 import { createOpaqueToken, hashToken } from "./security.js";
 import type { AuthStore, PublicUser } from "./store.js";
@@ -59,7 +72,7 @@ export function createApp({
   mailer,
 }: {
   config: AppConfig;
-  store: AuthStore & ContentStore;
+  store: AuthStore & ContentStore & AdminContentStore;
   mailer: VerificationMailer;
 }) {
   const app = express();
@@ -106,6 +119,15 @@ export function createApp({
       : rateLimit({
           windowMs: 60 * 1000,
           limit: 120,
+          standardHeaders: "draft-8",
+          legacyHeaders: false,
+        });
+  const adminContentLimiter =
+    config.NODE_ENV === "test"
+      ? (_request: Request, _response: Response, next: NextFunction) => next()
+      : rateLimit({
+          windowMs: 15 * 60 * 1000,
+          limit: 15,
           standardHeaders: "draft-8",
           legacyHeaders: false,
         });
@@ -159,9 +181,122 @@ export function createApp({
     response.status(401).json({ error: "authentication_required" });
   };
 
+  const requireAdminContentKey = (
+    request: AuthenticatedRequest,
+    response: Response,
+    next: NextFunction,
+  ) => {
+    const suppliedKey = request.get("X-Admin-Content-Key") ?? "";
+    const keyHasValidLength = suppliedKey.length >= 16 && suppliedKey.length <= 512;
+    const keyAllowed = verifyAdminContentKey(
+      config,
+      keyHasValidLength ? suppliedKey : "",
+    );
+    const allowed =
+      Boolean(request.user) &&
+      request.user!.emailVerified &&
+      isAdminContentEmail(config, request.user!.email) &&
+      keyHasValidLength &&
+      keyAllowed;
+    if (!allowed) {
+      response.status(403).json({ error: "admin_access_denied" });
+      return;
+    }
+    next();
+  };
+
+  const respondToOverrideError = (
+    error: unknown,
+    response: Response,
+    next: NextFunction,
+  ) => {
+    if (error instanceof ContentOverrideNotFoundError) {
+      response.status(404).json({ error: "question_not_found" });
+      return;
+    }
+    if (error instanceof ContentOverrideConflictError) {
+      response.status(409).json({ error: "content_override_conflict" });
+      return;
+    }
+    if (error instanceof ContentOverrideValidationError) {
+      response.status(400).json({ error: "invalid_content_override" });
+      return;
+    }
+    next(error);
+  };
+
   app.get("/health", (_request, response) => {
     response.json({ status: "ok" });
   });
+
+  app.get(
+    "/api/admin/content/access",
+    requireUser,
+    (request: AuthenticatedRequest, response) => {
+      response.set("Cache-Control", "private, no-store");
+      response.json({
+        eligible:
+          request.user!.emailVerified &&
+          isAdminContentEmail(config, request.user!.email),
+      });
+    },
+  );
+
+  app.get(
+    "/api/admin/content/questions/:stableId",
+    requireUser,
+    adminContentLimiter,
+    requireAdminContentKey,
+    async (request: AuthenticatedRequest, response, next) => {
+      try {
+        const stableId = adminStableIdSchema.parse(request.params.stableId);
+        const data = await store.getAdminQuestion(stableId);
+        if (!data) {
+          response.status(404).json({ error: "question_not_found" });
+          return;
+        }
+        response.set("Cache-Control", "private, no-store");
+        response.json({ data });
+      } catch (error) {
+        next(error);
+      }
+    },
+  );
+
+  app.post(
+    "/api/admin/content/questions/:stableId/override",
+    requireUser,
+    adminContentLimiter,
+    requireAdminContentKey,
+    async (request: AuthenticatedRequest, response, next) => {
+      try {
+        const stableId = adminStableIdSchema.parse(request.params.stableId);
+        const body = adminContentActionSchema.parse(request.body);
+        const common = {
+          schemaVersion: "kaoyan-content-override-v1" as const,
+          stableId,
+          expectedRevision: body.expectedRevision,
+          editor: request.user!.email,
+          reason: body.reason,
+        };
+        const command: ContentOverrideCommand =
+          body.action === "upsert"
+            ? { ...common, action: "upsert", changes: body.changes }
+            : {
+                ...common,
+                action: "revert",
+                targetRevision: body.targetRevision,
+              };
+        const result = await store.executeAdminOverride(command, {
+          dryRun: body.mode === "preview",
+        });
+        response.set("Cache-Control", "private, no-store");
+        response.json({ result });
+      } catch (error) {
+        respondToOverrideError(error, response, next);
+      }
+    },
+  );
 
   app.get(
     "/api/content/math1/public-overrides",

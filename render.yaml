@@ -36,3 +36,7 @@ services:
         value: "60"
       - key: SESSION_DAYS
         value: "30"
+      - key: ADMIN_CONTENT_EMAILS
+        sync: false
+      - key: ADMIN_CONTENT_KEY_SHA256
+        sync: false

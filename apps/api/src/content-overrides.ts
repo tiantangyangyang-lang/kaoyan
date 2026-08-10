@@ -10,28 +10,29 @@ import { z } from "zod";
 const stableIdSchema = z.string().regex(
   /^(?:math[23]-\d{4}-q\d{2,3}|math1-\d{4}-(?:q\d{2,3}|s\d{2}(?:-q\d{2,3})?))$/,
 );
-const optionSchema = z
+export const contentOptionSchema = z
   .object({
     label: z.enum(["A", "B", "C", "D"]),
     value: z.string().min(1).max(20_000),
   })
   .strict();
 
+export const multipleChoiceOptionsSchema = z
+  .array(contentOptionSchema)
+  .length(4)
+  .refine(
+    (options) =>
+      new Set(options.map((option) => option.label)).size === options.length &&
+      options.every(
+        (option, index) => option.label.charCodeAt(0) === 65 + index,
+      ),
+    "options must contain exactly A, B, C, D in order",
+  );
+
 export const contentOverrideChangesSchema = z
   .object({
     stem: z.string().min(1).max(100_000).optional(),
-    options: z
-      .array(optionSchema)
-      .length(4)
-      .refine(
-        (options) =>
-          new Set(options.map((option) => option.label)).size === options.length &&
-          options.every(
-            (option, index) => option.label.charCodeAt(0) === 65 + index,
-          ),
-        "options must contain exactly A, B, C, D in order",
-      )
-      .optional(),
+    options: multipleChoiceOptionsSchema.optional(),
     answer: z.string().max(100_000).nullable().optional(),
     answerStatus: z.string().min(1).max(64).optional(),
     explanation: z.string().max(500_000).nullable().optional(),
@@ -73,6 +74,24 @@ export type ContentOverrideChanges = z.infer<
 export type ContentOverrideCommand = z.infer<
   typeof contentOverrideCommandSchema
 >;
+
+export interface ContentOverrideResult {
+  stableId: string;
+  subjectCode: string;
+  action: "upsert" | "revert";
+  previousRevision: number;
+  revision: number;
+  targetRevision: number | null;
+  beforePatchHash: string | null;
+  afterPatchHash: string | null;
+  baseSnapshotHash: string;
+  dryRun: boolean;
+  transaction: "rolled_back" | "committed";
+}
+
+export class ContentOverrideNotFoundError extends Error {}
+export class ContentOverrideConflictError extends Error {}
+export class ContentOverrideValidationError extends Error {}
 
 interface BaseQuestionRow extends RowDataPacket {
   stable_id: string;
@@ -159,19 +178,7 @@ export async function executeContentOverride(
   pool: OverridePool,
   rawCommand: unknown,
   options: { dryRun: boolean },
-): Promise<{
-  stableId: string;
-  subjectCode: string;
-  action: "upsert" | "revert";
-  previousRevision: number;
-  revision: number;
-  targetRevision: number | null;
-  beforePatchHash: string | null;
-  afterPatchHash: string | null;
-  baseSnapshotHash: string;
-  dryRun: boolean;
-  transaction: "rolled_back" | "committed";
-}> {
+): Promise<ContentOverrideResult> {
   const command = contentOverrideCommandSchema.parse(rawCommand);
   const connection = (await pool.getConnection()) as OverrideConnection;
   let transactionOpen = false;
@@ -189,7 +196,12 @@ export async function executeContentOverride(
       [command.stableId],
     );
     const base = baseRows[0];
-    if (baseRows.length !== 1 || !base) {
+    if (baseRows.length === 0 || !base) {
+      throw new ContentOverrideNotFoundError(
+        `published ${command.stableId} was not found`,
+      );
+    }
+    if (baseRows.length !== 1) {
       throw new Error(
         `published ${command.stableId} count must be 1, got ${baseRows.length}`,
       );
@@ -200,7 +212,9 @@ export async function executeContentOverride(
       command.changes.options !== undefined &&
       base.question_type !== "multiple_choice"
     ) {
-      throw new Error("options can only be overridden for multiple-choice questions");
+      throw new ContentOverrideValidationError(
+        "options can only be overridden for multiple-choice questions",
+      );
     }
     const [overrideRows] = await connection.query<OverrideRow[]>(
       `SELECT revision, patch_json, base_snapshot_hash, is_active
@@ -212,7 +226,7 @@ export async function executeContentOverride(
     const current = overrideRows[0];
     const previousRevision = Number(current?.revision ?? 0);
     if (command.expectedRevision !== previousRevision) {
-      throw new Error(
+      throw new ContentOverrideConflictError(
         `expectedRevision ${command.expectedRevision} does not match current revision ${previousRevision}`,
       );
     }
@@ -227,7 +241,7 @@ export async function executeContentOverride(
       current?.base_snapshot_hash !== currentBaseHash &&
       !isDisablingStaleOverride
     ) {
-      throw new Error(
+      throw new ContentOverrideConflictError(
         "published base content changed after the active override; revert to revision 0 and review before editing",
       );
     }
@@ -242,7 +256,9 @@ export async function executeContentOverride(
     } else {
       targetRevision = command.targetRevision;
       if (targetRevision >= previousRevision) {
-        throw new Error("targetRevision must be lower than the current revision");
+        throw new ContentOverrideValidationError(
+          "targetRevision must be lower than the current revision",
+        );
       }
       if (targetRevision === 0) {
         afterPatch = null;
@@ -255,9 +271,15 @@ export async function executeContentOverride(
           [command.stableId, targetRevision],
         );
         const target = revisionRows[0];
-        if (!target) throw new Error(`target revision ${targetRevision} was not found`);
+        if (!target) {
+          throw new ContentOverrideConflictError(
+            `target revision ${targetRevision} was not found`,
+          );
+        }
         if (target.base_snapshot_hash !== currentBaseHash) {
-          throw new Error("target revision belongs to a different base snapshot");
+          throw new ContentOverrideConflictError(
+            "target revision belongs to a different base snapshot",
+          );
         }
         afterPatch =
           target.after_patch_json === null

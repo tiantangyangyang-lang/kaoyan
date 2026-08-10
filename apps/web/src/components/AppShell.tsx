@@ -17,6 +17,12 @@ const navItems: Array<{
   { view: "account", label: "账号", icon: "user" },
 ];
 
+const adminNavItem = {
+  view: "admin-content" as const,
+  label: "内容管理",
+  icon: "paper" as const,
+};
+
 export function AppShell({
   view,
   onViewChange,
@@ -25,6 +31,7 @@ export function AppShell({
   children,
   mobileOpen,
   onMobileOpenChange,
+  showAdminContent,
 }: {
   view: AppView;
   onViewChange: (view: AppView) => void;
@@ -33,6 +40,7 @@ export function AppShell({
   children: React.ReactNode;
   mobileOpen: boolean;
   onMobileOpenChange: (open: boolean) => void;
+  showAdminContent: boolean;
 }) {
   const navigate = (next: AppView) => {
     onViewChange(next);
@@ -58,7 +66,7 @@ export function AppShell({
         </div>
 
         <nav className="nav-list" aria-label="主导航">
-          {navItems.map((item) => (
+          {[...navItems, ...(showAdminContent ? [adminNavItem] : [])].map((item) => (
             <button
               className={view === item.view ? "nav-item active" : "nav-item"}
               key={item.view}

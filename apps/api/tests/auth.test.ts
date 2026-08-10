@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { test } from "node:test";
 import request from "supertest";
 import {
@@ -22,14 +23,27 @@ import type {
   ContentStore,
   PublicContentOverride,
 } from "../src/content-store.js";
+import type {
+  AdminContentStore,
+  AdminQuestionSnapshot,
+} from "../src/admin-content.js";
+import type {
+  ContentOverrideCommand,
+  ContentOverrideResult,
+} from "../src/content-overrides.js";
 
-class MemoryStore implements AuthStore, ContentStore {
+class MemoryStore implements AuthStore, ContentStore, AdminContentStore {
   users = new Map<string, PasswordUser>();
   tokens = new Map<string, string>();
   sessions = new Map<string, string>();
   learning = new Map<string, LearningStateRecord>();
   publishedQuestions: ContentQuestionDetail[] = [];
   publicOverrides: PublicContentOverride[] = [];
+  adminSnapshot: AdminQuestionSnapshot | null = null;
+  adminCommands: Array<{
+    command: ContentOverrideCommand;
+    dryRun: boolean;
+  }> = [];
   animations = new Map<string, QuestionAnimationRecord>([
     [
       "math1-2023-q01",
@@ -180,6 +194,35 @@ class MemoryStore implements AuthStore, ContentStore {
     return this.publicOverrides;
   }
 
+  async getAdminQuestion(
+    stableId: string,
+  ): Promise<AdminQuestionSnapshot | null> {
+    return this.adminSnapshot?.stableId === stableId
+      ? this.adminSnapshot
+      : null;
+  }
+
+  async executeAdminOverride(
+    command: ContentOverrideCommand,
+    options: { dryRun: boolean },
+  ): Promise<ContentOverrideResult> {
+    this.adminCommands.push({ command, dryRun: options.dryRun });
+    return {
+      stableId: command.stableId,
+      subjectCode: "math1",
+      action: command.action,
+      previousRevision: command.expectedRevision,
+      revision: command.expectedRevision + 1,
+      targetRevision:
+        command.action === "revert" ? command.targetRevision : null,
+      beforePatchHash: null,
+      afterPatchHash: "a".repeat(64),
+      baseSnapshotHash: "b".repeat(64),
+      dryRun: options.dryRun,
+      transaction: options.dryRun ? "rolled_back" : "committed",
+    };
+  }
+
   async getQuestionAnimation(
     questionId: string,
   ): Promise<QuestionAnimationRecord | null> {
@@ -203,19 +246,34 @@ const config: AppConfig = {
   VERIFICATION_TTL_MINUTES: 60,
   SESSION_DAYS: 30,
   TRUST_PROXY: 1,
+  ADMIN_CONTENT_EMAILS: ["admin@example.com"],
+  ADMIN_CONTENT_KEY_SHA256: createHash("sha256")
+    .update("test-admin-content-key")
+    .digest("hex"),
 };
 
-const addAuthenticatedSession = (store: MemoryStore) => {
-  const token = "authenticated-content-token";
-  store.users.set("student@example.com", {
-    id: "user-1",
-    email: "student@example.com",
+const addSession = (
+  store: MemoryStore,
+  email: string,
+  options: { id?: string; verified?: boolean; token?: string } = {},
+) => {
+  const id = options.id ?? `user-${store.users.size + 1}`;
+  const token = options.token ?? `authenticated-content-token-${id}`;
+  store.users.set(email, {
+    id,
+    email,
     passwordHash: "unused",
-    emailVerified: true,
+    emailVerified: options.verified ?? true,
   });
-  store.sessions.set(hashToken(token), "user-1");
+  store.sessions.set(hashToken(token), id);
   return `kaoyan_session=${token}`;
 };
+
+const addAuthenticatedSession = (store: MemoryStore) =>
+  addSession(store, "student@example.com", {
+    id: "user-1",
+    token: "authenticated-content-token",
+  });
 
 const makePublishedMath1Question = (
   year: number,
@@ -558,4 +616,167 @@ test("published content is authenticated, bounded and split into list/detail", a
     .get("/api/content/math1/questions/math1-2020-q01")
     .set("Cookie", cookie)
     .expect(404);
+});
+
+const makeAdminSnapshot = (): AdminQuestionSnapshot => {
+  const base: ContentQuestionDetail = {
+    stableId: "math1-2025-q04",
+    sourceYear: 2025,
+    type: "multiple_choice",
+    questionNumber: 4,
+    stem: "Base stem",
+    options: [
+      { label: "A", value: "Base A" },
+      { label: "B", value: "Base B" },
+      { label: "C", value: "Base C" },
+      { label: "D", value: "Base D" },
+    ],
+    answer: "A",
+    answerStatus: "reviewed",
+    explanation: "Base explanation",
+    explanationStatus: "reviewed",
+    reviewStatus: "approved",
+    finalizationStatus: "published",
+    knowledgePoints: [],
+  };
+  return {
+    stableId: base.stableId,
+    subjectCode: "math1",
+    base,
+    effective: { ...base, explanation: "Current explanation" },
+    override: {
+      revision: 2,
+      active: true,
+      changes: { explanation: "Current explanation" },
+      editor: "admin@example.com",
+      reason: "Earlier correction",
+      updatedAt: "2026-08-10T00:00:00.000Z",
+    },
+    revisions: [],
+    historyHasMore: false,
+  };
+};
+
+test("admin content routes require verified allowlisted email and independent key", async () => {
+  const store = new MemoryStore();
+  store.adminSnapshot = makeAdminSnapshot();
+  const app = createApp({
+    config,
+    store,
+    mailer: { async sendVerification() {} },
+  });
+
+  await request(app)
+    .get("/api/admin/content/access")
+    .expect(401, { error: "authentication_required" });
+  await request(app)
+    .get("/api/admin/content/questions/math1-2025-q04")
+    .set("X-Admin-Content-Key", "test-admin-content-key")
+    .expect(401, { error: "authentication_required" });
+
+  const studentCookie = addSession(store, "student-2@example.com", {
+    id: "student-2",
+  });
+  await request(app)
+    .get("/api/admin/content/access")
+    .set("Cookie", studentCookie)
+    .expect(200, { eligible: false });
+  await request(app)
+    .get("/api/admin/content/questions/math1-2025-q04")
+    .set("Cookie", studentCookie)
+    .set("X-Admin-Content-Key", "test-admin-content-key")
+    .expect(403, { error: "admin_access_denied" });
+
+  const unverifiedCookie = addSession(store, "admin@example.com", {
+    id: "admin-unverified",
+    verified: false,
+    token: "unverified-admin-token",
+  });
+  await request(app)
+    .get("/api/admin/content/access")
+    .set("Cookie", unverifiedCookie)
+    .expect(200, { eligible: false });
+  await request(app)
+    .get("/api/admin/content/questions/math1-2025-q04")
+    .set("Cookie", unverifiedCookie)
+    .set("X-Admin-Content-Key", "test-admin-content-key")
+    .expect(403, { error: "admin_access_denied" });
+
+  const adminCookie = addSession(store, "admin@example.com", {
+    id: "admin-verified",
+    token: "verified-admin-token",
+  });
+  await request(app)
+    .get("/api/admin/content/access")
+    .set("Cookie", adminCookie)
+    .expect("Cache-Control", "private, no-store")
+    .expect(200, { eligible: true });
+  await request(app)
+    .get("/api/admin/content/questions/math1-2025-q04")
+    .set("Cookie", adminCookie)
+    .set("X-Admin-Content-Key", "wrong-admin-content-key")
+    .expect(403, { error: "admin_access_denied" });
+
+  const allowed = await request(app)
+    .get("/api/admin/content/questions/math1-2025-q04")
+    .set("Cookie", adminCookie)
+    .set("X-Admin-Content-Key", "test-admin-content-key")
+    .expect("Cache-Control", "private, no-store")
+    .expect(200);
+  assert.equal(allowed.body.data.effective.explanation, "Current explanation");
+  assert.equal(JSON.stringify(allowed.body).includes("test-admin-content-key"), false);
+});
+
+test("admin content preview rolls back, commit uses session email, and invalid patches fail early", async () => {
+  const store = new MemoryStore();
+  store.adminSnapshot = makeAdminSnapshot();
+  const app = createApp({
+    config,
+    store,
+    mailer: { async sendVerification() {} },
+  });
+  const adminCookie = addSession(store, "admin@example.com", {
+    id: "admin-actions",
+    token: "admin-actions-token",
+  });
+  const headers = {
+    Cookie: adminCookie,
+    "X-Admin-Content-Key": "test-admin-content-key",
+  };
+  const action = {
+    action: "upsert",
+    expectedRevision: 2,
+    reason: "Correct source transcription",
+    changes: { explanation: "Corrected explanation" },
+  };
+
+  const preview = await request(app)
+    .post("/api/admin/content/questions/math1-2025-q04/override")
+    .set(headers)
+    .send({ ...action, mode: "preview" })
+    .expect(200);
+  assert.equal(preview.body.result.transaction, "rolled_back");
+  assert.equal(preview.body.result.dryRun, true);
+  assert.equal(store.adminCommands[0]?.dryRun, true);
+  assert.equal(store.adminCommands[0]?.command.editor, "admin@example.com");
+
+  const commit = await request(app)
+    .post("/api/admin/content/questions/math1-2025-q04/override")
+    .set(headers)
+    .send({ ...action, mode: "commit" })
+    .expect(200);
+  assert.equal(commit.body.result.transaction, "committed");
+  assert.equal(commit.body.result.dryRun, false);
+  assert.equal(store.adminCommands[1]?.dryRun, false);
+
+  await request(app)
+    .post("/api/admin/content/questions/math1-2025-q04/override")
+    .set(headers)
+    .send({
+      ...action,
+      mode: "preview",
+      changes: { options: [{ label: "A", value: "Only A" }] },
+    })
+    .expect(400, { error: "invalid_request", details: ["Too small: expected array to have >=4 items"] });
+  assert.equal(store.adminCommands.length, 2);
 });

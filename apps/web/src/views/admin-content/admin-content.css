@@ -1,0 +1,285 @@
+.admin-access-card {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(240px, 1fr) auto;
+  align-items: end;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.admin-access-card label,
+.admin-field,
+.admin-revert-card label {
+  display: grid;
+  gap: 8px;
+  color: #536078;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.admin-access-card input,
+.admin-field input,
+.admin-field textarea,
+.admin-revert-card select,
+.admin-revert-card input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--ink);
+  background: #fff;
+}
+
+.admin-field textarea {
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.admin-message {
+  margin: 16px 0 0;
+  padding: 13px 15px;
+  border-radius: 9px;
+  color: #304b8e;
+  background: #edf2ff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-question-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin-top: 22px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--line);
+}
+
+.admin-question-summary > div {
+  padding: 18px;
+  background: #fff;
+}
+
+.admin-question-summary span,
+.admin-question-summary strong {
+  display: block;
+}
+
+.admin-question-summary span {
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.admin-question-summary strong {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.admin-mode-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 26px 0 16px;
+}
+
+.admin-mode-tabs button {
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--muted);
+  background: #fff;
+  font-weight: 750;
+}
+
+.admin-mode-tabs button.active {
+  color: #fff;
+  border-color: var(--indigo);
+  background: var(--indigo);
+}
+
+.admin-mode-tabs button:disabled,
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+  transform: none;
+}
+
+.admin-editor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.admin-field-wide {
+  grid-column: 1 / -1;
+}
+
+.admin-reason-field {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid #efdaac;
+  border-radius: 14px;
+  background: #fffaf0;
+}
+
+.admin-revert-card,
+.admin-diff-card,
+.admin-history-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.admin-revert-card p,
+.admin-diff-card > p,
+.admin-history-card > p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.admin-diff-card,
+.admin-history-card {
+  margin-top: 18px;
+}
+
+.admin-diff-card h2,
+.admin-history-card h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.admin-diff-card article {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.admin-diff-card article h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.admin-diff-card article > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-diff-card section {
+  min-width: 0;
+  padding: 12px;
+  border-radius: 9px;
+  background: var(--soft);
+}
+
+.admin-diff-card section span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.admin-diff-card pre {
+  max-height: 240px;
+  overflow: auto;
+  margin: 8px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.admin-preview-ok {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.admin-history-list {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-history-list article {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.25fr) minmax(180px, 0.2fr) 1fr;
+  gap: 10px 18px;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--soft);
+  font-size: 12px;
+}
+
+.admin-history-list span,
+.admin-history-list small {
+  color: var(--muted);
+}
+
+.admin-history-list p {
+  margin: 0;
+}
+
+.admin-history-list small {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 980px) {
+  .admin-access-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .admin-access-card .button {
+    grid-column: 1 / -1;
+  }
+
+  .admin-question-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-history-list article {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .admin-history-list p {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-access-card,
+  .admin-editor-grid,
+  .admin-question-summary,
+  .admin-diff-card article > div,
+  .admin-history-list article {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-access-card .button,
+  .admin-field-wide,
+  .admin-history-list p,
+  .admin-history-list small {
+    grid-column: auto;
+  }
+
+  .admin-actions .button {
+    width: 100%;
+  }
+}
