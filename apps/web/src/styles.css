@@ -2015,6 +2015,28 @@ textarea:focus-visible {
   font-weight: 650;
 }
 
+.math-animation-stage .math-animation-formula {
+  font-size: 14px;
+  font-weight: 760;
+}
+
+.math-animation-stage text.math-animation-accent {
+  fill: var(--animation-accent);
+}
+
+.math-animation-stage text.math-animation-muted {
+  fill: #64748b;
+  font-weight: 600;
+}
+
+.math-animation-stage text.math-animation-warm {
+  fill: #9a3412;
+}
+
+.math-animation-stage text.math-animation-warning {
+  fill: #be123c;
+}
+
 .math-animation-axes line {
   stroke: #94a3b8;
   stroke-width: 1.5;
