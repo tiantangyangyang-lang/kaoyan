@@ -1,6 +1,11 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { MathAnimationKind, MathAnimationSpec } from "../../types";
+import {
+  AsymptoteScene,
+  IntegralRegionScene,
+  RadialDensityScene,
+} from "./RedesignedScenes";
 
 const draw = (reduced: boolean) => ({
   initial: reduced ? false : { pathLength: 0, opacity: 0 },
@@ -31,33 +36,7 @@ function Scene({
 }) {
   const common = draw(reduced);
   if (kind === "asymptote") {
-    return (
-      <svg viewBox="0 0 360 300" role="img" aria-label="曲线靠近斜渐近线">
-        <Axes />
-        <motion.path
-          d="M42 250 C85 230 112 210 144 184 C188 148 230 112 325 45"
-          fill="none"
-          stroke={accent}
-          strokeWidth="5"
-          strokeLinecap="round"
-          {...common}
-        />
-        {step >= 1 && (
-          <motion.line
-            x1="40" y1="262" x2="326" y2="34"
-            stroke="#f59e0b" strokeWidth="3" strokeDasharray="9 7"
-            {...common}
-          />
-        )}
-        {step >= 2 && (
-          <motion.g initial={reduced ? false : { opacity: 0 }} animate={{ opacity: 1 }}>
-            <text x="235" y="70">y = x + 1/e</text>
-            <line x1="180" y1="150" x2="180" y2="132" stroke="#f59e0b" strokeWidth="4" />
-            <text x="188" y="138">1/e</text>
-          </motion.g>
-        )}
-      </svg>
-    );
+    return <AsymptoteScene step={step} accent={accent} reduced={reduced} />;
   }
   if (kind === "tangent-plane") {
     return (
@@ -116,38 +95,10 @@ function Scene({
     );
   }
   if (kind === "integral-region") {
-    return (
-      <svg viewBox="0 0 360 300" role="img" aria-label="抛物线与直线围成的积分区域">
-        <Axes />
-        <motion.path d="M62 232 Q180 20 298 232 L298 54 L62 54 Z" fill={`${accent}30`} stroke="none" initial={reduced ? false : { opacity: 0 }} animate={{ opacity: 1 }} />
-        <motion.path d="M62 232 Q180 20 298 232" fill="none" stroke={accent} strokeWidth="5" {...common} />
-        <motion.line x1="62" y1="54" x2="298" y2="54" stroke="#111827" strokeWidth="3" {...common} />
-        {step >= 1 && [95, 135, 180, 225, 265].map((x) => (
-          <motion.line key={x} x1={x} y1="54" x2={x} y2={54 + ((x - 180) ** 2) / 60} stroke="#f59e0b" strokeWidth="3" initial={reduced ? false : { scaleY: 0 }} animate={{ scaleY: 1 }} />
-        ))}
-        {step >= 2 && <text x="202" y="94">左右两段 x 区间</text>}
-      </svg>
-    );
+    return <IntegralRegionScene step={step} accent={accent} reduced={reduced} />;
   }
   if (kind === "radial-density") {
-    return (
-      <svg viewBox="0 0 360 300" role="img" aria-label="单位圆盘上的径向概率密度">
-        {[108, 82, 56, 30].map((radius, index) => (
-          <motion.circle
-            key={radius}
-            cx="180" cy="150" r={radius}
-            fill="none" stroke={index <= step ? accent : "#cbd5e1"}
-            strokeWidth={index <= step ? 12 : 4}
-            initial={reduced ? false : { opacity: 0, scale: 0.4 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: reduced ? 0 : index * 0.12 }}
-          />
-        ))}
-        <motion.line x1="180" y1="150" x2="288" y2="150" stroke="#111827" strokeWidth="3" {...common} />
-        <text x="226" y="141">r</text>
-        {step >= 2 && <text x="116" y="286">Z = r² 把圆盘压缩到 [0,1]</text>}
-      </svg>
-    );
+    return <RadialDensityScene step={step} accent={accent} reduced={reduced} />;
   }
 
   const unsupportedKind: never = kind;

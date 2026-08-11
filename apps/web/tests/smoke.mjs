@@ -28,6 +28,27 @@ const publishedQuestion = (subject) => ({
   finalizationStatus: "published",
 });
 
+const reducedMotionAnimationQuestion = {
+  ...publishedQuestion("math1"),
+  stableId: "math1-2025-q04",
+  sourceYear: 2025,
+  questionNumber: 4,
+};
+
+const reducedMotionAnimationPayload = {
+  version: 1,
+  kind: "integral-region",
+  title: "换序关键：横切片会断成两段",
+  summary:
+    "原积分按竖线覆盖区域；换成固定 y 后，中间部分被抛物线排除，必须写成左右两个 x 区间。",
+  accent: "#e11d48",
+  steps: [
+    { title: "竖切读原积分", body: "-2≤x≤2，每条竖线从 y=4-x² 向上积到 y=4。" },
+    { title: "横切断成两段", body: "固定 0≤y≤4 后，条件变为 x²≥4-y；中间区间不属于积分区域。" },
+    { title: "两段对应选项 A", body: "左段为 [-2,-√(4-y)]，右段为 [√(4-y),2]，所以选择 A。" },
+  ],
+};
+
 const captureBrowserIssues = (page) => {
   const issues = [];
   page.on("console", (message) => {
@@ -489,6 +510,88 @@ try {
     fullPage: true,
   });
 
+  const animationPage = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+    reducedMotion: "reduce",
+  });
+  const animationIssues = captureBrowserIssues(animationPage);
+  await animationPage.route("**/api/**", (route) => {
+    const url = new URL(route.request().url());
+    if (url.pathname.endsWith("/api/auth/me")) {
+      return fulfillJson(route, 200, {
+        user: { id: "animation-user", email: "animation@example.com", emailVerified: true },
+      });
+    }
+    if (url.pathname.endsWith("/api/admin/content/access")) {
+      return fulfillJson(route, 200, { eligible: false });
+    }
+    if (url.pathname.endsWith("/api/content/math1/public-overrides")) {
+      return fulfillJson(route, 200, { data: [] });
+    }
+    if (url.pathname === "/api/content/math1/questions") {
+      return fulfillJson(route, 200, {
+        data: {
+          items: [reducedMotionAnimationQuestion],
+          page: 1,
+          pageSize: 50,
+          totalItems: 1,
+          totalPages: 1,
+        },
+      });
+    }
+    if (url.pathname === "/api/content/math1/questions/math1-2025-q04") {
+      return fulfillJson(route, 200, {
+        data: {
+          ...reducedMotionAnimationQuestion,
+          answer: "A",
+          answerStatus: "reviewed",
+          explanation: "积分区域换序测试解析",
+          explanationStatus: "reviewed",
+          reviewStatus: "approved",
+          knowledgePoints: [],
+        },
+      });
+    }
+    if (url.pathname === "/api/question-animations/math1-2025-q04") {
+      return fulfillJson(route, 200, {
+        animation: {
+          questionId: "math1-2025-q04",
+          subjectCode: "math1",
+          payload: reducedMotionAnimationPayload,
+          updatedAt: new Date(0).toISOString(),
+        },
+      });
+    }
+    return fulfillJson(route, 404, { error: "not_found" });
+  });
+  await animationPage.goto(baseUrl, { waitUntil: "networkidle" });
+  if (!(await animationPage.evaluate(() => matchMedia("(prefers-reduced-motion: reduce)").matches))) {
+    throw new Error("Reduced-motion browser preference was not active");
+  }
+  await animationPage.getByRole("button", { name: "真题库" }).click();
+  await animationPage.getByRole("button", { name: /数学一/ }).click();
+  await animationPage.locator(".question-row").first().click();
+  await animationPage.getByRole("button", { name: "查看答案解析" }).click();
+  await animationPage.getByText("换序关键：横切片会断成两段", { exact: true }).waitFor();
+  await animationPage.getByRole("button", { name: "2 横切断成两段" }).click();
+  await animationPage.getByText("中间不属于 D", { exact: true }).waitFor();
+  await animationPage.getByRole("button", { name: "3 两段对应选项 A" }).click();
+  await animationPage.getByText("[-2,-√(4-y)]", { exact: true }).waitFor();
+  await animationPage.getByText("[√(4-y),2]", { exact: true }).waitFor();
+  await animationPage.screenshot({
+    path: resolve(outputDir, "animation-q04-reduced-motion.png"),
+    fullPage: true,
+  });
+  animationIssues.splice(
+    0,
+    animationIssues.length,
+    ...animationIssues.filter(
+      (issue) => !issue.includes("You have Reduced Motion enabled on your device"),
+    ),
+  );
+  await animationPage.close();
+
   const adminPage = await browser.newPage({
     viewport: { width: 1440, height: 1000 },
     deviceScaleFactor: 1,
@@ -690,6 +793,7 @@ try {
     ...pageIssues,
     ...mobileIssues,
     ...authenticatedIssues,
+    ...animationIssues,
     ...adminIssues,
   ];
   if (browserIssues.length > 0) {
@@ -704,8 +808,10 @@ try {
         practice: "practice-desktop.png",
         mobile: "dashboard-mobile.png",
         authenticated: "authenticated-math2.png",
+        animation: "animation-q04-reduced-motion.png",
         anonymousProtectedRedirect: true,
         authenticatedProtectedContent: true,
+        animationReducedMotion: true,
         publicLoadParallelWithAuthentication: true,
         authenticatedBankReplacedPublicBank: true,
         publicBankStayedVisibleDuringAuthenticatedLoad: true,

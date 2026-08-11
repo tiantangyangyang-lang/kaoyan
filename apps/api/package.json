@@ -18,6 +18,7 @@
     "content:correct-math1-2025-q04-explanation": "tsx scripts/correct-math1-2025-q04-explanation.ts",
     "content:verify-math1-2025-q04-explanation": "tsx scripts/verify-math1-2025-q04-explanation.ts",
     "content:override": "tsx scripts/edit-content-override.ts",
+    "content:replace-animation-samples": "tsx scripts/replace-animation-samples.ts",
     "import:math1": "tsx scripts/import-math1.ts",
     "import:questions": "tsx scripts/import-questions.ts",
     "import:math2": "tsx scripts/import-math2.ts",

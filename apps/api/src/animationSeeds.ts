@@ -32,6 +32,7 @@ export const questionAnimationSeedSchema = z.object({
 });
 
 export type QuestionAnimationSeed = z.infer<typeof questionAnimationSeedSchema>;
+export type MathAnimationSpec = z.infer<typeof mathAnimationSpecSchema>;
 
 export const QUESTION_ANIMATION_SEEDS: QuestionAnimationSeed[] = [
   {
@@ -40,13 +41,13 @@ export const QUESTION_ANIMATION_SEEDS: QuestionAnimationSeed[] = [
     payload: {
       version: 1,
       kind: "asymptote",
-      title: "曲线如何贴近斜渐近线",
-      summary: "把“先求斜率、再求截距”变成一条逐渐贴近直线的曲线。",
+      title: "两次极限锁定斜渐近线",
+      summary: "先由 y/x 的极限确定斜率，再由 y-x 的极限确定截距；两个条件共同锁定选项 B。",
       accent: "#4f46e5",
       steps: [
-        { title: "观察远端", body: "让 x 向右增大，曲线的整体方向逐渐稳定。" },
-        { title: "锁定斜率", body: "y/x 的极限为 1，所以候选渐近线与 y=x 平行。" },
-        { title: "读出截距", body: "y-x 的极限为 1/e，曲线最终贴近 y=x+1/e。" },
+        { title: "斜率趋于 1", body: "k=lim(y/x)=1，曲线远端方向与直线 y=x 平行。" },
+        { title: "截距趋于 1/e", body: "继续计算 lim(y-x)=1/e，竖直偏移量不是 0、e 或 -1/e。" },
+        { title: "锁定选项 B", body: "斜率与截距合并得到唯一斜渐近线 y=x+1/e，因此选择 B。" },
       ],
     },
   },
@@ -104,13 +105,13 @@ export const QUESTION_ANIMATION_SEEDS: QuestionAnimationSeed[] = [
     payload: {
       version: 1,
       kind: "integral-region",
-      title: "二重积分换序：先看区域再写上下限",
-      summary: "原积分描述抛物线 y=4-x² 与直线 y=4 之间的帽形区域。",
+      title: "换序关键：横切片会断成两段",
+      summary: "原积分按竖线覆盖区域；换成固定 y 后，中间部分被抛物线排除，必须写成左右两个 x 区间。",
       accent: "#e11d48",
       steps: [
-        { title: "按 x 扫描", body: "-2≤x≤2，每条竖线从 4-x² 积到 4。" },
-        { title: "固定 y", body: "换序时 0≤y≤4，并由 x²≥4-y 分成左右两块。" },
-        { title: "写成两段", body: "x≤-√(4-y) 或 x≥√(4-y)，不能误写成中间区域。" },
+        { title: "竖切读原积分", body: "-2≤x≤2，每条竖线从 y=4-x² 向上积到 y=4。" },
+        { title: "横切断成两段", body: "固定 0≤y≤4 后，条件变为 x²≥4-y；中间区间不属于积分区域。" },
+        { title: "两段对应选项 A", body: "左段为 [-2,-√(4-y)]，右段为 [√(4-y),2]，所以选择 A。" },
       ],
     },
   },
@@ -120,13 +121,13 @@ export const QUESTION_ANIMATION_SEEDS: QuestionAnimationSeed[] = [
     payload: {
       version: 1,
       kind: "radial-density",
-      title: "从单位圆盘压缩成半径分布",
-      summary: "密度只依赖 r²，角度积分后，二维问题变成半径变量 Z=r²。",
+      title: "从径向密度推到 f_Z(z)=2z",
+      summary: "先看密度如何随半径增大，再累积半径 √z 内的概率，最后对 F_Z(z)=z² 求导。",
       accent: "#7c3aed",
       steps: [
-        { title: "识别径向对称", body: "同一圆周上的点具有相同密度。" },
-        { title: "积掉角度", body: "极坐标面积元 r dr dθ 带来额外的 r。" },
-        { title: "改变量 Z=r²", body: "圆盘由内向外累积，得到 Z 在 [0,1] 上的密度。" },
+        { title: "密度随半径增大", body: "写成极坐标后 f(x,y)=(2/π)r²；同一圆周密度相同，外圈更密。" },
+        { title: "先求分布函数", body: "Z≤z 等价于 r≤√z。对该圆盘积分得到 F_Z(z)=z²，0≤z≤1。" },
+        { title: "求导得到密度", body: "对 F_Z(z) 求导，得到 f_Z(z)=2z（0<z<1），区间外为 0。" },
       ],
     },
   },
