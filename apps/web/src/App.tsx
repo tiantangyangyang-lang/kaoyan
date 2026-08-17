@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AppShell } from "./components/AppShell";
 import { QuestionWorkspace } from "./components/QuestionWorkspace";
 import {
@@ -48,6 +48,21 @@ import {
 import type { AuthUser, SubjectCatalog } from "./types";
 import { SUBJECT_LABELS } from "./constants";
 
+function replaceQuestionDetails(
+  currentBank: QuestionBank,
+  details: Question[],
+): QuestionBank {
+  const detailById = new Map(
+    details.map((question) => [question.stableId, question]),
+  );
+  return {
+    ...currentBank,
+    questions: currentBank.questions.map(
+      (question) => detailById.get(question.stableId) ?? question,
+    ),
+  };
+}
+
 export function App() {
   const [bank, setBank] = useState<QuestionBank | null>(null);
   const [subjectName, setSubjectName] = useState("数学一");
@@ -73,6 +88,40 @@ export function App() {
   const [adminEligible, setAdminEligible] = useState(false);
   const [adminContentKey, setAdminContentKey] = useState("");
   const authRevision = useRef(0);
+  const currentUserId = useRef<string | null>(null);
+  const detailRequestGenerations = useRef(new Map<string, number>());
+  currentUserId.current = user?.id ?? null;
+
+  const refreshQuestionDetail = useCallback(
+    async (targetSubject: SubjectCode, stableId: string) => {
+      const expectedUserId = currentUserId.current;
+      if (!expectedUserId) return;
+      const requestKey = `${targetSubject}:${stableId}`;
+      const generation =
+        (detailRequestGenerations.current.get(requestKey) ?? 0) + 1;
+      detailRequestGenerations.current.set(requestKey, generation);
+      const detail = await loadAuthenticatedQuestionDetail(
+        targetSubject,
+        stableId,
+      );
+      if (
+        currentUserId.current !== expectedUserId ||
+        detailRequestGenerations.current.get(requestKey) !== generation
+      ) {
+        return;
+      }
+      setBank((current) => {
+        if (
+          current?.subjectCode !== targetSubject ||
+          !current.questions.some((question) => question.stableId === stableId)
+        ) {
+          return current;
+        }
+        return replaceQuestionDetails(current, [detail]);
+      });
+    },
+    [],
+  );
 
   useEffect(() => {
     let cancelled = false;
@@ -204,6 +253,33 @@ export function App() {
   );
   const selectedQuestion =
     selectedIndex >= 0 ? questions[selectedIndex] : questions[0];
+  const selectedDetailId =
+    view === "practice" ? (selectedQuestion?.stableId ?? null) : null;
+  const selectedDetailLoaded = selectedQuestion?.detailLoaded;
+
+  useEffect(() => {
+    if (
+      !user ||
+      !bank ||
+      !selectedDetailId ||
+      selectedDetailLoaded !== false
+    ) {
+      return;
+    }
+    const expectedUserId = user.id;
+    void refreshQuestionDetail(subject, selectedDetailId).catch(() => {
+      if (currentUserId.current === expectedUserId) {
+        setError("登录内容加载失败，请刷新页面后重试。");
+      }
+    });
+  }, [
+    bank,
+    refreshQuestionDetail,
+    selectedDetailId,
+    selectedDetailLoaded,
+    subject,
+    user,
+  ]);
 
   const loadDetails = async (targets: Question[]) => {
     const details: Question[] = [];
@@ -219,19 +295,6 @@ export function App() {
       );
     }
     return details;
-  };
-
-  const replaceQuestionDetails = (
-    currentBank: QuestionBank,
-    details: Question[],
-  ): QuestionBank => {
-    const detailById = new Map(details.map((question) => [question.stableId, question]));
-    return {
-      ...currentBank,
-      questions: currentBank.questions.map(
-        (question) => detailById.get(question.stableId) ?? question,
-      ),
-    };
   };
 
   const openQuestion = (question: Question) => {
@@ -599,6 +662,7 @@ export function App() {
           adminKey={adminContentKey}
           onAdminKeyChange={setAdminContentKey}
           onKeyRejected={() => setAdminContentKey("")}
+          onQuestionSaved={refreshQuestionDetail}
         />
       )}
     </AppShell>

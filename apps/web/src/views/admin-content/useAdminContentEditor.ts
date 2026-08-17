@@ -4,7 +4,11 @@ import {
   executeAdminContentAction,
   loadAdminQuestion,
 } from "../../api";
-import type { AdminOverrideResult, AdminQuestionSnapshot } from "../../types";
+import type {
+  AdminOverrideResult,
+  AdminQuestionSnapshot,
+  SubjectCode,
+} from "../../types";
 import {
   buildChanges,
   differencesFor,
@@ -17,9 +21,11 @@ export type AdminEditorMode = "edit" | "revert";
 export function useAdminContentEditor({
   adminKey,
   onKeyRejected,
+  onQuestionSaved,
 }: {
   adminKey: string;
   onKeyRejected: () => void;
+  onQuestionSaved: (subject: SubjectCode, stableId: string) => Promise<void>;
 }) {
   const [stableId, setStableId] = useState("");
   const [snapshot, setSnapshot] = useState<AdminQuestionSnapshot | null>(null);
@@ -164,7 +170,14 @@ export function useAdminContentEditor({
         setReason("");
         setTargetRevision(0);
         clearPreview();
-        setMessage(`保存成功，当前修订号为 ${result.revision}。`);
+        try {
+          await onQuestionSaved(refreshed.subjectCode, refreshed.stableId);
+          setMessage(`保存成功，当前修订号为 ${result.revision}。`);
+        } catch {
+          setMessage(
+            `保存成功，当前修订号为 ${result.revision}；练习页自动刷新失败，请重新打开这道题。`,
+          );
+        }
       }
     } catch (error) {
       clearPreview();
