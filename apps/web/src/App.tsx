@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AppShell } from "./components/AppShell";
 import { QuestionWorkspace } from "./components/QuestionWorkspace";
 import {
@@ -48,6 +48,43 @@ import {
 import type { AuthUser, SubjectCatalog } from "./types";
 import { SUBJECT_LABELS } from "./constants";
 
+function replaceQuestionDetails(
+  currentBank: QuestionBank,
+  details: Question[],
+): QuestionBank {
+  const detailById = new Map(
+    details.map((question) => [question.stableId, question]),
+  );
+  return {
+    ...currentBank,
+    questions: currentBank.questions.map(
+      (question) => detailById.get(question.stableId) ?? question,
+    ),
+  };
+}
+
+function markQuestionDetailUnloaded(
+  currentBank: QuestionBank,
+  stableId: string,
+): QuestionBank {
+  let changed = false;
+  const questions = currentBank.questions.map((question) => {
+    if (question.stableId !== stableId || question.detailLoaded === false) {
+      return question;
+    }
+    changed = true;
+    return {
+      ...question,
+      answer: null,
+      answerStatus: "not_loaded",
+      explanation: "",
+      explanationStatus: "not_loaded",
+      detailLoaded: false,
+    };
+  });
+  return changed ? { ...currentBank, questions } : currentBank;
+}
+
 export function App() {
   const [bank, setBank] = useState<QuestionBank | null>(null);
   const [subjectName, setSubjectName] = useState("数学一");
@@ -73,6 +110,52 @@ export function App() {
   const [adminEligible, setAdminEligible] = useState(false);
   const [adminContentKey, setAdminContentKey] = useState("");
   const authRevision = useRef(0);
+  const currentUserId = useRef<string | null>(null);
+  const detailRequestGenerations = useRef(new Map<string, number>());
+  currentUserId.current = user?.id ?? null;
+
+  const refreshQuestionDetail = useCallback(
+    async (targetSubject: SubjectCode, stableId: string) => {
+      const expectedUserId = currentUserId.current;
+      if (!expectedUserId) return;
+      const requestKey = `${targetSubject}:${stableId}`;
+      const generation =
+        (detailRequestGenerations.current.get(requestKey) ?? 0) + 1;
+      detailRequestGenerations.current.set(requestKey, generation);
+      let detail: Question;
+      try {
+        detail = await loadAuthenticatedQuestionDetail(targetSubject, stableId);
+      } catch (error) {
+        if (
+          currentUserId.current === expectedUserId &&
+          detailRequestGenerations.current.get(requestKey) === generation
+        ) {
+          setBank((current) =>
+            current?.subjectCode === targetSubject
+              ? markQuestionDetailUnloaded(current, stableId)
+              : current,
+          );
+        }
+        throw error;
+      }
+      if (
+        currentUserId.current !== expectedUserId ||
+        detailRequestGenerations.current.get(requestKey) !== generation
+      ) {
+        return;
+      }
+      setBank((current) => {
+        if (
+          current?.subjectCode !== targetSubject ||
+          !current.questions.some((question) => question.stableId === stableId)
+        ) {
+          return current;
+        }
+        return replaceQuestionDetails(current, [detail]);
+      });
+    },
+    [],
+  );
 
   useEffect(() => {
     let cancelled = false;
@@ -204,6 +287,33 @@ export function App() {
   );
   const selectedQuestion =
     selectedIndex >= 0 ? questions[selectedIndex] : questions[0];
+  const selectedDetailId =
+    view === "practice" ? (selectedQuestion?.stableId ?? null) : null;
+  const selectedDetailLoaded = selectedQuestion?.detailLoaded;
+
+  useEffect(() => {
+    if (
+      !user ||
+      !bank ||
+      !selectedDetailId ||
+      selectedDetailLoaded !== false
+    ) {
+      return;
+    }
+    const expectedUserId = user.id;
+    void refreshQuestionDetail(subject, selectedDetailId).catch(() => {
+      if (currentUserId.current === expectedUserId) {
+        setError("登录内容加载失败，请刷新页面后重试。");
+      }
+    });
+  }, [
+    bank,
+    refreshQuestionDetail,
+    selectedDetailId,
+    selectedDetailLoaded,
+    subject,
+    user,
+  ]);
 
   const loadDetails = async (targets: Question[]) => {
     const details: Question[] = [];
@@ -221,40 +331,10 @@ export function App() {
     return details;
   };
 
-  const replaceQuestionDetails = (
-    currentBank: QuestionBank,
-    details: Question[],
-  ): QuestionBank => {
-    const detailById = new Map(details.map((question) => [question.stableId, question]));
-    return {
-      ...currentBank,
-      questions: currentBank.questions.map(
-        (question) => detailById.get(question.stableId) ?? question,
-      ),
-    };
-  };
-
   const openQuestion = (question: Question) => {
-    const showQuestion = () => {
-      setSelectedId(question.stableId);
-      setView("practice");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-    if (!user || question.detailLoaded !== false || !bank) {
-      showQuestion();
-      return;
-    }
-    const currentBank = bank;
-    setBank(null);
-    void loadDetails([question])
-      .then((details) => {
-        setBank(replaceQuestionDetails(currentBank, details));
-        showQuestion();
-      })
-      .catch(() => {
-        setBank(currentBank);
-        setError("登录内容加载失败，请刷新页面后重试。");
-      });
+    setSelectedId(question.stableId);
+    setView("practice");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const switchSubject = (nextSubject: SubjectCode) => {
@@ -599,6 +679,7 @@ export function App() {
           adminKey={adminContentKey}
           onAdminKeyChange={setAdminContentKey}
           onKeyRejected={() => setAdminContentKey("")}
+          onQuestionSaved={refreshQuestionDetail}
         />
       )}
     </AppShell>

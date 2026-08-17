@@ -3,18 +3,25 @@ import { AdminEditorForm } from "./admin-content/AdminEditorForm";
 import { AdminRevisionHistory } from "./admin-content/AdminRevisionHistory";
 import { AdminRevertForm } from "./admin-content/AdminRevertForm";
 import { useAdminContentEditor } from "./admin-content/useAdminContentEditor";
+import type { SubjectCode } from "../types";
 import "./admin-content/admin-content.css";
 
 export function AdminContentView({
   adminKey,
   onAdminKeyChange,
   onKeyRejected,
+  onQuestionSaved,
 }: {
   adminKey: string;
   onAdminKeyChange: (key: string) => void;
   onKeyRejected: () => void;
+  onQuestionSaved: (subject: SubjectCode, stableId: string) => Promise<void>;
 }) {
-  const editor = useAdminContentEditor({ adminKey, onKeyRejected });
+  const editor = useAdminContentEditor({
+    adminKey,
+    onKeyRejected,
+    onQuestionSaved,
+  });
   const {
     stableId,
     setStableId,

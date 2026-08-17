@@ -160,7 +160,9 @@ export function QuestionWorkspace({
               <p className="muted">
                 {question.answerStatus === "missing"
                   ? "答案整理中，暂未发布参考答案。"
-                  : "本题没有独立答案字段，请结合解析核对。"}
+                  : question.answerStatus === "not_loaded"
+                    ? "正在加载参考答案…"
+                    : "本题没有独立答案字段，请结合解析核对。"}
               </p>
             )}
           </div>
@@ -171,7 +173,9 @@ export function QuestionWorkspace({
                 question.explanation ||
                 (question.explanationStatus === "missing"
                   ? "解析整理中，暂未发布。"
-                  : "暂无解析")
+                  : question.explanationStatus === "not_loaded"
+                    ? "正在加载解析…"
+                    : "暂无解析")
               }
             />
           </div>

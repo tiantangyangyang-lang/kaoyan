@@ -4,7 +4,11 @@ import {
   executeAdminContentAction,
   loadAdminQuestion,
 } from "../../api";
-import type { AdminOverrideResult, AdminQuestionSnapshot } from "../../types";
+import type {
+  AdminOverrideResult,
+  AdminQuestionSnapshot,
+  SubjectCode,
+} from "../../types";
 import {
   buildChanges,
   differencesFor,
@@ -17,9 +21,11 @@ export type AdminEditorMode = "edit" | "revert";
 export function useAdminContentEditor({
   adminKey,
   onKeyRejected,
+  onQuestionSaved,
 }: {
   adminKey: string;
   onKeyRejected: () => void;
+  onQuestionSaved: (subject: SubjectCode, stableId: string) => Promise<void>;
 }) {
   const [stableId, setStableId] = useState("");
   const [snapshot, setSnapshot] = useState<AdminQuestionSnapshot | null>(null);
@@ -158,13 +164,27 @@ export function useAdminContentEditor({
         setPreviewFingerprint(actionFingerprint);
         setMessage("预览成功：数据库事务已回滚，没有写入生产内容。");
       } else {
-        const refreshed = await loadAdminQuestion(snapshot.stableId, adminKey);
-        setSnapshot(refreshed);
-        setDraft(draftFromSnapshot(refreshed));
         setReason("");
         setTargetRevision(0);
         clearPreview();
-        setMessage(`保存成功，当前修订号为 ${result.revision}。`);
+        const refreshWarnings: string[] = [];
+        try {
+          const refreshed = await loadAdminQuestion(snapshot.stableId, adminKey);
+          setSnapshot(refreshed);
+          setDraft(draftFromSnapshot(refreshed));
+        } catch {
+          refreshWarnings.push("管理页数据刷新失败，请重新查询这道题");
+        }
+        try {
+          await onQuestionSaved(snapshot.subjectCode, snapshot.stableId);
+        } catch {
+          refreshWarnings.push("练习页自动刷新失败，请重新打开或刷新页面重试");
+        }
+        setMessage(
+          refreshWarnings.length === 0
+            ? `保存成功，当前修订号为 ${result.revision}。`
+            : `保存成功，当前修订号为 ${result.revision}；${refreshWarnings.join("；")}。`,
+        );
       }
     } catch (error) {
       clearPreview();

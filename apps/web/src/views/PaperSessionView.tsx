@@ -164,7 +164,9 @@ export function PaperSessionView({
                   question.answer ||
                   (question.answerStatus === "missing"
                     ? "答案整理中，暂未发布参考答案。"
-                    : "本题无独立答案字段")
+                    : question.answerStatus === "not_loaded"
+                      ? "正在加载参考答案…"
+                      : "本题无独立答案字段")
                 }
               />
             </div>
@@ -175,7 +177,9 @@ export function PaperSessionView({
                   question.explanation ||
                   (question.explanationStatus === "missing"
                     ? "解析整理中，暂未发布。"
-                    : "暂无解析")
+                    : question.explanationStatus === "not_loaded"
+                      ? "正在加载解析…"
+                      : "暂无解析")
                 }
               />
             </div>

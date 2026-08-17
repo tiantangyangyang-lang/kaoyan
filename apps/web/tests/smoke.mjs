@@ -28,11 +28,69 @@ const publishedQuestion = (subject) => ({
   finalizationStatus: "published",
 });
 
+const authTransitionQuestion = {
+  ...publishedQuestion("math1"),
+  stableId: "math1-2025-q01",
+  sourceYear: 2025,
+};
+
 const reducedMotionAnimationQuestion = {
   ...publishedQuestion("math1"),
   stableId: "math1-2025-q04",
   sourceYear: 2025,
   questionNumber: 4,
+};
+
+const raceQuestion = {
+  ...authTransitionQuestion,
+  stem: "详情请求竞态测试题",
+  answer: null,
+  answerStatus: "not_loaded",
+  explanation: "",
+  explanationStatus: "not_loaded",
+  reviewStatus: "published",
+  knowledgePoints: [],
+  anomalies: [],
+  detailLoaded: false,
+};
+
+const detailResponse = (explanation) => ({
+  data: {
+    ...raceQuestion,
+    answer: "A",
+    answerStatus: "reviewed",
+    explanation,
+    explanationStatus: "reviewed",
+    reviewStatus: "reviewed",
+    detailLoaded: true,
+  },
+});
+
+const raceQuestionList = {
+  data: {
+    items: [raceQuestion],
+    page: 1,
+    pageSize: 50,
+    totalItems: 1,
+    totalPages: 1,
+  },
+};
+
+const publicRaceBank = {
+  schemaVersion: "math-question-bank-v1",
+  subjectCode: "math1",
+  totalYears: 1,
+  totalQuestions: 1,
+  questions: [
+    {
+      ...raceQuestion,
+      answer: "A",
+      answerStatus: "reviewed",
+      explanation: "公开题库解析",
+      explanationStatus: "reviewed",
+      detailLoaded: true,
+    },
+  ],
 };
 
 const reducedMotionAnimationPayload = {
@@ -95,11 +153,16 @@ try {
   let authPending = true;
   let releaseAuth = () => {};
   let releaseAuthenticatedBank = () => {};
+  let releaseAuthenticatedDetail = () => {};
+  let authenticatedDetailRequests = 0;
   const authGate = new Promise((resolveGate) => {
     releaseAuth = resolveGate;
   });
   const authenticatedBankGate = new Promise((resolveGate) => {
     releaseAuthenticatedBank = resolveGate;
+  });
+  const authenticatedDetailGate = new Promise((resolveGate) => {
+    releaseAuthenticatedDetail = resolveGate;
   });
   parallelPage.on("request", (request) => {
     parallelRequests.add(new URL(request.url()).pathname);
@@ -123,12 +186,47 @@ try {
     if (pathname.endsWith("/api/content/math1/public-overrides")) {
       return fulfillJson(route, 200, { data: [] });
     }
+    if (pathname.endsWith("/availability")) {
+      return fulfillJson(route, 200, { available: false });
+    }
+    if (pathname.includes("/api/question-animations/")) {
+      return fulfillJson(route, 200, {
+        animation: {
+          questionId: authTransitionQuestion.stableId,
+          subjectCode: "math1",
+          payload: reducedMotionAnimationPayload,
+          updatedAt: new Date(0).toISOString(),
+        },
+      });
+    }
+    if (
+      pathname.endsWith(
+        `/api/content/math1/questions/${authTransitionQuestion.stableId}`,
+      )
+    ) {
+      authenticatedDetailRequests += 1;
+      await authenticatedDetailGate;
+      return fulfillJson(route, 200, {
+        data: {
+          ...authTransitionQuestion,
+          answer: "A",
+          answerStatus: "reviewed",
+          explanation: "登录后自动刷新解析",
+          explanationStatus: "reviewed",
+          reviewStatus: "reviewed",
+          knowledgePoints: [],
+        },
+      });
+    }
     const listMatch = /\/api\/content\/(math[123])\/questions$/.exec(pathname);
     if (listMatch) {
       await authenticatedBankGate;
       return fulfillJson(route, 200, {
         data: {
-          items: [publishedQuestion(listMatch[1])],
+          items:
+            listMatch[1] === "math1"
+              ? [authTransitionQuestion]
+              : [publishedQuestion(listMatch[1])],
           page: 1,
           pageSize: 50,
           totalItems: 1,
@@ -149,26 +247,243 @@ try {
   if (!parallelRequests.has("/data/math1.json")) {
     throw new Error("Public Math1 request did not start while authentication was pending");
   }
+  await parallelPage.getByRole("button", { name: "真题库" }).click();
+  await parallelPage.getByRole("button", { name: /数学一/ }).click();
+  await parallelPage.locator("select").nth(0).selectOption("2025");
+  await parallelPage.locator(".question-row").first().click();
+  await parallelPage.locator(".workspace").waitFor();
+  await parallelPage.getByRole("button", { name: "查看答案解析" }).click();
 
   releaseAuth();
   for (let attempt = 0; attempt < 50; attempt += 1) {
     if (parallelRequests.has("/api/content/math1/questions")) break;
     await parallelPage.waitForTimeout(20);
   }
-  await parallelPage
-    .getByText("数学一真题当前收录 179 题。", { exact: true })
-    .waitFor();
+  await parallelPage.locator(".workspace").waitFor();
   if ((await parallelPage.locator(".loading-state").count()) !== 0) {
     throw new Error("Public Math1 disappeared during authenticated bank loading");
   }
   releaseAuthenticatedBank();
-  await parallelPage
-    .getByText("数学一真题当前收录 1 题。", { exact: true })
-    .waitFor();
+  await parallelPage.getByText("正在加载参考答案…", { exact: true }).waitFor();
+  await parallelPage.getByText("正在加载解析…", { exact: true }).waitFor();
   if (!parallelRequests.has("/api/content/math1/questions")) {
     throw new Error("Authenticated Math1 did not replace the public bank");
   }
+  if (authenticatedDetailRequests !== 1) {
+    throw new Error("Selected question detail was not loaded after authentication");
+  }
+  releaseAuthenticatedDetail();
+  await parallelPage
+    .getByText("登录后自动刷新解析", { exact: true })
+    .waitFor();
   await parallelPage.close();
+
+  const generationRacePage = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+  });
+  const generationRaceIssues = captureBrowserIssues(generationRacePage);
+  const pendingGenerationDetails = [];
+  await generationRacePage.route("**/api/**", (route) => {
+    const pathname = new URL(route.request().url()).pathname;
+    if (pathname.endsWith("/api/auth/me")) {
+      return fulfillJson(route, 200, {
+        user: {
+          id: "generation-user",
+          email: "generation@example.com",
+          emailVerified: true,
+        },
+      });
+    }
+    if (pathname.endsWith("/api/admin/content/access")) {
+      return fulfillJson(route, 200, { eligible: false });
+    }
+    if (pathname.endsWith("/api/content/math1/questions")) {
+      return fulfillJson(route, 200, raceQuestionList);
+    }
+    if (pathname.endsWith(`/api/content/math1/questions/${raceQuestion.stableId}`)) {
+      pendingGenerationDetails.push(route);
+      return;
+    }
+    if (pathname.endsWith("/api/content/math1/public-overrides")) {
+      return fulfillJson(route, 200, { data: [] });
+    }
+    if (pathname.endsWith("/availability")) {
+      return fulfillJson(route, 200, { available: false });
+    }
+    return fulfillJson(route, 200, {});
+  });
+  await generationRacePage.goto(baseUrl, { waitUntil: "networkidle" });
+  await generationRacePage.getByRole("button", { name: "真题库" }).click();
+  await generationRacePage.getByRole("button", { name: /数学一/ }).click();
+  await generationRacePage.locator(".question-row").first().click();
+  for (let attempt = 0; attempt < 50 && pendingGenerationDetails.length < 1; attempt += 1) {
+    await generationRacePage.waitForTimeout(20);
+  }
+  await generationRacePage.getByRole("button", { name: "学习首页" }).click();
+  await generationRacePage.getByRole("button", { name: "开始练习" }).click();
+  for (let attempt = 0; attempt < 50 && pendingGenerationDetails.length < 2; attempt += 1) {
+    await generationRacePage.waitForTimeout(20);
+  }
+  if (pendingGenerationDetails.length !== 2) {
+    throw new Error("Reopening the unloaded question did not start a newer detail request");
+  }
+  await generationRacePage.getByRole("button", { name: "查看答案解析" }).click();
+  await generationRacePage.getByText("正在加载解析…", { exact: true }).waitFor();
+  await fulfillJson(pendingGenerationDetails[1], 200, detailResponse("较新的详情响应"));
+  await generationRacePage.getByText("较新的详情响应", { exact: true }).waitFor();
+  await fulfillJson(pendingGenerationDetails[0], 200, detailResponse("过期的详情响应"));
+  await generationRacePage.waitForTimeout(100);
+  if ((await generationRacePage.getByText("过期的详情响应", { exact: true }).count()) !== 0) {
+    throw new Error("An older detail response overwrote the newer response");
+  }
+  await generationRacePage.close();
+
+  const logoutRacePage = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+  });
+  const logoutRaceIssues = captureBrowserIssues(logoutRacePage);
+  let pendingLogoutDetail = null;
+  let logoutPublicLoads = 0;
+  await logoutRacePage.route("**/data/math1.json", (route) => {
+    logoutPublicLoads += 1;
+    return fulfillJson(route, 200, publicRaceBank);
+  });
+  await logoutRacePage.route("**/api/**", (route) => {
+    const pathname = new URL(route.request().url()).pathname;
+    if (pathname.endsWith("/api/auth/me")) {
+      return fulfillJson(route, 200, {
+        user: { id: "logout-user", email: "logout@example.com", emailVerified: true },
+      });
+    }
+    if (pathname.endsWith("/api/auth/logout")) {
+      return route.fulfill({ status: 204, body: "" });
+    }
+    if (pathname.endsWith("/api/admin/content/access")) {
+      return fulfillJson(route, 200, { eligible: false });
+    }
+    if (pathname.endsWith("/api/content/math1/questions")) {
+      return fulfillJson(route, 200, raceQuestionList);
+    }
+    if (pathname.endsWith(`/api/content/math1/questions/${raceQuestion.stableId}`)) {
+      pendingLogoutDetail = route;
+      return;
+    }
+    if (pathname.endsWith("/api/content/math1/public-overrides")) {
+      return fulfillJson(route, 200, { data: [] });
+    }
+    if (pathname.endsWith("/availability")) {
+      return fulfillJson(route, 200, { available: false });
+    }
+    return fulfillJson(route, 200, {});
+  });
+  await logoutRacePage.goto(baseUrl, { waitUntil: "networkidle" });
+  await logoutRacePage.getByRole("button", { name: "真题库" }).click();
+  await logoutRacePage.getByRole("button", { name: /数学一/ }).click();
+  await logoutRacePage.locator(".question-row").first().click();
+  for (let attempt = 0; attempt < 50 && !pendingLogoutDetail; attempt += 1) {
+    await logoutRacePage.waitForTimeout(20);
+  }
+  const publicLoadsBeforeLogout = logoutPublicLoads;
+  await logoutRacePage.getByRole("button", { name: "账号" }).click();
+  await logoutRacePage.getByRole("button", { name: "退出登录" }).click();
+  await logoutRacePage.getByRole("heading", { name: "让学习记录跨设备保存" }).waitFor();
+  for (
+    let attempt = 0;
+    attempt < 50 && logoutPublicLoads <= publicLoadsBeforeLogout;
+    attempt += 1
+  ) {
+    await logoutRacePage.waitForTimeout(20);
+  }
+  if (!pendingLogoutDetail || logoutPublicLoads <= publicLoadsBeforeLogout) {
+    throw new Error("Logout race prerequisites were not reached");
+  }
+  await fulfillJson(pendingLogoutDetail, 200, detailResponse("登出后泄漏的登录解析"));
+  await logoutRacePage.waitForTimeout(100);
+  await logoutRacePage.getByRole("button", { name: "开始练习" }).click();
+  await logoutRacePage.getByRole("button", { name: "查看答案解析" }).click();
+  await logoutRacePage.getByText("公开题库解析", { exact: true }).waitFor();
+  if ((await logoutRacePage.getByText("登出后泄漏的登录解析", { exact: true }).count()) !== 0) {
+    throw new Error("A detail response completed after logout and changed the public bank");
+  }
+  await logoutRacePage.close();
+
+  const accountSwitchPage = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+  });
+  const accountSwitchIssues = captureBrowserIssues(accountSwitchPage);
+  let accountSwitchUser = "account-a";
+  let accountSwitchLists = 0;
+  let accountADetail = null;
+  await accountSwitchPage.route("**/api/**", (route) => {
+    const pathname = new URL(route.request().url()).pathname;
+    if (pathname.endsWith("/api/auth/me")) {
+      return fulfillJson(route, 200, {
+        user: { id: accountSwitchUser, email: "a@example.com", emailVerified: true },
+      });
+    }
+    if (pathname.endsWith("/api/auth/logout")) {
+      accountSwitchUser = "";
+      return route.fulfill({ status: 204, body: "" });
+    }
+    if (pathname.endsWith("/api/auth/login")) {
+      accountSwitchUser = "account-b";
+      return fulfillJson(route, 200, {
+        user: { id: "account-b", email: "b@example.com", emailVerified: true },
+      });
+    }
+    if (pathname.endsWith("/api/admin/content/access")) {
+      return fulfillJson(route, 200, { eligible: false });
+    }
+    if (pathname.endsWith("/api/content/math1/questions")) {
+      accountSwitchLists += 1;
+      return fulfillJson(route, 200, raceQuestionList);
+    }
+    if (pathname.endsWith(`/api/content/math1/questions/${raceQuestion.stableId}`)) {
+      if (!accountADetail) {
+        accountADetail = route;
+        return;
+      }
+      return fulfillJson(route, 200, detailResponse("账号 B 的解析"));
+    }
+    if (pathname.endsWith("/api/content/math1/public-overrides")) {
+      return fulfillJson(route, 200, { data: [] });
+    }
+    if (pathname.endsWith("/availability")) {
+      return fulfillJson(route, 200, { available: false });
+    }
+    return fulfillJson(route, 200, {});
+  });
+  await accountSwitchPage.goto(baseUrl, { waitUntil: "networkidle" });
+  await accountSwitchPage.getByRole("button", { name: "真题库" }).click();
+  await accountSwitchPage.getByRole("button", { name: /数学一/ }).click();
+  await accountSwitchPage.locator(".question-row").first().click();
+  for (let attempt = 0; attempt < 50 && !accountADetail; attempt += 1) {
+    await accountSwitchPage.waitForTimeout(20);
+  }
+  await accountSwitchPage.getByRole("button", { name: "账号" }).click();
+  await accountSwitchPage.getByRole("button", { name: "退出登录" }).click();
+  await accountSwitchPage.getByPlaceholder("name@example.com").fill("b@example.com");
+  await accountSwitchPage.getByPlaceholder("输入密码").fill("password123");
+  await accountSwitchPage.getByRole("button", { name: "登录", exact: true }).last().click();
+  await accountSwitchPage.getByText("当前登录：b@example.com").waitFor();
+  for (let attempt = 0; attempt < 50 && accountSwitchLists < 2; attempt += 1) {
+    await accountSwitchPage.waitForTimeout(20);
+  }
+  if (!accountADetail || accountSwitchLists < 2) {
+    throw new Error("Account-switch race prerequisites were not reached");
+  }
+  await fulfillJson(accountADetail, 200, detailResponse("账号 A 的过期解析"));
+  await accountSwitchPage.waitForTimeout(100);
+  await accountSwitchPage.getByRole("button", { name: "开始练习" }).click();
+  await accountSwitchPage.getByRole("button", { name: "查看答案解析" }).click();
+  await accountSwitchPage.getByText("账号 B 的解析", { exact: true }).waitFor();
+  if ((await accountSwitchPage.getByText("账号 A 的过期解析", { exact: true }).count()) !== 0) {
+    throw new Error("Account A detail was applied after switching to account B");
+  }
+  await accountSwitchPage.close();
 
   const overridePage = await browser.newPage({
     viewport: { width: 1280, height: 900 },
@@ -473,10 +788,11 @@ try {
       return fulfillJson(route, 200, {
         data: {
           ...question,
-          answer: "A",
-          answerStatus: "reviewed",
-          explanation: "已登录详情",
-          explanationStatus: "reviewed",
+          answer: detailMatch[1] === "math3" ? null : "A",
+          answerStatus: detailMatch[1] === "math3" ? "missing" : "reviewed",
+          explanation: detailMatch[1] === "math3" ? null : "已登录详情",
+          explanationStatus:
+            detailMatch[1] === "math3" ? "missing" : "reviewed",
           reviewStatus: "reviewed",
           knowledgePoints: [],
         },
@@ -509,6 +825,17 @@ try {
     path: resolve(outputDir, "authenticated-math2.png"),
     fullPage: true,
   });
+  await authenticated.getByRole("button", { name: "真题库" }).click();
+  await authenticated.getByRole("button", { name: "← 返回选择科目" }).click();
+  await authenticated.getByRole("button", { name: /数学三/ }).click();
+  await authenticated.locator(".question-row").first().click();
+  await authenticated.getByRole("button", { name: "查看答案解析" }).click();
+  await authenticated
+    .getByText("答案整理中，暂未发布参考答案。", { exact: true })
+    .waitFor();
+  await authenticated
+    .getByText("解析整理中，暂未发布。", { exact: true })
+    .waitFor();
 
   const animationPage = await browser.newPage({
     viewport: { width: 1280, height: 900 },
@@ -598,10 +925,15 @@ try {
   });
   const adminIssues = captureBrowserIssues(adminPage);
   const adminKey = "browser-test-admin-key";
-  let committedAdminChange = false;
+  let adminExplanation = "原始解析";
+  let adminRevision = 2;
+  let armPostCommitRefreshFailures = false;
+  let failNextAdminSnapshotRefresh = false;
+  let failNextPracticeDetailRefresh = false;
   let sawAdminKeyHeader = false;
   let sawClientEditorField = false;
   let sawExplicitRevertTarget = false;
+  let adminDetailRequests = 0;
   const adminBase = {
     stableId: "math1-2025-q04",
     sourceYear: 2025,
@@ -628,13 +960,13 @@ try {
     base: adminBase,
     effective: {
       ...adminBase,
-      explanation: committedAdminChange ? "浏览器测试修正解析" : "原始解析",
+      explanation: adminExplanation,
     },
-    override: committedAdminChange
+    override: adminRevision > 2
       ? {
-          revision: 3,
+          revision: adminRevision,
           active: true,
-          changes: { explanation: "浏览器测试修正解析" },
+          changes: { explanation: adminExplanation },
           editor: "admin@example.com",
           reason: "浏览器测试修正",
           updatedAt: new Date().toISOString(),
@@ -668,11 +1000,28 @@ try {
     if (pathname.endsWith("/api/admin/content/access")) {
       return fulfillJson(route, 200, { eligible: true });
     }
+    if (pathname.endsWith("/api/content/math1/questions/math1-2025-q04")) {
+      adminDetailRequests += 1;
+      if (failNextPracticeDetailRefresh) {
+        failNextPracticeDetailRefresh = false;
+        return fulfillJson(route, 503, { error: "temporary_detail_failure" });
+      }
+      return fulfillJson(route, 200, {
+        data: {
+          ...adminBase,
+          explanation: adminExplanation,
+        },
+      });
+    }
     if (pathname.endsWith("/api/admin/content/questions/math1-2025-q04")) {
       const suppliedKey = route.request().headers()["x-admin-content-key"];
       sawAdminKeyHeader = sawAdminKeyHeader || suppliedKey === adminKey;
       if (suppliedKey !== adminKey) {
         return fulfillJson(route, 403, { error: "admin_access_denied" });
+      }
+      if (failNextAdminSnapshotRefresh) {
+        failNextAdminSnapshotRefresh = false;
+        return fulfillJson(route, 503, { error: "temporary_admin_refresh_failure" });
       }
       return fulfillJson(route, 200, { data: adminSnapshot() });
     }
@@ -689,14 +1038,25 @@ try {
       sawExplicitRevertTarget =
         sawExplicitRevertTarget ||
         (input.action === "revert" && input.targetRevision === 1);
-      if (input.mode === "commit") committedAdminChange = true;
+      const nextRevision = adminRevision + 1;
+      if (input.mode === "commit") {
+        adminRevision = nextRevision;
+        if (input.action === "upsert" && input.changes.explanation) {
+          adminExplanation = input.changes.explanation;
+        }
+        if (armPostCommitRefreshFailures) {
+          armPostCommitRefreshFailures = false;
+          failNextAdminSnapshotRefresh = true;
+          failNextPracticeDetailRefresh = true;
+        }
+      }
       return fulfillJson(route, 200, {
         result: {
           stableId: adminBase.stableId,
           subjectCode: "math1",
           action: input.action,
-          previousRevision: 2,
-          revision: 3,
+          previousRevision: adminRevision - (input.mode === "commit" ? 1 : 0),
+          revision: input.mode === "commit" ? adminRevision : nextRevision,
           targetRevision: input.action === "revert" ? input.targetRevision : null,
           beforePatchHash: "a".repeat(64),
           afterPatchHash: "b".repeat(64),
@@ -710,7 +1070,10 @@ try {
     if (listMatch) {
       return fulfillJson(route, 200, {
         data: {
-          items: [publishedQuestion(listMatch[1])],
+          items:
+            listMatch[1] === "math1"
+              ? [adminBase]
+              : [publishedQuestion(listMatch[1])],
           page: 1,
           pageSize: 50,
           totalItems: 1,
@@ -721,7 +1084,14 @@ try {
     if (pathname.includes("/api/question-animations/")) {
       return pathname.endsWith("/availability")
         ? fulfillJson(route, 200, { available: false })
-        : fulfillJson(route, 404, { error: "animation_not_found" });
+        : fulfillJson(route, 200, {
+            animation: {
+              questionId: adminBase.stableId,
+              subjectCode: "math1",
+              payload: reducedMotionAnimationPayload,
+              updatedAt: new Date(0).toISOString(),
+            },
+          });
     }
     if (pathname.endsWith("/api/content/math1/public-overrides")) {
       return fulfillJson(route, 200, { data: [] });
@@ -729,6 +1099,12 @@ try {
     return fulfillJson(route, 200, {});
   });
   await adminPage.goto(baseUrl, { waitUntil: "networkidle" });
+  await adminPage.getByRole("button", { name: "真题库" }).click();
+  await adminPage.getByRole("button", { name: /数学一/ }).click();
+  await adminPage.locator(".question-row").first().click();
+  await adminPage.locator(".workspace").waitFor();
+  await adminPage.getByRole("button", { name: "查看答案解析" }).click();
+  await adminPage.getByText("原始解析", { exact: true }).waitFor();
   await adminPage.getByRole("button", { name: "内容管理" }).click();
   await adminPage.getByRole("heading", { name: "内容管理" }).waitFor();
   await adminPage.getByLabel(/管理员密钥/).fill(adminKey);
@@ -746,6 +1122,50 @@ try {
   await adminPage.getByText(/预览成功：数据库事务已回滚/).waitFor();
   await adminPage.getByRole("button", { name: "2. 确认保存到数据库" }).click();
   await adminPage.getByText("保存成功，当前修订号为 3。").waitFor();
+  for (let attempt = 0; attempt < 50 && adminDetailRequests < 2; attempt += 1) {
+    await adminPage.waitForTimeout(20);
+  }
+  if (adminDetailRequests !== 2) {
+    throw new Error("Admin commit did not refresh the active question detail");
+  }
+  await adminPage
+    .locator(".admin-editor-grid .admin-field-wide textarea")
+    .nth(1)
+    .fill("第二次浏览器测试修正解析");
+  await adminPage.getByLabel(/修改原因/).fill("验证保存后的刷新失败提示");
+  await adminPage.getByRole("button", { name: "1. 预览并回滚事务" }).click();
+  await adminPage.getByText(/预览成功：数据库事务已回滚/).waitFor();
+  armPostCommitRefreshFailures = true;
+  await adminPage.getByRole("button", { name: "2. 确认保存到数据库" }).click();
+  await adminPage
+    .getByText(
+      "保存成功，当前修订号为 4；管理页数据刷新失败，请重新查询这道题；练习页自动刷新失败，请重新打开或刷新页面重试。",
+      { exact: true },
+    )
+    .waitFor();
+  if (adminDetailRequests !== 3) {
+    throw new Error("Admin partial-success scenario did not attempt the practice refresh");
+  }
+  adminIssues.splice(
+    0,
+    adminIssues.length,
+    ...adminIssues.filter(
+      (issue) => !issue.includes("status of 503 (Service Unavailable)"),
+    ),
+  );
+  await adminPage.getByRole("button", { name: "查询题目" }).click();
+  const refreshedExplanationEditor = adminPage
+    .locator(".admin-editor-grid .admin-field-wide textarea")
+    .nth(1);
+  for (let attempt = 0; attempt < 50; attempt += 1) {
+    if ((await refreshedExplanationEditor.inputValue()) === "第二次浏览器测试修正解析") {
+      break;
+    }
+    await adminPage.waitForTimeout(20);
+  }
+  if ((await refreshedExplanationEditor.inputValue()) !== "第二次浏览器测试修正解析") {
+    throw new Error("Admin re-query did not load the committed content after partial success");
+  }
   if (!sawAdminKeyHeader) throw new Error("Admin key header was not sent");
   if (sawClientEditorField) throw new Error("Browser was allowed to choose audit editor");
   const persistedAdminKey = await adminPage.evaluate((key) => {
@@ -779,6 +1199,20 @@ try {
       .slice(expectedDeniedIssueStart)
       .filter((issue) => !issue.includes("status of 403")),
   );
+  await adminPage.getByRole("button", { name: "开始练习" }).click();
+  await adminPage.locator(".workspace").waitFor();
+  await adminPage.getByRole("button", { name: "查看答案解析" }).click();
+  for (let attempt = 0; attempt < 50 && adminDetailRequests < 4; attempt += 1) {
+    await adminPage.waitForTimeout(20);
+  }
+  if (adminDetailRequests < 4) {
+    throw new Error(
+      `Reopening after a failed admin refresh did not retry detail loading (requests: ${adminDetailRequests})`,
+    );
+  }
+  await adminPage
+    .getByText("第二次浏览器测试修正解析", { exact: true })
+    .waitFor();
   await adminPage.getByRole("button", { name: "账号" }).click();
   await adminPage.getByRole("button", { name: "退出登录" }).click();
   await adminPage.getByRole("heading", { name: "让学习记录跨设备保存" }).waitFor();
@@ -788,14 +1222,19 @@ try {
   await adminPage.close();
 
   const browserIssues = [
-    ...parallelIssues,
-    ...authRaceIssues,
-    ...pageIssues,
-    ...mobileIssues,
-    ...authenticatedIssues,
-    ...animationIssues,
-    ...adminIssues,
-  ];
+    ["parallel", parallelIssues],
+    ["detail-generation-race", generationRaceIssues],
+    ["detail-logout-race", logoutRaceIssues],
+    ["detail-account-switch-race", accountSwitchIssues],
+    ["auth-race", authRaceIssues],
+    ["desktop", pageIssues],
+    ["mobile", mobileIssues],
+    ["authenticated", authenticatedIssues],
+    ["animation", animationIssues],
+    ["admin", adminIssues],
+  ].flatMap(([scenario, issues]) =>
+    issues.map((issue) => `${scenario}: ${issue}`),
+  );
   if (browserIssues.length > 0) {
     throw new Error(`Browser console/page errors:\n${browserIssues.join("\n")}`);
   }
@@ -814,11 +1253,20 @@ try {
         animationReducedMotion: true,
         publicLoadParallelWithAuthentication: true,
         authenticatedBankReplacedPublicBank: true,
+        authenticatedSelectionDetailRefreshed: true,
+        newestDetailResponseWon: true,
+        detailResponseDiscardedAfterLogout: true,
+        detailResponseDiscardedAfterAccountSwitch: true,
+        unloadedDetailUsesLoadingLabels: true,
+        missingDetailUsesMissingLabels: true,
         publicBankStayedVisibleDuringAuthenticatedLoad: true,
         publicOverrideDidNotBlockInitialBank: true,
         publicOverrideAppliedAfterResponse: true,
         adminTwoGateEditor: true,
         adminPreviewBeforeCommit: true,
+        adminCommitRefreshedActiveQuestion: true,
+        adminCommitPartialSuccessReported: true,
+        failedAdminDetailRefreshRetriedOnOpen: true,
         adminKeyMemoryOnly: true,
         staleStartupAuthDidNotOverrideManualLogin: true,
         anonymousAuth401Fallback: true,
