@@ -40,16 +40,24 @@
 - A React effect reloads the selected authenticated list item whenever its
   `detailLoaded` flag is false. It follows the question actually rendered in the
   practice view, including the first-question fallback when `selectedId` is null.
-- The admin editor awaits the App refresh after a successful commit and reports
-  a precise partial-success message if only the practice refresh fails.
+- The admin editor treats the database commit as the irreversible success
+  boundary. Management-snapshot and practice-detail refresh failures are caught
+  separately and reported as partial success without suggesting another save.
+- A failed current-generation practice refresh marks the cached detail as
+  unloaded. Reopening the question therefore performs a real retry; stale,
+  logged-out, and prior-account responses cannot invalidate the current bank.
 - Practice and paper solution panels distinguish `not_loaded` from `missing`.
 
 ## Targeted verification
 
 - Web typecheck passed.
-- Web content-access and browser smoke tests passed. New result flags:
-  `authenticatedSelectionDetailRefreshed`, `unloadedDetailUsesLoadingLabels`,
-  and `adminCommitRefreshedActiveQuestion`.
+- Web content-access and browser smoke tests passed. New result flags include
+  `authenticatedSelectionDetailRefreshed`, `newestDetailResponseWon`,
+  `detailResponseDiscardedAfterLogout`,
+  `detailResponseDiscardedAfterAccountSwitch`,
+  `unloadedDetailUsesLoadingLabels`, `missingDetailUsesMissingLabels`,
+  `adminCommitRefreshedActiveQuestion`, `adminCommitPartialSuccessReported`,
+  and `failedAdminDetailRefreshRetriedOnOpen`.
 - Full `make verify` is externally blocked by Math2 source inventory drift
   (expected 775 files, observed 792), before reaching the code verification
   targets.

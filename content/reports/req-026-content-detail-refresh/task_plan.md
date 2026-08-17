@@ -13,7 +13,7 @@ mislabels an unloaded detail as missing.
 - [x] Phase 4: Implement the smallest state-refresh and loading-label changes.
 - [x] Phase 5: Run targeted and repository verification; document results.
 - [x] Phase 6: Reconcile with current `origin/main` and run pre-publish checks.
-- [ ] Phase 7: Stage exact REQ-026 files, commit, push, and create one PR.
+- [x] Phase 7: Stage exact REQ-026 files, commit, push, and create one PR.
 - [ ] Phase 8: Complete an independent full-diff review and wait for required CI.
 - [ ] Phase 9: Merge the approved PR, verify deployment, and test production.
 
@@ -50,7 +50,16 @@ mislabels an unloaded detail as missing.
   expects 775 files in `D:/work/Kaoyan-Math2-Papers`, while the current read-only
   source contains 792. Generated REQ-002/Math2 artifacts were restored and the
   code-relevant `make typecheck test build` gate is being run separately.
+- The first independent review blocked PR #29 because a post-commit management
+  refresh failure could be reported as an overall save failure, the suggested
+  retry did not invalidate stale detail, and race/failure cases lacked tests.
+  The commit boundary, retry state, and deferred-response coverage were added.
+- New browser scenarios initially exposed test-harness assumptions about the
+  number of anonymous bank loads and expected 503 console errors. The assertions
+  now wait for a post-logout load increment and filter only the deliberately
+  injected failures.
 
 ## Status
 
-**Currently in Phase 7** - staging the exact REQ-026 scope for commit and PR.
+**Currently in Phase 8** - PR #29 is open; the first review findings are fixed
+locally and await commit, push, CI, and independent re-review.

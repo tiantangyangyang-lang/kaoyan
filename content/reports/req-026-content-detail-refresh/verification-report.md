@@ -23,8 +23,9 @@
 
 - `npm.cmd run typecheck --workspace @kaoyan/web`: passed.
 - `npm.cmd run test:smoke:ci --workspace @kaoyan/web`: passed, including
-  `authenticatedSelectionDetailRefreshed`, `unloadedDetailUsesLoadingLabels`,
-  and `adminCommitRefreshedActiveQuestion`.
+  authenticated-bank refresh, out-of-order response rejection, logout/account
+  switch rejection, `not_loaded`/`missing` labels, admin partial-success
+  messaging, and a real retry after failed practice refresh.
 - `mingw32-make NPM=npm.cmd typecheck test build`: both typechecks, API tests
   (67/67), Web smoke, and Web build passed before the 120-second command wrapper
   stopped at the start of API build.
@@ -43,3 +44,11 @@
 - Verification used local Node 24.15.0; the package declares Node 20.x and npm
   emitted an engine warning. Typecheck, tests, and builds still passed.
 - Pre-publication verification did not perform any production database operation.
+
+## Review record
+
+- PR: `https://github.com/tiantangyangyang-lang/kaoyan/pull/29`.
+- First independent review: blocked with two high and one medium finding about
+  post-commit failure semantics, missing race coverage, and ineffective retry.
+- Resolution: fixed all three findings and expanded deferred-response browser
+  coverage; independent re-review is required before merge.

@@ -63,6 +63,28 @@ function replaceQuestionDetails(
   };
 }
 
+function markQuestionDetailUnloaded(
+  currentBank: QuestionBank,
+  stableId: string,
+): QuestionBank {
+  let changed = false;
+  const questions = currentBank.questions.map((question) => {
+    if (question.stableId !== stableId || question.detailLoaded === false) {
+      return question;
+    }
+    changed = true;
+    return {
+      ...question,
+      answer: null,
+      answerStatus: "not_loaded",
+      explanation: "",
+      explanationStatus: "not_loaded",
+      detailLoaded: false,
+    };
+  });
+  return changed ? { ...currentBank, questions } : currentBank;
+}
+
 export function App() {
   const [bank, setBank] = useState<QuestionBank | null>(null);
   const [subjectName, setSubjectName] = useState("数学一");
@@ -100,10 +122,22 @@ export function App() {
       const generation =
         (detailRequestGenerations.current.get(requestKey) ?? 0) + 1;
       detailRequestGenerations.current.set(requestKey, generation);
-      const detail = await loadAuthenticatedQuestionDetail(
-        targetSubject,
-        stableId,
-      );
+      let detail: Question;
+      try {
+        detail = await loadAuthenticatedQuestionDetail(targetSubject, stableId);
+      } catch (error) {
+        if (
+          currentUserId.current === expectedUserId &&
+          detailRequestGenerations.current.get(requestKey) === generation
+        ) {
+          setBank((current) =>
+            current?.subjectCode === targetSubject
+              ? markQuestionDetailUnloaded(current, stableId)
+              : current,
+          );
+        }
+        throw error;
+      }
       if (
         currentUserId.current !== expectedUserId ||
         detailRequestGenerations.current.get(requestKey) !== generation
@@ -298,26 +332,9 @@ export function App() {
   };
 
   const openQuestion = (question: Question) => {
-    const showQuestion = () => {
-      setSelectedId(question.stableId);
-      setView("practice");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-    if (!user || question.detailLoaded !== false || !bank) {
-      showQuestion();
-      return;
-    }
-    const currentBank = bank;
-    setBank(null);
-    void loadDetails([question])
-      .then((details) => {
-        setBank(replaceQuestionDetails(currentBank, details));
-        showQuestion();
-      })
-      .catch(() => {
-        setBank(currentBank);
-        setError("登录内容加载失败，请刷新页面后重试。");
-      });
+    setSelectedId(question.stableId);
+    setView("practice");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const switchSubject = (nextSubject: SubjectCode) => {

@@ -164,20 +164,27 @@ export function useAdminContentEditor({
         setPreviewFingerprint(actionFingerprint);
         setMessage("预览成功：数据库事务已回滚，没有写入生产内容。");
       } else {
-        const refreshed = await loadAdminQuestion(snapshot.stableId, adminKey);
-        setSnapshot(refreshed);
-        setDraft(draftFromSnapshot(refreshed));
         setReason("");
         setTargetRevision(0);
         clearPreview();
+        const refreshWarnings: string[] = [];
         try {
-          await onQuestionSaved(refreshed.subjectCode, refreshed.stableId);
-          setMessage(`保存成功，当前修订号为 ${result.revision}。`);
+          const refreshed = await loadAdminQuestion(snapshot.stableId, adminKey);
+          setSnapshot(refreshed);
+          setDraft(draftFromSnapshot(refreshed));
         } catch {
-          setMessage(
-            `保存成功，当前修订号为 ${result.revision}；练习页自动刷新失败，请重新打开这道题。`,
-          );
+          refreshWarnings.push("管理页数据刷新失败，请重新查询这道题");
         }
+        try {
+          await onQuestionSaved(snapshot.subjectCode, snapshot.stableId);
+        } catch {
+          refreshWarnings.push("练习页自动刷新失败，请重新打开或刷新页面重试");
+        }
+        setMessage(
+          refreshWarnings.length === 0
+            ? `保存成功，当前修订号为 ${result.revision}。`
+            : `保存成功，当前修订号为 ${result.revision}；${refreshWarnings.join("；")}。`,
+        );
       }
     } catch (error) {
       clearPreview();
