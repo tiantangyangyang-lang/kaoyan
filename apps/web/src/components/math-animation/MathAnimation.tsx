@@ -1,9 +1,14 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import type { MathAnimationKind, MathAnimationSpec } from "../../types";
+import type {
+  MathAnimationKind,
+  MathAnimationSpec,
+  MathAnimationVariant,
+} from "../../types";
 import {
   AsymptoteScene,
   IntegralRegionScene,
+  ProbabilityResultsScene,
   RadialDensityScene,
 } from "./RedesignedScenes";
 
@@ -25,11 +30,13 @@ function Axes() {
 
 function Scene({
   kind,
+  variant,
   step,
   accent,
   reduced,
 }: {
   kind: MathAnimationKind;
+  variant?: MathAnimationVariant;
   step: number;
   accent: string;
   reduced: boolean;
@@ -98,6 +105,9 @@ function Scene({
     return <IntegralRegionScene step={step} accent={accent} reduced={reduced} />;
   }
   if (kind === "radial-density") {
+    if (variant === "probability-three-results-v1") {
+      return <ProbabilityResultsScene step={step} accent={accent} reduced={reduced} />;
+    }
     return <RadialDensityScene step={step} accent={accent} reduced={reduced} />;
   }
 
@@ -163,7 +173,13 @@ export function MathAnimation({ spec }: { spec: MathAnimationSpec }) {
         </button>
       </div>
       <div className="math-animation-stage">
-        <Scene kind={spec.kind} step={step} accent={spec.accent} reduced={reduced} />
+        <Scene
+          kind={spec.kind}
+          variant={spec.variant}
+          step={step}
+          accent={spec.accent}
+          reduced={reduced}
+        />
       </div>
     </section>
   );

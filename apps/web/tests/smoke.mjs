@@ -107,6 +107,51 @@ const reducedMotionAnimationPayload = {
   ],
 };
 
+const probabilityAnimationQuestion = {
+  ...publishedQuestion("math1"),
+  stableId: "math1-2023-q22",
+  sourceYear: 2023,
+  questionNumber: 22,
+  stem: "二维随机变量协方差、独立性与半径平方分布",
+};
+
+const probabilityAnimationPayload = {
+  version: 1,
+  kind: "radial-density",
+  variant: "probability-three-results-v1",
+  title: "零协方差、不独立，再到 f_Z(z)=2z",
+  summary:
+    "先用圆盘对称性解释协方差为 0，再用圆盘外小邻域反证独立性，最后把 Z 看成半径平方求出密度。",
+  accent: "#7c3aed",
+  steps: [
+    {
+      title: "对称配对，协方差为 0",
+      body: "圆盘和密度关于两坐标轴对称：x、y、xy 的正负贡献成对抵消，所以 E(X)=E(Y)=E(XY)=0，Cov(X,Y)=0。",
+    },
+    {
+      title: "圆外小邻域，证明不独立",
+      body: "取 P=(3/4,3/4)，因 x²+y²=9/8>1，可在 P 周围取仍落在圆外的小矩形 A×B。该矩形的联合概率为 0，但两个边缘区间的概率乘积大于 0，故不独立。",
+    },
+    {
+      title: "半径平方给出 Z 的密度",
+      body: "Z=r²，故 Z≤z 等价于 r≤√z。极坐标积分得 F_Z(z)=z²（0≤z≤1），求导得 f_Z(z)=2z（0<z<1）。",
+    },
+  ],
+};
+
+const legacyProbabilityAnimationPayload = {
+  version: 1,
+  kind: "radial-density",
+  title: "从径向密度推到 f_Z(z)=2z",
+  summary: "先看密度如何随半径增大，再累积半径 √z 内的概率，最后对 F_Z(z)=z² 求导。",
+  accent: "#7c3aed",
+  steps: [
+    { title: "密度随半径增大", body: "写成极坐标后 f(x,y)=(2/π)r²；同一圆周密度相同，外圈更密。" },
+    { title: "先求分布函数", body: "Z≤z 等价于 r≤√z。对该圆盘积分得到 F_Z(z)=z²，0≤z≤1。" },
+    { title: "求导得到密度", body: "对 F_Z(z) 求导，得到 f_Z(z)=2z（0<z<1），区间外为 0。" },
+  ],
+};
+
 const captureBrowserIssues = (page) => {
   const issues = [];
   page.on("console", (message) => {
@@ -117,6 +162,61 @@ const captureBrowserIssues = (page) => {
   page.on("pageerror", (error) => issues.push(`pageerror: ${error.message}`));
   return issues;
 };
+
+const routeProbabilityAnimationApi = (page, animationPayload) =>
+  page.route("**/api/**", (route) => {
+    const url = new URL(route.request().url());
+    if (url.pathname.endsWith("/api/auth/me")) {
+      return fulfillJson(route, 200, {
+        user: {
+          id: "probability-animation-user",
+          email: "probability-animation@example.com",
+          emailVerified: true,
+        },
+      });
+    }
+    if (url.pathname.endsWith("/api/admin/content/access")) {
+      return fulfillJson(route, 200, { eligible: false });
+    }
+    if (url.pathname.endsWith("/api/content/math1/public-overrides")) {
+      return fulfillJson(route, 200, { data: [] });
+    }
+    if (url.pathname === "/api/content/math1/questions") {
+      return fulfillJson(route, 200, {
+        data: {
+          items: [probabilityAnimationQuestion],
+          page: 1,
+          pageSize: 50,
+          totalItems: 1,
+          totalPages: 1,
+        },
+      });
+    }
+    if (url.pathname === "/api/content/math1/questions/math1-2023-q22") {
+      return fulfillJson(route, 200, {
+        data: {
+          ...probabilityAnimationQuestion,
+          answer: null,
+          answerStatus: "missing",
+          explanation: "概率题静态解析",
+          explanationStatus: "reviewed",
+          reviewStatus: "approved",
+          knowledgePoints: [],
+        },
+      });
+    }
+    if (url.pathname === "/api/question-animations/math1-2023-q22") {
+      return fulfillJson(route, 200, {
+        animation: {
+          questionId: "math1-2023-q22",
+          subjectCode: "math1",
+          payload: animationPayload,
+          updatedAt: new Date(0).toISOString(),
+        },
+      });
+    }
+    return fulfillJson(route, 404, { error: "not_found" });
+  });
 
 const routeAnonymousApi = (page) =>
   page.route("**/api/**", (route) => {
@@ -919,6 +1019,111 @@ try {
   );
   await animationPage.close();
 
+  const legacyProbabilityAnimationPage = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+    reducedMotion: "reduce",
+  });
+  const legacyProbabilityAnimationIssues = captureBrowserIssues(
+    legacyProbabilityAnimationPage,
+  );
+  await routeProbabilityAnimationApi(
+    legacyProbabilityAnimationPage,
+    legacyProbabilityAnimationPayload,
+  );
+  await legacyProbabilityAnimationPage.goto(baseUrl, { waitUntil: "networkidle" });
+  await legacyProbabilityAnimationPage.getByRole("button", { name: "真题库" }).click();
+  await legacyProbabilityAnimationPage.getByRole("button", { name: /数学一/ }).click();
+  await legacyProbabilityAnimationPage.locator(".question-row").first().click();
+  await legacyProbabilityAnimationPage
+    .getByRole("button", { name: "查看答案解析" })
+    .click();
+  await legacyProbabilityAnimationPage
+    .getByText("从径向密度推到 f_Z(z)=2z", { exact: true })
+    .waitFor();
+  const legacyProbabilityCard = legacyProbabilityAnimationPage.locator(
+    ".math-animation-card",
+  );
+  await legacyProbabilityCard
+    .getByText("f(x,y)=(2/π)r²", { exact: true })
+    .waitFor();
+  await legacyProbabilityCard
+    .getByRole("button", { name: "2 先求分布函数" })
+    .click();
+  await legacyProbabilityCard
+    .getByText("F_Z(z)=P(r²≤z)=z²", { exact: true })
+    .waitFor();
+  await legacyProbabilityCard
+    .getByRole("button", { name: "3 求导得到密度" })
+    .click();
+  await legacyProbabilityCard.getByText("f_Z(z)=2z", { exact: true }).waitFor();
+  await legacyProbabilityCard.screenshot({
+    path: resolve(outputDir, "animation-q22-legacy-compatible.png"),
+  });
+  legacyProbabilityAnimationIssues.splice(
+    0,
+    legacyProbabilityAnimationIssues.length,
+    ...legacyProbabilityAnimationIssues.filter(
+      (issue) => !issue.includes("You have Reduced Motion enabled on your device"),
+    ),
+  );
+  await legacyProbabilityAnimationPage.close();
+
+  const probabilityAnimationPage = await browser.newPage({
+    viewport: { width: 1280, height: 900 },
+    deviceScaleFactor: 1,
+    reducedMotion: "reduce",
+  });
+  const probabilityAnimationIssues = captureBrowserIssues(probabilityAnimationPage);
+  await routeProbabilityAnimationApi(
+    probabilityAnimationPage,
+    probabilityAnimationPayload,
+  );
+  await probabilityAnimationPage.goto(baseUrl, { waitUntil: "networkidle" });
+  await probabilityAnimationPage.getByRole("button", { name: "真题库" }).click();
+  await probabilityAnimationPage.getByRole("button", { name: /数学一/ }).click();
+  await probabilityAnimationPage.locator(".question-row").first().click();
+  await probabilityAnimationPage.getByRole("button", { name: "查看答案解析" }).click();
+  await probabilityAnimationPage
+    .getByText("零协方差、不独立，再到 f_Z(z)=2z", { exact: true })
+    .waitFor();
+  const probabilityCard = probabilityAnimationPage.locator(".math-animation-card");
+  await probabilityCard.getByText("E(X)=E(Y)=0", { exact: true }).waitFor();
+  await probabilityCard.getByText("E(XY)=0 ⇒ Cov(X,Y)=0", { exact: true }).waitFor();
+  await probabilityCard.screenshot({
+    path: resolve(outputDir, "animation-q22-covariance.png"),
+  });
+  await probabilityCard
+    .getByRole("button", { name: "2 圆外小邻域，证明不独立" })
+    .click();
+  await probabilityCard.getByText("P(3/4,3/4)", { exact: true }).waitFor();
+  await probabilityCard
+    .getByText("P((X,Y)∈A×B)=0", { exact: true })
+    .waitFor();
+  await probabilityCard
+    .getByText("P(X∈A)P(Y∈B)>0 ⇒ 不独立", { exact: true })
+    .waitFor();
+  await probabilityCard.screenshot({
+    path: resolve(outputDir, "animation-q22-not-independent.png"),
+  });
+  await probabilityCard
+    .getByRole("button", { name: "3 半径平方给出 Z 的密度" })
+    .click();
+  await probabilityCard.getByText("Z=r²", { exact: true }).waitFor();
+  await probabilityCard.getByText("F_Z(z)=z²", { exact: true }).waitFor();
+  await probabilityCard.getByText("f_Z(z)=2z", { exact: true }).waitFor();
+  await probabilityCard.screenshot({
+    path: resolve(outputDir, "animation-q22-z-density.png"),
+  });
+  probabilityAnimationIssues.splice(
+    0,
+    probabilityAnimationIssues.length,
+    ...probabilityAnimationIssues.filter(
+      (issue) => !issue.includes("You have Reduced Motion enabled on your device"),
+    ),
+  );
+  await probabilityAnimationPage.close();
+
   const adminPage = await browser.newPage({
     viewport: { width: 1440, height: 1000 },
     deviceScaleFactor: 1,
@@ -1231,6 +1436,8 @@ try {
     ["mobile", mobileIssues],
     ["authenticated", authenticatedIssues],
     ["animation", animationIssues],
+    ["legacy-probability-animation", legacyProbabilityAnimationIssues],
+    ["probability-animation", probabilityAnimationIssues],
     ["admin", adminIssues],
   ].flatMap(([scenario, issues]) =>
     issues.map((issue) => `${scenario}: ${issue}`),
@@ -1248,9 +1455,18 @@ try {
         mobile: "dashboard-mobile.png",
         authenticated: "authenticated-math2.png",
         animation: "animation-q04-reduced-motion.png",
+        probabilityAnimation: [
+          "animation-q22-legacy-compatible.png",
+          "animation-q22-covariance.png",
+          "animation-q22-not-independent.png",
+          "animation-q22-z-density.png",
+        ],
         anonymousProtectedRedirect: true,
         authenticatedProtectedContent: true,
         animationReducedMotion: true,
+        probabilityAnimationThreeResults: true,
+        probabilityAnimationReducedMotion: true,
+        legacyProbabilityAnimationCompatible: true,
         publicLoadParallelWithAuthentication: true,
         authenticatedBankReplacedPublicBank: true,
         authenticatedSelectionDetailRefreshed: true,

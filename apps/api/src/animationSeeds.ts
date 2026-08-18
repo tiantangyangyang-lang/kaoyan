@@ -9,9 +9,14 @@ export const animationKindSchema = z.enum([
   "radial-density",
 ]);
 
+export const animationVariantSchema = z.enum([
+  "probability-three-results-v1",
+]);
+
 export const mathAnimationSpecSchema = z.object({
   version: z.literal(1),
   kind: animationKindSchema,
+  variant: animationVariantSchema.optional(),
   title: z.string().trim().min(1).max(120),
   summary: z.string().trim().min(1).max(300),
   accent: z.string().regex(/^#[0-9a-fA-F]{6}$/),
@@ -23,6 +28,14 @@ export const mathAnimationSpecSchema = z.object({
       }),
     )
     .length(3),
+}).superRefine((spec, context) => {
+  if (spec.variant && spec.kind !== "radial-density") {
+    context.addIssue({
+      code: "custom",
+      path: ["variant"],
+      message: "animation variant is incompatible with this kind",
+    });
+  }
 });
 
 export const questionAnimationSeedSchema = z.object({
@@ -121,13 +134,14 @@ export const QUESTION_ANIMATION_SEEDS: QuestionAnimationSeed[] = [
     payload: {
       version: 1,
       kind: "radial-density",
-      title: "从径向密度推到 f_Z(z)=2z",
-      summary: "先看密度如何随半径增大，再累积半径 √z 内的概率，最后对 F_Z(z)=z² 求导。",
+      variant: "probability-three-results-v1",
+      title: "零协方差、不独立，再到 f_Z(z)=2z",
+      summary: "先用圆盘对称性解释协方差为 0，再用圆盘外小邻域反证独立性，最后把 Z 看成半径平方求出密度。",
       accent: "#7c3aed",
       steps: [
-        { title: "密度随半径增大", body: "写成极坐标后 f(x,y)=(2/π)r²；同一圆周密度相同，外圈更密。" },
-        { title: "先求分布函数", body: "Z≤z 等价于 r≤√z。对该圆盘积分得到 F_Z(z)=z²，0≤z≤1。" },
-        { title: "求导得到密度", body: "对 F_Z(z) 求导，得到 f_Z(z)=2z（0<z<1），区间外为 0。" },
+        { title: "对称配对，协方差为 0", body: "圆盘和密度关于两坐标轴对称：x、y、xy 的正负贡献成对抵消，所以 E(X)=E(Y)=E(XY)=0，Cov(X,Y)=0。" },
+        { title: "圆外小邻域，证明不独立", body: "取 P=(3/4,3/4)，因 x²+y²=9/8>1，可在 P 周围取仍落在圆外的小矩形 A×B。该矩形的联合概率为 0，但两个边缘区间的概率乘积大于 0，故不独立。" },
+        { title: "半径平方给出 Z 的密度", body: "Z=r²，故 Z≤z 等价于 r≤√z。极坐标积分得 F_Z(z)=z²（0≤z≤1），求导得 f_Z(z)=2z（0<z<1）。" },
       ],
     },
   },

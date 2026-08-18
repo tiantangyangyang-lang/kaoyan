@@ -205,7 +205,7 @@ export function RadialDensityScene({
   return (
     <svg viewBox="0 0 360 300" role="img" aria-label="径向概率从单位圆盘变换为Z的线性密度">
       <defs>
-        <radialGradient id="radial-density-gradient">
+        <radialGradient id="legacy-radial-density-gradient">
           <stop offset="0%" stopColor={accent} stopOpacity="0.08" />
           <stop offset="65%" stopColor={accent} stopOpacity="0.28" />
           <stop offset="100%" stopColor={accent} stopOpacity="0.78" />
@@ -214,7 +214,7 @@ export function RadialDensityScene({
 
       {step === 0 ? (
         <motion.g {...reveal(reduced)}>
-          <circle cx="180" cy="142" r="92" fill="url(#radial-density-gradient)" stroke={accent} strokeWidth="3" />
+          <circle cx="180" cy="142" r="92" fill="url(#legacy-radial-density-gradient)" stroke={accent} strokeWidth="3" />
           {[30, 52, 72].map((radius, index) => (
             <motion.circle
               key={radius}
@@ -265,7 +265,6 @@ export function RadialDensityScene({
           <text x="98" y="126">r</text>
           <motion.path d="M146 136h34" stroke="#64748b" strokeWidth="3" {...trace(reduced)} />
           <path d="M171 130l10 6-10 6z" fill="#64748b" />
-
           <line x1="205" y1="234" x2="326" y2="234" stroke="#94a3b8" strokeWidth="2" />
           <line x1="205" y1="250" x2="205" y2="55" stroke="#94a3b8" strokeWidth="2" />
           <motion.path d="M205 234 L315 74 L315 234 Z" fill={`${accent}28`} stroke="none" {...reveal(reduced, 0.1)} />
@@ -276,6 +275,165 @@ export function RadialDensityScene({
           <text x="220" y="58" className="math-animation-formula">f_Z(z)=2z</text>
           <text x="58" y="224">Z=r²</text>
           <text x="104" y="280" className="math-animation-muted">圆盘累积 → 对 z 求导 → 线性密度</text>
+        </motion.g>
+      ) : null}
+    </svg>
+  );
+}
+
+export function ProbabilityResultsScene({
+  step,
+  accent,
+  reduced,
+}: {
+  step: number;
+  accent: string;
+  reduced: boolean;
+}) {
+  const symmetricPoints = [
+    { cx: 214, cy: 90, label: "+xy", labelX: 221, labelY: 85, positive: true },
+    { cx: 126, cy: 90, label: "−xy", labelX: 91, labelY: 85, positive: false },
+    { cx: 126, cy: 178, label: "+xy", labelX: 91, labelY: 196, positive: true },
+    { cx: 214, cy: 178, label: "−xy", labelX: 221, labelY: 196, positive: false },
+  ];
+
+  return (
+    <svg viewBox="0 0 360 300" role="img" aria-label="用对称性、支撑区域和极坐标解释协方差、独立性与Z的密度">
+      <defs>
+        <radialGradient id="radial-density-gradient">
+          <stop offset="0%" stopColor={accent} stopOpacity="0.08" />
+          <stop offset="65%" stopColor={accent} stopOpacity="0.28" />
+          <stop offset="100%" stopColor={accent} stopOpacity="0.78" />
+        </radialGradient>
+      </defs>
+
+      {step === 0 ? (
+        <motion.g {...reveal(reduced)}>
+          <circle cx="170" cy="134" r="94" fill="url(#radial-density-gradient)" stroke={accent} strokeWidth="3" />
+          <line x1="66" y1="134" x2="274" y2="134" stroke="#64748b" strokeWidth="2" strokeDasharray="6 5" />
+          <line x1="170" y1="30" x2="170" y2="238" stroke="#64748b" strokeWidth="2" strokeDasharray="6 5" />
+          <text x="279" y="139" className="math-animation-muted">x</text>
+          <text x="176" y="31" className="math-animation-muted">y</text>
+          {symmetricPoints.map((point, index) => (
+            <motion.g key={`${point.cx}-${point.cy}`} {...reveal(reduced, index * 0.08)}>
+              <circle
+                cx={point.cx}
+                cy={point.cy}
+                r="7"
+                fill={point.positive ? "#0f766e" : "#e11d48"}
+                stroke="#ffffff"
+                strokeWidth="2"
+              />
+              <text
+                x={point.labelX}
+                y={point.labelY}
+                className="math-animation-formula"
+                style={{
+                  fill: point.positive ? "#064e3b" : "#9f1239",
+                  stroke: "#ffffff",
+                  strokeWidth: 3,
+                  paintOrder: "stroke",
+                }}
+              >
+                {point.label}
+              </text>
+            </motion.g>
+          ))}
+          <path d="M126 106 Q170 126 214 106" fill="none" stroke="#0f766e" strokeWidth="2.5" strokeDasharray="5 4" />
+          <path d="M126 162 Q170 142 214 162" fill="none" stroke="#e11d48" strokeWidth="2.5" strokeDasharray="5 4" />
+          <rect x="52" y="244" width="236" height="46" rx="18" fill="#ffffff" stroke={accent} strokeWidth="2" />
+          <text x="170" y="262" textAnchor="middle" className="math-animation-formula">E(X)=E(Y)=0</text>
+          <text x="170" y="280" textAnchor="middle" className="math-animation-formula">E(XY)=0 ⇒ Cov(X,Y)=0</text>
+        </motion.g>
+      ) : null}
+
+      {step === 1 ? (
+        <motion.g {...reveal(reduced)}>
+          <rect x="60" y="24" width="220" height="220" rx="8" fill="#fff7ed" stroke="#f59e0b" strokeWidth="2.5" />
+          <circle cx="170" cy="134" r="110" fill="#ede9fe" stroke={accent} strokeWidth="4" />
+          <line x1="60" y1="134" x2="280" y2="134" stroke="#94a3b8" strokeWidth="1.5" />
+          <line x1="170" y1="24" x2="170" y2="244" stroke="#94a3b8" strokeWidth="1.5" />
+          <text x="63" y="151" className="math-animation-muted">−1</text>
+          <text x="267" y="151" className="math-animation-muted">1</text>
+          <text x="176" y="20" className="math-animation-muted">1</text>
+          <motion.line
+            x1="252.5"
+            y1="51.5"
+            x2="252.5"
+            y2="134"
+            stroke="#e11d48"
+            strokeWidth="2"
+            strokeDasharray="5 4"
+            {...trace(reduced, 0.08)}
+          />
+          <motion.line
+            x1="170"
+            y1="51.5"
+            x2="252.5"
+            y2="51.5"
+            stroke="#e11d48"
+            strokeWidth="2"
+            strokeDasharray="5 4"
+            {...trace(reduced, 0.08)}
+          />
+          <motion.circle
+            cx="252.5"
+            cy="51.5"
+            r="7"
+            fill="#e11d48"
+            stroke="#ffffff"
+            strokeWidth="3"
+            animate={reduced ? undefined : { scale: [1, 1.25, 1] }}
+            transition={{ duration: 1.2, repeat: reduced ? 0 : Infinity }}
+          />
+          <rect x="248.5" y="47.5" width="8" height="8" fill="#fecdd3" stroke="#be123c" strokeWidth="2" />
+          <text x="244" y="39" textAnchor="end" className="math-animation-warning">P(3/4,3/4)</text>
+          <text x="263" y="50" className="math-animation-warning">A×B</text>
+          <text x="352" y="97" textAnchor="end" className="math-animation-warning">P(A×B)=0</text>
+          <text x="352" y="118" textAnchor="end" className="math-animation-muted">P_X(A)P_Y(B) &gt; 0</text>
+          <rect x="28" y="250" width="304" height="44" rx="18" fill="#fff1f2" stroke="#e11d48" />
+          <text x="180" y="268" textAnchor="middle" className="math-animation-formula">P((X,Y)∈A×B)=0</text>
+          <text x="180" y="286" textAnchor="middle" className="math-animation-formula">P(X∈A)P(Y∈B)&gt;0 ⇒ 不独立</text>
+        </motion.g>
+      ) : null}
+
+      {step >= 2 ? (
+        <motion.g {...reveal(reduced)}>
+          <circle cx="92" cy="126" r="72" fill="url(#radial-density-gradient)" stroke="#94a3b8" strokeWidth="3" />
+          <motion.circle
+            cx="92"
+            cy="126"
+            r="51"
+            fill={`${accent}4d`}
+            stroke={accent}
+            strokeWidth="4"
+            initial={reduced ? false : { r: 6, opacity: 0.25 }}
+            animate={{ r: 51, opacity: 1 }}
+            transition={{ duration: reduced ? 0 : 0.9, ease: "easeOut" }}
+          />
+          <line x1="92" y1="126" x2="143" y2="126" stroke="#0f172a" strokeWidth="3" />
+          <text x="108" y="116">√z</text>
+          <text x="54" y="220" className="math-animation-formula">Z=r²</text>
+          <text x="24" y="240" className="math-animation-muted">Z≤z ⇔ r≤√z</text>
+
+          <motion.path d="M168 126h28" stroke="#64748b" strokeWidth="3" {...trace(reduced)} />
+          <path d="M188 120l10 6-10 6z" fill="#64748b" />
+
+          <text x="205" y="44" className="math-animation-formula">F_Z(z)=z²</text>
+          <text x="205" y="64" className="math-animation-muted">0≤z≤1</text>
+          <path d="M246 73v27" stroke="#64748b" strokeWidth="2.5" />
+          <path d="M240 94l6 10 6-10z" fill="#64748b" />
+          <text x="257" y="91" className="math-animation-muted">求导</text>
+
+          <line x1="212" y1="238" x2="330" y2="238" stroke="#94a3b8" strokeWidth="2" />
+          <line x1="212" y1="245" x2="212" y2="112" stroke="#94a3b8" strokeWidth="2" />
+          <motion.path d="M212 238 L320 126 L320 238 Z" fill={`${accent}26`} {...reveal(reduced, 0.1)} />
+          <motion.line x1="212" y1="238" x2="320" y2="126" stroke={accent} strokeWidth="5" {...trace(reduced, 0.12)} />
+          <text x="204" y="257">0</text>
+          <text x="315" y="257">1</text>
+          <text x="323" y="130">2</text>
+          <text x="221" y="117" className="math-animation-formula">f_Z(z)=2z</text>
+          <text x="196" y="282" className="math-animation-muted">区间外密度为 0</text>
         </motion.g>
       ) : null}
     </svg>

@@ -208,6 +208,8 @@ export type MathAnimationKind =
   | "integral-region"
   | "radial-density";
 
+export type MathAnimationVariant = "probability-three-results-v1";
+
 export interface MathAnimationStep {
   title: string;
   body: string;
@@ -216,6 +218,7 @@ export interface MathAnimationStep {
 export interface MathAnimationSpec {
   version: 1;
   kind: MathAnimationKind;
+  variant?: MathAnimationVariant;
   title: string;
   summary: string;
   accent: string;

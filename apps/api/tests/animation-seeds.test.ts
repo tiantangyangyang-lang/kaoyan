@@ -62,8 +62,16 @@ test("the three redesigned samples state the intended mathematical progression",
   );
   assert.deepEqual(
     seeds.get("math1-2023-q22")?.steps.map((step) => step.title),
-    ["密度随半径增大", "先求分布函数", "求导得到密度"],
+    ["对称配对，协方差为 0", "圆外小邻域，证明不独立", "半径平方给出 Z 的密度"],
   );
+  assert.equal(
+    seeds.get("math1-2023-q22")?.variant,
+    "probability-three-results-v1",
+  );
+  const probabilitySteps = seeds.get("math1-2023-q22")?.steps ?? [];
+  assert.match(probabilitySteps[0]?.body ?? "", /E\(X\)=E\(Y\)=E\(XY\)=0.*Cov\(X,Y\)=0/);
+  assert.match(probabilitySteps[1]?.body ?? "", /\(3\/4,3\/4\).*9\/8>1.*A×B.*联合概率为 0.*概率乘积大于 0/);
+  assert.match(probabilitySteps[2]?.body ?? "", /F_Z\(z\)=z².*f_Z\(z\)=2z/);
 });
 
 test("the other three reviewed samples remain byte-for-byte unchanged", () => {
