@@ -62,5 +62,6 @@ Production state is unchanged.
 
 ## Remaining external steps
 
-Commit, PR review, merge, deployment, production dry-run, and the approved
-production transaction remain intentionally unperformed pending user direction.
+PR #30 review, merge, deployment, production dry-run, and the approved
+production transaction remain. Commit `f23f7f0` has been pushed to
+`codex/req-027-probability-animation-redesign`.

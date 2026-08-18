@@ -15,7 +15,7 @@ controlled database replacement boundary.
 - [x] Phase 4: Add targeted regression coverage and render visual evidence.
 - [x] Phase 5: Run verification and document deployment/replacement steps.
 - [x] Phase 6: Re-sync origin and rerun the pre-PR verification gate.
-- [ ] Phase 7: Stage the exact requirement scope, commit, push, and open the PR.
+- [x] Phase 7: Stage the exact requirement scope, commit, push, and open the PR.
 - [ ] Phase 8: Review the final PR diff, merge it, and confirm code deployment.
 - [ ] Phase 9: Run the production q22 dry-run, commit the guarded transaction,
   and verify the stored payload and live result.
@@ -61,6 +61,6 @@ controlled database replacement boundary.
 
 ## Status
 
-**Currently in Phase 7** - origin/main is current and all REQ-027-specific
-typechecks, 73 API tests, browser smoke scenarios, builds, secret scan, and diff
-checks pass. Staging the exact reviewed scope for commit and PR publication.
+**Currently in Phase 8** - commit `f23f7f0` was pushed and PR #30 was opened.
+Reviewing the complete PR diff and CI state before merge, then confirming the
+code-first deployment before any database command.
